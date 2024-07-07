@@ -53,6 +53,12 @@ Maintainers
 * [Thomas Rausch](https://github.com/thrau)
 * [Philipp Raith](https://github.com/phip123)
 
+Development
+-----------
+
+The simulator has seen a major refactoring in the branch `/feature/adapt-to-galileo-faas` and aims to be compatible with the other galileo projects.
+Only this branch is in active development.
+
 Related publications
 --------------------
 
