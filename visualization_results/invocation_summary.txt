@@ -1,0 +1,57 @@
+FUNCTION INVOCATION SUMMARY
+==========================
+
+Total invocations: 3660
+Overall average execution time: 0.17 ms
+Overall average wait time: 0.00 ms
+Simulation start time: 4.36 s
+Simulation end time: 462.38 s
+Total duration: 458.02 s
+
+NODE SUMMARY
+============
+
+Node: server_0
+  Invocations: 3660
+  Average execution time: 0.17 ms
+  Min/Max execution time: 0.05/0.58 ms
+  Average wait time: 0.00 ms
+
+FUNCTION SUMMARY
+================
+
+Function: resnet50-inference
+  Invocations: 2012
+  Average execution time: 0.06 ms
+  Min/Max execution time: 0.05/0.07 ms
+  Average wait time: 0.00 ms
+
+Function: python-pi
+  Invocations: 1648
+  Average execution time: 0.30 ms
+  Min/Max execution time: 0.07/0.58 ms
+  Average wait time: 0.00 ms
+
+DETAILED BREAKDOWN BY NODE AND FUNCTION
+=====================================
+
+Node: server_0
+Function: python-pi
+Image: python-pi-cpu
+Invocations: 1648
+Average execution time: 0.30 ms
+Min/Max execution time: 0.07/0.58 ms
+Average wait time: 0.00 ms
+First invocation: 7.63 s
+Last invocation: 462.38 s
+
+Node: server_0
+Function: resnet50-inference
+Image: resnet50-inference-gpu
+Invocations: 2012
+Average execution time: 0.06 ms
+Min/Max execution time: 0.05/0.07 ms
+Average wait time: 0.00 ms
+First invocation: 4.36 s
+Last invocation: 454.76 s
+

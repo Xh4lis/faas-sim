@@ -1,0 +1,33 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-05-12 16:00:14
+
+Topology Overview:
+  Number of nodes: 1
+  Number of functions: 2
+  Number of images: 2
+
+Function Distribution:
+  resnet50-inference: 2012 invocations (55.0%)
+  python-pi: 1648 invocations (45.0%)
+
+Overall Invocation Statistics:
+  Total invocations: 3660
+  Avg execution time: 0.17 ms
+  Max execution time: 0.58 ms
+  Avg wait time: 0.00 ms
+  Max wait time: 0.00 ms
+  Simulation duration: 458.02 s
+
+Resource Utilization:
+  Overall avg CPU utilization: 0.25%
+  Overall peak CPU utilization: 1.00%
+
+Network Activity:
+  Total transfers: 2
+  Total bytes transferred: 108.72 MB
+  Transfer duration: 1.87 s
+
+Network Flows:
+  registry → server_0: 108.72 MB in 1.87 s
