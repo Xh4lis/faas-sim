@@ -45,9 +45,9 @@ def example_topology() -> Topology:
     
     # Create a scenario with custom parameters
     urban_scenario = scenario.UrbanSensingScenario(
-        num_cells=5,                                       # More neighborhoods
+        num_cells=3,                                       # More neighborhoods
         cell_density=ParameterizedDistribution.lognorm((2.079, 0.001)), 
-        cloudlet_size=(4, 3)                               # 4 servers per rack, 3 racks
+        cloudlet_size=(2, 1),                         # 2 servers per rack, 1 rack
     )
     
     urban_scenario.materialize(t)

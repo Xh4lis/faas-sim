@@ -33,7 +33,7 @@ np.random.seed(1234)
 random.seed(1234)
 logging.basicConfig(level=logging.INFO)
 
-num_devices = 100
+num_devices = 400
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)
 
@@ -98,3 +98,22 @@ dfs = {
     'fets_df': sim.env.metrics.extract_dataframe('fets')
 }
 print(len(dfs))
+# Print column names and info for each DataFrame
+for df_name, df in dfs.items():
+    print(f"\n{df_name} columns:")
+    if df is not None and not df.empty:
+        print(f"  Shape: {df.shape}")
+        print("  Columns:")
+        for col in df.columns:
+            # Get a sample value to show data type
+            sample = df[col].iloc[0] if len(df) > 0 else None
+            sample_type = type(sample).__name__ if sample is not None else "N/A"
+            print(f"    - {col}: {sample_type}")
+    else:
+        print("  Empty or None DataFrame")
+
+
+
+from .extract import extract_metrics
+dfs = extract_metrics(sim)
+

@@ -1,0 +1,39 @@
+FUNCTION INVOCATION SUMMARY
+========================
+Total invocations: 3810
+Total functions: 4
+Total nodes: 4
+Simulation duration: 49.89 seconds
+
+GLOBAL STATISTICS
+----------------
+Mean execution time: 126.37 ms
+Mean wait time: 0.00 ms
+Mean memory usage: 236466272.76 units
+
+PER-FUNCTION STATISTICS
+---------------------
+
+mobilenet-inference:
+  Invocations: 2112
+  Execution time (mean/min/max): 123.56/0.54/247.19 ms
+  Wait time (mean/min/max): 0.00/0.00/0.00 ms
+  Memory usage (mean): 104857600.00 units
+
+resnet50-inference:
+  Invocations: 1594
+  Execution time (mean/min/max): 129.14/0.68/257.43 ms
+  Wait time (mean/min/max): 0.00/0.00/0.00 ms
+  Memory usage (mean): 419430400.00 units
+
+speech-inference:
+  Invocations: 68
+  Execution time (mean/min/max): 147.76/16.25/279.24 ms
+  Wait time (mean/min/max): 0.00/0.00/0.00 ms
+  Memory usage (mean): 104857600.00 units
+
+resnet50-preprocessing:
+  Invocations: 36
+  Execution time (mean/min/max): 128.35/29.78/229.37 ms
+  Wait time (mean/min/max): 0.00/0.00/0.00 ms
+  Memory usage (mean): 104857600.00 units
