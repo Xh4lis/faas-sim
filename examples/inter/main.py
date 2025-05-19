@@ -31,7 +31,7 @@ def main():
 
     sim = Simulation(topology, benchmark)
     
-    # Use custom simulator factory for realistic performance
+    # Use custom simulator factory 
     sim.create_simulator_factory = CitySimulatorFactory
     
     sim.run()
