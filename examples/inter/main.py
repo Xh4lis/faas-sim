@@ -18,9 +18,6 @@ from sim.topology import Topology
 
 logger = logging.getLogger(__name__)
 
-logger = logging.getLogger(__name__)
-
-logger = logging.getLogger(__name__)
 
 
 def main():
