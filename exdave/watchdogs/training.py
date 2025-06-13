@@ -1,7 +1,7 @@
 import logging
 from typing import Generator, List
 
-from faas.system.core import FunctionRequest
+from sim.faas import FunctionRequest
 
 from sim import docker
 from sim.core import Environment

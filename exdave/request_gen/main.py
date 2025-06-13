@@ -2,7 +2,7 @@ import logging
 from typing import List
 
 import ether.scenarios.urbansensing as scenario
-from requestgen import expovariate_arrival_profile, constant_rps_profile
+from  sim.requestgen import expovariate_arrival_profile, constant_rps_profile
 from skippy.core.utils import parse_size_string
 
 from sim import docker
@@ -18,6 +18,7 @@ from sim.topology import Topology
 logger = logging.getLogger(__name__)
 
 from faas.system.core import FunctionContainer, Function, FunctionImage, DeploymentRanking
+from sim.faas import FunctionRequest
 
 
 def main():

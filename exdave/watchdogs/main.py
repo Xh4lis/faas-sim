@@ -3,11 +3,11 @@ from typing import List
 
 from ether.util import parse_size_string
 from faas.system.core import FunctionContainer, FunctionImage, Function
-from requestgen import expovariate_arrival_profile, constant_rps_profile
+from  sim.requestgen import expovariate_arrival_profile, constant_rps_profile
 
-import examples.basic.main as basic
-from examples.watchdogs.inference import InferenceFunctionSim
-from examples.watchdogs.training import TrainingFunctionSim
+import exdave.basic.main as basic
+from exdave.watchdogs.inference import InferenceFunctionSim
+from exdave.watchdogs.training import TrainingFunctionSim
 from sim import docker
 from sim.benchmark import Benchmark
 from sim.context.platform.deployment.model import SimFunctionDeployment, SimScalingConfiguration, DeploymentRanking

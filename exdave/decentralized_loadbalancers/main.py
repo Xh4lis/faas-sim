@@ -6,14 +6,14 @@ from faas.system import FunctionContainer
 from faas.util.constant import controller_role_label, zone_label
 from skippy.core.scheduler import Scheduler
 
-from examples.decentralized_clients.main import get_resnet50_inference_cpu_image_properties, \
+from exdave.decentralized_clients.main import get_resnet50_inference_cpu_image_properties, \
     get_resnet50_training_cpu_image_properties, get_galileo_worker_image_properties, \
     prepare_function_deployments
-from examples.decentralized_loadbalancers.deployments import prepare_client_deployments_for_experiment, \
+from exdave.decentralized_loadbalancers.deployments import prepare_client_deployments_for_experiment, \
     prepare_load_balancer_deployments, get_go_load_balancer_image_props
-from examples.decentralized_loadbalancers.topology import testbed_topology
-from examples.watchdogs.inference import InferenceFunctionSim
-from examples.watchdogs.training import TrainingFunctionSim
+from exdave.decentralized_loadbalancers.topology import testbed_topology
+from exdave.watchdogs.inference import InferenceFunctionSim
+from exdave.watchdogs.training import TrainingFunctionSim
 from sim import docker
 from sim.benchmark import Benchmark
 from sim.core import Environment
