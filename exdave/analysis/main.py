@@ -1,7 +1,7 @@
 import logging
 
-import examples.basic.main as basic
-from examples.custom_function_sim.main import CustomSimulatorFactory
+import exdave.basic.main as basic
+from exdave.custom_function_sim.main import CustomSimulatorFactory
 from sim.faassim import Simulation
 
 logger = logging.getLogger(__name__)

@@ -6,9 +6,9 @@ from faas.system import DeploymentRanking, ScalingConfiguration
 from faas.system import FunctionContainer, FunctionImage, Function
 from faas.util.constant import controller_role_label, hostname_label, client_role_label, zone_label, function_label, \
     api_gateway_type_label, pod_type_label
-from requestgen import expovariate_arrival_profile, constant_rps_profile
+from  sim.requestgen import expovariate_arrival_profile, constant_rps_profile
 
-from examples.decentralized_clients.deployments import prepare_resnet_inference_deployment, \
+from exdave.decentralized_clients.deployments import prepare_resnet_inference_deployment, \
     prepare_resnet_training_deployment
 from sim.context.platform.deployment.model import SimFunctionDeployment, SimScalingConfiguration
 from sim.docker import ImageProperties

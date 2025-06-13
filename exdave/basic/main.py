@@ -2,7 +2,8 @@ import logging
 from typing import List
 
 import ether.scenarios.urbansensing as scenario
-from faas.system.core import FunctionImage, FunctionRequest, FunctionContainer, Function
+from faas.system.core import FunctionImage, FunctionContainer, Function
+from sim.faas import FunctionRequest
 from skippy.core.utils import parse_size_string
 
 from sim import docker

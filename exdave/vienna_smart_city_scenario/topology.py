@@ -7,7 +7,7 @@ from ether.cell import LANCell, SharedLinkCell, UpDownLink
 from ether.core import Connection
 from ether.qos import latency
 from ether.vis import draw_basic
-from faas.util.constant import zone_label, controller_role_label, worker_role_label, client_role_label
+from sim.faas.util.constant import zone_label, controller_role_label, worker_role_label, client_role_label
 from matplotlib import pyplot as plt
 
 from ext.raith21.etherdevices import create_xeoncpu, create_xeongpu

@@ -1,8 +1,10 @@
 import logging
 
-from faas.system.core import FunctionContainer, FunctionRequest
+from faas.system.core import FunctionContainer
+from sim.faas import FunctionRequest
 
-import examples.basic.main as basic
+
+import exdave.basic.main as basic
 import sim.docker as docker
 from sim.context.platform.request.service import RequestService
 from sim.core import Environment

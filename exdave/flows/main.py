@@ -1,8 +1,8 @@
 import logging
 import time
 
-from examples.decentralized_loadbalancers.topology import testbed_topology
-from examples.watchdogs.main import TrainInferenceBenchmark, AIFunctionSimulatorFactory
+from exdave.decentralized_loadbalancers.topology import testbed_topology
+from exdave.watchdogs.main import TrainInferenceBenchmark, AIFunctionSimulatorFactory
 from sim.faassim import Simulation
 from sim.factory.flow import SafeFlowFactory, UninterruptingFlowFactory, FlowFactory
 from sim.requestgen import SimpleFunctionRequestFactory

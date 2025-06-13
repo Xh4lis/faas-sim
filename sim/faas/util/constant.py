@@ -1,0 +1,10 @@
+# Constants used in the faas-sim examples
+zone_label = "kubernetes.io/zone"
+controller_role_label = "controller-role"
+worker_role_label = "worker-role"
+client_role_label = "client-role"
+function_label = "function"
+api_gateway_type_label = "api-gateway"
+pod_type_label = "pod-type"
+function_type_label = "function-type"
+hostname_label = "kubernetes.io/hostname"

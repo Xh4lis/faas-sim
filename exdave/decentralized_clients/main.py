@@ -5,13 +5,13 @@ from typing import List
 from faas.system import FunctionContainer
 from skippy.core.scheduler import Scheduler
 
-from examples.decentralized_clients.clients import ClientSimulator
-from examples.decentralized_clients.deployments import get_resnet50_inference_cpu_image_properties, \
+from exdave.decentralized_clients.clients import ClientSimulator
+from exdave.decentralized_clients.deployments import get_resnet50_inference_cpu_image_properties, \
     get_resnet50_training_cpu_image_properties, get_galileo_worker_image_properties, prepare_function_deployments, \
     prepare_training_clients, prepare_inference_clients
-from examples.decentralized_loadbalancers.topology import testbed_topology
-from examples.watchdogs.inference import InferenceFunctionSim
-from examples.watchdogs.training import TrainingFunctionSim
+from exdave.decentralized_loadbalancers.topology import testbed_topology
+from exdave.watchdogs.inference import InferenceFunctionSim
+from exdave.watchdogs.training import TrainingFunctionSim
 from sim import docker
 from sim.benchmark import Benchmark
 from sim.context.platform.deployment.model import SimFunctionDeployment

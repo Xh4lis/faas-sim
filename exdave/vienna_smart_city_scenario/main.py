@@ -7,16 +7,19 @@ from typing import List, Callable, Any
 
 import numpy as np
 import srds
-from faas.system import FunctionContainer, Metrics, NullLogger
-from faas.util.constant import zone_label, client_role_label, worker_role_label, controller_role_label
+from sim.faas.core import FunctionContainer
+from sim.metrics import Metrics
+from sim.logging import NullLogger
+
+from sim.faas.util.constant import zone_label, controller_role_label, worker_role_label, client_role_label
 from skippy.core.scheduler import Scheduler
 
-from examples.vienna_smart_city_scenario.deployments import prepare_function_deployments, \
+from exdave.vienna_smart_city_scenario.deployments import prepare_function_deployments, \
     get_go_load_balancer_image_props, get_resnet50_inference_cpu_image_properties, get_galileo_worker_image_properties, \
     prepare_load_balancer_deployments, prepare_client_deployments_for_experiment
-from examples.vienna_smart_city_scenario.predicates import CheckNodeLabelPresencePred, ExclusivePred, LoadBalancerPred
-from examples.vienna_smart_city_scenario.topology import vienna_smart_city_topology
-from examples.watchdogs.inference import InferenceFunctionSim
+from exdave.vienna_smart_city_scenario.predicates import CheckNodeLabelPresencePred, ExclusivePred, LoadBalancerPred
+from exdave.vienna_smart_city_scenario.topology import vienna_smart_city_topology
+from exdave.watchdogs.inference import InferenceFunctionSim
 from ext.raith21.fet import ai_execution_time_distributions
 from ext.raith21.oracles import Raith21FetOracle, Raith21ResourceOracle
 from ext.raith21.resources import ai_resources_per_node_image

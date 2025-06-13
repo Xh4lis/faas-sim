@@ -6,7 +6,7 @@ from faas.system import DeploymentRanking, ScalingConfiguration
 from faas.system import FunctionContainer, FunctionImage, Function
 from faas.util.constant import controller_role_label, hostname_label, client_role_label, zone_label, function_label, \
     api_gateway_type_label, pod_type_label, worker_role_label, function_type_label
-from requestgen import expovariate_arrival_profile, constant_rps_profile
+from  sim.requestgen import expovariate_arrival_profile, constant_rps_profile
 
 from sim.context.platform.deployment.model import SimFunctionDeployment, SimScalingConfiguration
 from sim.docker import ImageProperties
