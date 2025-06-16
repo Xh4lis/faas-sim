@@ -4,12 +4,13 @@ import pandas as pd
 import numpy as np
 
 import examples.inter.main as inter
+import ext.raith21.main as raith21
 from examples.custom_function_sim.main import CustomSimulatorFactory
 from sim.faassim import Simulation
 
 logger = logging.getLogger(__name__)
 
-def ensure_output_dir(path='analysis_data'):
+def ensure_output_dir(path='analysis_data_raith'):
     """Create directory if it doesn't exist"""
     if not os.path.exists(path):
         os.makedirs(path)
@@ -65,7 +66,7 @@ def main():
     output_dir = ensure_output_dir()
     
     # prepare simulation with topology and benchmark from basic example
-    sim = Simulation(inter.example_topology(), inter.EnhancedBenchmark())
+    sim = Simulation(raith21.topology(), raith21.benchmark())
 
     # override the SimulatorFactory factory
     sim.create_simulator_factory = inter.CitySimulatorFactory

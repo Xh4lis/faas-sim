@@ -2,7 +2,8 @@
 # coding: utf-8
 import logging
 import random
-
+import time
+from tqdm import tqdm
 import numpy as np
 from skippy.core.scheduler import Scheduler
 from skippy.core.storage import StorageIndex
@@ -29,11 +30,11 @@ from sim.logging import SimulatedClock, RuntimeLogger
 from sim.metrics import Metrics
 from sim.skippy import SimulationClusterContext
 
-np.random.seed(1234)
-random.seed(1234)
+np.random.seed(1435)
+random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
-num_devices = 400
+num_devices = 100 #Min 24
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)
 
@@ -61,7 +62,7 @@ sched_params = {
 }
 
 # Set arrival profiles/workload pattern
-benchmark = ConstantBenchmark('mixed', duration=200, rps=50)
+benchmark = ConstantBenchmark('mixed', duration=500, rps=700)
 
 # Initialize topology
 storage_index = StorageIndex()
