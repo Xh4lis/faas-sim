@@ -88,6 +88,7 @@ sched_params = {
 
 - **Purpose**: Configure the function scheduling system
 - **Key Components**:
+  - predicates: filtering functions that determine whether a node is eligible to run a specific function/workload. They act as binary "yes/no" filters that eliminate unsuitable nodes early in the scheduling process.
   - Defines predicates (filters) for node selection
   - Sets priorities for scoring suitable nodes
   - Configures scheduler parameters
