@@ -22,16 +22,15 @@ class NodeState:
     performance_degradation: Optional[RegressorMixin]
 
     def __init__(self) -> None:
-        super().__init__()
-        self.ether_node = None
-        self.skippy_node = None
-        self.docker_images = set()
-        self.current_requests = set()
-        self.all_requests = []
-        self.performance_degradation = None
-        self.buffer_size = 0
-        self.buffer_limit = 50
-        self.cache = {}
+        self.ether_node = None            # Reference to the network topology node
+        self.skippy_node = None           # Reference to the scheduler's node representation
+        self.docker_images = set()        # Tracks which container images are already pulled
+        self.current_requests = set()     # Currently executing function requests
+        self.all_requests = []            # Historical record of all function calls
+        self.performance_degradation = None  # ML model for predicting performance degradation
+        self.buffer_size = 0              # Current number of buffered requests
+        self.buffer_limit = 50            # Maximum number of historical requests to store
+        self.cache = {}                   # Cache for performance degradation calculations
 
     def estimate_degradation(self, resource_oracle: ResourceOracle,
                              start_ts: int, end_ts: int) -> float:
