@@ -6,9 +6,9 @@ Based on the codebase and your goal of implementing energy modeling, I recommend
 
 ### 1. Core System Components (High Priority)
 
-- **`ResourceState` and `ResourceMonitor` classes**: Thoroughly understand how resource utilization is tracked
-- **`Environment` class**: Understand how to extend it with energy models (similar to how `power_models` was added in the commit)
-- **`Metrics` system**: Learn how metrics are collected and reported
+- ✅ **`ResourceState` and `ResourceMonitor` classes**: Thoroughly understand how resource utilization is tracked
+- ✅ **`Environment` class**: Understand how to extend it with energy models (similar to how `power_models` was added in the commit)
+- 🔶 **`Metrics` system**: Learn how metrics are collected and reported
 
 ### 2. Function Execution Flow (Medium Priority)
 
