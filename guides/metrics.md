@@ -129,3 +129,64 @@ To add energy modeling, you would:
    ```
 
 The `Metrics` class's flexibility and standardized approach to data collection makes it the perfect foundation for adding energy consumption tracking to the simulation framework.
+
+# Source of CPU Utilization in the Resource Tracking System
+
+The `__calculate_util` method in the `Metrics` class calculates CPU utilization as a percentage by dividing the actual CPU resource usage by the node's CPU capacity. Let me explain where this CPU utilization data comes from:
+
+## Data Flow for CPU Utilization
+
+1. **Original Source**: CPU utilization starts when a function simulator claims resources during function execution:
+
+   ```python
+   # In function simulators (e.g., AIPythonHTTPSimulator, PowerPredictionSimulator)
+   env.resource_state.put_resource(replica, 'cpu', cpu_value)
+   ```
+
+   This is where a specific amount of CPU is claimed for a function replica. The `cpu_value` comes from:
+
+   - Function characterization data in resources.py or resources.py
+   - For example: `('nano', 'resi5/resnet-inference-cpu'): FunctionResourceCharacterization(cpu=214.39...)`
+
+2. **Storage in ResourceState**: When `put_resource` is called, the CPU value is stored in:
+
+   ```python
+   # In ResourceState.put_resource
+   node_resources = self.get_node_resource_utilization(node_name)
+   node_resources.put_resource(function_replica, resource, value)
+
+   # Which stores in NodeResourceUtilization.__resources dictionary
+   # And ultimately in ResourceUtilization.__resources
+   ```
+
+3. **Collection by ResourceMonitor**: The ResourceMonitor periodically samples this data:
+
+   ```python
+   # In ResourceMonitor.run()
+   utilization = self.env.resource_state.get_resource_utilization(replica)
+   ```
+
+4. **Passed to Metrics**: The ResourceMonitor passes this data to the Metrics class:
+
+   ```python
+   # In ResourceMonitor.run()
+   self.env.metrics.log_function_resource_utilization(replica, utilization)
+   ```
+
+5. **Calculation in \_\_calculate_util**: Finally, the `__calculate_util` method:
+   - Gets the raw CPU value from `utilization.get_resource('cpu')`
+   - Divides by `capacity.cpu_millis` (the total CPU capacity of the node)
+   - The result is the CPU utilization as a fraction (which can be expressed as percentage)
+
+## Example Flow
+
+1. A function simulator claims 100 CPU units for a function: `put_resource(replica, 'cpu', 100)`
+2. This value is stored in the ResourceState hierarchy
+3. ResourceMonitor samples this value during its periodic run
+4. The value is passed to `log_function_resource_utilization`
+5. Inside `__calculate_util`, if the node's capacity is 1000 CPU units:
+   - `utilization.get_resource('cpu')` = 100
+   - `capacity.cpu_millis` = 1000
+   - `cpu_util` = 100/1000 = 0.1 (or 10%)
+
+This becomes part of the metrics record which is later available for analysis, visualization, or energy modeling calculations.
