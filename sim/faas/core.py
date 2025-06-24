@@ -248,13 +248,12 @@ class FunctionReplica:
     """
     A function replica is an instance of a function running on a specific node.
     """
-    function: FunctionDeployment
-    container: FunctionContainer
-    node: NodeState
-    pod: Pod
-    state: FunctionState = FunctionState.CONCEIVED
-
-    simulator: 'FunctionSimulator' = None
+    function: FunctionDeployment       # The function deployment this replica belongs to
+    container: FunctionContainer       # The specific container configuration being executed
+    node: NodeState                    # The node where this replica is running
+    pod: Pod                           # Kubernetes-style pod representation for scheduling
+    state: FunctionState = FunctionState.CONCEIVED  # Current lifecycle state
+    simulator: 'FunctionSimulator' = None  # The simulator that handles execution behavior
 
     @property
     def fn_name(self):
