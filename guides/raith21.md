@@ -70,7 +70,7 @@ Here's a prioritized roadmap to understand the FaaS simulator structure for impl
   - [ ] Study `PowerPredictionSimulator` class, especially `claim_resources` method
   - [ ] Understand how ML models are used for power prediction
 
-## Key Files to Read in Order:
+## Files checklist in Order:
 
 1. resource.py - Resource tracking foundation
 2. core.py - Environment structure
@@ -78,5 +78,3 @@ Here's a prioritized roadmap to understand the FaaS simulator structure for impl
 4. resources.py - Resource profiles
 5. metrics.py - Metrics collection system
 6. functionsim.py - Power prediction reference
-
-Once you understand these components, you'll have the necessary foundation to implement energy modeling in the simulation framework.
