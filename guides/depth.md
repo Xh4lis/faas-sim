@@ -8,7 +8,7 @@ Based on the codebase and your goal of implementing energy modeling, I recommend
 
 - ✅ **`ResourceState` and `ResourceMonitor` classes**: Thoroughly understand how resource utilization is tracked
 - ✅ **`Environment` class**: Understand how to extend it with energy models (similar to how `power_models` was added in the commit)
-- 🔶 **`Metrics` system**: Learn how metrics are collected and reported
+- ✅ **`Metrics` system**: Learn how metrics are collected and reported
 
 ### 2. Function Execution Flow (Medium Priority)
 

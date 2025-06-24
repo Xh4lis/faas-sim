@@ -60,7 +60,7 @@ predicates.extend([
 ])
 
 # Get priorities for scoring nodes that pass predicates
-priorities = vanilla.get_priorities()  # Default node scoring priorities
+priorities = vanilla.get_priorities()  # Default node scoring priorities priorities.md
 
 # Scheduler configuration parameters
 sched_params = {
