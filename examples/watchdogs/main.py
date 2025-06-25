@@ -10,8 +10,17 @@ from sim import docker
 from sim.benchmark import Benchmark
 from sim.core import Environment
 from sim.docker import ImageProperties
-from sim.faas import SimulatorFactory, FunctionContainer, FunctionSimulator, FunctionDeployment, ScalingConfiguration, \
-    DeploymentRanking, FunctionImage, Function, FunctionRequest
+from sim.faas import (
+    SimulatorFactory,
+    FunctionContainer,
+    FunctionSimulator,
+    FunctionDeployment,
+    ScalingConfiguration,
+    DeploymentRanking,
+    FunctionImage,
+    Function,
+    FunctionRequest,
+)
 from sim.faassim import Simulation
 
 logger = logging.getLogger(__name__)
@@ -20,9 +29,9 @@ logger = logging.getLogger(__name__)
 class AIFunctionSimulatorFactory(SimulatorFactory):
 
     def create(self, env: Environment, fn: FunctionContainer) -> FunctionSimulator:
-        if 'inference' in fn.fn_image.image:
+        if "inference" in fn.fn_image.image:
             return InferenceFunctionSim(4)
-        elif 'training' in fn.fn_image.image:
+        elif "training" in fn.fn_image.image:
             return TrainingFunctionSim()
 
 
@@ -37,9 +46,7 @@ def main():
 
     # run the simulation
     sim.run()
-    dfs = {
-        'fets_df': sim.env.metrics.extract_dataframe('fets')
-    }
+    dfs = {"fets_df": sim.env.metrics.extract_dataframe("fets")}
     pass
 
 
@@ -48,18 +55,42 @@ class TrainInferenceBenchmark(Benchmark):
     def setup(self, env: Environment):
         containers: docker.ContainerRegistry = env.container_registry
 
-        containers.put(ImageProperties('resnet50-inference-cpu', parse_size_string('56M'), arch='arm32'))
-        containers.put(ImageProperties('resnet50-inference-cpu', parse_size_string('56M'), arch='x86'))
-        containers.put(ImageProperties('resnet50-inference-cpu', parse_size_string('56M'), arch='aarch64'))
+        containers.put(
+            ImageProperties(
+                "resnet50-inference-cpu", parse_size_string("56M"), arch="arm32"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "resnet50-inference-cpu", parse_size_string("56M"), arch="x86"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "resnet50-inference-cpu", parse_size_string("56M"), arch="aarch64"
+            )
+        )
 
-        containers.put(ImageProperties('resnet50-training-cpu', parse_size_string('128M'), arch='arm32'))
-        containers.put(ImageProperties('resnet50-training-cpu', parse_size_string('128M'), arch='x86'))
-        containers.put(ImageProperties('resnet50-training-cpu', parse_size_string('128M'), arch='aarch64'))
+        containers.put(
+            ImageProperties(
+                "resnet50-training-cpu", parse_size_string("128M"), arch="arm32"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "resnet50-training-cpu", parse_size_string("128M"), arch="x86"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "resnet50-training-cpu", parse_size_string("128M"), arch="aarch64"
+            )
+        )
 
         # log all the images in the container
         for name, tag_dict in containers.images.items():
             for tag, images in tag_dict.items():
-                logger.info('%s, %s, %s', name, tag, images)
+                logger.info("%s, %s, %s", name, tag, images)
 
     def run(self, env: Environment):
         # deploy functions
@@ -69,20 +100,24 @@ class TrainInferenceBenchmark(Benchmark):
             yield from env.faas.deploy(deployment)
 
         # block until replicas become available (scheduling has finished and replicas have been deployed on the node)
-        logger.info('waiting for replica')
-        yield env.process(env.faas.poll_available_replica('resnet50-training'))
-        yield env.process(env.faas.poll_available_replica('resnet50-inference'))
+        logger.info("waiting for replica")
+        yield env.process(env.faas.poll_available_replica("resnet50-training"))
+        yield env.process(env.faas.poll_available_replica("resnet50-inference"))
 
         # run workload
         ps = []
         # execute 10 requests in parallel
-        logger.info('executing 10 resnet50-training requests')
+        logger.info("executing 10 resnet50-training requests")
         for i in range(10):
-            ps.append(env.process(env.faas.invoke(FunctionRequest('resnet50-training'))))
+            ps.append(
+                env.process(env.faas.invoke(FunctionRequest("resnet50-training")))
+            )
 
-        logger.info('executing 10 resnet50-inference requests')
+        logger.info("executing 10 resnet50-inference requests")
         for i in range(10):
-            ps.append(env.process(env.faas.invoke(FunctionRequest('resnet50-inference'))))
+            ps.append(
+                env.process(env.faas.invoke(FunctionRequest("resnet50-inference")))
+            )
 
         # wait for invocation processes to finish
         for p in ps:
@@ -98,8 +133,8 @@ class TrainInferenceBenchmark(Benchmark):
     def prepare_resnet_training_deployment(self):
         # Design time
 
-        resnet_training = 'resnet50-training'
-        training_cpu = 'resnet50-training-cpu'
+        resnet_training = "resnet50-training"
+        training_cpu = "resnet50-training-cpu"
 
         resnet_training_cpu = FunctionImage(image=training_cpu)
         resnet_fn = Function(resnet_training, fn_images=[resnet_training_cpu])
@@ -112,7 +147,7 @@ class TrainInferenceBenchmark(Benchmark):
             resnet_fn,
             [resnet_cpu_container],
             ScalingConfiguration(),
-            DeploymentRanking([training_cpu])
+            DeploymentRanking([training_cpu]),
         )
 
         return resnet_fd
@@ -120,8 +155,8 @@ class TrainInferenceBenchmark(Benchmark):
     def prepare_resnet_inference_deployment(self):
         # Design time
 
-        resnet_inference = 'resnet50-inference'
-        inference_cpu = 'resnet50-inference-cpu'
+        resnet_inference = "resnet50-inference"
+        inference_cpu = "resnet50-inference-cpu"
 
         resnet_inference_cpu = FunctionImage(image=inference_cpu)
         resnet_fn = Function(resnet_inference, fn_images=[resnet_inference_cpu])
@@ -134,11 +169,11 @@ class TrainInferenceBenchmark(Benchmark):
             resnet_fn,
             [resnet_cpu_container],
             ScalingConfiguration(),
-            DeploymentRanking([inference_cpu])
+            DeploymentRanking([inference_cpu]),
         )
 
         return resnet_fd
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

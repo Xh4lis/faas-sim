@@ -44,7 +44,11 @@ class MyFunctionSimulator(FunctionSimulator):
         yield from docker.pull(env, replica.container.image, replica.node.ether_node)
 
     def startup(self, env: Environment, replica: SimFunctionReplica):
-        logger.info('[simtime=%.2f] starting up function replica for function %s', env.now, replica.function.name)
+        logger.info(
+            "[simtime=%.2f] starting up function replica for function %s",
+            env.now,
+            replica.function.name,
+        )
 
         # you could create a very fine-grained setup routines here
         yield env.timeout(10)  # simulate docker startup
@@ -53,27 +57,40 @@ class MyFunctionSimulator(FunctionSimulator):
         # no setup routine
         yield env.timeout(0)
 
-    def invoke(self, env: Environment, replica: SimFunctionReplica, request: FunctionRequest):
+    def invoke(
+        self, env: Environment, replica: SimFunctionReplica, request: FunctionRequest
+    ):
         # you would probably either create one simulator per function, or use a generalized simulator, this is just
         # to demonstrate how the simulators are used to encapsulate simulator behavior.
         ts_wait = env.now
 
-        logger.info('[simtime=%.2f] invoking function %s on node %s', env.now, request, replica.node.name)
+        logger.info(
+            "[simtime=%.2f] invoking function %s on node %s",
+            env.now,
+            request,
+            replica.node.name,
+        )
 
         # for full flexibility you decide the resources used
         cpu_millis = replica.node.ether_node.capacity.cpu_millis * 0.1
-        resource_index = env.resource_state.put_resource(replica, 'cpu', cpu_millis)
+        resource_index = env.resource_state.put_resource(replica, "cpu", cpu_millis)
 
         request_service: RequestService = env.context.request_service
         request_service.add_request(request)
 
         ts_exec = env.now
-        if replica.function.name == 'python-pi':
-            if replica.node.name.startswith('rpi3'):  # those are nodes we created in basic.example_topology()
-                yield env.timeout(20)  # invoking this function takes 20 seconds on a raspberry pi
+        if replica.function.name == "python-pi":
+            if replica.node.name.startswith(
+                "rpi3"
+            ):  # those are nodes we created in basic.example_topology()
+                yield env.timeout(
+                    20
+                )  # invoking this function takes 20 seconds on a raspberry pi
             else:
-                yield env.timeout(2)  # invoking this function takes 2 seconds on all other nodes in the cluster
-        elif replica.function.name == 'resnet50-inference':
+                yield env.timeout(
+                    2
+                )  # invoking this function takes 2 seconds on all other nodes in the cluster
+        elif replica.function.name == "resnet50-inference":
             yield env.timeout(0.5)  # invoking this function takes 500 ms
         else:
             yield env.timeout(0)
@@ -92,12 +109,12 @@ class MyFunctionSimulator(FunctionSimulator):
             code=200,
             ts_wait=ts_wait,
             ts_exec=ts_exec,
-            fet=fet
+            fet=fet,
         )
 
     def teardown(self, env: Environment, replica: SimFunctionReplica):
         yield env.timeout(0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

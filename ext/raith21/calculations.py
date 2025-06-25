@@ -8,7 +8,9 @@ from .device import GpuDevice, Device
 from .model import Arch, Accelerator, Bins, Location, Connection, Disk, Requirements
 
 
-def count_attribute(devices: List[Device], values: List, getter: Callable[[Device], Enum]):
+def count_attribute(
+    devices: List[Device], values: List, getter: Callable[[Device], Enum]
+):
     counter = {}
     if len(devices) == 0:
         return {}
@@ -63,7 +65,9 @@ def calculate_requirements(devices: List[Device]) -> Requirements:
     cpu = count_attribute(devices, list(set([x.cpu for x in devices])), lambda d: d.cpu)
     ram = count_attribute(devices, list(Bins), lambda d: d.ram)
     disk = count_attribute(devices, list(Disk), lambda d: d.disk)
-    gpu_model_percentage, gpu_mhz_percentage, vram_percentage = get_gpu_model_count(devices)
+    gpu_model_percentage, gpu_mhz_percentage, vram_percentage = get_gpu_model_count(
+        devices
+    )
     return Requirements(
         arch=arch,
         accelerator=accelerator,
@@ -77,14 +81,16 @@ def calculate_requirements(devices: List[Device]) -> Requirements:
         disk=disk,
         gpu_model=gpu_model_percentage,
         gpu_vram=gpu_mhz_percentage,
-        gpu_mhz=vram_percentage
+        gpu_mhz=vram_percentage,
     )
 
 
 def calculate_heterogeneity(p: Requirements, q: Requirements) -> float:
     entropy_p = 0
     entropy_q = 0
-    for (p_enum, p_characteristic), (q_enum, q_characteristic) in zip(p.characteristics, q.characteristics):
+    for (p_enum, p_characteristic), (q_enum, q_characteristic) in zip(
+        p.characteristics, q.characteristics
+    ):
         for value in list(p_enum):
             default_val = 0.0000000000000000000001
             p_char = p_characteristic.get(value, default_val)

@@ -12,15 +12,15 @@ from sim.core import Environment
 from sim.faas import FunctionRequest, FunctionDeployment
 
 __all__ = [
-    'constant_rps_profile',
-    'sine_rps_profile',
-    'randomwalk_rps_profile',
-    'static_arrival_profile',
-    'expovariate_arrival_profile',
-    'function_trigger',
-    'run_arrival_profile',
-    'save_requests',
-    'pre_recorded_profile'
+    "constant_rps_profile",
+    "sine_rps_profile",
+    "randomwalk_rps_profile",
+    "static_arrival_profile",
+    "expovariate_arrival_profile",
+    "function_trigger",
+    "run_arrival_profile",
+    "save_requests",
+    "pre_recorded_profile",
 ]
 
 
@@ -90,11 +90,13 @@ def expovariate_arrival_profile(rps_generator, scale=1.0, max_ia=math.inf):
 
 
 def pre_recorded_profile(file: str):
-    with open(file, 'rb') as fd:
+    with open(file, "rb") as fd:
         yield from pickle.load(fd)
 
 
-def function_trigger(env: Environment, deployment: FunctionDeployment, ia_generator, max_requests=None):
+def function_trigger(
+    env: Environment, deployment: FunctionDeployment, ia_generator, max_requests=None
+):
     try:
         if max_requests is None:
             while True:
@@ -110,7 +112,7 @@ def function_trigger(env: Environment, deployment: FunctionDeployment, ia_genera
     except simpy.Interrupt:
         pass
     except StopIteration:
-        logging.error(f'{deployment.name} gen has finished')
+        logging.error(f"{deployment.name} gen has finished")
 
 
 def run_arrival_profile(env, ia_gen, until):
@@ -127,9 +129,12 @@ def run_arrival_profile(env, ia_gen, until):
     then = time.time()
     env.process(event_generator())
     env.run(until=until)
-    print('simulating %d events took %.2f sec' % (len(x), time.time() - then))
+    print("simulating %d events took %.2f sec" % (len(x), time.time() - then))
 
-    df = pd.DataFrame(data={'simtime': x, 'ia': y}, index=pd.DatetimeIndex(pd.to_datetime(x, unit='s', origin='unix')))
+    df = pd.DataFrame(
+        data={"simtime": x, "ia": y},
+        index=pd.DatetimeIndex(pd.to_datetime(x, unit="s", origin="unix")),
+    )
     return df
 
 
@@ -143,7 +148,7 @@ def save_requests(profile, duration, file: str, env: simpy.Environment = None):
     """
     if env is None:
         env = simpy.Environment()
-    with open(file, 'wb') as fd:
+    with open(file, "wb") as fd:
         df = run_arrival_profile(env, profile(env), until=duration)
-        ias = list(df['ia'])
+        ias = list(df["ia"])
         pickle.dump(ias, fd)

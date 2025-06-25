@@ -14,11 +14,11 @@ class HasEnoughRamPredicate(Predicate):
         """ram is in percentage, relative to node total ram"""
         host = node.name
         image = pod.spec.containers[0].image
-        needed_ram = self.resource_oracle.get_resources(host, image)['ram']
+        needed_ram = self.resource_oracle.get_resources(host, image)["ram"]
         ram_in_use = 0
         for running_pod in node.pods:
             running_image = running_pod.spec.containers[0].image
-            ram_in_use += self.resource_oracle.get_resources(host, running_image)['ram']
+            ram_in_use += self.resource_oracle.get_resources(host, running_image)["ram"]
         return ram_in_use + needed_ram <= 1
 
 
@@ -28,29 +28,33 @@ class CanRunPred(Predicate):
         self.resource_oracle = resource_oracle
 
     def passes_predicate(self, context: ClusterContext, pod: Pod, node: Node) -> bool:
-        host = node.name[:node.name.rindex('_')] if '_' in node.name else node.name
-        if host == 'registry':
+        host = node.name[: node.name.rindex("_")] if "_" in node.name else node.name
+        if host == "registry":
             return False
         image = pod.spec.containers[0].image
-        return self.fet_oracle.sample(host, image) is not None \
+        return (
+            self.fet_oracle.sample(host, image) is not None
             and self.resource_oracle.get_resources(host, image) is not None
+        )
 
 
 class NodeHasAcceleratorPred(Predicate):
     def passes_predicate(self, context: ClusterContext, pod: Pod, node: Node) -> bool:
-        accelerator_label = 'device.edgerun.io/accelerator'
+        accelerator_label = "device.edgerun.io/accelerator"
         if accelerator_label in pod.spec.labels.keys():
-            return pod.spec.labels[accelerator_label] == node.labels.get(accelerator_label, '')
+            return pod.spec.labels[accelerator_label] == node.labels.get(
+                accelerator_label, ""
+            )
         else:
             return True
 
 
 class NodeHasFreeTpu(Predicate):
     def passes_predicate(self, context: ClusterContext, pod: Pod, node: Node) -> bool:
-        accelerator_label = 'device.edgerun.io/accelerator'
-        if pod.spec.labels.get(accelerator_label, '') == str(Accelerator.TPU.name):
+        accelerator_label = "device.edgerun.io/accelerator"
+        if pod.spec.labels.get(accelerator_label, "") == str(Accelerator.TPU.name):
             for running_pod in node.pods:
-                if running_pod.spec.labels.get(accelerator_label, '') == 'TPU':
+                if running_pod.spec.labels.get(accelerator_label, "") == "TPU":
                     return False
 
             return True
@@ -64,12 +68,14 @@ class NodeHasFreeGpu(Predicate):
         self.use_vram = use_vram
 
     def passes_predicate(self, context: ClusterContext, pod: Pod, node: Node) -> bool:
-        accelerator_label = 'device.edgerun.io/accelerator'
-        vram_label = 'device.edgerun.io/vram'
-        if pod.spec.labels.get(accelerator_label, '') == str(Accelerator.GPU.name):
+        accelerator_label = "device.edgerun.io/accelerator"
+        vram_label = "device.edgerun.io/vram"
+        if pod.spec.labels.get(accelerator_label, "") == str(Accelerator.GPU.name):
             if not self.use_vram:
                 for running_pod in node.pods:
-                    if running_pod.spec.labels.get(accelerator_label, '') == str(Accelerator.GPU.name):
+                    if running_pod.spec.labels.get(accelerator_label, "") == str(
+                        Accelerator.GPU.name
+                    ):
                         return False
                 return True
 
@@ -77,8 +83,10 @@ class NodeHasFreeGpu(Predicate):
             vram_size = int(node.labels[vram_label])
             reserved_vram = 0
             for running_pod in node.pods:
-                if running_pod.spec.labels.get(accelerator_label, '') == str(Accelerator.GPU.name):
-                    reserved_vram += int(running_pod.spec.labels.get(vram_label, '0'))
+                if running_pod.spec.labels.get(accelerator_label, "") == str(
+                    Accelerator.GPU.name
+                ):
+                    reserved_vram += int(running_pod.spec.labels.get(vram_label, "0"))
 
             return vram_needed + reserved_vram <= vram_size
         else:

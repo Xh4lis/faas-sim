@@ -8,7 +8,7 @@ from ext.tmueller23.topology.cell import SingleNodeCell
 
 
 class XeonScenario:
-    def __init__(self, n=1, internet='internet') -> None:
+    def __init__(self, n=1, internet="internet") -> None:
         super().__init__()
         self.n = n
         self.internet = internet
@@ -21,7 +21,7 @@ class XeonScenario:
         return SingleNodeCell(create_xeongpu, backhaul=FiberToExchange(self.internet))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = Topology()
     XeonScenario(10).materialize(t)
     draw_basic(t)

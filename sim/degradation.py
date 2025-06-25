@@ -7,9 +7,14 @@ import numpy as np
 from .oracle.oracle import ResourceOracle
 
 
-def create_degradation_model_input(calls: List, start_ts, end_ts, node_name: str,
-                                   ram_capacity: float,
-                                   resource_oracle: ResourceOracle) -> np.ndarray:
+def create_degradation_model_input(
+    calls: List,
+    start_ts,
+    end_ts,
+    node_name: str,
+    ram_capacity: float,
+    resource_oracle: ResourceOracle,
+) -> np.ndarray:
     # input of model is an array with 34 elements
     # in general, the input is based on the resource usages that occurred during the function execution
     # for each trace (instance) from the target service following metrics
@@ -30,7 +35,7 @@ def create_degradation_model_input(calls: List, start_ts, end_ts, node_name: str
     # 31: sum of all blkio rate ! not scaled
     # 32: sum of all net rate ! not scaled
     # 33: mean ram percentage over complete experiment
-    resources_types = ['cpu', 'gpu', 'blkio', 'net']
+    resources_types = ["cpu", "gpu", "blkio", "net"]
 
     if len(calls) == 0:
         return np.array([])
@@ -42,15 +47,19 @@ def create_degradation_model_input(calls: List, start_ts, end_ts, node_name: str
         pod_name = call.replica.pod.name
         call_resources = resource_oracle.get_resources(node_name, function)
         if call_resources:
-            raise ValueError(f"Can't find resources for node '{node_name}' for function {function}")
+            raise ValueError(
+                f"Can't find resources for node '{node_name}' for function {function}"
+            )
         for resource_type in resources_types:
             resources[pod_name][resource_type].append(call_resources[resource_type])
         if len(call_resources) == 0:
-            logging.debug(f'Function {function.name} has no resources for node {node_name}')
+            logging.debug(
+                f"Function {function.name} has no resources for node {node_name}"
+            )
             continue
 
         if pod_name not in seen_pods:
-            ram += call.replica.pod.spec.containers[0].resources.requests['memory']
+            ram += call.replica.pod.spec.containers[0].resources.requests["memory"]
             seen_pods.add(pod_name)
         last_start = start_ts if start_ts >= call.start else call.start
 
@@ -91,7 +100,7 @@ def create_degradation_model_input(calls: List, start_ts, end_ts, node_name: str
                 input.append(value)
 
     # add number of containers
-    input.append(len(sums['cpu']))
+    input.append(len(sums["cpu"]))
 
     # add total sums resources
     for resource in resources_types:

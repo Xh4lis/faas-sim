@@ -8,8 +8,16 @@ from sim import docker
 from sim.benchmark import Benchmark
 from sim.core import Environment
 from sim.docker import ImageProperties
-from sim.faas import FunctionDeployment, FunctionRequest, Function, FunctionImage, ScalingConfiguration, \
-    DeploymentRanking, FunctionContainer, KubernetesResourceConfiguration
+from sim.faas import (
+    FunctionDeployment,
+    FunctionRequest,
+    Function,
+    FunctionImage,
+    ScalingConfiguration,
+    DeploymentRanking,
+    FunctionContainer,
+    KubernetesResourceConfiguration,
+)
 from sim.faassim import Simulation
 from sim.topology import Topology
 
@@ -36,22 +44,24 @@ def traffic_detection_topology() -> Topology:
     t = Topology()
     scenario.UrbanSensingScenario().materialize(t)
     t.init_docker_registry()
-    
+
     # Rename nodes to better reflect a traffic monitoring system
     node_mapping = {
-        'cloud': 'traffic_management_center',
-        'isp': 'district_hub',
-        'pc': 'intersection_controller',
-        'rpi3': 'roadside_monitor',
-        'rpi4': 'sensor_gateway'
+        "cloud": "traffic_management_center",
+        "isp": "district_hub",
+        "pc": "intersection_controller",
+        "rpi3": "roadside_monitor",
+        "rpi4": "sensor_gateway",
     }
-    
+
     # Adjust node names for clarity (not actually changing the nodes)
     for node in t.nodes:
-        node_type = node.split('_')[0]
+        node_type = node.split("_")[0]
         if node_type in node_mapping:
-            logger.info(f"Node {node} represents a {node_mapping[node_type]} in our traffic system")
-    
+            logger.info(
+                f"Node {node} represents a {node_mapping[node_type]} in our traffic system"
+            )
+
     return t
 
 
@@ -62,29 +72,71 @@ class TrafficDetectionBenchmark(Benchmark):
 
         # Register container images, reusing existing ones but with traffic-appropriate roles
         # For traffic detection - GPU version (similar to resnet50-inference-gpu)
-        containers.put(ImageProperties('traffic-detection-gpu', parse_size_string('56M'), arch='arm32'))
-        containers.put(ImageProperties('traffic-detection-gpu', parse_size_string('56M'), arch='x86'))
-        containers.put(ImageProperties('traffic-detection-gpu', parse_size_string('56M'), arch='aarch64'))
-        
+        containers.put(
+            ImageProperties(
+                "traffic-detection-gpu", parse_size_string("56M"), arch="arm32"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "traffic-detection-gpu", parse_size_string("56M"), arch="x86"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "traffic-detection-gpu", parse_size_string("56M"), arch="aarch64"
+            )
+        )
+
         # For traffic detection - CPU version (similar to resnet50-inference-cpu)
-        containers.put(ImageProperties('traffic-detection-cpu', parse_size_string('56M'), arch='arm32'))
-        containers.put(ImageProperties('traffic-detection-cpu', parse_size_string('56M'), arch='x86'))
-        containers.put(ImageProperties('traffic-detection-cpu', parse_size_string('56M'), arch='aarch64'))
-        
+        containers.put(
+            ImageProperties(
+                "traffic-detection-cpu", parse_size_string("56M"), arch="arm32"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "traffic-detection-cpu", parse_size_string("56M"), arch="x86"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "traffic-detection-cpu", parse_size_string("56M"), arch="aarch64"
+            )
+        )
+
         # For data aggregation (similar to python-pi-cpu)
-        containers.put(ImageProperties('data-aggregator', parse_size_string('58M'), arch='arm32'))
-        containers.put(ImageProperties('data-aggregator', parse_size_string('58M'), arch='x86'))
-        containers.put(ImageProperties('data-aggregator', parse_size_string('58M'), arch='aarch64'))
-        
+        containers.put(
+            ImageProperties("data-aggregator", parse_size_string("58M"), arch="arm32")
+        )
+        containers.put(
+            ImageProperties("data-aggregator", parse_size_string("58M"), arch="x86")
+        )
+        containers.put(
+            ImageProperties("data-aggregator", parse_size_string("58M"), arch="aarch64")
+        )
+
         # For traffic flow analysis (based on python-pi-cpu but with different role)
-        containers.put(ImageProperties('traffic-flow-analyzer', parse_size_string('58M'), arch='arm32'))
-        containers.put(ImageProperties('traffic-flow-analyzer', parse_size_string('58M'), arch='x86'))
-        containers.put(ImageProperties('traffic-flow-analyzer', parse_size_string('58M'), arch='aarch64'))
+        containers.put(
+            ImageProperties(
+                "traffic-flow-analyzer", parse_size_string("58M"), arch="arm32"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "traffic-flow-analyzer", parse_size_string("58M"), arch="x86"
+            )
+        )
+        containers.put(
+            ImageProperties(
+                "traffic-flow-analyzer", parse_size_string("58M"), arch="aarch64"
+            )
+        )
 
         # Log all the images in the container registry
         for name, tag_dict in containers.images.items():
             for tag, images in tag_dict.items():
-                logger.info('%s, %s, %s', name, tag, images)
+                logger.info("%s, %s, %s", name, tag, images)
 
     def run(self, env: Environment):
         # Deploy functions
@@ -94,33 +146,37 @@ class TrafficDetectionBenchmark(Benchmark):
             yield from env.faas.deploy(deployment)
 
         # Block until replicas become available
-        logger.info('waiting for replicas')
-        yield env.process(env.faas.poll_available_replica('traffic-detection'))
-        yield env.process(env.faas.poll_available_replica('data-aggregation'))
-        yield env.process(env.faas.poll_available_replica('traffic-analysis'))
+        logger.info("waiting for replicas")
+        yield env.process(env.faas.poll_available_replica("traffic-detection"))
+        yield env.process(env.faas.poll_available_replica("data-aggregation"))
+        yield env.process(env.faas.poll_available_replica("traffic-analysis"))
 
         # Run workload - simulating a realistic traffic monitoring pattern
         ps = []
-        
+
         # Continuous monitoring - regular vehicle detection (higher volume)
-        logger.info('executing 20 traffic-detection requests (continuous monitoring)')
+        logger.info("executing 20 traffic-detection requests (continuous monitoring)")
         for i in range(20):
-            ps.append(env.process(env.faas.invoke(FunctionRequest('traffic-detection'))))
-        
+            ps.append(
+                env.process(env.faas.invoke(FunctionRequest("traffic-detection")))
+            )
+
         # Sensor data aggregation - collecting from various sensors
-        logger.info('executing 15 data-aggregation requests (sensor collection)')
+        logger.info("executing 15 data-aggregation requests (sensor collection)")
         for i in range(15):
-            ps.append(env.process(env.faas.invoke(FunctionRequest('data-aggregation'))))
-        
+            ps.append(env.process(env.faas.invoke(FunctionRequest("data-aggregation"))))
+
         # Traffic analysis - periodic analysis of trends and patterns
-        logger.info('executing 8 traffic-analysis requests (trend analysis)')
+        logger.info("executing 8 traffic-analysis requests (trend analysis)")
         for i in range(8):
-            ps.append(env.process(env.faas.invoke(FunctionRequest('traffic-analysis'))))
-        
-        # Event-triggered incidents - spikes during congestion or incidents 
-        logger.info('executing 5 high-priority traffic-detection requests (incident detection)')
-        high_priority_req = FunctionRequest('traffic-detection')
-        high_priority_req.labels = {'priority': 'high'}
+            ps.append(env.process(env.faas.invoke(FunctionRequest("traffic-analysis"))))
+
+        # Event-triggered incidents - spikes during congestion or incidents
+        logger.info(
+            "executing 5 high-priority traffic-detection requests (incident detection)"
+        )
+        high_priority_req = FunctionRequest("traffic-detection")
+        high_priority_req.labels = {"priority": "high"}
         for i in range(5):
             ps.append(env.process(env.faas.invoke(high_priority_req)))
 
@@ -137,76 +193,77 @@ class TrafficDetectionBenchmark(Benchmark):
 
     def prepare_traffic_detection_deployment(self):
         # Design time - define the function with CPU and GPU options
-        func_name = 'traffic-detection'
-        cpu_image = FunctionImage(image='traffic-detection-cpu')
-        gpu_image = FunctionImage(image='traffic-detection-gpu')
-        
+        func_name = "traffic-detection"
+        cpu_image = FunctionImage(image="traffic-detection-cpu")
+        gpu_image = FunctionImage(image="traffic-detection-gpu")
+
         traffic_detection_fn = Function(func_name, fn_images=[gpu_image, cpu_image])
 
         # Run time - configure resource requirements
-        
+
         # Default container for CPU version
         cpu_container = FunctionContainer(cpu_image)
-        
+
         # GPU version with higher resource allocation for video processing
         gpu_resource_config = KubernetesResourceConfiguration.create_from_str(
-            cpu='500m',    # Higher CPU for video processing
-            memory='2048Mi'  # More memory for frame buffers
+            cpu="500m",  # Higher CPU for video processing
+            memory="2048Mi",  # More memory for frame buffers
         )
-        gpu_container = FunctionContainer(gpu_image, resource_config=gpu_resource_config)
-        
+        gpu_container = FunctionContainer(
+            gpu_image, resource_config=gpu_resource_config
+        )
+
         # Create deployment with GPU preferred over CPU
         deployment = FunctionDeployment(
             traffic_detection_fn,
             [gpu_container, cpu_container],
-            ScalingConfiguration(scale_min=2, scale_max=10),  # Allow scaling for busy periods
-            DeploymentRanking(['traffic-detection-gpu', 'traffic-detection-cpu'])
+            ScalingConfiguration(
+                scale_min=2, scale_max=10
+            ),  # Allow scaling for busy periods
+            DeploymentRanking(["traffic-detection-gpu", "traffic-detection-cpu"]),
         )
 
         return deployment
 
     def prepare_data_aggregation_deployment(self):
         # Design time - lightweight function for collecting and processing sensor data
-        func_name = 'data-aggregation'
-        image = FunctionImage(image='data-aggregator')
-        
+        func_name = "data-aggregation"
+        image = FunctionImage(image="data-aggregator")
+
         data_agg_fn = Function(func_name, fn_images=[image])
 
         # Run time - minimal resource requirements
         container = FunctionContainer(image)
-        
+
         # Create deployment with modest scaling configuration
         deployment = FunctionDeployment(
-            data_agg_fn,
-            [container],
-            ScalingConfiguration(scale_min=1, scale_max=5)
+            data_agg_fn, [container], ScalingConfiguration(scale_min=1, scale_max=5)
         )
 
         return deployment
 
     def prepare_traffic_analysis_deployment(self):
         # Design time - analytical function for traffic pattern analysis
-        func_name = 'traffic-analysis'
-        image = FunctionImage(image='traffic-flow-analyzer')
-        
+        func_name = "traffic-analysis"
+        image = FunctionImage(image="traffic-flow-analyzer")
+
         traffic_analysis_fn = Function(func_name, fn_images=[image])
 
         # Run time - needs more memory for data processing
         resource_config = KubernetesResourceConfiguration.create_from_str(
-            cpu='200m',
-            memory='1024Mi'  # More memory for analytics
+            cpu="200m", memory="1024Mi"  # More memory for analytics
         )
         container = FunctionContainer(image, resource_config=resource_config)
-        
+
         # Create deployment with limited scaling (analytical tasks)
         deployment = FunctionDeployment(
             traffic_analysis_fn,
             [container],
-            ScalingConfiguration(scale_min=1, scale_max=3)
+            ScalingConfiguration(scale_min=1, scale_max=3),
         )
 
         return deployment
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

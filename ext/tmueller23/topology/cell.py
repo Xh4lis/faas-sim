@@ -10,6 +10,6 @@ class SingleNodeCell(LANCell):
         super().__init__(nodes, backhaul=backhaul)
 
     def _create_identity(self):
-        self.nr = next(counters['cloudlet'])
-        self.name = 'singlenode_%d' % self.nr
-        self.switch = 'switch_%s' % self.name
+        self.nr = next(counters["cloudlet"])
+        self.name = "singlenode_%d" % self.nr
+        self.switch = "switch_%s" % self.name

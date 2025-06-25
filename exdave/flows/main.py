@@ -39,19 +39,21 @@ def execute_benchmark(flow_factory: FlowFactory):
     end = time.time()
     duration = end - start
 
-    return duration, sim.env.metrics.extract_dataframe('flow')['duration'].describe()
+    return duration, sim.env.metrics.extract_dataframe("flow")["duration"].describe()
 
 
 def log_results(type: str, duration, results):
-    logger.info(f'{type} flow simulation took {duration} seconds')
-    logger.info(f'{type} flow simulation results... mean: {results["mean"]}, '
-                f'std: {results["std"]}, '
-                f'min: {results["min"]}, '
-                f'25%: {results["25%"]}, '
-                f'50%: {results["50%"]}, '
-                f'75%: {results["75%"]}, '
-                f'max: {results["max"]}, '
-                f'count: {results["count"]}')
+    logger.info(f"{type} flow simulation took {duration} seconds")
+    logger.info(
+        f'{type} flow simulation results... mean: {results["mean"]}, '
+        f'std: {results["std"]}, '
+        f'min: {results["min"]}, '
+        f'25%: {results["25%"]}, '
+        f'50%: {results["50%"]}, '
+        f'75%: {results["75%"]}, '
+        f'max: {results["max"]}, '
+        f'count: {results["count"]}'
+    )
 
 
 def main():
@@ -68,11 +70,13 @@ def main():
     uninterrupting_flow_factory = UninterruptingFlowFactory()
 
     safe_duration, safe_results = execute_benchmark(safe_flow_factory)
-    uninterrupting_duration, uninterrupting_results = execute_benchmark(uninterrupting_flow_factory)
+    uninterrupting_duration, uninterrupting_results = execute_benchmark(
+        uninterrupting_flow_factory
+    )
 
-    log_results('uninterrupting', uninterrupting_duration, uninterrupting_results)
-    log_results('safe', safe_duration, safe_results)
+    log_results("uninterrupting", uninterrupting_duration, uninterrupting_results)
+    log_results("safe", safe_duration, safe_results)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

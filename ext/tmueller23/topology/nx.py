@@ -7,7 +7,7 @@ from ext.tmueller23.topology.cell import SingleNodeCell
 
 
 class NxScenario:
-    def __init__(self, n=1, internet='internet') -> None:
+    def __init__(self, n=1, internet="internet") -> None:
         super().__init__()
         self.n = n
         self.internet = internet

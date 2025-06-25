@@ -39,7 +39,7 @@ class Resources:
         self.cpu = cpu_millis
 
     def __str__(self):
-        return 'Resources(CPU: {0} Memory: {1})'.format(self.cpu, self.memory)
+        return "Resources(CPU: {0} Memory: {1})".format(self.cpu, self.memory)
 
     @staticmethod
     def from_str(memory, cpu):
@@ -48,7 +48,7 @@ class Resources:
         :param cpu: "250m"
         :return:
         """
-        return Resources(int(cpu.rstrip('m')), parse_size_string(memory))
+        return Resources(int(cpu.rstrip("m")), parse_size_string(memory))
 
 
 class FunctionResourceCharacterization:
@@ -80,7 +80,9 @@ class FunctionResourceCharacterization:
 
 class FunctionCharacterization:
 
-    def __init__(self, image: str, fet_oracle: FetOracle, resource_oracle: ResourceOracle):
+    def __init__(
+        self, image: str, fet_oracle: FetOracle, resource_oracle: ResourceOracle
+    ):
         self.image = image
         self.fet_oracle = fet_oracle
         self.resource_oracle = resource_oracle
@@ -110,11 +112,15 @@ class DeploymentRanking:
 
     def __init__(self, images: List[str], function_factor: Dict[str, float] = None):
         self.images = images
-        self.function_factor = function_factor if function_factor is not None else {image: 1 for image in images}
+        self.function_factor = (
+            function_factor
+            if function_factor is not None
+            else {image: 1 for image in images}
+        )
 
     def set_first(self, image: str):
         index = self.images.index(image)
-        updated = self.images[:index] + self.images[index + 1:]
+        updated = self.images[:index] + self.images[index + 1 :]
         self.images = [image] + updated
 
     def get_first(self):
@@ -133,10 +139,7 @@ class KubernetesResourceConfiguration(ResourceConfiguration):
         self.requests = requests if requests is not None else Resources()
 
     def get_resource_requirements(self) -> Dict:
-        return {
-            'cpu': self.requests.cpu,
-            'memory': self.requests.memory
-        }
+        return {"cpu": self.requests.cpu, "memory": self.requests.memory}
 
     @staticmethod
     def create_from_str(cpu: str, memory: str):
@@ -149,7 +152,9 @@ class Function:
     # TODO cascading labeling
     labels: Dict[str, str]
 
-    def __init__(self, name: str, fn_images: List[FunctionImage], labels: Dict[str, str] = None):
+    def __init__(
+        self, name: str, fn_images: List[FunctionImage], labels: Dict[str, str] = None
+    ):
         self.fn_images = fn_images
         self.name = name
         self.labels = labels if labels is not None else {}
@@ -166,10 +171,18 @@ class FunctionContainer:
     resource_config: ResourceConfiguration
     labels: Dict[str, str]
 
-    def __init__(self, fn_image: FunctionImage, resource_config: ResourceConfiguration = None,
-                 labels: Dict[str, str] = None):
+    def __init__(
+        self,
+        fn_image: FunctionImage,
+        resource_config: ResourceConfiguration = None,
+        labels: Dict[str, str] = None,
+    ):
         self.fn_image = fn_image
-        self.resource_config = resource_config if resource_config is not None else KubernetesResourceConfiguration()
+        self.resource_config = (
+            resource_config
+            if resource_config is not None
+            else KubernetesResourceConfiguration()
+        )
         self.labels = labels if labels is not None else {}
 
     @property
@@ -214,8 +227,13 @@ class FunctionDeployment:
     # used to determine which function to take when scaling
     ranking: DeploymentRanking
 
-    def __init__(self, fn: Function, fn_containers: List[FunctionContainer], scaling_config: ScalingConfiguration,
-                 deployment_ranking: DeploymentRanking = None):
+    def __init__(
+        self,
+        fn: Function,
+        fn_containers: List[FunctionContainer],
+        scaling_config: ScalingConfiguration,
+        deployment_ranking: DeploymentRanking = None,
+    ):
         self.fn = fn
         self.fn_containers = fn_containers
         self.scaling_config = scaling_config
@@ -248,12 +266,15 @@ class FunctionReplica:
     """
     A function replica is an instance of a function running on a specific node.
     """
-    function: FunctionDeployment       # The function deployment this replica belongs to
-    container: FunctionContainer       # The specific container configuration being executed
-    node: NodeState                    # The node where this replica is running
-    pod: Pod                           # Kubernetes-style pod representation for scheduling
+
+    function: FunctionDeployment  # The function deployment this replica belongs to
+    container: FunctionContainer  # The specific container configuration being executed
+    node: NodeState  # The node where this replica is running
+    pod: Pod  # Kubernetes-style pod representation for scheduling
     state: FunctionState = FunctionState.CONCEIVED  # Current lifecycle state
-    simulator: 'FunctionSimulator' = None  # The simulator that handles execution behavior
+    simulator: "FunctionSimulator" = (
+        None  # The simulator that handles execution behavior
+    )
 
     @property
     def fn_name(self):
@@ -278,7 +299,7 @@ class FunctionRequest:
         self.request_id = next(self.id_generator)
 
     def __str__(self) -> str:
-        return 'FunctionRequest(%d, %s, %s)' % (self.request_id, self.name, self.size)
+        return "FunctionRequest(%d, %s, %s)" % (self.request_id, self.name, self.size)
 
     def __repr__(self):
         return self.__str__()
@@ -338,7 +359,11 @@ class LoadBalancer:
         self.replicas = replicas
 
     def get_running_replicas(self, function: str):
-        return [replica for replica in self.replicas[function] if replica.state == FunctionState.RUNNING]
+        return [
+            replica
+            for replica in self.replicas[function]
+            if replica.state == FunctionState.RUNNING
+        ]
 
     def next_replica(self, request: FunctionRequest) -> FunctionReplica:
         raise NotImplementedError
@@ -371,7 +396,9 @@ class FunctionSimulator(abc.ABC):
     def setup(self, env: Environment, replica: FunctionReplica):
         yield env.timeout(0)
 
-    def invoke(self, env: Environment, replica: FunctionReplica, request: FunctionRequest):
+    def invoke(
+        self, env: Environment, replica: FunctionReplica, request: FunctionRequest
+    ):
         yield env.timeout(0)
 
     def teardown(self, env: Environment, replica: FunctionReplica):

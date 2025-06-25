@@ -21,16 +21,14 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/edgerun/faas-sim",
     packages=setuptools.find_packages(),
-    setup_requires=['wheel'],
+    setup_requires=["wheel"],
     test_suite="tests",
     tests_require=tests_require,
     install_requires=install_requires,
-    pyton_requires='>=3.7',
+    pyton_requires=">=3.7",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
-    entry_points={
-    },
-
+    entry_points={},
 )

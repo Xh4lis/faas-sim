@@ -62,9 +62,7 @@ class RuntimeLogger:
         if type(value) == dict:
             fields = value
         else:
-            fields = {
-                'value': value
-            }
+            fields = {"value": value}
 
         self._store_record(Record(metric, time, fields, tags))
 
@@ -88,4 +86,4 @@ class PrintLogger(RuntimeLogger):
 
     def _store_record(self, record: Record):
         super()._store_record(record)
-        print('[log]', record)
+        print("[log]", record)

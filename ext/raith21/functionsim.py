@@ -5,8 +5,16 @@ from simpy import Resource
 
 from sim.core import Environment
 from sim.docker import pull as docker_pull
-from sim.faas import FunctionSimulator, FunctionRequest, FunctionReplica, SimulatorFactory, simulate_data_download, \
-    simulate_data_upload, FunctionCharacterization, FunctionContainer
+from sim.faas import (
+    FunctionSimulator,
+    FunctionRequest,
+    FunctionReplica,
+    SimulatorFactory,
+    simulate_data_download,
+    simulate_data_upload,
+    FunctionCharacterization,
+    FunctionContainer,
+)
 
 
 def linear_queue_fet_increase(current_requests: int, max_requests: int) -> float:
@@ -15,8 +23,13 @@ def linear_queue_fet_increase(current_requests: int, max_requests: int) -> float
 
 class PythonHTTPSimulator(FunctionSimulator):
 
-    def __init__(self, queue: Resource, scale: Callable[[int, int], float], fn: FunctionContainer,
-                 characterization: FunctionCharacterization):
+    def __init__(
+        self,
+        queue: Resource,
+        scale: Callable[[int, int], float],
+        fn: FunctionContainer,
+        characterization: FunctionCharacterization,
+    ):
         self.worker_threads = queue.capacity
         self.queue = queue
         self.scale = scale
@@ -24,7 +37,9 @@ class PythonHTTPSimulator(FunctionSimulator):
         self.fn = fn
         self.characterization = characterization
 
-    def invoke(self, env: Environment, replica: FunctionReplica, request: FunctionRequest):
+    def invoke(
+        self, env: Environment, replica: FunctionReplica, request: FunctionRequest
+    ):
         token = self.queue.request()
         yield token  # wait for access
 
@@ -34,11 +49,12 @@ class PythonHTTPSimulator(FunctionSimulator):
         try:
             fet = self.characterization.sample_fet(replica.node.name)
             if fet is None:
-                logging.error(f"FET for node {replica.node.name} for function {self.fn.image} was not found")
-                raise ValueError(f'{replica.node.name}')
+                logging.error(
+                    f"FET for node {replica.node.name} for function {self.fn.image} was not found"
+                )
+                raise ValueError(f"{replica.node.name}")
             fet = float(fet) * factor
             yield env.timeout(fet)
-
 
         except KeyError:
             pass
@@ -52,9 +68,11 @@ class PythonHttpSimulatorFactory(SimulatorFactory):
         self.fn_characterizations = fn_characterizations
 
     def create(self, env: Environment, fn: FunctionContainer) -> FunctionSimulator:
-        workers = int(fn.labels['workers'])
+        workers = int(fn.labels["workers"])
         queue = Resource(env=env, capacity=workers)
-        return PythonHTTPSimulator(queue, linear_queue_fet_increase, fn, self.fn_characterizations[fn.image])
+        return PythonHTTPSimulator(
+            queue, linear_queue_fet_increase, fn, self.fn_characterizations[fn.image]
+        )
 
 
 class FunctionCall:
@@ -80,10 +98,11 @@ class InterferenceAwarePythonHttpSimulatorFactory(SimulatorFactory):
         self.fn_characterizations = fn_characterizations
 
     def create(self, env: Environment, fn: FunctionContainer) -> FunctionSimulator:
-        workers = int(fn.labels['workers'])
+        workers = int(fn.labels["workers"])
         queue = Resource(env=env, capacity=workers)
-        return InterferenceAwarePythonHttpSimulator(queue, linear_queue_fet_increase, fn,
-                                                    self.fn_characterizations[fn.image])
+        return InterferenceAwarePythonHttpSimulator(
+            queue, linear_queue_fet_increase, fn, self.fn_characterizations[fn.image]
+        )
 
 
 class AIPythonHTTPSimulatorFactory(SimulatorFactory):
@@ -92,14 +111,21 @@ class AIPythonHTTPSimulatorFactory(SimulatorFactory):
         self.fn_characterizations = fn_characterizations
 
     def create(self, env: Environment, fn: FunctionContainer) -> FunctionSimulator:
-        workers = int(fn.labels['workers'])
+        workers = int(fn.labels["workers"])
         queue = Resource(env=env, capacity=workers)
-        return AIPythonHTTPSimulator(queue, linear_queue_fet_increase, fn, self.fn_characterizations[fn.image])
+        return AIPythonHTTPSimulator(
+            queue, linear_queue_fet_increase, fn, self.fn_characterizations[fn.image]
+        )
 
 
 class AIPythonHTTPSimulator(FunctionSimulator):
-    def __init__(self, queue: Resource, scale: Callable[[int, int], float], fn: FunctionContainer,
-                 characterization: FunctionCharacterization):
+    def __init__(
+        self,
+        queue: Resource,
+        scale: Callable[[int, int], float],
+        fn: FunctionContainer,
+        characterization: FunctionCharacterization,
+    ):
         self.worker_threads = queue.capacity
         self.queue = queue
         self.scale = scale
@@ -112,10 +138,12 @@ class AIPythonHTTPSimulator(FunctionSimulator):
 
     def setup(self, env: Environment, replica: FunctionReplica):
         image = replica.pod.spec.containers[0].image
-        if 'inference' in image:
+        if "inference" in image:
             yield from simulate_data_download(env, replica)
 
-    def invoke(self, env: Environment, replica: FunctionReplica, request: FunctionRequest):
+    def invoke(
+        self, env: Environment, replica: FunctionReplica, request: FunctionRequest
+    ):
         token = self.queue.request()
         t_wait_start = env.now
         yield token  # wait for access
@@ -127,22 +155,33 @@ class AIPythonHTTPSimulator(FunctionSimulator):
         try:
             fet = self.characterization.sample_fet(replica.node.name)
             if fet is None:
-                logging.error(f"FET for node {replica.node.name} for function {self.deployment.image} was not found")
-                raise ValueError(f'{replica.node.name}')
+                logging.error(
+                    f"FET for node {replica.node.name} for function {self.deployment.image} was not found"
+                )
+                raise ValueError(f"{replica.node.name}")
             fet = float(fet) * factor
 
             image = replica.pod.spec.containers[0].image
-            if 'preprocessing' in image or 'training' in image:
+            if "preprocessing" in image or "training" in image:
                 yield from simulate_data_download(env, replica)
             start = env.now
             call = FunctionCall(request, replica, start)
             replica.node.all_requests.append(call)
             yield env.timeout(fet)
-            if 'preprocessing' in image or 'training' in image:
+            if "preprocessing" in image or "training" in image:
                 yield from simulate_data_upload(env, replica)
             t_fet_end = env.now
-            env.metrics.log_fet(request.name, replica.image, replica.node.name, t_fet_start, t_fet_end,
-                                id(replica), request.request_id, t_wait_start=t_wait_start, t_wait_end=t_wait_end)
+            env.metrics.log_fet(
+                request.name,
+                replica.image,
+                replica.node.name,
+                t_fet_start,
+                t_fet_end,
+                id(replica),
+                request.request_id,
+                t_wait_start=t_wait_start,
+                t_wait_end=t_wait_end,
+            )
             replica.node.set_end(request.request_id, t_fet_end)
         except KeyError:
             pass
@@ -151,8 +190,13 @@ class AIPythonHTTPSimulator(FunctionSimulator):
 
 
 class InterferenceAwarePythonHttpSimulator(FunctionSimulator):
-    def __init__(self, queue: Resource, scale: Callable[[int, int], float], fn: FunctionContainer,
-                 characterization: FunctionCharacterization):
+    def __init__(
+        self,
+        queue: Resource,
+        scale: Callable[[int, int], float],
+        fn: FunctionContainer,
+        characterization: FunctionCharacterization,
+    ):
         self.worker_threads = queue.capacity
         self.queue = queue
         self.scale = scale
@@ -165,10 +209,12 @@ class InterferenceAwarePythonHttpSimulator(FunctionSimulator):
 
     def setup(self, env: Environment, replica: FunctionReplica):
         image = replica.pod.spec.containers[0].image
-        if 'inference' in image:
+        if "inference" in image:
             yield from simulate_data_download(env, replica)
 
-    def invoke(self, env: Environment, replica: FunctionReplica, request: FunctionRequest):
+    def invoke(
+        self, env: Environment, replica: FunctionReplica, request: FunctionRequest
+    ):
         token = self.queue.request()
         t_wait_start = env.now
         yield token  # wait for access
@@ -180,12 +226,14 @@ class InterferenceAwarePythonHttpSimulator(FunctionSimulator):
         try:
             fet = self.characterization.sample_fet(replica.node.name)
             if fet is None:
-                logging.error(f"FET for node {replica.node.name} for function {self.deployment.image} was not found")
-                raise ValueError(f'{replica.node.name}')
+                logging.error(
+                    f"FET for node {replica.node.name} for function {self.deployment.image} was not found"
+                )
+                raise ValueError(f"{replica.node.name}")
             fet = float(fet) * factor
 
             image = replica.pod.spec.containers[0].image
-            if 'preprocessing' in image or 'training' in image:
+            if "preprocessing" in image or "training" in image:
                 yield from simulate_data_download(env, replica)
             start = env.now
             call = FunctionCall(request, replica, start)
@@ -194,15 +242,25 @@ class InterferenceAwarePythonHttpSimulator(FunctionSimulator):
 
             # add degradation
             end = env.now
-            degradation = replica.node.estimate_degradation(self.characterization.resource_oracle, start, end)
+            degradation = replica.node.estimate_degradation(
+                self.characterization.resource_oracle, start, end
+            )
             delay = max(0, (fet * degradation) - fet)
             yield env.timeout(delay)
-            if 'preprocessing' in image or 'training' in image:
+            if "preprocessing" in image or "training" in image:
                 yield from simulate_data_upload(env, replica)
             t_fet_end = env.now
-            env.metrics.log_fet(request.name, replica.image, replica.node.name, t_fet_start, t_fet_end,
-                                t_wait_start, t_wait_end, degradation,
-                                id(replica))
+            env.metrics.log_fet(
+                request.name,
+                replica.image,
+                replica.node.name,
+                t_fet_start,
+                t_fet_end,
+                t_wait_start,
+                t_wait_end,
+                degradation,
+                id(replica),
+            )
             replica.node.set_end(request.request_id, t_fet_end)
         except KeyError:
             pass

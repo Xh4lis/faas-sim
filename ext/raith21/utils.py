@@ -8,14 +8,16 @@ from sim.oracle.oracle import FetOracle, ResourceOracle
 
 def extract_model_type(device: str):
     if not type(device) is str:
-        return ''
+        return ""
     try:
-        return device[:device.rindex('_')]
+        return device[: device.rindex("_")]
     except ValueError:
         return device
 
 
-def create_ai_deployments(fet_oracle: FetOracle, resource_oracle: ResourceOracle) -> Dict[str, FunctionDeployment]:
+def create_ai_deployments(
+    fet_oracle: FetOracle, resource_oracle: ResourceOracle
+) -> Dict[str, FunctionDeployment]:
     all_deployments = create_all_deployments(fet_oracle, resource_oracle)
     del all_deployments[images.tf_gpu_function]
     del all_deployments[images.pi_function]
@@ -23,11 +25,15 @@ def create_ai_deployments(fet_oracle: FetOracle, resource_oracle: ResourceOracle
     return all_deployments
 
 
-def create_mixed_deployments(fet_oracle: FetOracle, resource_oracle: ResourceOracle) -> Dict[str, FunctionDeployment]:
+def create_mixed_deployments(
+    fet_oracle: FetOracle, resource_oracle: ResourceOracle
+) -> Dict[str, FunctionDeployment]:
     return create_all_deployments(fet_oracle, resource_oracle)
 
 
-def create_service_deployments(fet_oracle: FetOracle, resource_oracle: ResourceOracle) -> Dict[str, FunctionDeployment]:
+def create_service_deployments(
+    fet_oracle: FetOracle, resource_oracle: ResourceOracle
+) -> Dict[str, FunctionDeployment]:
     all_deployments = create_all_deployments(fet_oracle, resource_oracle)
     del all_deployments[images.speech_inference_function]
     del all_deployments[images.mobilenet_inference_function]
@@ -37,13 +43,14 @@ def create_service_deployments(fet_oracle: FetOracle, resource_oracle: ResourceO
     return all_deployments
 
 
-def create_deployments_for_profile(profile: str, fet_oracle: FetOracle, resource_oracle: ResourceOracle) -> Dict[
-    str, FunctionDeployment]:
-    if profile == 'ai':
+def create_deployments_for_profile(
+    profile: str, fet_oracle: FetOracle, resource_oracle: ResourceOracle
+) -> Dict[str, FunctionDeployment]:
+    if profile == "ai":
         return create_ai_deployments(fet_oracle, resource_oracle)
-    elif profile == 'mixed':
+    elif profile == "mixed":
         return create_mixed_deployments(fet_oracle, resource_oracle)
-    elif profile == 'service':
+    elif profile == "service":
         return create_service_deployments(fet_oracle, resource_oracle)
     else:
-        raise ValueError(f'unknown profile: {profile}')
+        raise ValueError(f"unknown profile: {profile}")

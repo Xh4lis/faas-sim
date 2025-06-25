@@ -1,6 +1,11 @@
 from sim import docker
 from sim.core import Environment
-from sim.faas import HTTPWatchdog, FunctionReplica, FunctionRequest, simulate_data_download
+from sim.faas import (
+    HTTPWatchdog,
+    FunctionReplica,
+    FunctionRequest,
+    simulate_data_download,
+)
 
 
 class InferenceFunctionSim(HTTPWatchdog):
@@ -16,29 +21,35 @@ class InferenceFunctionSim(HTTPWatchdog):
     def setup(self, env: Environment, replica: FunctionReplica):
         super().setup(env, replica)
         # basic cpu usage, in %
-        env.resource_state.put_resource(replica, 'cpu', 0.08)
+        env.resource_state.put_resource(replica, "cpu", 0.08)
 
         # basic memory consumption, in MB
-        env.resource_state.put_resource(replica, 'memory', 200)
+        env.resource_state.put_resource(replica, "memory", 200)
 
         yield from simulate_data_download(env, replica)
 
     def teardown(self, env: Environment, replica: FunctionReplica):
         # basic cpu usage, in %
-        env.resource_state.remove_resource(replica, 'cpu', 0.08)
+        env.resource_state.remove_resource(replica, "cpu", 0.08)
 
         # basic memory consumption, in MB
-        env.resource_state.remove_resource(replica, 'memory', 200)
+        env.resource_state.remove_resource(replica, "memory", 200)
         yield env.timeout(0)
 
-    def claim_resources(self, env: Environment, replica: FunctionReplica, request: FunctionRequest):
+    def claim_resources(
+        self, env: Environment, replica: FunctionReplica, request: FunctionRequest
+    ):
         # no setup time, no memory because everything is cached - only cpu usage
-        env.resource_state.put_resource(replica, 'cpu', 0.2)
+        env.resource_state.put_resource(replica, "cpu", 0.2)
         yield env.timeout(0)
 
-    def release_resources(self, env: Environment, replica: FunctionReplica, request: FunctionRequest):
-        env.resource_state.remove_resource(replica, 'cpu', 0.2)
+    def release_resources(
+        self, env: Environment, replica: FunctionReplica, request: FunctionRequest
+    ):
+        env.resource_state.remove_resource(replica, "cpu", 0.2)
         yield env.timeout(0)
 
-    def execute(self, env: Environment, replica: FunctionReplica, request: FunctionRequest):
+    def execute(
+        self, env: Environment, replica: FunctionReplica, request: FunctionRequest
+    ):
         yield env.timeout(0.2)

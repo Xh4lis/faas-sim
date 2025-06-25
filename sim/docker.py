@@ -9,7 +9,7 @@ from sim.topology import DockerRegistry
 class ImageProperties(NamedTuple):
     name: str
     size: int
-    tag: str = 'latest'
+    tag: str = "latest"
     arch: str = None
 
 
@@ -38,16 +38,18 @@ class ContainerRegistry:
         images = self.images[repository][tag]
 
         if arch:
-            images = [image for image in images if image.arch == arch or image.arch is None]
+            images = [
+                image for image in images if image.arch == arch or image.arch is None
+            ]
 
         return images
 
 
 def split_image_name(image: str) -> Tuple[str, str]:
-    parts = image.split(':', maxsplit=1)
+    parts = image.split(":", maxsplit=1)
 
     if len(parts) == 1:
-        return parts[0], 'latest'
+        return parts[0], "latest"
 
     return parts[0], parts[1]
 
@@ -68,7 +70,7 @@ def pull(env: Environment, image_str: str, node: Node):
     # find the image in the registry with the node's architecture
     images = env.container_registry.find(image_str, arch=node.arch)
     if not images:
-        raise ValueError('image not in registry: %s arch=%s' % (image_str, node.arch))
+        raise ValueError("image not in registry: %s arch=%s" % (image_str, node.arch))
     image = images[0]
 
     node_state = env.get_node_state(node.name)
@@ -95,4 +97,6 @@ def pull(env: Environment, image_str: str, node: Node):
 
     # for hop in route.hops:
     #     env.metrics.log_network(size, 'docker_pull', hop)
-    env.metrics.log_flow(size, env.now - started, route.source, route.destination, 'docker_pull')
+    env.metrics.log_flow(
+        size, env.now - started, route.source, route.destination, "docker_pull"
+    )
