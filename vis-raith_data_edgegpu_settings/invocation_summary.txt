@@ -1,0 +1,123 @@
+FUNCTION INVOCATION SUMMARY
+==========================
+
+Total invocations: 12284
+Overall average execution time: 311.43 ms
+Overall average wait time: 310.56 ms
+Simulation start time: 139.00 s
+Simulation end time: 468.24 s
+Total duration: 328.60 s
+
+NODE SUMMARY
+============
+
+Node: nx_7
+  Invocations: 6618
+  Average execution time: 314.92 ms
+  Min/Max execution time: 0.38/629.50 ms
+  Average wait time: 314.53 ms
+
+Node: coral_6
+  Invocations: 4665
+  Average execution time: 316.32 ms
+  Min/Max execution time: 0.54/632.25 ms
+  Average wait time: 315.78 ms
+
+Node: rockpi_2
+  Invocations: 1000
+  Average execution time: 265.34 ms
+  Min/Max execution time: 3.74/637.04 ms
+  Average wait time: 260.25 ms
+
+Node: nano_11
+  Invocations: 1
+  Average execution time: 494.00 ms
+  Min/Max execution time: 494.00/494.00 ms
+  Average wait time: 0.00 ms
+
+FUNCTION SUMMARY
+================
+
+Function: resnet50-inference
+  Invocations: 6618
+  Average execution time: 314.92 ms
+  Min/Max execution time: 0.38/629.50 ms
+  Average wait time: 314.53 ms
+
+Function: mobilenet-inference
+  Invocations: 4665
+  Average execution time: 316.32 ms
+  Min/Max execution time: 0.54/632.25 ms
+  Average wait time: 315.78 ms
+
+Function: speech-inference
+  Invocations: 668
+  Average execution time: 320.35 ms
+  Min/Max execution time: 3.74/637.04 ms
+  Average wait time: 316.53 ms
+
+Function: resnet50-preprocessing
+  Invocations: 332
+  Average execution time: 154.66 ms
+  Min/Max execution time: 7.55/309.94 ms
+  Average wait time: 147.01 ms
+
+Function: resnet50-training
+  Invocations: 1
+  Average execution time: 494.00 ms
+  Min/Max execution time: 494.00/494.00 ms
+  Average wait time: 0.00 ms
+
+DETAILED BREAKDOWN BY NODE AND FUNCTION
+=====================================
+
+Node: coral_6
+Function: mobilenet-inference
+Image: faas-workloads/mobilenet-inference-tpu
+Invocations: 4665
+Average execution time: 316.32 ms
+Min/Max execution time: 0.54/632.25 ms
+Average wait time: 315.78 ms
+First invocation: 139.00 s
+Last invocation: 145.70 s
+
+Node: nano_11
+Function: resnet50-training
+Image: faas-workloads/resnet-training-gpu
+Invocations: 1
+Average execution time: 494.00 ms
+Min/Max execution time: 494.00/494.00 ms
+Average wait time: 0.00 ms
+First invocation: 149.62 s
+Last invocation: 149.62 s
+
+Node: nx_7
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 6618
+Average execution time: 314.92 ms
+Min/Max execution time: 0.38/629.50 ms
+Average wait time: 314.53 ms
+First invocation: 139.00 s
+Last invocation: 148.47 s
+
+Node: rockpi_2
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 332
+Average execution time: 154.66 ms
+Min/Max execution time: 7.55/309.94 ms
+Average wait time: 147.01 ms
+First invocation: 139.82 s
+Last invocation: 467.60 s
+
+Node: rockpi_2
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 668
+Average execution time: 320.35 ms
+Min/Max execution time: 3.74/637.04 ms
+Average wait time: 316.53 ms
+First invocation: 139.00 s
+Last invocation: 139.94 s
+

@@ -11,8 +11,13 @@ class HorizontalPodAutoscaler:
     # https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
     # Official implementation only considers pods, in which all containers have specified resource requests
 
-    def __init__(self, env: Environment, average_window: int = 100, reconcile_interval: int = 15,
-                 target_tolerance: float = 0.1):
+    def __init__(
+        self,
+        env: Environment,
+        average_window: int = 100,
+        reconcile_interval: int = 15,
+        target_tolerance: float = 0.1,
+    ):
         """
         :param average_window: seconds to look back in time to calculate the average for each replica
         :param env: sim environment
@@ -60,31 +65,50 @@ class HorizontalPodAutoscaler:
             metrics_server: MetricsServer = self.env.metrics_server
             faas: FaasSystem = self.env.faas
             for function_deployment in faas.get_deployments():
-                running_replicas = faas.get_replicas(function_deployment.name, FunctionState.RUNNING)
+                running_replicas = faas.get_replicas(
+                    function_deployment.name, FunctionState.RUNNING
+                )
                 if len(running_replicas) == 0:
                     continue
-                conceived_replicas = faas.get_replicas(function_deployment.name, FunctionState.CONCEIVED)
-                starting_replicas = faas.get_replicas(function_deployment.name, FunctionState.STARTING)
+                conceived_replicas = faas.get_replicas(
+                    function_deployment.name, FunctionState.CONCEIVED
+                )
+                starting_replicas = faas.get_replicas(
+                    function_deployment.name, FunctionState.STARTING
+                )
                 sum_cpu = 0
 
                 for replica in running_replicas:
-                    sum_cpu += metrics_server.get_average_cpu_utilization(replica, self.average_window)
+                    sum_cpu += metrics_server.get_average_cpu_utilization(
+                        replica, self.average_window
+                    )
 
                 average_cpu = sum_cpu / len(running_replicas)
 
-                target_avg_utilization = function_deployment.scaling_config.target_average_utilization
+                target_avg_utilization = (
+                    function_deployment.scaling_config.target_average_utilization
+                )
                 desired_replicas = math.ceil(
-                    len(running_replicas) * (average_cpu / target_avg_utilization))
+                    len(running_replicas) * (average_cpu / target_avg_utilization)
+                )
 
                 updated_desired_replicas = desired_replicas
                 if len(conceived_replicas) > 0 or len(starting_replicas) > 0:
                     if desired_replicas > len(running_replicas):
-                        count = len(running_replicas) + len(conceived_replicas) + len(starting_replicas)
+                        count = (
+                            len(running_replicas)
+                            + len(conceived_replicas)
+                            + len(starting_replicas)
+                        )
                         average_cpu = sum_cpu / count
                         updated_desired_replicas = math.ceil(
-                            len(running_replicas) * (average_cpu / target_avg_utilization))
+                            len(running_replicas)
+                            * (average_cpu / target_avg_utilization)
+                        )
 
-                if desired_replicas > len(running_replicas) and updated_desired_replicas < len(running_replicas):
+                if desired_replicas > len(
+                    running_replicas
+                ) and updated_desired_replicas < len(running_replicas):
                     # no scaling in case of reversed decision
                     continue
 

@@ -24,8 +24,13 @@ class Benchmark:
 
 
 class BenchmarkBase(Benchmark):
-    def __init__(self, images: List[Tuple[str, str, str]], deployments: List[FunctionDeployment],
-                 arrival_profiles: Dict[str, Generator], duration: int = None):
+    def __init__(
+        self,
+        images: List[Tuple[str, str, str]],
+        deployments: List[FunctionDeployment],
+        arrival_profiles: Dict[str, Generator],
+        duration: int = None,
+    ):
         self.duration = duration  # in seconds
         self.images = images
         self.deployments = deployments
@@ -49,7 +54,7 @@ class BenchmarkBase(Benchmark):
 
         for name, tag_dict in containers.images.items():
             for tag, images in tag_dict.items():
-                logging.info('%s, %s, %s', name, tag, images)
+                logging.info("%s, %s, %s", name, tag, images)
 
     def run(self, env: Environment):
         for deployment in self.deployments:
@@ -58,17 +63,21 @@ class BenchmarkBase(Benchmark):
             yield env.process(env.faas.poll_available_replica(deployment.name))
 
         ps = []
-        logging.info('executing requests')
+        logging.info("executing requests")
         for deployment in self.deployments:
             try:
                 ia_generator = self.arrival_profiles[deployment.name]
                 if self.duration is None:
-                    p = env.process(function_trigger(env, deployment, ia_generator, max_requests=1000))
+                    p = env.process(
+                        function_trigger(
+                            env, deployment, ia_generator, max_requests=1000
+                        )
+                    )
                 else:
                     p = env.process(function_trigger(env, deployment, ia_generator))
                 ps.append(p)
             except KeyError:
-                logging.warning('no arrival profile for deployment %s', deployment.name)
+                logging.warning("no arrival profile for deployment %s", deployment.name)
 
         if self.duration is not None:
             env.process(self.wait(env, ps))
@@ -78,13 +87,19 @@ class BenchmarkBase(Benchmark):
     def wait(self, env, ps):
         yield env.timeout(env.now + self.duration)
         for p in ps:
-            p.interrupt('stop')
+            p.interrupt("stop")
 
 
 class DegradationBenchmarkBase(BenchmarkBase):
 
-    def __init__(self, images: List[Tuple[str, str, str]], deployments: List[FunctionDeployment],
-                 arrival_profiles: Dict[str, Generator], duration: int = None, model_folder='./data'):
+    def __init__(
+        self,
+        images: List[Tuple[str, str, str]],
+        deployments: List[FunctionDeployment],
+        arrival_profiles: Dict[str, Generator],
+        duration: int = None,
+        model_folder="./data",
+    ):
         super().__init__(images, deployments, arrival_profiles, duration)
         self.model_folder = model_folder
 
@@ -94,24 +109,24 @@ class DegradationBenchmarkBase(BenchmarkBase):
 
 
 def get_model_file(folder, node_name):
-    if 'xeongpu' in node_name or 'xeoncpu' in node_name:
-        file = 'eb-xeongpu.sav'
-    elif 'nx' in node_name:
-        file = 'eb-jetson-nx-01.sav'
-    elif 'nano' in node_name:
-        file = 'eb-jetson-nano-01.sav'
-    elif 'tx2' in node_name:
-        file = 'eb-jetson-tx2-01.sav'
-    elif 'tpu' in node_name or 'coral' in node_name:
-        file = 'eb-rpi4-01.sav'
-    elif 'rpi3' in node_name:
-        file = 'eb-rpi3-01.sav'
-    elif 'rockpi' in node_name:
-        file = 'eb-rockpi.sav'
-    elif 'nuc' in node_name:
-        file = 'eb-nuc7.sav'
-    elif 'rpi4' in node_name:
-        file = 'eb-rpi4-01.sav'
+    if "xeongpu" in node_name or "xeoncpu" in node_name:
+        file = "eb-xeongpu.sav"
+    elif "nx" in node_name:
+        file = "eb-jetson-nx-01.sav"
+    elif "nano" in node_name:
+        file = "eb-jetson-nano-01.sav"
+    elif "tx2" in node_name:
+        file = "eb-jetson-tx2-01.sav"
+    elif "tpu" in node_name or "coral" in node_name:
+        file = "eb-rpi4-01.sav"
+    elif "rpi3" in node_name:
+        file = "eb-rpi3-01.sav"
+    elif "rockpi" in node_name:
+        file = "eb-rockpi.sav"
+    elif "nuc" in node_name:
+        file = "eb-nuc7.sav"
+    elif "rpi4" in node_name:
+        file = "eb-rpi4-01.sav"
     else:
         raise ValueError(f"Can't find model for node: {node_name}")
     return os.path.join(folder, file)
@@ -121,7 +136,7 @@ def set_degradation(env: Environment, folder: str):
     models = {}
     for ether_node in env.topology.get_nodes():
         try:
-            name = ether_node.name[:ether_node.name.rindex("_")]
+            name = ether_node.name[: ether_node.name.rindex("_")]
             model = models.get(name, None)
             if model is None:
                 model_file = get_model_file(folder, name)

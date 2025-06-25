@@ -1,0 +1,1 @@
+setopt HIST_FIND_NO_DUPS

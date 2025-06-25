@@ -85,36 +85,36 @@ class Requirements:
 
     def __str__(self):
         def join(d: Dict) -> str:
-            return "\n".join(['%s:: %s' % (key, value) for (key, value) in d.items()])
+            return "\n".join(["%s:: %s" % (key, value) for (key, value) in d.items()])
 
         text = "---------------------------"
         for name, c in self.characteristics:
-            text += f'\n--------{name}---------\n'
+            text += f"\n--------{name}---------\n"
             text += join(c)
-            text += '\n'
+            text += "\n"
         return text
 
     def __map(self, d: Dict[Enum, float]) -> Dict[str, float]:
         data = {}
         for k, v in d.items():
-            data[f'{str(k.name)}'] = v
+            data[f"{str(k.name)}"] = v
         return data
 
     def to_dict(self) -> Dict[str, Dict[str, float]]:
         return {
-            'device.edgerun.io/arch': self.__map(self.arch),
-            'device.edgerun.io/accelerator': self.__map(self.accelerator),
-            'device.edgerun.io/cores': self.__map(self.cores),
-            'device.edgerun.io/disk': self.__map(self.disk),
-            'device.edgerun.io/location': self.__map(self.location),
-            'device.edgerun.io/connection': self.__map(self.connection),
-            'device.edgerun.io/network': self.__map(self.network),
-            'device.edgerun.io/cpu_mhz': self.__map(self.cpu_mhz),
-            'device.edgerun.io/cpu': self.__map(self.cpu),
-            'device.edgerun.io/ram': self.__map(self.ram),
-            'device.edgerun.io/vram_bin': self.__map(self.gpu_vram),
-            'device.edgerun.io/gpu_mhz': self.__map(self.gpu_mhz),
-            'device.edgerun.io/gpu_model': self.__map(self.gpu_model),
+            "device.edgerun.io/arch": self.__map(self.arch),
+            "device.edgerun.io/accelerator": self.__map(self.accelerator),
+            "device.edgerun.io/cores": self.__map(self.cores),
+            "device.edgerun.io/disk": self.__map(self.disk),
+            "device.edgerun.io/location": self.__map(self.location),
+            "device.edgerun.io/connection": self.__map(self.connection),
+            "device.edgerun.io/network": self.__map(self.network),
+            "device.edgerun.io/cpu_mhz": self.__map(self.cpu_mhz),
+            "device.edgerun.io/cpu": self.__map(self.cpu),
+            "device.edgerun.io/ram": self.__map(self.ram),
+            "device.edgerun.io/vram_bin": self.__map(self.gpu_vram),
+            "device.edgerun.io/gpu_mhz": self.__map(self.gpu_mhz),
+            "device.edgerun.io/gpu_model": self.__map(self.gpu_model),
         }
 
     @property
@@ -132,23 +132,23 @@ class Requirements:
             (Bins, self.ram),
             (Bins, self.gpu_vram),
             (Bins, self.gpu_mhz),
-            (GpuModel, self.gpu_model)
+            (GpuModel, self.gpu_model),
         ]
 
     @staticmethod
     def fields():
         return [
-            ('arch', Arch),
-            ('accelerator', Accelerator),
-            ('cores', Bins),
-            ('disk', Disk),
-            ('location', Location),
-            ('connection', Connection),
-            ('network', Bins),
-            ('cpu_mhz', Bins),
-            ('cpu', CpuModel),
-            ('ram', Bins),
-            ('gpu_vram', Bins),
-            ('gpu_mhz', Bins),
-            ('gpu_model', GpuModel)
+            ("arch", Arch),
+            ("accelerator", Accelerator),
+            ("cores", Bins),
+            ("disk", Disk),
+            ("location", Location),
+            ("connection", Connection),
+            ("network", Bins),
+            ("cpu_mhz", Bins),
+            ("cpu", CpuModel),
+            ("ram", Bins),
+            ("gpu_vram", Bins),
+            ("gpu_mhz", Bins),
+            ("gpu_model", GpuModel),
         ]

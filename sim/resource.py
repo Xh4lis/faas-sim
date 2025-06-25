@@ -10,6 +10,7 @@ from sim.faas import FunctionReplica, FaasSystem, FunctionState
 
 class ResourceUtilization:
     """Tracks resource consumption values for a single entity (function replica)"""
+
     __resources: Dict[str, float]
 
     def __init__(self):
@@ -31,7 +32,7 @@ class ResourceUtilization:
         """Return copy of all resource utilization values"""
         return deepcopy(self.__resources)
 
-    def copy(self) -> 'ResourceUtilization':
+    def copy(self) -> "ResourceUtilization":
         """Create independent copy of this utilization object"""
         util = ResourceUtilization()
         util.__resources = self.list_resources()
@@ -48,6 +49,7 @@ class ResourceUtilization:
 
 class NodeResourceUtilization:
     """Tracks all function replicas' resource usage on a single node"""
+
     # key is pod-name,   uniqueness allows for running same FunctionContainer multiple times on node
     __resources: Dict[str, ResourceUtilization]
 
@@ -77,7 +79,9 @@ class NodeResourceUtilization:
         else:
             return util
 
-    def list_resource_utilization(self) -> List[Tuple[FunctionReplica, ResourceUtilization]]:
+    def list_resource_utilization(
+        self,
+    ) -> List[Tuple[FunctionReplica, ResourceUtilization]]:
         """List all function replicas and their resource usage on this node"""
         functions = []
         for pod_name, utilization in self.__resources.items():
@@ -97,32 +101,45 @@ class NodeResourceUtilization:
 
 class ResourceState:
     """Central registry tracking all resource utilization across all nodes"""
+
     node_resource_utilizations: Dict[str, NodeResourceUtilization]
 
     def __init__(self):
         self.node_resource_utilizations = {}
 
-    def put_resource(self, function_replica: FunctionReplica, resource: str, value: float):
+    def put_resource(
+        self, function_replica: FunctionReplica, resource: str, value: float
+    ):
         """Register resource usage for a function replica on its node"""
         node_name = function_replica.node.name
         node_resources = self.get_node_resource_utilization(node_name)
         node_resources.put_resource(function_replica, resource, value)
 
-    def remove_resource(self, replica: 'FunctionReplica', resource: str, value: float):
+    def remove_resource(self, replica: "FunctionReplica", resource: str, value: float):
         """Release resources when a function completes execution"""
         node_name = replica.node.name
-        self.get_node_resource_utilization(node_name).remove_resource(replica, resource, value)
+        self.get_node_resource_utilization(node_name).remove_resource(
+            replica, resource, value
+        )
 
-    def get_resource_utilization(self, replica: 'FunctionReplica') -> 'ResourceUtilization':
+    def get_resource_utilization(
+        self, replica: "FunctionReplica"
+    ) -> "ResourceUtilization":
         """Get current resource usage for a specific function replica"""
         node_name = replica.node.name
-        return self.get_node_resource_utilization(node_name).get_resource_utilization(replica)
+        return self.get_node_resource_utilization(node_name).get_resource_utilization(
+            replica
+        )
 
-    def list_resource_utilization(self, node_name: str) -> List[Tuple['FunctionReplica', 'ResourceUtilization']]:
+    def list_resource_utilization(
+        self, node_name: str
+    ) -> List[Tuple["FunctionReplica", "ResourceUtilization"]]:
         """List all function replicas and their resource usage on a node"""
         return self.get_node_resource_utilization(node_name).list_resource_utilization()
 
-    def get_node_resource_utilization(self, node_name: str) -> Optional[NodeResourceUtilization]:
+    def get_node_resource_utilization(
+        self, node_name: str
+    ) -> Optional[NodeResourceUtilization]:
         """Get or create resource tracking for a specific node"""
         node_resources = self.node_resource_utilizations.get(node_name)
         if node_resources is None:
@@ -134,6 +151,7 @@ class ResourceState:
 @dataclass
 class ResourceWindow:
     """Snapshot of resource usage at a specific point in time"""
+
     replica: FunctionReplica
     resources: Dict[str, float]
     time: float
@@ -154,14 +172,23 @@ class MetricsServer:
         pod = window.replica.pod.name
         self._windows[node][pod].append(window)
 
-    def get_average_cpu_utilization(self, fn_replica: FunctionReplica, window_start: float, window_end: float) -> float:
+    def get_average_cpu_utilization(
+        self, fn_replica: FunctionReplica, window_start: float, window_end: float
+    ) -> float:
         """Calculate average CPU usage over a time window as fraction of capacity"""
-        utilization = self.get_average_resource_utilization(fn_replica, 'cpu', window_start, window_end)
+        utilization = self.get_average_resource_utilization(
+            fn_replica, "cpu", window_start, window_end
+        )
         millis = fn_replica.node.capacity.cpu_millis
         return utilization / millis
 
-    def get_average_resource_utilization(self, fn_replica: FunctionReplica, resource: str, window_start: float,
-                                         window_end: float) -> float:
+    def get_average_resource_utilization(
+        self,
+        fn_replica: FunctionReplica,
+        resource: str,
+        window_start: float,
+        window_end: float,
+    ) -> float:
         """Calculate average usage of a specific resource over a time window"""
         node = fn_replica.node.name
         pod = fn_replica.pod.name
@@ -176,7 +203,7 @@ class MetricsServer:
                 if window.time < window_start:
                     break
                 average_windows.append(window)
-                
+
         # Calculate average of resource values across all windows
         return np.mean(list(map(lambda l: l.resources[resource], average_windows)))
 
@@ -186,7 +213,9 @@ class ResourceMonitor:
 
     def __init__(self, env: Environment, reconcile_interval: int, logging=True):
         self.env = env
-        self.reconcile_interval = reconcile_interval  # How often to sample resource usage
+        self.reconcile_interval = (
+            reconcile_interval  # How often to sample resource usage
+        )
         self.metric_server: MetricsServer = env.metrics_server
         self.logging = logging
 
@@ -197,17 +226,24 @@ class ResourceMonitor:
             # Wait for next collection interval
             yield self.env.timeout(self.reconcile_interval)
             now = self.env.now
-            
+
             # Iterate through all running function replicas
             for deployment in faas.get_deployments():
-                for replica in faas.get_replicas(deployment.name, FunctionState.RUNNING):
+                for replica in faas.get_replicas(
+                    deployment.name, FunctionState.RUNNING
+                ):
                     # Get current resource usage for this replica
-                    utilization = self.env.resource_state.get_resource_utilization(replica)
+                    utilization = self.env.resource_state.get_resource_utilization(
+                        replica
+                    )
                     if utilization.is_empty():
                         continue
-                        
+
                     # Log metrics and add to metrics server timeseries
                     if self.logging:
-                        self.env.metrics.log_function_resource_utilization(replica, utilization)
+                        self.env.metrics.log_function_resource_utilization(
+                            replica, utilization
+                        )
                     self.metric_server.put(
-                        ResourceWindow(replica, utilization.list_resources(), now))
+                        ResourceWindow(replica, utilization.list_resources(), now)
+                    )

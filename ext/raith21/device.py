@@ -1,7 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Dict
 
-from ext.raith21.model import Location, Disk, Bins, Accelerator, Arch, Connection, CpuModel, GpuModel
+from ext.raith21.model import (
+    Location,
+    Disk,
+    Bins,
+    Accelerator,
+    Arch,
+    Connection,
+    CpuModel,
+    GpuModel,
+)
 
 
 @dataclass
@@ -34,7 +43,7 @@ class ArchProperties:
             (Bins, self.ram),
             (Bins, self.gpu_vram),
             (Bins, self.gpu_mhz),
-            (GpuModel, self.gpu_model)
+            (GpuModel, self.gpu_model),
         ]
 
 
@@ -55,16 +64,16 @@ class Device:
     @property
     def labels(self) -> Dict[str, str]:
         return {
-            'device.edgerun.io/arch': str(self.arch.name),
-            'device.edgerun.io/accelerator': str(self.accelerator.name),
-            'device.edgerun.io/cores': str(self.cores.name),
-            'device.edgerun.io/location': str(self.location.name),
-            'device.edgerun.io/connection': str(self.connection.name),
-            'device.edgerun.io/network': str(self.network.name),
-            'device.edgerun.io/cpu_mhz': str(self.cpu_mhz.name),
-            'device.edgerun.io/cpu': str(self.cpu.name),
-            'device.edgerun.io/ram': str(self.ram.name),
-            'device.edgerun.io/disk': str(self.disk.name)
+            "device.edgerun.io/arch": str(self.arch.name),
+            "device.edgerun.io/accelerator": str(self.accelerator.name),
+            "device.edgerun.io/cores": str(self.cores.name),
+            "device.edgerun.io/location": str(self.location.name),
+            "device.edgerun.io/connection": str(self.connection.name),
+            "device.edgerun.io/network": str(self.network.name),
+            "device.edgerun.io/cpu_mhz": str(self.cpu_mhz.name),
+            "device.edgerun.io/cpu": str(self.cpu.name),
+            "device.edgerun.io/ram": str(self.ram.name),
+            "device.edgerun.io/disk": str(self.disk.name),
         }
 
     def copy(self):
@@ -79,7 +88,7 @@ class Device:
             network=self.network,
             cpu_mhz=self.cpu_mhz,
             cpu=self.cpu,
-            ram=self.ram
+            ram=self.ram,
         )
 
 
@@ -92,9 +101,9 @@ class GpuDevice(Device):
     @property
     def labels(self) -> Dict[str, str]:
         super_labels = super().labels
-        super_labels['device.edgerun.io/vram_bin'] = str(self.vram.name)
-        super_labels['device.edgerun.io/gpu_mhz'] = str(self.gpu_mhz.name)
-        super_labels['device.edgerun.io/gpu_model'] = str(self.gpu_model.name)
+        super_labels["device.edgerun.io/vram_bin"] = str(self.vram.name)
+        super_labels["device.edgerun.io/gpu_mhz"] = str(self.gpu_mhz.name)
+        super_labels["device.edgerun.io/gpu_model"] = str(self.gpu_model.name)
         return super_labels
 
     def copy(self):
@@ -112,5 +121,5 @@ class GpuDevice(Device):
             ram=self.ram,
             vram=self.vram,
             gpu_mhz=self.gpu_mhz,
-            gpu_model=self.gpu_model
+            gpu_model=self.gpu_model,
         )

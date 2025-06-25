@@ -11,6 +11,7 @@ from sim.resource import ResourceWindow
 
 # TODO migrate this to faas (needs to extract FunctionCall)
 
+
 class Raith21ResourceMonitor:
     """Simpy process - continuously collects resource data"""
 
@@ -28,17 +29,23 @@ class Raith21ResourceMonitor:
             # calculate resources over function replica resources and save in metric_server
             call_cache: Dict[str, List[FunctionCall]] = {}
             for function_deployment in faas.get_deployments():
-                for replica in faas.get_replicas(function_deployment.name, FunctionState.RUNNING):
+                for replica in faas.get_replicas(
+                    function_deployment.name, FunctionState.RUNNING
+                ):
                     node_name = replica.node.name
                     calls = call_cache.get(node_name, None)
                     if calls is None:
                         calls = replica.node.get_calls_in_timeframe(start_ts, end_ts)
                         call_cache[node_name] = calls
                     trace_execution_durations = []
-                    replica_usage = self.resource_oracle.get_resources(node_name, replica.function.image)
+                    replica_usage = self.resource_oracle.get_resources(
+                        node_name, replica.function.image
+                    )
                     for call in calls:
                         if call.replica.pod.name == replica.pod.name:
-                            last_start = start_ts if start_ts >= call.start else call.start
+                            last_start = (
+                                start_ts if start_ts >= call.start else call.start
+                            )
 
                             if call.end is not None:
                                 first_end = end_ts if end_ts <= call.end else call.end
@@ -57,7 +64,7 @@ class Raith21ResourceMonitor:
                         sum = np.sum(trace_execution_durations)
                         # this should be enough, because: our time window is 1 second, if one call consumed 100%
                         # -> which means that *all* cores were running 100% of the time, thus the final
-                        cpu_usage = (sum * replica_usage['cpu'])
+                        cpu_usage = sum * replica_usage["cpu"]
                         # cpu = cpu_usage / int(replica.node.ether_node.capacity.cpu_millis / 1000)
                         window = ResourceWindow(replica, min(1, cpu_usage))
                     self.metric_server.put(window)

@@ -1,5 +1,6 @@
 from .core import FunctionContainer, Function, FunctionImage, DeploymentRanking
 
+
 # Add any additional imports needed
 class ScalingConfiguration:
     def __init__(self, scale_min=1, scale_max=1):

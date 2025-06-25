@@ -4,7 +4,7 @@ from typing import Optional
 import ether.topology
 from ether.core import Node, Connection
 
-DockerRegistry = Node('registry')
+DockerRegistry = Node("registry")
 
 
 class Topology(ether.topology.Topology):
@@ -20,7 +20,7 @@ class Topology(ether.topology.Topology):
         if DockerRegistry not in self.nodes:
             self.add_node(DockerRegistry)
         for node in self.nodes:
-            if isinstance(node, str) and node.startswith('internet'):
+            if isinstance(node, str) and node.startswith("internet"):
                 self.add_connection(Connection(node, DockerRegistry))
 
     def route_by_node_name(self, source_name: str, destination_name: str):
@@ -34,11 +34,11 @@ class Topology(ether.topology.Topology):
         """
         source = self.find_node(source_name)
         if source is None:
-            raise ValueError('source node not found: ' + source_name)
+            raise ValueError("source node not found: " + source_name)
 
         destination = self.find_node(destination_name)
         if destination is None:
-            raise ValueError('destination node not found: ' + destination_name)
+            raise ValueError("destination node not found: " + destination_name)
 
         return self.route(source, destination)
 
@@ -69,6 +69,7 @@ class LazyBandwidthGraph:
     >>> bw['server_0']['dockerhub.com'] == 1000 # will resolve the route
     >>> bw['server_0']['dockerhub.com'] == 1000 # served from the cache
     """
+
     topology: Topology
 
     def __init__(self, topology: Topology) -> None:
@@ -80,7 +81,7 @@ class LazyBandwidthGraph:
         return self._Resolver(self, source)
 
     class _Resolver:
-        def __init__(self, bwg: 'LazyBandwidthGraph', source: str) -> None:
+        def __init__(self, bwg: "LazyBandwidthGraph", source: str) -> None:
             super().__init__()
             self.bwg = bwg
             self.source = source
@@ -91,7 +92,7 @@ class LazyBandwidthGraph:
 
             if self.source == destination:
                 # FIXME: should this case maybe be handled in the scheduler/priorities?
-                return 1.25e+8
+                return 1.25e8
 
             route = self.bwg.topology.route_by_node_name(self.source, destination)
             if not route or not route.hops:

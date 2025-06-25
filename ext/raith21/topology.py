@@ -5,8 +5,12 @@ from typing import List
 from ether.blocks.cells import FiberToExchange, IoTComputeBox
 from ether.cell import LANCell, GeoCell, counters, SharedLinkCell, UpDownLink
 from ether.core import Node
-from ether.scenarios.urbansensing import UrbanSensingScenario, default_cell_density, default_num_cells, \
-    default_cloudlet_size
+from ether.scenarios.urbansensing import (
+    UrbanSensingScenario,
+    default_cell_density,
+    default_num_cells,
+    default_cloudlet_size,
+)
 from skippy.core.storage import StorageIndex
 from srds import IntegerTruncationSampler
 
@@ -19,7 +23,7 @@ logger = logging.getLogger(__name__)
 def all_internet_topology(nodes: List[Node]) -> Topology:
     t = Topology()
     for node in nodes:
-        cell = LANCell(nodes=[node], backhaul='internet')
+        cell = LANCell(nodes=[node], backhaul="internet")
         t.add(cell)
     t.init_docker_registry()
 
@@ -62,9 +66,9 @@ class XeonCloudlet(LANCell):
 
     def _create_identity(self):
         if self.name is None:
-            self.nr = next(counters['cloudlet'])
-            self.name = 'cloudlet_%d' % self.nr
-            self.switch = 'switch_%s' % self.name
+            self.nr = next(counters["cloudlet"])
+            self.name = "cloudlet_%d" % self.nr
+            self.switch = "switch_%s" % self.name
 
 
 def parts(a, b):
@@ -75,15 +79,21 @@ def parts(a, b):
 
 class FasterMobileConnection(UpDownLink):
 
-    def __init__(self, backhaul='internet') -> None:
+    def __init__(self, backhaul="internet") -> None:
         super().__init__(250, 250, backhaul)
 
 
 class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
 
-    def __init__(self, nodes: List[Node], storage_index: StorageIndex, num_cells=default_num_cells,
-                 cell_density=default_cell_density,
-                 cloudlet_size=default_cloudlet_size, internet='internet') -> None:
+    def __init__(
+        self,
+        nodes: List[Node],
+        storage_index: StorageIndex,
+        num_cells=default_num_cells,
+        cell_density=default_cell_density,
+        cloudlet_size=default_cloudlet_size,
+        internet="internet",
+    ) -> None:
         self.nodes = nodes
         self.storage_index = storage_index
         self.xeon_nodes = self._get_xeon_nodes()
@@ -128,7 +138,9 @@ class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
             while len(split) != 4:
                 split.append(0)
             random.shuffle(split)
-            choices = random.choices(['tx2', 'nano', 'coral', 'nx'], weights=split, k=take)
+            choices = random.choices(
+                ["tx2", "nano", "coral", "nx"], weights=split, k=take
+            )
 
             def select_nodes(nodes, n):
                 if n > len(nodes):
@@ -140,17 +152,19 @@ class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
             for i in range(take):
                 node = choices[i]
                 selected_size = split[i]
-                if node == 'tx2':
+                if node == "tx2":
                     tx2_nodes, selected_nodes = select_nodes(tx2_nodes, selected_size)
                     selected_accelerator_nodes.extend(selected_nodes)
-                elif node == 'nx':
+                elif node == "nx":
                     nx_nodes, selected_nodes = select_nodes(nx_nodes, selected_size)
                     selected_accelerator_nodes.extend(selected_nodes)
-                elif node == 'nano':
+                elif node == "nano":
                     nano_nodes, selected_nodes = select_nodes(nano_nodes, selected_size)
                     selected_accelerator_nodes.extend(selected_nodes)
-                elif node == 'coral':
-                    coral_nodes, selected_nodes = select_nodes(coral_nodes, selected_size)
+                elif node == "coral":
+                    coral_nodes, selected_nodes = select_nodes(
+                        coral_nodes, selected_size
+                    )
                     selected_accelerator_nodes.extend(selected_nodes)
 
             selected_nuc_nodes = []
@@ -170,13 +184,9 @@ class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
             if len(selected_accelerator_nodes) > 0:
                 box = IoTComputeBox(selected_accelerator_nodes)
                 neighborhood = SharedLinkCell(
-                    nodes=[
-                        selected_nuc_nodes,
-                        selected_aot_nodes,
-                        box
-                    ],
+                    nodes=[selected_nuc_nodes, selected_aot_nodes, box],
                     shared_bandwidth=10000,
-                    backhaul=FasterMobileConnection(self.internet)
+                    backhaul=FasterMobileConnection(self.internet),
                 )
             else:
                 neighborhood = SharedLinkCell(
@@ -185,7 +195,7 @@ class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
                         selected_aot_nodes,
                     ],
                     shared_bandwidth=10000,
-                    backhaul=FasterMobileConnection(self.internet)
+                    backhaul=FasterMobileConnection(self.internet),
                 )
 
             neighborhoods.append(neighborhood)
@@ -254,37 +264,41 @@ class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
         return self._create_aot_nodes(self.rpi3_nodes, 3)
 
     def create_cloudlet(self) -> XeonCloudlet:
-        return XeonCloudlet(self.xeon_nodes, self.cloudlet_size[0], backhaul=FiberToExchange(self.internet))
+        return XeonCloudlet(
+            self.xeon_nodes,
+            self.cloudlet_size[0],
+            backhaul=FiberToExchange(self.internet),
+        )
 
     def _get_xeon_nodes(self) -> List[Node]:
-        xeongpus = list(filter(lambda l: 'xeongpu' in l.name, self.nodes))
-        xeoncpus = list(filter(lambda l: 'xeoncpu' in l.name, self.nodes))
+        xeongpus = list(filter(lambda l: "xeongpu" in l.name, self.nodes))
+        xeoncpus = list(filter(lambda l: "xeoncpu" in l.name, self.nodes))
         xeoncpus.extend(xeongpus)
         return xeoncpus
 
     def _get_rpi3_nodes(self) -> List[Node]:
-        return self._filter_nodes('rpi3')
+        return self._filter_nodes("rpi3")
 
     def _get_rpi4_nodes(self) -> List[Node]:
-        return self._filter_nodes('rpi4')
+        return self._filter_nodes("rpi4")
 
     def _get_rockpi_nodes(self) -> List[Node]:
-        return self._filter_nodes('rockpi')
+        return self._filter_nodes("rockpi")
 
     def _get_nano_nodes(self) -> List[Node]:
-        return self._filter_nodes('nano')
+        return self._filter_nodes("nano")
 
     def _get_tx2_nodes(self) -> List[Node]:
-        return self._filter_nodes('tx2')
+        return self._filter_nodes("tx2")
 
     def _get_nx_nodes(self) -> List[Node]:
-        return self._filter_nodes('nx')
+        return self._filter_nodes("nx")
 
     def _get_nuc_nodes(self) -> List[Node]:
-        return self._filter_nodes('nuc')
+        return self._filter_nodes("nuc")
 
     def _get_coral_nodes(self) -> List[Node]:
-        return self._filter_nodes('coral')
+        return self._filter_nodes("coral")
 
     def _filter_nodes(self, name: str) -> List[Node]:
         return list(filter(lambda n: name in n.name, self.nodes))

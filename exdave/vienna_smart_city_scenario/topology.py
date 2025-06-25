@@ -7,7 +7,12 @@ from ether.cell import LANCell, SharedLinkCell, UpDownLink
 from ether.core import Connection
 from ether.qos import latency
 from ether.vis import draw_basic
-from sim.faas.util.constant import zone_label, controller_role_label, worker_role_label, client_role_label
+from sim.faas.util.constant import (
+    zone_label,
+    controller_role_label,
+    worker_role_label,
+    client_role_label,
+)
 from matplotlib import pyplot as plt
 
 from ext.raith21.etherdevices import create_xeoncpu, create_xeongpu
@@ -29,16 +34,16 @@ class SmallCloudlet(LANCell):
         return LANCell(self.nodes, backhaul=self.switch)
 
 
-class CloudSenario():
+class CloudSenario:
 
     def __init__(self, backhaul: str):
         self.backhaul = backhaul
 
     def materialize(self, topology: Topology):
-        cluster = 'Cloud'
+        cluster = "Cloud"
         backhaul = self.backhaul
         controller_node = create_xeoncpu()
-        controller_node.labels[controller_role_label] = 'true'
+        controller_node.labels[controller_role_label] = "true"
 
         cloudvm_0 = create_xeoncpu()
         cloudvm_1 = create_xeoncpu()
@@ -47,17 +52,17 @@ class CloudSenario():
         cloud_nodes = [controller_node, cloudvm_0, cloudvm_1, cloudvm_2]
 
         for node in cloud_nodes:
-            node.labels[worker_role_label] = 'true'
+            node.labels[worker_role_label] = "true"
             node.labels[zone_label] = cluster
 
-        cloudlet = SharedLinkCell([
-            SmallCloudlet(
-                nodes=cloud_nodes,
-                backhaul=UpDownLink(
-                    10000, 10000, self.backhaul
-                ),
-            )],
-            backhaul=BusinessIsp(backhaul)
+        cloudlet = SharedLinkCell(
+            [
+                SmallCloudlet(
+                    nodes=cloud_nodes,
+                    backhaul=UpDownLink(10000, 10000, self.backhaul),
+                )
+            ],
+            backhaul=BusinessIsp(backhaul),
         )
         cloudlet.materialize(topology)
 
@@ -86,31 +91,36 @@ class IoTBoxScenario:
         self.backhaul = backhaul
 
     def materialize(self, topology: Topology):
-        cluster = 'IoT-Box'
+        cluster = "IoT-Box"
         controller_node = create_xeoncpu()
-        controller_node.labels[controller_role_label] = 'true'
-        controller_node.labels[worker_role_label] = 'true'
+        controller_node.labels[controller_role_label] = "true"
+        controller_node.labels[worker_role_label] = "true"
 
         nano_node = nodes.nano()
-        nano_node.labels[worker_role_label] = 'true'
+        nano_node.labels[worker_role_label] = "true"
 
         nx_node = nodes.nx()
-        nx_node.labels[worker_role_label] = 'true'
+        nx_node.labels[worker_role_label] = "true"
 
         nx_node_1 = nodes.nx()
-        nx_node_1.labels[worker_role_label] = 'true'
+        nx_node_1.labels[worker_role_label] = "true"
 
         nx_node_2 = nodes.nx()
-        nx_node_2.labels[worker_role_label] = 'true'
+        nx_node_2.labels[worker_role_label] = "true"
 
         tx2_node = nodes.tx2()
-        tx2_node.labels[worker_role_label] = 'true'
+        tx2_node.labels[worker_role_label] = "true"
 
         nuc_node = nodes.nuc()
-        nuc_node.labels[client_role_label] = 'true'
+        nuc_node.labels[client_role_label] = "true"
 
         topology_nodes = [
-            controller_node, nano_node, nx_node, nx_node_1, nx_node_2, tx2_node,
+            controller_node,
+            nano_node,
+            nx_node,
+            nx_node_1,
+            nx_node_2,
+            tx2_node,
         ]
 
         for node in topology_nodes:
@@ -119,9 +129,7 @@ class IoTBoxScenario:
         box = IoTComputeBox(nodes=topology_nodes)
 
         cell = SharedLinkCell(
-            nodes=[
-                box
-            ],
+            nodes=[box],
             shared_bandwidth=1000,
         )
         iotbox_cell = LANCell([cell], backhaul=BusinessIsp(self.backhaul))
@@ -140,40 +148,47 @@ class CloudletScenario:
         self.backhaul = backhaul
 
     def materialize(self, topology: Topology):
-        cluster = 'Cloudlet'
+        cluster = "Cloudlet"
 
         controller_node = create_xeoncpu()
-        controller_node.labels[controller_role_label] = 'true'
-        controller_node.labels[worker_role_label] = 'true'
+        controller_node.labels[controller_role_label] = "true"
+        controller_node.labels[worker_role_label] = "true"
 
         xeon_node_0 = create_xeoncpu()
-        xeon_node_0.labels[worker_role_label] = 'true'
+        xeon_node_0.labels[worker_role_label] = "true"
 
         xeon_node_1 = create_xeoncpu()
-        xeon_node_1.labels[worker_role_label] = 'true'
+        xeon_node_1.labels[worker_role_label] = "true"
 
         xeon_node_2 = create_xeoncpu()
-        xeon_node_2.labels[worker_role_label] = 'true'
+        xeon_node_2.labels[worker_role_label] = "true"
 
         xeon_gpu = create_xeongpu()
-        xeon_gpu.labels[worker_role_label] = 'true'
+        xeon_gpu.labels[worker_role_label] = "true"
 
         nuc_node = nodes.nuc()
-        nuc_node.labels[client_role_label] = 'true'
+        nuc_node.labels[client_role_label] = "true"
 
-        topology_nodes = [controller_node, xeon_node_0, xeon_node_1, xeon_node_2, xeon_gpu, nuc_node]
+        topology_nodes = [
+            controller_node,
+            xeon_node_0,
+            xeon_node_1,
+            xeon_node_2,
+            xeon_gpu,
+            nuc_node,
+        ]
 
         for node in topology_nodes:
             node.labels[zone_label] = cluster
 
-        cloudlet = SharedLinkCell([
-            SmallCloudlet(
-                nodes=topology_nodes,
-                backhaul=UpDownLink(
-                    10000, 10000, self.backhaul
-                ),
-            )],
-            backhaul=BusinessIsp(self.backhaul)
+        cloudlet = SharedLinkCell(
+            [
+                SmallCloudlet(
+                    nodes=topology_nodes,
+                    backhaul=UpDownLink(10000, 10000, self.backhaul),
+                )
+            ],
+            backhaul=BusinessIsp(self.backhaul),
         )
 
         cloudlet_cell = LANCell([cloudlet], backhaul=BusinessIsp(self.backhaul))
@@ -187,14 +202,16 @@ class CloudletScenario:
         clients.materialize(topology)
 
 
-class ViennaSmartCityScenario():
+class ViennaSmartCityScenario:
 
     def materialize(self, topology: Topology, max_districts):
-        cloud_backhaul = 'internet_vie'
+        cloud_backhaul = "internet_vie"
         for district in range(1, max_districts):
-            district_backhaul = f'internet_vie_{district}_district'
+            district_backhaul = f"internet_vie_{district}_district"
             latency = random.randint(30, 200)
-            topology.add_connection(Connection(cloud_backhaul, district_backhaul, latency=latency))
+            topology.add_connection(
+                Connection(cloud_backhaul, district_backhaul, latency=latency)
+            )
             is_cloudlet = random.random() <= 0.5
             if is_cloudlet:
                 CloudletScenario(district_backhaul).materialize(topology)
@@ -218,5 +235,5 @@ def main():
     plt.show()  # display
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

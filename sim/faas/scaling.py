@@ -37,7 +37,9 @@ def faas_idler(env: Environment, inactivity_duration=300, reconcile_interval=30)
             idle_time = env.now - env.metrics.last_invocation[name]
             if idle_time >= inactivity_duration:
                 env.process(faas.suspend(name))
-                logger.debug('%.2f function %s has been idle for %.2fs', env.now, name, idle_time)
+                logger.debug(
+                    "%.2f function %s has been idle for %.2fs", env.now, name, idle_time
+                )
 
 
 class FaasRequestScaler:
@@ -68,11 +70,11 @@ class FaasRequestScaler:
             if (invocations / self.reconcile_interval) >= self.threshold:
                 scale = (config.scale_factor / 100) * config.scale_max
                 yield from faas.scale_up(self.fn_name, int(scale))
-                logger.debug(f'scaled up {self.fn_name} by {scale}')
+                logger.debug(f"scaled up {self.fn_name} by {scale}")
             else:
                 scale = (config.scale_factor / 100) * config.scale_max
                 yield from faas.scale_down(self.fn_name, int(scale))
-                logger.debug(f'scaled down {self.fn_name} by {scale}')
+                logger.debug(f"scaled down {self.fn_name} by {scale}")
 
     def stop(self):
         self.running = False
@@ -105,7 +107,9 @@ class AverageFaasRequestScaler:
             if running == 0:
                 continue
 
-            conceived_replicas = faas.get_replicas(self.fn.name, FunctionState.CONCEIVED)
+            conceived_replicas = faas.get_replicas(
+                self.fn.name, FunctionState.CONCEIVED
+            )
             starting_replicas = faas.get_replicas(self.fn.name, FunctionState.STARTING)
 
             last_invocations = self.function_invocations.get(self.fn_name, 0)
@@ -118,11 +122,19 @@ class AverageFaasRequestScaler:
             updated_desired_replicas = desired_replicas
             if len(conceived_replicas) > 0 or len(starting_replicas) > 0:
                 if desired_replicas > len(running_replicas):
-                    count = len(running_replicas) + len(conceived_replicas) + len(starting_replicas)
+                    count = (
+                        len(running_replicas)
+                        + len(conceived_replicas)
+                        + len(starting_replicas)
+                    )
                     average = invocations / count
-                    updated_desired_replicas = math.ceil(running * (average / self.threshold))
+                    updated_desired_replicas = math.ceil(
+                        running * (average / self.threshold)
+                    )
 
-            if desired_replicas > len(running_replicas) and updated_desired_replicas < len(running_replicas):
+            if desired_replicas > len(
+                running_replicas
+            ) and updated_desired_replicas < len(running_replicas):
                 # no scaling in case of reversed decision
                 continue
 
@@ -171,12 +183,14 @@ class AverageQueueFaasRequestScaler:
             if running == 0:
                 continue
 
-            conceived_replicas = faas.get_replicas(self.fn.name, FunctionState.CONCEIVED)
+            conceived_replicas = faas.get_replicas(
+                self.fn.name, FunctionState.CONCEIVED
+            )
             starting_replicas = faas.get_replicas(self.fn.name, FunctionState.STARTING)
 
             in_queue = []
             for replica in running_replicas:
-                sim: 'InterferenceAwarePythonHttpSimulator' = replica.simulator
+                sim: "InterferenceAwarePythonHttpSimulator" = replica.simulator
                 in_queue.append(len(sim.queue.queue))
             if len(in_queue) == 0:
                 average = 0
@@ -192,9 +206,13 @@ class AverageQueueFaasRequestScaler:
                         in_queue.append(0)
 
                     average = int(math.ceil(np.median(np.array(in_queue))))
-                    updated_desired_replicas = math.ceil(running * (average / self.threshold))
+                    updated_desired_replicas = math.ceil(
+                        running * (average / self.threshold)
+                    )
 
-            if desired_replicas > len(running_replicas) and updated_desired_replicas < len(running_replicas):
+            if desired_replicas > len(
+                running_replicas
+            ) and updated_desired_replicas < len(running_replicas):
                 # no scaling in case of reversed decision
                 continue
 

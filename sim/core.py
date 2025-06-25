@@ -16,24 +16,28 @@ class NodeState:
     """
     Holds simulation specific runtime knowledge about a node. For example, what docker images it has already pulled.
     """
+
     docker_images: Set
     current_requests: Set
     all_requests: List[any]
     performance_degradation: Optional[RegressorMixin]
 
     def __init__(self) -> None:
-        self.ether_node = None            # Reference to the network topology node
-        self.skippy_node = None           # Reference to the scheduler's node representation
-        self.docker_images = set()        # Tracks which container images are already pulled
-        self.current_requests = set()     # Currently executing function requests
-        self.all_requests = []            # Historical record of all function calls
-        self.performance_degradation = None  # ML model for predicting performance degradation
-        self.buffer_size = 0              # Current number of buffered requests
-        self.buffer_limit = 50            # Maximum number of historical requests to store
-        self.cache = {}                   # Cache for performance degradation calculations
+        self.ether_node = None  # Reference to the network topology node
+        self.skippy_node = None  # Reference to the scheduler's node representation
+        self.docker_images = set()  # Tracks which container images are already pulled
+        self.current_requests = set()  # Currently executing function requests
+        self.all_requests = []  # Historical record of all function calls
+        self.performance_degradation = (
+            None  # ML model for predicting performance degradation
+        )
+        self.buffer_size = 0  # Current number of buffered requests
+        self.buffer_limit = 50  # Maximum number of historical requests to store
+        self.cache = {}  # Cache for performance degradation calculations
 
-    def estimate_degradation(self, resource_oracle: ResourceOracle,
-                             start_ts: int, end_ts: int) -> float:
+    def estimate_degradation(
+        self, resource_oracle: ResourceOracle, start_ts: int, end_ts: int
+    ) -> float:
         if self.performance_degradation is not None:
             rounded_start = round(start_ts, 1)
             rounded_end = round(end_ts, 1)
@@ -42,8 +46,14 @@ class NodeState:
                 return get
 
             calls = self.get_calls_in_timeframe(start_ts, end_ts)
-            x = create_degradation_model_input(calls, start_ts, end_ts, self.name,
-                                               self.capacity.memory, resource_oracle)
+            x = create_degradation_model_input(
+                calls,
+                start_ts,
+                end_ts,
+                self.name,
+                self.capacity.memory,
+                resource_oracle,
+            )
 
             if len(x) == 0:
                 # in case no other calls happened
@@ -109,8 +119,8 @@ class SimulationTimeoutError(BaseException):
 
 
 class Environment(simpy.Environment):
-    cluster: 'SimulationClusterContext'
-    faas: 'FaasSystem'
+    cluster: "SimulationClusterContext"
+    faas: "FaasSystem"
 
     def __init__(self, initial_time=0):
         super().__init__(initial_time)
@@ -127,7 +137,9 @@ class Environment(simpy.Environment):
         self.metrics_server = None
         self.resource_state = None
         self.resource_monitor = None
-        self.background_processes: List[Callable[[Environment], Generator[simpy.events.Event, Any, Any]]] = []
+        self.background_processes: List[
+            Callable[[Environment], Generator[simpy.events.Event, Any, Any]]
+        ] = []
         self.degradation_models: Dict[str, Optional[RegressorMixin]] = {}
 
     def get_node_state(self, name: str) -> Optional[NodeState]:

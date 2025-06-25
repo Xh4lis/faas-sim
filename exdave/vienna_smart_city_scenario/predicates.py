@@ -25,18 +25,29 @@ class CheckNodeLabelPresencePred(Predicate):
 
         return True
 
+
 class ExclusivePred(Predicate):
 
     def passes_predicate(self, context: ClusterContext, pod: Pod, node: Node) -> bool:
         return len(node.pods) == 0
 
+
 class LoadBalancerPred(Predicate):
 
     def passes_predicate(self, context: ClusterContext, pod: Pod, node: Node) -> bool:
-        if pod.spec.labels.get(controller_role_label) == 'true' and node.labels.get(controller_role_label) == 'true':
+        if (
+            pod.spec.labels.get(controller_role_label) == "true"
+            and node.labels.get(controller_role_label) == "true"
+        ):
             return True
-        if pod.spec.labels.get(controller_role_label) == 'true'  and node.labels.get(controller_role_label) is None:
+        if (
+            pod.spec.labels.get(controller_role_label) == "true"
+            and node.labels.get(controller_role_label) is None
+        ):
             return False
-        if pod.spec.labels.get(controller_role_label) is None  and node.labels.get(controller_role_label) == 'true':
+        if (
+            pod.spec.labels.get(controller_role_label) is None
+            and node.labels.get(controller_role_label) == "true"
+        ):
             return False
         return True

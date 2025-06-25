@@ -1,6 +1,7 @@
 """
 Module that glues simulation concepts to skippy concepts.
 """
+
 import copy
 import random
 from collections import defaultdict
@@ -8,8 +9,15 @@ from typing import List, Dict
 
 from ether.core import Node as EtherNode
 from skippy.core.clustercontext import ClusterContext
-from skippy.core.model import Node as SkippyNode, Capacity as SkippyCapacity, ImageState, Pod, PodSpec, Container, \
-    ResourceRequirements
+from skippy.core.model import (
+    Node as SkippyNode,
+    Capacity as SkippyCapacity,
+    ImageState,
+    Pod,
+    PodSpec,
+    Container,
+    ResourceRequirements,
+)
 from skippy.core.storage import StorageIndex
 from skippy.core.utils import counter
 
@@ -47,15 +55,17 @@ class SimulationClusterContext(ClusterContext):
 
         if len(images) == 1 and images[0].arch is None:
             sizes = {
-                'x86': images[0].size,
-                'arm': images[0].size,
-                'arm32v7': images[0].size,
-                'aarch64': images[0].size,
-                'arm64': images[0].size,
-                'amd64': images[0].size
+                "x86": images[0].size,
+                "arm": images[0].size,
+                "arm32v7": images[0].size,
+                "aarch64": images[0].size,
+                "arm64": images[0].size,
+                "amd64": images[0].size,
             }
         else:
-            sizes = {image.arch: image.size for image in images if image.arch is not None}
+            sizes = {
+                image.arch: image.size for image in images if image.arch is not None
+            }
 
         return ImageState(sizes)
 
@@ -67,7 +77,11 @@ class SimulationClusterContext(ClusterContext):
 
     def list_nodes(self) -> List[SkippyNode]:
         if self.nodes is None:
-            self.nodes = [to_skippy_node(node) for node in self.topology.get_nodes() if node != DockerRegistry]
+            self.nodes = [
+                to_skippy_node(node)
+                for node in self.topology.get_nodes()
+                if node != DockerRegistry
+            ]
 
         return self.nodes
 
@@ -79,7 +93,9 @@ class SimulationClusterContext(ClusterContext):
 
         bw = self.get_bandwidth_graph()[node.name]
         storage_nodes = list(self.storage_nodes.values())
-        random.shuffle(storage_nodes)  # make sure you get a random one if bandwidth is the same
+        random.shuffle(
+            storage_nodes
+        )  # make sure you get a random one if bandwidth is the same
         storage_node = max(storage_nodes, key=lambda n: bw[n.name])
 
         return storage_node.name
@@ -87,12 +103,16 @@ class SimulationClusterContext(ClusterContext):
     @property
     def storage_nodes(self) -> Dict[str, SkippyNode]:
         if self._storage_nodes is None:
-            self._storage_nodes = {node.name: node for node in self.list_nodes() if self.is_storage_node(node)}
+            self._storage_nodes = {
+                node.name: node
+                for node in self.list_nodes()
+                if self.is_storage_node(node)
+            }
 
         return self._storage_nodes
 
     def is_storage_node(self, node: SkippyNode):
-        return 'data.skippy.io/storage' in node.labels
+        return "data.skippy.io/storage" in node.labels
 
 
 def to_skippy_node(node: EtherNode) -> SkippyNode:
@@ -105,15 +125,17 @@ def to_skippy_node(node: EtherNode) -> SkippyNode:
     allocatable = copy.copy(capacity)
 
     labels = dict(node.labels)
-    labels['beta.kubernetes.io/arch'] = node.arch
+    labels["beta.kubernetes.io/arch"] = node.arch
 
-    return SkippyNode(node.name, capacity=capacity, allocatable=allocatable, labels=labels)
+    return SkippyNode(
+        node.name, capacity=capacity, allocatable=allocatable, labels=labels
+    )
 
 
 pod_counters = defaultdict(counter)
 
 
-def create_function_pod(fd: 'FunctionDeployment', fn: 'FunctionContainer') -> Pod:
+def create_function_pod(fd: "FunctionDeployment", fn: "FunctionContainer") -> Pod:
     """
     Creates a new Pod that hosts the given function.
     :param fd: the function deployment to get the deployed function name
@@ -128,7 +150,7 @@ def create_function_pod(fd: 'FunctionDeployment', fn: 'FunctionContainer') -> Po
     spec.labels = fn.labels
 
     cnt = next(pod_counters[fd.name])
-    pod = Pod(f'pod-{fd.name}-{cnt}', 'faas-sim')
+    pod = Pod(f"pod-{fd.name}-{cnt}", "faas-sim")
     pod.spec = spec
 
     return pod

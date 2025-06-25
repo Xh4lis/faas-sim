@@ -3,7 +3,8 @@ from skippy.core.model import Pod, Node
 from skippy.core.predicates import Predicate
 
 
-hostname_label = 'skippy.core.hostname'
+hostname_label = "skippy.core.hostname"
+
 
 class HostnamePredicate(Predicate):
     def passes_predicate(self, context: ClusterContext, pod: Pod, node: Node) -> bool:
