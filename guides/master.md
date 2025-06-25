@@ -318,12 +318,6 @@ Energy modeling in edge computing is becoming increasingly important as AI workl
 - Model-level energy consumption for state-of-the-art DNNs
 - Application-level measurements for end-to-end scenarios
 
-This data shows that:
-
-- GPUs typically reduce energy consumption by 49-79% compared to CPUs
-- Different kernels have vastly different energy impacts
-- convolutional operations account for ~79% of energy on CPUs, ~78% on GPUs
-
 ### Energy Data Sources
 
 To implement accurate energy modeling, we can use data from:
