@@ -233,7 +233,16 @@ class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
                 continue
 
             for bucket in storage.bucket_names:
-                self.storage_index.mb(bucket, non_empty_node.name)
+                # Handle IoTComputeBox case
+                if hasattr(non_empty_node, 'name'):
+                    node_name = non_empty_node.name
+                elif hasattr(non_empty_node, 'nodes') and len(non_empty_node.nodes) > 0:
+                    # For IoTComputeBox, use the first contained node's name
+                    node_name = non_empty_node.nodes[0].name
+                else:
+                    continue  # Skip if we can't get a name
+                    
+                self.storage_index.mb(bucket, node_name)
 
         for item in storage.data_items:
             self.storage_index.put(item)

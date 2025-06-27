@@ -36,9 +36,9 @@ from ext.raith21.generator import generate_devices  # Creates heterogeneous devi
 from ext.raith21.generators.cloudcpu import (
     cloudcpu_settings,
 )  # Device configuration settings
-from ext.raith21.generators.edgegpu import (
-    edgegpu_settings,
-)  # Device configuration settings
+from ext.raith21.generators.edgegpu import edgegpu_settings  # Device configuration settings
+from ext.raith21.generators.edgesbc import edgesbc_settings
+from ext.raith21.generators.edgesbc_with_accelerators import edgesbc_with_accelerators_settings
 from ext.raith21.oracles import (
     Raith21ResourceOracle,
     Raith21FetOracle,
@@ -69,8 +69,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
 num_devices = 100  # Min 24 - Controls simulation scale
-devices = generate_devices(num_devices, edgegpu_settings)
-print(devices)
+devices = generate_devices(num_devices, edgesbc_with_accelerators_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
 # Create oracles for predicting execution times and resource requirements
@@ -115,7 +114,7 @@ sched_params = {
 
 # Set workload pattern - constant rate of requests
 benchmark = ConstantBenchmark(
-    "mixed", duration=500, rps=700
+    "mixed", duration=500, rps=200
 )  # rps requests/second for duration seconds
 
 # Initialize network topology and storage
@@ -196,7 +195,7 @@ for df_name, df in dfs.items():
         print("  Empty or None DataFrame")
 
 # Create output directory if it doesn't exist
-output_dir = "raith_data_edgegpu_settings"
+output_dir = "raith_data_edgesbc_settings"
 os.makedirs(output_dir, exist_ok=True)
 
 # Save each DataFrame to a CSV file
