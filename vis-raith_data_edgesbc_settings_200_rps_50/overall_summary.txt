@@ -1,0 +1,36 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-06-27 09:59:10
+
+Topology Overview:
+  Number of nodes: 4
+  Number of functions: 4
+  Number of images: 4
+
+Node Distribution:
+  coral_0: 4071 invocations (53.7%)
+  nano_0: 3067 invocations (40.5%)
+  rpi4_34: 328 invocations (4.3%)
+  rpi4_35: 112 invocations (1.5%)
+
+Function Distribution:
+  mobilenet-inference: 4071 invocations (53.7%)
+  resnet50-inference: 3067 invocations (40.5%)
+  speech-inference: 328 invocations (4.3%)
+  resnet50-preprocessing: 112 invocations (1.5%)
+Network Activity:
+  Total transfers: 12
+  Total bytes transferred: 4060.75 MB
+  Transfer duration: 165.31 s
+
+Network Flows:
+  nuc_17 → coral_0: 3.81 MB in 0.14 s
+  nuc_17 → nano_0: 98.23 MB in 3.40 s
+  nuc_17 → nano_1: 221.25 MB in 7.67 s
+  nuc_17 → rpi4_34: 45.78 MB in 3.17 s
+  registry → coral_0: 164.99 MB in 5.71 s
+  registry → nano_0: 953.67 MB in 32.99 s
+  registry → nano_1: 953.67 MB in 32.99 s
+  registry → rpi4_34: 312.81 MB in 21.64 s
+  registry → rpi4_35: 1306.53 MB in 57.60 s
