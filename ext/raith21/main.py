@@ -23,6 +23,10 @@ from ext.raith21.characterization import (
 from ext.raith21.deployments import (
     create_all_deployments,
 )  # Creates function deployment specs
+from ext.mhfd.deployments import (
+    create_smart_city_deployments,
+    create_custom_smart_city_deployments
+)
 from ext.raith21.etherdevices import (
     convert_to_ether_nodes,
 )  # Converts device specs to network nodes
@@ -50,6 +54,7 @@ from ext.raith21.predicates import (
     NodeHasFreeGpu,
     NodeHasFreeTpu,
 )  # Node filters
+
 from ext.raith21.resources import ai_resources_per_node_image  # Resource usage data
 from ext.raith21.topology import (
     urban_sensing_topology,
@@ -73,6 +78,7 @@ num_devices = 500  # Min 24 - Controls simulation scale
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
+scenario = "default"  # Start with default scenario
 
 
 # Create oracles for predicting execution times and resource requirements
@@ -87,27 +93,47 @@ resource_oracle = Raith21ResourceOracle(
 # deployments = list(
 #     create_all_deployments(fet_oracle, resource_oracle).values()
 # )  # Function deployment specs
-all_deployments = create_all_deployments(fet_oracle, resource_oracle)
+# all_deployments = create_all_deployments(fet_oracle, resource_oracle)
 
-# Choose your specific function pool
-selected_functions = [
-    "resnet50-inference",     # High compute inference
-    "mobilenet-inference",    # Lightweight inference  
-    "speech-inference",       # Audio processing
-    "resnet50-training",    # Comment out heavy training
-    "resnet50-preprocessing" # Comment out preprocessing
-]
+# # Choose your specific function pool
+# selected_functions = [
+#     "resnet50-inference",     # High compute inference
+#     "mobilenet-inference",    # Lightweight inference  
+#     "speech-inference",       # Audio processing
+#     "resnet50-training",    # Comment out heavy training
+#     "resnet50-preprocessing" # Comment out preprocessing
+# ]
 
-# Filter deployments to only include selected functions
-deployments = [all_deployments[func] for func in selected_functions if func in all_deployments]
+# # Filter deployments to only include selected functions
+# deployments = [all_deployments[func] for func in selected_functions if func in all_deployments]
 
-print("Selected functions for simulation:")
-for func_name in selected_functions:
-    if func_name in all_deployments:
-        print(f"  ✓ {func_name}")
-    else:
-        print(f"  ✗ {func_name} (not available)")
-function_images = images.all_ai_images  # Available container images for functions
+# print("Selected functions for simulation:")
+# for func_name in selected_functions:
+#     if func_name in all_deployments:
+#         print(f"  ✓ {func_name}")
+#     else:
+#         print(f"  ✗ {func_name} (not available)")
+
+if scenario == "custom":
+    # Custom instance counts for specific use case
+    custom_counts = {
+        "resnet50-inference": 8,      # 8 high-resolution camera zones
+        "mobilenet-inference": 15,    # 15 lightweight edge zones
+        "speech-inference": 6,        # 6 audio monitoring zones
+        "resnet50-preprocessing": 8,  # 8 data processing zones
+        "resnet50-training": 3,       # 3 training instances
+    }
+    deployments = create_custom_smart_city_deployments(
+        fet_oracle, resource_oracle, custom_counts
+    )
+else:
+    # Use predefined scenario
+    deployments = create_smart_city_deployments(
+        fet_oracle, resource_oracle, scenario
+    )
+
+function_images = images.all_ai_images 
+
 
 # Configure scheduler with filtering predicates
 predicates = []
