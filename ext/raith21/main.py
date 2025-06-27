@@ -37,8 +37,9 @@ from ext.raith21.generators.cloudcpu import (
     cloudcpu_settings,
 )  # Device configuration settings
 from ext.raith21.generators.edgegpu import edgegpu_settings  # Device configuration settings
-from ext.raith21.generators.edgesbc import edgesbc_settings
-from ext.raith21.generators.edgesbc_with_accelerators import edgesbc_with_accelerators_settings
+from ext.raith21.generators.edgetpu import edgetpu_settings
+from ext.raith21.generators.edgecloudlet import edgecloudlet_settings
+from ext.raith21.generators.cloudcpu import cloudcpu_settings
 from ext.raith21.oracles import (
     Raith21ResourceOracle,
     Raith21FetOracle,
@@ -68,9 +69,11 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 100  # Min 24 - Controls simulation scale
-devices = generate_devices(num_devices, edgesbc_with_accelerators_settings)
+num_devices = 500  # Min 24 - Controls simulation scale
+devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
+
+
 
 # Create oracles for predicting execution times and resource requirements
 fet_oracle = Raith21FetOracle(
@@ -81,9 +84,29 @@ resource_oracle = Raith21ResourceOracle(
 )  # Resource usage oracle
 
 # Set up function deployments and container images
-deployments = list(
-    create_all_deployments(fet_oracle, resource_oracle).values()
-)  # Function deployment specs
+# deployments = list(
+#     create_all_deployments(fet_oracle, resource_oracle).values()
+# )  # Function deployment specs
+all_deployments = create_all_deployments(fet_oracle, resource_oracle)
+
+# Choose your specific function pool
+selected_functions = [
+    "resnet50-inference",     # High compute inference
+    "mobilenet-inference",    # Lightweight inference  
+    "speech-inference",       # Audio processing
+    "resnet50-training",    # Comment out heavy training
+    "resnet50-preprocessing" # Comment out preprocessing
+]
+
+# Filter deployments to only include selected functions
+deployments = [all_deployments[func] for func in selected_functions if func in all_deployments]
+
+print("Selected functions for simulation:")
+for func_name in selected_functions:
+    if func_name in all_deployments:
+        print(f"  ✓ {func_name}")
+    else:
+        print(f"  ✗ {func_name} (not available)")
 function_images = images.all_ai_images  # Available container images for functions
 
 # Configure scheduler with filtering predicates
@@ -93,12 +116,12 @@ predicates.extend(
 )  # Basic resource and selector predicates
 predicates.extend(
     [
-        CanRunPred(
-            fet_oracle, resource_oracle
-        ),  # Filter nodes where function can execute efficiently
+        # CanRunPred(
+        #     fet_oracle, resource_oracle
+        # ),  # Filter nodes where function can execute efficiently
         NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
-        NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
-        NodeHasFreeTpu(),  # Filter for nodes with available TPU capacity
+        # NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
+        # NodeHasFreeTpu(),  # Filter for nodes with available TPU capacity
     ]
 )
 
@@ -123,6 +146,72 @@ topology = urban_sensing_topology(
     ether_nodes, storage_index
 )  # Build edge-fog-cloud network
 
+# Debug: Print topology summary
+print(f"\n=== TOPOLOGY SUMMARY ===")
+print(f"Total nodes in topology: {len(topology.nodes)}")
+
+# Separate compute nodes from network infrastructure
+compute_nodes = []
+infrastructure_nodes = []
+
+for node_name, node in topology.nodes.items():
+    # Convert node_name to string if it's not already
+    name_str = str(node_name)
+    
+    # Check if it's a compute node vs infrastructure
+    if any(keyword in name_str.lower() for keyword in ['link', 'switch', 'shared', 'registry']):
+        infrastructure_nodes.append((node_name, node))
+    else:
+        compute_nodes.append((node_name, node))
+
+print(f"Compute nodes: {len(compute_nodes)}")
+print(f"Infrastructure nodes: {len(infrastructure_nodes)}")
+
+# Analyze compute nodes specifically
+print(f"\n=== COMPUTE NODES ANALYSIS ===")
+compute_node_types = {}
+for node_name, node in compute_nodes[:20]:  # Show first 20
+    # Try different ways to get the architecture
+    arch = getattr(node, 'arch', None)
+    if arch is None:
+        # Check labels for architecture info
+        labels = getattr(node, 'labels', {})
+        arch = labels.get('arch', 'Unknown')
+    
+    accelerators = getattr(node, 'accelerators', [])
+    capacity = getattr(node, 'capacity', {})
+    
+    name_str = str(node_name)
+    print(f"{name_str:<15s} - Arch: {str(arch):<10s} - Accelerators: {accelerators}")
+    if capacity:
+        print(f"                    Capacity: {capacity}")
+    
+    # Count node types
+    arch_str = str(arch)
+    if arch_str in compute_node_types:
+        compute_node_types[arch_str] += 1
+    else:
+        compute_node_types[arch_str] = 1
+
+print(f"\n=== COMPUTE NODE TYPE DISTRIBUTION ===")
+for arch, count in compute_node_types.items():
+    print(f"{arch}: {count} nodes")
+
+# Check if devices properties are preserved
+print(f"\n=== ORIGINAL DEVICES vs TOPOLOGY NODES ===")
+print(f"Generated devices: {len(devices)}")
+print(f"Ether nodes: {len(ether_nodes)}")
+print(f"Topology compute nodes: {len(compute_nodes)}")
+
+# Sample original devices
+print(f"\n=== SAMPLE ORIGINAL DEVICES ===")
+for i, device in enumerate(devices[:5]):
+    print(f"Device {i}: {device.arch.name} - {device.accelerator.name} - {device.location.name}")
+
+# Sample ether nodes  
+print(f"\n=== SAMPLE ETHER NODES ===")
+for i, ether_node in enumerate(ether_nodes[:5]):
+    print(f"Ether {i}: {ether_node.name} - Arch: {getattr(ether_node, 'arch', 'Unknown')} - Accelerators: {getattr(ether_node, 'accelerators', [])}")
 # Initialize simulation environment
 env = Environment()
 
@@ -211,18 +300,41 @@ print(f"All DataFrames saved to {output_dir}/ directory")
 
 # Call the analysis report generator
 
+# Configuration identifiers
+device_id = f"d{num_devices}"  # d100 for 100 devices
+rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
+settings_id = "cloudcpu_settings"  # Match the settings used in generate_devices()
+
+# Construct directory names with configuration identifiers
+data_dir = f"DATA_{settings_id}_{device_id}_{rps_id}"
+vis_dir = f"VIS_{settings_id}_{device_id}_{rps_id}"
+
+# Create output directory if it doesn't exist
+os.makedirs(data_dir, exist_ok=True)
+
+# Save each DataFrame to a CSV file
+for df_name, df in dfs.items():
+    if df is not None and not df.empty:
+        output_path = os.path.join(data_dir, f"{df_name}.csv")
+        df.to_csv(output_path, index=False)
+        print(f"Saved {df_name} to {output_path}")
+    else:
+        print(f"Skipped {df_name} (empty or None DataFrame)")
+
+print(f"All DataFrames saved to {data_dir}/ directory")
+
 # Store original sys.argv
 original_argv = sys.argv.copy()
 
 # Set up arguments for the report generator
 sys.argv = [
     sys.argv[0],  # Keep the original script name
-    "--data-dir", output_dir,
-    "--output-dir", f"vis-{output_dir}"
+    "--data-dir", data_dir,
+    "--output-dir", vis_dir
 ]
 
 # Run the report generator
-print(f"Generating analysis reports from {output_dir}/ to vis-{output_dir}/")
+print(f"Generating analysis reports from {data_dir}/ to {vis_dir}/")
 report_main()
 
 # Restore original sys.argv
