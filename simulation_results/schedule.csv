@@ -1,0 +1,16 @@
+value,function_name,image,replica_id,node_name,successful
+queue,resnet50-inference,faas-workloads/resnet-inference-gpu,140603472393424,,
+queue,resnet50-training,faas-workloads/resnet-training-gpu,140603474406096,,
+start,resnet50-inference,faas-workloads/resnet-inference-gpu,140603472393424,,
+finish,resnet50-inference,faas-workloads/resnet-inference-gpu,140603472393424,nano_0,True
+queue,mobilenet-inference,faas-workloads/mobilenet-inference-tpu,140603474411216,,
+queue,speech-inference,faas-workloads/speech-inference-tflite,140603473004704,,
+queue,resnet50-preprocessing,faas-workloads/resnet-preprocessing,140603473008048,,
+start,resnet50-training,faas-workloads/resnet-training-gpu,140603474406096,,
+finish,resnet50-training,faas-workloads/resnet-training-gpu,140603474406096,nano_1,True
+start,mobilenet-inference,faas-workloads/mobilenet-inference-tpu,140603474411216,,
+finish,mobilenet-inference,faas-workloads/mobilenet-inference-tpu,140603474411216,coral_0,True
+start,speech-inference,faas-workloads/speech-inference-tflite,140603473004704,,
+finish,speech-inference,faas-workloads/speech-inference-tflite,140603473004704,rpi3_3,True
+start,resnet50-preprocessing,faas-workloads/resnet-preprocessing,140603473008048,,
+finish,resnet50-preprocessing,faas-workloads/resnet-preprocessing,140603473008048,rpi3_4,True
