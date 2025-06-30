@@ -310,7 +310,7 @@ for df_name, df in dfs.items():
         print("  Empty or None DataFrame")
 
 # Create output directory if it doesn't exist
-output_dir = "raith_data_edgesbc_settings"
+output_dir = "mhfd_deployement_default"
 os.makedirs(output_dir, exist_ok=True)
 
 # Save each DataFrame to a CSV file
@@ -329,7 +329,7 @@ print(f"All DataFrames saved to {output_dir}/ directory")
 # Configuration identifiers
 device_id = f"d{num_devices}"  # d100 for 100 devices
 rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
-settings_id = "cloudcpu_settings"  # Match the settings used in generate_devices()
+settings_id = "mhfd_deployement_default"  # Match the settings used in generate_devices()
 
 # Construct directory names with configuration identifiers
 data_dir = f"DATA_{settings_id}_{device_id}_{rps_id}"

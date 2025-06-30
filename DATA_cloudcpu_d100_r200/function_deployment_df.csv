@@ -1,0 +1,6 @@
+value,name,image,function_id,node
+deploy,resnet50-inference,faas-workloads/resnet-inference-gpu,140254524248848,nx_0
+deploy,resnet50-training,faas-workloads/resnet-training-gpu,140254524249808,nx_0
+deploy,mobilenet-inference,faas-workloads/mobilenet-inference-tpu,140254523994672,coral_0
+deploy,speech-inference,faas-workloads/speech-inference-tflite,140254523920592,rpi4_2
+deploy,resnet50-preprocessing,faas-workloads/resnet-preprocessing,140254524111376,rpi4_3
