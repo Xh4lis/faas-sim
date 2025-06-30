@@ -6,6 +6,7 @@ from ext.raith21.utils import create_deployments_for_profile
 from sim.benchmark import BenchmarkBase, set_degradation
 from sim.core import Environment
 from sim.requestgen import expovariate_arrival_profile, constant_rps_profile
+from ext.mhfd.deployments import create_smart_city_deployments
 
 
 class ConstantBenchmark(BenchmarkBase):
@@ -111,43 +112,15 @@ class ConstantBenchmark(BenchmarkBase):
         )
 
     def set_deployments(self, env):
-        deployments = self.deployments_per_name
-        for deployment in deployments.values():
-            deployment.scale_min = 5
-            deployment.target_average_utilization = 0.5
-        no_of_devices = len(env.topology.get_nodes())
-
-        deployments[images.resnet50_inference_function].rps_threshold = 100
-        deployments[images.resnet50_inference_function].scale_max = int(
-            0.7 * no_of_devices
-        )
-        deployments[images.resnet50_inference_function].scale_factor = int(
-            0.05 * no_of_devices
-        )
-        deployments[images.resnet50_inference_function].rps_threshold_duration = 10
-
-        deployments[images.mobilenet_inference_function].rps_threshold = 70
-        deployments[images.mobilenet_inference_function].scale_max = int(
-            0.25 * no_of_devices
-        )
-        deployments[images.mobilenet_inference_function].scale_factor = 5
-        deployments[images.mobilenet_inference_function].rps_threshold_duration = 10
-
-        deployments[images.speech_inference_function].rps_threshold = 40
-        deployments[images.speech_inference_function].scale_max = int(
-            0.25 * no_of_devices
-        )
-        deployments[images.speech_inference_function].scale_factor = 5
-        deployments[images.speech_inference_function].rps_threshold_duration = 15
-
-        deployments[images.resnet50_preprocessing_function].rps_threshold = 40
-        deployments[images.resnet50_preprocessing_function].scale_max = (
-            no_of_devices / 4
-        )
-        deployments[images.resnet50_preprocessing_function].scale_factor = 1
-        deployments[images.resnet50_preprocessing_function].rps_threshold_duration = 15
-
-        deployments[images.resnet50_training_function].rps_threshold = 40
-        deployments[images.resnet50_training_function].scale_max = no_of_devices / 2
-        deployments[images.resnet50_training_function].scale_factor = 1
-        deployments[images.resnet50_training_function].rps_threshold_duration = 15
+        """Override to skip parent's deployment configuration."""
+        # Simply configure our deployments without calling parent
+        no_of_devices = len([node for node in env.topology.get_nodes() 
+                        if not any(keyword in str(node).lower() 
+                                    for keyword in ['link', 'switch', 'shared', 'registry'])])
+        
+        for deployment in self.deployments:
+            deployment.scaling_config.scale_min = 1
+            deployment.scaling_config.scale_max = max(2, int(0.1 * no_of_devices))
+            deployment.scaling_config.target_average_utilization = 0.7
+        
+        print(f"Configured {len(self.deployments)} smart city deployments for {no_of_devices} devices")
