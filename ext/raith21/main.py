@@ -77,7 +77,7 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 500  # Min 24 - Controls simulation scale
+num_devices = 100  # Min 24 - Controls simulation scale
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
@@ -129,11 +129,11 @@ predicates.extend(
 )  # Basic resource and selector predicates
 predicates.extend(
     [
-        # CanRunPred(
-        #     fet_oracle, resource_oracle
-        # ),  # Filter nodes where function can execute efficiently
-        NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
-        NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
+        CanRunPred(
+            fet_oracle, resource_oracle
+        ),  # Filter nodes where function can execute efficiently
+        # NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
+        # NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
         # NodeHasFreeTpu(),  # Filter for nodes with available TPU capacity
     ]
 )
