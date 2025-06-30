@@ -1,0 +1,123 @@
+FUNCTION INVOCATION SUMMARY
+==========================
+
+Total invocations: 10826
+Overall average execution time: 276.39 ms
+Overall average wait time: 275.38 ms
+Simulation start time: 82.00 s
+Simulation end time: 288.00 s
+Total duration: 205.42 s
+
+NODE SUMMARY
+============
+
+Node: nx_7
+  Invocations: 6039
+  Average execution time: 276.09 ms
+  Min/Max execution time: 0.37/552.00 ms
+  Average wait time: 275.42 ms
+
+Node: coral_10
+  Invocations: 4247
+  Average execution time: 280.31 ms
+  Min/Max execution time: 0.54/559.97 ms
+  Average wait time: 279.76 ms
+
+Node: coral_15
+  Invocations: 320
+  Average execution time: 291.44 ms
+  Min/Max execution time: 7.16/576.08 ms
+  Average wait time: 284.23 ms
+
+Node: coral_20
+  Invocations: 220
+  Average execution time: 187.05 ms
+  Min/Max execution time: 10.44/375.83 ms
+  Average wait time: 176.54 ms
+
+FUNCTION SUMMARY
+================
+
+Function: resnet50-inference
+  Invocations: 6027
+  Average execution time: 276.14 ms
+  Min/Max execution time: 0.37/552.00 ms
+  Average wait time: 275.76 ms
+
+Function: mobilenet-inference
+  Invocations: 4247
+  Average execution time: 280.31 ms
+  Min/Max execution time: 0.54/559.97 ms
+  Average wait time: 279.76 ms
+
+Function: speech-inference
+  Invocations: 320
+  Average execution time: 291.44 ms
+  Min/Max execution time: 7.16/576.08 ms
+  Average wait time: 284.23 ms
+
+Function: resnet50-preprocessing
+  Invocations: 220
+  Average execution time: 187.05 ms
+  Min/Max execution time: 10.44/375.83 ms
+  Average wait time: 176.54 ms
+
+Function: resnet50-training
+  Invocations: 12
+  Average execution time: 250.02 ms
+  Min/Max execution time: 143.86/361.32 ms
+  Average wait time: 106.05 ms
+
+DETAILED BREAKDOWN BY NODE AND FUNCTION
+=====================================
+
+Node: coral_10
+Function: mobilenet-inference
+Image: faas-workloads/mobilenet-inference-tpu
+Invocations: 4247
+Average execution time: 280.31 ms
+Min/Max execution time: 0.54/559.97 ms
+Average wait time: 279.76 ms
+First invocation: 82.01 s
+Last invocation: 103.95 s
+
+Node: coral_15
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 320
+Average execution time: 291.44 ms
+Min/Max execution time: 7.16/576.08 ms
+Average wait time: 284.23 ms
+First invocation: 82.00 s
+Last invocation: 83.42 s
+
+Node: coral_20
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 220
+Average execution time: 187.05 ms
+Min/Max execution time: 10.44/375.83 ms
+Average wait time: 176.54 ms
+First invocation: 82.82 s
+Last invocation: 287.43 s
+
+Node: nx_7
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 6027
+Average execution time: 276.14 ms
+Min/Max execution time: 0.37/552.00 ms
+Average wait time: 275.76 ms
+First invocation: 82.01 s
+Last invocation: 111.93 s
+
+Node: nx_7
+Function: resnet50-training
+Image: faas-workloads/resnet-training-gpu
+Invocations: 12
+Average execution time: 250.02 ms
+Min/Max execution time: 143.86/361.32 ms
+Average wait time: 106.05 ms
+First invocation: 92.62 s
+Last invocation: 181.96 s
+
