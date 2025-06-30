@@ -45,4 +45,17 @@ def get_raith21_function_characterizations(
         images.resnet50_preprocessing_manifest: FunctionCharacterization(
             images.resnet50_preprocessing_manifest, fet_oracle, resource_oracle
         ),
+        # NEW SMART CITY FUNCTION CHARACTERIZATIONS:
+        images.video_analytics_manifest: FunctionCharacterization(
+            images.video_analytics_manifest, fet_oracle, resource_oracle
+        ),
+        images.iot_data_processor_manifest: FunctionCharacterization(
+            images.iot_data_processor_manifest, fet_oracle, resource_oracle
+        ),
+        images.alert_service_manifest: FunctionCharacterization(
+            images.alert_service_manifest, fet_oracle, resource_oracle
+        ),
+        images.data_aggregator_manifest: FunctionCharacterization(
+            images.data_aggregator_manifest, fet_oracle, resource_oracle
+        ),
     }

@@ -35,6 +35,11 @@ default_resnet_preprocessing_ranking = DeploymentRanking(
     [images.resnet50_preprocessing_manifest]
 )
 
+# ADD NEW SMART CITY FUNCTION RANKINGS HERE:
+default_video_analytics_ranking = DeploymentRanking([images.video_analytics_manifest])
+default_iot_data_processor_ranking = DeploymentRanking([images.iot_data_processor_manifest])
+default_alert_service_ranking = DeploymentRanking([images.alert_service_manifest])
+default_data_aggregator_ranking = DeploymentRanking([images.data_aggregator_manifest])
 
 @dataclass
 class DeploymentSettings:
@@ -48,6 +53,11 @@ class DeploymentSettings:
     tf_gpu_ranking: DeploymentRanking = default_tf_gpu_ranking
     pi_ranking: DeploymentRanking = default_pi_ranking
     fio_ranking: DeploymentRanking = default_fio_ranking
+    # ADD NEW SMART CITY RANKINGS:
+    video_analytics_ranking: DeploymentRanking = default_video_analytics_ranking
+    iot_data_processor_ranking: DeploymentRanking = default_iot_data_processor_ranking
+    alert_service_ranking: DeploymentRanking = default_alert_service_ranking
+    data_aggregator_ranking: DeploymentRanking = default_data_aggregator_ranking
 
 
 def get_resnet50_inference_deployment(
@@ -448,6 +458,137 @@ def get_resnet_preprocessing_deployment(
 
     return deployment
 
+def get_video_analytics_deployment(
+    ranking: DeploymentRanking, scaling_config: ScalingConfiguration = None
+) -> FunctionDeployment:
+    # Design time
+    video_analytics_function_image = FunctionImage(
+        image=images.video_analytics_manifest
+    )
+    video_analytics_function = Function(
+        name=images.video_analytics_function,
+        fn_images=[video_analytics_function_image],
+    )
+
+    # Run time
+    video_analytics_function_requests = KubernetesResourceConfiguration.create_from_str(
+        cpu="1000m", memory="300Mi"
+    )
+
+    video_analytics_function_container = FunctionContainer(
+        video_analytics_function_image,
+        resource_config=video_analytics_function_requests,
+        labels={"watchdog": "http", "workers": "2", "cluster": "video"},
+    )
+
+    deployment = FunctionDeployment(
+        video_analytics_function,
+        [video_analytics_function_container],
+        ScalingConfiguration() if scaling_config is None else scaling_config,
+        ranking,
+    )
+
+    return deployment
+
+
+def get_iot_data_processor_deployment(
+    ranking: DeploymentRanking, scaling_config: ScalingConfiguration = None
+) -> FunctionDeployment:
+    # Design time
+    iot_data_processor_function_image = FunctionImage(
+        image=images.iot_data_processor_manifest
+    )
+    iot_data_processor_function = Function(
+        name=images.iot_data_processor_function,
+        fn_images=[iot_data_processor_function_image],
+    )
+
+    # Run time
+    iot_data_processor_function_requests = KubernetesResourceConfiguration.create_from_str(
+        cpu="500m", memory="50Mi"
+    )
+
+    iot_data_processor_function_container = FunctionContainer(
+        iot_data_processor_function_image,
+        resource_config=iot_data_processor_function_requests,
+        labels={"watchdog": "http", "workers": "4", "cluster": "iot"},
+    )
+
+    deployment = FunctionDeployment(
+        iot_data_processor_function,
+        [iot_data_processor_function_container],
+        ScalingConfiguration() if scaling_config is None else scaling_config,
+        ranking,
+    )
+
+    return deployment
+
+
+def get_alert_service_deployment(
+    ranking: DeploymentRanking, scaling_config: ScalingConfiguration = None
+) -> FunctionDeployment:
+    # Design time
+    alert_service_function_image = FunctionImage(
+        image=images.alert_service_manifest
+    )
+    alert_service_function = Function(
+        name=images.alert_service_function,
+        fn_images=[alert_service_function_image],
+    )
+
+    # Run time
+    alert_service_function_requests = KubernetesResourceConfiguration.create_from_str(
+        cpu="300m", memory="30Mi"
+    )
+
+    alert_service_function_container = FunctionContainer(
+        alert_service_function_image,
+        resource_config=alert_service_function_requests,
+        labels={"watchdog": "http", "workers": "1", "cluster": "alert"},
+    )
+
+    deployment = FunctionDeployment(
+        alert_service_function,
+        [alert_service_function_container],
+        ScalingConfiguration() if scaling_config is None else scaling_config,
+        ranking,
+    )
+
+    return deployment
+
+
+def get_data_aggregator_deployment(
+    ranking: DeploymentRanking, scaling_config: ScalingConfiguration = None
+) -> FunctionDeployment:
+    # Design time
+    data_aggregator_function_image = FunctionImage(
+        image=images.data_aggregator_manifest
+    )
+    data_aggregator_function = Function(
+        name=images.data_aggregator_function,
+        fn_images=[data_aggregator_function_image],
+    )
+
+    # Run time
+    data_aggregator_function_requests = KubernetesResourceConfiguration.create_from_str(
+        cpu="1000m", memory="400Mi"
+    )
+
+    data_aggregator_function_container = FunctionContainer(
+        data_aggregator_function_image,
+        resource_config=data_aggregator_function_requests,
+        labels={"watchdog": "http", "workers": "3", "cluster": "analytics"},
+    )
+
+    deployment = FunctionDeployment(
+        data_aggregator_function,
+        [data_aggregator_function_container],
+        ScalingConfiguration() if scaling_config is None else scaling_config,
+        ranking,
+    )
+
+    return deployment
+
 
 def create_all_deployments(
     fet_oracle: FetOracle,
@@ -474,5 +615,18 @@ def create_all_deployments(
         ),
         images.resnet50_preprocessing_function: get_resnet_preprocessing_deployment(
             deployment_rankings.resnet_preprocessing_ranking
+        ),
+        # ADD NEW SMART CITY FUNCTIONS HERE:
+        images.video_analytics_function: get_video_analytics_deployment(
+            deployment_rankings.video_analytics_ranking
+        ),
+        images.iot_data_processor_function: get_iot_data_processor_deployment(
+            deployment_rankings.iot_data_processor_ranking
+        ),
+        images.alert_service_function: get_alert_service_deployment(
+            deployment_rankings.alert_service_ranking
+        ),
+        images.data_aggregator_function: get_data_aggregator_deployment(
+            deployment_rankings.data_aggregator_ranking
         ),
     }

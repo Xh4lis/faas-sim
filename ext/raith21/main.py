@@ -157,24 +157,29 @@ sched_params = {
 # Replace benchmark creation with:
 scenario = "default"  # "default", "intensive", "distributed", "custom"
 
-if scenario == "custom":
-    custom_counts = {
-        "resnet50-inference": 8,      
-        "speech-inference": 6,        
-        "resnet50-preprocessing": 8,  
-        "python-pi": 6,               
-        "fio": 4,                     
-    }
-    benchmark = create_smart_city_constant_benchmark(
+# if scenario == "custom":
+#     custom_counts = {
+#         "resnet50-inference": 8,      
+#         "speech-inference": 6,        
+#         "resnet50-preprocessing": 8,  
+#         "python-pi": 6,               
+#         "fio": 4,
+#         # ADD NEW SMART CITY FUNCTIONS:
+#         "video-analytics": 1,         # Your problematic function
+#         "iot-data-processor": 2,      
+#         "alert-service": 2,           
+#         "data-aggregator": 1,                      
+#     }
+#     benchmark = create_smart_city_constant_benchmark(
+#         duration=500,
+#         total_rps=1200,
+#         scenario="custom",
+#         custom_counts=custom_counts
+#     )
+# else:
+benchmark = create_smart_city_constant_benchmark(
         duration=500,
-        total_rps=1200,
-        scenario="custom",
-        custom_counts=custom_counts
-    )
-else:
-    benchmark = create_smart_city_constant_benchmark(
-        duration=500,
-        total_rps=1000,
+        total_rps=500,
         scenario=scenario
     )
 
@@ -271,6 +276,35 @@ env.scheduler = Scheduler(env.cluster, **sched_params)  # Function placement sch
 
 # Create and run the simulation
 sim = Simulation(env.topology, benchmark, env=env)
+import threading
+import time
+
+def progress_monitor():
+    start_time = time.time()
+    deployment_count = 0
+    
+    while True:
+        elapsed = time.time() - start_time
+        
+        # Try to get current deployment count
+        try:
+            if hasattr(sim.env.faas, 'deployments'):
+                current_deployments = len(sim.env.faas.deployments)
+                if current_deployments > deployment_count:
+                    deployment_count = current_deployments
+                    print(f"[{elapsed:.0f}s] Progress: {deployment_count} deployments active")
+            
+            print(f"[{elapsed:.0f}s] Simulation running... (Check for stuck containers)")
+        except:
+            print(f"[{elapsed:.0f}s] Simulation running...")
+        
+        time.sleep(10)  # Print every 10 seconds
+
+# Start progress monitor
+monitor_thread = threading.Thread(target=progress_monitor, daemon=True)
+monitor_thread.start()
+
+print("Starting simulation with progress monitoring...")
 result = sim.run()  # Execute simulation until benchmark completion
 
 # Extract metrics into dataframes for analysis
@@ -323,7 +357,7 @@ for df_name, df in dfs.items():
 # Configuration identifiers
 device_id = f"d{num_devices}"  # d100 for 100 devices
 rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
-settings_id = "mhfd_deployement_autoscale_default"  # Match the settings used in generate_devices()
+settings_id = "new_images_autoscale_default"  # Match the settings used in generate_devices()
 
 # Construct directory names with configuration identifiers
 data_dir = f"./data/{settings_id}_{device_id}_{rps_id}"
