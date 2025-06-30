@@ -24,41 +24,9 @@ def create_smart_city_function_instances(
     for func_name, deployment in base_deployments.items():
         count = instance_counts.get(func_name, 1)
         
+        # Add the deployment multiple times for multiple instances
         for i in range(count):
-            if i == 0:
-                # Use the original deployment for the first instance
-                expanded_deployments.append(deployment)
-            else:
-                # Create a new deployment with unique name
-                new_name = f"{func_name}-zone-{i}"
-                
-                # Create a new function object with the new name
-                new_function = copy.deepcopy(deployment.fn)
-                new_function.name = new_name
-                
-                # Create a new deployment with the new function
-                new_deployment = FunctionDeployment(
-                    name=new_name,
-                    fn=new_function,
-                    image=deployment.image,
-                    # Copy other properties from original deployment
-                    scale_min=getattr(deployment, 'scale_min', 1),
-                    scale_max=getattr(deployment, 'scale_max', 10),
-                    scale_factor=getattr(deployment, 'scale_factor', 1.0),
-                    scale_zero=getattr(deployment, 'scale_zero', True),
-                )
-                
-                # Copy any additional attributes that might exist
-                for attr in dir(deployment):
-                    if not attr.startswith('_') and attr not in ['name', 'fn', 'image', 'scale_min', 'scale_max', 'scale_factor', 'scale_zero']:
-                        try:
-                            value = getattr(deployment, attr)
-                            if not callable(value):
-                                setattr(new_deployment, attr, value)
-                        except:
-                            pass  # Skip attributes that can't be copied
-                
-                expanded_deployments.append(new_deployment)
+            expanded_deployments.append(deployment)
     
     return expanded_deployments
 
@@ -70,14 +38,6 @@ def create_smart_city_deployments(
 ) -> List[FunctionDeployment]:
     """
     Create deployments for smart city scenarios with multiple function instances.
-    
-    Args:
-        fet_oracle: Function execution time oracle
-        resource_oracle: Resource usage oracle  
-        scenario: Deployment scenario ("default", "intensive", "distributed")
-        
-    Returns:
-        List of function deployments
     """
     # Get base deployments from the original system
     all_deployments = create_all_deployments(fet_oracle, resource_oracle)
@@ -153,14 +113,6 @@ def create_custom_smart_city_deployments(
 ) -> List[FunctionDeployment]:
     """
     Create deployments with custom instance counts.
-    
-    Args:
-        fet_oracle: Function execution time oracle
-        resource_oracle: Resource usage oracle
-        custom_instance_counts: Custom mapping of function -> instance count
-        
-    Returns:
-        List of function deployments
     """
     all_deployments = create_all_deployments(fet_oracle, resource_oracle)
     
