@@ -27,6 +27,9 @@ from ext.mhfd.deployments import (
     create_smart_city_deployments,
     create_custom_smart_city_deployments
 )
+from ext.mhfd.scbenchmark import create_smart_city_constant_benchmark
+
+
 from ext.raith21.etherdevices import (
     convert_to_ether_nodes,
 )  # Converts device specs to network nodes
@@ -74,7 +77,7 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 100  # Min 24 - Controls simulation scale
+num_devices = 500  # Min 24 - Controls simulation scale
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
@@ -114,23 +117,7 @@ resource_oracle = Raith21ResourceOracle(
 #     else:
 #         print(f"  ✗ {func_name} (not available)")
 
-if scenario == "custom":
-    # Custom instance counts for specific use case
-    custom_counts = {
-        "resnet50-inference": 8,      # 8 high-resolution camera zones
-        "mobilenet-inference": 15,    # 15 lightweight edge zones
-        "speech-inference": 6,        # 6 audio monitoring zones
-        "resnet50-preprocessing": 8,  # 8 data processing zones
-        "resnet50-training": 3,       # 3 training instances
-    }
-    deployments = create_custom_smart_city_deployments(
-        fet_oracle, resource_oracle, custom_counts
-    )
-else:
-    # Use predefined scenario
-    deployments = create_smart_city_deployments(
-        fet_oracle, resource_oracle, scenario
-    )
+
 
 function_images = images.all_ai_images 
 
@@ -145,8 +132,8 @@ predicates.extend(
         # CanRunPred(
         #     fet_oracle, resource_oracle
         # ),  # Filter nodes where function can execute efficiently
-        # NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
-        # NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
+        NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
+        NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
         # NodeHasFreeTpu(),  # Filter for nodes with available TPU capacity
     ]
 )
@@ -162,9 +149,34 @@ sched_params = {
 }
 
 # Set workload pattern - constant rate of requests
-benchmark = ConstantBenchmark(
-    "mixed", duration=500, rps=100
-)  # rps requests/second for duration seconds
+# benchmark = ConstantBenchmark(
+#     "mixed", duration=500, rps=1000
+# )  # rps requests/second for duration seconds
+
+
+# Replace benchmark creation with:
+scenario = "default"  # "default", "intensive", "distributed", "custom"
+
+if scenario == "custom":
+    custom_counts = {
+        "resnet50-inference": 8,      
+        "speech-inference": 6,        
+        "resnet50-preprocessing": 8,  
+        "python-pi": 6,               
+        "fio": 4,                     
+    }
+    benchmark = create_smart_city_constant_benchmark(
+        duration=500,
+        total_rps=1200,
+        scenario="custom",
+        custom_counts=custom_counts
+    )
+else:
+    benchmark = create_smart_city_constant_benchmark(
+        duration=500,
+        total_rps=1000,
+        scenario=scenario
+    )
 
 # Initialize network topology and storage
 storage_index = StorageIndex()  # Tracks data locations in the network
