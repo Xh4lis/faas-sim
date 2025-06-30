@@ -465,6 +465,173 @@ ai_execution_time_distributions = {
         1.096886157989502,
         PDist.lognorm(((1.4344624279117903,), 0.5247122204199652, 0.03296898373982664)),
     ),
+    # VIDEO ANALYTICS FUNCTION - Computationally intensive
+    ("xeoncpu", "faas-workloads/video-analytics"): (
+        200.0, 2000.0,
+        PDist.lognorm(((0.8,), 6.0, 0.4))
+    ),
+    ("rpi4", "faas-workloads/video-analytics"): (
+        1000.0, 10000.0,
+        PDist.lognorm(((0.9,), 8.0, 0.5))
+    ),
+    ("rpi3", "faas-workloads/video-analytics"): (
+        2000.0, 20000.0,
+        PDist.lognorm(((1.0,), 9.0, 0.6))
+    ),
+    ("tx2", "faas-workloads/video-analytics"): (
+        300.0, 3000.0,
+        PDist.lognorm(((0.7,), 6.5, 0.4))
+    ),
+    ("nx", "faas-workloads/video-analytics"): (
+        150.0, 1500.0,
+        PDist.lognorm(((0.6,), 5.5, 0.3))
+    ),
+    ("nano", "faas-workloads/video-analytics"): (
+        500.0, 5000.0,
+        PDist.lognorm(((0.8,), 7.0, 0.4))
+    ),
+    ("coral", "faas-workloads/video-analytics"): (
+        250.0, 2500.0,
+        PDist.lognorm(((0.7,), 6.2, 0.4))
+    ),
+    ("rockpi", "faas-workloads/video-analytics"): (
+        800.0, 8000.0,
+        PDist.lognorm(((0.9,), 7.5, 0.5))
+    ),
+    ("nuc", "faas-workloads/video-analytics"): (
+        180.0, 1800.0,
+        PDist.lognorm(((0.6,), 5.8, 0.3))
+    ),
+    ("xeongpu", "faas-workloads/video-analytics"): (
+        150.0, 1500.0,
+        PDist.lognorm(((0.5,), 5.2, 0.3))
+    ),
+    
+    # IOT DATA PROCESSOR - Lightweight data processing
+    ("xeoncpu", "faas-workloads/iot-data-processor"): (
+        10.0, 100.0,
+        PDist.lognorm(((0.4,), 3.5, 0.3))
+    ),
+    ("rpi4", "faas-workloads/iot-data-processor"): (
+        50.0, 500.0,
+        PDist.lognorm(((0.5,), 4.5, 0.3))
+    ),
+    ("rpi3", "faas-workloads/iot-data-processor"): (
+        100.0, 1000.0,
+        PDist.lognorm(((0.6,), 5.0, 0.4))
+    ),
+    ("tx2", "faas-workloads/iot-data-processor"): (
+        20.0, 200.0,
+        PDist.lognorm(((0.4,), 4.0, 0.3))
+    ),
+    ("nx", "faas-workloads/iot-data-processor"): (
+        15.0, 150.0,
+        PDist.lognorm(((0.4,), 3.8, 0.3))
+    ),
+    ("nano", "faas-workloads/iot-data-processor"): (
+        30.0, 300.0,
+        PDist.lognorm(((0.5,), 4.2, 0.3))
+    ),
+    ("coral", "faas-workloads/iot-data-processor"): (
+        25.0, 250.0,
+        PDist.lognorm(((0.4,), 4.1, 0.3))
+    ),
+    ("rockpi", "faas-workloads/iot-data-processor"): (
+        80.0, 800.0,
+        PDist.lognorm(((0.6,), 4.8, 0.4))
+    ),
+    ("nuc", "faas-workloads/iot-data-processor"): (
+        12.0, 120.0,
+        PDist.lognorm(((0.4,), 3.6, 0.3))
+    ),
+    ("xeongpu", "faas-workloads/iot-data-processor"): (
+        10.0, 100.0,
+        PDist.lognorm(((0.4,), 3.5, 0.3))
+    ),
+    
+    # ALERT SERVICE - Fast response, low latency
+    ("xeoncpu", "faas-workloads/alert-service"): (
+        5.0, 50.0,
+        PDist.lognorm(((0.3,), 2.5, 0.2))
+    ),
+    ("rpi4", "faas-workloads/alert-service"): (
+        20.0, 200.0,
+        PDist.lognorm(((0.4,), 3.5, 0.2))
+    ),
+    ("rpi3", "faas-workloads/alert-service"): (
+        40.0, 400.0,
+        PDist.lognorm(((0.5,), 4.0, 0.3))
+    ),
+    ("tx2", "faas-workloads/alert-service"): (
+        10.0, 100.0,
+        PDist.lognorm(((0.3,), 3.0, 0.2))
+    ),
+    ("nx", "faas-workloads/alert-service"): (
+        8.0, 80.0,
+        PDist.lognorm(((0.3,), 2.8, 0.2))
+    ),
+    ("nano", "faas-workloads/alert-service"): (
+        15.0, 150.0,
+        PDist.lognorm(((0.4,), 3.2, 0.2))
+    ),
+    ("coral", "faas-workloads/alert-service"): (
+        12.0, 120.0,
+        PDist.lognorm(((0.3,), 3.1, 0.2))
+    ),
+    ("rockpi", "faas-workloads/alert-service"): (
+        35.0, 350.0,
+        PDist.lognorm(((0.5,), 3.8, 0.3))
+    ),
+    ("nuc", "faas-workloads/alert-service"): (
+        6.0, 60.0,
+        PDist.lognorm(((0.3,), 2.6, 0.2))
+    ),
+    ("xeongpu", "faas-workloads/alert-service"): (
+        5.0, 50.0,
+        PDist.lognorm(((0.3,), 2.5, 0.2))
+    ),
+    
+    # DATA AGGREGATOR - Batch processing and analytics
+    ("xeoncpu", "faas-workloads/data-aggregator"): (
+        100.0, 1000.0,
+        PDist.lognorm(((0.7,), 5.0, 0.4))
+    ),
+    ("rpi4", "faas-workloads/data-aggregator"): (
+        500.0, 5000.0,
+        PDist.lognorm(((0.9,), 7.0, 0.5))
+    ),
+    ("rpi3", "faas-workloads/data-aggregator"): (
+        1000.0, 10000.0,
+        PDist.lognorm(((1.0,), 8.0, 0.6))
+    ),
+    ("tx2", "faas-workloads/data-aggregator"): (
+        200.0, 2000.0,
+        PDist.lognorm(((0.7,), 6.0, 0.4))
+    ),
+    ("nx", "faas-workloads/data-aggregator"): (
+        150.0, 1500.0,
+        PDist.lognorm(((0.6,), 5.5, 0.4))
+    ),
+    ("nano", "faas-workloads/data-aggregator"): (
+        300.0, 3000.0,
+        PDist.lognorm(((0.8,), 6.5, 0.4))
+    ),
+    ("coral", "faas-workloads/data-aggregator"): (
+        250.0, 2500.0,
+        PDist.lognorm(((0.7,), 6.2, 0.4))
+    ),
+    ("rockpi", "faas-workloads/data-aggregator"): (
+        800.0, 8000.0,
+        PDist.lognorm(((0.9,), 7.5, 0.5))
+    ),
+    ("nuc", "faas-workloads/data-aggregator"): (
+        120.0, 1200.0,
+        PDist.lognorm(((0.6,), 5.2, 0.4))
+    ),
+    ("xeongpu", "faas-workloads/data-aggregator"): (
+        100.0, 1000.0,
+        PDist.lognorm(((0.7,), 5.0, 0.4))
+    ),
 }
 
 ai_min_max_execution_times = {
@@ -483,6 +650,10 @@ ai_min_max_execution_times = {
     "faas-workloads/resnet-training-cpu": (197.44802653944336, 197.44802653944336),
     "faas-workloads/resnet-inference-gpu": (0.12844885587692262, 0.7286638289081807),
     "faas-workloads/mobilenet-inference-tpu": (0.5475386333465576, 0.5475386333465576),
+    "faas-workloads/video-analytics": (150.0, 20000.0),
+    "faas-workloads/iot-data-processor": (10.0, 1000.0),
+    "faas-workloads/alert-service": (5.0, 400.0),
+    "faas-workloads/data-aggregator": (100.0, 10000.0),
 }
 
 ai_mean_execution_times = {
@@ -583,4 +754,52 @@ ai_mean_execution_times = {
         "tx2": 0.39461688995361327,
     },
     "faas-workloads/mobilenet-inference-tpu": {"coral": 0.5475386333465576},
+    "faas-workloads/video-analytics": {
+        "xeoncpu": 800.0,
+        "xeongpu": 650.0,
+        "rpi4": 4500.0,
+        "rpi3": 9500.0,
+        "tx2": 1200.0,
+        "nx": 650.0,
+        "nano": 2000.0,
+        "coral": 1100.0,
+        "rockpi": 3500.0,
+        "nuc": 750.0,
+    },
+    "faas-workloads/iot-data-processor": {
+        "xeoncpu": 45.0,
+        "xeongpu": 45.0,
+        "rpi4": 180.0,
+        "rpi3": 350.0,
+        "tx2": 80.0,
+        "nx": 65.0,
+        "nano": 120.0,
+        "coral": 95.0,
+        "rockpi": 280.0,
+        "nuc": 50.0,
+    },
+    "faas-workloads/alert-service": {
+        "xeoncpu": 22.0,
+        "xeongpu": 22.0,
+        "rpi4": 85.0,
+        "rpi3": 150.0,
+        "tx2": 45.0,
+        "nx": 35.0,
+        "nano": 65.0,
+        "coral": 55.0,
+        "rockpi": 130.0,
+        "nuc": 25.0,
+    },
+    "faas-workloads/data-aggregator": {
+        "xeoncpu": 450.0,
+        "xeongpu": 450.0,
+        "rpi4": 2000.0,
+        "rpi3": 4500.0,
+        "tx2": 800.0,
+        "nx": 650.0,
+        "nano": 1200.0,
+        "coral": 950.0,
+        "rockpi": 3200.0,
+        "nuc": 500.0,
+    },
 }

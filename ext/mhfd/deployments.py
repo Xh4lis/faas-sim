@@ -80,6 +80,10 @@ def create_smart_city_deployments(
         "resnet50-training",      # Will force to CPU variant
         "python-pi",              # Already CPU-based
         "fio",                    # Already CPU-based
+        "video-analytics",        # Video processing
+        "iot-data-processor",     # Sensor data processing
+        "alert-service",          # Emergency alerts
+        "data-aggregator",        # Analytics and reporting
     ]
 
     print(f"Available functions: {list(all_deployments.keys())}")
@@ -93,25 +97,46 @@ def create_smart_city_deployments(
     # Define scenarios with different deployment patterns
     scenarios = {
         "default": {
-            "resnet50-inference": 8,      # Increase from 6 to 8
-            "speech-inference": 6,        # Increase from 4 to 6
-            "resnet50-preprocessing": 8,  # Increase from 5 to 8
-            "resnet50-training": 4,       # Increase from 2 to 4
-            # Total: 26 instances instead of 24
+            "resnet50-inference": 6,        # Traffic cameras
+            "speech-inference": 4,          # Audio monitoring
+            "resnet50-preprocessing": 5,    # Data preprocessing
+            "resnet50-training": 2,         # Model training
+            "python-pi": 4,                 # Edge computing (if available)
+            "fio": 3,                       # I/O monitoring (if available)
+            # # NEW SMART CITY FUNCTIONS
+            "video-analytics": 1,           # Video processing zones
+            "iot-data-processor": 0,        # Sensor networks
+            "alert-service": 0,             # Emergency response
+            "data-aggregator": 0,           # Analytics centers
+            # Total: 45 instances
         },
         "intensive": {
-            "resnet50-inference": 15,     # Increase instances
-            "speech-inference": 12,       # Increase instances
-            "resnet50-preprocessing": 15, # Increase instances
-            "resnet50-training": 8,       # Increase instances
-            # Total: 50 instances
+            "resnet50-inference": 12,       # Heavy camera deployment
+            "speech-inference": 8,          # City-wide audio
+            "resnet50-preprocessing": 10,   # High data throughput
+            "resnet50-training": 4,         # Continuous learning
+            "python-pi": 8,                 # Extensive edge computing
+            "fio": 6,                       # Comprehensive I/O monitoring
+            # NEW SMART CITY FUNCTIONS
+            "video-analytics": 12,          # Advanced video analysis
+            "iot-data-processor": 15,       # Dense sensor network
+            "alert-service": 6,             # Redundant alert systems
+            "data-aggregator": 5,           # Real-time analytics
+            # Total: 86 instances
         },
         "distributed": {
-            "resnet50-inference": 20,     # Maximum distribution
-            "speech-inference": 15,       # Maximum distribution
-            "resnet50-preprocessing": 20, # Maximum distribution
-            "resnet50-training": 10,      # More training instances
-            # Total: 65 instances
+            "resnet50-inference": 15,       # Maximum camera coverage
+            "speech-inference": 12,         # Comprehensive audio
+            "resnet50-preprocessing": 15,   # High-volume preprocessing
+            "resnet50-training": 6,         # Distributed learning
+            "python-pi": 10,                # Edge computing mesh
+            "fio": 8,                       # Infrastructure monitoring
+            # NEW SMART CITY FUNCTIONS
+            "video-analytics": 15,          # Citywide video analysis
+            "iot-data-processor": 20,       # Massive sensor deployment
+            "alert-service": 8,             # Multi-zone alerts
+            "data-aggregator": 6,           # Distributed analytics
+            # Total: 115 instances
         },
     }
 
