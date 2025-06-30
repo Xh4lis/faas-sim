@@ -74,11 +74,11 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 500  # Min 24 - Controls simulation scale
+num_devices = 100  # Min 24 - Controls simulation scale
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
-scenario = "default"  # Start with default scenario
+scenario = "custom"  # Start with default scenario
 
 
 # Create oracles for predicting execution times and resource requirements
@@ -145,7 +145,7 @@ predicates.extend(
         # CanRunPred(
         #     fet_oracle, resource_oracle
         # ),  # Filter nodes where function can execute efficiently
-        NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
+        # NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
         # NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
         # NodeHasFreeTpu(),  # Filter for nodes with available TPU capacity
     ]
@@ -163,7 +163,7 @@ sched_params = {
 
 # Set workload pattern - constant rate of requests
 benchmark = ConstantBenchmark(
-    "mixed", duration=500, rps=200
+    "mixed", duration=500, rps=100
 )  # rps requests/second for duration seconds
 
 # Initialize network topology and storage
@@ -250,7 +250,7 @@ env.metrics = Metrics(
 )  # Performance metrics collection
 env.topology = topology  # Network topology
 env.faas = DefaultFaasSystem(
-    env, scale_by_requests=False
+    env, scale_by_requests=True
 )  # FaaS system with auto-scaling
 env.container_registry = ContainerRegistry()  # Container image registry
 env.storage_index = storage_index  # Data location tracking
@@ -292,8 +292,7 @@ dfs = {
     ),  # Resource utilization
     "fets_df": sim.env.metrics.extract_dataframe(
         "fets"
-    ),  # Function execution time measurements
-}
+    ), } # Function execution time measurements
 print(len(dfs))
 # Print column names and info for each DataFrame
 for df_name, df in dfs.items():
@@ -309,34 +308,18 @@ for df_name, df in dfs.items():
     else:
         print("  Empty or None DataFrame")
 
-# Create output directory if it doesn't exist
-output_dir = "mhfd_deployement_default"
-os.makedirs(output_dir, exist_ok=True)
-
-# Save each DataFrame to a CSV file
-for df_name, df in dfs.items():
-    if df is not None and not df.empty:
-        output_path = os.path.join(output_dir, f"{df_name}.csv")
-        df.to_csv(output_path, index=False)
-        print(f"Saved {df_name} to {output_path}")
-    else:
-        print(f"Skipped {df_name} (empty or None DataFrame)")
-
-print(f"All DataFrames saved to {output_dir}/ directory")
-
-# Call the analysis report generator
-
 # Configuration identifiers
 device_id = f"d{num_devices}"  # d100 for 100 devices
 rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
-settings_id = "mhfd_deployement_default"  # Match the settings used in generate_devices()
+settings_id = "mhfd_deployement_autoscale_default"  # Match the settings used in generate_devices()
 
 # Construct directory names with configuration identifiers
-data_dir = f"DATA_{settings_id}_{device_id}_{rps_id}"
-vis_dir = f"VIS_{settings_id}_{device_id}_{rps_id}"
+data_dir = f"./data/{settings_id}_{device_id}_{rps_id}"
+vis_dir = f"./Vis/{settings_id}_{device_id}_{rps_id}"
 
-# Create output directory if it doesn't exist
+# Create output directories if they don't exist
 os.makedirs(data_dir, exist_ok=True)
+os.makedirs(vis_dir, exist_ok=True)
 
 # Save each DataFrame to a CSV file
 for df_name, df in dfs.items():

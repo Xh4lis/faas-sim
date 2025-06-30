@@ -10,23 +10,42 @@ def create_smart_city_function_instances(
     instance_counts: Dict[str, int]
 ) -> List[FunctionDeployment]:
     """
-    Create multiple instances of each function for smart city scenarios.
-    
-    Args:
-        base_deployments: Dictionary of base function deployments
-        instance_counts: How many instances of each function to create
-        
-    Returns:
-        List of expanded function deployments
+    Create multiple UNIQUE instances of each function for smart city scenarios.
     """
     expanded_deployments = []
     
-    for func_name, deployment in base_deployments.items():
+    for func_name, base_deployment in base_deployments.items():
         count = instance_counts.get(func_name, 1)
         
-        # Add the deployment multiple times for multiple instances
         for i in range(count):
-            expanded_deployments.append(deployment)
+            # Create a completely new deployment with unique name
+            import copy
+            
+            # Deep copy the base deployment
+            new_deployment = copy.deepcopy(base_deployment)
+            # Force each deployment to start with 1 replica
+            new_deployment.scaling_config.scale_min = 1
+            new_deployment.scaling_config.scale_max = 3  
+
+            # Create unique names for smart city zones
+            zone_names = [
+                "downtown", "suburb", "industrial", "residential", "commercial",
+                "airport", "port", "university", "hospital", "mall",
+                "stadium", "park", "transit", "highway", "border"
+            ]
+            
+            if i == 0:
+                # Keep original for first instance
+                expanded_deployments.append(new_deployment)
+            else:
+                # Create unique deployment for each zone
+                zone_name = zone_names[i-1] if i-1 < len(zone_names) else f"zone{i}"
+                new_name = f"{func_name}-{zone_name}"
+                
+                # Update the function name to make it unique
+                new_deployment.fn.name = new_name
+                
+                expanded_deployments.append(new_deployment)
     
     return expanded_deployments
 
