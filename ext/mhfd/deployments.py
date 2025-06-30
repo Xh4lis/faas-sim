@@ -82,38 +82,36 @@ def create_smart_city_deployments(
         "fio",                    # Already CPU-based
     ]
 
-    # Filter to available functions
+    print(f"Available functions: {list(all_deployments.keys())}")
     base_deployments = {
         name: all_deployments[name]
         for name in base_selected_functions
         if name in all_deployments
     }
-    
+    print(f"Selected functions: {list(base_deployments.keys())}")
+
     # Define scenarios with different deployment patterns
     scenarios = {
         "default": {
-            "resnet50-inference": 6,  # 6 traffic/security camera zones
-            "speech-inference": 4,  # 4 audio monitoring zones
-            "resnet50-preprocessing": 5,  # 5 data processing zones
-            "resnet50-training": 2,  # 2 training instances
-            "python-pi": 4,  # Simple CPU function
-            "fio": 3,  # I/O benchmark function
+            "resnet50-inference": 8,      # Increase from 6 to 8
+            "speech-inference": 6,        # Increase from 4 to 6
+            "resnet50-preprocessing": 8,  # Increase from 5 to 8
+            "resnet50-training": 4,       # Increase from 2 to 4
+            # Total: 26 instances instead of 24
         },
         "intensive": {
-            "resnet50-inference": 12,  # More intensive camera coverage
-            "speech-inference": 8,  # Comprehensive audio monitoring
-            "resnet50-preprocessing": 10,  # Heavy data processing
-            "resnet50-training": 4,  # More frequent training
-            "python-pi": 4,  # Simple CPU function
-            "fio": 3,  # I/O benchmark function
+            "resnet50-inference": 15,     # Increase instances
+            "speech-inference": 12,       # Increase instances
+            "resnet50-preprocessing": 15, # Increase instances
+            "resnet50-training": 8,       # Increase instances
+            # Total: 50 instances
         },
         "distributed": {
-            "resnet50-inference": 15,  # Highly distributed camera network
-            "speech-inference": 12,  # City-wide audio monitoring
-            "resnet50-preprocessing": 15,  # Distributed data processing
-            "resnet50-training": 6,  # Distributed learning
-            "python-pi": 4,  # Simple CPU function
-            "fio": 3,  # I/O benchmark function
+            "resnet50-inference": 20,     # Maximum distribution
+            "speech-inference": 15,       # Maximum distribution
+            "resnet50-preprocessing": 20, # Maximum distribution
+            "resnet50-training": 10,      # More training instances
+            # Total: 65 instances
         },
     }
 
