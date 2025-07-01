@@ -151,7 +151,6 @@ def get_current_utilization(env, node_name: str) -> Dict[str, float]:
         return get_device_defaults(node_name)
     
     try:
-        # CORRECT WAY: Get utilization from resource_state
         if hasattr(env.resource_state, 'get_node_utilization'):
             utilization = env.resource_state.get_node_utilization(node_name)
             if utilization and not utilization.is_empty():
