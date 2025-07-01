@@ -77,7 +77,7 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 100  # Min 24 - Controls simulation scale
+num_devices = 500  # Min 24 - Controls simulation scale
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
@@ -323,7 +323,7 @@ for df_name, df in dfs.items():
 # Configuration identifiers
 device_id = f"d{num_devices}"  # d100 for 100 devices
 rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
-settings_id = "mhfd_deployement_autoscale_defaultv2"  # Match the settings used in generate_devices()
+settings_id = "mhfd_dep_intensive_as_default"  # Match the settings used in generate_devices()
 
 # Construct directory names with configuration identifiers
 data_dir = f"./data/{settings_id}_{device_id}_{rps_id}"
