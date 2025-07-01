@@ -75,22 +75,22 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
         
         # Function type base RPS allocation (percentage of total RPS)
         function_base_rps = {
-            # EXISTING AI/ML FUNCTIONS:
-            'resnet50-inference': 0.20,     # Reduce to make room for new functions
-            'speech-inference': 0.20,       # Reduce slightly
-            'resnet50-preprocessing': 0.15, # Reduce to make room
-            'resnet50-training': 0.08,      # Reduce slightly
-            'python-pi': 0.12,              # Reduce for edge computing
-            'fio': 0.05,                    # Keep I/O monitoring
+            # EXISTING FUNCTIONS (reduce allocation):
+            'resnet50-inference': 0.15,     # Reduced from 0.20
+            'speech-inference': 0.15,       # Reduced from 0.20  
+            'resnet50-preprocessing': 0.10, # Reduced from 0.15
+            'resnet50-training': 0.05,      # Reduced from 0.08
+            'python-pi': 0.10,              # Reduced from 0.12
+            'fio': 0.05,                    # Keep same
             
-            # ADD NEW SMART CITY FUNCTIONS:
-            'video-analytics': 0.08,        # 8% - Video processing in zones
-            'iot-data-processor': 0.06,     # 6% - IoT sensor data processing
-            'alert-service': 0.04,          # 4% - Emergency/alert responses
-            'data-aggregator': 0.02,        # 2% - Analytics and aggregation
+            # ADD YOUR SMART CITY FUNCTIONS:
+            'video-analytics': 0.15,        # 15% of total RPS
+            'iot-data-processor': 0.10,     # 10% of total RPS  
+            'alert-service': 0.08,          # 8% of total RPS
+            'data-aggregator': 0.07,        # 7% of total RPS
             
-            # Total: 100% (0.20+0.20+0.15+0.08+0.12+0.05+0.08+0.06+0.04+0.02 = 1.00)
-        }   
+            # Total: 100% (0.15+0.15+0.10+0.05+0.10+0.05+0.15+0.10+0.08+0.07 = 1.00)
+        }
         total_rps = self.rps
         deployment_rps = {}
         

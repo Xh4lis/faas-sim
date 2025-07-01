@@ -120,38 +120,72 @@ all_ai_images = [
     (resnet50_preprocessing_manifest, "191M", "arm64"),     # Reduced from 1910M
     (resnet50_preprocessing_manifest, "191M", "aarch64"),   # Reduced from 1910M
     
-    # KEEP YOUR SMART CITY FUNCTIONS AS-IS (they're already reasonable):
-    (video_analytics_manifest, "80M", "x86"),
-    (video_analytics_manifest, "80M", "amd64"),
-    (video_analytics_manifest, "60M", "arm32v7"),
-    (video_analytics_manifest, "60M", "arm32"),
-    (video_analytics_manifest, "60M", "arm"),
-    (video_analytics_manifest, "70M", "arm64"),
-    (video_analytics_manifest, "70M", "aarch64"),
+#     # KEEP YOUR SMART CITY FUNCTIONS AS-IS (they're already reasonable):
+#     (video_analytics_manifest, "80M", "x86"),
+#     (video_analytics_manifest, "80M", "amd64"),
+#     (video_analytics_manifest, "60M", "arm32v7"),
+#     (video_analytics_manifest, "60M", "arm32"),
+#     (video_analytics_manifest, "60M", "arm"),
+#     (video_analytics_manifest, "70M", "arm64"),
+#     (video_analytics_manifest, "70M", "aarch64"),
     
-    (iot_data_processor_manifest, "80M", "x86"),
-    (iot_data_processor_manifest, "80M", "amd64"),
-    (iot_data_processor_manifest, "70M", "arm32v7"),
-    (iot_data_processor_manifest, "70M", "arm32"),
-    (iot_data_processor_manifest, "70M", "arm"),
-    (iot_data_processor_manifest, "75M", "arm64"),
-    (iot_data_processor_manifest, "75M", "aarch64"),
+#     (iot_data_processor_manifest, "80M", "x86"),
+#     (iot_data_processor_manifest, "80M", "amd64"),
+#     (iot_data_processor_manifest, "70M", "arm32v7"),
+#     (iot_data_processor_manifest, "70M", "arm32"),
+#     (iot_data_processor_manifest, "70M", "arm"),
+#     (iot_data_processor_manifest, "75M", "arm64"),
+#     (iot_data_processor_manifest, "75M", "aarch64"),
     
-    (alert_service_manifest, "30M", "x86"),
-    (alert_service_manifest, "30M", "amd64"),
-    (alert_service_manifest, "25M", "arm32v7"),
-    (alert_service_manifest, "25M", "arm32"),
-    (alert_service_manifest, "25M", "arm"),
-    (alert_service_manifest, "28M", "arm64"),
-    (alert_service_manifest, "28M", "aarch64"),
+#     (alert_service_manifest, "30M", "x86"),
+#     (alert_service_manifest, "30M", "amd64"),
+#     (alert_service_manifest, "25M", "arm32v7"),
+#     (alert_service_manifest, "25M", "arm32"),
+#     (alert_service_manifest, "25M", "arm"),
+#     (alert_service_manifest, "28M", "arm64"),
+#     (alert_service_manifest, "28M", "aarch64"),
     
-    (data_aggregator_manifest, "20M", "x86"),
-    (data_aggregator_manifest, "20M", "amd64"),
-    (data_aggregator_manifest, "18M", "arm32v7"),
-    (data_aggregator_manifest, "18M", "arm32"),
-    (data_aggregator_manifest, "18M", "arm"),
-    (data_aggregator_manifest, "19M", "arm64"),
-    (data_aggregator_manifest, "19M", "aarch64"),
+#     (data_aggregator_manifest, "20M", "x86"),
+#     (data_aggregator_manifest, "20M", "amd64"),
+#     (data_aggregator_manifest, "18M", "arm32v7"),
+#     (data_aggregator_manifest, "18M", "arm32"),
+#     (data_aggregator_manifest, "18M", "arm"),
+#     (data_aggregator_manifest, "19M", "arm64"),
+#     (data_aggregator_manifest, "19M", "aarch64"),
+# ]
+
+# SMART CITY FUNCTIONS - REDUCE TO 10MB EACH:
+    (video_analytics_manifest, "10M", "x86"),         # Reduced from 80M
+    (video_analytics_manifest, "10M", "amd64"),       # Reduced from 80M
+    (video_analytics_manifest, "8M", "arm32v7"),      # Reduced from 60M
+    (video_analytics_manifest, "8M", "arm32"),        # Reduced from 60M
+    (video_analytics_manifest, "8M", "arm"),          # Reduced from 60M
+    (video_analytics_manifest, "9M", "arm64"),        # Reduced from 70M
+    (video_analytics_manifest, "9M", "aarch64"),      # Reduced from 70M
+    
+    (iot_data_processor_manifest, "5M", "x86"),       # Reduced from 80M
+    (iot_data_processor_manifest, "5M", "amd64"),     # Reduced from 80M
+    (iot_data_processor_manifest, "4M", "arm32v7"),   # Reduced from 70M
+    (iot_data_processor_manifest, "4M", "arm32"),     # Reduced from 70M
+    (iot_data_processor_manifest, "4M", "arm"),       # Reduced from 70M
+    (iot_data_processor_manifest, "4M", "arm64"),     # Reduced from 75M
+    (iot_data_processor_manifest, "4M", "aarch64"),   # Reduced from 75M
+    
+    (alert_service_manifest, "3M", "x86"),            # Reduced from 30M
+    (alert_service_manifest, "3M", "amd64"),          # Reduced from 30M
+    (alert_service_manifest, "2M", "arm32v7"),        # Reduced from 25M
+    (alert_service_manifest, "2M", "arm32"),          # Reduced from 25M
+    (alert_service_manifest, "2M", "arm"),            # Reduced from 25M
+    (alert_service_manifest, "3M", "arm64"),          # Reduced from 28M
+    (alert_service_manifest, "3M", "aarch64"),        # Reduced from 28M
+    
+    (data_aggregator_manifest, "5M", "x86"),          # Reduced from 20M
+    (data_aggregator_manifest, "5M", "amd64"),        # Reduced from 20M
+    (data_aggregator_manifest, "4M", "arm32v7"),      # Reduced from 18M
+    (data_aggregator_manifest, "4M", "arm32"),        # Reduced from 18M
+    (data_aggregator_manifest, "4M", "arm"),          # Reduced from 18M
+    (data_aggregator_manifest, "4M", "arm64"),        # Reduced from 19M
+    (data_aggregator_manifest, "4M", "aarch64"),      # Reduced from 19M
 ]
 # all_ai_images = [
     # (resnet50_inference_cpu_manifest, "2000M", "x86"),

@@ -80,7 +80,7 @@ def parts(a, b):
 class FasterMobileConnection(UpDownLink):
 
     def __init__(self, backhaul="internet") -> None:
-        super().__init__(250, 250, backhaul)
+        super().__init__(25000, 25000, backhaul)
 
 
 class HeterogeneousUrbanSensingScenario(UrbanSensingScenario):
