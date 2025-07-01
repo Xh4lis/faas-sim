@@ -342,3 +342,61 @@ class Metrics:
         df.index = pd.DatetimeIndex(pd.to_datetime(df["time"]))
         del df["time"]
         return df
+
+class PowerMetrics:
+    """Track power consumption and energy usage"""
+    
+    def __init__(self):
+        self.power_samples = []
+        self.energy_accumulation = {}  # Track cumulative energy per node
+        self.last_timestamp = {}       # Track last measurement time per node
+        
+    def record_power_sample(self, timestamp: float, node_name: str, node_type: str,
+                          cpu_util: float, gpu_util: float, network_util: float, 
+                          memory_util: float, power_watts: float):
+        """Record a power measurement sample"""
+        
+        # Calculate energy since last measurement
+        if node_name in self.last_timestamp:
+            time_delta = timestamp - self.last_timestamp[node_name]
+            energy_joules = power_watts * time_delta
+            
+            if node_name not in self.energy_accumulation:
+                self.energy_accumulation[node_name] = 0.0
+            self.energy_accumulation[node_name] += energy_joules
+        else:
+            energy_joules = 0.0
+            self.energy_accumulation[node_name] = 0.0
+            
+        self.last_timestamp[node_name] = timestamp
+        
+        # Store the sample
+        sample = {
+            'timestamp': timestamp,
+            'node': node_name,
+            'node_type': node_type,
+            'cpu_utilization': cpu_util,
+            'gpu_utilization': gpu_util,
+            'network_utilization': network_util,
+            'memory_utilization': memory_util,
+            'power_watts': power_watts,
+            'energy_delta_joules': energy_joules,
+            'cumulative_energy_joules': self.energy_accumulation[node_name],
+            'cumulative_energy_wh': self.energy_accumulation[node_name] / 3600.0
+        }
+        
+        self.power_samples.append(sample)
+        return sample
+        
+    def get_total_energy(self) -> float:
+        """Get total energy consumption across all nodes in Joules"""
+        return sum(self.energy_accumulation.values())
+        
+    def get_node_energy(self, node_name: str) -> float:
+        """Get energy consumption for specific node in Joules"""
+        return self.energy_accumulation.get(node_name, 0.0)
+        
+    def to_dataframe(self):
+        """Convert power samples to DataFrame for analysis"""
+        import pandas as pd
+        return pd.DataFrame(self.power_samples)

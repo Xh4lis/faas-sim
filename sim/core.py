@@ -141,7 +141,10 @@ class Environment(simpy.Environment):
             Callable[[Environment], Generator[simpy.events.Event, Any, Any]]
         ] = []
         self.degradation_models: Dict[str, Optional[RegressorMixin]] = {}
-
+        self.power_oracle = None      # Will be set in main.py
+        self.power_metrics = None     # Will be set in main.py
+        self.power_monitoring_interval = 5.0  # Sample power every 10 seconds
+    
     def get_node_state(self, name: str) -> Optional[NodeState]:
         """
         Lazy-loads a NodeState for the given node name by looking for it in the topology.

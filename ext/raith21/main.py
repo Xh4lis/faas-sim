@@ -23,12 +23,6 @@ from ext.raith21.characterization import (
 from ext.raith21.deployments import (
     create_all_deployments,
 )  # Creates function deployment specs
-from ext.mhfd.deployments import (
-    create_smart_city_deployments,
-    create_custom_smart_city_deployments
-)
-from ext.mhfd.scbenchmark import create_smart_city_constant_benchmark
-
 
 from ext.raith21.etherdevices import (
     convert_to_ether_nodes,
@@ -63,12 +57,23 @@ from ext.raith21.topology import (
     urban_sensing_topology,
 )  # Edge-fog-cloud network topology
 from ext.raith21.util import vanilla  # Default scheduling priorities
+
+from ext.mhfd.deployments import (
+    create_smart_city_deployments,
+    create_custom_smart_city_deployments
+)
+from ext.mhfd.scbenchmark import create_smart_city_constant_benchmark
+from ext.mhfd.power import Raith21PowerOracle, DEVICE_POWER_PROFILES, monitor_power_consumption, power_monitoring_loop
+
+
+
+
 from sim.core import Environment  # Main simulation environment
 from sim.docker import ContainerRegistry  # Simulates container image registry
 from sim.faas.system import DefaultFaasSystem  # FaaS platform implementation
 from sim.faassim import Simulation  # Core simulation engine
 from sim.logging import SimulatedClock, RuntimeLogger  # Time and event logging
-from sim.metrics import Metrics  # Performance metrics collection
+from sim.metrics import Metrics, PowerMetrics  # Performance metrics collection
 from sim.skippy import SimulationClusterContext  # Cluster abstraction for scheduler
 
 # Set seeds for reproducible simulation results
@@ -77,7 +82,7 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 500  # Min 24 - Controls simulation scale
+num_devices = 100  # Min 24 - Controls simulation scale
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
@@ -91,6 +96,13 @@ fet_oracle = Raith21FetOracle(
 resource_oracle = Raith21ResourceOracle(
     ai_resources_per_node_image
 )  # Resource usage oracle
+
+
+
+power_oracle = Raith21PowerOracle(DEVICE_POWER_PROFILES)
+power_metrics = PowerMetrics()
+
+
 
 # Set up function deployments and container images
 # deployments = list(
@@ -268,9 +280,22 @@ env.container_registry = ContainerRegistry()  # Container image registry
 env.storage_index = storage_index  # Data location tracking
 env.cluster = SimulationClusterContext(env)  # Cluster abstraction for scheduler
 env.scheduler = Scheduler(env.cluster, **sched_params)  # Function placement scheduler
+env.power_oracle = power_oracle
+env.power_metrics = power_metrics
+
+
 
 # Create and run the simulation
 sim = Simulation(env.topology, benchmark, env=env)
+
+def power_monitoring_loop(env):
+    """Periodic power monitoring process"""
+    while True:
+        yield env.timeout(env.power_monitoring_interval)
+        monitor_power_consumption(env)
+
+# Add the function, not the process
+env.background_processes.append(power_monitoring_loop)
 result = sim.run()  # Execute simulation until benchmark completion
 
 # Extract metrics into dataframes for analysis
@@ -304,7 +329,10 @@ dfs = {
     ),  # Resource utilization
     "fets_df": sim.env.metrics.extract_dataframe(
         "fets"
-    ), } # Function execution time measurements
+    ), 
+    "power_df": sim.env.metrics.extract_dataframe("power"),     # Power measurements
+    "energy_df": sim.env.metrics.extract_dataframe("energy"),   # Energy accumulation
+    } # Function execution time measurements
 print(len(dfs))
 # Print column names and info for each DataFrame
 for df_name, df in dfs.items():
