@@ -74,10 +74,10 @@ from sim.skippy import SimulationClusterContext  # Cluster abstraction for sched
 # Set seeds for reproducible simulation results
 np.random.seed(1435)
 random.seed(1435)
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 100  # Min 24 - Controls simulation scale
+num_devices = 500  # Min 24 - Controls simulation scale
 devices = generate_devices(num_devices, cloudcpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
@@ -129,11 +129,11 @@ predicates.extend(
 )  # Basic resource and selector predicates
 predicates.extend(
     [
-        CanRunPred(
-            fet_oracle, resource_oracle
-        ),  # Filter nodes where function can execute efficiently
-        # NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
-        # NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
+        # CanRunPred(
+        #     fet_oracle, resource_oracle
+        # ),  # Filter nodes where function can execute efficiently
+        NodeHasAcceleratorPred(),  # Filter for nodes with hardware accelerators
+        NodeHasFreeGpu(),  # Filter for nodes with available GPU capacity
         # NodeHasFreeTpu(),  # Filter for nodes with available TPU capacity
     ]
 )
@@ -157,29 +157,24 @@ sched_params = {
 # Replace benchmark creation with:
 scenario = "default"  # "default", "intensive", "distributed", "custom"
 
-# if scenario == "custom":
-#     custom_counts = {
-#         "resnet50-inference": 8,      
-#         "speech-inference": 6,        
-#         "resnet50-preprocessing": 8,  
-#         "python-pi": 6,               
-#         "fio": 4,
-#         # ADD NEW SMART CITY FUNCTIONS:
-#         "video-analytics": 1,         # Your problematic function
-#         "iot-data-processor": 2,      
-#         "alert-service": 2,           
-#         "data-aggregator": 1,                      
-#     }
-#     benchmark = create_smart_city_constant_benchmark(
-#         duration=500,
-#         total_rps=1200,
-#         scenario="custom",
-#         custom_counts=custom_counts
-#     )
-# else:
-benchmark = create_smart_city_constant_benchmark(
+if scenario == "custom":
+    custom_counts = {
+        "resnet50-inference": 8,      
+        "speech-inference": 6,        
+        "resnet50-preprocessing": 8,  
+        "python-pi": 6,               
+        "fio": 4,                     
+    }
+    benchmark = create_smart_city_constant_benchmark(
         duration=500,
-        total_rps=500,
+        total_rps=1200,
+        scenario="custom",
+        custom_counts=custom_counts
+    )
+else:
+    benchmark = create_smart_city_constant_benchmark(
+        duration=500,
+        total_rps=1000,
         scenario=scenario
     )
 
@@ -276,49 +271,6 @@ env.scheduler = Scheduler(env.cluster, **sched_params)  # Function placement sch
 
 # Create and run the simulation
 sim = Simulation(env.topology, benchmark, env=env)
-from tqdm import tqdm
-import threading
-import time
-
-def progress_bar_monitor():
-    # Based on your #Vis results, estimate total time
-    estimated_total_time = 300  # 5 minutes (adjust based on your experience)
-    
-    with tqdm(total=estimated_total_time, desc="Simulation Progress", unit="s") as pbar:
-        start_time = time.time()
-        last_update = 0
-        
-        while True:
-            elapsed = time.time() - start_time
-            
-            # Update progress bar
-            progress_delta = int(elapsed) - last_update
-            if progress_delta > 0:
-                pbar.update(progress_delta)
-                last_update = int(elapsed)
-            
-            # Update description with current status
-            try:
-                if hasattr(sim.env.faas, 'deployments'):
-                    deployment_count = len(sim.env.faas.deployments)
-                    pbar.set_description(f"Deployments: {deployment_count}, Downloads in progress")
-                else:
-                    pbar.set_description("Initializing simulation...")
-            except:
-                pbar.set_description("Simulation running...")
-            
-            # Check if we should stop
-            if elapsed >= estimated_total_time:
-                pbar.set_description("Simulation should complete soon...")
-                break
-                
-            time.sleep(1)
-
-# Start progress bar monitor
-monitor_thread = threading.Thread(target=progress_bar_monitor, daemon=True)
-monitor_thread.start()
-
-print("Starting simulation with progress monitoring...")
 result = sim.run()  # Execute simulation until benchmark completion
 
 # Extract metrics into dataframes for analysis
@@ -371,7 +323,7 @@ for df_name, df in dfs.items():
 # Configuration identifiers
 device_id = f"d{num_devices}"  # d100 for 100 devices
 rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
-settings_id = "new_images_autoscale_default"  # Match the settings used in generate_devices()
+settings_id = "mhfd_deployement_autoscale_default"  # Match the settings used in generate_devices()
 
 # Construct directory names with configuration identifiers
 data_dir = f"./data/{settings_id}_{device_id}_{rps_id}"

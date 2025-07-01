@@ -80,63 +80,40 @@ def create_smart_city_deployments(
         "resnet50-training",      # Will force to CPU variant
         "python-pi",              # Already CPU-based
         "fio",                    # Already CPU-based
-        "video-analytics",        # Video processing
-        "iot-data-processor",     # Sensor data processing
-        "alert-service",          # Emergency alerts
-        "data-aggregator",        # Analytics and reporting
     ]
 
-    print(f"Available functions: {list(all_deployments.keys())}")
+    # Filter to available functions
     base_deployments = {
         name: all_deployments[name]
         for name in base_selected_functions
         if name in all_deployments
     }
-    print(f"Selected functions: {list(base_deployments.keys())}")
-
+    
     # Define scenarios with different deployment patterns
     scenarios = {
         "default": {
-            "resnet50-inference": 2,        # Traffic cameras
-            "speech-inference": 2,          # Audio monitoring
-            "resnet50-preprocessing": 3,    # Data preprocessing
-            "resnet50-training": 2,         # Model training
-            "python-pi": 4,                 # Edge computing (if available)
-            "fio": 3,                       # I/O monitoring (if available)
-            # # NEW SMART CITY FUNCTIONS
-            "video-analytics": 1,           # Video processing zones
-            "iot-data-processor": 0,        # Sensor networks
-            "alert-service": 0,             # Emergency response
-            "data-aggregator": 0,           # Analytics centers
-            # Total: 45 instances
+            "resnet50-inference": 6,  # 6 traffic/security camera zones
+            "speech-inference": 4,  # 4 audio monitoring zones
+            "resnet50-preprocessing": 5,  # 5 data processing zones
+            "resnet50-training": 2,  # 2 training instances
+            "python-pi": 4,  # Simple CPU function
+            "fio": 3,  # I/O benchmark function
         },
         "intensive": {
-            "resnet50-inference": 12,       # Heavy camera deployment
-            "speech-inference": 8,          # City-wide audio
-            "resnet50-preprocessing": 10,   # High data throughput
-            "resnet50-training": 4,         # Continuous learning
-            "python-pi": 8,                 # Extensive edge computing
-            "fio": 6,                       # Comprehensive I/O monitoring
-            # NEW SMART CITY FUNCTIONS
-            "video-analytics": 12,          # Advanced video analysis
-            "iot-data-processor": 15,       # Dense sensor network
-            "alert-service": 6,             # Redundant alert systems
-            "data-aggregator": 5,           # Real-time analytics
-            # Total: 86 instances
+            "resnet50-inference": 12,  # More intensive camera coverage
+            "speech-inference": 8,  # Comprehensive audio monitoring
+            "resnet50-preprocessing": 10,  # Heavy data processing
+            "resnet50-training": 4,  # More frequent training
+            "python-pi": 4,  # Simple CPU function
+            "fio": 3,  # I/O benchmark function
         },
         "distributed": {
-            "resnet50-inference": 15,       # Maximum camera coverage
-            "speech-inference": 12,         # Comprehensive audio
-            "resnet50-preprocessing": 15,   # High-volume preprocessing
-            "resnet50-training": 6,         # Distributed learning
-            "python-pi": 10,                # Edge computing mesh
-            "fio": 8,                       # Infrastructure monitoring
-            # NEW SMART CITY FUNCTIONS
-            "video-analytics": 15,          # Citywide video analysis
-            "iot-data-processor": 20,       # Massive sensor deployment
-            "alert-service": 8,             # Multi-zone alerts
-            "data-aggregator": 6,           # Distributed analytics
-            # Total: 115 instances
+            "resnet50-inference": 15,  # Highly distributed camera network
+            "speech-inference": 12,  # City-wide audio monitoring
+            "resnet50-preprocessing": 15,  # Distributed data processing
+            "resnet50-training": 6,  # Distributed learning
+            "python-pi": 4,  # Simple CPU function
+            "fio": 3,  # I/O benchmark function
         },
     }
 
