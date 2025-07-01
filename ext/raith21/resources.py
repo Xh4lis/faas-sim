@@ -453,107 +453,107 @@ ai_resources_per_node_image = {
         610213.8222734069,
         0.12884635421827495,
     ),
-    # VIDEO ANALYTICS - High CPU, moderate memory, high I/O for video processing
+        # VIDEO ANALYTICS - Similar to resnet-inference (high CPU, moderate I/O)
     ("xeoncpu", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=400, blkio=100, gpu=0, net=50, ram=300
+        cpu=0.4393307048, blkio=35006.214, gpu=0, net=55698244.647, ram=0.046233836
     ),
     ("rpi4", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=600, blkio=150, gpu=0, net=40, ram=400
+        cpu=0.6178520697, blkio=3493.924, gpu=0, net=2788183.448, ram=0.312472708
     ),
     ("rpi3", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=800, blkio=200, gpu=0, net=30, ram=300
+        cpu=0.5448381974, blkio=2615.734, gpu=0, net=2062539.572, ram=0.365190326
     ),
     ("tx2", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=300, blkio=80, gpu=200, net=50, ram=500  # Can use GPU acceleration
+        cpu=0.6437372515, blkio=0.0, gpu=0.0, net=14922976.382, ram=0.089201781
     ),
     ("nx", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=250, blkio=60, gpu=300, net=60, ram=600  # Better GPU acceleration
+        cpu=0.3208576242, blkio=0.0, gpu=0.0, net=16688952.186, ram=0.082140676
     ),
     ("nano", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=350, blkio=100, gpu=100, net=40, ram=400
+        cpu=0.6173617438, blkio=0.0, gpu=0.0, net=11929148.603, ram=0.167473647
     ),
     ("coral", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=300, blkio=80, gpu=0, net=45, ram=350  # Edge TPU optimized
+        cpu=0.3790727085, blkio=22642005.729, gpu=0, net=5099707.807, ram=0.555961909
     ),
     ("rockpi", "faas-workloads/video-analytics"): FunctionResourceCharacterization(
-        cpu=500, blkio=120, gpu=0, net=35, ram=350
+        cpu=0.4706768606, blkio=0.0, gpu=0, net=6595019.673, ram=0.157839816
     ),
     
-    # IOT DATA PROCESSOR - Low CPU, low memory, high network I/O
+    # IOT DATA PROCESSOR - Similar to python-pi (lightweight processing)
     ("xeoncpu", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=50, blkio=20, gpu=0, net=100, ram=50
+        cpu=0.2510487904, blkio=0.0, gpu=0.0, net=27.438777768, ram=0.004305198
     ),
     ("rpi4", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=100, blkio=30, gpu=0, net=80, ram=80
+        cpu=0.2589641851, blkio=98.771168799, gpu=0, net=37.282525984, ram=0.083040584
     ),
     ("rpi3", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=150, blkio=40, gpu=0, net=60, ram=60
+        cpu=0.2632196988, blkio=0.0, gpu=0, net=14.415714537, ram=0.066730256
     ),
     ("tx2", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=75, blkio=25, gpu=0, net=90, ram=70
+        cpu=0.3707047087, blkio=0.0, gpu=0.0, net=1810.518329, ram=0.025151704
     ),
     ("nx", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=60, blkio=20, gpu=0, net=100, ram=60
+        cpu=0.2736460766, blkio=0.0, gpu=0.0, net=1007.588656, ram=0.014838573
     ),
     ("nano", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=80, blkio=30, gpu=0, net=85, ram=65
+        cpu=0.4176991404, blkio=0.0, gpu=0.0, net=1178.408116, ram=0.029120248
     ),
     ("coral", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=70, blkio=25, gpu=0, net=95, ram=55
+        cpu=0.3564508981, blkio=735752.026, gpu=0, net=204.014142, ram=0.566772439
     ),
     ("rockpi", "faas-workloads/iot-data-processor"): FunctionResourceCharacterization(
-        cpu=120, blkio=35, gpu=0, net=70, ram=75
+        cpu=0.2606675186, blkio=0.0, gpu=0, net=867.064465, ram=0.028500911
     ),
     
-    # ALERT SERVICE - Very low resources, optimized for speed
+    # ALERT SERVICE - Similar to speech-inference-tflite (fast, lightweight)
     ("xeoncpu", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=30, blkio=10, gpu=0, net=150, ram=30
+        cpu=0.2532600877, blkio=0.0, gpu=0.0, net=346503.297, ram=0.003708128
     ),
     ("rpi4", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=50, blkio=15, gpu=0, net=100, ram=40
+        cpu=0.2540446574, blkio=181.779531, gpu=0, net=55027.728375, ram=0.080830581
     ),
     ("rpi3", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=80, blkio=20, gpu=0, net=80, ram=35
+        cpu=0.2544375520, blkio=64.460545570, gpu=0, net=22390.466181, ram=0.122441672
     ),
     ("tx2", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=40, blkio=12, gpu=0, net=120, ram=35
+        cpu=0.2705111164, blkio=0.0, gpu=0.0, net=107222.562157, ram=0.020603045
     ),
     ("nx", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=35, blkio=10, gpu=0, net=140, ram=32
+        cpu=0.1653659951, blkio=0.0, gpu=0.0, net=137404.457971, ram=0.012394685
     ),
     ("nano", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=45, blkio=15, gpu=0, net=110, ram=38
+        cpu=0.2519341711, blkio=0.0, gpu=0.0, net=93917.270079, ram=0.058442997
     ),
     ("coral", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=40, blkio=12, gpu=0, net=125, ram=35
+        cpu=0.2501691236, blkio=0.0, gpu=0, net=50410.417657, ram=0.087850610
     ),
     ("rockpi", "faas-workloads/alert-service"): FunctionResourceCharacterization(
-        cpu=70, blkio=18, gpu=0, net=90, ram=45
+        cpu=0.1699522792, blkio=0.0, gpu=0, net=95857.206855, ram=0.027038749
     ),
     
-    # DATA AGGREGATOR - High CPU, high memory, moderate I/O
+    # DATA AGGREGATOR - Similar to resnet-preprocessing (data processing)
     ("xeoncpu", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=300, blkio=80, gpu=0, net=40, ram=400
+        cpu=0.2087012720, blkio=526.031188429, gpu=0.0, net=10226057.561, ram=0.076451325
     ),
     ("rpi4", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=500, blkio=120, gpu=0, net=30, ram=300
+        cpu=0.2512422458, blkio=55.581239367, gpu=0, net=1346582.971, ram=0.087515099
     ),
     ("rpi3", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=700, blkio=150, gpu=0, net=25, ram=250
+        cpu=0.2392066810, blkio=45.883471119, gpu=0, net=610213.822273, ram=0.128846354
     ),
     ("tx2", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=350, blkio=90, gpu=0, net=35, ram=350
+        cpu=0.2518817599, blkio=0.0, gpu=0.0, net=3878847.733, ram=0.030507309
     ),
     ("nx", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=280, blkio=70, gpu=0, net=45, ram=450
+        cpu=0.1560887845, blkio=0.0, gpu=0.0, net=4179408.730, ram=0.019304396
     ),
     ("nano", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=400, blkio=100, gpu=0, net=30, ram=320
+        cpu=0.2392781215, blkio=0.0, gpu=0.0, net=3129712.553, ram=0.078925935
     ),
     ("coral", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=350, blkio=85, gpu=0, net=35, ram=380
+        cpu=0.2416724617, blkio=2160.206095, gpu=0, net=2124329.758, ram=0.148422078
     ),
     ("rockpi", "faas-workloads/data-aggregator"): FunctionResourceCharacterization(
-        cpu=600, blkio=140, gpu=0, net=25, ram=280
+        cpu=0.1621359802, blkio=0.0, gpu=0, net=3210842.724, ram=0.041848531
     ),
 }

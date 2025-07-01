@@ -74,7 +74,7 @@ from sim.skippy import SimulationClusterContext  # Cluster abstraction for sched
 # Set seeds for reproducible simulation results
 np.random.seed(1435)
 random.seed(1435)
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 # Generate heterogeneous edge and cloud devices
 num_devices = 100  # Min 24 - Controls simulation scale
@@ -276,32 +276,46 @@ env.scheduler = Scheduler(env.cluster, **sched_params)  # Function placement sch
 
 # Create and run the simulation
 sim = Simulation(env.topology, benchmark, env=env)
+from tqdm import tqdm
 import threading
 import time
 
-def progress_monitor():
-    start_time = time.time()
-    deployment_count = 0
+def progress_bar_monitor():
+    # Based on your #Vis results, estimate total time
+    estimated_total_time = 300  # 5 minutes (adjust based on your experience)
     
-    while True:
-        elapsed = time.time() - start_time
+    with tqdm(total=estimated_total_time, desc="Simulation Progress", unit="s") as pbar:
+        start_time = time.time()
+        last_update = 0
         
-        # Try to get current deployment count
-        try:
-            if hasattr(sim.env.faas, 'deployments'):
-                current_deployments = len(sim.env.faas.deployments)
-                if current_deployments > deployment_count:
-                    deployment_count = current_deployments
-                    print(f"[{elapsed:.0f}s] Progress: {deployment_count} deployments active")
+        while True:
+            elapsed = time.time() - start_time
             
-            print(f"[{elapsed:.0f}s] Simulation running... (Check for stuck containers)")
-        except:
-            print(f"[{elapsed:.0f}s] Simulation running...")
-        
-        time.sleep(10)  # Print every 10 seconds
+            # Update progress bar
+            progress_delta = int(elapsed) - last_update
+            if progress_delta > 0:
+                pbar.update(progress_delta)
+                last_update = int(elapsed)
+            
+            # Update description with current status
+            try:
+                if hasattr(sim.env.faas, 'deployments'):
+                    deployment_count = len(sim.env.faas.deployments)
+                    pbar.set_description(f"Deployments: {deployment_count}, Downloads in progress")
+                else:
+                    pbar.set_description("Initializing simulation...")
+            except:
+                pbar.set_description("Simulation running...")
+            
+            # Check if we should stop
+            if elapsed >= estimated_total_time:
+                pbar.set_description("Simulation should complete soon...")
+                break
+                
+            time.sleep(1)
 
-# Start progress monitor
-monitor_thread = threading.Thread(target=progress_monitor, daemon=True)
+# Start progress bar monitor
+monitor_thread = threading.Thread(target=progress_bar_monitor, daemon=True)
 monitor_thread.start()
 
 print("Starting simulation with progress monitoring...")

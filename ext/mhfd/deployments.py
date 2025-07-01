@@ -97,9 +97,9 @@ def create_smart_city_deployments(
     # Define scenarios with different deployment patterns
     scenarios = {
         "default": {
-            "resnet50-inference": 6,        # Traffic cameras
-            "speech-inference": 4,          # Audio monitoring
-            "resnet50-preprocessing": 5,    # Data preprocessing
+            "resnet50-inference": 2,        # Traffic cameras
+            "speech-inference": 2,          # Audio monitoring
+            "resnet50-preprocessing": 3,    # Data preprocessing
             "resnet50-training": 2,         # Model training
             "python-pi": 4,                 # Edge computing (if available)
             "fio": 3,                       # I/O monitoring (if available)
