@@ -1,0 +1,126 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-07-02 15:19:55
+
+Topology Overview:
+  Number of nodes: 26
+  Number of functions: 30
+  Number of images: 4
+
+Node Distribution:
+  tx2_1: 51122 invocations (12.5%)
+  nx_1: 55210 invocations (13.5%)
+  nx_2: 55219 invocations (13.5%)
+  tx2_0: 51123 invocations (12.5%)
+  nx_7: 59376 invocations (14.5%)
+  nano_19: 27636 invocations (6.7%)
+  nano_11: 27632 invocations (6.7%)
+  nano_7: 27605 invocations (6.7%)
+  nano_16: 27636 invocations (6.7%)
+  rockpi_2: 10499 invocations (2.6%)
+  coral_5: 2776 invocations (0.7%)
+  coral_6: 2776 invocations (0.7%)
+  rockpi_4: 2619 invocations (0.6%)
+  coral_3: 1904 invocations (0.5%)
+  rpi3_6: 1210 invocations (0.3%)
+  rpi3_7: 1210 invocations (0.3%)
+  rpi3_8: 1208 invocations (0.3%)
+  rpi4_4: 1026 invocations (0.3%)
+  rpi4_5: 1026 invocations (0.3%)
+  rpi3_10: 655 invocations (0.2%)
+  rpi3_9: 656 invocations (0.2%)
+  nano_9: 23 invocations (0.0%)
+  nano_14: 23 invocations (0.0%)
+  nano_26: 25 invocations (0.0%)
+  nano_24: 28 invocations (0.0%)
+  nano_18: 21 invocations (0.0%)
+
+Function Distribution:
+  resnet50-inference-commercial: 51122 invocations (12.5%)
+  resnet50-inference-airport: 51915 invocations (12.7%)
+  resnet50-inference-port: 51926 invocations (12.7%)
+  resnet50-inference-residential: 51123 invocations (12.5%)
+  resnet50-inference: 51907 invocations (12.7%)
+  resnet50-inference-industrial: 27636 invocations (6.7%)
+  resnet50-inference-downtown: 27632 invocations (6.7%)
+  resnet50-inference-university: 27605 invocations (6.7%)
+  resnet50-inference-suburb: 27636 invocations (6.7%)
+  speech-inference-airport: 7469 invocations (1.8%)
+  speech-inference-downtown: 5250 invocations (1.3%)
+  speech-inference-suburb: 5249 invocations (1.3%)
+  resnet50-preprocessing-commercial: 3293 invocations (0.8%)
+  resnet50-preprocessing-residential: 3295 invocations (0.8%)
+  speech-inference-port: 2776 invocations (0.7%)
+  speech-inference: 2776 invocations (0.7%)
+  resnet50-preprocessing-port: 2619 invocations (0.6%)
+  resnet50-preprocessing-airport: 1904 invocations (0.5%)
+  speech-inference-industrial: 1210 invocations (0.3%)
+  speech-inference-residential: 1210 invocations (0.3%)
+  speech-inference-commercial: 1208 invocations (0.3%)
+  resnet50-preprocessing: 1026 invocations (0.3%)
+  resnet50-preprocessing-downtown: 1026 invocations (0.3%)
+  resnet50-preprocessing-industrial: 655 invocations (0.2%)
+  resnet50-preprocessing-suburb: 656 invocations (0.2%)
+  resnet50-training: 23 invocations (0.0%)
+  resnet50-training-downtown: 23 invocations (0.0%)
+  resnet50-training-residential: 25 invocations (0.0%)
+  resnet50-training-industrial: 28 invocations (0.0%)
+  resnet50-training-suburb: 21 invocations (0.0%)
+Network Activity:
+  Total transfers: 306
+  Total bytes transferred: 23614.88 MB
+  Transfer duration: 509.81 s
+
+Network Flows:
+  nano_14 → nuc_4: 2259.25 MB in 19.61 s
+  nano_18 → nuc_4: 2062.80 MB in 18.38 s
+  nano_24 → nuc_4: 2750.40 MB in 24.35 s
+  nano_26 → nuc_4: 2455.71 MB in 22.98 s
+  nano_9 → nuc_4: 2259.25 MB in 21.42 s
+  nuc_4 → coral_5: 45.78 MB in 5.46 s
+  nuc_4 → coral_6: 45.78 MB in 5.35 s
+  nuc_4 → nano_11: 98.23 MB in 9.09 s
+  nuc_4 → nano_14: 1493.45 MB in 48.17 s
+  nuc_4 → nano_16: 98.23 MB in 9.27 s
+  nuc_4 → nano_18: 1382.83 MB in 47.41 s
+  nuc_4 → nano_19: 98.23 MB in 9.20 s
+  nuc_4 → nano_24: 1770.02 MB in 52.26 s
+  nuc_4 → nano_26: 1604.08 MB in 50.06 s
+  nuc_4 → nano_7: 98.23 MB in 8.94 s
+  nuc_4 → nano_9: 1493.45 MB in 48.99 s
+  nuc_4 → nx_1: 98.23 MB in 8.69 s
+  nuc_4 → nx_2: 98.23 MB in 8.62 s
+  nuc_4 → nx_7: 144.00 MB in 14.01 s
+  nuc_4 → rockpi_2: 91.55 MB in 8.97 s
+  nuc_4 → rpi3_6: 45.78 MB in 5.32 s
+  nuc_4 → rpi3_7: 45.78 MB in 4.94 s
+  nuc_4 → rpi3_8: 45.78 MB in 5.30 s
+  nuc_4 → tx2_0: 98.23 MB in 8.96 s
+  nuc_4 → tx2_1: 98.23 MB in 8.67 s
+  registry → coral_3: 182.15 MB in 2.09 s
+  registry → coral_5: 38.15 MB in 0.33 s
+  registry → coral_6: 38.15 MB in 0.33 s
+  registry → nano_11: 95.37 MB in 0.83 s
+  registry → nano_14: 95.37 MB in 1.34 s
+  registry → nano_16: 95.37 MB in 0.83 s
+  registry → nano_18: 95.37 MB in 1.34 s
+  registry → nano_19: 95.37 MB in 0.83 s
+  registry → nano_24: 95.37 MB in 1.34 s
+  registry → nano_26: 95.37 MB in 1.34 s
+  registry → nano_7: 95.37 MB in 1.33 s
+  registry → nano_9: 95.37 MB in 1.34 s
+  registry → nx_1: 277.52 MB in 4.08 s
+  registry → nx_2: 277.52 MB in 4.08 s
+  registry → nx_7: 133.51 MB in 1.87 s
+  registry → rockpi_2: 38.15 MB in 0.52 s
+  registry → rockpi_4: 182.15 MB in 1.58 s
+  registry → rpi3_10: 130.65 MB in 1.64 s
+  registry → rpi3_6: 31.47 MB in 0.28 s
+  registry → rpi3_7: 31.47 MB in 0.28 s
+  registry → rpi3_8: 31.47 MB in 0.28 s
+  registry → rpi3_9: 130.65 MB in 1.64 s
+  registry → rpi4_4: 130.65 MB in 1.64 s
+  registry → rpi4_5: 130.65 MB in 1.64 s
+  registry → tx2_0: 95.37 MB in 1.33 s
+  registry → tx2_1: 95.37 MB in 1.33 s

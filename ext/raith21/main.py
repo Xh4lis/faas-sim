@@ -82,8 +82,8 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Generate heterogeneous edge and cloud devices
-num_devices = 100  # Min 24 - Controls simulation scale
-devices = generate_devices(num_devices, cloudcpu_settings)
+num_devices = 150  # Min 24 - Controls simulation scale
+devices = generate_devices(num_devices, edgegpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
 scenario = "custom"  # Start with default scenario
@@ -186,7 +186,7 @@ if scenario == "custom":
 else:
     benchmark = create_smart_city_constant_benchmark(
         duration=500,
-        total_rps=1000,
+        total_rps=250,
         scenario=scenario
     )
 
