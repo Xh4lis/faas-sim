@@ -6,6 +6,11 @@ import numpy as np
 import argparse
 from datetime import datetime
 from collections import defaultdict
+from . import nrg  
+
+import warnings
+warnings.filterwarnings('ignore')
+
 
 # Set matplotlib style for better plots
 mpl.rcParams["figure.figsize"] = (10, 6)
@@ -16,14 +21,19 @@ mpl.style.use("ggplot")
 class ReportGenerator:
     """Modular report generator for faas-sim analysis data"""
 
-    def __init__(self, data_dir="analysis_data", output_dir="visualization_results"):
-        """Initialize with data and output directories"""
-        self.data_dir = data_dir
-        self.output_dir = self.ensure_output_dir(output_dir)
+    def __init__(self, data_dir, output_dir):
+        """Initialize the report generator with input and output directories"""
+        self.data_dir = data_dir  # Store for energy analysis fallback
+        self.output_dir = output_dir
         self.data = {}
         self.nodes = []
         self.functions = []
-        self.images = []
+        
+        # Create output directory if it doesn't exist
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Load all available data
+        self.load_data()
 
     def ensure_output_dir(self, path):
         """Create directory if it doesn't exist"""
@@ -65,14 +75,14 @@ class ReportGenerator:
         return len(self.data) > 0
 
     def generate_all_reports(self):
-        """Generate all available reports"""
+        """Generate all available reports including energy analysis"""
         if not self.data:
             print("No data available. Please load data first.")
             return False
 
         print("Generating visualizations...")
 
-        # Generate all reports
+        # Generate all existing reports
         self.generate_function_invocation_report()
         self.generate_resource_utilization_report()
         self.generate_deployment_timeline()
@@ -80,36 +90,93 @@ class ReportGenerator:
         self.generate_function_comparison_report()
         self.generate_overall_summary()
 
+        # Generate energy analysis - this will create files in the same output directory
+        energy_summary = self.generate_energy_analysis()
+
         print(f"All visualizations saved to {os.path.abspath(self.output_dir)}")
-        self.print_report_summary()
+        self.print_report_summary(energy_summary is not None)
 
         return True
+    def generate_energy_analysis(self):
+        """Generate energy analysis using the nrg module"""
+        # Check if power and energy data are available
+        if "power_df" in self.data and "energy_df" in self.data:
+            print("Generating energy consumption analysis...")
+            try:
+                # Call nrg.main with the loaded dataframes and same output directory
+                energy_summary = nrg.main(
+                    power_df=self.data["power_df"],
+                    energy_df=self.data["energy_df"],
+                    output_dir=self.output_dir  # Same directory as other reports
+                )
+                print("✅ Energy analysis completed successfully!")
+                return energy_summary
+            except Exception as e:
+                print(f"❌ Error generating energy analysis: {e}")
+                import traceback
+                traceback.print_exc()
+                return None
+        else:
+            # Check if CSV files exist in data directory for fallback
+            if hasattr(self, 'data_dir'):
+                power_csv = os.path.join(self.data_dir, "power_df.csv")
+                energy_csv = os.path.join(self.data_dir, "energy_df.csv")
+                
+                if os.path.exists(power_csv) and os.path.exists(energy_csv):
+                    print("Power/Energy dataframes not in memory, but CSV files found. Loading from files...")
+                    try:
+                        energy_summary = nrg.main(
+                            data_path=self.data_dir,
+                            output_dir=self.output_dir
+                        )
+                        print("✅ Energy analysis completed from CSV files!")
+                        return energy_summary
+                    except Exception as e:
+                        print(f"❌ Error generating energy analysis from CSV: {e}")
+                        return None
+            
+            print("⚠️  Power and energy data not found, skipping energy analysis")
+            return None
 
-    def print_report_summary(self):
+    # Update the print_report_summary method to include energy reports
+    def print_report_summary(self, energy_analysis_generated=False):
         """Print summary of generated reports"""
+        print("\n" + "="*50)
+        print("📊 REPORT GENERATION SUMMARY")
+        print("="*50)
+        
         print("The following reports were generated:")
-        print(
-            "  1. function_invocation_report.png - Overall analysis of function invocations"
-        )
+        print("  1. function_invocation_report.png - Overall analysis of function invocations")
         print("  2. function_utilization_report.png - CPU utilization analysis")
         print("  3. deployment_timeline.png - Timeline of deployment events")
 
         if len(self.nodes) > 1:
-            print(
-                "  4. node_comparison_report.png - Performance comparison across nodes"
-            )
+            print("  4. node_comparison_report.png - Performance comparison across nodes")
             print("  5. node_distribution.png - Distribution of workload across nodes")
 
         if len(self.functions) > 1:
-            print(
-                "  6. function_comparison_report.png - Performance comparison across functions"
-            )
-            print(
-                "  7. function_distribution.png - Distribution of functions across nodes"
-            )
+            print("  6. function_comparison_report.png - Performance comparison across functions")
+            print("  7. function_distribution.png - Distribution of functions across nodes")
 
         print("  8. overall_summary.png - Complete simulation summary")
-        print("\nText summaries were also generated for each report.")
+        print("  9. overall_summary.txt - Text summary of simulation")
+        
+        # Add energy analysis reports if they were generated
+        if energy_analysis_generated:
+            print("\n🔋 ENERGY ANALYSIS REPORTS:")
+            energy_files = [
+                ("device_count_vs_power.png", "Device count vs total power contribution"),
+                ("detailed_energy_analysis_focused.png", "Comprehensive energy analysis (6 visualizations)"),
+                ("energy_dashboard_focused.png", "Energy consumption dashboard (6 visualizations)"), 
+                ("energy_analysis_summary.txt", "Detailed energy analysis text report")
+            ]
+            
+            for i, (filename, description) in enumerate(energy_files, 10):
+                if os.path.exists(os.path.join(self.output_dir, filename)):
+                    print(f"  {i}. {filename} - {description}")
+        
+        print(f"\n📁 All files saved to: {os.path.abspath(self.output_dir)}")
+        print("="*50)
 
     def generate_function_invocation_report(self):
         """Generate function invocation analysis report with multi-node support"""
