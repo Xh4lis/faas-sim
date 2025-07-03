@@ -98,7 +98,6 @@ resource_oracle = Raith21ResourceOracle(
 )  # Resource usage oracle
 
 
-
 power_oracle = Raith21PowerOracle(DEVICE_POWER_PROFILES)
 power_metrics = PowerMetrics()
 

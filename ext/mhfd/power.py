@@ -17,7 +17,7 @@ class Raith21PowerOracle:
         Calculate power consumption using linear model
         
         Args:
-            node_type: Device type (e.g., 'rpi4', 'nano', 'xeongpu')
+            node_type: Device type ('rpi4', 'nano', 'xeongpu')
             cpu_util: CPU utilization (0.0-1.0)
             gpu_util: GPU utilization (0.0-1.0) 
             network_util: Network utilization (0.0-1.0)
@@ -43,58 +43,58 @@ class Raith21PowerOracle:
         
         return max(power, profile["idle"])  # Never go below idle power
 
-# Device-specific power profiles based on #Energy Data Sources
+# Device-specific power profiles based on
 DEVICE_POWER_PROFILES = {
     # Edge Devices
     "rpi3": {
-        "idle": 2.1,      # Based on official RPi documentation
-        "cpu_max": 1.9,   # Max additional CPU power
-        "gpu_max": 0.5,   # Limited GPU
+        "idle": 2.1,      
+        "cpu_max": 1.9,  
+        "gpu_max": 0.5,   
         "network_max": 0.8,
         "memory_max": 0.4
     },
     "rpi4": {
-        "idle": 2.7,      # Tom's Hardware measurements
-        "cpu_max": 3.8,   # Higher CPU power
-        "gpu_max": 1.0,   # Better GPU than RPi3
+        "idle": 2.7,      
+        "cpu_max": 3.8,   
+        "gpu_max": 1.0,  
         "network_max": 1.0,
         "memory_max": 0.5
     },
     
     # NVIDIA Jetson Devices
     "nano": {
-        "idle": 1.9,      # NVIDIA official specs
+        "idle": 1.9,      
         "cpu_max": 3.1,   
-        "gpu_max": 2.0,   # Dedicated GPU
+        "gpu_max": 2.0,   
         "network_max": 0.5,
         "memory_max": 0.6
     },
     "tx2": {
-        "idle": 5.5,      # NVIDIA TX2 datasheet
+        "idle": 5.5,      
         "cpu_max": 6.5,
-        "gpu_max": 12.0,  # More powerful GPU
+        "gpu_max": 12.0,  
         "network_max": 1.5,
         "memory_max": 1.0
     },
     "nx": {
-        "idle": 5.0,      # NVIDIA Xavier NX specs
+        "idle": 5.0,      
         "cpu_max": 10.0,
-        "gpu_max": 15.0,  # High-performance GPU
+        "gpu_max": 15.0,  
         "network_max": 2.0,
         "memory_max": 1.5
     },
     
     # Other Edge Devices
     "coral": {
-        "idle": 2.5,      # Google Coral documentation
+        "idle": 2.5,      
         "cpu_max": 2.5,
-        "gpu_max": 0.0,   # Uses TPU instead
-        "tpu_max": 4.0,   # TPU power consumption
+        "gpu_max": 0.0,   
+        "tpu_max": 4.0,   
         "network_max": 0.6,
         "memory_max": 0.3
     },
     "rockpi": {
-        "idle": 3.0,      # Rock Pi specs
+        "idle": 3.0,      
         "cpu_max": 4.0,
         "gpu_max": 1.5,
         "network_max": 0.8,
@@ -103,23 +103,23 @@ DEVICE_POWER_PROFILES = {
     
     # Server Grade
     "nuc": {
-        "idle": 15.0,     # Intel NUC specs
-        "cpu_max": 50.0,  # High-performance CPU
-        "gpu_max": 0.0,   # Usually no dedicated GPU
+        "idle": 15.0,     
+        "cpu_max": 50.0,  
+        "gpu_max": 0.0,  
         "network_max": 3.0,
         "memory_max": 2.0
     },
     "xeoncpu": {
-        "idle": 50.0,     # Intel Xeon specs
-        "cpu_max": 200.0, # High server-grade power
+        "idle": 50.0,     
+        "cpu_max": 200.0, 
         "gpu_max": 0.0,
         "network_max": 8.0,
         "memory_max": 5.0
     },
     "xeongpu": {
-        "idle": 75.0,     # Xeon + GPU idle
-        "cpu_max": 205.0, # CPU + overhead
-        "gpu_max": 275.0, # High-end GPU
+        "idle": 75.0,     
+        "cpu_max": 205.0, 
+        "gpu_max": 275.0, 
         "network_max": 10.0,
         "memory_max": 8.0
     },
