@@ -112,11 +112,14 @@ class ConstantBenchmark(BenchmarkBase):
         )
 
     def set_deployments(self, env):
+        """  no_of_devices = len(env.topology.get_nodes()) # this includes links, switches, registry
+         
+              scale max is 195%  """
         # deployments = self.deployments_per_name
         # for deployment in deployments.values():
         #     deployment.scale_min = 5
         #     deployment.target_average_utilization = 0.5
-        # no_of_devices = len(env.topology.get_nodes())
+        # no_of_devices = len(env.topology.get_nodes()) # this includes links, switches, registry
 
         # deployments[images.resnet50_inference_function].rps_threshold = 100
         # deployments[images.resnet50_inference_function].scale_max = int(
@@ -153,7 +156,8 @@ class ConstantBenchmark(BenchmarkBase):
         # deployments[images.resnet50_training_function].scale_factor = 1
         # deployments[images.resnet50_training_function].rps_threshold_duration = 15
 
-        """Override to skip parent's deployment configuration."""
+        """Override to skip parent's deployment configuration.
+        Further, add labels for custom deployement profiles"""
         # Simply configure our deployments without calling parent
         no_of_devices = len([node for node in env.topology.get_nodes() 
                         if not any(keyword in str(node).lower() 
