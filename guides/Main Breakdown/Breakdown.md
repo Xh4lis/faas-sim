@@ -30,6 +30,8 @@ logging.basicConfig(level=logging.INFO)
 
 ### Segment 2: Device and Topology Generation (Lines 27-30)
 
+[Generators](https://github.com/M4hf0d/faas-sim/tree/master/ext/raith21/generators)
+
 ```python
 num_devices = 100 #Min 24
 devices = generate_devices(num_devices, cloudcpu_settings)
@@ -50,7 +52,7 @@ resource_oracle = Raith21ResourceOracle(ai_resources_per_node_image)
 
 - **Purpose**: Create oracles that provide performance predictions
 - **Key Components**:
-  - Function Execution Time (FET) oracle predicts how long functions will take _(Oracle: Uses Statistical Dist found in fet.py)_
+  - Function Execution Time (FET) oracle predicts how long functions will take _(Oracle: Uses Statistical Dist found in [fet.py](https://github.com/M4hf0d/faas-sim/blob/master/ext/raith21/fet.py))_
   - Resource oracle determines CPU/memory/etc requirements for functions
 
 ### Segment 4: Deployment Configuration (Lines 35-36)
@@ -86,12 +88,16 @@ sched_params = {
 }
 ```
 
-- **Purpose**: Configure the function scheduling system
-- **Key Components**:
-  - predicates: filtering functions that determine whether a node is eligible to run a specific function/workload. They act as binary "yes/no" filters that eliminate unsuitable nodes early in the scheduling process.
-  - Defines predicates (filters) for node selection
-  - Sets priorities for scoring suitable nodes
-  - Configures scheduler parameters
+- predicates: filtering functions that determine whether a node is eligible to run a specific function/workload. They act as binary "yes/no" filters that eliminate unsuitable nodes early in the scheduling process.
+- Defines predicates (filters) for node selection
+- Sets priorities for scoring suitable nodes
+- Configures scheduler parameters
+
+Predicates are executed every time the scheduler attempts to place a function on a node. This happens:
+
+    When new function deployments are created
+    When auto-scaling creates new function replicas
+    When the scheduler needs to find a replacement node for a function
 
 ### Segment 6: Benchmark and Topology Creation (Lines 54-58)
 
@@ -101,11 +107,9 @@ storage_index = StorageIndex()
 topology = urban_sensing_topology(ether_nodes, storage_index)
 ```
 
-- **Purpose**: Define workload pattern and network topology
-- **Key Components**:
-  - Creates a constant workload with 700 requests per second
-  - Sets up storage tracking
-  - Builds an urban sensing topology with the generated nodes
+- Creates a constant workload with 700 requests per second, the type of functions to be executed ["in this case mixed" ](https://github.com/M4hf0d/faas-sim/blob/master/ext/raith21/benchmark/constant.py)
+- Sets up storage tracking
+- Builds an urban sensing topology with the generated nodes
 
 ### Segment 7: Environment Initialization (Lines 60-73)
 
@@ -122,8 +126,8 @@ env.cluster = SimulationClusterContext(env)
 env.scheduler = Scheduler(env.cluster, **sched_params)
 ```
 
-- **Purpose**: Set up the simulation environment
-- **Key Components**:
+- Set up the simulation [environment](https://github.com/M4hf0d/faas-sim/blob/master/guides/Environment/Environment.md) (core point and central link of the simulation of the simulation):
+
   - Creates environment object
   - Configures function simulators with execution characteristics
   - Sets up metrics collection
@@ -137,10 +141,8 @@ sim = Simulation(env.topology, benchmark, env=env)
 result = sim.run()
 ```
 
-- **Purpose**: Run the simulation
-- **Key Components**:
-  - Creates simulation object with topology, benchmark, and environment
-  - Runs simulation until benchmark completion
+- Creates simulation object with topology, benchmark, and environment
+- Runs simulation until benchmark completion
 
 ### Segment 9: Results Processing (Lines 78-97)
 
@@ -156,81 +158,7 @@ for df_name, df in dfs.items():
     # ... printing details ...
 ```
 
-- **Purpose**: Extract and display simulation metrics
-- **Key Components**:
-  - Creates dictionary of dataframes for different metric types
-  - Prints summary of each dataframe (columns, shapes, etc.)
+Extract and display simulation metrics
 
-### Segment 10: Final Metrics Extraction (Lines 99-100)
-
-```python
-from .extract import extract_metrics
-dfs = extract_metrics(sim)
-```
-
-- **Purpose**: Extract final metrics in standardized format
-- **Key Components**:
-  - Imports extraction module
-  - Processes metrics into structured dataframes
-
-## 2. Flow and Lifecycle of the Simulation
-
-### Phase 1: Initialization
-
-1. **Import Libraries**: Import required modules for simulation
-2. **Set Random Seeds**: Ensure reproducibility of results
-3. **Generate Devices**: Create devices with different hardware capabilities
-4. **Create Oracles**: Set up systems for predicting execution times and resource usage
-5. **Define Deployments**: Create specifications for function deployments
-6. **Configure Scheduler**: Set up scheduling logic with predicates and priorities
-7. **Define Benchmark**: Specify workload pattern and parameters
-8. **Create Topology**: Build network topology connecting all devices
-
-### Phase 2: Environment Setup
-
-1. **Create Environment**: Initialize simulation environment
-2. **Configure Function Simulators**: Set up simulators that model function execution
-3. **Initialize Metrics Collection**: Prepare system for gathering performance data
-4. **Set Up FaaS System**: Configure serverless platform with auto-scaling
-5. **Create Container Registry**: Prepare registry for managing container images
-6. **Initialize Cluster Context**: Create abstraction of cluster for scheduler
-7. **Set Up Scheduler**: Attach scheduler to environment
-
-### Phase 3: Simulation Execution
-
-1. **Create Simulation Object**: Combine topology, benchmark, and environment
-2. **Run Simulation**: Execute simulation until benchmark completion
-   - Docker images are pulled to nodes
-   - Functions are deployed based on scheduling decisions
-   - Function requests are generated according to benchmark pattern
-   - Functions execute with resource constraints and timing from oracles
-   - Metrics are collected throughout simulation
-
-### Phase 4: Results Processing
-
-1. **Extract Metrics**: Gather metrics from simulation into dataframes
-2. **Display Summary**: Print overview of collected metrics
-3. **Process Final Metrics**: Extract standardized metrics for further analysis
-
-## 3. Key Components and Their Relationships
-
-- **Benchmark** defines the workload pattern (request rate, duration)
-- **Topology** represents the network of devices and connections
-- **Environment** ties together all simulation components
-- **FaasSystem** handles function deployment and invocation
-- **Oracles** provide performance predictions for functions
-- **Scheduler** makes placement decisions for function deployments
-- **Metrics** collect and organize performance data
-
-When you implement your own functions and topology:
-
-1. Define your device types and capabilities
-2. Create function execution characteristics
-3. Set up appropriate scheduling logic
-4. Define your network topology
-5. Configure your workload pattern
-6. Run simulation and analyze results
-
-The simulation follows a trace-driven approach where real-world measurements inform execution times and resource usage, making it realistic while still allowing for experimentation with different configurations.
-
-Similar code found with 1 license type
+- Creates dictionary of dataframes for different metric types
+- Prints summary of each dataframe (columns, shapes, etc.)
