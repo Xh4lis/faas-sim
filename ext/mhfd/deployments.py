@@ -97,7 +97,7 @@ def create_smart_city_deployments(
             "speech-inference": 8,        # Increase from 4 to 6
             "resnet50-preprocessing": 8,  # Increase from 5 to 8
             "resnet50-training": 5,       # Increase from 2 to 4
-            # Total: 26 instances instead of 24
+            # Total: 26 instances 
         },
         "intensive": {
             "resnet50-inference": 15,     # Increase instances
