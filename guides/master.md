@@ -530,5 +530,3 @@ Our phased implementation approach:
 2. Integrates with the existing resource monitoring system
 3. Extends the metrics collection framework
 4. Adds energy-aware scheduling capabilities
-
-This will transform the simulation into a powerful tool for exploring energy-efficient edge computing strategies, with applications ranging from smart cities to industrial IoT deployments.

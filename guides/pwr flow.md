@@ -41,7 +41,7 @@ Base Functions → Smart City Instances → Zone Deployments → Unique Names
    4 functions        30 instances       zone mapping    no conflicts
 ```
 
-**What you did:**
+**What we did:**
 
 ```python
 # deployments.py lines 71-124
@@ -55,7 +55,7 @@ scenarios = {
 }
 ```
 
-Single function instances wouldn't stress the system. Multiple instances create realistic workload distribution across your 100 nodes (reduced by predicates).
+Single function instances wouldn't stress the system. Multiple instances create realistic workload distribution across our 100 nodes (reduced by predicates).
 
 ### **STEP 4: BACKGROUND PROCESS INTEGRATION**
 

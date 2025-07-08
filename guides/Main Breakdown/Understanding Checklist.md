@@ -12,13 +12,13 @@ Based on the codebase and your goal of implementing energy modeling, I recommend
 
 ### 2. Function Execution Flow (Medium Priority)
 
-- Understand the simulator's function lifecycle (especially resource claiming/releasing)
-- Follow how `FunctionReplica` objects interact with resources
+- ✅ Understand the simulator's function lifecycle (especially resource claiming/releasing)
+- ✅Follow how `FunctionReplica` objects interact with resources
 
 ### 3. Device Characteristics (Medium Priority)
 
-- Review how different node types are defined
-- Understand the device generation process to add power profiles
+- ✅ Review how different node types are defined
+- ✅ Understand the device generation process to add power profiles
 
 ### 4. Skip or Skim (Low Priority)
 
@@ -49,11 +49,3 @@ Based on the codebase and your goal of implementing energy modeling, I recommend
 3. **Third Phase (Optional)**: Enhance with ML models if needed:
    - Add support for importing trained models
    - Use more sophisticated modeling approaches
-
-## Code Files to Focus On
-
-1. core.py: To see how `power_models` was added to `Environment`
-2. resource.py: To understand resource tracking
-3. `ext/tmueller23/functionsim.py`: To see implementation of power prediction
-
-This focused approach lets you implement energy modeling without getting lost in scheduling algorithm details or network topology complexities.

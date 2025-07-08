@@ -93,24 +93,24 @@ def create_smart_city_deployments(
     # Define scenarios with different deployment patterns
     scenarios = {
         "default": {
-            "resnet50-inference": 9,      # Increase from 6 to 8
-            "speech-inference": 8,        # Increase from 4 to 6
-            "resnet50-preprocessing": 8,  # Increase from 5 to 8
-            "resnet50-training": 5,       # Increase from 2 to 4
+            "resnet50-inference": 9,     
+            "speech-inference": 8,        
+            "resnet50-preprocessing": 8, 
+            "resnet50-training": 5,       
             # Total: 26 instances 
         },
         "intensive": {
-            "resnet50-inference": 15,     # Increase instances
-            "speech-inference": 12,       # Increase instances
-            "resnet50-preprocessing": 15, # Increase instances
-            "resnet50-training": 8,       # Increase instances
+            "resnet50-inference": 15,     
+            "speech-inference": 12,       
+            "resnet50-preprocessing": 15, 
+            "resnet50-training": 8,       
             # Total: 50 instances
         },
         "distributed": {
-            "resnet50-inference": 20,     # Maximum distribution
-            "speech-inference": 15,       # Maximum distribution
-            "resnet50-preprocessing": 20, # Maximum distribution
-            "resnet50-training": 10,      # More training instances
+            "resnet50-inference": 20,     
+            "speech-inference": 15,      
+            "resnet50-preprocessing": 20, 
+            "resnet50-training": 10,      
             # Total: 65 instances
         },
     }
