@@ -95,9 +95,9 @@ sched_params = {
 
 Predicates are executed every time the scheduler attempts to place a function on a node. This happens:
 
-    When new function deployments are created
-    When auto-scaling creates new function replicas
-    When the scheduler needs to find a replacement node for a function
+- When new function deployments are created
+- When auto-scaling creates new function replicas
+- When the scheduler needs to find a replacement node for a function
 
 ### Segment 6: Benchmark and Topology Creation (Lines 54-58)
 

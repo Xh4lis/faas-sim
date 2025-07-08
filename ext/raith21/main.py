@@ -95,7 +95,7 @@ fet_oracle = Raith21FetOracle(
 )  # Function Execution Time oracle
 resource_oracle = Raith21ResourceOracle(
     ai_resources_per_node_image
-)  # Resource usage oracle
+)  # Resource usage oracle (How much CPU does this function need?)
 
 
 power_oracle = Raith21PowerOracle(DEVICE_POWER_PROFILES)
