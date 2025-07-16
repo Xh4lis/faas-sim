@@ -216,7 +216,8 @@ def monitor_power_consumption(env):
         
         # Monitor all nodes in the topology
         for node in env.topology.get_nodes():
-            if hasattr(node, 'capacity'):  # Only monitor compute nodes
+            if hasattr(node, 'capacity') and \
+                not any(keyword in node.name.lower() for keyword in ['registry', 'link', 'switch', 'shared']):  # Only monitor compute nodes
                 node_name = node.name
                 node_type = extract_node_type(node_name)
                 

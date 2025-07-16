@@ -81,8 +81,12 @@ np.random.seed(1435)
 random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
+# Enable debug logging for scaling specifically
+logging.getLogger("sim.faas.scaling").setLevel(logging.DEBUG)
+logging.getLogger("sim.faas").setLevel(logging.DEBUG)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 # Generate heterogeneous edge and cloud devices
-num_devices = 150  # Min 24 - Controls simulation scale
+num_devices = 201 # Min 29 - Controls simulation scale
 devices = generate_devices(num_devices, edgegpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
@@ -185,7 +189,7 @@ if scenario == "custom":
 else:
     benchmark = create_smart_city_constant_benchmark(
         duration=500,
-        total_rps=250,
+        total_rps=1200,
         scenario=scenario
     )
 
@@ -295,6 +299,7 @@ def power_monitoring_loop(env):
 
 # Add the function, not the process
 env.background_processes.append(power_monitoring_loop)
+
 result = sim.run()  # Execute simulation until benchmark completion
 
 # Extract metrics into dataframes for analysis
@@ -350,7 +355,7 @@ for df_name, df in dfs.items():
 # Configuration identifiers
 device_id = f"d{num_devices}"  # d100 for 100 devices
 rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
-settings_id = "mhfd_dep_intensive_as_default"  # Match the settings used in generate_devices()
+settings_id = "autoscale_default_profile"  # Match the settings used in generate_devices()
 
 # Construct directory names with configuration identifiers
 data_dir = f"./data/{settings_id}_{device_id}_{rps_id}"

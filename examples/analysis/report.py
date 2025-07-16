@@ -531,6 +531,124 @@ class ReportGenerator:
                     if "node" in inv_df.columns:
                         f.write(f"Node: {inv_df['node'].iloc[0]}\n")
 
+    def _generate_deployment_timeline_text(self, lifecycle_events, groups):
+        """Generate detailed deployment timeline text file"""
+        with open(os.path.join(self.output_dir, "deployment_timeline.txt"), "w") as f:
+            f.write("FUNCTION DEPLOYMENT TIMELINE\n")
+            f.write("============================\n\n")
+            f.write(f"Report generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            
+            # Overall summary
+            f.write(f"Total deployment events: {len(lifecycle_events)}\n")
+            f.write(f"Number of node-function combinations: {len(groups)}\n\n")
+            
+            # Event type breakdown
+            event_counts = {"deployment": 0, "replica": 0, "network": 0}
+            for event in lifecycle_events:
+                event_counts[event["type"]] += 1
+            
+            f.write("Event Type Summary:\n")
+            f.write(f"  Deployment events: {event_counts['deployment']}\n")
+            f.write(f"  Replica events: {event_counts['replica']}\n")
+            f.write(f"  Network events: {event_counts['network']}\n\n")
+            
+            # Timeline sorted by time
+            f.write("CHRONOLOGICAL TIMELINE\n")
+            f.write("======================\n\n")
+            sorted_events = sorted(lifecycle_events, key=lambda x: x["time"])
+            
+            for event in sorted_events:
+                f.write(f"t={event['time']:6.1f}s | {event['type']:10} | {event['node']:20} | {event['function']:25} | {event['event']}\n")
+            
+            f.write("\n")
+            
+            # Grouped by node-function combination
+            f.write("GROUPED BY NODE-FUNCTION\n")
+            f.write("========================\n\n")
+            
+            sorted_groups = sorted(groups.keys())
+            for group_name in sorted_groups:
+                events = groups[group_name]
+                f.write(f"{group_name}:\n")
+                f.write("-" * (len(group_name) + 1) + "\n")
+                
+                # Sort events in this group by time
+                events_sorted = sorted(events, key=lambda x: x["time"])
+                
+                for event in events_sorted:
+                    f.write(f"  t={event['time']:6.1f}s - {event['event']} [{event['type']}]\n")
+                
+                f.write(f"  Total events: {len(events)}\n\n")
+            
+            # Node summary
+            node_stats = {}
+            for event in lifecycle_events:
+                node = event["node"]
+                if node not in node_stats:
+                    node_stats[node] = {"deployment": 0, "replica": 0, "network": 0, "functions": set()}
+                node_stats[node][event["type"]] += 1
+                node_stats[node]["functions"].add(event["function"])
+            
+            f.write("NODE SUMMARY\n")
+            f.write("============\n\n")
+            
+            for node, stats in sorted(node_stats.items()):
+                f.write(f"Node: {node}\n")
+                f.write(f"  Deployment events: {stats['deployment']}\n")
+                f.write(f"  Replica events: {stats['replica']}\n")
+                f.write(f"  Network events: {stats['network']}\n")
+                f.write(f"  Functions involved: {len(stats['functions'])}\n")
+                f.write(f"  Function list: {', '.join(sorted(stats['functions']))}\n\n")
+            
+            # Function summary
+            function_stats = {}
+            for event in lifecycle_events:
+                function = event["function"]
+                if function not in function_stats:
+                    function_stats[function] = {"deployment": 0, "replica": 0, "network": 0, "nodes": set()}
+                function_stats[function][event["type"]] += 1
+                function_stats[function]["nodes"].add(event["node"])
+            
+            f.write("FUNCTION SUMMARY\n")
+            f.write("================\n\n")
+            
+            for function, stats in sorted(function_stats.items()):
+                f.write(f"Function: {function}\n")
+                f.write(f"  Deployment events: {stats['deployment']}\n")
+                f.write(f"  Replica events: {stats['replica']}\n")
+                f.write(f"  Network events: {stats['network']}\n")
+                f.write(f"  Nodes involved: {len(stats['nodes'])}\n")
+                f.write(f"  Node list: {', '.join(sorted(stats['nodes']))}\n\n")
+            
+            # Scaling analysis (specifically for your debugging)
+            f.write("SCALING ANALYSIS\n")
+            f.write("================\n\n")
+            
+            scaling_functions = set()
+            for event in lifecycle_events:
+                if event["type"] == "replica" and "replica of" in event["event"]:
+                    scaling_functions.add(event["function"])
+            
+            if scaling_functions:
+                f.write(f"Functions with scaling events: {len(scaling_functions)}\n")
+                for func in sorted(scaling_functions):
+                    replica_events = [e for e in lifecycle_events if e["function"] == func and e["type"] == "replica"]
+                    f.write(f"  {func}: {len(replica_events)} replica events\n")
+                    for event in sorted(replica_events, key=lambda x: x["time"]):
+                        f.write(f"    t={event['time']:6.1f}s - {event['event']} on {event['node']}\n")
+                    f.write("\n")
+            else:
+                f.write("⚠️  NO SCALING EVENTS DETECTED!\n")
+                f.write("This indicates that auto-scaling is not working properly.\n")
+                f.write("All functions remained at their initial replica count.\n\n")
+                
+                # Show what we expected vs what we got
+                f.write("Expected scaling events would look like:\n")
+                f.write("  - 'deploy replica of function-name' events\n")
+                f.write("  - Multiple replica events per function\n")
+                f.write("  - Replica events distributed across different nodes\n\n")
+
+
     def generate_deployment_timeline(self):
         """Generate deployment timeline as a waterfall visualization"""
         lifecycle_events = []
@@ -688,7 +806,9 @@ class ReportGenerator:
         plt.tight_layout()
         plt.savefig(os.path.join(self.output_dir, "deployment_timeline.png"), dpi=300)
         plt.close()
+        self._generate_deployment_timeline_text(lifecycle_events, groups)
 
+    
     def generate_node_comparison_report(self):
         """Generate node comparison report if multiple nodes are present"""
         if "invocations_df" not in self.data or self.data["invocations_df"].empty:

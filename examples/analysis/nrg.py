@@ -209,38 +209,6 @@ def energy_consumption_dashboard_focused(power_df, energy_df, save_path=None):
         ax1.text(val + max(energy_by_type.values) * 0.01, bar.get_y() + bar.get_height()/2,
                 f'{val:.0f}J', ha='left', va='center', fontsize=10)
     
-    # 2. Power vs Energy Efficiency (bubble size = total energy)
-    ax2 = fig.add_subplot(gs[0, 2:])
-    efficiency_data = []
-    for node_type in power_df['node_type'].unique():
-        power_subset = power_df[power_df['node_type'] == node_type]
-        energy_subset = energy_df[energy_df['node_type'] == node_type]
-        
-        if len(power_subset) > 0 and len(energy_subset) > 0:
-            avg_power = power_subset['power_watts'].mean()
-            total_energy = energy_subset['energy_joules'].sum()
-            efficiency = total_energy / avg_power if avg_power > 0 else 0
-            efficiency_data.append({
-                'node_type': node_type,
-                'avg_power': avg_power,
-                'efficiency': efficiency,
-                'total_energy': total_energy
-            })
-    
-    if efficiency_data:
-        eff_df = pd.DataFrame(efficiency_data)
-        scatter = ax2.scatter(eff_df['avg_power'], eff_df['efficiency'], 
-                             s=eff_df['total_energy']/100, alpha=0.7, c=range(len(eff_df)), cmap='viridis')
-        
-        for i, row in eff_df.iterrows():
-            ax2.annotate(row['node_type'], (row['avg_power'], row['efficiency']), 
-                        xytext=(5, 5), textcoords='offset points', fontsize=9)
-        
-        ax2.set_xlabel('Average Power (W)')
-        ax2.set_ylabel('Energy Efficiency (J/W)')
-        ax2.set_title('Power vs Energy Efficiency\n(Bubble size = Total Energy)')
-        ax2.grid(True, alpha=0.3)
-    
     # 3. Energy Consumption Trends
     ax3 = fig.add_subplot(gs[1, 0:2])
     if 'timestamp' in energy_df.columns:
