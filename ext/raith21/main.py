@@ -65,6 +65,7 @@ from ext.mhfd.deployments import (
 from ext.mhfd.scbenchmark import create_smart_city_constant_benchmark
 from ext.mhfd.power import Raith21PowerOracle, DEVICE_POWER_PROFILES, monitor_power_consumption, power_monitoring_loop
 
+from ext.mhfd.autoscaler import create_heterogeneous_edge_autoscaler
 
 
 
@@ -82,11 +83,11 @@ random.seed(1435)
 logging.basicConfig(level=logging.INFO)
 
 # Enable debug logging for scaling specifically
-logging.getLogger("sim.faas.scaling").setLevel(logging.DEBUG)
-logging.getLogger("sim.faas").setLevel(logging.DEBUG)
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# logging.getLogger("sim.faas.scaling").setLevel(logging.DEBUG)
+# logging.getLogger("sim.faas").setLevel(logging.DEBUG)
+# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 # Generate heterogeneous edge and cloud devices
-num_devices = 201 # Min 29 - Controls simulation scale
+num_devices = 204 # Min 29 - Controls simulation scale
 devices = generate_devices(num_devices, edgegpu_settings)
 ether_nodes = convert_to_ether_nodes(devices)  # Convert to network topology nodes
 
@@ -277,7 +278,7 @@ env.metrics = Metrics(
 )  # Performance metrics collection
 env.topology = topology  # Network topology
 env.faas = DefaultFaasSystem(
-    env, scale_by_requests=True
+    env, scale_by_requests=False
 )  # FaaS system with auto-scaling
 env.container_registry = ContainerRegistry()  # Container image registry
 env.storage_index = storage_index  # Data location tracking
@@ -286,6 +287,12 @@ env.scheduler = Scheduler(env.cluster, **sched_params)  # Function placement sch
 env.power_oracle = power_oracle
 env.power_metrics = power_metrics
 
+autoscaler = create_heterogeneous_edge_autoscaler(
+    env, 
+    env.faas, 
+    power_oracle,  # Use your existing power oracle
+    strategy="basic"  # Will read from SCALING_STRATEGY env var
+)
 
 
 # Create and run the simulation
@@ -297,8 +304,14 @@ def power_monitoring_loop(env):
         yield env.timeout(env.power_monitoring_interval)
         monitor_power_consumption(env)
 
+def autoscaling_loop(env):
+    """Autoscaling background process"""
+    yield from autoscaler.run()
+
+
 # Add the function, not the process
 env.background_processes.append(power_monitoring_loop)
+env.background_processes.append(autoscaling_loop)  
 
 result = sim.run()  # Execute simulation until benchmark completion
 
@@ -336,6 +349,8 @@ dfs = {
     ), 
     "power_df": sim.env.metrics.extract_dataframe("power"),     # Power measurements
     "energy_df": sim.env.metrics.extract_dataframe("energy"),   # Energy accumulation
+    "scaling_decisions_df": sim.env.metrics.extract_dataframe("scaling_decisions"), 
+    "scaling_evaluations_df": sim.env.metrics.extract_dataframe("scaling_evaluations"),  
     } # Function execution time measurements
 print(len(dfs))
 # Print column names and info for each DataFrame
@@ -355,7 +370,7 @@ for df_name, df in dfs.items():
 # Configuration identifiers
 device_id = f"d{num_devices}"  # d100 for 100 devices
 rps_id = f"r{benchmark.rps}"   # r50 for 50 rps
-settings_id = "autoscale_default_profile"  # Match the settings used in generate_devices()
+settings_id = "autoscaler_binpacker_"  # Match the settings used in generate_devices()
 
 # Construct directory names with configuration identifiers
 data_dir = f"./data/{settings_id}_{device_id}_{rps_id}"

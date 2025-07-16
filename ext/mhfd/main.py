@@ -47,6 +47,10 @@ from ext.raith21.resources import ai_resources_per_node_image  # Resource usage 
 from ext.raith21.topology import (
     urban_sensing_topology,
 )  # Edge-fog-cloud network topology
+from ext.mhfd.scaling.strategies.standard_first_fit_packer import StandardFirstFitBinPacker
+from ext.mhfd.scaling.strategies.energy_minimizing_packer import LowPowerLongTimeBinPacker
+from ext.mhfd.scaling.strategies.latency_minimizing_packer import HighPerformanceShortTimeBinPacker 
+
 from ext.raith21.util import vanilla  # Default scheduling priorities
 from sim.core import Environment  # Main simulation environment
 from sim.docker import ContainerRegistry  # Simulates container image registry
