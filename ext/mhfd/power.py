@@ -217,10 +217,9 @@ def monitor_power_consumption(env):
         # Monitor all nodes in the topology
         for node in env.topology.get_nodes():
             if hasattr(node, 'capacity'):  # Only monitor compute nodes
-                
-                node_name = node.name
-                if node_name == 'registry':
+                if node.name == 'registry' or 'registry' in node.name.lower():
                     continue
+                node_name = node.name
                 node_type = extract_node_type(node_name)
                 
                 # Get current utilization
