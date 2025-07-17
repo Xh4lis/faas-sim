@@ -41,7 +41,7 @@ class Raith21PowerOracle:
         power += network_util * profile.get("network_max", 0.0)
         power += memory_util * profile.get("memory_max", 0.0)
         
-        return max(power, profile["idle"])  # Never go below idle power
+        return power
 
 # Device-specific power profiles based on
 DEVICE_POWER_PROFILES = {
@@ -144,54 +144,49 @@ def extract_node_type(node_name: str) -> str:
 def get_current_utilization(env, node_name: str) -> Dict[str, float]:
     """Get current resource utilization for a node"""
     
-    # DEBUG: Check what's available
-    if env.resource_state is None:
-        logger.debug(f"resource_state is None - simulation not fully initialized")
-        # Fall back to device-specific defaults
+    # Skip registry and infrastructure nodes
+    if (node_name == 'registry' or 'registry' in node_name.lower() or 
+        'switch' in node_name.lower() or 'link' in node_name.lower()):
+        return None
+        
+    if not hasattr(env, 'resource_state') or env.resource_state is None:
         return get_device_defaults(node_name)
     
     try:
-        if hasattr(env.resource_state, 'get_node_utilization'):
-            utilization = env.resource_state.get_node_utilization(node_name)
-            if utilization and not utilization.is_empty():
-                return {
-                    'cpu': utilization.get_resource_utilization('cpu', 0.0),
-                    'memory': utilization.get_resource_utilization('memory', 0.0),
-                    'gpu': utilization.get_resource_utilization('gpu', 0.0),
-                    'network': utilization.get_resource_utilization('network', 0.0)
-                }
+        # This returns: List[Tuple[FunctionReplica, ResourceUtilization]]
+        replicas_on_node = env.resource_state.list_resource_utilization(node_name)
         
-        # Alternative: Get from individual function replicas on this node
-        total_cpu = 0.0
-        total_memory = 0.0
-        total_gpu = 0.0
-        replica_count = 0
-        
-        # Get all replicas running on this node
-        if hasattr(env, 'faas') and env.faas:
-            for deployment in env.faas.get_deployments():
-                for replica in env.faas.get_replicas(deployment.name):
-                    if replica.node.name == node_name:
-                        replica_util = env.resource_state.get_resource_utilization(replica)
-                        if replica_util and not replica_util.is_empty():
-                            total_cpu += replica_util.get_resource_utilization('cpu', 0.0)
-                            total_memory += replica_util.get_resource_utilization('memory', 0.0)
-                            total_gpu += replica_util.get_resource_utilization('gpu', 0.0)
-                            replica_count += 1
-        
-        if replica_count > 0:
-            return {
+        if replicas_on_node:
+            total_cpu = 0.0
+            total_memory = 0.0
+            total_gpu = 0.0
+            
+            # Iterate through (replica, resource_utilization) tuples
+            for replica, resource_util in replicas_on_node:
+                if resource_util and hasattr(resource_util, 'list_resources'):
+                    resources = resource_util.list_resources()  # Returns Dict[str, float]
+                    total_cpu += resources.get('cpu', 0.0)
+                    total_memory += resources.get('memory', 0.0)
+                    total_gpu += resources.get('gpu', 0.0)
+            
+            result = {
                 'cpu': min(1.0, total_cpu),
-                'memory': min(1.0, total_memory), 
+                'memory': min(1.0, total_memory),
                 'gpu': min(1.0, total_gpu),
-                'network': min(1.0, total_cpu * 0.3)  # Estimate based on CPU
+                'network': min(1.0, total_cpu * 0.3)  # Network estimate
             }
             
+            # Only print if there are non-zero utilization values (HIT/success)
+            if any(value > 0.0 for value in result.values()):
+                print(f"✅ HIT: Non-zero utilization for {node_name}: {result}")
+            
+            return result
+        else:
+            return get_device_defaults(node_name)
+            
     except Exception as e:
-        logger.warning(f"Could not get real utilization for {node_name}: {e}")
-    
-    # Fallback to device-specific defaults
-    return get_device_defaults(node_name)
+        logger.error(f"ResourceState lookup failed for {node_name}: {e}")
+        return get_device_defaults(node_name)
 
 def get_device_defaults(node_name: str) -> Dict[str, float]:
     """Get realistic default utilization based on device type"""

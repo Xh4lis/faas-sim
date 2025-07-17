@@ -12,6 +12,9 @@ from sim.resource import ResourceWindow
 # TODO migrate this to faas (needs to extract FunctionCall)
 
 
+#FIX: this only tracked CPU usage, but we can extend this to memory and gpu
+
+
 class Raith21ResourceMonitor:
     """Simpy process - continuously collects resource data"""
 
