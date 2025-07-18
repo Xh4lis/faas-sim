@@ -50,7 +50,12 @@ all_ai_images = [
     (resnet50_inference_cpu_manifest, "70M", "arm"),       # Reduced from 700M
     (resnet50_inference_cpu_manifest, "84M", "aarch64"),   # Reduced from 840M
     (resnet50_inference_cpu_manifest, "84M", "arm64"),     # Reduced from 840M
-    
+    (resnet50_training_cpu_manifest, "70M", "arm32v7"),    # Missing ARM32
+    (resnet50_training_cpu_manifest, "70M", "arm32"),      # Missing ARM32
+    (resnet50_training_cpu_manifest, "70M", "arm"),        # Missing ARM32
+    (resnet50_training_cpu_manifest, "84M", "aarch64"),    # Missing ARM64
+    (resnet50_training_cpu_manifest, "84M", "arm64"),      # Missing ARM64
+
     # RESNET GPU - Reduce from 2000M/1000M:
     (resnet50_inference_gpu_manifest, "200M", "x86"),      # Reduced from 2000M
     (resnet50_inference_gpu_manifest, "200M", "amd64"),    # Reduced from 2000M

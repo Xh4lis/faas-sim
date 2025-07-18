@@ -9,14 +9,7 @@ from sim.oracle.oracle import ResourceOracle
 from sim.resource import ResourceWindow
 
 
-# TODO migrate this to faas (needs to extract FunctionCall)
-
-
-#FIX: this only tracked CPU usage, but we can extend this to memory and gpu
-
-
 class Raith21ResourceMonitor:
-    """Simpy process - continuously collects resource data"""
 
     def __init__(self, env: Environment, resource_oracle: ResourceOracle):
         self.env = env
@@ -29,6 +22,7 @@ class Raith21ResourceMonitor:
             start_ts = self.env.now
             yield self.env.timeout(1)
             end_ts = self.env.now
+            
             # calculate resources over function replica resources and save in metric_server
             call_cache: Dict[str, List[FunctionCall]] = {}
             for function_deployment in faas.get_deployments():
@@ -36,14 +30,21 @@ class Raith21ResourceMonitor:
                     function_deployment.name, FunctionState.RUNNING
                 ):
                     node_name = replica.node.name
+                    
+                    # Skip infrastructure nodes
+                    if any(keyword in node_name.lower() for keyword in ['link', 'switch', 'registry']):
+                        continue
+                    
                     calls = call_cache.get(node_name, None)
                     if calls is None:
                         calls = replica.node.get_calls_in_timeframe(start_ts, end_ts)
                         call_cache[node_name] = calls
+                    
                     trace_execution_durations = []
                     replica_usage = self.resource_oracle.get_resources(
                         node_name, replica.function.image
                     )
+                    
                     for call in calls:
                         if call.replica.pod.name == replica.pod.name:
                             last_start = (
@@ -57,17 +58,40 @@ class Raith21ResourceMonitor:
 
                             overlap = first_end - last_start
                             trace_execution_durations.append(overlap)
-                    if len(calls) == 0:
+                    
+                    if len(trace_execution_durations) == 0:
                         window = ResourceWindow(replica, 0)
+                        
+                        replica_cpu = 0.0
+                        replica_memory = 0.0
+                        replica_gpu = 0.0
+                        
                     else:
-                        # TODO because in real life cpu time decreases per function call, thus avoiding the impossible
-                        # of getting a cpu time/usage > (cores * second)/100% util, we have to cap this manually
-                        # update: tests with PythonHTTPSim have shown that resources (workers=4) effectively can cap this
-                        # though it's probably a good safety measure to prevent values > 1 with other simulators
-                        sum = np.sum(trace_execution_durations)
-                        # this should be enough, because: our time window is 1 second, if one call consumed 100%
-                        # -> which means that *all* cores were running 100% of the time, thus the final
-                        cpu_usage = sum * replica_usage["cpu"]
-                        # cpu = cpu_usage / int(replica.node.ether_node.capacity.cpu_millis / 1000)
-                        window = ResourceWindow(replica, min(1, cpu_usage))
+                        sum_duration = np.sum(trace_execution_durations)
+                        cpu_usage = sum_duration * replica_usage["cpu"]
+                        cpu_usage_capped = min(1, cpu_usage)
+                        
+                        window = ResourceWindow(replica, cpu_usage_capped)
+                        
+                        replica_cpu = cpu_usage_capped
+                        replica_memory = min(1.0, sum_duration * replica_usage.get("ram", 0.0))
+                        replica_gpu = min(1.0, sum_duration * replica_usage.get("gpu", 0.0))
+                    
                     self.metric_server.put(window)
+                    
+                    if hasattr(self.env, 'resource_state') and self.env.resource_state:
+                        self.env.resource_state.put_resource(replica, 'cpu', replica_cpu)
+                        self.env.resource_state.put_resource(replica, 'memory', replica_memory)
+                        if replica_gpu > 0:
+                            self.env.resource_state.put_resource(replica, 'gpu', replica_gpu)
+                    
+                    if hasattr(self.env, 'metrics') and self.env.metrics:
+                        # Create ResourceUtilization for metrics logging
+                        from sim.resource import ResourceUtilization
+                        replica_util = ResourceUtilization()
+                        replica_util.put_resource('cpu', replica_cpu)
+                        replica_util.put_resource('memory', replica_memory)
+                        if replica_gpu > 0:
+                            replica_util.put_resource('gpu', replica_gpu)
+                        
+                        self.env.metrics.log_function_resource_utilization(replica, replica_util)

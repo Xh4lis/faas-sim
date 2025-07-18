@@ -25,10 +25,10 @@ class StandardFirstFitBinPacker(BaseAutoscaler):
         """TEMPORARY: Force scaling for demonstration"""
         
         # Force scaling for high-demand functions after some time
-        if self.env.now > 8:  # After 8 seconds
-            if "inference" in deployment_name and current_replicas == 1:
-                logger.info(f"🚀 FORCING scale up for {deployment_name} (demonstration)")
-                return "scale_up"
+        # if self.env.now > 8:  # After 8 seconds
+        #     if "inference" in deployment_name and current_replicas == 1:
+        #         logger.info(f"🚀 FORCING scale up for {deployment_name} (demonstration)")
+        #         return "scale_up"
         
         # Normal decision logic
         if current_load > 15 or avg_response_time > 800:
