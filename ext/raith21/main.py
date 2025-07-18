@@ -39,7 +39,7 @@ from ext.raith21.functionsim import AIPythonHTTPSimulatorFactory
 from ext.raith21.generator import generate_devices
 from ext.raith21.generators.cloudcpu import cloudcpu_settings
 from ext.raith21.generators.edgegpu import edgegpu_settings
-from ext.raith21.generators.edgetpu import edgetpu_settings
+from ext.raith21.generators.edgesbc import edgesbc_settings
 from ext.raith21.generators.edgecloudlet import edgecloudlet_settings
 from ext.raith21.oracles import Raith21ResourceOracle, Raith21FetOracle
 from ext.raith21.predicates import CanRunPred, NodeHasAcceleratorPred, NodeHasFreeGpu, NodeHasFreeTpu
@@ -59,10 +59,10 @@ class SimulationConfig:
     
     def __init__(self):
         # Simulation parameters
-        self.num_devices = 1200
-        self.device_settings = edgegpu_settings
+        self.num_devices = 200
+        self.device_settings = edgesbc_settings
         self.duration = 500
-        self.total_rps = 1200
+        self.total_rps = 600
         self.scenario = "custom"  # Options: "default", "intensive", "distributed", "custom"
         
         # Custom function counts for scenario
@@ -128,7 +128,7 @@ def setup_scheduler_config(config, fet_oracle, resource_oracle):
     predicates = []
     predicates.extend(Scheduler.default_predicates)
     predicates.extend([
-        # CanRunPred(fet_oracle, resource_oracle),  # Uncomment if needed
+        CanRunPred(fet_oracle, resource_oracle),  # Uncomment if needed
         NodeHasAcceleratorPred(),
         NodeHasFreeGpu(),
         # NodeHasFreeTpu(),  # Uncomment if needed
