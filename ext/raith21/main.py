@@ -59,7 +59,7 @@ class SimulationConfig:
     
     def __init__(self):
         # Simulation parameters
-        self.num_devices = 5000
+        self.num_devices = 1200
         self.device_settings = edgegpu_settings
         self.duration = 500
         self.total_rps = 1200
@@ -67,10 +67,10 @@ class SimulationConfig:
         
         # Custom function counts for scenario
         self.custom_counts = {
-            "resnet50-inference": 8,
-            "speech-inference": 7,
-            "resnet50-preprocessing": 5,
-            "resnet50-training": 3,  
+            "resnet50-inference": 5,
+            "speech-inference": 4,
+            "resnet50-preprocessing": 4,
+            "resnet50-training": 2,  
             "python-pi": 4,
             "fio": 0,
         }
