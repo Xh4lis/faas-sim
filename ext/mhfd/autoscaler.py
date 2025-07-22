@@ -28,7 +28,12 @@ class Autoscaler:
         self.energy_efficiency_history = []
         
         logger.info(f"🚀 Autoscaler initialized with {strategy_name} strategy")
-    
+    def __getattr__(self, name):
+        """Delegate method calls to the underlying strategy"""
+        if hasattr(self.strategy, name):
+            return getattr(self.strategy, name)
+        raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+
     def _create_strategy(self, strategy_name: str):
         """Create the appropriate scaling strategy"""
         strategies = {

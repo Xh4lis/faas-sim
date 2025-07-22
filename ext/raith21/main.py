@@ -59,12 +59,12 @@ class SimulationConfig:
     
     def __init__(self):
         # Simulation parameters
-        self.num_devices = 200
+        self.num_devices = 600
         self.device_settings = edgesbc_settings
         self.duration = 500
-        self.total_rps = 600
+        self.total_rps = 100
         self.scenario = "custom"  # Options: "default", "intensive", "distributed", "custom"
-        
+        self.scaling_strategy = "basic"
         # Custom function counts for scenario
         self.custom_counts = {
             "resnet50-inference": 5,
@@ -79,7 +79,7 @@ class SimulationConfig:
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "new_pwr_monitor_"
+        self.settings_id = "basic_scaler_R_"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         
@@ -222,7 +222,7 @@ def print_topology_analysis(devices, ether_nodes, topology):
         print(f"Ether {i}: {ether_node.name} - Arch: {arch} - Accelerators: {accelerators}")
 
 
-def setup_environment(topology, storage_index, sched_params, fet_oracle, resource_oracle, power_oracle):
+def setup_environment(topology, storage_index, sched_params, fet_oracle, resource_oracle, power_oracle, config):
     """Initialize and configure the simulation environment"""
     env = Environment()
     
@@ -244,7 +244,7 @@ def setup_environment(topology, storage_index, sched_params, fet_oracle, resourc
     env.power_metrics = power_metrics
     
     autoscaler = create_heterogeneous_edge_autoscaler(
-        env, env.faas, power_oracle, strategy="basic"
+        env, env.faas, power_oracle, strategy=config.scaling_strategy
     )
     
     # Background processes
@@ -356,7 +356,7 @@ def main():
     benchmark = create_benchmark(config)
     
     # Setup and run simulation
-    env = setup_environment(topology, storage_index, sched_params, fet_oracle, resource_oracle, power_oracle)
+    env = setup_environment(topology, storage_index, sched_params, fet_oracle, resource_oracle, power_oracle, config)
     sim = run_simulation(topology, benchmark, env)
     
     # Extract and analyze results

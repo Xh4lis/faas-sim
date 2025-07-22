@@ -1,6 +1,7 @@
 import logging
 from typing import Optional, Any
 from ..base_autoscaler import BaseAutoscaler
+from ext.mhfd.power import get_current_utilization
 
 logger = logging.getLogger(__name__)
 
@@ -103,15 +104,17 @@ class StandardFirstFitBinPacker(BaseAutoscaler):
             return True  # Default to available if can't determine
     
     def get_node_utilization(self, node) -> dict:
-        """Get current node resource utilization"""
+        """Get  current node resource utilization from ResourceState"""
         try:
-            # This would integrate with your resource monitoring
-            # For now, return mock utilization
-            return {
-                'cpu': 0.3,     # 30% CPU usage
-                'memory': 0.4,  # 40% memory usage
-                'gpu': 0.0,     # 0% GPU usage
-                'network': 0.1  # 10% network usage
-            }
-        except:
-            return {'cpu': 0.0, 'memory': 0.0, 'gpu': 0.0, 'network': 0.0}
+            real_utilization = get_current_utilization(self.env, node.name)
+            
+            if real_utilization is None:
+                logger.error(f"❌ Failed to get real utilization for {node.name}")
+                return {'cpu': 0.0, 'memory': 0.0, 'gpu': 0.0, 'network': 0.0}
+            
+            logger.debug(f"🔍 REAL utilization for {node.name}: {real_utilization}")
+            return real_utilization
+            
+        except Exception as e:
+            logger.error(f"❌ EXCEPTION Failed to get real utilization for {node.name}: {e}")
+            raise  

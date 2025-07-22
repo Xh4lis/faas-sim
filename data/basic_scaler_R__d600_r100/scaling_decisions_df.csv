@@ -1,0 +1,1531 @@
+timestamp,strategy,deployment,action,old_replica_count,new_replica_count,selected_node,selected_node_type,current_load_rps,avg_response_time_ms,reason,scaling_direction
+5,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,speech-inference,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,speech-inference-downtown,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,speech-inference-suburb,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,speech-inference-industrial,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,0.0,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.8,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.4,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.4,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,speech-inference,no_action,1,1,,,4.4,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,speech-inference-downtown,no_action,1,1,,,6.2,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,speech-inference-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,speech-inference-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,4.2,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,4.2,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+10,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,7.2,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,4.8,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,speech-inference,no_action,1,1,,,4.4,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,speech-inference-downtown,no_action,1,1,,,6.2,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,speech-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,speech-inference-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,6.2,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,6.0,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+15,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.0,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,9.8,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.8,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,speech-inference,no_action,1,1,,,5.8,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,speech-inference-downtown,no_action,1,1,,,8.2,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,speech-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,speech-inference-industrial,no_action,1,1,,,6.8,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,7.2,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.2,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.2,0.0,Within thresholds,0
+20,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.8,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,speech-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,speech-inference-downtown,no_action,1,1,,,10.0,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,speech-inference-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,speech-inference-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,4.0,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,8.2,0.0,Within thresholds,0
+25,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.6,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.4,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.8,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,speech-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,speech-inference-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,speech-inference-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,speech-inference-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,2.6,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.4,0.0,Within thresholds,0
+30,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.0,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.4,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,speech-inference,no_action,1,1,,,6.8,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,speech-inference-downtown,no_action,1,1,,,9.6,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,speech-inference-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,speech-inference-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,4.6,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.2,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+35,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.6,406.7842768340231,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,4.8,439.6605889650988,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,393.1352064730597,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.4,399.2502852772484,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,387.1625457952869,Within thresholds,0
+40,StandardFirstFitBinPacker,speech-inference,scale_up,1,2,nuc_0,nuc,0.0,24838.92496679836,,1
+40,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,1,2,nuc_0,nuc,0.0,26783.286826605203,,1
+40,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,1,2,nuc_0,nuc,0.0,23416.411038995222,,1
+40,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,1,2,nuc_0,nuc,0.0,24316.762749073376,,1
+40,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,3.4,0.0,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+40,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,398.88191634680186,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.8,425.2300086793862,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.4,393.3306532366327,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.6,395.58899158334674,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,387.0470713431976,Within thresholds,0
+45,StandardFirstFitBinPacker,speech-inference,no_action,2,2,,,5.2,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,speech-inference-downtown,no_action,2,2,,,8.4,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+45,StandardFirstFitBinPacker,speech-inference-industrial,no_action,2,2,,,7.8,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,4.4,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.2,0.0,Within thresholds,0
+45,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.0,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.6,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,speech-inference,no_action,2,2,,,5.8,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,speech-inference-downtown,no_action,2,2,,,6.0,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,StandardFirstFitBinPacker,speech-inference-industrial,no_action,2,2,,,6.2,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,3.4,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.4,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.0,0.0,Within thresholds,0
+50,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.6,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.6,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,7.2,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,speech-inference,no_action,2,2,,,7.2,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,speech-inference-downtown,no_action,2,2,,,10.0,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,speech-inference-suburb,no_action,2,2,,,3.8,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,speech-inference-industrial,no_action,2,2,,,7.0,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,5.2,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.4,0.0,Within thresholds,0
+55,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.0,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.4,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,speech-inference,no_action,2,2,,,5.6,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,speech-inference-downtown,no_action,2,2,,,7.8,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,StandardFirstFitBinPacker,speech-inference-industrial,no_action,2,2,,,5.6,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,3.8,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,8.8,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.0,0.0,Within thresholds,0
+60,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.2,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.0,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,speech-inference,no_action,2,2,,,4.6,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,speech-inference-downtown,no_action,2,2,,,7.2,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,StandardFirstFitBinPacker,speech-inference-industrial,no_action,2,2,,,5.4,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,3.0,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.4,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.4,0.0,Within thresholds,0
+65,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.2,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.2,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.6,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,speech-inference,no_action,2,2,,,6.8,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,speech-inference-downtown,no_action,2,2,,,8.2,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,StandardFirstFitBinPacker,speech-inference-industrial,no_action,2,2,,,5.4,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,1,1,,,6.2,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.8,0.0,Within thresholds,0
+70,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,398.16261238691106,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.4,407.69663670148844,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.2,390.4996961413501,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.8,395.156094781962,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,387.64974300413314,Within thresholds,0
+75,StandardFirstFitBinPacker,speech-inference,scale_up,2,3,nuc_0,nuc,0.0,52263.56802760469,,1
+75,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,56596.068949642526,,1
+75,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,44515.16368158691,,1
+75,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,53645.58742390358,,1
+75,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,1,2,nuc_0,nuc,0.0,62267.621397370516,,1
+75,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,7.0,0.0,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.4,0.0,Within thresholds,0
+75,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.4,400.9599876668157,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.2,414.4997651084191,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.8,394.7028531398015,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.8,401.46248053473704,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,384.278539018724,Within thresholds,0
+80,StandardFirstFitBinPacker,speech-inference,scale_up,3,4,nuc_0,nuc,0.0,55177.650745972474,,1
+80,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,58884.35490597551,,1
+80,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,46332.32190723606,,1
+80,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,55568.30246940888,,1
+80,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,6.2,0.0,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.0,0.0,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.0,0.0,Within thresholds,0
+80,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.8,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.4,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,speech-inference,no_action,4,4,,,6.8,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,speech-inference-downtown,no_action,4,4,,,9.8,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,StandardFirstFitBinPacker,speech-inference-industrial,no_action,4,4,,,4.6,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,4.8,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+85,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.6,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,speech-inference,no_action,4,4,,,6.0,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,speech-inference-downtown,no_action,4,4,,,9.0,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,StandardFirstFitBinPacker,speech-inference-industrial,no_action,4,4,,,7.2,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,5.8,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.8,0.0,Within thresholds,0
+90,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.2,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,speech-inference,no_action,4,4,,,6.2,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,speech-inference-downtown,no_action,4,4,,,9.2,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,StandardFirstFitBinPacker,speech-inference-industrial,no_action,4,4,,,6.6,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,5.8,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.0,0.0,Within thresholds,0
+95,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,4.4,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.0,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,speech-inference,no_action,4,4,,,5.0,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,speech-inference-downtown,no_action,4,4,,,10.4,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,speech-inference-suburb,no_action,2,2,,,4.0,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,speech-inference-industrial,no_action,4,4,,,7.4,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+100,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.4,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.0,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,speech-inference,no_action,4,4,,,5.8,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,speech-inference-downtown,no_action,4,4,,,8.2,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,speech-inference-suburb,no_action,2,2,,,3.8,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,speech-inference-industrial,no_action,4,4,,,6.0,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,3.6,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.0,0.0,Within thresholds,0
+105,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.2,0.0,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,404.84512881536887,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.8,422.0969643118816,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.8,394.1674496311702,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.6,395.8948605771967,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,384.5147097385088,Within thresholds,0
+110,StandardFirstFitBinPacker,speech-inference,scale_up,4,5,nuc_0,nuc,0.0,75628.77945556106,,1
+110,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,4,5,nuc_0,nuc,0.0,79132.36377173742,,1
+110,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,66285.16860169744,,1
+110,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,4,5,nuc_0,nuc,0.0,82629.07180637111,,1
+110,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,3.4,0.0,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,5.8,0.0,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.0,0.0,Within thresholds,0
+110,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,4.6,0.0,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.8,400.699078614142,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,421.2185560798787,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,396.1306450068373,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,397.9496275927184,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.0,385.5199133276858,Within thresholds,0
+115,StandardFirstFitBinPacker,speech-inference,scale_up,5,6,nuc_0,nuc,0.0,81874.34149316743,,1
+115,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,5,6,nuc_0,nuc,0.0,89151.461127895,,1
+115,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,70478.40325111448,,1
+115,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,5,6,nuc_0,nuc,0.0,84076.82670995677,,1
+115,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,5.4,0.0,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.2,0.0,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+115,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.0,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.8,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,speech-inference,no_action,6,6,,,5.8,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,speech-inference-downtown,no_action,6,6,,,9.2,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.6,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,speech-inference-industrial,no_action,6,6,,,7.4,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,4.4,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,8.8,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+120,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.8,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,2.0,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.2,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.8,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,speech-inference,no_action,6,6,,,5.0,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,speech-inference-downtown,no_action,6,6,,,7.2,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,4.2,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,speech-inference-industrial,no_action,6,6,,,4.0,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,6.4,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.2,0.0,Within thresholds,0
+125,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.2,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.8,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.6,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,speech-inference,no_action,6,6,,,5.0,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,speech-inference-downtown,no_action,6,6,,,10.0,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,StandardFirstFitBinPacker,speech-inference-industrial,no_action,6,6,,,4.6,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,5.8,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.6,0.0,Within thresholds,0
+130,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.6,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.4,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.0,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,speech-inference,no_action,6,6,,,9.6,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,speech-inference-downtown,no_action,6,6,,,8.2,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.4,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,speech-inference-industrial,no_action,6,6,,,6.0,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,5.2,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.8,0.0,Within thresholds,0
+135,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.2,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.8,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,4.0,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,speech-inference,no_action,6,6,,,8.2,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,speech-inference-downtown,no_action,6,6,,,7.8,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.4,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,speech-inference-industrial,no_action,6,6,,,4.6,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,2,2,,,4.6,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.0,0.0,Within thresholds,0
+140,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.2,405.859436246626,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.4,428.3674511664073,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,393.99632333421,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.4,397.35774943050217,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.2,392.71686910882795,Within thresholds,0
+145,StandardFirstFitBinPacker,speech-inference,scale_up,6,7,nuc_0,nuc,0.0,82521.55077029642,,1
+145,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,6,7,nuc_0,nuc,0.0,94659.37749980898,,1
+145,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,69623.77455661069,,1
+145,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,6,7,nuc_0,nuc,0.0,97667.86347397952,,1
+145,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,2,3,nuc_0,nuc,0.0,126789.83809307481,,1
+145,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,1,2,nuc_0,nuc,0.0,127628.083629089,,1
+145,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.0,0.0,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+145,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.6,0.0,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.8,413.5219720855336,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.6,452.4211857736264,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,393.0419297722049,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.0,387.9183862507333,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,391.13218569981996,Within thresholds,0
+150,StandardFirstFitBinPacker,speech-inference,scale_up,7,8,nuc_0,nuc,0.0,108323.00166626362,,1
+150,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,7,8,nuc_0,nuc,0.0,119513.70697363588,,1
+150,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,4,5,nuc_0,nuc,0.0,83649.59826281211,,1
+150,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,7,8,nuc_0,nuc,0.0,112585.86661009796,,1
+150,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,3,3,,,4.0,0.0,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,8.2,0.0,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.2,0.0,Within thresholds,0
+150,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,speech-inference,no_action,8,8,,,4.6,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,speech-inference-downtown,no_action,8,8,,,8.8,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,speech-inference-suburb,no_action,5,5,,,3.0,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,speech-inference-industrial,no_action,8,8,,,6.0,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,3,3,,,6.4,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,7.6,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.6,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.2,0.0,Within thresholds,0
+155,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.2,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.4,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.8,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,speech-inference,no_action,8,8,,,7.0,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,speech-inference-downtown,no_action,8,8,,,9.4,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,StandardFirstFitBinPacker,speech-inference-industrial,no_action,8,8,,,4.8,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,3,3,,,4.0,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,6.6,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.2,0.0,Within thresholds,0
+160,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.0,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.6,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,4.4,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,speech-inference,no_action,8,8,,,5.6,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,speech-inference-downtown,no_action,8,8,,,9.6,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.0,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,speech-inference-industrial,no_action,8,8,,,7.2,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,3,3,,,5.4,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,7.2,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.6,0.0,Within thresholds,0
+165,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.6,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,speech-inference,no_action,8,8,,,5.2,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,speech-inference-downtown,no_action,8,8,,,7.4,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,StandardFirstFitBinPacker,speech-inference-industrial,no_action,8,8,,,8.8,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,3,3,,,6.2,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,8.6,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,5.2,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.2,0.0,Within thresholds,0
+170,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.0,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.2,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.2,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,4.0,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,speech-inference,no_action,8,8,,,7.4,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,speech-inference-downtown,no_action,8,8,,,12.0,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.0,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,speech-inference-industrial,no_action,8,8,,,4.8,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,3,3,,,5.2,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,5.2,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.4,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.6,0.0,Within thresholds,0
+175,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.6,402.73278980035604,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,407.31284235713923,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.4,394.0516950507046,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.4,385.0254928079166,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.8,387.71844263275955,Within thresholds,0
+180,StandardFirstFitBinPacker,speech-inference,scale_up,8,9,nuc_0,nuc,0.0,74268.44305435344,,1
+180,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,8,9,nuc_0,nuc,0.0,76781.8327461216,,1
+180,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,66397.90015961576,,1
+180,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,8,9,nuc_0,nuc,0.0,81604.22354309163,,1
+180,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,3,4,nuc_0,nuc,0.0,23978.19939991638,,1
+180,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,8.0,0.0,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+180,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,402.67213391532056,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,419.2025358453918,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,392.01458717066987,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.0,387.21152586141056,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.0,384.73394603348436,Within thresholds,0
+185,StandardFirstFitBinPacker,speech-inference,scale_up,9,10,nuc_0,nuc,0.0,4881.700579270799,,1
+185,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,9,10,nuc_0,nuc,0.0,6016.814593484611,,1
+185,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,4.2,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,speech-inference-industrial,no_action,9,9,,,6.4,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,4,4,,,3.8,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,7.0,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,2.8,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.6,0.0,Within thresholds,0
+185,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,7.0,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.6,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,speech-inference,no_action,10,10,,,5.4,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,speech-inference-downtown,no_action,10,10,,,11.0,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.2,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,speech-inference-industrial,no_action,9,9,,,5.8,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,4,4,,,3.6,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,6.6,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.4,0.0,Within thresholds,0
+190,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.0,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.8,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.8,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,speech-inference,no_action,10,10,,,7.0,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,speech-inference-downtown,no_action,10,10,,,7.4,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,StandardFirstFitBinPacker,speech-inference-industrial,no_action,9,9,,,7.0,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,4,4,,,4.6,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,8.0,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+195,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,9.4,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.4,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,speech-inference,no_action,10,10,,,4.6,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,speech-inference-downtown,no_action,10,10,,,11.4,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.2,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,speech-inference-industrial,no_action,9,9,,,4.4,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,4,4,,,4.6,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,6.6,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.2,0.0,Within thresholds,0
+200,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.0,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.8,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.6,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,speech-inference,no_action,10,10,,,4.2,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,speech-inference-downtown,no_action,10,10,,,9.0,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,4.0,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,speech-inference-industrial,no_action,9,9,,,3.2,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,4,4,,,4.2,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,7.8,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.2,0.0,Within thresholds,0
+205,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.8,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,7.0,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.6,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,speech-inference,no_action,10,10,,,4.4,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,speech-inference-downtown,no_action,10,10,,,8.6,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.2,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,speech-inference-industrial,no_action,9,9,,,8.8,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,4,4,,,5.6,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,2,2,,,5.0,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.6,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+210,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.0,414.2249838441166,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.2,446.04605722573405,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.2,393.9563134316977,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.6,406.80240210358414,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,384.10510135339075,Within thresholds,0
+215,StandardFirstFitBinPacker,speech-inference,scale_up,10,11,nuc_0,nuc,0.0,65058.46975348722,,1
+215,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,10,11,nuc_0,nuc,0.0,50278.793937590504,,1
+215,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,80669.26450952039,,1
+215,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,9,10,nuc_0,nuc,0.0,66736.73712793192,,1
+215,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,4,5,nuc_0,nuc,0.0,173541.8668323228,,1
+215,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,2,3,nuc_0,nuc,0.0,164772.48281541414,,1
+215,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,7.4,0.0,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.2,0.0,Within thresholds,0
+215,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.0,0.0,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.0,402.2858176347782,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.6,414.75607494750983,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,391.5365275672495,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.2,415.5766174131957,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.4,383.8631645504445,Within thresholds,0
+220,StandardFirstFitBinPacker,speech-inference,scale_up,11,12,nuc_0,nuc,0.0,3777.962946484599,,1
+220,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,11,12,nuc_0,nuc,0.0,3759.7189021427016,,1
+220,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+220,StandardFirstFitBinPacker,speech-inference-industrial,no_action,10,10,,,5.6,0.0,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,5,5,,,5.0,0.0,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,3,3,,,9.4,0.0,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.6,0.0,Within thresholds,0
+220,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,speech-inference,no_action,12,12,,,6.6,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,speech-inference-downtown,no_action,12,12,,,8.6,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,4.4,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,speech-inference-industrial,no_action,10,10,,,4.4,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,5,5,,,4.0,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,3,3,,,8.4,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.4,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+225,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.6,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.4,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,speech-inference,no_action,12,12,,,6.4,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,speech-inference-downtown,no_action,12,12,,,7.6,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,4.8,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,speech-inference-industrial,no_action,10,10,,,5.4,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,5,5,,,3.6,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,3,3,,,8.0,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+230,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.0,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,speech-inference,no_action,12,12,,,7.8,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,speech-inference-downtown,no_action,12,12,,,5.0,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,StandardFirstFitBinPacker,speech-inference-industrial,no_action,10,10,,,6.0,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,5,5,,,4.6,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,3,3,,,7.2,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+235,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.2,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.0,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.4,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.6,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,speech-inference,no_action,12,12,,,7.0,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,speech-inference-downtown,no_action,12,12,,,13.0,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,StandardFirstFitBinPacker,speech-inference-industrial,no_action,10,10,,,7.0,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,5,5,,,5.2,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,3,3,,,6.8,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,6.0,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.2,0.0,Within thresholds,0
+240,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.8,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,4.8,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,speech-inference,no_action,12,12,,,5.2,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,speech-inference-downtown,no_action,12,12,,,9.6,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,StandardFirstFitBinPacker,speech-inference-industrial,no_action,10,10,,,8.2,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,5,5,,,4.2,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,3,3,,,6.8,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.2,0.0,Within thresholds,0
+245,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.0,0.0,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,412.6210419525834,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.2,441.8791470998949,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.0,391.65159929435504,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.8,411.33506066010847,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.6,387.2767090357213,Within thresholds,0
+250,StandardFirstFitBinPacker,speech-inference,scale_up,12,13,nuc_0,nuc,0.0,51129.14595308645,,1
+250,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,12,13,nuc_0,nuc,0.0,43986.49165524422,,1
+250,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,72375.66336916958,,1
+250,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,10,11,nuc_0,nuc,0.0,52204.37011810479,,1
+250,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,5,6,nuc_0,nuc,0.0,61057.68038437407,,1
+250,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,3,4,nuc_0,nuc,0.0,26218.836039930913,,1
+250,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,7.2,0.0,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+250,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,11.8,0.0,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.6,415.7451090003808,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,444.7243919578132,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,391.1423533600399,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.8,426.43965261345426,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,388.9155269442519,Within thresholds,0
+255,StandardFirstFitBinPacker,speech-inference,scale_up,13,14,nuc_0,nuc,0.0,39509.67995465333,,1
+255,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,13,14,nuc_0,nuc,0.0,55652.39198678043,,1
+255,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,81904.28424497889,,1
+255,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,11,12,nuc_0,nuc,0.0,3924.988116979364,,1
+255,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,6,6,,,5.0,0.0,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,4,4,,,7.2,0.0,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+255,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.2,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,9.4,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.6,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,4.2,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,speech-inference,no_action,14,14,,,7.8,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,speech-inference-downtown,no_action,14,14,,,9.8,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,4.0,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,speech-inference-industrial,no_action,12,12,,,7.0,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,6,6,,,3.6,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,4,4,,,6.6,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.0,0.0,Within thresholds,0
+260,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.4,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,speech-inference,no_action,14,14,,,6.4,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,speech-inference-downtown,no_action,14,14,,,7.0,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,StandardFirstFitBinPacker,speech-inference-industrial,no_action,12,12,,,6.6,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,6,6,,,7.0,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,4,4,,,5.0,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.0,0.0,Within thresholds,0
+265,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,4.2,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.6,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,speech-inference,no_action,14,14,,,4.2,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,speech-inference-downtown,no_action,14,14,,,10.8,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.6,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,speech-inference-industrial,no_action,12,12,,,6.4,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,6,6,,,3.4,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,4,4,,,8.2,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.0,0.0,Within thresholds,0
+270,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.0,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.2,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.2,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,speech-inference,no_action,14,14,,,7.4,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,speech-inference-downtown,no_action,14,14,,,8.8,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,4.6,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,speech-inference-industrial,no_action,12,12,,,5.8,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,6,6,,,5.0,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,4,4,,,8.6,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.2,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.6,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.2,0.0,Within thresholds,0
+275,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.8,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.6,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,speech-inference,no_action,14,14,,,5.8,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,speech-inference-downtown,no_action,14,14,,,7.6,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,StandardFirstFitBinPacker,speech-inference-industrial,no_action,12,12,,,7.8,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,6,6,,,6.0,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,4,4,,,5.8,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+280,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.6,407.23289725719155,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.0,432.0947288200856,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,406.1895093080402,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,396.5564852319005,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,383.6680569283626,Within thresholds,0
+285,StandardFirstFitBinPacker,speech-inference,scale_up,14,15,nuc_0,nuc,0.0,66016.47781013916,,1
+285,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,14,15,nuc_0,nuc,0.0,73334.4421970408,,1
+285,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,70567.7950832142,,1
+285,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,12,13,nuc_0,nuc,0.0,57172.75679590671,,1
+285,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,6,7,nuc_0,nuc,0.0,114358.50671661014,,1
+285,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,4,5,nuc_0,nuc,0.0,119520.4813108294,,1
+285,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+285,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,401.1407560720187,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,411.4440350230484,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,390.88231022046784,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.8,402.4959797702724,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,385.6657588954622,Within thresholds,0
+290,StandardFirstFitBinPacker,speech-inference,scale_up,15,16,nuc_0,nuc,0.0,102814.34295884913,,1
+290,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,15,16,nuc_0,nuc,0.0,106824.39302029427,,1
+290,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,82197.07378062926,,1
+290,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,13,14,nuc_0,nuc,0.0,87821.15795963324,,1
+290,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,7,7,,,6.0,0.0,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,5,5,,,6.4,0.0,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.6,0.0,Within thresholds,0
+290,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.2,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,speech-inference,no_action,16,16,,,5.6,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,speech-inference-downtown,no_action,16,16,,,7.4,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,4.0,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,speech-inference-industrial,no_action,14,14,,,6.0,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,7,7,,,4.2,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,5,5,,,4.2,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.6,0.0,Within thresholds,0
+295,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.8,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.4,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,5.0,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,speech-inference,no_action,16,16,,,5.6,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,speech-inference-downtown,no_action,16,16,,,9.8,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.4,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,speech-inference-industrial,no_action,14,14,,,6.4,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,7,7,,,4.2,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,5,5,,,7.0,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+300,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.0,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.4,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,speech-inference,no_action,16,16,,,7.0,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,speech-inference-downtown,no_action,16,16,,,8.8,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,4.0,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,speech-inference-industrial,no_action,14,14,,,4.6,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,7,7,,,5.2,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,5,5,,,8.0,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.2,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,7.6,0.0,Within thresholds,0
+305,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.6,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.8,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.2,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.8,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,speech-inference,no_action,16,16,,,6.2,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,speech-inference-downtown,no_action,16,16,,,9.2,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.0,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,speech-inference-industrial,no_action,14,14,,,5.4,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,7,7,,,5.0,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,5,5,,,5.2,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+310,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.6,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.0,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,speech-inference,no_action,16,16,,,6.2,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,speech-inference-downtown,no_action,16,16,,,8.0,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.4,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,speech-inference-industrial,no_action,14,14,,,6.6,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,7,7,,,5.6,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,5,5,,,6.4,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.4,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.8,0.0,Within thresholds,0
+315,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,4.6,0.0,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.6,409.43390062547695,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.2,429.1271703219068,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,394.68035537091055,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,402.54365153352904,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,387.71328675148385,Within thresholds,0
+320,StandardFirstFitBinPacker,speech-inference,scale_up,16,17,nuc_0,nuc,0.0,77158.58113823964,,1
+320,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,16,17,nuc_0,nuc,0.0,92608.18983088752,,1
+320,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,4,5,nuc_0,nuc,0.0,63904.05867492383,,1
+320,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,14,15,nuc_0,nuc,0.0,69611.64954642497,,1
+320,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,7,8,nuc_0,nuc,0.0,132980.60991740908,,1
+320,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,5,6,nuc_0,nuc,0.0,119891.19018897506,,1
+320,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,2.8,0.0,Within thresholds,0
+320,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.6,408.28538269610084,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.4,420.48429381603404,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,390.0291689646963,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.4,406.15756402661174,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,391.6678108108215,Within thresholds,0
+325,StandardFirstFitBinPacker,speech-inference,scale_up,17,18,nuc_0,nuc,0.0,114830.53757275773,,1
+325,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,17,18,nuc_0,nuc,0.0,118961.33552510377,,1
+325,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,5,6,nuc_0,nuc,0.0,58327.34212187427,,1
+325,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,15,16,nuc_0,nuc,0.0,102032.74656194521,,1
+325,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,8,8,,,4.0,0.0,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,6,6,,,7.8,0.0,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.2,0.0,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.2,0.0,Within thresholds,0
+325,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.4,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.2,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,speech-inference,no_action,18,18,,,5.8,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,speech-inference-downtown,no_action,18,18,,,9.2,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,6,5,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,StandardFirstFitBinPacker,speech-inference-industrial,no_action,16,16,,,8.2,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,8,8,,,4.2,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,6,6,,,7.2,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.6,0.0,Within thresholds,0
+330,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.4,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,speech-inference,no_action,18,18,,,5.2,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,speech-inference-downtown,no_action,18,18,,,11.8,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,speech-inference-suburb,no_action,5,5,,,3.2,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,speech-inference-industrial,no_action,16,16,,,6.0,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,8,8,,,4.8,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,6,6,,,9.4,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.6,0.0,Within thresholds,0
+335,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,9.0,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.6,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.6,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.2,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,speech-inference,no_action,18,18,,,6.4,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,speech-inference-downtown,no_action,18,18,,,8.6,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,StandardFirstFitBinPacker,speech-inference-industrial,no_action,16,16,,,5.0,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,8,8,,,4.8,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,6,6,,,7.2,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+340,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.2,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.6,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.8,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,2.8,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.6,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,speech-inference,no_action,18,18,,,5.0,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,speech-inference-downtown,no_action,18,18,,,8.2,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,StandardFirstFitBinPacker,speech-inference-industrial,no_action,16,16,,,5.6,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,8,8,,,5.2,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,6,6,,,6.0,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+345,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.4,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.2,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,speech-inference,no_action,18,18,,,7.0,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,speech-inference-downtown,no_action,18,18,,,7.8,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,StandardFirstFitBinPacker,speech-inference-industrial,no_action,16,16,,,6.4,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,8,8,,,4.0,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,6,6,,,7.2,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.4,0.0,Within thresholds,0
+350,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,397.6972187568612,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,394.00738454188433,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,392.63795455188495,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,402.05695223854883,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.8,386.89807168761155,Within thresholds,0
+355,StandardFirstFitBinPacker,speech-inference,scale_up,18,19,nuc_0,nuc,0.0,79741.53849656839,,1
+355,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,18,19,nuc_0,nuc,0.0,90666.94255178244,,1
+355,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,63170.52789981847,,1
+355,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,16,17,nuc_0,nuc,0.0,81306.3131069825,,1
+355,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,8,9,nuc_0,nuc,0.0,92864.90039391236,,1
+355,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,6,7,nuc_0,nuc,0.0,144633.44713610207,,1
+355,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.4,0.0,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,7.0,0.0,Within thresholds,0
+355,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,397.50284289722697,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,396.9620414690035,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.4,392.57744949637834,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,413.9440778176606,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.4,381.3739882449138,Within thresholds,0
+360,StandardFirstFitBinPacker,speech-inference,scale_up,19,20,nuc_0,nuc,0.0,120373.37919569247,,1
+360,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,19,20,nuc_0,nuc,0.0,62081.073829381356,,1
+360,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,86684.20993687135,,1
+360,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,17,18,nuc_0,nuc,0.0,163978.07420941218,,1
+360,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,9,9,,,6.2,0.0,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,7,7,,,8.2,0.0,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.0,0.0,Within thresholds,0
+360,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,4.4,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,speech-inference,no_action,20,20,,,6.0,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,speech-inference-downtown,no_action,20,20,,,7.4,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,StandardFirstFitBinPacker,speech-inference-industrial,no_action,18,18,,,7.0,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,9,9,,,4.8,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,7,7,,,7.4,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.0,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.8,0.0,Within thresholds,0
+365,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.2,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,4.4,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.8,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,4.0,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,speech-inference,no_action,20,20,,,6.0,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,speech-inference-downtown,no_action,20,20,,,9.2,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,StandardFirstFitBinPacker,speech-inference-industrial,no_action,18,18,,,6.6,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,9,9,,,5.2,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,7,7,,,8.8,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.4,0.0,Within thresholds,0
+370,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.2,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,speech-inference,no_action,20,20,,,7.8,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,speech-inference-downtown,no_action,20,20,,,10.4,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,StandardFirstFitBinPacker,speech-inference-industrial,no_action,18,18,,,4.4,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,9,9,,,4.4,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,7,7,,,8.6,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.4,0.0,Within thresholds,0
+375,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.2,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.0,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,speech-inference,no_action,20,20,,,4.2,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,speech-inference-downtown,no_action,20,20,,,9.2,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,speech-inference-suburb,no_action,2,2,,,3.0,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,speech-inference-industrial,no_action,18,18,,,6.0,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,9,9,,,4.4,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,7,7,,,6.0,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,7.0,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+380,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.6,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.0,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.4,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,speech-inference,no_action,20,20,,,8.4,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,speech-inference-downtown,no_action,20,20,,,10.2,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,StandardFirstFitBinPacker,speech-inference-industrial,no_action,18,18,,,6.0,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,9,9,,,6.4,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,7,7,,,7.2,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.2,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.0,0.0,Within thresholds,0
+385,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.6,422.4990064828534,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.4,471.94975292246335,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.8,409.3389901704658,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,384.52135204338214,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.6,387.0942045058878,Within thresholds,0
+390,StandardFirstFitBinPacker,speech-inference,scale_up,20,21,nuc_0,nuc,0.0,69871.97200947581,,1
+390,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,20,21,nuc_0,nuc,0.0,70581.96170996719,,1
+390,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,112281.14718114272,,1
+390,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,18,19,nuc_0,nuc,0.0,71842.22181736563,,1
+390,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,9,10,nuc_0,nuc,0.0,143077.63658540937,,1
+390,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,7,8,nuc_0,nuc,0.0,181982.9915230091,,1
+390,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.0,0.0,Within thresholds,0
+390,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.6,398.5179058641298,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.2,402.0198510244647,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,414.9969445937348,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,387.5539293353763,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,386.4970586012211,Within thresholds,0
+395,StandardFirstFitBinPacker,speech-inference,scale_up,21,22,nuc_0,nuc,0.0,63119.2724427273,,1
+395,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,21,22,nuc_0,nuc,0.0,3061.759534438314,,1
+395,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.6,0.0,Within thresholds,0
+395,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,19,20,nuc_0,nuc,0.0,242189.10067189718,,1
+395,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,10,10,,,5.0,0.0,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,8,8,,,4.2,0.0,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.6,0.0,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+395,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.8,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,speech-inference,no_action,22,22,,,5.6,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,speech-inference-downtown,no_action,22,22,,,9.6,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,speech-inference-suburb,no_action,3,3,,,3.0,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,speech-inference-industrial,no_action,20,20,,,5.2,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,10,10,,,5.0,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,8,8,,,6.4,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.2,0.0,Within thresholds,0
+400,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.8,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,7.0,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.8,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.8,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,speech-inference,no_action,22,22,,,5.6,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,speech-inference-downtown,no_action,22,22,,,10.0,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,StandardFirstFitBinPacker,speech-inference-industrial,no_action,20,20,,,6.6,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,10,10,,,6.0,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,8,8,,,8.2,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.0,0.0,Within thresholds,0
+405,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,9.2,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,4.6,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.6,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,speech-inference,no_action,22,22,,,5.6,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,speech-inference-downtown,no_action,22,22,,,7.4,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,speech-inference-suburb,no_action,2,2,,,3.6,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,speech-inference-industrial,no_action,20,20,,,8.0,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,10,10,,,8.0,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,8,8,,,6.8,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.2,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.0,0.0,Within thresholds,0
+410,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,4.4,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,2.8,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,speech-inference,no_action,22,22,,,4.6,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,speech-inference-downtown,no_action,22,22,,,11.8,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,speech-inference-suburb,no_action,2,2,,,3.0,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,speech-inference-industrial,no_action,20,20,,,7.4,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,10,10,,,6.2,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,8,8,,,7.2,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.2,0.0,Within thresholds,0
+415,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.6,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.0,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.4,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.8,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,speech-inference,no_action,22,22,,,5.0,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,speech-inference-downtown,no_action,22,22,,,9.6,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,speech-inference-suburb,no_action,2,2,,,3.8,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,speech-inference-industrial,no_action,20,20,,,5.8,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,10,10,,,6.2,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,8,8,,,6.8,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.8,0.0,Within thresholds,0
+420,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.0,0.0,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,412.6816632204687,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,4.8,400.00722698692925,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.8,395.64245147840404,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,456.4439454108385,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,1.0,382.4239783681256,Within thresholds,0
+425,StandardFirstFitBinPacker,speech-inference,scale_up,22,23,nuc_0,nuc,0.0,63700.99485725657,,1
+425,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,22,23,nuc_0,nuc,0.0,51701.41667858977,,1
+425,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,84775.40976788511,,1
+425,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,20,21,nuc_0,nuc,0.0,62196.094527762776,,1
+425,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,10,11,nuc_0,nuc,0.0,64915.906530798355,,1
+425,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,8,9,nuc_0,nuc,0.0,129175.36912976093,,1
+425,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,7.0,0.0,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.0,0.0,Within thresholds,0
+425,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.2,405.6724786353085,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.6,389.4663209536149,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.0,395.87033247588414,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.4,439.1806094490744,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,385.0842427534303,Within thresholds,0
+430,StandardFirstFitBinPacker,speech-inference,scale_up,23,24,nuc_0,nuc,0.0,14725.06275437786,,1
+430,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,23,24,nuc_0,nuc,0.0,3576.555389256452,,1
+430,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,70467.59957998489,,1
+430,StandardFirstFitBinPacker,speech-inference-industrial,no_action,21,21,,,5.8,0.0,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,5.2,0.0,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,9,9,,,6.6,0.0,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.2,0.0,Within thresholds,0
+430,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,9.6,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.0,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,speech-inference,no_action,24,24,,,4.8,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,speech-inference-downtown,no_action,24,24,,,9.0,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.6,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,speech-inference-industrial,no_action,21,21,,,4.8,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,4.0,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,9,9,,,6.2,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.8,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.4,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,7.0,0.0,Within thresholds,0
+435,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,5.4,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.0,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.4,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,speech-inference,no_action,24,24,,,6.0,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,speech-inference-downtown,no_action,24,24,,,8.2,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.0,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,speech-inference-industrial,no_action,21,21,,,5.0,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,6.4,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,9,9,,,5.6,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.4,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+440,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.0,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,3.4,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,speech-inference,no_action,24,24,,,5.0,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,speech-inference-downtown,no_action,24,24,,,8.6,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.6,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,speech-inference-industrial,no_action,21,21,,,6.2,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,6.4,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,9,9,,,6.4,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+445,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.4,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,5.2,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.6,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,speech-inference,no_action,24,24,,,6.4,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,speech-inference-downtown,no_action,24,24,,,8.8,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.2,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,speech-inference-industrial,no_action,21,21,,,5.4,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-preprocessing,scale_down,11,10,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+450,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,9,9,,,8.0,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.0,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+450,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,8.0,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,speech-inference,no_action,24,24,,,6.0,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,speech-inference-downtown,no_action,24,24,,,11.6,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+455,StandardFirstFitBinPacker,speech-inference-industrial,no_action,21,21,,,4.4,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,10,10,,,4.8,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,9,9,,,7.8,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+455,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.6,438.9697298139612,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.8,485.2421317374673,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,1.4,393.28055158408694,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.2,400.09257931753183,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,382.72104843161156,Within thresholds,0
+460,StandardFirstFitBinPacker,speech-inference,scale_up,24,25,nuc_0,nuc,0.0,57393.09085061089,,1
+460,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,24,25,nuc_0,nuc,0.0,54993.516385689705,,1
+460,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,45513.52384269574,,1
+460,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,21,22,nuc_0,nuc,0.0,75822.29694615398,,1
+460,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,10,11,nuc_0,nuc,0.0,200929.05730631438,,1
+460,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,9,10,nuc_0,nuc,0.0,295251.7044377661,,1
+460,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.0,0.0,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+460,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.6,445.21577040706677,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,523.6626014269326,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,389.1921733925788,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.2,400.4008469267938,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,381.66995457188244,Within thresholds,0
+465,StandardFirstFitBinPacker,speech-inference,scale_up,25,26,nuc_0,nuc,0.0,66259.12666628262,,1
+465,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,25,26,nuc_0,nuc,0.0,44821.575084367214,,1
+465,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,4,5,nuc_0,nuc,0.0,72102.00009859899,,1
+465,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,22,23,nuc_0,nuc,0.0,104760.36602563942,,1
+465,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,4.0,0.0,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,10,10,,,6.0,0.0,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.8,0.0,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+465,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.2,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.6,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.6,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,speech-inference,no_action,26,26,,,6.2,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,speech-inference-downtown,no_action,26,26,,,7.6,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+470,StandardFirstFitBinPacker,speech-inference-industrial,no_action,23,23,,,6.6,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,5.0,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,10,10,,,7.2,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.6,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+470,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,4.4,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.4,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.0,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,speech-inference,no_action,26,26,,,4.6,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,speech-inference-downtown,no_action,26,26,,,7.8,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+475,StandardFirstFitBinPacker,speech-inference-industrial,no_action,23,23,,,6.4,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,4.6,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,10,10,,,9.2,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.2,0.0,Within thresholds,0
+475,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.0,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.2,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.2,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,speech-inference,no_action,26,26,,,8.8,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,speech-inference-downtown,no_action,26,26,,,10.0,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+480,StandardFirstFitBinPacker,speech-inference-industrial,no_action,23,23,,,5.8,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,6.6,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,10,10,,,5.8,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.2,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,5.4,0.0,Within thresholds,0
+480,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,8.4,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.0,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.2,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,speech-inference,no_action,26,26,,,6.4,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,speech-inference-downtown,no_action,26,26,,,9.8,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+485,StandardFirstFitBinPacker,speech-inference-industrial,no_action,23,23,,,5.6,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,5.2,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,10,10,,,9.4,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.2,0.0,Within thresholds,0
+485,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,9.2,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,6.0,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.4,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,speech-inference,no_action,26,26,,,7.4,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,speech-inference-downtown,no_action,26,26,,,10.6,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+490,StandardFirstFitBinPacker,speech-inference-industrial,no_action,23,23,,,6.8,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,11,11,,,5.6,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,10,10,,,5.4,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,6.2,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.2,0.0,Within thresholds,0
+490,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.4,0.0,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,5.0,416.1059229069525,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,8.0,449.91421934940405,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,393.3213036154076,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,407.6738275890206,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,5.2,392.63628021092927,Within thresholds,0
+495,StandardFirstFitBinPacker,speech-inference,scale_up,26,27,nuc_0,nuc,0.0,64046.36667999007,,1
+495,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,26,27,nuc_0,nuc,0.0,89353.51810608724,,1
+495,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,95422.06214576031,,1
+495,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,23,24,nuc_0,nuc,0.0,42445.14852608914,,1
+495,StandardFirstFitBinPacker,resnet50-preprocessing,scale_up,11,12,nuc_0,nuc,0.0,113368.27068798029,,1
+495,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,scale_up,10,11,nuc_0,nuc,0.0,135630.54349192465,,1
+495,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.4,0.0,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.8,0.0,Within thresholds,0
+495,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.6,0.0,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,4.8,415.9146102146236,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.2,453.44606185158483,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.4,392.6655036537535,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,390.2105614732225,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,3.2,389.44418553237716,Within thresholds,0
+500,StandardFirstFitBinPacker,speech-inference,scale_up,27,28,nuc_0,nuc,0.0,95521.03699854811,,1
+500,StandardFirstFitBinPacker,speech-inference-downtown,scale_up,27,28,nuc_0,nuc,0.0,90578.45928988862,,1
+500,StandardFirstFitBinPacker,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,79705.61691332844,,1
+500,StandardFirstFitBinPacker,speech-inference-industrial,scale_up,24,25,nuc_0,nuc,0.0,164833.69263811863,,1
+500,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,12,12,,,5.2,0.0,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,11,11,,,7.4,0.0,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,3.8,0.0,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,3.2,0.0,Within thresholds,0
+500,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,3.8,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,4.0,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,speech-inference,no_action,28,28,,,6.6,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,speech-inference-downtown,no_action,28,28,,,10.2,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,speech-inference-suburb,no_action,4,4,,,3.8,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,speech-inference-industrial,no_action,25,25,,,5.2,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,12,12,,,6.6,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,11,11,,,7.6,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,4.6,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,5.0,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,4.6,0.0,Within thresholds,0
+505,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,6.4,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-inference,no_action,1,1,,,6.6,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-inference-downtown,no_action,1,1,,,6.8,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-inference-suburb,no_action,1,1,,,4.0,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-inference-industrial,no_action,1,1,,,4.8,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-inference-residential,no_action,1,1,,,2.8,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,speech-inference,no_action,28,28,,,4.6,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,speech-inference-downtown,no_action,28,28,,,7.8,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+510,StandardFirstFitBinPacker,speech-inference-industrial,no_action,25,25,,,4.6,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-preprocessing,no_action,12,12,,,5.4,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-preprocessing-downtown,no_action,11,11,,,6.4,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-preprocessing-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-preprocessing-industrial,no_action,1,1,,,4.6,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-training,no_action,1,1,,,6.8,0.0,Within thresholds,0
+510,StandardFirstFitBinPacker,resnet50-training-downtown,no_action,1,1,,,7.0,0.0,Within thresholds,0
