@@ -78,7 +78,6 @@ class DefaultFaasSystem(FaasSystem):
     def deploy(self, fd: FunctionDeployment):
         if fd.name in self.functions_deployments:
             raise ValueError("function already deployed")
-
         self.functions_deployments[fd.name] = fd
         # TODO remove specific scaling approaches, it's more extendable to let users start scaling technique that iterates over FDs
         self.faas_scalers[fd.name] = FaasRequestScaler(fd, self.env)
@@ -235,7 +234,7 @@ class DefaultFaasSystem(FaasSystem):
             self.replica_count[fn_name] = 0
 
         if self.replica_count[fn_name] >= config.scale_max:
-            logger.debug(
+            logger.info(
                 "Function %s wanted to scale up, but maximum number of replicas reached",
                 fn_name,
             )

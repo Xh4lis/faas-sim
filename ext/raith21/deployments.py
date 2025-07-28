@@ -35,7 +35,6 @@ default_resnet_preprocessing_ranking = DeploymentRanking(
     [images.resnet50_preprocessing_manifest]
 )
 
-# ADD NEW SMART CITY FUNCTION RANKINGS HERE:
 default_video_analytics_ranking = DeploymentRanking([images.video_analytics_manifest])
 default_iot_data_processor_ranking = DeploymentRanking([images.iot_data_processor_manifest])
 default_alert_service_ranking = DeploymentRanking([images.alert_service_manifest])

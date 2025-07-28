@@ -165,7 +165,7 @@ class ConstantBenchmark(BenchmarkBase):
         
         for deployment in self.deployments:
             deployment.scaling_config.scale_min = 1
-            deployment.scaling_config.scale_max = max(2, int(0.1 * no_of_devices))
-            deployment.scaling_config.target_average_utilization = 0.7
+            deployment.scaling_config.scale_max = 500
+            deployment.scaling_config.target_average_utilization = 0.7  
         
         print(f"Configured {len(self.deployments)} smart city deployments for {no_of_devices} devices")

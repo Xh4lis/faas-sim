@@ -59,17 +59,17 @@ class SimulationConfig:
     
     def __init__(self):
         # Simulation parameters 
-        self.num_devices = 600
-        self.device_settings = edgesbc_settings
+        self.num_devices = 240
+        self.device_settings = edgecloudlet_settings
         self.duration = 500
-        self.total_rps = 800
+        self.total_rps = 58
         self.scenario = "custom"  # Options: "default", "intensive", "distributed", "custom"
-        self.scaling_strategy = "performance" # Options: "performance", "power", "basic"
+        self.scaling_strategy = "power" # Options: "performance", "power", "basic"
         # Custom function counts for scenario
         self.custom_counts = {
-            "resnet50-inference": 3,
-            "speech-inference": 3,
-            "resnet50-preprocessing": 1,
+            "resnet50-inference": 6,
+            "speech-inference": 0,
+            "resnet50-preprocessing": 0,
             "resnet50-training": 2,  
             "python-pi": 0,
             "fio": 0,
