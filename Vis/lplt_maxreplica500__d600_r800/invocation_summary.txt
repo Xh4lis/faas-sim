@@ -1,0 +1,41 @@
+FUNCTION INVOCATION SUMMARY
+==========================
+
+Total invocations: 12
+Overall average execution time: 198.40 ms
+Overall average wait time: 0.00 ms
+Simulation start time: 165.54 s
+Simulation end time: 299.14 s
+Total duration: 133.40 s
+
+NODE SUMMARY
+============
+
+Node: nuc_9
+  Invocations: 12
+  Average execution time: 198.40 ms
+  Min/Max execution time: 197.95/199.14 ms
+  Average wait time: 0.00 ms
+
+FUNCTION SUMMARY
+================
+
+Function: resnet50-training-downtown
+  Invocations: 12
+  Average execution time: 198.40 ms
+  Min/Max execution time: 197.95/199.14 ms
+  Average wait time: 0.00 ms
+
+DETAILED BREAKDOWN BY NODE AND FUNCTION
+=====================================
+
+Node: nuc_9
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-cpu
+Invocations: 12
+Average execution time: 198.40 ms
+Min/Max execution time: 197.95/199.14 ms
+Average wait time: 0.00 ms
+First invocation: 165.54 s
+Last invocation: 298.95 s
+

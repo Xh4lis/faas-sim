@@ -3,8 +3,8 @@ import os
 from typing import Dict, Any, Optional
 
 from ext.mhfd.scaling.strategies.standard_first_fit_packer import StandardFirstFitBinPacker
-from ext.mhfd.scaling.strategies.energy_minimizing_packer import LowPowerLongTimeBinPacker
-from ext.mhfd.scaling.strategies.latency_minimizing_packer import HighPerformanceShortTimeBinPacker
+from ext.mhfd.scaling.strategies.lplt import LowPowerLongTimeBinPacker
+from ext.mhfd.scaling.strategies.hpst import HighPerformanceShortTimeBinPacker
 
 logger = logging.getLogger(__name__)
 

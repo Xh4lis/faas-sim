@@ -41,7 +41,7 @@ class NodeSelector(ABC):
             
             return cpu_available and memory_available
         except:
-            return True  # Default to available if can't determine
+            return False  # Default to available if can't determine
     
     def extract_node_type(self, node_name: str) -> str:
         """Extract node type from node name"""

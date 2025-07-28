@@ -58,20 +58,20 @@ class SimulationConfig:
     """Configuration parameters for the simulation"""
     
     def __init__(self):
-        # Simulation parameters
+        # Simulation parameters 
         self.num_devices = 600
         self.device_settings = edgesbc_settings
         self.duration = 500
-        self.total_rps = 100
+        self.total_rps = 800
         self.scenario = "custom"  # Options: "default", "intensive", "distributed", "custom"
-        self.scaling_strategy = "basic"
+        self.scaling_strategy = "performance" # Options: "performance", "power", "basic"
         # Custom function counts for scenario
         self.custom_counts = {
-            "resnet50-inference": 5,
-            "speech-inference": 4,
-            "resnet50-preprocessing": 4,
+            "resnet50-inference": 3,
+            "speech-inference": 3,
+            "resnet50-preprocessing": 1,
             "resnet50-training": 2,  
-            "python-pi": 4,
+            "python-pi": 0,
             "fio": 0,
         }
         
@@ -79,7 +79,7 @@ class SimulationConfig:
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "basic_scaler_R_"
+        self.settings_id = "lplt_maxreplica500_"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         
@@ -129,8 +129,8 @@ def setup_scheduler_config(config, fet_oracle, resource_oracle):
     predicates.extend(Scheduler.default_predicates)
     predicates.extend([
         CanRunPred(fet_oracle, resource_oracle),  # Uncomment if needed
-        NodeHasAcceleratorPred(),
-        NodeHasFreeGpu(),
+        # NodeHasAcceleratorPred(),
+        # NodeHasFreeGpu(),
         # NodeHasFreeTpu(),  # Uncomment if needed
     ])
     

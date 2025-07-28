@@ -68,28 +68,28 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
 
         # Smart city zone-based RPS allocation relative to baseline == 1
         zone_multipliers = {
-            "downtown": 1.5,
-            "commercial": 1.3,
-            "highway": 1.4,
-            "airport": 1.2,
-            "stadium": 1.6,
-            "industrial": 1.1,
-            "port": 1.0,
-            "hospital": 0.9,
-            "university": 1.0,
-            "residential": 0.7,
-            "suburb": 0.6,
-            "park": 0.5,
+            "downtown": 1,
+            "commercial": 1,
+            "highway": 1,
+            "airport": 1,
+            "stadium": 1,
+            "industrial": 1,
+            "port": 1,
+            "hospital": 1,
+            "university": 1,
+            "residential": 1,
+            "suburb": 1,
+            "park": 1,
         }
 
         # Function type base RPS allocation (percentage of total RPS)
         function_base_rps = {
-            "resnet50-inference": 0.25,  # Reduce from 35% to 25%
+            "resnet50-inference": 0.40,  # Reduce from 35% to 25%
             "speech-inference": 0.25,  # 25%
-            "resnet50-preprocessing": 0.20,  # 25% 
-            "resnet50-training": 0.10,  # 5% 
-            "python-pi": 0.15,  
-            "fio": 0.05,  
+            "resnet50-preprocessing": 0.10,  # 25% 
+            "resnet50-training": 0.25,  # 5% 
+            "python-pi": 0,  
+            "fio": 0,  
         }
 
         total_rps = self.rps
@@ -107,7 +107,8 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
             else:
                 base_func = func_name
                 zone = "default"
-
+                print("="*20, "Default function: ", deployment)
+                
             # Get base RPS for this function type
             base_percentage = function_base_rps.get(base_func, 0.05)
             base_rps = total_rps * base_percentage

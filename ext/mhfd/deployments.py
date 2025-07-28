@@ -24,7 +24,7 @@ def create_smart_city_function_instances(
             new_deployment = copy.deepcopy(base_deployment)
             # Force each deployment to start with 1 replica
             new_deployment.scaling_config.scale_min = 1
-            new_deployment.scaling_config.scale_max = 3
+            new_deployment.scaling_config.scale_max = 10
 
             # Create unique names for smart city zones
             zone_names = [

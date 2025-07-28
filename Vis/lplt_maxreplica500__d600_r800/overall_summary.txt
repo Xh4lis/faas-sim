@@ -1,0 +1,150 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-07-24 15:46:08
+
+Topology Overview:
+  Number of nodes: 1
+  Number of functions: 1
+  Number of images: 1
+
+Network Activity:
+  Total transfers: 619
+  Total bytes transferred: 42358.40 MB
+  Transfer duration: 92517.01 s
+
+Network Flows:
+  nuc_9 → nano_0: 885.01 MB in 989.27 s
+  nuc_9 → nano_1: 885.01 MB in 984.34 s
+  nuc_9 → nuc_0: 442.50 MB in 1954.39 s
+  nuc_9 → nuc_1: 442.50 MB in 1957.44 s
+  nuc_9 → nuc_10: 442.50 MB in 2107.78 s
+  nuc_9 → nuc_11: 442.50 MB in 2110.36 s
+  nuc_9 → nuc_12: 442.50 MB in 2175.31 s
+  nuc_9 → nuc_13: 442.50 MB in 2155.97 s
+  nuc_9 → nuc_14: 442.50 MB in 2173.40 s
+  nuc_9 → nuc_15: 442.50 MB in 2177.75 s
+  nuc_9 → nuc_16: 221.25 MB in 925.17 s
+  nuc_9 → nuc_17: 221.25 MB in 923.62 s
+  nuc_9 → nuc_18: 221.25 MB in 925.12 s
+  nuc_9 → nuc_19: 221.25 MB in 920.41 s
+  nuc_9 → nuc_2: 442.50 MB in 1952.32 s
+  nuc_9 → nuc_20: 221.25 MB in 974.97 s
+  nuc_9 → nuc_21: 221.25 MB in 975.34 s
+  nuc_9 → nuc_22: 221.25 MB in 976.53 s
+  nuc_9 → nuc_23: 221.25 MB in 973.49 s
+  nuc_9 → nuc_24: 221.25 MB in 1024.60 s
+  nuc_9 → nuc_25: 221.25 MB in 1022.05 s
+  nuc_9 → nuc_26: 221.25 MB in 1023.50 s
+  nuc_9 → nuc_27: 221.25 MB in 1022.43 s
+  nuc_9 → nuc_28: 221.25 MB in 1068.35 s
+  nuc_9 → nuc_29: 221.25 MB in 1066.46 s
+  nuc_9 → nuc_3: 442.50 MB in 1958.39 s
+  nuc_9 → nuc_30: 221.25 MB in 1063.49 s
+  nuc_9 → nuc_31: 221.25 MB in 1067.89 s
+  nuc_9 → nuc_32: 221.25 MB in 1108.73 s
+  nuc_9 → nuc_33: 221.25 MB in 1111.76 s
+  nuc_9 → nuc_34: 221.25 MB in 1105.17 s
+  nuc_9 → nuc_35: 221.25 MB in 1105.48 s
+  nuc_9 → nuc_36: 221.25 MB in 1145.73 s
+  nuc_9 → nuc_37: 221.25 MB in 1143.11 s
+  nuc_9 → nuc_38: 221.25 MB in 1147.88 s
+  nuc_9 → nuc_39: 221.25 MB in 1146.61 s
+  nuc_9 → nuc_4: 442.50 MB in 2033.41 s
+  nuc_9 → nuc_40: 221.25 MB in 1180.16 s
+  nuc_9 → nuc_41: 221.25 MB in 1181.13 s
+  nuc_9 → nuc_42: 221.25 MB in 1180.03 s
+  nuc_9 → nuc_43: 221.25 MB in 1181.37 s
+  nuc_9 → nuc_44: 221.25 MB in 1212.06 s
+  nuc_9 → nuc_45: 221.25 MB in 1211.08 s
+  nuc_9 → nuc_46: 221.25 MB in 1213.53 s
+  nuc_9 → nuc_47: 221.25 MB in 1211.01 s
+  nuc_9 → nuc_48: 221.25 MB in 1237.97 s
+  nuc_9 → nuc_49: 221.25 MB in 1234.85 s
+  nuc_9 → nuc_5: 442.50 MB in 2028.62 s
+  nuc_9 → nuc_50: 221.25 MB in 1237.69 s
+  nuc_9 → nuc_51: 221.25 MB in 1236.07 s
+  nuc_9 → nuc_6: 442.50 MB in 2033.83 s
+  nuc_9 → nuc_7: 442.50 MB in 2029.38 s
+  nuc_9 → nuc_8: 442.50 MB in 2101.86 s
+  nuc_9 → nx_0: 1327.51 MB in 1211.99 s
+  nuc_9 → nx_1: 1327.51 MB in 1285.23 s
+  nuc_9 → nx_2: 1327.51 MB in 1372.78 s
+  nuc_9 → nx_3: 1327.51 MB in 1422.92 s
+  nuc_9 → tx2_0: 885.01 MB in 1212.89 s
+  nuc_9 → tx2_1: 885.01 MB in 1209.28 s
+  nuc_9 → tx2_2: 885.01 MB in 1235.31 s
+  nuc_9 → tx2_3: 885.01 MB in 1359.25 s
+  nuc_9 → xeongpu_0: 885.01 MB in 1494.31 s
+  nuc_9 → xeongpu_1: 885.01 MB in 1492.18 s
+  nuc_9 → xeongpu_2: 885.01 MB in 1658.48 s
+  nuc_9 → xeongpu_3: 885.01 MB in 1662.33 s
+  nuc_9 → xeongpu_4: 885.01 MB in 1681.09 s
+  nuc_9 → xeongpu_5: 885.01 MB in 1681.00 s
+  registry → nano_0: 95.37 MB in 0.91 s
+  registry → nano_1: 95.37 MB in 0.90 s
+  registry → nuc_0: 190.73 MB in 1.65 s
+  registry → nuc_1: 190.73 MB in 1.65 s
+  registry → nuc_10: 190.73 MB in 1.65 s
+  registry → nuc_11: 190.73 MB in 1.65 s
+  registry → nuc_12: 190.73 MB in 1.65 s
+  registry → nuc_13: 190.73 MB in 1.65 s
+  registry → nuc_14: 190.73 MB in 1.65 s
+  registry → nuc_15: 190.73 MB in 1.65 s
+  registry → nuc_16: 190.73 MB in 1.65 s
+  registry → nuc_17: 190.73 MB in 1.65 s
+  registry → nuc_18: 190.73 MB in 1.65 s
+  registry → nuc_19: 190.73 MB in 1.65 s
+  registry → nuc_2: 190.73 MB in 1.65 s
+  registry → nuc_20: 190.73 MB in 1.65 s
+  registry → nuc_21: 190.73 MB in 1.65 s
+  registry → nuc_22: 190.73 MB in 1.65 s
+  registry → nuc_23: 190.73 MB in 1.65 s
+  registry → nuc_24: 190.73 MB in 1.65 s
+  registry → nuc_25: 190.73 MB in 1.65 s
+  registry → nuc_26: 190.73 MB in 1.65 s
+  registry → nuc_27: 190.73 MB in 1.65 s
+  registry → nuc_28: 190.73 MB in 1.65 s
+  registry → nuc_29: 190.73 MB in 1.65 s
+  registry → nuc_3: 190.73 MB in 1.65 s
+  registry → nuc_30: 190.73 MB in 1.65 s
+  registry → nuc_31: 190.73 MB in 1.65 s
+  registry → nuc_32: 190.73 MB in 1.65 s
+  registry → nuc_33: 190.73 MB in 1.65 s
+  registry → nuc_34: 190.73 MB in 1.65 s
+  registry → nuc_35: 190.73 MB in 1.65 s
+  registry → nuc_36: 190.73 MB in 1.65 s
+  registry → nuc_37: 190.73 MB in 1.65 s
+  registry → nuc_38: 190.73 MB in 1.65 s
+  registry → nuc_39: 190.73 MB in 1.65 s
+  registry → nuc_4: 190.73 MB in 1.65 s
+  registry → nuc_40: 190.73 MB in 1.65 s
+  registry → nuc_41: 190.73 MB in 1.65 s
+  registry → nuc_42: 190.73 MB in 1.65 s
+  registry → nuc_43: 190.73 MB in 1.65 s
+  registry → nuc_44: 190.73 MB in 1.65 s
+  registry → nuc_45: 190.73 MB in 1.65 s
+  registry → nuc_46: 190.73 MB in 1.65 s
+  registry → nuc_47: 190.73 MB in 1.65 s
+  registry → nuc_48: 190.73 MB in 1.65 s
+  registry → nuc_49: 190.73 MB in 1.65 s
+  registry → nuc_5: 190.73 MB in 1.65 s
+  registry → nuc_50: 190.73 MB in 1.65 s
+  registry → nuc_51: 190.73 MB in 1.65 s
+  registry → nuc_6: 190.73 MB in 1.65 s
+  registry → nuc_7: 190.73 MB in 1.65 s
+  registry → nuc_8: 190.73 MB in 1.65 s
+  registry → nx_0: 95.37 MB in 0.83 s
+  registry → nx_1: 95.37 MB in 0.83 s
+  registry → nx_2: 95.37 MB in 0.97 s
+  registry → nx_3: 95.37 MB in 0.98 s
+  registry → tx2_0: 95.37 MB in 0.83 s
+  registry → tx2_1: 95.37 MB in 0.83 s
+  registry → tx2_2: 95.37 MB in 0.83 s
+  registry → tx2_3: 95.37 MB in 0.83 s
+  registry → xeongpu_0: 190.73 MB in 3.30 s
+  registry → xeongpu_1: 190.73 MB in 3.30 s
+  registry → xeongpu_2: 190.73 MB in 7.44 s
+  registry → xeongpu_3: 190.73 MB in 7.45 s
+  registry → xeongpu_4: 190.73 MB in 7.45 s
+  registry → xeongpu_5: 190.73 MB in 7.45 s

@@ -27,7 +27,7 @@ class BaseAutoscaler(ABC):
         self.scaling_history = {}
         # Scaling configuration
         self.min_replicas = 1
-        self.max_replicas = 50
+        self.max_replicas = 500
         self.scale_up_threshold = 50  # RPS threshold for scaling up
         self.scale_down_threshold = 5   # RPS threshold for scaling down
         self.response_time_threshold = 1000  # ms
