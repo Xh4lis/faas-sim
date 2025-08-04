@@ -84,12 +84,12 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
 
         # Function type base RPS allocation (percentage of total RPS)
         function_base_rps = {
-            "resnet50-inference": 0.40,  # Reduce from 35% to 25%
-            "speech-inference": 0.25,  # 25%
-            "resnet50-preprocessing": 0.10,  # 25% 
-            "resnet50-training": 0.25,  # 5% 
-            "python-pi": 0,  
-            "fio": 0,  
+            "resnet50-inference": 0.40, 
+            "speech-inference": 0.1, 
+            "resnet50-preprocessing": 0.10,  
+            "resnet50-training": 0.25,  
+            "python-pi": 0.5,  
+            "fio": 0.5,  
         }
 
         total_rps = self.rps
@@ -134,7 +134,9 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
             self.arrival_profiles[func_name] = expovariate_arrival_profile(
                 constant_rps_profile(rps)
             )
-
+        print("Arrival profiles:", "=" * 60)
+        for k, v in self.arrival_profiles.items():
+            print(f"{k}: {v}")
         # Print distribution summary
         print(f"\n=== SMART CITY MIXED PROFILES ===")
         print(f"Scenario: {self.scenario}")
@@ -157,8 +159,7 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
             print(
                 f"  {func_type}: {stats['count']} instances, "
                 f"{stats['total_rps']} total RPS, {avg_rps:.1f} avg RPS"
-            )
-
+            )    
 
 # Convenience function for easy creation
 def create_smart_city_constant_benchmark(

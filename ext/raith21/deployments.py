@@ -606,9 +606,15 @@ def create_all_deployments(
         images.mobilenet_inference_function: get_mobilenet_inference_deployment(
             deployment_rankings.mobilenet_inference_ranking
         ),
-        # images.fio_function: get_fio_deployment(fet_oracle, resource_oracle, deployment_rankings.fio_ranking),
-        # images.pi_function: get_pi_deployment(fet_oracle, resource_oracle, deployment_rankings.pi_ranking),
-        # images.tf_gpu_function: get_tf_gpu_deployment(fet_oracle, resource_oracle, deployment_rankings.tf_gpu_ranking),
+        images.fio_function: get_fio_deployment(
+            deployment_rankings.fio_ranking
+        ),
+        images.pi_function: get_pi_deployment(
+            deployment_rankings.pi_ranking
+        ),
+        images.tf_gpu_function: get_tf_gpu_deployment(
+            deployment_rankings.tf_gpu_ranking
+        ),
         images.speech_inference_function: get_speech_inference_deployment(
             deployment_rankings.speech_inference_ranking
         ),

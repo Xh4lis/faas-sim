@@ -1,0 +1,148 @@
+FAAS ENERGY CONSUMPTION ANALYSIS REPORT
+========================================
+
+Report generated: 2025-07-28 17:04:13
+
+System Overview:
+  Total nodes: 240
+  Node types: 9
+  Monitoring duration: 512 time periods
+  Time range: 1.0 to 512.0
+
+Energy Consumption Summary:
+  Total energy consumed: 538,381,710.64 Joules (149550.48 Wh)
+  Average energy per time period: 1051526.78 J
+  Total energy in kWh: 149.5505 kWh
+
+Power Consumption Summary:
+  Average system power: 16.77 W
+  Peak system power: 121.26 W
+  Minimum system power: 1.90 W
+  Power range: 119.36 W
+
+Node Type Energy Distribution:
+  nuc: 260,532,080.85 J (48.4%)
+  xeoncpu: 191,294,853.12 J (35.5%)
+  xeongpu: 36,855,785.70 J (6.8%)
+  rpi: 29,399,460.91 J (5.5%)
+  rockpi: 6,138,110.91 J (1.1%)
+  nano: 6,046,088.90 J (1.1%)
+  tx: 5,615,204.19 J (1.0%)
+  nx: 1,384,492.06 J (0.3%)
+  coral: 1,115,634.00 J (0.2%)
+
+Node Type Power Statistics:
+  coral (3 nodes):
+    Average power: 2.78 W
+    Power range: 2.50 - 2.86 W
+    Power variability (std): 0.147 W
+  nano (23 nodes):
+    Average power: 1.96 W
+    Power range: 1.90 - 2.80 W
+    Power variability (std): 0.223 W
+  nuc (99 nodes):
+    Average power: 19.57 W
+    Power range: 15.00 - 21.35 W
+    Power variability (std): 2.851 W
+  nx (2 nodes):
+    Average power: 5.16 W
+    Power range: 5.00 - 10.22 W
+    Power variability (std): 0.895 W
+  rockpi (13 nodes):
+    Average power: 3.60 W
+    Power range: 3.00 - 3.61 W
+    Power variability (std): 0.072 W
+  rpi (72 nodes):
+    Average power: 3.02 W
+    Power range: 2.10 - 3.67 W
+    Power variability (std): 0.637 W
+  tx (7 nodes):
+    Average power: 5.84 W
+    Power range: 5.50 - 9.26 W
+    Power variability (std): 1.084 W
+  xeoncpu (18 nodes):
+    Average power: 81.24 W
+    Power range: 81.24 - 81.24 W
+    Power variability (std): 0.000 W
+  xeongpu (3 nodes):
+    Average power: 85.78 W
+    Power range: 75.00 - 121.26 W
+    Power variability (std): 19.565 W
+
+Node Type Energy Statistics:
+  coral:
+    Total energy: 1,115,634.00 J (309.90 Wh)
+    Average energy per measurement: 726.324 J
+    Energy per node: 371,878.00 J
+  nano:
+    Total energy: 6,046,088.90 J (1679.47 Wh)
+    Average energy per measurement: 513.425 J
+    Energy per node: 262,873.43 J
+  nuc:
+    Total energy: 260,532,080.85 J (72370.02 Wh)
+    Average energy per measurement: 5139.916 J
+    Energy per node: 2,631,637.18 J
+  nx:
+    Total energy: 1,384,492.06 J (384.58 Wh)
+    Average energy per measurement: 1352.043 J
+    Energy per node: 692,246.03 J
+  rockpi:
+    Total energy: 6,138,110.91 J (1705.03 Wh)
+    Average energy per measurement: 922.192 J
+    Energy per node: 472,162.38 J
+  rpi:
+    Total energy: 29,399,460.91 J (8166.52 Wh)
+    Average energy per measurement: 797.511 J
+    Energy per node: 408,325.85 J
+  tx:
+    Total energy: 5,615,204.19 J (1559.78 Wh)
+    Average energy per measurement: 1566.742 J
+    Energy per node: 802,172.03 J
+  xeoncpu:
+    Total energy: 191,294,853.12 J (53137.46 Wh)
+    Average energy per measurement: 20756.820 J
+    Energy per node: 10,627,491.84 J
+  xeongpu:
+    Total energy: 36,855,785.70 J (10237.72 Wh)
+    Average energy per measurement: 23994.652 J
+    Energy per node: 12,285,261.90 J
+
+Efficiency Analysis:
+  Most energy efficient node type: coral
+  Highest energy consuming node type: nuc
+  Energy efficiency ratio: 233.53x
+
+Power Model Assessment:
+  Power model type: DYNAMIC (Variable power consumption)
+  System power variance: 477.028 W²
+  CPU-Power correlation: 0.173
+
+Environmental Impact (Estimates):
+  CO2 emissions (avg grid): 34.8453 kg CO2
+  Cost estimate (@$0.12/kWh): $17.9461
+
+Recommendations:
+  - Current power model shows good dynamic behavior
+  - Consider adding non-linear power curves for more accuracy
+  - Monitor for power anomalies and optimization opportunities
+
+Top Energy Consuming Nodes:
+   1. xeongpu_1 (xeongpu): 12,407,542.50 J
+   2. xeongpu_2 (xeongpu): 12,407,542.50 J
+   3. xeongpu_0 (xeongpu): 12,040,700.70 J
+   4. xeoncpu_0 (xeoncpu): 10,627,491.84 J
+   5. xeoncpu_1 (xeoncpu): 10,627,491.84 J
+   6. xeoncpu_10 (xeoncpu): 10,627,491.84 J
+   7. xeoncpu_11 (xeoncpu): 10,627,491.84 J
+   8. xeoncpu_12 (xeoncpu): 10,627,491.84 J
+   9. xeoncpu_13 (xeoncpu): 10,627,491.84 J
+  10. xeoncpu_14 (xeoncpu): 10,627,491.84 J
+
+Analysis Summary:
+  Report covers 512 measurement periods across 240 nodes
+  Total system energy consumption: 538,381,711 J (149550.48 Wh)
+  System shows dynamic (variable power consumption) power consumption patterns
+  Energy distribution varies 233.5x between node types
+
+End of Report
+=============

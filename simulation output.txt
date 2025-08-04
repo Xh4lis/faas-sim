@@ -1,0 +1,168 @@
+
+(venv) mhfd@mhfd:/mnt/c/Users/masay/Documents/FaaS/FS/faas-sim$ python -m ext.raith21.main
+Generating 240 devices...
+
+=== TOPOLOGY SUMMARY ===
+Total nodes in topology: 1207
+Compute nodes: 241
+Infrastructure nodes: 966
+
+=== COMPUTE NODES ANALYSIS ===
+nuc_0           - Arch: Unknown    - Accelerators: []
+rockpi_9        - Arch: Unknown    - Accelerators: []
+rpi4_12         - Arch: Unknown    - Accelerators: []
+rpi4_13         - Arch: Unknown    - Accelerators: []
+nano_21         - Arch: Unknown    - Accelerators: []
+nuc_27          - Arch: Unknown    - Accelerators: []
+nuc_38          - Arch: Unknown    - Accelerators: []
+nuc_47          - Arch: Unknown    - Accelerators: []
+nuc_68          - Arch: Unknown    - Accelerators: []
+nuc_84          - Arch: Unknown    - Accelerators: []
+nuc_86          - Arch: Unknown    - Accelerators: []
+nuc_90          - Arch: Unknown    - Accelerators: []
+internet        - Arch: Unknown    - Accelerators: []
+nuc_1           - Arch: Unknown    - Accelerators: []
+rpi3_3          - Arch: Unknown    - Accelerators: []
+rpi3_4          - Arch: Unknown    - Accelerators: []
+rpi3_5          - Arch: Unknown    - Accelerators: []
+rockpi_3        - Arch: Unknown    - Accelerators: []
+tx2_0           - Arch: Unknown    - Accelerators: []
+tx2_1           - Arch: Unknown    - Accelerators: []
+
+=== COMPUTE NODE TYPE DISTRIBUTION ===
+Unknown: 20 nodes
+
+=== ORIGINAL DEVICES vs TOPOLOGY NODES ===
+Generated devices: 240
+Ether nodes: 240
+Topology compute nodes: 241
+
+=== SAMPLE ORIGINAL DEVICES ===
+Device 0: X86 - NONE - MEC
+Device 1: X86 - NONE - MEC
+Device 2: X86 - NONE - MEC
+Device 3: X86 - NONE - MEC
+Device 4: X86 - NONE - MEC
+
+=== SAMPLE ETHER NODES ===
+Ether 0: nuc_0 - Arch: x86 - Accelerators: []
+Ether 1: nuc_1 - Arch: x86 - Accelerators: []
+Ether 2: nuc_2 - Arch: x86 - Accelerators: []
+Ether 3: nuc_3 - Arch: x86 - Accelerators: []
+Ether 4: nuc_4 - Arch: x86 - Accelerators: []
+Available functions: ['resnet50-inference', 'resnet50-training', 'mobilenet-inference', 'speech-inference', 'resnet50-preprocessing', 'video-analytics', 'iot-data-processor', 'alert-service', 'data-aggregator']
+Selected functions: ['resnet50-inference', 'speech-inference', 'resnet50-preprocessing', 'resnet50-training']
+
+=== SMART CITY DEPLOYMENT: DEFAULT SCENARIO ===
+Created 0 function instances:
+INFO:ext.mhfd.autoscaler:🏭 Creating energy-aware autoscaler with performance strategy
+INFO:ext.mhfd.scaling.base_autoscaler:Initialized HighPerformanceShortTimeBinPacker autoscaler
+INFO:ext.mhfd.autoscaler:🚀 Autoscaler initialized with performance strategy
+Starting simulation...
+INFO:sim.faassim:initializing simulation, benchmark: SmartCityConstantBenchmark, topology nodes: 1207
+INFO:sim.faassim:starting resource monitor
+INFO:sim.faassim:setting up benchmark
+Configured 0 smart city deployments for 240 devices
+Arrival profiles: ============================================================
+
+=== SMART CITY MIXED PROFILES ===
+Scenario: default
+Total deployments: 0
+Total RPS assigned: 0 (target: 58)
+INFO:root:faas-workloads/resnet-inference-cpu, latest, [ImageProperties(name='faas-workloads/resnet-inference-cpu', size=200000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/resnet-inference-cpu', size=200000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/resnet-inference-cpu', size=70000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/resnet-inference-cpu', size=70000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/resnet-inference-cpu', size=70000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/resnet-inference-cpu', size=84000000, tag='latest', arch='aarch64'), ImageProperties(name='faas-workloads/resnet-inference-cpu', size=84000000, tag='latest', arch='arm64')]
+INFO:root:faas-workloads/resnet-training-cpu, latest, [ImageProperties(name='faas-workloads/resnet-training-cpu', size=70000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/resnet-training-cpu', size=70000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/resnet-training-cpu', size=70000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/resnet-training-cpu', size=84000000, tag='latest', arch='aarch64'), ImageProperties(name='faas-workloads/resnet-training-cpu', size=84000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/resnet-training-cpu', size=200000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/resnet-training-cpu', size=200000000, tag='latest', arch='x86')]
+INFO:root:faas-workloads/resnet-inference-gpu, latest, [ImageProperties(name='faas-workloads/resnet-inference-gpu', size=200000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/resnet-inference-gpu', size=200000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/resnet-inference-gpu', size=100000000, tag='latest', arch='aarch64'), ImageProperties(name='faas-workloads/resnet-inference-gpu', size=100000000, tag='latest', arch='arm64')]
+INFO:root:faas-workloads/resnet-training-gpu, latest, [ImageProperties(name='faas-workloads/resnet-training-gpu', size=200000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/resnet-training-gpu', size=200000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/resnet-training-gpu', size=100000000, tag='latest', arch='aarch64'), ImageProperties(name='faas-workloads/resnet-training-gpu', size=100000000, tag='latest', arch='arm64')]
+INFO:root:faas-workloads/speech-inference-tflite, latest, [ImageProperties(name='faas-workloads/speech-inference-tflite', size=108000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/speech-inference-tflite', size=108000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/speech-inference-tflite', size=33000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/speech-inference-tflite', size=33000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/speech-inference-tflite', size=33000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/speech-inference-tflite', size=40000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/speech-inference-tflite', size=40000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/speech-inference-gpu, latest, [ImageProperties(name='faas-workloads/speech-inference-gpu', size=160000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/speech-inference-gpu', size=160000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/speech-inference-gpu', size=130000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/speech-inference-gpu', size=130000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/mobilenet-inference-tflite, latest, [ImageProperties(name='faas-workloads/mobilenet-inference-tflite', size=180000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/mobilenet-inference-tflite', size=180000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/mobilenet-inference-tflite', size=160000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/mobilenet-inference-tflite', size=160000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/mobilenet-inference-tflite', size=160000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/mobilenet-inference-tflite', size=173000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/mobilenet-inference-tflite', size=173000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/mobilenet-inference-tpu, latest, [ImageProperties(name='faas-workloads/mobilenet-inference-tpu', size=173000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/mobilenet-inference-tpu', size=173000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/python-pi, latest, [ImageProperties(name='faas-workloads/python-pi', size=88000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/python-pi', size=88000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/python-pi', size=55000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/python-pi', size=55000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/python-pi', size=55000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/python-pi', size=62000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/python-pi', size=62000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/fio, latest, [ImageProperties(name='faas-workloads/fio', size=24000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/fio', size=24000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/fio', size=20000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/fio', size=20000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/fio', size=20000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/fio', size=23000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/fio', size=23000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/tf-gpu, latest, [ImageProperties(name='faas-workloads/tf-gpu', size=410000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/tf-gpu', size=410000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/tf-gpu', size=224000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/tf-gpu', size=224000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/resnet-preprocessing, latest, [ImageProperties(name='faas-workloads/resnet-preprocessing', size=410000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/resnet-preprocessing', size=410000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/resnet-preprocessing', size=137000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/resnet-preprocessing', size=137000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/resnet-preprocessing', size=137000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/resnet-preprocessing', size=191000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/resnet-preprocessing', size=191000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/video-analytics, latest, [ImageProperties(name='faas-workloads/video-analytics', size=10000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/video-analytics', size=10000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/video-analytics', size=8000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/video-analytics', size=8000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/video-analytics', size=8000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/video-analytics', size=9000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/video-analytics', size=9000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/iot-data-processor, latest, [ImageProperties(name='faas-workloads/iot-data-processor', size=5000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/iot-data-processor', size=5000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/iot-data-processor', size=4000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/iot-data-processor', size=4000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/iot-data-processor', size=4000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/iot-data-processor', size=4000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/iot-data-processor', size=4000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/alert-service, latest, [ImageProperties(name='faas-workloads/alert-service', size=3000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/alert-service', size=3000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/alert-service', size=2000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/alert-service', size=2000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/alert-service', size=2000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/alert-service', size=3000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/alert-service', size=3000000, tag='latest', arch='aarch64')]
+INFO:root:faas-workloads/data-aggregator, latest, [ImageProperties(name='faas-workloads/data-aggregator', size=5000000, tag='latest', arch='x86'), ImageProperties(name='faas-workloads/data-aggregator', size=5000000, tag='latest', arch='amd64'), ImageProperties(name='faas-workloads/data-aggregator', size=4000000, tag='latest', arch='arm32v7'), ImageProperties(name='faas-workloads/data-aggregator', size=4000000, tag='latest', arch='arm32'), ImageProperties(name='faas-workloads/data-aggregator', size=4000000, tag='latest', arch='arm'), ImageProperties(name='faas-workloads/data-aggregator', size=4000000, tag='latest', arch='arm64'), ImageProperties(name='faas-workloads/data-aggregator', size=4000000, tag='latest', arch='aarch64')]
+INFO:sim.faassim:starting faas system
+INFO:sim.faassim:starting benchmark process
+INFO:sim.faassim:executing simulation
+INFO:ext.mhfd.power:Power monitoring loop started
+INFO:ext.mhfd.autoscaler:🔄 Starting energy-aware autoscaling with performance strategy
+INFO:ext.mhfd.scaling.base_autoscaler:🚀 Starting HighPerformanceShortTimeBinPacker autoscaler
+INFO:root:executing requests
+INFO:sim.faassim:simulation ran 0.00s sim, 0.00s wall
+Simulation completed!
+
+Extracted 16 dataframes:
+
+invocations_df columns:
+  Empty or None DataFrame
+
+scale_df columns:
+  Empty or None DataFrame
+
+schedule_df columns:
+  Empty or None DataFrame
+
+replica_deployment_df columns:
+  Empty or None DataFrame
+
+function_deployments_df columns:
+  Empty or None DataFrame
+
+function_deployment_df columns:
+  Empty or None DataFrame
+
+function_deployment_lifecycle_df columns:
+  Empty or None DataFrame
+
+functions_df columns:
+  Empty or None DataFrame
+
+flow_df columns:
+  Empty or None DataFrame
+
+network_df columns:
+  Empty or None DataFrame
+
+utilization_df columns:
+  Empty or None DataFrame
+
+fets_df columns:
+  Empty or None DataFrame
+
+power_df columns:
+  Empty or None DataFrame
+
+energy_df columns:
+  Empty or None DataFrame
+
+scaling_decisions_df columns:
+  Empty or None DataFrame
+
+scaling_evaluations_df columns:
+  Empty or None DataFrame
+Skipped invocations_df (empty or None DataFrame)
+Skipped scale_df (empty or None DataFrame)
+Skipped schedule_df (empty or None DataFrame)
+Skipped replica_deployment_df (empty or None DataFrame)
+Skipped function_deployments_df (empty or None DataFrame)
+Skipped function_deployment_df (empty or None DataFrame)
+Skipped function_deployment_lifecycle_df (empty or None DataFrame)
+Skipped functions_df (empty or None DataFrame)
+Skipped flow_df (empty or None DataFrame)
+Skipped network_df (empty or None DataFrame)
+Skipped utilization_df (empty or None DataFrame)
+Skipped fets_df (empty or None DataFrame)
+Skipped power_df (empty or None DataFrame)
+Skipped energy_df (empty or None DataFrame)
+Skipped scaling_decisions_df (empty or None DataFrame)
+Skipped scaling_evaluations_df (empty or None DataFrame)
+Generating analysis reports from ./data/exclu_cpu__d240_r58/ to ./Vis/exclu_cpu__d240_r58/
+Loading data from ./data/exclu_cpu__d240_r58
+No data found or error loading data.
+
+Simulation complete! Results saved to ./data/exclu_cpu__d240_r58/ and ./Vis/exclu_cpu__d240_r58/
+(venv) mhfd@mhfd:/mnt/c/Users/masay/Documents/FaaS/FS/faas-sim$ 

@@ -1,0 +1,57 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-07-28 16:27:54
+
+Topology Overview:
+  Number of nodes: 10
+  Number of functions: 7
+  Number of images: 2
+
+Node Distribution:
+  tx2_0: 1536 invocations (17.0%)
+  nano_9: 1093 invocations (12.1%)
+  nano_16: 977 invocations (10.8%)
+  tx2_1: 1394 invocations (15.4%)
+  nano_15: 922 invocations (10.2%)
+  nano_21: 1540 invocations (17.1%)
+  nano_1: 582 invocations (6.5%)
+  nano_17: 549 invocations (6.1%)
+  nano_19: 429 invocations (4.8%)
+  nano_0: 1 invocations (0.0%)
+
+Function Distribution:
+  resnet50-inference-downtown: 1536 invocations (17.0%)
+  resnet50-inference-industrial: 1522 invocations (16.9%)
+  resnet50-inference-residential: 1512 invocations (16.8%)
+  resnet50-inference-suburb: 1394 invocations (15.4%)
+  resnet50-inference-commercial: 1518 invocations (16.8%)
+  resnet50-inference: 1540 invocations (17.1%)
+  resnet50-training: 1 invocations (0.0%)
+Network Activity:
+  Total transfers: 30
+  Total bytes transferred: 2532.01 MB
+  Transfer duration: 70.78 s
+
+Network Flows:
+  nano_0 → nuc_2: 98.23 MB in 0.85 s
+  nuc_2 → nano_0: 497.82 MB in 27.72 s
+  nuc_2 → nano_1: 98.23 MB in 0.85 s
+  nuc_2 → nano_15: 98.23 MB in 5.09 s
+  nuc_2 → nano_16: 98.23 MB in 5.09 s
+  nuc_2 → nano_17: 196.46 MB in 1.71 s
+  nuc_2 → nano_19: 98.23 MB in 0.85 s
+  nuc_2 → nano_21: 98.23 MB in 5.08 s
+  nuc_2 → nano_9: 98.23 MB in 5.09 s
+  nuc_2 → tx2_0: 98.23 MB in 5.09 s
+  nuc_2 → tx2_1: 98.23 MB in 5.09 s
+  registry → nano_0: 95.37 MB in 0.83 s
+  registry → nano_1: 95.37 MB in 0.83 s
+  registry → nano_15: 95.37 MB in 0.83 s
+  registry → nano_16: 95.37 MB in 0.83 s
+  registry → nano_17: 95.37 MB in 0.83 s
+  registry → nano_19: 95.37 MB in 0.83 s
+  registry → nano_21: 95.37 MB in 0.83 s
+  registry → nano_9: 95.37 MB in 0.83 s
+  registry → tx2_0: 95.37 MB in 0.83 s
+  registry → tx2_1: 95.37 MB in 0.83 s

@@ -78,7 +78,13 @@ def detailed_energy_analysis_focused(power_df, energy_df, save_path=None):
     sample_df = df[::5].copy()  # Sample every 5th for readability
     pivot_data = sample_df.pivot_table(values='energy_wh', index='node', columns='timestamp', fill_value=0)
     high_energy_nodes = df.groupby('node')['energy_wh'].sum().sort_values(ascending=False).head(20).index
-    pivot_subset = pivot_data.loc[high_energy_nodes]
+    valid_nodes = [node for node in high_energy_nodes if node in pivot_data.index]
+    if len(valid_nodes) == 0:
+        print("⚠️ No valid high energy nodes found in pivot_data index for heatmap.")
+        # Optionally, skip plotting or plot an empty heatmap
+        pivot_subset = pd.DataFrame()
+    else:
+        pivot_subset = pivot_data.loc[valid_nodes]
     
     sns.heatmap(pivot_subset, cmap='YlOrRd', cbar_kws={'label': 'Energy (Wh)'})
     plt.title('Energy Consumption Heatmap (Top 20 Nodes)', fontsize=12, fontweight='bold')

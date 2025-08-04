@@ -92,21 +92,23 @@ def create_smart_city_deployments(
 
     # Define scenarios with different deployment patterns
     scenarios = {
-        "default": {
-            "resnet50-inference": 3,     
-            "speech-inference": 3,        
-            "resnet50-preprocessing": 2, 
-            "resnet50-training": 0,       
+        "light": {
+            "resnet50-inference": 0,     
+            "speech-inference": 0,        
+            "resnet50-preprocessing": 0, 
+            "resnet50-training": 0,  
+            "python-pi": 5,  
+            "fio": 2,  
             # Total: 26 instances 
         },
-        "intensive": {
+        "reduced": {
             "resnet50-inference": 15,     
             "speech-inference": 12,       
             "resnet50-preprocessing": 15, 
             "resnet50-training": 8,       
             # Total: 50 instances
         },
-        "distributed": {
+        "edgeai": {
             "resnet50-inference": 20,     
             "speech-inference": 15,      
             "resnet50-preprocessing": 20, 
@@ -116,7 +118,7 @@ def create_smart_city_deployments(
     }
 
     # Get instance counts for the selected scenario
-    instance_counts = scenarios.get(scenario, scenarios["default"])
+    instance_counts = scenarios.get(scenario, scenarios["light"])
 
     # Create expanded deployments
     deployments = create_smart_city_function_instances(
@@ -160,7 +162,7 @@ def create_custom_smart_city_deployments(
         for name in custom_instance_counts.keys()
         if name in all_deployments
     }
-
+    print(f"Available functions: {list(base_deployments.keys())}")
     deployments = create_smart_city_function_instances(
         base_deployments, custom_instance_counts
     )

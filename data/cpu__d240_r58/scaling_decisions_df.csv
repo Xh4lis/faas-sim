@@ -1,0 +1,817 @@
+timestamp,strategy,deployment,action,old_replica_count,new_replica_count,selected_node,selected_node_type,current_load_rps,avg_response_time_ms,reason,scaling_direction
+5,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,1,2,xeongpu_0,xeongpu,0.0,0.0,,1
+5,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,1,2,xeongpu_0,xeongpu,0.0,0.0,,1
+5,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,1,2,xeongpu_0,xeongpu,0.0,0.0,,1
+5,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,1,2,xeongpu_0,xeongpu,0.0,0.0,,1
+5,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,1,2,xeongpu_0,xeongpu,0.0,0.0,,1
+5,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,1,2,xeongpu_0,xeongpu,0.0,0.0,,1
+10,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,2,3,xeongpu_0,xeongpu,0.0,0.0,,1
+10,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+10,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+10,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,2,3,xeongpu_0,xeongpu,0.0,0.0,,1
+10,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,2,3,xeongpu_0,xeongpu,0.0,0.0,,1
+10,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,2,3,xeongpu_0,xeongpu,0.0,0.0,,1
+10,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,2,3,xeongpu_0,xeongpu,0.0,0.0,,1
+10,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,2,3,xeongpu_0,xeongpu,0.0,0.0,,1
+15,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,3,4,xeongpu_0,xeongpu,0.0,0.0,,1
+15,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+15,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,1,1,,,3.6,0.0,Within thresholds,0
+15,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,3,4,xeongpu_0,xeongpu,0.0,0.0,,1
+15,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,3,4,xeongpu_0,xeongpu,0.0,0.0,,1
+15,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,3,4,xeongpu_0,xeongpu,0.0,0.0,,1
+15,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,3,4,xeongpu_0,xeongpu,0.0,0.0,,1
+15,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,3,4,xeongpu_0,xeongpu,0.0,0.0,,1
+20,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,4,5,xeongpu_0,xeongpu,0.0,0.0,,1
+20,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+20,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+20,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,4,5,xeongpu_0,xeongpu,0.0,0.0,,1
+20,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,4,5,xeongpu_0,xeongpu,0.0,0.0,,1
+20,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,4,5,xeongpu_0,xeongpu,0.0,0.0,,1
+20,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,4,5,xeongpu_0,xeongpu,0.0,0.0,,1
+20,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,4,5,xeongpu_0,xeongpu,0.0,0.0,,1
+25,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,5,6,xeongpu_0,xeongpu,0.0,0.0,,1
+25,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+25,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+25,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,5,6,xeongpu_0,xeongpu,0.0,0.0,,1
+25,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,5,6,xeongpu_0,xeongpu,0.0,0.0,,1
+25,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,no_action,5,5,,,3.2,0.0,Within thresholds,0
+25,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,5,6,xeongpu_0,xeongpu,0.0,0.0,,1
+25,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,5,6,xeongpu_0,xeongpu,0.0,0.0,,1
+30,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,6,7,xeongpu_0,xeongpu,0.0,0.0,,1
+30,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+30,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.8,0.0,Within thresholds,0
+30,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,6,7,xeongpu_0,xeongpu,0.0,0.0,,1
+30,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,6,7,xeongpu_0,xeongpu,0.0,0.0,,1
+30,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,no_action,5,5,,,2.0,0.0,Within thresholds,0
+30,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,6,7,xeongpu_0,xeongpu,0.0,0.0,,1
+30,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,6,7,xeongpu_0,xeongpu,0.0,0.0,,1
+35,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,7,8,xeongpu_0,xeongpu,0.0,0.0,,1
+35,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,1,1,,,2.6,0.0,Within thresholds,0
+35,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+35,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,7,8,xeongpu_0,xeongpu,0.0,0.0,,1
+35,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,7,8,xeongpu_0,xeongpu,0.0,0.0,,1
+35,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,no_action,5,5,,,3.4,0.0,Within thresholds,0
+35,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,7,8,xeongpu_0,xeongpu,0.0,0.0,,1
+35,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,7,8,xeongpu_0,xeongpu,0.0,0.0,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,8,9,xeongpu_0,xeongpu,0.0,620.7413591372705,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,1,2,xeongpu_0,xeongpu,0.0,392.1904636116694,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,1,2,xeongpu_0,xeongpu,0.0,394.74046322221164,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,8,9,xeongpu_0,xeongpu,0.0,717.6666579986596,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,8,9,xeongpu_0,xeongpu,0.0,708.4484754319407,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,5,6,xeongpu_0,xeongpu,0.0,715.6811964141098,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,8,9,xeongpu_0,xeongpu,0.0,0.0,,1
+40,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,8,9,xeongpu_0,xeongpu,0.0,0.0,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,9,10,xeongpu_0,xeongpu,0.0,615.3951189827336,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,2,3,xeongpu_0,xeongpu,0.0,393.10763951116064,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,2,3,xeongpu_0,xeongpu,0.0,396.98312035521997,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,9,10,xeongpu_0,xeongpu,0.0,689.6735017812973,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,9,10,xeongpu_0,xeongpu,0.0,711.8620464352142,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,6,7,xeongpu_0,xeongpu,0.0,710.4085333056692,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,9,10,xeongpu_0,xeongpu,0.0,0.0,,1
+45,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,9,10,xeongpu_0,xeongpu,0.0,0.0,,1
+50,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+50,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,3,3,,,2.6,0.0,Within thresholds,0
+50,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,3,4,xeongpu_0,xeongpu,0.0,0.0,,1
+50,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+50,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+50,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,7,8,xeongpu_0,xeongpu,0.0,0.0,,1
+50,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+50,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+55,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+55,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,3,3,,,2.6,0.0,Within thresholds,0
+55,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,4,5,xeongpu_0,xeongpu,0.0,0.0,,1
+55,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+55,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+55,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,8,9,xeongpu_0,xeongpu,0.0,0.0,,1
+55,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+55,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+60,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,12,13,xeongpu_0,xeongpu,0.0,0.0,,1
+60,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,3,3,,,4.0,0.0,Within thresholds,0
+60,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,5,6,xeongpu_0,xeongpu,0.0,0.0,,1
+60,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,12,13,xeongpu_0,xeongpu,0.0,0.0,,1
+60,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,12,13,xeongpu_0,xeongpu,0.0,0.0,,1
+60,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,9,10,xeongpu_0,xeongpu,0.0,0.0,,1
+60,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,12,13,xeongpu_0,xeongpu,0.0,0.0,,1
+60,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,12,13,xeongpu_0,xeongpu,0.0,0.0,,1
+65,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,13,14,xeongpu_0,xeongpu,0.0,0.0,,1
+65,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,3,3,,,1.8,0.0,Within thresholds,0
+65,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,6,6,,,2.4,0.0,Within thresholds,0
+65,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,13,14,xeongpu_0,xeongpu,0.0,0.0,,1
+65,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,13,14,xeongpu_0,xeongpu,0.0,0.0,,1
+65,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+65,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,13,14,xeongpu_0,xeongpu,0.0,0.0,,1
+65,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,13,14,xeongpu_0,xeongpu,0.0,0.0,,1
+70,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+70,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,3,3,,,3.4,0.0,Within thresholds,0
+70,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,6,6,,,2.8,0.0,Within thresholds,0
+70,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+70,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+70,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+70,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+70,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,15,16,xeongpu_0,xeongpu,0.0,544.3862125481511,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,3,4,xeongpu_0,xeongpu,0.0,394.8463419559244,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,6,7,xeongpu_0,xeongpu,0.0,392.5567784769435,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,15,16,xeongpu_0,xeongpu,0.0,683.5637568043543,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,15,16,xeongpu_0,xeongpu,0.0,639.963712912161,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,12,13,xeongpu_0,xeongpu,0.0,500.48758320762624,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,15,16,xeongpu_0,xeongpu,0.0,0.0,,1
+75,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,15,16,xeongpu_0,xeongpu,0.0,0.0,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,16,17,xeongpu_0,xeongpu,0.0,530.8282813121506,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,4,5,xeongpu_0,xeongpu,0.0,393.2881361399098,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,7,8,xeongpu_0,xeongpu,0.0,389.14715342957993,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,16,17,xeongpu_0,xeongpu,0.0,653.3911188626779,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,16,17,xeongpu_0,xeongpu,0.0,632.6676670606643,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,13,14,xeongpu_0,xeongpu,0.0,505.27888741419343,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,16,17,xeongpu_0,xeongpu,0.0,0.0,,1
+80,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,16,17,xeongpu_0,xeongpu,0.0,0.0,,1
+85,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+85,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,5,5,,,3.6,0.0,Within thresholds,0
+85,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,8,8,,,3.6,0.0,Within thresholds,0
+85,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+85,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+85,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+85,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+85,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+90,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+90,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,5,5,,,2.4,0.0,Within thresholds,0
+90,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,8,8,,,2.6,0.0,Within thresholds,0
+90,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+90,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+90,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,15,16,xeongpu_0,xeongpu,0.0,0.0,,1
+90,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+90,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+95,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,19,20,xeongpu_0,xeongpu,0.0,0.0,,1
+95,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,5,5,,,3.0,0.0,Within thresholds,0
+95,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,8,8,,,2.0,0.0,Within thresholds,0
+95,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,19,20,xeongpu_0,xeongpu,0.0,0.0,,1
+95,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,19,20,xeongpu_0,xeongpu,0.0,0.0,,1
+95,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,16,17,xeongpu_0,xeongpu,0.0,0.0,,1
+95,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,19,20,xeongpu_0,xeongpu,0.0,0.0,,1
+95,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,19,20,xeongpu_0,xeongpu,0.0,0.0,,1
+100,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,20,21,xeongpu_0,xeongpu,0.0,0.0,,1
+100,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,5,5,,,3.0,0.0,Within thresholds,0
+100,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,8,8,,,1.6,0.0,Within thresholds,0
+100,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,20,21,xeongpu_0,xeongpu,0.0,0.0,,1
+100,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,20,21,xeongpu_0,xeongpu,0.0,0.0,,1
+100,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+100,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,20,21,xeongpu_0,xeongpu,0.0,0.0,,1
+100,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,20,21,xeongpu_0,xeongpu,0.0,0.0,,1
+105,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+105,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,no_action,5,5,,,2.8,0.0,Within thresholds,0
+105,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,no_action,8,8,,,2.2,0.0,Within thresholds,0
+105,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+105,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+105,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+105,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+105,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,22,23,xeongpu_0,xeongpu,0.0,541.7986476936226,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,5,6,xeongpu_0,xeongpu,0.0,390.80505659748553,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,8,9,xeongpu_0,xeongpu,0.0,387.6188413492457,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,22,23,xeongpu_0,xeongpu,0.0,627.8442902247413,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,22,23,xeongpu_0,xeongpu,0.0,633.3507482475081,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,19,20,xeongpu_0,xeongpu,0.0,524.1693424433572,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,22,23,xeongpu_0,xeongpu,0.0,0.0,,1
+110,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,22,23,xeongpu_0,xeongpu,0.0,0.0,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,23,24,xeongpu_0,xeongpu,0.0,535.2595767133568,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,6,7,xeongpu_0,xeongpu,0.0,391.88274434328224,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,9,10,xeongpu_0,xeongpu,0.0,385.69192022734296,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,23,24,xeongpu_0,xeongpu,0.0,660.017663058079,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,23,24,xeongpu_0,xeongpu,0.0,619.0854336842989,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,20,21,xeongpu_0,xeongpu,0.0,509.6078521311943,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,23,24,xeongpu_0,xeongpu,0.0,0.0,,1
+115,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,23,24,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,7,8,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+120,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,8,9,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,22,23,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+125,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,26,27,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,9,10,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,12,13,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,26,27,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,26,27,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,23,24,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,26,27,xeongpu_0,xeongpu,0.0,0.0,,1
+130,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,26,27,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,27,28,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,10,11,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,13,14,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,27,28,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,27,28,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,27,28,xeongpu_0,xeongpu,0.0,0.0,,1
+135,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,27,28,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,11,12,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+140,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,29,30,xeongpu_0,xeongpu,0.0,546.4829499424084,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,12,13,xeongpu_0,xeongpu,0.0,467.9859824568543,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,15,16,xeongpu_0,xeongpu,0.0,553.2378187625886,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,29,30,xeongpu_0,xeongpu,0.0,551.1542373262138,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,29,30,xeongpu_0,xeongpu,0.0,575.7610149154744,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,26,27,xeongpu_0,xeongpu,0.0,577.7979839101138,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,29,30,xeongpu_0,xeongpu,0.0,0.0,,1
+145,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,29,30,xeongpu_0,xeongpu,0.0,0.0,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,30,31,xeongpu_0,xeongpu,0.0,535.542002559254,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,13,14,xeongpu_0,xeongpu,0.0,485.276010259258,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,16,17,xeongpu_0,xeongpu,0.0,552.1796095497773,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,30,31,xeongpu_0,xeongpu,0.0,536.4298470644775,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,30,31,xeongpu_0,xeongpu,0.0,569.6700805345555,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,27,28,xeongpu_0,xeongpu,0.0,523.1553686098139,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,30,31,xeongpu_0,xeongpu,0.0,0.0,,1
+150,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,30,31,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,14,15,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+155,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,15,16,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,29,30,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+160,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,33,34,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,16,17,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,19,20,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,33,34,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,33,34,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,30,31,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,33,34,xeongpu_0,xeongpu,0.0,0.0,,1
+165,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,33,34,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,34,35,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,17,18,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,20,21,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,34,35,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,34,35,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,34,35,xeongpu_0,xeongpu,0.0,0.0,,1
+170,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,34,35,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,18,19,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+175,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,36,37,xeongpu_0,xeongpu,0.0,563.7035606392711,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,19,20,xeongpu_0,xeongpu,0.0,517.5520751826296,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,22,23,xeongpu_0,xeongpu,0.0,622.7502762233704,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,36,37,xeongpu_0,xeongpu,0.0,553.6210171158549,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,36,37,xeongpu_0,xeongpu,0.0,551.6191333611014,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,33,34,xeongpu_0,xeongpu,0.0,575.5794883338295,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,36,37,xeongpu_0,xeongpu,0.0,0.0,,1
+180,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,36,37,xeongpu_0,xeongpu,0.0,0.0,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,37,38,xeongpu_0,xeongpu,0.0,562.0340783133875,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,20,21,xeongpu_0,xeongpu,0.0,528.3246365625463,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,23,24,xeongpu_0,xeongpu,0.0,614.1762687449898,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,37,38,xeongpu_0,xeongpu,0.0,550.5108359554939,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,37,38,xeongpu_0,xeongpu,0.0,528.3497884315645,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,34,35,xeongpu_0,xeongpu,0.0,595.850757938199,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,37,38,xeongpu_0,xeongpu,0.0,0.0,,1
+185,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,37,38,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,21,22,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+190,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,39,40,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,22,23,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,39,40,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,39,40,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,36,37,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,39,40,xeongpu_0,xeongpu,0.0,0.0,,1
+195,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.6,0.0,Within thresholds,0
+200,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,40,41,xeongpu_0,xeongpu,0.0,0.0,,1
+200,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,23,24,xeongpu_0,xeongpu,0.0,0.0,,1
+200,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,26,27,xeongpu_0,xeongpu,0.0,0.0,,1
+200,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,40,41,xeongpu_0,xeongpu,0.0,0.0,,1
+200,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,40,41,xeongpu_0,xeongpu,0.0,0.0,,1
+200,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,37,38,xeongpu_0,xeongpu,0.0,0.0,,1
+200,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,40,41,xeongpu_0,xeongpu,0.0,0.0,,1
+200,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.4,0.0,Within thresholds,0
+205,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,41,42,xeongpu_0,xeongpu,0.0,0.0,,1
+205,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,24,25,xeongpu_0,xeongpu,0.0,0.0,,1
+205,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,27,28,xeongpu_0,xeongpu,0.0,0.0,,1
+205,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,41,42,xeongpu_0,xeongpu,0.0,0.0,,1
+205,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,41,42,xeongpu_0,xeongpu,0.0,0.0,,1
+205,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+205,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,41,42,xeongpu_0,xeongpu,0.0,0.0,,1
+205,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.0,0.0,Within thresholds,0
+210,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,42,43,xeongpu_0,xeongpu,0.0,0.0,,1
+210,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,25,26,xeongpu_0,xeongpu,0.0,0.0,,1
+210,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+210,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,42,43,xeongpu_0,xeongpu,0.0,0.0,,1
+210,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,42,43,xeongpu_0,xeongpu,0.0,0.0,,1
+210,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,39,40,xeongpu_0,xeongpu,0.0,0.0,,1
+210,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,42,43,xeongpu_0,xeongpu,0.0,0.0,,1
+210,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.8,0.0,Within thresholds,0
+215,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,43,44,xeongpu_0,xeongpu,0.0,536.7289521256921,,1
+215,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,26,27,xeongpu_0,xeongpu,0.0,498.0390223565834,,1
+215,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,29,30,xeongpu_0,xeongpu,0.0,523.8740263990491,,1
+215,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,43,44,xeongpu_0,xeongpu,0.0,531.4744573742792,,1
+215,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,43,44,xeongpu_0,xeongpu,0.0,562.4482277804372,,1
+215,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,40,41,xeongpu_0,xeongpu,0.0,583.1412547715425,,1
+215,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,43,44,xeongpu_0,xeongpu,0.0,0.0,,1
+215,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.2,0.0,Within thresholds,0
+220,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,44,45,xeongpu_0,xeongpu,0.0,537.0906113267517,,1
+220,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,27,28,xeongpu_0,xeongpu,0.0,488.4229196524206,,1
+220,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,30,31,xeongpu_0,xeongpu,0.0,525.2941795866581,,1
+220,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,44,45,xeongpu_0,xeongpu,0.0,537.6161331344545,,1
+220,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,44,45,xeongpu_0,xeongpu,0.0,584.5654725282571,,1
+220,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,41,42,xeongpu_0,xeongpu,0.0,599.4383649976592,,1
+220,HighPerformanceShortTimeBinPacker,resnet50-training,scale_up,44,45,xeongpu_0,xeongpu,0.0,0.0,,1
+220,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.4,0.0,Within thresholds,0
+225,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,45,46,xeongpu_0,xeongpu,0.0,0.0,,1
+225,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,28,29,xeongpu_0,xeongpu,0.0,0.0,,1
+225,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+225,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,45,46,xeongpu_0,xeongpu,0.0,0.0,,1
+225,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,45,46,xeongpu_0,xeongpu,0.0,0.0,,1
+225,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,42,43,xeongpu_0,xeongpu,0.0,0.0,,1
+225,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.2,0.0,Within thresholds,0
+225,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,9.4,0.0,Within thresholds,0
+230,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,46,47,xeongpu_0,xeongpu,0.0,0.0,,1
+230,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,29,30,xeongpu_0,xeongpu,0.0,0.0,,1
+230,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+230,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,46,47,xeongpu_0,xeongpu,0.0,0.0,,1
+230,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,46,47,xeongpu_0,xeongpu,0.0,0.0,,1
+230,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,43,44,xeongpu_0,xeongpu,0.0,0.0,,1
+230,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.6,0.0,Within thresholds,0
+230,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.2,0.0,Within thresholds,0
+235,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,47,48,xeongpu_0,xeongpu,0.0,0.0,,1
+235,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,30,31,xeongpu_0,xeongpu,0.0,0.0,,1
+235,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,33,34,xeongpu_0,xeongpu,0.0,0.0,,1
+235,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,47,48,xeongpu_0,xeongpu,0.0,0.0,,1
+235,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,47,48,xeongpu_0,xeongpu,0.0,0.0,,1
+235,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,44,45,xeongpu_0,xeongpu,0.0,0.0,,1
+235,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.0,0.0,Within thresholds,0
+235,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.0,0.0,Within thresholds,0
+240,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,48,49,xeongpu_0,xeongpu,0.0,0.0,,1
+240,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,31,32,xeongpu_0,xeongpu,0.0,0.0,,1
+240,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,34,35,xeongpu_0,xeongpu,0.0,0.0,,1
+240,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,48,49,xeongpu_0,xeongpu,0.0,0.0,,1
+240,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,48,49,xeongpu_0,xeongpu,0.0,0.0,,1
+240,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,45,46,xeongpu_0,xeongpu,0.0,0.0,,1
+240,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.4,0.0,Within thresholds,0
+240,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.2,0.0,Within thresholds,0
+245,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,49,50,xeongpu_0,xeongpu,0.0,0.0,,1
+245,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,32,33,xeongpu_0,xeongpu,0.0,0.0,,1
+245,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+245,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,49,50,xeongpu_0,xeongpu,0.0,0.0,,1
+245,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,49,50,xeongpu_0,xeongpu,0.0,0.0,,1
+245,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,46,47,xeongpu_0,xeongpu,0.0,0.0,,1
+245,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.6,0.0,Within thresholds,0
+245,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.2,0.0,Within thresholds,0
+250,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,50,51,xeongpu_0,xeongpu,0.0,539.2410087099279,,1
+250,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,33,34,xeongpu_0,xeongpu,0.0,485.7612959357062,,1
+250,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,36,37,xeongpu_0,xeongpu,0.0,488.9445871301457,,1
+250,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,50,51,xeongpu_0,xeongpu,0.0,559.5226639947888,,1
+250,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,50,51,xeongpu_0,xeongpu,0.0,596.4830784527256,,1
+250,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,47,48,xeongpu_0,xeongpu,0.0,606.0450877357866,,1
+250,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.8,0.0,Within thresholds,0
+250,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.0,0.0,Within thresholds,0
+255,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,51,52,xeongpu_0,xeongpu,0.0,543.2439609772557,,1
+255,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,34,35,xeongpu_0,xeongpu,0.0,487.38355828537647,,1
+255,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,37,38,xeongpu_0,xeongpu,0.0,522.3297558386264,,1
+255,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,51,52,xeongpu_0,xeongpu,0.0,569.2212141428246,,1
+255,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,51,52,xeongpu_0,xeongpu,0.0,607.1979251366347,,1
+255,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,48,49,xeongpu_0,xeongpu,0.0,600.6913446242924,,1
+255,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.6,0.0,Within thresholds,0
+255,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.8,0.0,Within thresholds,0
+260,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,52,53,xeongpu_0,xeongpu,0.0,0.0,,1
+260,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,35,36,xeongpu_0,xeongpu,0.0,0.0,,1
+260,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+260,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,52,53,xeongpu_0,xeongpu,0.0,0.0,,1
+260,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,52,53,xeongpu_0,xeongpu,0.0,0.0,,1
+260,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,49,50,xeongpu_0,xeongpu,0.0,0.0,,1
+260,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.0,0.0,Within thresholds,0
+260,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.2,0.0,Within thresholds,0
+265,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,53,54,xeongpu_0,xeongpu,0.0,0.0,,1
+265,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,36,37,xeongpu_0,xeongpu,0.0,0.0,,1
+265,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,39,40,xeongpu_0,xeongpu,0.0,0.0,,1
+265,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,53,54,xeongpu_0,xeongpu,0.0,0.0,,1
+265,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,53,54,xeongpu_0,xeongpu,0.0,0.0,,1
+265,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,50,51,xeongpu_0,xeongpu,0.0,0.0,,1
+265,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.0,0.0,Within thresholds,0
+265,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.4,0.0,Within thresholds,0
+270,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,54,55,xeongpu_0,xeongpu,0.0,0.0,,1
+270,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,37,38,xeongpu_0,xeongpu,0.0,0.0,,1
+270,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,40,41,xeongpu_0,xeongpu,0.0,0.0,,1
+270,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,54,55,xeongpu_0,xeongpu,0.0,0.0,,1
+270,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,54,55,xeongpu_0,xeongpu,0.0,0.0,,1
+270,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,51,52,xeongpu_0,xeongpu,0.0,0.0,,1
+270,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.4,0.0,Within thresholds,0
+270,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.2,0.0,Within thresholds,0
+275,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,55,56,xeongpu_0,xeongpu,0.0,0.0,,1
+275,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,38,39,xeongpu_0,xeongpu,0.0,0.0,,1
+275,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,41,42,xeongpu_0,xeongpu,0.0,0.0,,1
+275,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,55,56,xeongpu_0,xeongpu,0.0,0.0,,1
+275,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,55,56,xeongpu_0,xeongpu,0.0,0.0,,1
+275,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,52,53,xeongpu_0,xeongpu,0.0,0.0,,1
+275,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.2,0.0,Within thresholds,0
+275,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.4,0.0,Within thresholds,0
+280,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,56,57,xeongpu_0,xeongpu,0.0,0.0,,1
+280,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,39,40,xeongpu_0,xeongpu,0.0,0.0,,1
+280,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,42,43,xeongpu_0,xeongpu,0.0,0.0,,1
+280,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,56,57,xeongpu_0,xeongpu,0.0,0.0,,1
+280,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,56,57,xeongpu_0,xeongpu,0.0,0.0,,1
+280,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,53,54,xeongpu_0,xeongpu,0.0,0.0,,1
+280,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.6,0.0,Within thresholds,0
+280,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.6,0.0,Within thresholds,0
+285,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,57,58,xeongpu_0,xeongpu,0.0,518.0873584564611,,1
+285,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,40,41,xeongpu_0,xeongpu,0.0,462.52030522245235,,1
+285,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,43,44,xeongpu_0,xeongpu,0.0,421.562152751565,,1
+285,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,57,58,xeongpu_0,xeongpu,0.0,496.8728216122395,,1
+285,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,57,58,xeongpu_0,xeongpu,0.0,571.5410079592745,,1
+285,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,54,55,xeongpu_0,xeongpu,0.0,606.5763059200909,,1
+285,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.0,0.0,Within thresholds,0
+285,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.8,0.0,Within thresholds,0
+290,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,58,59,xeongpu_0,xeongpu,0.0,521.5945749244149,,1
+290,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,41,42,xeongpu_0,xeongpu,0.0,442.5917441419169,,1
+290,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,44,45,xeongpu_0,xeongpu,0.0,439.55694517940174,,1
+290,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,58,59,xeongpu_0,xeongpu,0.0,457.9089469009091,,1
+290,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,58,59,xeongpu_0,xeongpu,0.0,570.0188024531819,,1
+290,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,55,56,xeongpu_0,xeongpu,0.0,576.6877520994278,,1
+290,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.8,0.0,Within thresholds,0
+290,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.4,0.0,Within thresholds,0
+295,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,59,60,xeongpu_0,xeongpu,0.0,0.0,,1
+295,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,42,43,xeongpu_0,xeongpu,0.0,0.0,,1
+295,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,45,46,xeongpu_0,xeongpu,0.0,0.0,,1
+295,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,59,60,xeongpu_0,xeongpu,0.0,0.0,,1
+295,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,59,60,xeongpu_0,xeongpu,0.0,0.0,,1
+295,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,56,57,xeongpu_0,xeongpu,0.0,0.0,,1
+295,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.8,0.0,Within thresholds,0
+295,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.2,0.0,Within thresholds,0
+300,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,60,61,xeongpu_0,xeongpu,0.0,0.0,,1
+300,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,43,44,xeongpu_0,xeongpu,0.0,0.0,,1
+300,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,46,47,xeongpu_0,xeongpu,0.0,0.0,,1
+300,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,60,61,xeongpu_0,xeongpu,0.0,0.0,,1
+300,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,60,61,xeongpu_0,xeongpu,0.0,0.0,,1
+300,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,57,58,xeongpu_0,xeongpu,0.0,0.0,,1
+300,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.4,0.0,Within thresholds,0
+300,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,11.0,0.0,Within thresholds,0
+305,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,61,62,xeongpu_0,xeongpu,0.0,0.0,,1
+305,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,44,45,xeongpu_0,xeongpu,0.0,0.0,,1
+305,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,47,48,xeongpu_0,xeongpu,0.0,0.0,,1
+305,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,61,62,xeongpu_0,xeongpu,0.0,0.0,,1
+305,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,61,62,xeongpu_0,xeongpu,0.0,0.0,,1
+305,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,58,59,xeongpu_0,xeongpu,0.0,0.0,,1
+305,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,9.4,0.0,Within thresholds,0
+305,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.8,0.0,Within thresholds,0
+310,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,62,63,xeongpu_0,xeongpu,0.0,0.0,,1
+310,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,45,46,xeongpu_0,xeongpu,0.0,0.0,,1
+310,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,48,49,xeongpu_0,xeongpu,0.0,0.0,,1
+310,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,62,63,xeongpu_0,xeongpu,0.0,0.0,,1
+310,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,62,63,xeongpu_0,xeongpu,0.0,0.0,,1
+310,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,59,60,xeongpu_0,xeongpu,0.0,0.0,,1
+310,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.4,0.0,Within thresholds,0
+310,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.0,0.0,Within thresholds,0
+315,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,63,64,xeongpu_0,xeongpu,0.0,0.0,,1
+315,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,46,47,xeongpu_0,xeongpu,0.0,0.0,,1
+315,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,49,50,xeongpu_0,xeongpu,0.0,0.0,,1
+315,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,63,64,xeongpu_0,xeongpu,0.0,0.0,,1
+315,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,63,64,xeongpu_0,xeongpu,0.0,0.0,,1
+315,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,60,61,xeongpu_0,xeongpu,0.0,0.0,,1
+315,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.6,0.0,Within thresholds,0
+315,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.0,0.0,Within thresholds,0
+320,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,64,65,xeongpu_0,xeongpu,0.0,534.5105567530995,,1
+320,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,47,48,xeongpu_0,xeongpu,0.0,450.21047693607244,,1
+320,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,50,51,xeongpu_0,xeongpu,0.0,433.8157458379088,,1
+320,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,64,65,xeongpu_0,xeongpu,0.0,543.3791835829462,,1
+320,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,64,65,xeongpu_0,xeongpu,0.0,580.4538114956035,,1
+320,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,61,62,xeongpu_0,xeongpu,0.0,624.5079162355175,,1
+320,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.0,0.0,Within thresholds,0
+320,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.8,0.0,Within thresholds,0
+325,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,65,66,xeongpu_0,xeongpu,0.0,528.091439794974,,1
+325,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,48,49,xeongpu_0,xeongpu,0.0,454.6490806519046,,1
+325,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,51,52,xeongpu_0,xeongpu,0.0,433.96465172689955,,1
+325,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,65,66,xeongpu_0,xeongpu,0.0,549.4245173601938,,1
+325,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,65,66,xeongpu_0,xeongpu,0.0,586.5279863601926,,1
+325,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,62,63,xeongpu_0,xeongpu,0.0,603.426711397219,,1
+325,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.8,0.0,Within thresholds,0
+325,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.6,0.0,Within thresholds,0
+330,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,66,67,xeongpu_0,xeongpu,0.0,0.0,,1
+330,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,49,50,xeongpu_0,xeongpu,0.0,0.0,,1
+330,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,52,53,xeongpu_0,xeongpu,0.0,0.0,,1
+330,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,66,67,xeongpu_0,xeongpu,0.0,0.0,,1
+330,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,66,67,xeongpu_0,xeongpu,0.0,0.0,,1
+330,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,63,64,xeongpu_0,xeongpu,0.0,0.0,,1
+330,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.4,0.0,Within thresholds,0
+330,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.2,0.0,Within thresholds,0
+335,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,67,68,xeongpu_0,xeongpu,0.0,0.0,,1
+335,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,50,51,xeongpu_0,xeongpu,0.0,0.0,,1
+335,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,53,54,xeongpu_0,xeongpu,0.0,0.0,,1
+335,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,67,68,xeongpu_0,xeongpu,0.0,0.0,,1
+335,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,67,68,xeongpu_0,xeongpu,0.0,0.0,,1
+335,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,64,65,xeongpu_0,xeongpu,0.0,0.0,,1
+335,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.4,0.0,Within thresholds,0
+335,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.0,0.0,Within thresholds,0
+340,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,68,69,xeongpu_0,xeongpu,0.0,0.0,,1
+340,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,51,52,xeongpu_0,xeongpu,0.0,0.0,,1
+340,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,54,55,xeongpu_0,xeongpu,0.0,0.0,,1
+340,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,68,69,xeongpu_0,xeongpu,0.0,0.0,,1
+340,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,68,69,xeongpu_0,xeongpu,0.0,0.0,,1
+340,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,65,66,xeongpu_0,xeongpu,0.0,0.0,,1
+340,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.6,0.0,Within thresholds,0
+340,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,9.2,0.0,Within thresholds,0
+345,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,69,70,xeongpu_0,xeongpu,0.0,0.0,,1
+345,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,52,53,xeongpu_0,xeongpu,0.0,0.0,,1
+345,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,55,56,xeongpu_0,xeongpu,0.0,0.0,,1
+345,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,69,70,xeongpu_0,xeongpu,0.0,0.0,,1
+345,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,69,70,xeongpu_0,xeongpu,0.0,0.0,,1
+345,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,66,67,xeongpu_0,xeongpu,0.0,0.0,,1
+345,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.8,0.0,Within thresholds,0
+345,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.0,0.0,Within thresholds,0
+350,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,70,71,xeongpu_0,xeongpu,0.0,0.0,,1
+350,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,53,54,xeongpu_0,xeongpu,0.0,0.0,,1
+350,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,56,57,xeongpu_0,xeongpu,0.0,0.0,,1
+350,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,70,71,xeongpu_0,xeongpu,0.0,0.0,,1
+350,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,70,71,xeongpu_0,xeongpu,0.0,0.0,,1
+350,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,67,68,xeongpu_0,xeongpu,0.0,0.0,,1
+350,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.6,0.0,Within thresholds,0
+350,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.2,0.0,Within thresholds,0
+355,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,71,72,xeongpu_0,xeongpu,0.0,538.4813027263805,,1
+355,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,54,55,xeongpu_0,xeongpu,0.0,424.87820870849396,,1
+355,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,57,58,xeongpu_0,xeongpu,0.0,446.3883533542088,,1
+355,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,71,72,xeongpu_0,xeongpu,0.0,512.1402656374198,,1
+355,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,71,72,xeongpu_0,xeongpu,0.0,598.8205757037324,,1
+355,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,68,69,xeongpu_0,xeongpu,0.0,652.7351189982111,,1
+355,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.6,0.0,Within thresholds,0
+355,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.2,0.0,Within thresholds,0
+360,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,72,73,xeongpu_0,xeongpu,0.0,529.3154242317535,,1
+360,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,55,56,xeongpu_0,xeongpu,0.0,411.89357029513,,1
+360,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,58,59,xeongpu_0,xeongpu,0.0,457.00686095122956,,1
+360,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,72,73,xeongpu_0,xeongpu,0.0,507.85330203203716,,1
+360,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,72,73,xeongpu_0,xeongpu,0.0,575.5255648675756,,1
+360,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,69,70,xeongpu_0,xeongpu,0.0,642.5234071371212,,1
+360,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.4,0.0,Within thresholds,0
+360,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.8,0.0,Within thresholds,0
+365,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,73,74,xeongpu_0,xeongpu,0.0,0.0,,1
+365,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,56,57,xeongpu_0,xeongpu,0.0,0.0,,1
+365,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,59,60,xeongpu_0,xeongpu,0.0,0.0,,1
+365,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,73,74,xeongpu_0,xeongpu,0.0,0.0,,1
+365,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,73,74,xeongpu_0,xeongpu,0.0,0.0,,1
+365,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,70,71,xeongpu_0,xeongpu,0.0,0.0,,1
+365,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.8,0.0,Within thresholds,0
+365,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.6,0.0,Within thresholds,0
+370,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,74,75,xeongpu_0,xeongpu,0.0,0.0,,1
+370,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,57,58,xeongpu_0,xeongpu,0.0,0.0,,1
+370,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,60,61,xeongpu_0,xeongpu,0.0,0.0,,1
+370,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,74,75,xeongpu_0,xeongpu,0.0,0.0,,1
+370,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,74,75,xeongpu_0,xeongpu,0.0,0.0,,1
+370,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,71,72,xeongpu_0,xeongpu,0.0,0.0,,1
+370,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.2,0.0,Within thresholds,0
+370,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.8,0.0,Within thresholds,0
+375,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,75,76,xeongpu_0,xeongpu,0.0,0.0,,1
+375,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,58,59,xeongpu_0,xeongpu,0.0,0.0,,1
+375,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,61,62,xeongpu_0,xeongpu,0.0,0.0,,1
+375,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,75,76,xeongpu_0,xeongpu,0.0,0.0,,1
+375,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,75,76,xeongpu_0,xeongpu,0.0,0.0,,1
+375,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,72,73,xeongpu_0,xeongpu,0.0,0.0,,1
+375,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.2,0.0,Within thresholds,0
+375,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.8,0.0,Within thresholds,0
+380,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,76,77,xeongpu_0,xeongpu,0.0,0.0,,1
+380,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,59,60,xeongpu_0,xeongpu,0.0,0.0,,1
+380,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,62,63,xeongpu_0,xeongpu,0.0,0.0,,1
+380,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,76,77,xeongpu_0,xeongpu,0.0,0.0,,1
+380,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,76,77,xeongpu_0,xeongpu,0.0,0.0,,1
+380,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,73,74,xeongpu_0,xeongpu,0.0,0.0,,1
+380,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.6,0.0,Within thresholds,0
+380,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.4,0.0,Within thresholds,0
+385,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,77,78,xeongpu_0,xeongpu,0.0,0.0,,1
+385,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,60,61,xeongpu_0,xeongpu,0.0,0.0,,1
+385,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,63,64,xeongpu_0,xeongpu,0.0,0.0,,1
+385,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,77,78,xeongpu_0,xeongpu,0.0,0.0,,1
+385,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,77,78,xeongpu_0,xeongpu,0.0,0.0,,1
+385,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,74,75,xeongpu_0,xeongpu,0.0,0.0,,1
+385,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.2,0.0,Within thresholds,0
+385,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.8,0.0,Within thresholds,0
+390,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,78,79,xeongpu_0,xeongpu,0.0,1015.7152087543229,,1
+390,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,61,62,xeongpu_0,xeongpu,0.0,1091.6047377212892,,1
+390,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,64,65,xeongpu_0,xeongpu,0.0,1277.6952816957607,,1
+390,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,78,79,xeongpu_0,xeongpu,0.0,861.4547621544376,,1
+390,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,78,79,xeongpu_0,xeongpu,0.0,981.0764177448164,,1
+390,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,75,76,xeongpu_0,xeongpu,0.0,1036.6006170742182,,1
+390,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.6,0.0,Within thresholds,0
+390,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.8,0.0,Within thresholds,0
+395,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,79,80,xeongpu_0,xeongpu,0.0,609.9308083789506,,1
+395,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,62,63,xeongpu_0,xeongpu,0.0,400.639425233365,,1
+395,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,65,66,xeongpu_0,xeongpu,0.0,496.75079167118383,,1
+395,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,79,80,xeongpu_0,xeongpu,0.0,955.960978805162,,1
+395,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,79,80,xeongpu_0,xeongpu,0.0,526.2682576525971,,1
+395,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,76,77,xeongpu_0,xeongpu,0.0,673.3472510368782,,1
+395,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.0,0.0,Within thresholds,0
+395,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.2,0.0,Within thresholds,0
+400,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,80,81,xeongpu_0,xeongpu,0.0,0.0,,1
+400,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,63,64,xeongpu_0,xeongpu,0.0,0.0,,1
+400,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,66,67,xeongpu_0,xeongpu,0.0,0.0,,1
+400,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,80,81,xeongpu_0,xeongpu,0.0,0.0,,1
+400,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,80,81,xeongpu_0,xeongpu,0.0,0.0,,1
+400,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,77,78,xeongpu_0,xeongpu,0.0,0.0,,1
+400,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.0,0.0,Within thresholds,0
+400,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.2,0.0,Within thresholds,0
+405,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,81,82,xeongpu_0,xeongpu,0.0,0.0,,1
+405,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,64,65,xeongpu_0,xeongpu,0.0,0.0,,1
+405,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,67,68,xeongpu_0,xeongpu,0.0,0.0,,1
+405,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,81,82,xeongpu_0,xeongpu,0.0,0.0,,1
+405,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,81,82,xeongpu_0,xeongpu,0.0,0.0,,1
+405,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,78,79,xeongpu_0,xeongpu,0.0,0.0,,1
+405,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.8,0.0,Within thresholds,0
+405,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.2,0.0,Within thresholds,0
+410,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,82,83,xeongpu_0,xeongpu,0.0,0.0,,1
+410,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,65,66,xeongpu_0,xeongpu,0.0,0.0,,1
+410,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,68,69,xeongpu_0,xeongpu,0.0,0.0,,1
+410,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,82,83,xeongpu_0,xeongpu,0.0,0.0,,1
+410,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,82,83,xeongpu_0,xeongpu,0.0,0.0,,1
+410,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,79,80,xeongpu_0,xeongpu,0.0,0.0,,1
+410,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.8,0.0,Within thresholds,0
+410,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,4.4,0.0,Within thresholds,0
+415,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,83,84,xeongpu_0,xeongpu,0.0,0.0,,1
+415,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,66,67,xeongpu_0,xeongpu,0.0,0.0,,1
+415,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,69,70,xeongpu_0,xeongpu,0.0,0.0,,1
+415,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,83,84,xeongpu_0,xeongpu,0.0,0.0,,1
+415,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,83,84,xeongpu_0,xeongpu,0.0,0.0,,1
+415,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,80,81,xeongpu_0,xeongpu,0.0,0.0,,1
+415,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,10.4,0.0,Within thresholds,0
+415,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,9.2,0.0,Within thresholds,0
+420,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,84,85,xeongpu_0,xeongpu,0.0,0.0,,1
+420,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,67,68,xeongpu_0,xeongpu,0.0,0.0,,1
+420,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,70,71,xeongpu_0,xeongpu,0.0,0.0,,1
+420,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,84,85,xeongpu_0,xeongpu,0.0,0.0,,1
+420,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,84,85,xeongpu_0,xeongpu,0.0,0.0,,1
+420,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,81,82,xeongpu_0,xeongpu,0.0,0.0,,1
+420,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.8,0.0,Within thresholds,0
+420,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.2,0.0,Within thresholds,0
+425,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,85,86,xeongpu_0,xeongpu,0.0,1260.0498080809639,,1
+425,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,68,69,xeongpu_0,xeongpu,0.0,1691.0304897761532,,1
+425,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,71,72,xeongpu_0,xeongpu,0.0,1511.092338175419,,1
+425,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,85,86,xeongpu_0,xeongpu,0.0,663.3620311277222,,1
+425,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,85,86,xeongpu_0,xeongpu,0.0,1070.5806544797142,,1
+425,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,82,83,xeongpu_0,xeongpu,0.0,1383.7341397270814,,1
+425,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.2,0.0,Within thresholds,0
+425,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.0,0.0,Within thresholds,0
+430,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,86,87,xeongpu_0,xeongpu,0.0,912.2998870378342,,1
+430,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,69,70,xeongpu_0,xeongpu,0.0,1305.3686520641204,,1
+430,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,72,73,xeongpu_0,xeongpu,0.0,440.66340196859244,,1
+430,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,86,87,xeongpu_0,xeongpu,0.0,969.0814963122664,,1
+430,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,86,87,xeongpu_0,xeongpu,0.0,824.1283989931105,,1
+430,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,83,84,xeongpu_0,xeongpu,0.0,650.280181964439,,1
+430,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.6,0.0,Within thresholds,0
+430,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.8,0.0,Within thresholds,0
+435,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,87,88,xeongpu_0,xeongpu,0.0,0.0,,1
+435,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,70,71,xeongpu_0,xeongpu,0.0,0.0,,1
+435,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,73,74,xeongpu_0,xeongpu,0.0,0.0,,1
+435,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,87,88,xeongpu_0,xeongpu,0.0,0.0,,1
+435,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,87,88,xeongpu_0,xeongpu,0.0,0.0,,1
+435,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,84,85,xeongpu_0,xeongpu,0.0,0.0,,1
+435,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.2,0.0,Within thresholds,0
+435,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.4,0.0,Within thresholds,0
+440,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,88,89,xeongpu_0,xeongpu,0.0,0.0,,1
+440,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,71,72,xeongpu_0,xeongpu,0.0,0.0,,1
+440,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,74,75,xeongpu_0,xeongpu,0.0,0.0,,1
+440,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,88,89,xeongpu_0,xeongpu,0.0,0.0,,1
+440,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,88,89,xeongpu_0,xeongpu,0.0,0.0,,1
+440,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,85,86,xeongpu_0,xeongpu,0.0,0.0,,1
+440,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.0,0.0,Within thresholds,0
+440,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,9.2,0.0,Within thresholds,0
+445,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,89,90,xeongpu_0,xeongpu,0.0,0.0,,1
+445,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,72,73,xeongpu_0,xeongpu,0.0,0.0,,1
+445,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,75,76,xeongpu_0,xeongpu,0.0,0.0,,1
+445,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,89,90,xeongpu_0,xeongpu,0.0,0.0,,1
+445,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,89,90,xeongpu_0,xeongpu,0.0,0.0,,1
+445,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,86,87,xeongpu_0,xeongpu,0.0,0.0,,1
+445,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,4.8,0.0,Within thresholds,0
+445,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.0,0.0,Within thresholds,0
+450,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,90,91,xeongpu_0,xeongpu,0.0,0.0,,1
+450,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,73,74,xeongpu_0,xeongpu,0.0,0.0,,1
+450,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,76,77,xeongpu_0,xeongpu,0.0,0.0,,1
+450,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,90,91,xeongpu_0,xeongpu,0.0,0.0,,1
+450,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,90,91,xeongpu_0,xeongpu,0.0,0.0,,1
+450,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,87,88,xeongpu_0,xeongpu,0.0,0.0,,1
+450,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.6,0.0,Within thresholds,0
+450,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.8,0.0,Within thresholds,0
+455,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,91,92,xeongpu_0,xeongpu,0.0,0.0,,1
+455,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,74,75,xeongpu_0,xeongpu,0.0,0.0,,1
+455,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,77,78,xeongpu_0,xeongpu,0.0,0.0,,1
+455,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,91,92,xeongpu_0,xeongpu,0.0,0.0,,1
+455,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,91,92,xeongpu_0,xeongpu,0.0,0.0,,1
+455,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,88,89,xeongpu_0,xeongpu,0.0,0.0,,1
+455,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.2,0.0,Within thresholds,0
+455,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.0,0.0,Within thresholds,0
+460,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,92,93,xeongpu_0,xeongpu,0.0,1250.7184844369308,,1
+460,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,75,76,xeongpu_0,xeongpu,0.0,1940.7964990392925,,1
+460,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,78,79,xeongpu_0,xeongpu,0.0,1719.5529268055393,,1
+460,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,92,93,xeongpu_0,xeongpu,0.0,1584.7742888756857,,1
+460,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,92,93,xeongpu_0,xeongpu,0.0,896.3768541490418,,1
+460,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,89,90,xeongpu_0,xeongpu,0.0,747.1343472917894,,1
+460,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.8,0.0,Within thresholds,0
+460,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,4.8,0.0,Within thresholds,0
+465,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,93,94,xeongpu_0,xeongpu,0.0,1313.4127288234424,,1
+465,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,76,77,xeongpu_0,xeongpu,0.0,1253.818645331748,,1
+465,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,79,80,xeongpu_0,xeongpu,0.0,1610.055985380015,,1
+465,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,93,94,xeongpu_0,xeongpu,0.0,1163.2110676467278,,1
+465,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,93,94,xeongpu_0,xeongpu,0.0,1914.527025768905,,1
+465,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,90,91,xeongpu_0,xeongpu,0.0,1283.2557819411363,,1
+465,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.2,0.0,Within thresholds,0
+465,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.0,0.0,Within thresholds,0
+470,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,94,95,xeongpu_0,xeongpu,0.0,0.0,,1
+470,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,77,78,xeongpu_0,xeongpu,0.0,0.0,,1
+470,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,80,81,xeongpu_0,xeongpu,0.0,0.0,,1
+470,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,94,95,xeongpu_0,xeongpu,0.0,0.0,,1
+470,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,94,95,xeongpu_0,xeongpu,0.0,0.0,,1
+470,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,91,92,xeongpu_0,xeongpu,0.0,0.0,,1
+470,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.2,0.0,Within thresholds,0
+470,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.8,0.0,Within thresholds,0
+475,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,95,96,xeongpu_0,xeongpu,0.0,0.0,,1
+475,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,78,79,xeongpu_0,xeongpu,0.0,0.0,,1
+475,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,81,82,xeongpu_0,xeongpu,0.0,0.0,,1
+475,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,95,96,xeongpu_0,xeongpu,0.0,0.0,,1
+475,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,95,96,xeongpu_0,xeongpu,0.0,0.0,,1
+475,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,92,93,xeongpu_0,xeongpu,0.0,0.0,,1
+475,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.2,0.0,Within thresholds,0
+475,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.6,0.0,Within thresholds,0
+480,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,96,97,xeongpu_0,xeongpu,0.0,0.0,,1
+480,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,79,80,xeongpu_0,xeongpu,0.0,0.0,,1
+480,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,82,83,xeongpu_0,xeongpu,0.0,0.0,,1
+480,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,96,97,xeongpu_0,xeongpu,0.0,0.0,,1
+480,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,96,97,xeongpu_0,xeongpu,0.0,0.0,,1
+480,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,93,94,xeongpu_0,xeongpu,0.0,0.0,,1
+480,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.6,0.0,Within thresholds,0
+480,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.6,0.0,Within thresholds,0
+485,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,97,98,xeongpu_0,xeongpu,0.0,0.0,,1
+485,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,80,81,xeongpu_0,xeongpu,0.0,0.0,,1
+485,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,83,84,xeongpu_0,xeongpu,0.0,0.0,,1
+485,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,97,98,xeongpu_0,xeongpu,0.0,0.0,,1
+485,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,97,98,xeongpu_0,xeongpu,0.0,0.0,,1
+485,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,94,95,xeongpu_0,xeongpu,0.0,0.0,,1
+485,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.6,0.0,Within thresholds,0
+485,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.2,0.0,Within thresholds,0
+490,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,98,99,xeongpu_0,xeongpu,0.0,0.0,,1
+490,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,81,82,xeongpu_0,xeongpu,0.0,0.0,,1
+490,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,84,85,xeongpu_0,xeongpu,0.0,0.0,,1
+490,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,98,99,xeongpu_0,xeongpu,0.0,0.0,,1
+490,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,98,99,xeongpu_0,xeongpu,0.0,0.0,,1
+490,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,95,96,xeongpu_0,xeongpu,0.0,0.0,,1
+490,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,8.0,0.0,Within thresholds,0
+490,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,5.4,0.0,Within thresholds,0
+495,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,99,100,xeongpu_0,xeongpu,0.0,1482.9245753216462,,1
+495,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,82,83,xeongpu_0,xeongpu,0.0,2016.1854815297993,,1
+495,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,85,86,xeongpu_0,xeongpu,0.0,1577.0482661315118,,1
+495,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,99,100,xeongpu_0,xeongpu,0.0,1513.026752815244,,1
+495,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,99,100,xeongpu_0,xeongpu,0.0,731.4161539664818,,1
+495,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,96,97,xeongpu_0,xeongpu,0.0,1095.4921289701042,,1
+495,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,7.8,0.0,Within thresholds,0
+495,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.4,0.0,Within thresholds,0
+500,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,100,101,xeongpu_0,xeongpu,0.0,1316.1025015408823,,1
+500,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,83,84,xeongpu_0,xeongpu,0.0,1534.5692803506997,,1
+500,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,86,87,xeongpu_0,xeongpu,0.0,3010.4253144075415,,1
+500,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,100,101,xeongpu_0,xeongpu,0.0,1515.80460600291,,1
+500,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,100,101,xeongpu_0,xeongpu,0.0,1429.0575596001959,,1
+500,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,97,98,xeongpu_0,xeongpu,0.0,1535.2149414397047,,1
+500,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,6.0,0.0,Within thresholds,0
+500,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,6.6,0.0,Within thresholds,0
+505,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,101,102,xeongpu_0,xeongpu,0.0,0.0,,1
+505,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,84,85,xeongpu_0,xeongpu,0.0,0.0,,1
+505,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,87,88,xeongpu_0,xeongpu,0.0,0.0,,1
+505,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,101,102,xeongpu_0,xeongpu,0.0,0.0,,1
+505,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,101,102,xeongpu_0,xeongpu,0.0,0.0,,1
+505,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,98,99,xeongpu_0,xeongpu,0.0,0.0,,1
+505,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,5.4,0.0,Within thresholds,0
+505,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,7.6,0.0,Within thresholds,0
+510,HighPerformanceShortTimeBinPacker,resnet50-inference,scale_up,102,103,xeongpu_0,xeongpu,0.0,0.0,,1
+510,HighPerformanceShortTimeBinPacker,resnet50-inference-downtown,scale_up,85,86,xeongpu_0,xeongpu,0.0,0.0,,1
+510,HighPerformanceShortTimeBinPacker,resnet50-inference-suburb,scale_up,88,89,xeongpu_0,xeongpu,0.0,0.0,,1
+510,HighPerformanceShortTimeBinPacker,resnet50-inference-industrial,scale_up,102,103,xeongpu_0,xeongpu,0.0,0.0,,1
+510,HighPerformanceShortTimeBinPacker,resnet50-inference-residential,scale_up,102,103,xeongpu_0,xeongpu,0.0,0.0,,1
+510,HighPerformanceShortTimeBinPacker,resnet50-inference-commercial,scale_up,99,100,xeongpu_0,xeongpu,0.0,0.0,,1
+510,HighPerformanceShortTimeBinPacker,resnet50-training,no_action,45,45,,,9.4,0.0,Within thresholds,0
+510,HighPerformanceShortTimeBinPacker,resnet50-training-downtown,no_action,39,39,,,8.0,0.0,Within thresholds,0

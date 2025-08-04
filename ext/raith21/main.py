@@ -37,6 +37,7 @@ from ext.raith21.etherdevices import convert_to_ether_nodes
 from ext.raith21.fet import ai_execution_time_distributions
 from ext.raith21.functionsim import AIPythonHTTPSimulatorFactory
 from ext.raith21.generator import generate_devices
+from ext.raith21.generators.edgeai import make_edgeai_settings
 from ext.raith21.generators.cloudcpu import cloudcpu_settings
 from ext.raith21.generators.edgegpu import edgegpu_settings
 from ext.raith21.generators.edgesbc import edgesbc_settings
@@ -56,30 +57,31 @@ from ext.mhfd.autoscaler import create_heterogeneous_edge_autoscaler
 
 class SimulationConfig:
     """Configuration parameters for the simulation"""
-    
+
     def __init__(self):
-        # Simulation parameters 
-        self.num_devices = 240
-        self.device_settings = edgecloudlet_settings
+        # Simulation parameters
+        self.num_devices = 812
+        self.n_nuc = 2
+        self.device_settings = make_edgeai_settings(self.num_devices, self.n_nuc)
         self.duration = 500
         self.total_rps = 58
-        self.scenario = "custom"  # Options: "default", "intensive", "distributed", "custom"
-        self.scaling_strategy = "power" # Options: "performance", "power", "basic"
+        self.scenario = "light"  # Options: "light", "reduced", "edgeai", "custom"
+        self.scaling_strategy = "basic" # Options: "performance", "power", "basic"
         # Custom function counts for scenario
         self.custom_counts = {
-            "resnet50-inference": 6,
+            "resnet50-inference": 0,
             "speech-inference": 0,
             "resnet50-preprocessing": 0,
-            "resnet50-training": 2,  
-            "python-pi": 0,
-            "fio": 0,
+            "resnet50-training": 0,  
+            "python-pi": 7,
+            "fio": 5,
         }
         
         # Scheduler parameters
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "lplt_maxreplica500_"
+        self.settings_id = "edgeai_pwr_"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         
