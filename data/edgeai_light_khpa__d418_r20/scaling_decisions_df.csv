@@ -1,0 +1,1216 @@
+timestamp,strategy,deployment,action,old_replica_count,new_replica_count,selected_node,selected_node_type,current_load_rps,avg_response_time_ms,reason,scaling_direction
+5,KubernetesStyleFirstFit,resnet50-inference,no_action,1,1,,,0.2,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,0.4,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,resnet50-inference-suburb,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,resnet50-inference-industrial,no_action,1,1,,,0.4,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,speech-inference,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,speech-inference-downtown,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,speech-inference-suburb,no_action,1,1,,,0.2,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,0.4,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,0.2,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,python-pi,no_action,1,1,,,0.6,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,python-pi-downtown,no_action,1,1,,,0.4,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,python-pi-suburb,no_action,1,1,,,0.4,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,fio,no_action,1,1,,,0.2,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.0,0.0,Within thresholds,0
+5,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.4,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,resnet50-inference,no_action,1,1,,,0.8,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,resnet50-inference-industrial,no_action,1,1,,,2.4,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,speech-inference,no_action,1,1,,,1.2,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,speech-inference-downtown,no_action,1,1,,,0.4,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,speech-inference-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,python-pi,no_action,1,1,,,2.6,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,python-pi-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,python-pi-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.2,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+10,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,resnet50-inference,no_action,1,1,,,0.8,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,resnet50-inference-suburb,no_action,1,1,,,2.4,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,resnet50-inference-industrial,no_action,1,1,,,1.6,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,speech-inference,no_action,1,1,,,1.4,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,speech-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,speech-inference-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,0.4,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,python-pi,no_action,1,1,,,3.8,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,python-pi-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,python-pi-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.4,0.0,Within thresholds,0
+15,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,resnet50-inference,no_action,1,1,,,1.6,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.6,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,resnet50-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,resnet50-inference-industrial,no_action,1,1,,,2.4,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,speech-inference,no_action,1,1,,,1.8,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,speech-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,speech-inference-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.6,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,python-pi,no_action,1,1,,,2.6,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,python-pi-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,python-pi-suburb,no_action,1,1,,,3.0,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.2,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+20,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,resnet50-inference,no_action,1,1,,,1.2,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,resnet50-inference-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,resnet50-inference-industrial,no_action,1,1,,,1.4,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,speech-inference,no_action,1,1,,,1.0,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,speech-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,speech-inference-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,python-pi,no_action,1,1,,,2.4,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,python-pi-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,python-pi-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+25,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,resnet50-inference,no_action,1,1,,,1.4,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,resnet50-inference-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,resnet50-inference-industrial,no_action,1,1,,,2.2,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,speech-inference,no_action,1,1,,,0.8,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,speech-inference-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,speech-inference-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,python-pi,no_action,1,1,,,0.8,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,python-pi-downtown,no_action,1,1,,,3.8,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,python-pi-suburb,no_action,1,1,,,4.2,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.6,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.2,0.0,Within thresholds,0
+30,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.2,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,resnet50-inference,no_action,1,1,,,2.8,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,resnet50-inference-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,resnet50-inference-industrial,no_action,1,1,,,1.6,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,speech-inference,no_action,1,1,,,0.4,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,speech-inference-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,speech-inference-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,python-pi,no_action,1,1,,,2.4,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,python-pi-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,python-pi-suburb,no_action,1,1,,,4.8,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,fio,no_action,1,1,,,1.4,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.2,0.0,Within thresholds,0
+35,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+40,KubernetesStyleFirstFit,resnet50-inference,scale_up,1,2,nano_47,nano,0.0,634.6471747229132,,1
+40,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.8,386.7482554915085,Within thresholds,0
+40,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,1,2,nuc_0,nuc,0.0,710.477127866784,,1
+40,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,1,2,nuc_0,nuc,0.0,770.5785613671578,,1
+40,KubernetesStyleFirstFit,speech-inference,scale_up,1,2,rockpi_1,rockpi,0.0,7863.776836220444,,1
+40,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,1,2,nuc_0,nuc,0.0,9678.006441364427,,1
+40,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,1,2,nuc_0,nuc,0.0,6348.042179320537,,1
+40,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+40,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+40,KubernetesStyleFirstFit,python-pi,scale_up,1,2,rockpi_1,rockpi,0.0,4119.515553361635,,1
+40,KubernetesStyleFirstFit,python-pi-downtown,scale_up,1,2,nuc_0,nuc,0.0,5172.568965643941,,1
+40,KubernetesStyleFirstFit,python-pi-suburb,scale_up,1,2,nuc_0,nuc,0.0,6429.598799954687,,1
+40,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.6,0.0,Within thresholds,0
+40,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+40,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,2.6,0.0,Within thresholds,0
+45,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,611.6280398389301,,1
+45,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,388.5737795194864,Within thresholds,0
+45,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,698.5273671967919,,1
+45,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,720.0489453429527,,1
+45,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,6822.288558872836,,1
+45,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,7310.023415585505,,1
+45,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,6578.421130516503,,1
+45,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,3.6,0.0,Within thresholds,0
+45,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+45,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,4728.666363580882,,1
+45,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,5918.7542691535145,,1
+45,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,7829.359518981555,,1
+45,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.8,0.0,Within thresholds,0
+45,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+45,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,3.2,0.0,Within thresholds,0
+50,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.6,0.0,Within thresholds,0
+50,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,3.4,0.0,Within thresholds,0
+50,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+50,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.0,0.0,Within thresholds,0
+50,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+50,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+55,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+55,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+55,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+55,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.2,0.0,Within thresholds,0
+55,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+55,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+60,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+60,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+60,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+60,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+60,KubernetesStyleFirstFit,fio,no_action,1,1,,,1.6,0.0,Within thresholds,0
+60,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+60,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+65,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+65,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+65,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+65,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+65,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.2,0.0,Within thresholds,0
+65,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+65,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+70,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+70,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+70,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+70,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+70,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+70,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+70,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+75,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,568.0875973330731,,1
+75,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,402.5185122429116,Within thresholds,0
+75,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,552.8126652587149,,1
+75,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,714.7849825406645,,1
+75,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3840.0468329046357,,1
+75,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3859.407929526454,,1
+75,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3832.8168168215516,,1
+75,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+75,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+75,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1380.6433818463154,,1
+75,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1252.3439091751834,,1
+75,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1976.4983852539838,,1
+75,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+75,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+75,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+80,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,547.0543132782941,,1
+80,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.2,393.2074632963248,Within thresholds,0
+80,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,541.4335656975542,,1
+80,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,701.8738068596679,,1
+80,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3769.829172728315,,1
+80,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+80,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,3769.829172728315,,1
+80,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+80,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.6,0.0,Within thresholds,0
+80,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1072.113577590654,,1
+80,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1228.070132345511,,1
+80,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1236.6941018578643,,1
+80,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.0,0.0,Within thresholds,0
+80,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+80,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+85,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+85,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+85,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+85,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+85,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.8,0.0,Within thresholds,0
+85,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+85,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+90,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+90,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.4,0.0,Within thresholds,0
+90,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+90,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+90,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+90,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+95,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+95,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+95,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+95,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,KubernetesStyleFirstFit,python-pi-suburb,no_action,2,2,,,5.6,0.0,Within thresholds,0
+95,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.8,0.0,Within thresholds,0
+95,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+95,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+100,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+100,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+100,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+100,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.0,0.0,Within thresholds,0
+100,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+100,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+105,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+105,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+105,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+105,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.0,0.0,Within thresholds,0
+105,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+105,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+110,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,554.8925891740354,,1
+110,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,393.5936450945,Within thresholds,0
+110,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,563.0021650557768,,1
+110,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,713.6276778577226,,1
+110,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3847.3941763625776,,1
+110,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3874.1864643957624,,1
+110,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3824.894337340062,,1
+110,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+110,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+110,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1179.5119440051692,,1
+110,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1275.3333206356226,,1
+110,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1295.2004691631737,,1
+110,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.6,0.0,Within thresholds,0
+110,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.4,0.0,Within thresholds,0
+110,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+115,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,571.3227898392948,,1
+115,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.0,386.79265679096807,Within thresholds,0
+115,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,577.1316433880899,,1
+115,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,733.1469553289978,,1
+115,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3817.911768145393,,1
+115,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,3866.055650541384,,1
+115,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,3769.7678857494025,,1
+115,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.6,0.0,Within thresholds,0
+115,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+115,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1171.5029660509122,,1
+115,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1283.1730433798002,,1
+115,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1242.5492998215082,,1
+115,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+115,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+115,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+120,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+120,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.6,0.0,Within thresholds,0
+120,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+120,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+120,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.2,0.0,Within thresholds,0
+120,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+120,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+125,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+125,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.6,0.0,Within thresholds,0
+125,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+125,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.0,0.0,Within thresholds,0
+125,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+125,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+130,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.6,0.0,Within thresholds,0
+130,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+130,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+130,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.6,0.0,Within thresholds,0
+130,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+130,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+135,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+135,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.0,0.0,Within thresholds,0
+135,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+135,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+135,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.8,0.0,Within thresholds,0
+135,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+135,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.2,0.0,Within thresholds,0
+140,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.6,0.0,Within thresholds,0
+140,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+140,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+140,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+140,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+140,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+145,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,538.6289921525324,,1
+145,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,388.56560274020075,Within thresholds,0
+145,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,559.8799653682008,,1
+145,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,736.9554699555163,,1
+145,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3803.3278590858235,,1
+145,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3758.547699308616,,1
+145,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3857.2569665386086,,1
+145,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+145,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+145,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1205.8983612684065,,1
+145,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1368.6107364447068,,1
+145,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1257.5055725560392,,1
+145,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.2,0.0,Within thresholds,0
+145,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+145,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+150,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,554.3488906795128,,1
+150,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,4.0,385.6118685069341,Within thresholds,0
+150,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,562.6600029441022,,1
+150,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,756.4036825525592,,1
+150,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3833.8602611776623,,1
+150,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+150,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,3907.9859388367454,,1
+150,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.8,0.0,Within thresholds,0
+150,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+150,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1159.2659202639472,,1
+150,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1276.196445071526,,1
+150,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1247.792819466523,,1
+150,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+150,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+150,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,2.0,0.0,Within thresholds,0
+155,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+155,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,3.2,0.0,Within thresholds,0
+155,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+155,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.0,0.0,Within thresholds,0
+155,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+155,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+160,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+160,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+160,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,3.2,0.0,Within thresholds,0
+160,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,KubernetesStyleFirstFit,fio,no_action,1,1,,,1.8,0.0,Within thresholds,0
+160,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+160,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+165,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+165,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.4,0.0,Within thresholds,0
+165,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+165,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.4,0.0,Within thresholds,0
+165,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+165,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+170,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+170,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+170,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+170,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+170,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+170,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+175,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+175,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,3.2,0.0,Within thresholds,0
+175,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+175,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+175,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.8,0.0,Within thresholds,0
+175,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+175,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+180,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,566.1063531618421,,1
+180,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.2,381.62998900239785,Within thresholds,0
+180,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,528.2972616686659,,1
+180,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,706.0903901340048,,1
+180,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3827.5757066650053,,1
+180,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3809.1845558181203,,1
+180,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3826.860477727997,,1
+180,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.4,0.0,Within thresholds,0
+180,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+180,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1101.9417142246098,,1
+180,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1241.8273790932528,,1
+180,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1267.7055593390396,,1
+180,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.2,0.0,Within thresholds,0
+180,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+180,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+185,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,550.6002268837819,,1
+185,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.4,386.30675302163314,Within thresholds,0
+185,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,508.6085403397079,,1
+185,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,695.3705205311029,,1
+185,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3824.7981543231085,,1
+185,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,3810.454011149417,,1
+185,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,3804.656035346909,,1
+185,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.2,0.0,Within thresholds,0
+185,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+185,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1101.3709303887763,,1
+185,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1190.580803924663,,1
+185,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1264.211382669977,,1
+185,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.0,0.0,Within thresholds,0
+185,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+185,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+190,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+190,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.6,0.0,Within thresholds,0
+190,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,3.4,0.0,Within thresholds,0
+190,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.0,0.0,Within thresholds,0
+190,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+190,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+195,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+195,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.0,0.0,Within thresholds,0
+195,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+195,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.8,0.0,Within thresholds,0
+195,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+195,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+200,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+200,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+200,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+200,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.0,0.0,Within thresholds,0
+200,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+200,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+205,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+205,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+205,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+205,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+205,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+205,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+210,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+210,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.4,0.0,Within thresholds,0
+210,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+210,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.8,0.0,Within thresholds,0
+210,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.4,0.0,Within thresholds,0
+210,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.2,0.0,Within thresholds,0
+215,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,543.9726646046151,,1
+215,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.6,381.6384412119461,Within thresholds,0
+215,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,581.3542445789283,,1
+215,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,736.1892180899965,,1
+215,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3826.4009546668544,,1
+215,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3823.857209953536,,1
+215,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3852.594049588973,,1
+215,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,3.4,0.0,Within thresholds,0
+215,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,3.4,0.0,Within thresholds,0
+215,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1142.4297396576226,,1
+215,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1247.7652405235176,,1
+215,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1253.3065498442897,,1
+215,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.0,0.0,Within thresholds,0
+215,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+215,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+220,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,528.8064659821165,,1
+220,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.2,382.66499118004253,Within thresholds,0
+220,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,597.6204521517766,,1
+220,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,736.0885952212707,,1
+220,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3811.198886047497,,1
+220,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,3819.9009089069586,,1
+220,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,3819.7814406795346,,1
+220,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.8,0.0,Within thresholds,0
+220,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+220,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1089.918603011012,,1
+220,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1194.3576364161572,,1
+220,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1206.4417213322283,,1
+220,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+220,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+220,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+225,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+225,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+225,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+225,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.2,0.0,Within thresholds,0
+225,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+225,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,2.2,0.0,Within thresholds,0
+230,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.6,0.0,Within thresholds,0
+230,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.4,0.0,Within thresholds,0
+230,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+230,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.4,0.0,Within thresholds,0
+230,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,3.0,0.0,Within thresholds,0
+230,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+235,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+235,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.4,0.0,Within thresholds,0
+235,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+235,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+235,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.2,0.0,Within thresholds,0
+235,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+235,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.4,0.0,Within thresholds,0
+240,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+240,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,3.4,0.0,Within thresholds,0
+240,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+240,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+240,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+240,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+240,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+245,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+245,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+245,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+245,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+245,KubernetesStyleFirstFit,fio,no_action,1,1,,,5.0,0.0,Within thresholds,0
+245,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+245,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+250,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,570.9864288669162,,1
+250,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,396.11704157501424,Within thresholds,0
+250,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,561.4697570295488,,1
+250,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,713.9213269064174,,1
+250,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3809.28547607418,,1
+250,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3815.1694218748985,,1
+250,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+250,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.2,0.0,Within thresholds,0
+250,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,3.2,0.0,Within thresholds,0
+250,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1158.8495815569413,,1
+250,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1283.7661647750674,,1
+250,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1284.0389755844692,,1
+250,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.2,0.0,Within thresholds,0
+250,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+250,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+255,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,552.8617392526403,,1
+255,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,3.0,392.6637943413169,Within thresholds,0
+255,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,570.2351092957294,,1
+255,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,732.1868217141684,,1
+255,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3823.249488641565,,1
+255,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,3840.063334160476,,1
+255,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+255,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,0.6,0.0,Within thresholds,0
+255,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+255,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1091.0451217295672,,1
+255,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1196.2653229487814,,1
+255,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1210.7367609196206,,1
+255,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.6,0.0,Within thresholds,0
+255,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+255,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+260,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+260,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+260,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+260,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+260,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+260,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+265,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+265,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.4,0.0,Within thresholds,0
+265,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+265,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.8,0.0,Within thresholds,0
+265,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+265,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.4,0.0,Within thresholds,0
+270,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+270,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+270,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+270,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.6,0.0,Within thresholds,0
+270,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+270,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+275,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+275,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.4,0.0,Within thresholds,0
+275,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+275,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.0,0.0,Within thresholds,0
+275,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+275,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+280,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+280,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+280,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+280,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+280,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.8,0.0,Within thresholds,0
+280,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+280,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+285,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,567.4380255045974,,1
+285,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.2,384.7869075563508,Within thresholds,0
+285,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,589.5966195501217,,1
+285,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,735.4198680711286,,1
+285,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3819.0072273004366,,1
+285,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3815.4584180104794,,1
+285,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3871.840888930933,,1
+285,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.2,0.0,Within thresholds,0
+285,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+285,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1215.7425855499282,,1
+285,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1285.6232425488356,,1
+285,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1377.892334670088,,1
+285,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.2,0.0,Within thresholds,0
+285,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.2,0.0,Within thresholds,0
+285,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+290,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,586.3183954826247,,1
+290,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,375.9550837184406,Within thresholds,0
+290,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,622.8445171290061,,1
+290,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,740.3453400421296,,1
+290,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3755.273021200291,,1
+290,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,3738.796856253003,,1
+290,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+290,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.6,0.0,Within thresholds,0
+290,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+290,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1165.673158587828,,1
+290,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1298.5459246747785,,1
+290,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1226.594373852505,,1
+290,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.0,0.0,Within thresholds,0
+290,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+290,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+295,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+295,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.2,0.0,Within thresholds,0
+295,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+295,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+295,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+295,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+300,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+300,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.4,0.0,Within thresholds,0
+300,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+300,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.0,0.0,Within thresholds,0
+300,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+300,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+305,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+305,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+305,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+305,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+305,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+305,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+310,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+310,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.4,0.0,Within thresholds,0
+310,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+310,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.2,0.0,Within thresholds,0
+310,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+310,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+315,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+315,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+315,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+315,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+315,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+315,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.8,0.0,Within thresholds,0
+320,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,561.5892995203237,,1
+320,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,391.9278251542967,Within thresholds,0
+320,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,532.309256542566,,1
+320,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,710.7418732207359,,1
+320,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3812.039450659099,,1
+320,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3816.0629400482203,,1
+320,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3752.94095441248,,1
+320,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+320,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+320,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1156.1321337433583,,1
+320,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1265.4514131722817,,1
+320,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1263.597225049501,,1
+320,KubernetesStyleFirstFit,fio,no_action,1,1,,,1.6,0.0,Within thresholds,0
+320,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+320,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.4,0.0,Within thresholds,0
+325,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,567.7458697311494,,1
+325,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.6,389.4451785583328,Within thresholds,0
+325,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,541.6036221418494,,1
+325,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,713.225169645432,,1
+325,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3839.9916255203125,,1
+325,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+325,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+325,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+325,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+325,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1138.7996242241109,,1
+325,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1226.870897431872,,1
+325,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1234.9248851594173,,1
+325,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.0,0.0,Within thresholds,0
+325,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+325,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+330,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+330,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+330,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+330,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.0,0.0,Within thresholds,0
+330,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+330,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+335,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+335,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.8,0.0,Within thresholds,0
+335,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+335,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+335,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+335,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+340,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+340,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+340,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+340,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.0,0.0,Within thresholds,0
+340,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+340,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+345,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,3.4,0.0,Within thresholds,0
+345,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+345,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+345,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,KubernetesStyleFirstFit,fio,no_action,1,1,,,1.6,0.0,Within thresholds,0
+345,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+345,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.6,0.0,Within thresholds,0
+350,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,3.2,0.0,Within thresholds,0
+350,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+350,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+350,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+350,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.6,0.0,Within thresholds,0
+350,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.8,0.0,Within thresholds,0
+350,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+355,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,530.7522390156842,,1
+355,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,386.31598030885243,Within thresholds,0
+355,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,530.4285595007093,,1
+355,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,725.771222686878,,1
+355,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3814.209377859282,,1
+355,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3812.4668213697896,,1
+355,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3817.94510409001,,1
+355,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.4,0.0,Within thresholds,0
+355,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+355,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1125.4813502681639,,1
+355,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1267.8196956583906,,1
+355,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1294.0780993473709,,1
+355,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.6,0.0,Within thresholds,0
+355,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+355,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+360,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,553.9324212409904,,1
+360,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.6,385.8703852580005,Within thresholds,0
+360,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,549.6432325838966,,1
+360,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,742.1354133042939,,1
+360,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3792.7301577331414,,1
+360,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,3778.774667365752,,1
+360,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+360,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+360,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+360,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1125.8628005069259,,1
+360,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1272.227285520593,,1
+360,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1389.5702909707477,,1
+360,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+360,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+360,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+365,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+365,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+365,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.6,0.0,Within thresholds,0
+365,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+365,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+365,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+370,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+370,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+370,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+370,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.2,0.0,Within thresholds,0
+370,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+370,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.2,0.0,Within thresholds,0
+375,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+375,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.6,0.0,Within thresholds,0
+375,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+375,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.2,0.0,Within thresholds,0
+375,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+375,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+380,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.2,0.0,Within thresholds,0
+380,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.4,0.0,Within thresholds,0
+380,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+380,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+380,KubernetesStyleFirstFit,fio,no_action,1,1,,,3.4,0.0,Within thresholds,0
+380,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+380,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.4,0.0,Within thresholds,0
+385,KubernetesStyleFirstFit,resnet50-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.8,0.0,Within thresholds,0
+385,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+385,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+385,KubernetesStyleFirstFit,python-pi,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,python-pi-downtown,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,python-pi-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.0,0.0,Within thresholds,0
+385,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.2,0.0,Within thresholds,0
+385,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,0.6,0.0,Within thresholds,0
+390,KubernetesStyleFirstFit,resnet50-inference,scale_up,2,3,nano_47,nano,0.0,548.5867567561064,,1
+390,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.6,384.8644133673975,Within thresholds,0
+390,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,570.1242040218996,,1
+390,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,2,3,nuc_0,nuc,0.0,743.5188398631674,,1
+390,KubernetesStyleFirstFit,speech-inference,scale_up,2,3,rockpi_1,rockpi,0.0,3825.5192151816677,,1
+390,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,2,3,nuc_0,nuc,0.0,3813.8807928194024,,1
+390,KubernetesStyleFirstFit,speech-inference-suburb,scale_up,2,3,nuc_0,nuc,0.0,3843.3485493845365,,1
+390,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.0,0.0,Within thresholds,0
+390,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.4,0.0,Within thresholds,0
+390,KubernetesStyleFirstFit,python-pi,scale_up,2,3,rockpi_1,rockpi,0.0,1153.2343233855706,,1
+390,KubernetesStyleFirstFit,python-pi-downtown,scale_up,2,3,nuc_0,nuc,0.0,1264.313948528013,,1
+390,KubernetesStyleFirstFit,python-pi-suburb,scale_up,2,3,nuc_0,nuc,0.0,1235.6247531145873,,1
+390,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.4,0.0,Within thresholds,0
+390,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,0.6,0.0,Within thresholds,0
+390,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0
+395,KubernetesStyleFirstFit,resnet50-inference,scale_up,3,4,nano_47,nano,0.0,550.0478781954712,,1
+395,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.0,381.83411248404684,Within thresholds,0
+395,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_up,3,4,nuc_0,nuc,0.0,586.4201805339917,,1
+395,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_up,3,4,nuc_0,nuc,0.0,699.1315667053257,,1
+395,KubernetesStyleFirstFit,speech-inference,scale_up,3,4,rockpi_1,rockpi,0.0,3810.2607758204385,,1
+395,KubernetesStyleFirstFit,speech-inference-downtown,scale_up,3,4,nuc_0,nuc,0.0,3820.769518521047,,1
+395,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+395,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.8,0.0,Within thresholds,0
+395,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+395,KubernetesStyleFirstFit,python-pi,scale_up,3,4,rockpi_1,rockpi,0.0,1142.3234521377678,,1
+395,KubernetesStyleFirstFit,python-pi-downtown,scale_up,3,4,nuc_0,nuc,0.0,1284.0790906589016,,1
+395,KubernetesStyleFirstFit,python-pi-suburb,scale_up,3,4,nuc_0,nuc,0.0,1212.5674765633885,,1
+395,KubernetesStyleFirstFit,fio,no_action,1,1,,,4.0,0.0,Within thresholds,0
+395,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+395,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.4,0.0,Within thresholds,0
+400,KubernetesStyleFirstFit,resnet50-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+400,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,1.2,0.0,Within thresholds,0
+400,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+400,KubernetesStyleFirstFit,python-pi,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,python-pi-downtown,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,python-pi-suburb,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+400,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.6,0.0,Within thresholds,0
+400,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.4,0.0,Within thresholds,0
+400,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.8,0.0,Within thresholds,0
+405,KubernetesStyleFirstFit,resnet50-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,resnet50-inference-downtown,no_action,1,1,,,2.0,0.0,Within thresholds,0
+405,KubernetesStyleFirstFit,resnet50-inference-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,resnet50-inference-industrial,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,speech-inference-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,speech-inference-suburb,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,resnet50-training,no_action,1,1,,,2.2,0.0,Within thresholds,0
+405,KubernetesStyleFirstFit,resnet50-training-downtown,no_action,1,1,,,1.8,0.0,Within thresholds,0
+405,KubernetesStyleFirstFit,python-pi,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,python-pi-downtown,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,python-pi-suburb,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,KubernetesStyleFirstFit,fio,no_action,1,1,,,2.8,0.0,Within thresholds,0
+405,KubernetesStyleFirstFit,fio-downtown,no_action,1,1,,,1.0,0.0,Within thresholds,0
+405,KubernetesStyleFirstFit,fio-suburb,no_action,1,1,,,1.0,0.0,Within thresholds,0

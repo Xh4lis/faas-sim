@@ -133,3 +133,60 @@ def make_edgeai_settings(num_devices, n_nuc):
         logger.info(f"    - TX2: ~{tx2_percentage:.1%} ({int(num_devices * tx2_percentage)} devices)")
     
     return settings
+
+# def make_realistic_edgeai_settings(num_devices, n_nuc):
+#     """
+#     Realistic EdgeAI distribution for smart city deployment
+#     Based on typical edge AI infrastructure patterns
+#     """
+#     settings = copy.deepcopy(edgesbc_settings)
+    
+#     # Realistic percentages for edge AI deployment
+#     nuc_percentage = n_nuc / num_devices      # ~2.5% (3/120) - Edge coordinators
+#     coral_percentage = 0.15                   # 15% - AI accelerators for inference
+#     nano_percentage = 0.12                    # 12% - GPU inference nodes  
+#     nx_percentage = 0.08                      # 8% - High-performance AI nodes
+#     rockpi_percentage = 0.25                  # 25% - General compute nodes
+#     rpi_percentage = 0.35                     # 35% - Sensor/IoT nodes
+#     tx2_percentage = 0.05                     # 5% - Specialized AI nodes
+    
+#     # AARCH64 total
+#     aarch64_percentage = coral_percentage + nano_percentage + nx_percentage + rockpi_percentage + tx2_percentage
+    
+#     # Set distributions
+#     settings.arch[Arch.X86] = nuc_percentage
+#     settings.arch[Arch.ARM32] = rpi_percentage  
+#     settings.arch[Arch.AARCH64] = aarch64_percentage
+    
+#     # Verify total
+#     total = nuc_percentage + rpi_percentage + aarch64_percentage
+#     if abs(total - 1.0) > 0.01:
+#         logger.warning(f"Adjusting percentages: {total:.3f}")
+#         settings.arch[Arch.AARCH64] = 1.0 - nuc_percentage - rpi_percentage
+    
+#     # Update AARCH64 device ratios
+#     if aarch64_percentage > 0:
+#         coral_ratio = coral_percentage / aarch64_percentage      # ~22%
+#         nano_ratio = nano_percentage / aarch64_percentage        # ~18%  
+#         nx_ratio = nx_percentage / aarch64_percentage            # ~12%
+#         rockpi_ratio = rockpi_percentage / aarch64_percentage    # ~38%
+#         tx2_ratio = tx2_percentage / aarch64_percentage          # ~8%
+    
+#     # Update accelerator distribution for realistic AI workloads
+#     settings.properties[Arch.AARCH64].accelerator = {
+#         Accelerator.NONE: rockpi_ratio,                          # RockPi (general compute)
+#         Accelerator.GPU: nano_ratio + nx_ratio + tx2_ratio,      # GPU devices (38%)
+#         Accelerator.TPU: coral_ratio                             # TPU devices (22%)
+#     }
+    
+#     logger.info(f"🏭 Realistic EdgeAI Distribution (for {num_devices} devices):")
+#     logger.info(f"  X86 (NUC): {nuc_percentage:.1%} ({n_nuc} edge coordinators)")
+#     logger.info(f"  ARM32 (RPi): {rpi_percentage:.1%} ({int(num_devices * rpi_percentage)} sensor nodes)")
+#     logger.info(f"  AARCH64 AI nodes: {aarch64_percentage:.1%}")
+#     logger.info(f"    - Coral TPU: {coral_percentage:.1%} ({int(num_devices * coral_percentage)} devices)")
+#     logger.info(f"    - Nano GPU: {nano_percentage:.1%} ({int(num_devices * nano_percentage)} devices)")
+#     logger.info(f"    - NX GPU: {nx_percentage:.1%} ({int(num_devices * nx_percentage)} devices)")
+#     logger.info(f"    - RockPi CPU: {rockpi_percentage:.1%} ({int(num_devices * rockpi_percentage)} devices)")
+#     logger.info(f"    - TX2 GPU: {tx2_percentage:.1%} ({int(num_devices * tx2_percentage)} devices)")
+    
+#     return settings

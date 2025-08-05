@@ -316,7 +316,7 @@ class ReportGenerator:
         # Reset seaborn style to avoid affecting other plots
         sns.reset_orig()
     def generate_simple_response_time_graph(self):
-        """Generate a simple response time graph for scaling strategy evaluation"""
+        """Generate separate response time graphs for each function type with geographical variants"""
         if "autoscaler_detailed_metrics_df" not in self.data or self.data["autoscaler_detailed_metrics_df"].empty:
             print("No autoscaler detailed metrics data available")
             return
@@ -324,32 +324,207 @@ class ReportGenerator:
         import seaborn as sns
         
         df = self.data["autoscaler_detailed_metrics_df"]
-        print(f"Generating simple response time analysis with {len(df)} records...")
+        print(f"Generating response time analysis with {len(df)} records...")
         
         # Set clean style
         sns.set_style("whitegrid")
         
-        # Simple response time over time - clean and focused
-        plt.figure(figsize=(12, 6))
+        # Group deployments by function type
+        function_groups = {
+            'python-pi': [],
+            'resnet50-inference': [],
+            'resnet50-training': [],
+            'resnet50-preprocessing': [],
+            'speech-inference': [],
+            'fio': []
+        }
         
+        # Categorize deployments into function groups
         for deployment in df['deployment_name'].unique():
-            deployment_data = df[df['deployment_name'] == deployment]
-            plt.plot(deployment_data['timestamp'], deployment_data['avg_response_time'], 
-                    label=deployment, marker='o', markersize=4, linewidth=2)
+            for func_type in function_groups.keys():
+                if func_type in deployment:
+                    function_groups[func_type].append(deployment)
+                    break
         
-        plt.title('Response Time Over Time by Deployment', fontsize=14, fontweight='bold')
-        plt.xlabel('Time (seconds)', fontsize=12)
-        plt.ylabel('Average Response Time (ms)', fontsize=12)
-        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-        plt.grid(True, alpha=0.3)
+        # Remove empty groups
+        function_groups = {k: v for k, v in function_groups.items() if v}
+        
+        # Calculate grid dimensions
+        num_groups = len(function_groups)
+        cols = 2
+        rows = (num_groups + cols - 1) // cols  # Ceiling division
+        
+        # Create subplots
+        fig, axes = plt.subplots(rows, cols, figsize=(16, 6*rows))
+        
+        # Handle single plot case
+        if num_groups == 1:
+            axes = [axes]
+        elif rows == 1:
+            axes = axes.reshape(1, -1)
+        
+        # Flatten axes for easier indexing
+        axes_flat = axes.flatten() if num_groups > 1 else [axes[0]]
+        
+        # Color palette for geographical variants
+        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2']
+        
+        plot_idx = 0
+        for func_type, deployments in function_groups.items():
+            if plot_idx >= len(axes_flat):
+                break
+                
+            ax = axes_flat[plot_idx]
+            
+            # Plot each deployment in this function group
+            for i, deployment in enumerate(deployments):
+                deployment_data = df[df['deployment_name'] == deployment]
+                if not deployment_data.empty:
+                    # Extract geographical variant name for cleaner legend
+                    variant_name = deployment.replace(func_type, '').strip('-')
+                    if not variant_name:
+                        variant_name = 'base'
+                    
+                    ax.plot(deployment_data['timestamp'], deployment_data['avg_response_time'], 
+                           label=variant_name, marker='o', markersize=4, linewidth=2,
+                           color=colors[i % len(colors)])
+            
+            ax.set_title(f'{func_type.upper()} Response Time Over Time', 
+                        fontsize=14, fontweight='bold')
+            ax.set_xlabel('Time (seconds)', fontsize=12)
+            ax.set_ylabel('Average Response Time (ms)', fontsize=12)
+            ax.legend()
+            ax.grid(True, alpha=0.3)
+            
+            plot_idx += 1
+        
+        # Hide empty subplots
+        for idx in range(plot_idx, len(axes_flat)):
+            axes_flat[idx].set_visible(False)
+        
         plt.tight_layout()
-        
-        plt.savefig(os.path.join(self.output_dir, 'simple_response_time_over_time.png'), 
+        plt.savefig(os.path.join(self.output_dir, 'response_time_by_function_groups.png'), 
                     dpi=300, bbox_inches='tight')
         plt.close()
         
+        # Also create individual plots for each function type
+        self._generate_individual_function_plots(df, function_groups)
+        
         # Reset style
         sns.reset_orig()
+    
+    def _generate_individual_function_plots(self, df, function_groups):
+        """Generate individual plots for each function type"""
+        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2']
+        
+        for func_type, deployments in function_groups.items():
+            if not deployments:
+                continue
+                
+            plt.figure(figsize=(12, 6))
+            
+            for i, deployment in enumerate(deployments):
+                deployment_data = df[df['deployment_name'] == deployment]
+                if not deployment_data.empty:
+                    # Extract geographical variant name
+                    variant_name = deployment.replace(func_type, '').strip('-')
+                    if not variant_name:
+                        variant_name = 'base'
+                    
+                    plt.plot(deployment_data['timestamp'], deployment_data['avg_response_time'], 
+                            label=variant_name, marker='o', markersize=5, linewidth=2.5,
+                            color=colors[i % len(colors)])
+            
+            plt.title(f'{func_type.upper()} Response Time Analysis', 
+                     fontsize=16, fontweight='bold')
+            plt.xlabel('Time (seconds)', fontsize=14)
+            plt.ylabel('Average Response Time (ms)', fontsize=14)
+            plt.legend(fontsize=12)
+            plt.grid(True, alpha=0.3)
+            
+            # Add statistics annotation
+            func_data = df[df['deployment_name'].isin(deployments)]
+            avg_response = func_data['avg_response_time'].mean()
+            max_response = func_data['avg_response_time'].max()
+            min_response = func_data['avg_response_time'].min()
+            
+            stats_text = f'Avg: {avg_response:.0f}ms\nMax: {max_response:.0f}ms\nMin: {min_response:.0f}ms'
+            plt.text(0.02, 0.98, stats_text, transform=plt.gca().transAxes, 
+                    fontsize=10, verticalalignment='top', 
+                    bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
+            
+            plt.tight_layout()
+            
+            # Save individual plot
+            filename = f'response_time_{func_type.replace("-", "_")}.png'
+            plt.savefig(os.path.join(self.output_dir, filename), 
+                       dpi=300, bbox_inches='tight')
+            plt.close()
+            
+            print(f"✅ Generated individual plot for {func_type}")
+    
+    # Also add this enhanced summary method
+    def _generate_function_response_summary(self, df, function_groups):
+        """Generate detailed response time summary by function groups"""
+        with open(os.path.join(self.output_dir, "response_time_function_summary.txt"), "w") as f:
+            f.write("RESPONSE TIME ANALYSIS BY FUNCTION TYPE\n")
+            f.write("======================================\n\n")
+            f.write(f"Report generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            
+            # Overall statistics
+            f.write("OVERALL STATISTICS\n")
+            f.write("==================\n")
+            f.write(f"Total measurements: {len(df)}\n")
+            f.write(f"Overall average response time: {df['avg_response_time'].mean():.2f} ms\n")
+            f.write(f"Overall max response time: {df['avg_response_time'].max():.2f} ms\n")
+            f.write(f"Overall min response time: {df['avg_response_time'].min():.2f} ms\n\n")
+            
+            # Function group analysis
+            for func_type, deployments in function_groups.items():
+                if not deployments:
+                    continue
+                    
+                f.write(f"FUNCTION TYPE: {func_type.upper()}\n")
+                f.write("=" * (len(func_type) + 16) + "\n\n")
+                
+                func_data = df[df['deployment_name'].isin(deployments)]
+                
+                f.write(f"Geographical variants: {len(deployments)}\n")
+                f.write(f"Total measurements: {len(func_data)}\n")
+                f.write(f"Average response time: {func_data['avg_response_time'].mean():.2f} ms\n")
+                f.write(f"Max response time: {func_data['avg_response_time'].max():.2f} ms\n")
+                f.write(f"Min response time: {func_data['avg_response_time'].min():.2f} ms\n")
+                f.write(f"Response time std dev: {func_data['avg_response_time'].std():.2f} ms\n\n")
+                
+                # Per-deployment breakdown
+                f.write("Per-deployment breakdown:\n")
+                for deployment in sorted(deployments):
+                    dep_data = func_data[func_data['deployment_name'] == deployment]
+                    if not dep_data.empty:
+                        variant = deployment.replace(func_type, '').strip('-') or 'base'
+                        f.write(f"  {variant}:\n")
+                        f.write(f"    Measurements: {len(dep_data)}\n")
+                        f.write(f"    Avg response: {dep_data['avg_response_time'].mean():.2f} ms\n")
+                        f.write(f"    Max response: {dep_data['avg_response_time'].max():.2f} ms\n")
+                        f.write(f"    Time range: {dep_data['timestamp'].min():.1f} - {dep_data['timestamp'].max():.1f}s\n")
+                
+                f.write("\n")
+            
+            # Performance ranking
+            f.write("PERFORMANCE RANKING (by average response time)\n")
+            f.write("==============================================\n\n")
+            
+            func_performance = []
+            for func_type, deployments in function_groups.items():
+                if deployments:
+                    func_data = df[df['deployment_name'].isin(deployments)]
+                    avg_response = func_data['avg_response_time'].mean()
+                    func_performance.append((func_type, avg_response))
+            
+            func_performance.sort(key=lambda x: x[1])  # Sort by response time
+            
+            for rank, (func_type, avg_response) in enumerate(func_performance, 1):
+                f.write(f"{rank}. {func_type}: {avg_response:.2f} ms\n")
     def _generate_autoscaler_time_series_analysis(self, df):
         """Generate detailed time series analysis for autoscaler metrics"""
         fig, axes = plt.subplots(2, 2, figsize=(16, 12))

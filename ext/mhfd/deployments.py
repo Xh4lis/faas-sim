@@ -95,25 +95,29 @@ def create_smart_city_deployments(
         "light": {
             "resnet50-inference": 4,     
             "speech-inference": 3,        
-            "resnet50-preprocessing": 2, 
-            "resnet50-training": 4,  
+            "resnet50-preprocessing": 1, 
+            "resnet50-training": 2,  
             "python-pi": 3,  
             "fio": 3,  
-            # Total: 26 instances 
+            # Total: 16 instances 
         },
-        "reduced": {
-            "resnet50-inference": 15,     
-            "speech-inference": 12,       
-            "resnet50-preprocessing": 15, 
-            "resnet50-training": 8,       
-            # Total: 50 instances
+        "realistic_city": {
+            "resnet50-inference": 8,        # Traffic cameras, security systems
+            "speech-inference": 6,          # Voice kiosks, smart assistants  
+            "resnet50-preprocessing": 4,    # Image processing pipelines
+            "resnet50-training": 2,         # Federated learning coordination
+            "python-pi": 12,                # IoT monitoring, environmental sensors
+            "fio": 8,                       # Storage performance monitoring
+            # Total: 40 instances - realistic smart city deployment
         },
-        "edgeai": {
-            "resnet50-inference": 20,     
-            "speech-inference": 15,      
-            "resnet50-preprocessing": 20, 
-            "resnet50-training": 10,      
-            # Total: 65 instances
+        "intensive_ai": {
+            "resnet50-inference": 15,       # High-density camera networks
+            "speech-inference": 10,         # Multi-language processing  
+            "resnet50-preprocessing": 8,    # Real-time video analytics
+            "resnet50-training": 5,         # Distributed ML training
+            "python-pi": 20,                # Dense IoT sensor network
+            "fio": 12,                      # High-throughput storage testing
+            # Total: 70 instances - intensive AI workload
         },
     }
 
