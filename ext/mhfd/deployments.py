@@ -93,12 +93,12 @@ def create_smart_city_deployments(
     # Define scenarios with different deployment patterns
     scenarios = {
         "light": {
-            "resnet50-inference": 0,     
-            "speech-inference": 0,        
-            "resnet50-preprocessing": 0, 
-            "resnet50-training": 0,  
-            "python-pi": 5,  
-            "fio": 2,  
+            "resnet50-inference": 1,     
+            "speech-inference": 1,        
+            "resnet50-preprocessing": 1, 
+            "resnet50-training": 1,  
+            "python-pi": 1,  
+            "fio": 1,  
             # Total: 26 instances 
         },
         "reduced": {

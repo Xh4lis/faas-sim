@@ -6,6 +6,18 @@ Characterization is the **central connector** that links resources, images, and 
 
 ### **1. Characterization Creates the Links**
 
+| Device         | Arch    | CPU                             | RAM   | Accelerator                        | Storage |
+| -------------- | ------- | ------------------------------- | ----- | ---------------------------------- | ------- |
+| Xeon (GPU)     | x86     | 4 x Core Xeon E-2224 @ 3.44 GHz | 8 GB  | Turing GPU - 6 GB                  | SSD     |
+| Intel NUC      | x86     | 4 x Intel i5 @ 2.2 GHz          | 16 GB | N/A                                | NVME    |
+| RPi 3          | arm32   | 4 x Cortex-A53 @ 1.4 GHz        | 1 GB  | N/A                                | SD Card |
+| RPi 4          | arm32   | 4 x Cortex-A72 @ 1.5 GHz        | 1 GB  | N/A                                | SD Card |
+| RockPi         | aarch64 | 2 x Cortex-A72, 4 x Cortex-A53  | 2 GB  | N/A                                | SD Card |
+| Coral DevBoard | aarch64 | 4 x Cortex-A53                  | 1 GB  | Google Edge TPU                    | eMMC    |
+| Jetson TX2     | aarch64 | 4 x Cortex-A57 @ 2 Ghz          | 8 GB  | 256-core Pascal GPU                | eMMC    |
+| Jetson Nano    | aarch64 | 4 x Cortex-A57 @ 1.43 GHz       | 4 GB  | 128-core Maxwell GPU               | SD Card |
+| Jetson NX      | aarch64 | 6 x Nvidia Carmel @ 1.9 GHz     | 8 GB  | 384-core Volta GPU 48 tensor cores | SD Card |
+
 ```python
 # In characterization.py
 images.resnet50_inference_cpu_manifest: FunctionCharacterization(

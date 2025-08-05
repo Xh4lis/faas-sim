@@ -60,13 +60,13 @@ class SimulationConfig:
 
     def __init__(self):
         # Simulation parameters
-        self.num_devices = 812
+        self.num_devices = 100
         self.n_nuc = 2
         self.device_settings = make_edgeai_settings(self.num_devices, self.n_nuc)
-        self.duration = 500
+        self.duration = 400
         self.total_rps = 58
         self.scenario = "light"  # Options: "light", "reduced", "edgeai", "custom"
-        self.scaling_strategy = "basic" # Options: "performance", "power", "basic"
+        self.scaling_strategy = "performance" # Options: "performance", "power", "basic" , "kubernetes"
         # Custom function counts for scenario
         self.custom_counts = {
             "resnet50-inference": 0,
@@ -81,7 +81,7 @@ class SimulationConfig:
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "edgeai_pwr_"
+        self.settings_id = "edgeai_light_perf_"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         
@@ -131,9 +131,9 @@ def setup_scheduler_config(config, fet_oracle, resource_oracle):
     predicates.extend(Scheduler.default_predicates)
     predicates.extend([
         CanRunPred(fet_oracle, resource_oracle),  # Uncomment if needed
-        # NodeHasAcceleratorPred(),
-        # NodeHasFreeGpu(),
-        # NodeHasFreeTpu(),  # Uncomment if needed
+        NodeHasAcceleratorPred(),
+        NodeHasFreeGpu(),
+        NodeHasFreeTpu(),  # Uncomment if needed
     ])
     
     priorities = vanilla.get_priorities()
@@ -271,7 +271,7 @@ def extract_metrics(sim):
         "invocations", "scale", "schedule", "replica_deployment",
         "function_deployments", "function_deployment", "function_deployment_lifecycle",
         "functions", "flow", "network", "utilization", "fets",
-        "power", "energy", "scaling_decisions", "scaling_evaluations"
+        "power", "energy", "scaling_decisions", "scaling_evaluations","autoscaler_detailed_metrics"
     ]
     
     dfs = {}

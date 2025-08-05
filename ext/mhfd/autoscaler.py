@@ -4,6 +4,7 @@ from typing import Dict, Any, Optional
 
 from ext.mhfd.scaling.strategies.standard_first_fit_packer import StandardFirstFitBinPacker
 from ext.mhfd.scaling.strategies.lplt import LowPowerLongTimeBinPacker
+from ext.mhfd.scaling.strategies.khpa import KubernetesStyleFirstFitBinPacker
 from ext.mhfd.scaling.strategies.hpst import HighPerformanceShortTimeBinPacker
 
 logger = logging.getLogger(__name__)
@@ -37,6 +38,7 @@ class Autoscaler:
     def _create_strategy(self, strategy_name: str):
         """Create the appropriate scaling strategy"""
         strategies = {
+            'kubernetes': KubernetesStyleFirstFitBinPacker,
             'basic': StandardFirstFitBinPacker,
             'power': LowPowerLongTimeBinPacker,
             'performance': HighPerformanceShortTimeBinPacker

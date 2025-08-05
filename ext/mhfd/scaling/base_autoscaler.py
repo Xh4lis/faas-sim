@@ -80,7 +80,6 @@ class BaseAutoscaler(ABC):
                                            current_replicas, None, current_load, 
                                            avg_response_time, "Within thresholds")
         df = self.get_detailed_metrics_df()
-        self.export_detailed_metrics_csv("detailed_metrics.csv")
     
     def record_scaling_evaluation(self, deployment_name: str, current_replicas: int,
                                 current_load: float, avg_response_time: float):
@@ -312,6 +311,20 @@ class BaseAutoscaler(ABC):
                 'sample_count': len(recent_fets),
                 'timestamp': current_time
             })
+            detailed_data = {
+                'deployment_name': deployment_name,
+                'timestamp': current_time,
+                'avg_response_time': avg_response_time,
+                'avg_execution_time': avg_execution_time,
+                'avg_wait_time': avg_wait_time,
+                'wait_percentage': wait_percentage,
+                'high_wait_count': high_wait_count,
+                'sample_count': len(recent_fets)
+            }
+            
+            # Log to environment metrics
+            self.env.metrics.log('autoscaler_detailed_metrics', detailed_data)
+            
             return avg_response_time
         except Exception as e:
             logger.error(f"❌ Error getting real response time from FETs: {e}")
