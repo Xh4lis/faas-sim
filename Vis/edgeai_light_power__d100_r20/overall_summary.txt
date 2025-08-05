@@ -1,0 +1,225 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-08-05 13:42:40
+
+Topology Overview:
+  Number of nodes: 100
+  Number of functions: 6
+  Number of images: 2
+
+Node Distribution:
+  rockpi_25: 181 invocations (3.3%)
+  rpi3_18: 82 invocations (1.5%)
+  rpi3_25: 76 invocations (1.4%)
+  rpi3_24: 77 invocations (1.4%)
+  rpi3_26: 84 invocations (1.5%)
+  rockpi_2: 120 invocations (2.2%)
+  nx_9: 128 invocations (2.3%)
+  rockpi_23: 110 invocations (2.0%)
+  coral_1: 74 invocations (1.3%)
+  rockpi_13: 115 invocations (2.1%)
+  rpi3_20: 84 invocations (1.5%)
+  rpi3_19: 100 invocations (1.8%)
+  nx_2: 104 invocations (1.9%)
+  rockpi_6: 96 invocations (1.7%)
+  nx_5: 104 invocations (1.9%)
+  rpi3_3: 44 invocations (0.8%)
+  rpi3_4: 86 invocations (1.6%)
+  rpi3_5: 67 invocations (1.2%)
+  coral_3: 61 invocations (1.1%)
+  coral_2: 60 invocations (1.1%)
+  rockpi_12: 83 invocations (1.5%)
+  nx_10: 97 invocations (1.8%)
+  rockpi_26: 81 invocations (1.5%)
+  rpi3_21: 38 invocations (0.7%)
+  rpi3_22: 72 invocations (1.3%)
+  rpi3_23: 57 invocations (1.0%)
+  nx_13: 89 invocations (1.6%)
+  rockpi_0: 73 invocations (1.3%)
+  rpi3_27: 33 invocations (0.6%)
+  rpi3_28: 54 invocations (1.0%)
+  rockpi_10: 73 invocations (1.3%)
+  rockpi_7: 92 invocations (1.7%)
+  rpi3_29: 63 invocations (1.1%)
+  rockpi_15: 78 invocations (1.4%)
+  rpi3_0: 30 invocations (0.5%)
+  rpi3_1: 50 invocations (0.9%)
+  rpi3_2: 57 invocations (1.0%)
+  rockpi_4: 70 invocations (1.3%)
+  rockpi_3: 75 invocations (1.4%)
+  nx_4: 79 invocations (1.4%)
+  rpi3_10: 43 invocations (0.8%)
+  rockpi_5: 77 invocations (1.4%)
+  rpi3_9: 33 invocations (0.6%)
+  rockpi_14: 60 invocations (1.1%)
+  rpi3_11: 42 invocations (0.8%)
+  rockpi_17: 65 invocations (1.2%)
+  rockpi_16: 67 invocations (1.2%)
+  rpi3_16: 46 invocations (0.8%)
+  rpi3_15: 22 invocations (0.4%)
+  rockpi_22: 57 invocations (1.0%)
+  nx_6: 68 invocations (1.2%)
+  rpi3_6: 26 invocations (0.5%)
+  rpi3_17: 38 invocations (0.7%)
+  rockpi_21: 68 invocations (1.2%)
+  rockpi_29: 60 invocations (1.1%)
+  rockpi_1: 55 invocations (1.0%)
+  rpi3_7: 36 invocations (0.7%)
+  rpi3_8: 36 invocations (0.7%)
+  rpi3_13: 35 invocations (0.6%)
+  nx_7: 64 invocations (1.2%)
+  rpi3_12: 25 invocations (0.5%)
+  nx_11: 64 invocations (1.2%)
+  nano_2: 18 invocations (0.3%)
+  rpi3_14: 34 invocations (0.6%)
+  coral_0: 40 invocations (0.7%)
+  rockpi_27: 46 invocations (0.8%)
+  nx_12: 60 invocations (1.1%)
+  nano_7: 39 invocations (0.7%)
+  rockpi_18: 59 invocations (1.1%)
+  rockpi_19: 57 invocations (1.0%)
+  rockpi_24: 48 invocations (0.9%)
+  rockpi_28: 49 invocations (0.9%)
+  nx_0: 55 invocations (1.0%)
+  nano_18: 16 invocations (0.3%)
+  nx_3: 53 invocations (1.0%)
+  nx_14: 50 invocations (0.9%)
+  nx_8: 50 invocations (0.9%)
+  nano_5: 32 invocations (0.6%)
+  nano_12: 11 invocations (0.2%)
+  rockpi_9: 50 invocations (0.9%)
+  rockpi_11: 49 invocations (0.9%)
+  nano_15: 27 invocations (0.5%)
+  rockpi_20: 45 invocations (0.8%)
+  nuc_0: 34 invocations (0.6%)
+  rockpi_8: 40 invocations (0.7%)
+  nx_1: 43 invocations (0.8%)
+  nano_14: 28 invocations (0.5%)
+  nuc_1: 29 invocations (0.5%)
+  nano_6: 23 invocations (0.4%)
+  nano_3: 11 invocations (0.2%)
+  nano_13: 14 invocations (0.3%)
+  nano_4: 19 invocations (0.3%)
+  nano_10: 16 invocations (0.3%)
+  nano_11: 19 invocations (0.3%)
+  nano_8: 12 invocations (0.2%)
+  nano_16: 16 invocations (0.3%)
+  nano_9: 10 invocations (0.2%)
+  nano_0: 14 invocations (0.3%)
+  nano_17: 11 invocations (0.2%)
+  nano_1: 14 invocations (0.3%)
+
+Function Distribution:
+  python-pi-downtown: 1228 invocations (22.2%)
+  python-pi: 1258 invocations (22.8%)
+  python-pi-suburb: 1160 invocations (21.0%)
+  fio-suburb: 397 invocations (7.2%)
+  fio: 1106 invocations (20.0%)
+  fio-downtown: 376 invocations (6.8%)
+Network Activity:
+  Total transfers: 171
+  Total bytes transferred: 6597.52 MB
+  Transfer duration: 57.49 s
+
+Network Flows:
+  registry → coral_0: 59.13 MB in 0.51 s
+  registry → coral_1: 59.13 MB in 0.51 s
+  registry → coral_2: 59.13 MB in 0.51 s
+  registry → coral_3: 59.13 MB in 0.51 s
+  registry → nano_0: 81.06 MB in 0.71 s
+  registry → nano_1: 81.06 MB in 0.71 s
+  registry → nano_10: 81.06 MB in 0.70 s
+  registry → nano_11: 21.93 MB in 0.19 s
+  registry → nano_12: 21.93 MB in 0.19 s
+  registry → nano_13: 81.06 MB in 0.70 s
+  registry → nano_14: 81.06 MB in 0.70 s
+  registry → nano_15: 21.93 MB in 0.19 s
+  registry → nano_16: 81.06 MB in 0.70 s
+  registry → nano_17: 81.06 MB in 0.70 s
+  registry → nano_18: 21.93 MB in 0.19 s
+  registry → nano_2: 81.06 MB in 0.70 s
+  registry → nano_3: 81.06 MB in 0.70 s
+  registry → nano_4: 81.06 MB in 0.70 s
+  registry → nano_5: 81.06 MB in 0.70 s
+  registry → nano_6: 81.06 MB in 0.70 s
+  registry → nano_7: 81.06 MB in 0.70 s
+  registry → nano_8: 81.06 MB in 0.70 s
+  registry → nano_9: 81.06 MB in 0.70 s
+  registry → nuc_0: 83.92 MB in 0.73 s
+  registry → nuc_1: 106.81 MB in 0.93 s
+  registry → nx_0: 81.06 MB in 0.71 s
+  registry → nx_1: 81.06 MB in 0.70 s
+  registry → nx_10: 81.06 MB in 0.70 s
+  registry → nx_11: 59.13 MB in 0.51 s
+  registry → nx_12: 81.06 MB in 0.70 s
+  registry → nx_13: 81.06 MB in 0.70 s
+  registry → nx_14: 81.06 MB in 0.70 s
+  registry → nx_2: 81.06 MB in 0.70 s
+  registry → nx_3: 81.06 MB in 0.70 s
+  registry → nx_4: 81.06 MB in 0.70 s
+  registry → nx_5: 59.13 MB in 0.51 s
+  registry → nx_6: 81.06 MB in 0.70 s
+  registry → nx_7: 81.06 MB in 0.70 s
+  registry → nx_8: 81.06 MB in 0.70 s
+  registry → nx_9: 59.13 MB in 0.51 s
+  registry → rockpi_0: 81.06 MB in 0.71 s
+  registry → rockpi_1: 81.06 MB in 0.71 s
+  registry → rockpi_10: 81.06 MB in 0.71 s
+  registry → rockpi_11: 81.06 MB in 0.71 s
+  registry → rockpi_12: 81.06 MB in 0.71 s
+  registry → rockpi_13: 81.06 MB in 0.71 s
+  registry → rockpi_14: 81.06 MB in 0.71 s
+  registry → rockpi_15: 81.06 MB in 0.71 s
+  registry → rockpi_16: 81.06 MB in 0.71 s
+  registry → rockpi_17: 81.06 MB in 0.71 s
+  registry → rockpi_18: 59.13 MB in 0.51 s
+  registry → rockpi_19: 81.06 MB in 0.71 s
+  registry → rockpi_2: 81.06 MB in 0.71 s
+  registry → rockpi_20: 81.06 MB in 0.71 s
+  registry → rockpi_21: 81.06 MB in 0.71 s
+  registry → rockpi_22: 81.06 MB in 0.71 s
+  registry → rockpi_23: 81.06 MB in 0.71 s
+  registry → rockpi_24: 81.06 MB in 0.71 s
+  registry → rockpi_25: 81.06 MB in 0.71 s
+  registry → rockpi_26: 81.06 MB in 0.71 s
+  registry → rockpi_27: 81.06 MB in 0.71 s
+  registry → rockpi_28: 81.06 MB in 0.71 s
+  registry → rockpi_29: 81.06 MB in 0.71 s
+  registry → rockpi_3: 81.06 MB in 0.71 s
+  registry → rockpi_4: 81.06 MB in 0.71 s
+  registry → rockpi_5: 81.06 MB in 0.71 s
+  registry → rockpi_6: 81.06 MB in 0.71 s
+  registry → rockpi_7: 81.06 MB in 0.71 s
+  registry → rockpi_8: 81.06 MB in 0.71 s
+  registry → rockpi_9: 81.06 MB in 0.71 s
+  registry → rpi3_0: 71.53 MB in 0.62 s
+  registry → rpi3_1: 71.53 MB in 0.62 s
+  registry → rpi3_10: 19.07 MB in 0.17 s
+  registry → rpi3_11: 19.07 MB in 0.17 s
+  registry → rpi3_12: 19.07 MB in 0.17 s
+  registry → rpi3_13: 19.07 MB in 0.17 s
+  registry → rpi3_14: 19.07 MB in 0.17 s
+  registry → rpi3_15: 71.53 MB in 0.62 s
+  registry → rpi3_16: 71.53 MB in 0.63 s
+  registry → rpi3_17: 19.07 MB in 0.17 s
+  registry → rpi3_18: 71.53 MB in 0.62 s
+  registry → rpi3_19: 19.07 MB in 0.17 s
+  registry → rpi3_2: 71.53 MB in 0.62 s
+  registry → rpi3_20: 19.07 MB in 0.17 s
+  registry → rpi3_21: 71.53 MB in 0.62 s
+  registry → rpi3_22: 19.07 MB in 0.17 s
+  registry → rpi3_23: 19.07 MB in 0.17 s
+  registry → rpi3_24: 71.53 MB in 0.62 s
+  registry → rpi3_25: 71.53 MB in 0.62 s
+  registry → rpi3_26: 71.53 MB in 0.62 s
+  registry → rpi3_27: 19.07 MB in 0.17 s
+  registry → rpi3_28: 19.07 MB in 0.17 s
+  registry → rpi3_29: 19.07 MB in 0.17 s
+  registry → rpi3_3: 19.07 MB in 0.17 s
+  registry → rpi3_4: 71.53 MB in 0.62 s
+  registry → rpi3_5: 71.53 MB in 0.62 s
+  registry → rpi3_6: 19.07 MB in 0.17 s
+  registry → rpi3_7: 19.07 MB in 0.17 s
+  registry → rpi3_8: 71.53 MB in 0.62 s
+  registry → rpi3_9: 71.53 MB in 0.62 s

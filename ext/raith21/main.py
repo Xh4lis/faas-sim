@@ -60,13 +60,13 @@ class SimulationConfig:
 
     def __init__(self):
         # Simulation parameters
-        self.num_devices = 100
+        self.num_devices = 418
         self.n_nuc = 2
         self.device_settings = make_edgeai_settings(self.num_devices, self.n_nuc)
         self.duration = 400
-        self.total_rps = 58
+        self.total_rps = 20
         self.scenario = "light"  # Options: "light", "reduced", "edgeai", "custom"
-        self.scaling_strategy = "performance" # Options: "performance", "power", "basic" , "kubernetes"
+        self.scaling_strategy = "power" # Options: "performance", "power", "basic" , "kubernetes"
         # Custom function counts for scenario
         self.custom_counts = {
             "resnet50-inference": 0,
@@ -81,7 +81,7 @@ class SimulationConfig:
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "edgeai_light_perf_"
+        self.settings_id = "edgeai_light_power_"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         
