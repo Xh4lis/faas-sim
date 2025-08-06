@@ -1,9 +1,3 @@
-# Progress Update: Energy-Aware Scaling Strategies for Edge FaaS
-
-**Subject:** Progress Update - Edge Computing Scaling Implementation & Evaluation Framework
-
-## **Summary of Achievements**
-
 Following the completion of the monitoring infrastructure integration, I have successfully implemented a complete scaling framework with multiple strategies tailored for heterogeneous edge environments. The work focuses on energy-performance trade-offs in Function-as-a-Service (FaaS) deployments across diverse edge devices.
 
 ---
