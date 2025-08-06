@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 class StandardFirstFitBinPacker(BaseAutoscaler):
     """
-    Improved Standard First-Fit Bin Packing Strategy
+    Standard First-Fit Bin Packing Strategy
     
     Implementation based on:
     - "Best-Fit Decreasing" algorithm from Coffman et al. (2013)

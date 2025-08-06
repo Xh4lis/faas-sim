@@ -145,7 +145,7 @@ class BaseAutoscaler(ABC):
         pass
     
     def scale_up_deployment(self, deployment_name: str):
-        """Scale up deployment - WITH DEBUGGING"""
+        """Scale up deployment """
         current_replicas = len(self.faas.get_replicas(deployment_name))
         
         logger.info(f"🔍 BEFORE scaling: {deployment_name} has {current_replicas} replicas")
