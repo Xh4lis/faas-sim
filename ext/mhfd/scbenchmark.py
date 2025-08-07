@@ -6,13 +6,17 @@ from ext.mhfd.deployments import (
     create_smart_city_deployments,
     create_custom_smart_city_deployments,
 )
-from sim.requestgen import expovariate_arrival_profile, constant_rps_profile
+from sim.requestgen import  *
 
 
 class SmartCityConstantBenchmark(ConstantBenchmark):
     """
     ConstantBenchmark that uses smart city deployments and realistic arrival profiles.
     """
+    def setup(self, env):
+        """Override setup to pass env to profile setup"""
+        self.env = env  # Store env reference
+        super().setup(env)
 
     def __init__(
         self,
@@ -86,7 +90,7 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
         function_base_rps = {
             "resnet50-inference": 0.40, 
             "speech-inference": 0.1, 
-            "resnet50-preprocessing": 0.10,  
+            "resnet50-preprocessing": 0.01,  
             "resnet50-training": 0.25,  
             "python-pi": 0.5,  
             "fio": 0.5,  
@@ -130,9 +134,8 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
         for deployment in self.deployments:
             func_name = deployment.name
             rps = deployment_rps.get(func_name, 1)
-
-            self.arrival_profiles[func_name] = expovariate_arrival_profile(
-                constant_rps_profile(rps)
+            self.arrival_profiles[func_name] = static_arrival_profile(
+                sine_rps_profile(self.env, max_rps=rps*3, period=300)  # 5-min cycles
             )
         print("Arrival profiles:", "=" * 60)
         for k, v in self.arrival_profiles.items():

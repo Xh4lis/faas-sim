@@ -1,0 +1,902 @@
+FUNCTION DEPLOYMENT TIMELINE
+============================
+
+Report generated: 2025-08-06 16:36:08
+
+Total deployment events: 109
+Number of node-function combinations: 52
+
+Event Type Summary:
+  Deployment events: 16
+  Replica events: 64
+  Network events: 29
+
+CHRONOLOGICAL TIMELINE
+======================
+
+t=   0.0s | deployment | global               | resnet50-inference        | deploy resnet50-inference
+t=   0.0s | deployment | global               | resnet50-inference-downtown | deploy resnet50-inference-downtown
+t=   0.0s | deployment | global               | resnet50-inference-suburb | deploy resnet50-inference-suburb
+t=   0.0s | deployment | global               | resnet50-inference-industrial | deploy resnet50-inference-industrial
+t=   0.0s | deployment | global               | speech-inference          | deploy speech-inference
+t=   0.0s | deployment | global               | speech-inference-downtown | deploy speech-inference-downtown
+t=   0.0s | deployment | global               | speech-inference-suburb   | deploy speech-inference-suburb
+t=   0.0s | deployment | global               | resnet50-preprocessing    | deploy resnet50-preprocessing
+t=   0.0s | deployment | global               | resnet50-training         | deploy resnet50-training
+t=   0.0s | deployment | global               | resnet50-training-downtown | deploy resnet50-training-downtown
+t=   0.0s | deployment | global               | python-pi                 | deploy python-pi
+t=   0.0s | deployment | global               | python-pi-downtown        | deploy python-pi-downtown
+t=   0.0s | deployment | global               | python-pi-suburb          | deploy python-pi-suburb
+t=   0.0s | deployment | global               | fio                       | deploy fio
+t=   0.0s | deployment | global               | fio-downtown              | deploy fio-downtown
+t=   0.0s | deployment | global               | fio-suburb                | deploy fio-suburb
+t=   0.0s | replica    | nx_10                | resnet50-inference        | deploy replica of resnet50-inference
+t=   1.0s | replica    | nano_3               | resnet50-inference-downtown | deploy replica of resnet50-inference-downtown
+t=   2.0s | replica    | nx_3                 | resnet50-inference-suburb | deploy replica of resnet50-inference-suburb
+t=   2.0s | network    | registry → rpi3_3    | unknown                   | docker_pull (19.1 MB)
+t=   2.1s | network    | registry → rpi3_4    | unknown                   | docker_pull (19.1 MB)
+t=   2.2s | network    | registry → coral_1   | unknown                   | docker_pull (59.1 MB)
+t=   2.3s | network    | registry → coral_3   | unknown                   | docker_pull (59.1 MB)
+t=   2.4s | network    | registry → rockpi_30 | unknown                   | docker_pull (38.1 MB)
+t=   2.5s | network    | registry → rockpi_8  | unknown                   | docker_pull (38.1 MB)
+t=   2.6s | network    | registry → nano_3    | unknown                   | docker_pull (95.4 MB)
+t=   2.7s | network    | registry → nx_3      | unknown                   | docker_pull (95.4 MB)
+t=   2.8s | network    | registry → nano_17   | unknown                   | docker_pull (95.4 MB)
+t=   2.9s | network    | registry → nano_15   | unknown                   | docker_pull (95.4 MB)
+t=   3.0s | replica    | nano_17              | resnet50-inference-industrial | deploy replica of resnet50-inference-industrial
+t=   3.0s | network    | registry → nano_26   | unknown                   | docker_pull (95.4 MB)
+t=   3.1s | network    | rpi3_21 → rockpi_30  | unknown                   | data_download (45.8 MB)
+t=   3.2s | network    | registry → nx_10     | unknown                   | docker_pull (59.1 MB)
+t=   3.3s | network    | registry → nx_10     | unknown                   | docker_pull (95.4 MB)
+t=   3.4s | network    | registry → rockpi_8  | unknown                   | docker_pull (182.2 MB)
+t=   3.5s | network    | rpi3_21 → rockpi_30  | unknown                   | data_download (45.8 MB)
+t=   3.6s | network    | rpi3_21 → rockpi_8   | unknown                   | data_download (45.8 MB)
+t=   3.7s | network    | rpi3_21 → nano_3     | unknown                   | data_download (98.2 MB)
+t=   3.8s | network    | rpi3_21 → nano_17    | unknown                   | data_download (98.2 MB)
+t=   3.9s | network    | rpi3_21 → nx_3       | unknown                   | data_download (98.2 MB)
+t=   4.0s | replica    | rockpi_30            | speech-inference          | deploy replica of speech-inference
+t=   4.0s | network    | rpi3_21 → nx_10      | unknown                   | data_download (98.2 MB)
+t=   4.1s | network    | rpi3_21 → nano_15    | unknown                   | data_download (55.3 MB)
+t=   4.2s | network    | rpi3_21 → nano_15    | unknown                   | data_download (55.3 MB)
+t=   4.3s | network    | rpi3_21 → nano_15    | unknown                   | data_download (55.3 MB)
+t=   4.4s | network    | rpi3_21 → nano_26    | unknown                   | data_download (55.3 MB)
+t=   4.5s | network    | rpi3_21 → nano_15    | unknown                   | data_download (55.3 MB)
+t=   4.6s | network    | rpi3_21 → nano_26    | unknown                   | data_download (55.3 MB)
+t=   4.7s | network    | rpi3_21 → nano_26    | unknown                   | data_download (55.3 MB)
+t=   4.8s | network    | rpi3_21 → nano_26    | unknown                   | data_download (55.3 MB)
+t=   5.0s | replica    | rockpi_30            | speech-inference-downtown | deploy replica of speech-inference-downtown
+t=   6.0s | replica    | rockpi_30            | speech-inference-downtown | startup replica of speech-inference-downtown
+t=   7.0s | replica    | rockpi_30            | speech-inference-downtown | setup replica of speech-inference-downtown
+t=   8.0s | replica    | rockpi_8             | speech-inference-suburb   | deploy replica of speech-inference-suburb
+t=   9.0s | replica    | rockpi_8             | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t=  10.0s | replica    | nano_15              | resnet50-training         | deploy replica of resnet50-training
+t=  11.0s | replica    | nano_26              | resnet50-training-downtown | deploy replica of resnet50-training-downtown
+t=  12.0s | replica    | nx_10                | python-pi                 | deploy replica of python-pi
+t=  13.0s | replica    | coral_1              | python-pi-downtown        | deploy replica of python-pi-downtown
+t=  14.0s | replica    | coral_3              | python-pi-suburb          | deploy replica of python-pi-suburb
+t=  15.0s | replica    | rpi3_3               | fio                       | deploy replica of fio
+t=  16.0s | replica    | rpi3_3               | fio-downtown              | deploy replica of fio-downtown
+t=  17.0s | replica    | rpi3_3               | fio-downtown              | startup replica of fio-downtown
+t=  18.0s | replica    | rpi3_3               | fio-downtown              | setup replica of fio-downtown
+t=  19.0s | replica    | rpi3_3               | fio-downtown              | finish replica of fio-downtown
+t=  20.0s | replica    | rpi3_4               | fio-suburb                | deploy replica of fio-suburb
+t=  21.0s | replica    | rpi3_3               | fio                       | startup replica of fio
+t=  22.0s | replica    | rpi3_3               | fio                       | setup replica of fio
+t=  23.0s | replica    | rpi3_3               | fio                       | finish replica of fio
+t=  24.0s | replica    | rpi3_4               | fio-suburb                | startup replica of fio-suburb
+t=  25.0s | replica    | rpi3_4               | fio-suburb                | setup replica of fio-suburb
+t=  26.0s | replica    | rpi3_4               | fio-suburb                | finish replica of fio-suburb
+t=  27.0s | replica    | coral_1              | python-pi-downtown        | startup replica of python-pi-downtown
+t=  28.0s | replica    | coral_1              | python-pi-downtown        | setup replica of python-pi-downtown
+t=  29.0s | replica    | coral_1              | python-pi-downtown        | finish replica of python-pi-downtown
+t=  30.0s | replica    | coral_3              | python-pi-suburb          | startup replica of python-pi-suburb
+t=  31.0s | replica    | coral_3              | python-pi-suburb          | setup replica of python-pi-suburb
+t=  32.0s | replica    | coral_3              | python-pi-suburb          | finish replica of python-pi-suburb
+t=  33.0s | replica    | rockpi_30            | speech-inference          | startup replica of speech-inference
+t=  34.0s | replica    | rockpi_30            | speech-inference          | setup replica of speech-inference
+t=  35.0s | replica    | rockpi_8             | speech-inference-suburb   | startup replica of speech-inference-suburb
+t=  36.0s | replica    | rockpi_8             | speech-inference-suburb   | setup replica of speech-inference-suburb
+t=  37.0s | replica    | nano_3               | resnet50-inference-downtown | startup replica of resnet50-inference-downtown
+t=  38.0s | replica    | nano_3               | resnet50-inference-downtown | setup replica of resnet50-inference-downtown
+t=  39.0s | replica    | nx_3                 | resnet50-inference-suburb | startup replica of resnet50-inference-suburb
+t=  40.0s | replica    | nx_3                 | resnet50-inference-suburb | setup replica of resnet50-inference-suburb
+t=  41.0s | replica    | nano_17              | resnet50-inference-industrial | startup replica of resnet50-inference-industrial
+t=  42.0s | replica    | nano_17              | resnet50-inference-industrial | setup replica of resnet50-inference-industrial
+t=  43.0s | replica    | nano_15              | resnet50-training         | startup replica of resnet50-training
+t=  44.0s | replica    | nano_15              | resnet50-training         | setup replica of resnet50-training
+t=  45.0s | replica    | nano_15              | resnet50-training         | finish replica of resnet50-training
+t=  46.0s | replica    | nano_26              | resnet50-training-downtown | startup replica of resnet50-training-downtown
+t=  47.0s | replica    | nano_26              | resnet50-training-downtown | setup replica of resnet50-training-downtown
+t=  48.0s | replica    | nano_26              | resnet50-training-downtown | finish replica of resnet50-training-downtown
+t=  49.0s | replica    | rockpi_30            | speech-inference-downtown | finish replica of speech-inference-downtown
+t=  50.0s | replica    | nx_10                | python-pi                 | startup replica of python-pi
+t=  51.0s | replica    | nx_10                | python-pi                 | setup replica of python-pi
+t=  52.0s | replica    | nx_10                | python-pi                 | finish replica of python-pi
+t=  53.0s | replica    | nx_10                | resnet50-inference        | startup replica of resnet50-inference
+t=  54.0s | replica    | nx_10                | resnet50-inference        | setup replica of resnet50-inference
+t=  55.0s | replica    | rockpi_8             | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t=  56.0s | replica    | rockpi_8             | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t=  57.0s | replica    | rockpi_8             | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t=  58.0s | replica    | rockpi_30            | speech-inference          | finish replica of speech-inference
+t=  59.0s | replica    | rockpi_8             | speech-inference-suburb   | finish replica of speech-inference-suburb
+t=  60.0s | replica    | nano_3               | resnet50-inference-downtown | finish replica of resnet50-inference-downtown
+t=  61.0s | replica    | nano_17              | resnet50-inference-industrial | finish replica of resnet50-inference-industrial
+t=  62.0s | replica    | nx_3                 | resnet50-inference-suburb | finish replica of resnet50-inference-suburb
+t=  63.0s | replica    | nx_10                | resnet50-inference        | finish replica of resnet50-inference
+
+GROUPED BY NODE-FUNCTION
+========================
+
+coral_1 - python-pi-downtown:
+-----------------------------
+  t=  13.0s - deploy replica of python-pi-downtown [replica]
+  t=  27.0s - startup replica of python-pi-downtown [replica]
+  t=  28.0s - setup replica of python-pi-downtown [replica]
+  t=  29.0s - finish replica of python-pi-downtown [replica]
+  Total events: 4
+
+coral_3 - python-pi-suburb:
+---------------------------
+  t=  14.0s - deploy replica of python-pi-suburb [replica]
+  t=  30.0s - startup replica of python-pi-suburb [replica]
+  t=  31.0s - setup replica of python-pi-suburb [replica]
+  t=  32.0s - finish replica of python-pi-suburb [replica]
+  Total events: 4
+
+global - fio:
+-------------
+  t=   0.0s - deploy fio [deployment]
+  Total events: 1
+
+global - fio-downtown:
+----------------------
+  t=   0.0s - deploy fio-downtown [deployment]
+  Total events: 1
+
+global - fio-suburb:
+--------------------
+  t=   0.0s - deploy fio-suburb [deployment]
+  Total events: 1
+
+global - python-pi:
+-------------------
+  t=   0.0s - deploy python-pi [deployment]
+  Total events: 1
+
+global - python-pi-downtown:
+----------------------------
+  t=   0.0s - deploy python-pi-downtown [deployment]
+  Total events: 1
+
+global - python-pi-suburb:
+--------------------------
+  t=   0.0s - deploy python-pi-suburb [deployment]
+  Total events: 1
+
+global - resnet50-inference:
+----------------------------
+  t=   0.0s - deploy resnet50-inference [deployment]
+  Total events: 1
+
+global - resnet50-inference-downtown:
+-------------------------------------
+  t=   0.0s - deploy resnet50-inference-downtown [deployment]
+  Total events: 1
+
+global - resnet50-inference-industrial:
+---------------------------------------
+  t=   0.0s - deploy resnet50-inference-industrial [deployment]
+  Total events: 1
+
+global - resnet50-inference-suburb:
+-----------------------------------
+  t=   0.0s - deploy resnet50-inference-suburb [deployment]
+  Total events: 1
+
+global - resnet50-preprocessing:
+--------------------------------
+  t=   0.0s - deploy resnet50-preprocessing [deployment]
+  Total events: 1
+
+global - resnet50-training:
+---------------------------
+  t=   0.0s - deploy resnet50-training [deployment]
+  Total events: 1
+
+global - resnet50-training-downtown:
+------------------------------------
+  t=   0.0s - deploy resnet50-training-downtown [deployment]
+  Total events: 1
+
+global - speech-inference:
+--------------------------
+  t=   0.0s - deploy speech-inference [deployment]
+  Total events: 1
+
+global - speech-inference-downtown:
+-----------------------------------
+  t=   0.0s - deploy speech-inference-downtown [deployment]
+  Total events: 1
+
+global - speech-inference-suburb:
+---------------------------------
+  t=   0.0s - deploy speech-inference-suburb [deployment]
+  Total events: 1
+
+nano_15 - resnet50-training:
+----------------------------
+  t=  10.0s - deploy replica of resnet50-training [replica]
+  t=  43.0s - startup replica of resnet50-training [replica]
+  t=  44.0s - setup replica of resnet50-training [replica]
+  t=  45.0s - finish replica of resnet50-training [replica]
+  Total events: 4
+
+nano_17 - resnet50-inference-industrial:
+----------------------------------------
+  t=   3.0s - deploy replica of resnet50-inference-industrial [replica]
+  t=  41.0s - startup replica of resnet50-inference-industrial [replica]
+  t=  42.0s - setup replica of resnet50-inference-industrial [replica]
+  t=  61.0s - finish replica of resnet50-inference-industrial [replica]
+  Total events: 4
+
+nano_26 - resnet50-training-downtown:
+-------------------------------------
+  t=  11.0s - deploy replica of resnet50-training-downtown [replica]
+  t=  46.0s - startup replica of resnet50-training-downtown [replica]
+  t=  47.0s - setup replica of resnet50-training-downtown [replica]
+  t=  48.0s - finish replica of resnet50-training-downtown [replica]
+  Total events: 4
+
+nano_3 - resnet50-inference-downtown:
+-------------------------------------
+  t=   1.0s - deploy replica of resnet50-inference-downtown [replica]
+  t=  37.0s - startup replica of resnet50-inference-downtown [replica]
+  t=  38.0s - setup replica of resnet50-inference-downtown [replica]
+  t=  60.0s - finish replica of resnet50-inference-downtown [replica]
+  Total events: 4
+
+nx_10 - python-pi:
+------------------
+  t=  12.0s - deploy replica of python-pi [replica]
+  t=  50.0s - startup replica of python-pi [replica]
+  t=  51.0s - setup replica of python-pi [replica]
+  t=  52.0s - finish replica of python-pi [replica]
+  Total events: 4
+
+nx_10 - resnet50-inference:
+---------------------------
+  t=   0.0s - deploy replica of resnet50-inference [replica]
+  t=  53.0s - startup replica of resnet50-inference [replica]
+  t=  54.0s - setup replica of resnet50-inference [replica]
+  t=  63.0s - finish replica of resnet50-inference [replica]
+  Total events: 4
+
+nx_3 - resnet50-inference-suburb:
+---------------------------------
+  t=   2.0s - deploy replica of resnet50-inference-suburb [replica]
+  t=  39.0s - startup replica of resnet50-inference-suburb [replica]
+  t=  40.0s - setup replica of resnet50-inference-suburb [replica]
+  t=  62.0s - finish replica of resnet50-inference-suburb [replica]
+  Total events: 4
+
+registry → coral_1 - unknown:
+-----------------------------
+  t=   2.2s - docker_pull (59.1 MB) [network]
+  Total events: 1
+
+registry → coral_3 - unknown:
+-----------------------------
+  t=   2.3s - docker_pull (59.1 MB) [network]
+  Total events: 1
+
+registry → nano_15 - unknown:
+-----------------------------
+  t=   2.9s - docker_pull (95.4 MB) [network]
+  Total events: 1
+
+registry → nano_17 - unknown:
+-----------------------------
+  t=   2.8s - docker_pull (95.4 MB) [network]
+  Total events: 1
+
+registry → nano_26 - unknown:
+-----------------------------
+  t=   3.0s - docker_pull (95.4 MB) [network]
+  Total events: 1
+
+registry → nano_3 - unknown:
+----------------------------
+  t=   2.6s - docker_pull (95.4 MB) [network]
+  Total events: 1
+
+registry → nx_10 - unknown:
+---------------------------
+  t=   3.2s - docker_pull (59.1 MB) [network]
+  t=   3.3s - docker_pull (95.4 MB) [network]
+  Total events: 2
+
+registry → nx_3 - unknown:
+--------------------------
+  t=   2.7s - docker_pull (95.4 MB) [network]
+  Total events: 1
+
+registry → rockpi_30 - unknown:
+-------------------------------
+  t=   2.4s - docker_pull (38.1 MB) [network]
+  Total events: 1
+
+registry → rockpi_8 - unknown:
+------------------------------
+  t=   2.5s - docker_pull (38.1 MB) [network]
+  t=   3.4s - docker_pull (182.2 MB) [network]
+  Total events: 2
+
+registry → rpi3_3 - unknown:
+----------------------------
+  t=   2.0s - docker_pull (19.1 MB) [network]
+  Total events: 1
+
+registry → rpi3_4 - unknown:
+----------------------------
+  t=   2.1s - docker_pull (19.1 MB) [network]
+  Total events: 1
+
+rockpi_30 - speech-inference:
+-----------------------------
+  t=   4.0s - deploy replica of speech-inference [replica]
+  t=  33.0s - startup replica of speech-inference [replica]
+  t=  34.0s - setup replica of speech-inference [replica]
+  t=  58.0s - finish replica of speech-inference [replica]
+  Total events: 4
+
+rockpi_30 - speech-inference-downtown:
+--------------------------------------
+  t=   5.0s - deploy replica of speech-inference-downtown [replica]
+  t=   6.0s - startup replica of speech-inference-downtown [replica]
+  t=   7.0s - setup replica of speech-inference-downtown [replica]
+  t=  49.0s - finish replica of speech-inference-downtown [replica]
+  Total events: 4
+
+rockpi_8 - resnet50-preprocessing:
+----------------------------------
+  t=   9.0s - deploy replica of resnet50-preprocessing [replica]
+  t=  55.0s - startup replica of resnet50-preprocessing [replica]
+  t=  56.0s - setup replica of resnet50-preprocessing [replica]
+  t=  57.0s - finish replica of resnet50-preprocessing [replica]
+  Total events: 4
+
+rockpi_8 - speech-inference-suburb:
+-----------------------------------
+  t=   8.0s - deploy replica of speech-inference-suburb [replica]
+  t=  35.0s - startup replica of speech-inference-suburb [replica]
+  t=  36.0s - setup replica of speech-inference-suburb [replica]
+  t=  59.0s - finish replica of speech-inference-suburb [replica]
+  Total events: 4
+
+rpi3_21 → nano_15 - unknown:
+----------------------------
+  t=   4.1s - data_download (55.3 MB) [network]
+  t=   4.2s - data_download (55.3 MB) [network]
+  t=   4.3s - data_download (55.3 MB) [network]
+  t=   4.5s - data_download (55.3 MB) [network]
+  Total events: 4
+
+rpi3_21 → nano_17 - unknown:
+----------------------------
+  t=   3.8s - data_download (98.2 MB) [network]
+  Total events: 1
+
+rpi3_21 → nano_26 - unknown:
+----------------------------
+  t=   4.4s - data_download (55.3 MB) [network]
+  t=   4.6s - data_download (55.3 MB) [network]
+  t=   4.7s - data_download (55.3 MB) [network]
+  t=   4.8s - data_download (55.3 MB) [network]
+  Total events: 4
+
+rpi3_21 → nano_3 - unknown:
+---------------------------
+  t=   3.7s - data_download (98.2 MB) [network]
+  Total events: 1
+
+rpi3_21 → nx_10 - unknown:
+--------------------------
+  t=   4.0s - data_download (98.2 MB) [network]
+  Total events: 1
+
+rpi3_21 → nx_3 - unknown:
+-------------------------
+  t=   3.9s - data_download (98.2 MB) [network]
+  Total events: 1
+
+rpi3_21 → rockpi_30 - unknown:
+------------------------------
+  t=   3.1s - data_download (45.8 MB) [network]
+  t=   3.5s - data_download (45.8 MB) [network]
+  Total events: 2
+
+rpi3_21 → rockpi_8 - unknown:
+-----------------------------
+  t=   3.6s - data_download (45.8 MB) [network]
+  Total events: 1
+
+rpi3_3 - fio:
+-------------
+  t=  15.0s - deploy replica of fio [replica]
+  t=  21.0s - startup replica of fio [replica]
+  t=  22.0s - setup replica of fio [replica]
+  t=  23.0s - finish replica of fio [replica]
+  Total events: 4
+
+rpi3_3 - fio-downtown:
+----------------------
+  t=  16.0s - deploy replica of fio-downtown [replica]
+  t=  17.0s - startup replica of fio-downtown [replica]
+  t=  18.0s - setup replica of fio-downtown [replica]
+  t=  19.0s - finish replica of fio-downtown [replica]
+  Total events: 4
+
+rpi3_4 - fio-suburb:
+--------------------
+  t=  20.0s - deploy replica of fio-suburb [replica]
+  t=  24.0s - startup replica of fio-suburb [replica]
+  t=  25.0s - setup replica of fio-suburb [replica]
+  t=  26.0s - finish replica of fio-suburb [replica]
+  Total events: 4
+
+NODE SUMMARY
+============
+
+Node: coral_1
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: python-pi-downtown
+
+Node: coral_3
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: python-pi-suburb
+
+Node: global
+  Deployment events: 16
+  Replica events: 0
+  Network events: 0
+  Functions involved: 16
+  Function list: fio, fio-downtown, fio-suburb, python-pi, python-pi-downtown, python-pi-suburb, resnet50-inference, resnet50-inference-downtown, resnet50-inference-industrial, resnet50-inference-suburb, resnet50-preprocessing, resnet50-training, resnet50-training-downtown, speech-inference, speech-inference-downtown, speech-inference-suburb
+
+Node: nano_15
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: resnet50-training
+
+Node: nano_17
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: resnet50-inference-industrial
+
+Node: nano_26
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: resnet50-training-downtown
+
+Node: nano_3
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: resnet50-inference-downtown
+
+Node: nx_10
+  Deployment events: 0
+  Replica events: 8
+  Network events: 0
+  Functions involved: 2
+  Function list: python-pi, resnet50-inference
+
+Node: nx_3
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: resnet50-inference-suburb
+
+Node: registry → coral_1
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → coral_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nano_15
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nano_17
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nano_26
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nano_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nx_10
+  Deployment events: 0
+  Replica events: 0
+  Network events: 2
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nx_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rockpi_30
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rockpi_8
+  Deployment events: 0
+  Replica events: 0
+  Network events: 2
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rpi3_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rpi3_4
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_30
+  Deployment events: 0
+  Replica events: 8
+  Network events: 0
+  Functions involved: 2
+  Function list: speech-inference, speech-inference-downtown
+
+Node: rockpi_8
+  Deployment events: 0
+  Replica events: 8
+  Network events: 0
+  Functions involved: 2
+  Function list: resnet50-preprocessing, speech-inference-suburb
+
+Node: rpi3_21 → nano_15
+  Deployment events: 0
+  Replica events: 0
+  Network events: 4
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_21 → nano_17
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_21 → nano_26
+  Deployment events: 0
+  Replica events: 0
+  Network events: 4
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_21 → nano_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_21 → nx_10
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_21 → nx_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_21 → rockpi_30
+  Deployment events: 0
+  Replica events: 0
+  Network events: 2
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_21 → rockpi_8
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rpi3_3
+  Deployment events: 0
+  Replica events: 8
+  Network events: 0
+  Functions involved: 2
+  Function list: fio, fio-downtown
+
+Node: rpi3_4
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: fio-suburb
+
+FUNCTION SUMMARY
+================
+
+Function: fio
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rpi3_3
+
+Function: fio-downtown
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rpi3_3
+
+Function: fio-suburb
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rpi3_4
+
+Function: python-pi
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nx_10
+
+Function: python-pi-downtown
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: coral_1, global
+
+Function: python-pi-suburb
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: coral_3, global
+
+Function: resnet50-inference
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nx_10
+
+Function: resnet50-inference-downtown
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nano_3
+
+Function: resnet50-inference-industrial
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nano_17
+
+Function: resnet50-inference-suburb
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nx_3
+
+Function: resnet50-preprocessing
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rockpi_8
+
+Function: resnet50-training
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nano_15
+
+Function: resnet50-training-downtown
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nano_26
+
+Function: speech-inference
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rockpi_30
+
+Function: speech-inference-downtown
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rockpi_30
+
+Function: speech-inference-suburb
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rockpi_8
+
+Function: unknown
+  Deployment events: 0
+  Replica events: 0
+  Network events: 29
+  Nodes involved: 20
+  Node list: registry → coral_1, registry → coral_3, registry → nano_15, registry → nano_17, registry → nano_26, registry → nano_3, registry → nx_10, registry → nx_3, registry → rockpi_30, registry → rockpi_8, registry → rpi3_3, registry → rpi3_4, rpi3_21 → nano_15, rpi3_21 → nano_17, rpi3_21 → nano_26, rpi3_21 → nano_3, rpi3_21 → nx_10, rpi3_21 → nx_3, rpi3_21 → rockpi_30, rpi3_21 → rockpi_8
+
+SCALING ANALYSIS
+================
+
+Functions with scaling events: 16
+  fio: 4 replica events
+    t=  15.0s - deploy replica of fio on rpi3_3
+    t=  21.0s - startup replica of fio on rpi3_3
+    t=  22.0s - setup replica of fio on rpi3_3
+    t=  23.0s - finish replica of fio on rpi3_3
+
+  fio-downtown: 4 replica events
+    t=  16.0s - deploy replica of fio-downtown on rpi3_3
+    t=  17.0s - startup replica of fio-downtown on rpi3_3
+    t=  18.0s - setup replica of fio-downtown on rpi3_3
+    t=  19.0s - finish replica of fio-downtown on rpi3_3
+
+  fio-suburb: 4 replica events
+    t=  20.0s - deploy replica of fio-suburb on rpi3_4
+    t=  24.0s - startup replica of fio-suburb on rpi3_4
+    t=  25.0s - setup replica of fio-suburb on rpi3_4
+    t=  26.0s - finish replica of fio-suburb on rpi3_4
+
+  python-pi: 4 replica events
+    t=  12.0s - deploy replica of python-pi on nx_10
+    t=  50.0s - startup replica of python-pi on nx_10
+    t=  51.0s - setup replica of python-pi on nx_10
+    t=  52.0s - finish replica of python-pi on nx_10
+
+  python-pi-downtown: 4 replica events
+    t=  13.0s - deploy replica of python-pi-downtown on coral_1
+    t=  27.0s - startup replica of python-pi-downtown on coral_1
+    t=  28.0s - setup replica of python-pi-downtown on coral_1
+    t=  29.0s - finish replica of python-pi-downtown on coral_1
+
+  python-pi-suburb: 4 replica events
+    t=  14.0s - deploy replica of python-pi-suburb on coral_3
+    t=  30.0s - startup replica of python-pi-suburb on coral_3
+    t=  31.0s - setup replica of python-pi-suburb on coral_3
+    t=  32.0s - finish replica of python-pi-suburb on coral_3
+
+  resnet50-inference: 4 replica events
+    t=   0.0s - deploy replica of resnet50-inference on nx_10
+    t=  53.0s - startup replica of resnet50-inference on nx_10
+    t=  54.0s - setup replica of resnet50-inference on nx_10
+    t=  63.0s - finish replica of resnet50-inference on nx_10
+
+  resnet50-inference-downtown: 4 replica events
+    t=   1.0s - deploy replica of resnet50-inference-downtown on nano_3
+    t=  37.0s - startup replica of resnet50-inference-downtown on nano_3
+    t=  38.0s - setup replica of resnet50-inference-downtown on nano_3
+    t=  60.0s - finish replica of resnet50-inference-downtown on nano_3
+
+  resnet50-inference-industrial: 4 replica events
+    t=   3.0s - deploy replica of resnet50-inference-industrial on nano_17
+    t=  41.0s - startup replica of resnet50-inference-industrial on nano_17
+    t=  42.0s - setup replica of resnet50-inference-industrial on nano_17
+    t=  61.0s - finish replica of resnet50-inference-industrial on nano_17
+
+  resnet50-inference-suburb: 4 replica events
+    t=   2.0s - deploy replica of resnet50-inference-suburb on nx_3
+    t=  39.0s - startup replica of resnet50-inference-suburb on nx_3
+    t=  40.0s - setup replica of resnet50-inference-suburb on nx_3
+    t=  62.0s - finish replica of resnet50-inference-suburb on nx_3
+
+  resnet50-preprocessing: 4 replica events
+    t=   9.0s - deploy replica of resnet50-preprocessing on rockpi_8
+    t=  55.0s - startup replica of resnet50-preprocessing on rockpi_8
+    t=  56.0s - setup replica of resnet50-preprocessing on rockpi_8
+    t=  57.0s - finish replica of resnet50-preprocessing on rockpi_8
+
+  resnet50-training: 4 replica events
+    t=  10.0s - deploy replica of resnet50-training on nano_15
+    t=  43.0s - startup replica of resnet50-training on nano_15
+    t=  44.0s - setup replica of resnet50-training on nano_15
+    t=  45.0s - finish replica of resnet50-training on nano_15
+
+  resnet50-training-downtown: 4 replica events
+    t=  11.0s - deploy replica of resnet50-training-downtown on nano_26
+    t=  46.0s - startup replica of resnet50-training-downtown on nano_26
+    t=  47.0s - setup replica of resnet50-training-downtown on nano_26
+    t=  48.0s - finish replica of resnet50-training-downtown on nano_26
+
+  speech-inference: 4 replica events
+    t=   4.0s - deploy replica of speech-inference on rockpi_30
+    t=  33.0s - startup replica of speech-inference on rockpi_30
+    t=  34.0s - setup replica of speech-inference on rockpi_30
+    t=  58.0s - finish replica of speech-inference on rockpi_30
+
+  speech-inference-downtown: 4 replica events
+    t=   5.0s - deploy replica of speech-inference-downtown on rockpi_30
+    t=   6.0s - startup replica of speech-inference-downtown on rockpi_30
+    t=   7.0s - setup replica of speech-inference-downtown on rockpi_30
+    t=  49.0s - finish replica of speech-inference-downtown on rockpi_30
+
+  speech-inference-suburb: 4 replica events
+    t=   8.0s - deploy replica of speech-inference-suburb on rockpi_8
+    t=  35.0s - startup replica of speech-inference-suburb on rockpi_8
+    t=  36.0s - setup replica of speech-inference-suburb on rockpi_8
+    t=  59.0s - finish replica of speech-inference-suburb on rockpi_8
+

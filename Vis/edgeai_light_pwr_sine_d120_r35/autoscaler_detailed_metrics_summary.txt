@@ -1,0 +1,208 @@
+AUTOSCALER DETAILED METRICS SUMMARY
+===================================
+
+Report generated: 2025-08-07 14:16:24
+
+Total measurement records: 498
+Deployments analyzed: 11
+Time range: 40.00 - 605.00s
+Simulation duration: 565.00s
+
+OVERALL STATISTICS
+==================
+Average response time: 2249.00 ms
+Max response time: 7674.65 ms
+Average execution time: 2119.94 ms
+Average wait time: 129.06 ms
+Average wait percentage: 4.49%
+Total high wait count events: 1476
+Average sample count: 50.7
+
+PER-DEPLOYMENT BREAKDOWN
+========================
+
+Deployment: python-pi
+  Measurement count: 60
+  Time range: 40.0 - 605.0s
+  Avg response time: 1207.99 ms
+  Min/Max response time: 1097.79/1642.49 ms
+  Avg execution time: 1180.86 ms
+  Avg wait time: 27.13 ms
+  Avg wait percentage: 1.72%
+  High wait events: 136
+  Avg sample count: 160.8
+  Performance trend: stable
+
+Deployment: python-pi-downtown
+  Measurement count: 60
+  Time range: 40.0 - 605.0s
+  Avg response time: 1247.87 ms
+  Min/Max response time: 1094.77/1889.32 ms
+  Avg execution time: 1210.78 ms
+  Avg wait time: 37.09 ms
+  Avg wait percentage: 2.06%
+  High wait events: 68
+  Avg sample count: 53.6
+  Performance trend: stable
+
+Deployment: python-pi-suburb
+  Measurement count: 60
+  Time range: 40.0 - 605.0s
+  Avg response time: 1218.70 ms
+  Min/Max response time: 1099.91/1900.46 ms
+  Avg execution time: 1175.83 ms
+  Avg wait time: 42.87 ms
+  Avg wait percentage: 2.38%
+  High wait events: 56
+  Avg sample count: 53.6
+  Performance trend: stable
+
+Deployment: resnet50-inference
+  Measurement count: 40
+  Time range: 40.0 - 605.0s
+  Avg response time: 1286.91 ms
+  Min/Max response time: 576.37/2099.77 ms
+  Avg execution time: 1072.54 ms
+  Avg wait time: 214.37 ms
+  Avg wait percentage: 12.68%
+  High wait events: 578
+  Avg sample count: 108.0
+  Performance trend: stable
+
+Deployment: resnet50-inference-downtown
+  Measurement count: 38
+  Time range: 40.0 - 605.0s
+  Avg response time: 1748.43 ms
+  Min/Max response time: 579.53/4706.82 ms
+  Avg execution time: 1285.74 ms
+  Avg wait time: 462.69 ms
+  Avg wait percentage: 14.09%
+  High wait events: 278
+  Avg sample count: 27.5
+  Performance trend: stable
+
+Deployment: resnet50-inference-industrial
+  Measurement count: 38
+  Time range: 40.0 - 605.0s
+  Avg response time: 1585.46 ms
+  Min/Max response time: 546.14/4748.35 ms
+  Avg execution time: 1022.54 ms
+  Avg wait time: 562.91 ms
+  Avg wait percentage: 16.64%
+  High wait events: 298
+  Avg sample count: 29.0
+  Performance trend: improving
+
+Deployment: resnet50-inference-suburb
+  Measurement count: 40
+  Time range: 40.0 - 605.0s
+  Avg response time: 1189.43 ms
+  Min/Max response time: 384.20/4640.10 ms
+  Avg execution time: 1189.19 ms
+  Avg wait time: 0.24 ms
+  Avg wait percentage: 0.02%
+  High wait events: 2
+  Avg sample count: 26.0
+  Performance trend: degrading
+
+Deployment: resnet50-preprocessing
+  Measurement count: 24
+  Time range: 40.0 - 495.0s
+  Avg response time: 7292.75 ms
+  Min/Max response time: 5993.88/7674.65 ms
+  Avg execution time: 7257.05 ms
+  Avg wait time: 35.71 ms
+  Avg wait percentage: 0.47%
+  High wait events: 2
+  Avg sample count: 4.6
+  Performance trend: stable
+
+Deployment: speech-inference
+  Measurement count: 48
+  Time range: 40.0 - 535.0s
+  Avg response time: 3644.88 ms
+  Min/Max response time: 3110.21/5459.18 ms
+  Avg execution time: 3569.31 ms
+  Avg wait time: 75.57 ms
+  Avg wait percentage: 1.43%
+  High wait events: 34
+  Avg sample count: 19.3
+  Performance trend: stable
+
+Deployment: speech-inference-downtown
+  Measurement count: 46
+  Time range: 40.0 - 535.0s
+  Avg response time: 3558.06 ms
+  Min/Max response time: 2609.31/5949.39 ms
+  Avg execution time: 3465.37 ms
+  Avg wait time: 92.69 ms
+  Avg wait percentage: 1.56%
+  High wait events: 10
+  Avg sample count: 6.9
+  Performance trend: stable
+
+Deployment: speech-inference-suburb
+  Measurement count: 44
+  Time range: 40.0 - 535.0s
+  Avg response time: 3639.47 ms
+  Min/Max response time: 3018.82/4432.69 ms
+  Avg execution time: 3604.48 ms
+  Avg wait time: 34.98 ms
+  Avg wait percentage: 0.83%
+  High wait events: 14
+  Avg sample count: 6.7
+  Performance trend: stable
+
+PERFORMANCE ANALYSIS
+===================
+
+Records with high wait percentage (>50%): 20
+  resnet50-inference: 6 records, avg 68.5% wait
+  resnet50-inference-downtown: 6 records, avg 75.3% wait
+  resnet50-inference-industrial: 8 records, avg 79.0% wait
+
+Records with high response times (>3911.5ms): 50
+  resnet50-inference-downtown: 4 records, avg 4404.2ms
+  resnet50-inference-industrial: 4 records, avg 4447.1ms
+  speech-inference: 6 records, avg 4454.7ms
+  speech-inference-downtown: 2 records, avg 5949.4ms
+  speech-inference-suburb: 8 records, avg 4307.2ms
+  resnet50-preprocessing: 24 records, avg 7292.8ms
+  resnet50-inference-suburb: 2 records, avg 4640.1ms
+
+SCALING RECOMMENDATIONS
+======================
+
+python-pi:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+python-pi-downtown:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+python-pi-suburb:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+resnet50-inference:
+  ✅ ACCEPTABLE: Wait times within reasonable range
+
+resnet50-inference-downtown:
+  ✅ ACCEPTABLE: Wait times within reasonable range
+
+resnet50-inference-industrial:
+  ✅ ACCEPTABLE: Wait times within reasonable range
+
+resnet50-inference-suburb:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+resnet50-preprocessing:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+speech-inference:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+speech-inference-downtown:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+speech-inference-suburb:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+

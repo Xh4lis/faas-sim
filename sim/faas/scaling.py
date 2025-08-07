@@ -9,7 +9,7 @@ from sim.faas import FaasSystem, FunctionState, FunctionDeployment
 logger = logging.getLogger(__name__)
 
 
-def faas_idler(env: Environment, inactivity_duration=300, reconcile_interval=30):
+def faas_idler(env: Environment, inactivity_duration=300, reconcile_interval=5):
     """
     https://github.com/openfaas-incubator/faas-idler
     https://github.com/openfaas-incubator/faas-idler/blob/master/main.go

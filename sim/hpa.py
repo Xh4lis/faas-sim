@@ -15,7 +15,7 @@ class HorizontalPodAutoscaler:
         self,
         env: Environment,
         average_window: int = 100,
-        reconcile_interval: int = 15,
+        reconcile_interval: int = 5,
         target_tolerance: float = 0.1,
     ):
         """

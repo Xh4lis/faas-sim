@@ -192,8 +192,6 @@ The framework is designed to be **extensible** for future scaling strategy resea
 
 ---
 
-I would appreciate the opportunity to discuss these developments in more detail and gather your feedback on the next phase of research. Please let me know if you'd like me to prepare a more detailed technical presentation or if you have any questions about specific implementation aspects.
-
 <!--
 **Attachments:**
 
