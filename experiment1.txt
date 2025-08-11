@@ -1,0 +1,36 @@
+
+=== RUNNING HYPOTHESIS TEST  ===
+Hypothesis: LPLT reduces power consumption vs K8s baseline, but increases response times
+
+=== POWER CONSUMPTION COMPARISON ===
+Kubernetes average power: 3.4W
+LPLT average power: 3.1W
+Power savings: 7.2%
+
+=== PERFORMANCE COMPARISON (ROBUST METRICS) ===
+Kubernetes MEDIAN response time: 1043.369s
+LPLT MEDIAN response time: 1222.847s
+MEDIAN performance penalty: 17.2%
+Kubernetes 95th percentile: 216352.659s
+LPLT 95th percentile: 31391.652s
+95th percentile penalty: -85.5%
+Kubernetes warm-up avg: 40726.902s
+LPLT warm-up avg: 7519.070s
+Warm-up performance penalty: -81.5%
+
+=== WAIT TIME ANALYSIS ===
+/mnt/c/Users/masay/Documents/FaaS/FS/faas-sim/script.py:61: RuntimeWarning: invalid value encountered in double_scalars
+  wait_improvement = ((k8s_wait_median - lplt_wait_median) / k8s_wait_median) * 100
+K8s median wait time: 0.000s
+LPLT median wait time: 0.000s
+Wait time improvement: nan%
+
+=== REVISED HYPOTHESIS RESULT ===
+✅ HYPOTHESIS CONFIRMED (MEDIAN): LPLT saves 7.2% energy
+   at the cost of 17.2% slower median response times
+
+=== SUMMARY ===
+Trade-off ratio: 7.2% energy savings for 17.2% performance cost
+/mnt/c/Users/masay/Documents/FaaS/FS/faas-sim/script.py:119: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()
+Plot saved as tradeoff_plot.png 
