@@ -1,0 +1,35 @@
+SCALING STRATEGY EVALUATION RESULTS
+===================================
+
+Report generated: 2025-08-13 16:03:41
+
+PERFORMANCE METRICS
+==================
+Average Response Time: 32253.54 ms
+95th Percentile Response Time: 186129.81 ms
+Total Requests Processed: 6773
+QoS Satisfaction Rate: 60.00%
+
+ENERGY METRICS
+==============
+Total Energy Consumption: 20625.84 Wh
+Average Power: 3.25 W
+Peak Power: 12.59 W
+Energy per Request: 10963.0911 J/req
+Energy Efficiency Score: 0.00 req/J
+
+SCALING BEHAVIOR
+================
+Average Wait Percentage: 41.17%
+High Wait Events: 1092
+Scaling Frequency: 5.28 events/time_unit
+
+COMPOSITE SCORES
+================
+Performance-Energy Trade-off Score: 0.0017
+
+STRATEGY ASSESSMENT
+==================
+❌ POOR: Response times exceed 2 seconds
+❌ POOR: <90% requests meet SLA
+⚠️ ACCEPTABLE: Moderate wait times (20-50%)

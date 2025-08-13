@@ -66,7 +66,7 @@ class SimulationConfig:
         self.duration = 600
         self.total_rps = 35
         self.scenario = "light"  # Options: "light", "reduced", "edgeai", "custom"
-        self.scaling_strategy = "power" # Options: "performance", "power", "basic" , "kubernetes"
+        self.scaling_strategy = "kubernetes" # Options: "performance", "power", "basic" , "kubernetes"
         # Custom function counts for scenario
         self.custom_counts = {
             "resnet50-inference": 8,
@@ -81,7 +81,7 @@ class SimulationConfig:
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "experiment_2_power_strategy"
+        self.settings_id = "experiment_1_kubernetes_baseline"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         
