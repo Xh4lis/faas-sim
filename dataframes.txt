@@ -1,0 +1,154 @@
+Extracted 17 dataframes:
+
+invocations_df columns:
+  Shape: (33172, 8)
+  Columns:
+    - t_wait: float64
+    - t_exec: float64
+    - t_start: float64
+    - memory: int64
+    - function_name: str
+    - function_image: str
+    - node: str
+    - replica_id: int64
+
+scale_df columns:
+  Shape: (342, 2)
+  Columns:
+    - value: int64
+    - function_name: str
+
+schedule_df columns:
+  Shape: (860, 6)
+  Columns:
+    - value: str
+    - function_name: str
+    - image: str
+    - replica_id: int64
+    - node_name: float
+    - successful: float
+
+replica_deployment_df columns:
+  Shape: (1073, 4)
+  Columns:
+    - value: str
+    - function_name: str
+    - node_name: str
+    - replica_id: int64
+
+function_deployments_df columns:
+  Shape: (6, 2)
+  Columns:
+    - name: str
+    - type: str
+
+function_deployment_df columns:
+  Shape: (244, 5)
+  Columns:
+    - value: str
+    - name: str
+    - image: str
+    - function_id: int64
+    - node: str
+
+function_deployment_lifecycle_df columns:
+  Shape: (6, 3)
+  Columns:
+    - value: str
+    - name: str
+    - function_id: int64
+
+functions_df columns:
+  Empty or None DataFrame
+
+flow_df columns:
+  Shape: (415, 5)
+  Columns:
+    - bytes: int64
+    - duration: float64
+    - source: str
+    - sink: str
+    - action_type: str
+
+network_df columns:
+  Shape: (1500, 4)
+  Columns:
+    - value: int64
+    - name: str
+    - type: str
+    - data_type: str
+
+utilization_df columns:
+  Empty or None DataFrame
+
+fets_df columns:
+  Shape: (33172, 9)
+  Columns:
+    - t_fet_start: float64
+    - t_fet_end: float64
+    - t_wait_start: float64
+    - t_wait_end: float64
+    - function_name: str
+    - function_image: str
+    - node: str
+    - replica_id: int64
+    - request_id: int64
+
+power_df columns:
+  Shape: (72600, 8)
+  Columns:
+    - timestamp: float64
+    - node: str
+    - node_type: str
+    - power_watts: float64
+    - cpu_util: float64
+    - gpu_util: float64
+    - network_util: float64
+    - memory_util: float64
+
+energy_df columns:
+  Shape: (72600, 4)
+  Columns:
+    - timestamp: float64
+    - node: str
+    - energy_joules: float64
+    - energy_wh: float64
+
+scaling_decisions_df columns:
+  Shape: (725, 12)
+  Columns:
+    - timestamp: int64
+    - strategy: str
+    - deployment: str
+    - action: str
+    - old_replica_count: int64
+    - new_replica_count: int64
+    - selected_node: str
+    - selected_node_type: str
+    - current_load_rps: float64
+    - avg_response_time_ms: float64
+    - reason: str
+    - scaling_direction: int64
+
+scaling_evaluations_df columns:
+  Shape: (725, 7)
+  Columns:
+    - timestamp: int64
+    - strategy: str
+    - deployment: str
+    - current_replicas: int64
+    - current_load_rps: float64
+    - avg_response_time_ms: float64
+    - evaluation_type: str
+
+autoscaler_detailed_metrics_df columns:
+  Shape: (95, 8)
+  Columns:
+    - deployment_name: str
+    - timestamp: int64
+    - avg_response_time: float64
+    - avg_execution_time: float64
+    - avg_wait_time: float64
+    - wait_percentage: float64
+    - high_wait_count: int64
+    - sample_count: int64

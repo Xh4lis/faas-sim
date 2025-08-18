@@ -30,6 +30,43 @@ Wait time improvement: nan%
 
 === SUMMARY ===
 Trade-off ratio: 7.1% energy savings for 15.2% performance cost
-/mnt/c/Users/masay/Documents/FaaS/FS/faas-sim/script.py:119: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
-  plt.show()
+
 Plot saved as tradeoff_plot.png
+
+"""
+Analysis of Your Results
+What's Working Well:
+✅ 7.1% power savings - Confirmed energy efficiency
+✅ 15.2% median response time increase - Reasonable performance trade-off
+✅ Stable trade-off ratio: ~2:1 (15.2% performance cost for 7.1% energy savings)
+Concerning Anomalies:
+🚨 95th percentile: LPLT is actually 83% faster than K8s (31s vs 186s)
+🚨 Warm-up times: LPLT is 78% faster than K8s (7.6s vs 35s)
+🚨 Extreme response times: Both strategies show very high max times (30+ seconds)
+What This Suggests
+Your LPLT strategy appears to have better worst-case performance than Kubernetes, which is unexpected. This could indicate:
+
+  K8s is over-scaling and causing resource contention
+  LPLT's energy-aware decisions are actually avoiding performance bottlenecks
+  Cold start problems are worse with K8s spreading across many nodes
+  Node selection differences - LPLT's power-efficient nodes might be less congested
+
+Validate Current Results First:
+  Check node utilization: Is K8s spreading too much?
+  Analyze cold starts: Are K8s nodes starting more replicas?
+  Look at specific workloads: Which functions show the biggest differences?
+
+
+
+
+
+
+Expected Insights Before Next Comparison
+  If LPLT consistently outperforms K8s in extreme cases:
+  Research angle: "Energy-aware scaling not only saves power but improves tail latency"
+  Stronger hypothesis: LPLT avoids resource contention through smarter node selection
+  If it's load-dependent:
+  Research angle: "Sweet spot analysis - when does energy optimization help vs hurt performance"
+  Load thresholds: Identify the RPS level where trade-offs flip
+  Refined Hypothesis for Next Test
+  "Under moderate load (15-25 RPS), LPLT provides energy savings with acceptable median performance penalty, while potentially improving worst-case performance through reduced resource contention."

@@ -1,0 +1,86 @@
+AUTOSCALER DETAILED METRICS SUMMARY
+===================================
+
+Report generated: 2025-08-18 10:44:15
+
+Total measurement records: 82
+Deployments analyzed: 3
+Time range: 5.00 - 600.00s
+Simulation duration: 595.00s
+
+OVERALL STATISTICS
+==================
+Average response time: 44279.57 ms
+Max response time: 371895.50 ms
+Average execution time: 1948.16 ms
+Average wait time: 42331.42 ms
+Average wait percentage: 78.27%
+Total high wait count events: 6812
+Average sample count: 160.9
+
+PER-DEPLOYMENT BREAKDOWN
+========================
+
+Deployment: python-pi
+  Measurement count: 36
+  Time range: 5.0 - 600.0s
+  Avg response time: 65460.01 ms
+  Min/Max response time: 1344.16/371895.50 ms
+  Avg execution time: 1079.08 ms
+  Avg wait time: 64380.94 ms
+  Avg wait percentage: 93.59%
+  High wait events: 3950
+  Avg sample count: 254.5
+  Performance trend: degrading
+
+Deployment: resnet50-inference
+  Measurement count: 14
+  Time range: 5.0 - 215.0s
+  Avg response time: 22187.26 ms
+  Min/Max response time: 1149.92/49375.73 ms
+  Avg execution time: 598.67 ms
+  Avg wait time: 21588.59 ms
+  Avg wait percentage: 92.92%
+  High wait events: 2672
+  Avg sample count: 248.1
+  Performance trend: degrading
+
+Deployment: speech-inference
+  Measurement count: 32
+  Time range: 40.0 - 600.0s
+  Avg response time: 30116.97 ms
+  Min/Max response time: 3197.73/165774.30 ms
+  Avg execution time: 3516.27 ms
+  Avg wait time: 26600.69 ms
+  Avg wait percentage: 54.62%
+  High wait events: 190
+  Avg sample count: 17.4
+  Performance trend: improving
+
+PERFORMANCE ANALYSIS
+===================
+
+Records with high wait percentage (>50%): 68
+  resnet50-inference: 14 records, avg 92.9% wait
+  speech-inference: 20 records, avg 87.4% wait
+  python-pi: 34 records, avg 97.2% wait
+
+Records with high response times (>85249.6ms): 8
+  python-pi: 6 records, avg 200104.4ms
+  speech-inference: 2 records, avg 165774.3ms
+
+SCALING RECOMMENDATIONS
+======================
+
+python-pi:
+  🔴 CRITICAL: Very high wait times - immediate scaling needed
+  ⚠️  High response times detected - investigate bottlenecks
+
+resnet50-inference:
+  🔴 CRITICAL: Very high wait times - immediate scaling needed
+  ⚠️  High response times detected - investigate bottlenecks
+
+speech-inference:
+  🟡 WARNING: Moderate wait times - consider scaling up
+  ⚠️  High response times detected - investigate bottlenecks
+

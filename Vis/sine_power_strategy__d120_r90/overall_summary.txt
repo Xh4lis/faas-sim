@@ -1,0 +1,80 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-08-18 11:18:23
+
+Topology Overview:
+  Number of nodes: 19
+  Number of functions: 6
+  Number of images: 6
+
+Node Distribution:
+  nx_10: 7909 invocations (34.3%)
+  rockpi_8: 3200 invocations (13.9%)
+  rockpi_30: 941 invocations (4.1%)
+  rpi3_3: 167 invocations (0.7%)
+  nx_3: 4631 invocations (20.1%)
+  coral_3: 1168 invocations (5.1%)
+  nano_15: 830 invocations (3.6%)
+  coral_1: 1070 invocations (4.6%)
+  rpi3_4: 123 invocations (0.5%)
+  nx_13: 23 invocations (0.1%)
+  rpi3_5: 768 invocations (3.3%)
+  rpi3_21: 87 invocations (0.4%)
+  rockpi_13: 1500 invocations (6.5%)
+  rockpi_12: 444 invocations (1.9%)
+  rpi3_22: 50 invocations (0.2%)
+  rockpi_5: 167 invocations (0.7%)
+  nano_3: 2 invocations (0.0%)
+  nano_17: 1 invocations (0.0%)
+  rockpi_21: 7 invocations (0.0%)
+
+Function Distribution:
+  resnet50-inference: 11069 invocations (47.9%)
+  python-pi: 9230 invocations (40.0%)
+  speech-inference: 2047 invocations (8.9%)
+  resnet50-preprocessing: 312 invocations (1.4%)
+  fio: 427 invocations (1.8%)
+  resnet50-training: 3 invocations (0.0%)
+Network Activity:
+  Total transfers: 59
+  Total bytes transferred: 3700.26 MB
+  Transfer duration: 57.57 s
+
+Network Flows:
+  nano_17 → rockpi_1: 98.23 MB in 0.85 s
+  nano_3 → rockpi_1: 196.46 MB in 1.71 s
+  registry → coral_1: 97.27 MB in 0.84 s
+  registry → coral_3: 59.13 MB in 0.51 s
+  registry → nano_15: 95.37 MB in 0.83 s
+  registry → nano_17: 95.37 MB in 0.83 s
+  registry → nano_26: 95.37 MB in 0.83 s
+  registry → nano_3: 95.37 MB in 0.83 s
+  registry → nx_10: 154.50 MB in 1.34 s
+  registry → nx_13: 95.37 MB in 0.83 s
+  registry → nx_3: 154.50 MB in 1.34 s
+  registry → rockpi_12: 97.27 MB in 0.85 s
+  registry → rockpi_13: 97.27 MB in 0.85 s
+  registry → rockpi_21: 38.15 MB in 0.33 s
+  registry → rockpi_30: 220.30 MB in 2.96 s
+  registry → rockpi_5: 97.27 MB in 0.85 s
+  registry → rockpi_8: 97.27 MB in 0.85 s
+  registry → rpi3_21: 19.07 MB in 0.17 s
+  registry → rpi3_22: 19.07 MB in 0.17 s
+  registry → rpi3_3: 19.07 MB in 0.17 s
+  registry → rpi3_4: 19.07 MB in 0.17 s
+  registry → rpi3_5: 52.45 MB in 0.46 s
+  rockpi_1 → coral_1: 45.78 MB in 0.40 s
+  rockpi_1 → nano_15: 196.46 MB in 3.59 s
+  rockpi_1 → nano_17: 276.57 MB in 9.80 s
+  rockpi_1 → nano_26: 221.25 MB in 9.01 s
+  rockpi_1 → nano_3: 331.88 MB in 8.24 s
+  rockpi_1 → nx_10: 98.23 MB in 1.17 s
+  rockpi_1 → nx_13: 98.23 MB in 0.85 s
+  rockpi_1 → nx_3: 98.23 MB in 2.75 s
+  rockpi_1 → rockpi_12: 91.55 MB in 0.80 s
+  rockpi_1 → rockpi_13: 45.78 MB in 0.40 s
+  rockpi_1 → rockpi_21: 45.78 MB in 0.40 s
+  rockpi_1 → rockpi_30: 45.78 MB in 0.80 s
+  rockpi_1 → rockpi_5: 45.78 MB in 0.40 s
+  rockpi_1 → rockpi_8: 45.78 MB in 0.40 s

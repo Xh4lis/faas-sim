@@ -20,45 +20,90 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
         super().__init__(env, faas_system, power_oracle, "LowPowerLongTimeBinPacker")
 
         # Power-aware thresholds (more conservative)
-        self.scale_up_threshold = 30     # Scale up at 30 RPS (earlier)
-        self.scale_down_threshold = 2    # Scale down below 2 RPS
-        self.response_time_threshold = 1500  # Accept 1500ms response time
-        
+        self.scale_up_threshold = 4.7      # Scale up at 4.7 RPS (earlier)
+        self.scale_down_threshold = 2.6
+        self.response_time_threshold = 1600
+        self.last_scale_action = {}  # Track last scaling action per deployment
+        self.scale_down_cooldown = 60  # 1 minute between scale downs (energy-aware)
         # Define power efficiency rankings (watts idle power)
         self.power_efficiency_ranking = {
-            'coral': 1,     # Most efficient (2.5W idle)
-            'nano': 2,      # Second (1.9W idle) 
-            'rpi3': 3,      # Third (2.1W idle)
-            'rpi4': 4,      # Fourth (2.7W idle)
-            'rockpi': 5,    # Fifth (3.0W idle)
-            'tx2': 6,       # Sixth (5.5W idle)
-            'nx': 7,        # Seventh (5.0W idle)
-            'nuc': 8,       # Higher power (15W idle)
-            'xeoncpu': 9,   # Much higher (50W idle)
-            'xeongpu': 10   # Highest power (75W idle)
-        }
+            'rpi3': 1,      # 1.4W - Lowest power, ensures LPLT hypothesis
+                            # Source: RasPi.TV calibrated measurements
+                            # Research Value: TRUE low power, low performance
+            
+            'nano': 2,      # 2.0W - Low power BUT GPU acceleration  
+                            # Source: NVIDIA official 5W mode specifications
+                            # Research Problem: Breaks LPLT hypothesis (too fast for AI)
+            
+            'rockpi': 3,    # 2.0W - CPU-focused, limited acceleration
+                            # Source: Community power measurements
+                            # Research Value: Reasonable LPLT device
+            
+            'coral': 4,     # 2.5W - Low power BUT TPU acceleration
+                            # Source: Google official specifications
+                            # Research Problem: Breaks LPLT hypothesis (too fast for AI)
+            
+            'rpi4': 5,      # 2.85W - Low power, moderate CPU performance
+                            # Source: RasPi.TV calibrated measurements  
+                            # Research Value: Good LPLT device for most workloads
+            
+            'tx2': 6,       # 5.0W - Moderate power, has GPU
+                            # Source: NVIDIA efficiency mode specifications
+                            # Research Transition: Between LPLT and HPST
+            
+            'nx': 7,        # 7.3W - Higher power, powerful GPU
+                            # Source: Independent benchmark measurements
+                            # Research Value: Good HPST device
+            
+            'nuc': 8,       # 8.0W - Consistently good general performance
+                            # Source: Multiple review sites average
+                            # Research Value: Excellent HPST device
+            
+            'xeoncpu': 9,   # 25.0W - Server-grade CPU performance
+                            # Source: Server system estimates
+                            # Research Value: High-end HPST device
+            
+            'xeongpu': 10   # 40.0W - Highest power, best absolute performance
+                            # Source: Server + discrete GPU estimates
+                            # Research Value: Maximum HPST performance
+                }
     
     def make_scaling_decision(self, deployment_name: str, current_replicas: int, 
                             current_load: float, avg_response_time: float) -> str:
-        """Power-aware scaling decision - prioritize energy efficiency"""
         
-        # Calculate current power efficiency
-        current_power_efficiency = self.calculate_power_efficiency(deployment_name)
+        current_time = self.env.now
+        last_action_time = self.last_scale_action.get(deployment_name, 0)
         
-        logger.debug(f"🔋 PowerOptimized: {deployment_name} - Load: {current_load:.1f} RPS, "
-                    f"Response: {avg_response_time:.1f}ms, Power Efficiency: {current_power_efficiency:.2f} W/RPS")
+        logger.debug(f"🔋 LPLT {deployment_name}: Load={current_load:.1f}, "
+                    f"RT={avg_response_time:.1f}ms, Replicas={current_replicas}")
         
-        # Scale up conditions (more aggressive for power efficiency)
-        if (current_load > self.scale_up_threshold or 
-            avg_response_time > self.response_time_threshold or
-            current_power_efficiency > 8.0) and \
+        # SCALE UP: Energy-aware but responsive 
+        if ((current_load > self.scale_up_threshold) or 
+            (avg_response_time > self.response_time_threshold)) and \
            current_replicas < self.max_replicas:
+            
+            self.last_scale_action[deployment_name] = current_time  
+            logger.info(f"🔋 LPLT SCALE UP {deployment_name}: Load or RT threshold exceeded")
             return "scale_up"
         
-        # Scale down conditions (more conservative - keep low-power nodes)
-        elif current_load < self.scale_down_threshold and \
-             avg_response_time < (self.response_time_threshold * 0.3) and \
-             current_replicas > self.min_replicas:
+        # SCALE DOWN: More aggressive for energy savings
+        time_since_last_action = current_time - last_action_time
+        rt_condition = avg_response_time < (self.response_time_threshold * 0.5) 
+        
+        # Add detailed debug logging
+        logger.debug(f"🔋 LPLT Scale Down Check for {deployment_name}:")
+        logger.debug(f"  Load: {current_load:.1f} < {self.scale_down_threshold} = {current_load < self.scale_down_threshold}")
+        logger.debug(f"  RT: {avg_response_time:.1f} < {self.response_time_threshold * 0.5:.1f} = {rt_condition}")
+        logger.debug(f"  Replicas: {current_replicas} > {self.min_replicas} = {current_replicas > self.min_replicas}")
+        logger.debug(f"  Cooldown: {time_since_last_action:.1f}s > {self.scale_down_cooldown}s = {time_since_last_action > self.scale_down_cooldown}")
+        
+        if (current_load < self.scale_down_threshold and 
+            rt_condition and  
+            current_replicas > self.min_replicas and
+            time_since_last_action > self.scale_down_cooldown):  
+            
+            self.last_scale_action[deployment_name] = current_time  
+            logger.info(f"🔋 LPLT SCALE DOWN {deployment_name}: Load={current_load:.1f}, RT={avg_response_time:.1f}")
             return "scale_down"
         
         return "no_action"
@@ -85,18 +130,6 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
 
         logger.error("❌ No available nodes found for scaling!")
         return None
-
-    def has_sufficient_resources(self, node, deployment_name: str) -> bool:
-        """Check if node has sufficient CPU/memory resources using real data."""
-        try:
-            current_utilization = self.get_node_utilization(node)
-            # More lenient for low power, but still avoid overload
-            cpu_available = current_utilization.get('cpu', 0) < 0.9
-            memory_available = current_utilization.get('memory', 0) < 0.85
-            return cpu_available and memory_available
-        except Exception as e:
-            logger.error(f"❌ Resource check failed for {node.name}: {e}")
-            return False
     
     def estimate_node_power_consumption(self, node: Any, deployment_name: str) -> float:
         """Estimate power consumption for running function on node using real utilization"""

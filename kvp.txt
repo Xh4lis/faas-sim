@@ -1,0 +1,141 @@
+=== RUNNING HYPOTHESIS TEST ===
+Hypothesis: LPLT reduces power consumption vs K8s baseline, but increases response times
+
+=== POWER CONSUMPTION COMPARISON ===
+Kubernetes average power: 3.1W
+LPLT average power: 3.0W
+Power savings: 0.2%
+
+=== PERFORMANCE COMPARISON (ROBUST METRICS) ===
+Kubernetes MEDIAN response time: 1053.483s
+LPLT MEDIAN response time: 1177.837s
+MEDIAN performance penalty: 11.8%
+Kubernetes 95th percentile: 21099.809s
+LPLT 95th percentile: 25180.907s
+95th percentile penalty: 19.3%
+Kubernetes warm-up avg: 5568.538s
+LPLT warm-up avg: 6449.926s
+Warm-up performance penalty: 15.8%
+
+=== WAIT TIME ANALYSIS ===
+K8s median wait time: 0.000s
+LPLT median wait time: 0.000s
+Wait time improvement: 0.0%
+
+=== REVISED HYPOTHESIS RESULT ===
+✅ HYPOTHESIS CONFIRMED (MEDIAN): LPLT saves 0.2% energy
+   at the cost of 11.8% slower median response times
+🔍 DEEP ANALYSIS: Understanding Why LPLT Outperforms K8s
+
+=== NODE DISTRIBUTION ANALYSIS ===
+K8s uses 120 unique nodes
+LPLT uses 120 unique nodes
+Node spreading difference: 0
+
+K8s node load distribution:
+  Average replicas per node: 14.0
+  Max replicas on one node: 32
+  Min replicas on one node: 4
+
+LPLT node load distribution:
+  Average replicas per node: 12.9
+  Max replicas on one node: 22
+  Min replicas on one node: 7
+
+Consolidation factor: 0.92
+➡️ Similar distribution patterns
+=== COLD START ANALYSIS ===
+K8s scheduling success rate: 0.6976744186046512
+LPLT scheduling success rate: 0.6795774647887324
+
+Cold start execution times:
+K8s early median t_exec: 3.304s
+LPLT early median t_exec: 3.281s
+✅ LPLT has 0.7% faster cold starts
+
+Total scheduling events:
+K8s: 1678 scheduling events
+LPLT: 1706 scheduling events
+=== WORKLOAD-SPECIFIC PERFORMANCE ===
+
+resnet50-inference (12609 vs 12593 samples):
+  Median: K8s=0.705s, LPLT=0.767s (+8.8%)
+  P95: K8s=6.663s, LPLT=5.589s (-16.1%)
+
+fio (3885 vs 4301 samples):
+  Median: K8s=159.918s, LPLT=153.362s (-4.1%)
+  P95: K8s=477.766s, LPLT=464.140s (-2.9%)
+
+speech-inference (2458 vs 2458 samples):
+  Median: K8s=3.814s, LPLT=3.810s (-0.1%)
+  P95: K8s=43.859s, LPLT=43.891s (+0.1%)
+
+python-pi (15335 vs 15329 samples):
+  Median: K8s=0.924s, LPLT=0.926s (+0.3%)
+  P95: K8s=49.176s, LPLT=49.334s (+0.3%)
+
+resnet50-training (171 vs 197 samples):
+  Median: K8s=310.764s, LPLT=307.158s (-1.2%)
+  P95: K8s=509.483s, LPLT=502.091s (-1.5%)
+=== SCALING DECISION ANALYSIS ===
+K8s scaling actions:
+  Scale up: 389
+  Scale down: 170
+  No action: 163
+  Total actions: 559
+
+LPLT scaling actions:
+  Scale up: 386
+  Scale down: 8
+  No action: 330
+  Total actions: 394
+
+High response time events (>1s):
+K8s: 30 events
+LPLT: 33 events
+
+Node type selection frequency:
+K8s preferences:
+  nuc: 195
+  coral: 157
+  nx: 37
+LPLT preferences:
+  rpi3: 386
+=== RESOURCE CONTENTION ANALYSIS ===
+K8s average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.012000     0.010000
+nano       0.016814     0.012610
+nuc        0.022017     0.018347
+nx         0.022963     0.016534
+rockpi     0.028965     0.024137
+rpi3       0.024970     0.020808
+
+LPLT average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.012000     0.010000
+nano       0.016814     0.012610
+nuc        0.022149     0.018457
+nx         0.022963     0.016534
+rockpi     0.026001     0.021667
+rpi3       0.024083     0.020069
+
+High CPU utilization events (>90%):
+K8s: 0 events
+LPLT: 0 events
+
+Average power per active node:
+K8s: 3.05W
+LPLT: 3.05W
+
+==================================================
+HYPOTHESIS VALIDATION SUMMARY
+==================================================
+✅ H2: LPLT has faster cold start performance
+✅ H3: LPLT scales more conservatively (less churn)
+
+=== SUMMARY ===
+Trade-off ratio: 0.2% energy savings for 11.8% performance cost
+Plot saved as tradeoff_plot.png

@@ -1,0 +1,84 @@
+AUTOSCALER DETAILED METRICS SUMMARY
+===================================
+
+Report generated: 2025-08-18 12:30:11
+
+Total measurement records: 87
+Deployments analyzed: 3
+Time range: 5.00 - 600.00s
+Simulation duration: 595.00s
+
+OVERALL STATISTICS
+==================
+Average response time: 6093.66 ms
+Max response time: 71165.14 ms
+Average execution time: 1584.31 ms
+Average wait time: 4509.35 ms
+Average wait percentage: 23.72%
+Total high wait count events: 1038
+Average sample count: 69.3
+
+PER-DEPLOYMENT BREAKDOWN
+========================
+
+Deployment: python-pi
+  Measurement count: 35
+  Time range: 5.0 - 600.0s
+  Avg response time: 11145.72 ms
+  Min/Max response time: 922.45/71165.14 ms
+  Avg execution time: 1106.48 ms
+  Avg wait time: 10039.24 ms
+  Avg wait percentage: 39.15%
+  High wait events: 804
+  Avg sample count: 99.6
+  Performance trend: improving
+
+Deployment: resnet50-inference
+  Measurement count: 30
+  Time range: 5.0 - 600.0s
+  Avg response time: 972.46 ms
+  Min/Max response time: 616.17/1836.13 ms
+  Avg execution time: 846.01 ms
+  Avg wait time: 126.45 ms
+  Avg wait percentage: 9.36%
+  High wait events: 210
+  Avg sample count: 78.7
+  Performance trend: degrading
+
+Deployment: speech-inference
+  Measurement count: 22
+  Time range: 40.0 - 495.0s
+  Avg response time: 5039.73 ms
+  Min/Max response time: 3215.26/13782.75 ms
+  Avg execution time: 3351.27 ms
+  Avg wait time: 1688.46 ms
+  Avg wait percentage: 18.74%
+  High wait events: 24
+  Avg sample count: 8.5
+  Performance trend: improving
+
+PERFORMANCE ANALYSIS
+===================
+
+Records with high wait percentage (>50%): 24
+  resnet50-inference: 4 records, avg 63.0% wait
+  speech-inference: 6 records, avg 59.8% wait
+  python-pi: 14 records, avg 93.7% wait
+
+Records with high response times (>13131.4ms): 8
+  speech-inference: 2 records, avg 13782.7ms
+  python-pi: 6 records, avg 44526.9ms
+
+SCALING RECOMMENDATIONS
+======================
+
+python-pi:
+  ✅ ACCEPTABLE: Wait times within reasonable range
+  ⚠️  High response times detected - investigate bottlenecks
+
+resnet50-inference:
+  ✅ ACCEPTABLE: Wait times within reasonable range
+
+speech-inference:
+  ✅ ACCEPTABLE: Wait times within reasonable range
+

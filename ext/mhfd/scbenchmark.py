@@ -129,7 +129,83 @@ class SmartCityConstantBenchmark(ConstantBenchmark):
             # Final RPS calculation
             final_rps = max(1, int((base_rps * zone_multiplier) / instance_count))
             deployment_rps[func_name] = final_rps
+        # ===== ARRIVAL PROFILE OPTIONS =====
+        # OPTION 1: Constant RPS (baseline/steady-state testing)
+        # for deployment in self.deployments:
+        #     func_name = deployment.name
+        #     rps = deployment_rps.get(func_name, 1)
+        #     self.arrival_profiles[func_name] = static_arrival_profile(
+        #         constant_rps_profile(rps)
+        #     )
 
+        # OPTION 2: Sine wave (current - periodic load variation)
+        for deployment in self.deployments:
+            func_name = deployment.name
+            rps = deployment_rps.get(func_name, 1)
+            self.arrival_profiles[func_name] = static_arrival_profile(
+                sine_rps_profile(self.env, max_rps=rps*3, period=300)  # 5-min cycles
+            )
+
+        # OPTION 3: Fast sine wave (rapid load changes)
+        # for deployment in self.deployments:
+        #     func_name = deployment.name
+        #     rps = deployment_rps.get(func_name, 1)
+        #     self.arrival_profiles[func_name] = static_arrival_profile(
+        #         sine_rps_profile(self.env, max_rps=rps*4, period=60)  # 1-min cycles
+        #     )
+
+        # OPTION 4: Random walk (unpredictable load)
+        # for deployment in self.deployments:
+        #     func_name = deployment.name
+        #     rps = deployment_rps.get(func_name, 1)
+        #     self.arrival_profiles[func_name] = static_arrival_profile(
+        #         randomwalk_rps_profile(mu=rps*2, sigma=rps*0.5, max_rps=rps*5, min_rps=1)
+        #     )
+
+        # OPTION 5: Exponential arrival times (bursty traffic)
+        # for deployment in self.deployments:
+        #     func_name = deployment.name
+        #     rps = deployment_rps.get(func_name, 1)
+        #     self.arrival_profiles[func_name] = expovariate_arrival_profile(
+        #         constant_rps_profile(rps*2), scale=1.5
+        #     )
+
+        # OPTION 6: Mixed profiles (different patterns per function type)
+        # for deployment in self.deployments:
+        #     func_name = deployment.name
+        #     rps = deployment_rps.get(func_name, 1)
+        #     
+        #     if 'inference' in func_name:
+        #         # Inference: Steady with small variations
+        #         self.arrival_profiles[func_name] = static_arrival_profile(
+        #             sine_rps_profile(self.env, max_rps=rps*2, period=600)
+        #         )
+        #     elif 'training' in func_name:
+        #         # Training: Burst patterns
+        #         self.arrival_profiles[func_name] = expovariate_arrival_profile(
+        #             constant_rps_profile(rps*1.5), scale=2.0
+        #         )
+        #     else:
+        #         # Others: Random variations
+        #         self.arrival_profiles[func_name] = static_arrival_profile(
+        #             randomwalk_rps_profile(mu=rps, sigma=rps*0.3, max_rps=rps*3, min_rps=1)
+        #         )
+
+        # OPTION 7: High stress test (aggressive scaling testing)
+        # for deployment in self.deployments:
+        #     func_name = deployment.name
+        #     rps = deployment_rps.get(func_name, 1)
+        #     self.arrival_profiles[func_name] = static_arrival_profile(
+        #         sine_rps_profile(self.env, max_rps=rps*8, period=120)  # 2-min high amplitude
+        #     )
+
+        # OPTION 8: Low stress test (energy efficiency testing)
+        # for deployment in self.deployments:
+        #     func_name = deployment.name
+        #     rps = deployment_rps.get(func_name, 1)
+        #     self.arrival_profiles[func_name] = static_arrival_profile(
+        #         sine_rps_profile(self.env, max_rps=rps*1.5, period=900)  # 15-min gentle cycles
+        #     )
         # Set arrival profiles
         for deployment in self.deployments:
             func_name = deployment.name
