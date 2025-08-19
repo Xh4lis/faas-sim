@@ -60,28 +60,28 @@ class SimulationConfig:
 
     def __init__(self):
         # Simulation parameters
-        self.num_devices = 120
-        self.n_nuc = 3
+        self.num_devices = 240
+        self.n_nuc = 6
         self.device_settings = make_edgeai_settings(self.num_devices, self.n_nuc)
         self.duration = 600
-        self.total_rps = 35
+        self.total_rps = 70
         self.scenario = "light"  # Options: "light", "reduced", "edgeai", "custom"
-        self.scaling_strategy = "power" # Options: "performance", "power", "basic" , "kubernetes"
+        self.scaling_strategy = "performance" # Options: "performance", "power", "basic" , "kubernetes"
         # Custom function counts for scenario
         self.custom_counts = {
-            "resnet50-inference": 8,
-            "speech-inference": 6,
-            "resnet50-preprocessing": 4,
-            "resnet50-training": 2,  
-            "python-pi": 12,
-            "fio": 8,
+            "resnet50-inference": 1,
+            "speech-inference": 1,
+            "resnet50-preprocessing": 1,
+            "resnet50-training": 1,
+            "python-pi": 1,
+            "fio": 1,
         }
         
         # Scheduler parameters
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "sine_power_strategy"
+        self.settings_id = "sine_perf_strategy"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         

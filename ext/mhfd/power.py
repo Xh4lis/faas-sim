@@ -126,11 +126,11 @@ DEVICE_POWER_PROFILES = {
     
     # Default fallback - Conservative estimates
     "default": {
-        "idle": 5.0,      
-        "cpu_max": 15.0,  
-        "gpu_max": 10.0,  
-        "network_max": 2.0, 
-        "memory_max": 2.0   
+        "idle": 0.0,      
+        "cpu_max": 0.0,  
+        "gpu_max": 0.0,  
+        "network_max": 0.0, 
+        "memory_max": 0.0   
     }
 }
 

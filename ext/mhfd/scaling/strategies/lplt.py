@@ -19,12 +19,16 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
     def __init__(self, env, faas_system, power_oracle):
         super().__init__(env, faas_system, power_oracle, "LowPowerLongTimeBinPacker")
 
-        # Power-aware thresholds (more conservative)
-        self.scale_up_threshold = 4.7      # Scale up at 4.7 RPS (earlier)
-        self.scale_down_threshold = 2.6
-        self.response_time_threshold = 1600
-        self.last_scale_action = {}  # Track last scaling action per deployment
-        self.scale_down_cooldown = 60  # 1 minute between scale downs (energy-aware)
+        self.scale_up_threshold = 8
+        self.scale_down_threshold = 3
+        self.response_time_threshold = 1200
+        # self.last_scale_action = {}  # Track last scaling action per deployment
+        # self.scale_down_cooldown = 45 
+
+        # Consolidation parameters
+        self.target_utilization = 0.75      
+        self.min_replicas_per_node = 2      
+        
         # Define power efficiency rankings (watts idle power)
         self.power_efficiency_ranking = {
             'rpi3': 1,      # 1.4W - Lowest power, ensures LPLT hypothesis
@@ -72,7 +76,7 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
                             current_load: float, avg_response_time: float) -> str:
         
         current_time = self.env.now
-        last_action_time = self.last_scale_action.get(deployment_name, 0)
+        # last_action_time = self.last_scale_action.get(deployment_name, 0)
         
         logger.debug(f"🔋 LPLT {deployment_name}: Load={current_load:.1f}, "
                     f"RT={avg_response_time:.1f}ms, Replicas={current_replicas}")
@@ -82,54 +86,103 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
             (avg_response_time > self.response_time_threshold)) and \
            current_replicas < self.max_replicas:
             
-            self.last_scale_action[deployment_name] = current_time  
+            # self.last_scale_action[deployment_name] = current_time  
             logger.info(f"🔋 LPLT SCALE UP {deployment_name}: Load or RT threshold exceeded")
             return "scale_up"
         
         # SCALE DOWN: More aggressive for energy savings
-        time_since_last_action = current_time - last_action_time
-        rt_condition = avg_response_time < (self.response_time_threshold * 0.5) 
-        
-        # Add detailed debug logging
-        logger.debug(f"🔋 LPLT Scale Down Check for {deployment_name}:")
-        logger.debug(f"  Load: {current_load:.1f} < {self.scale_down_threshold} = {current_load < self.scale_down_threshold}")
-        logger.debug(f"  RT: {avg_response_time:.1f} < {self.response_time_threshold * 0.5:.1f} = {rt_condition}")
-        logger.debug(f"  Replicas: {current_replicas} > {self.min_replicas} = {current_replicas > self.min_replicas}")
-        logger.debug(f"  Cooldown: {time_since_last_action:.1f}s > {self.scale_down_cooldown}s = {time_since_last_action > self.scale_down_cooldown}")
+        # time_since_last_action = current_time - last_action_time
         
         if (current_load < self.scale_down_threshold and 
-            rt_condition and  
-            current_replicas > self.min_replicas and
-            time_since_last_action > self.scale_down_cooldown):  
+            avg_response_time < (self.response_time_threshold * 0.5) and
+            current_replicas > self.min_replicas):
+            # time_since_last_action > self.scale_down_cooldown):  
             
-            self.last_scale_action[deployment_name] = current_time  
+            # self.last_scale_action[deployment_name] = current_time  
             logger.info(f"🔋 LPLT SCALE DOWN {deployment_name}: Load={current_load:.1f}, RT={avg_response_time:.1f}")
             return "scale_down"
         
         return "no_action"
     
     def select_node_for_scaling(self, deployment_name: str) -> Optional[Any]:
-        """Select the most energy-efficient available node, fallback to less efficient if needed."""
+        """Energy-aware with consolidation preference"""
         available_nodes = self.get_available_nodes()
-        # Sort nodes by power efficiency (lowest power first)
-        power_ranked_nodes = self.rank_nodes_by_power_efficiency(available_nodes)
-
-        # Try efficient nodes first
-        for node, power_score in power_ranked_nodes:
-            if self.has_sufficient_resources(node, deployment_name):
-                estimated_power = self.estimate_node_power_consumption(node, deployment_name)
-                logger.info(f"🔋 PowerOptimized: Selected {node.name} "
-                            f"(estimated power: {estimated_power:.1f}W, efficiency rank: {power_score})")
+        
+        # 1. Try to consolidate on existing active low-power nodes
+        active_low_power_nodes = self.get_active_low_power_nodes(available_nodes)
+        for node in active_low_power_nodes:
+            if self.can_consolidate_on_node(node, deployment_name):
+                logger.info(f"🔋 LPLT Consolidating on {node.name}")
                 return node
-
-        # Fallback: try less efficient nodes if all efficient are overloaded
-        for node, power_score in sorted(power_ranked_nodes, key=lambda x: x[1], reverse=True):
-            if self.has_sufficient_resources(node, deployment_name):
-                logger.warning(f"⚠️ Fallback: Using less efficient node {node.name} (rank {power_score})")
-                return node
-
-        logger.error("❌ No available nodes found for scaling!")
+        
+        # 2. If no consolidation possible, use workload-specific selection
+        return self.select_new_low_power_node(available_nodes, deployment_name)
+    
+    def get_active_low_power_nodes(self, available_nodes) -> List[Any]:
+        """Get low-power nodes that are already running workloads"""
+        active_nodes = []
+        low_power_types = ['rpi3', 'rpi4', 'nano', 'coral', 'rockpi']
+        
+        for node in available_nodes:
+            node_type = self.extract_node_type(node.name)
+            if node_type in low_power_types:
+                utilization = self.get_node_utilization(node)
+                if utilization.get('cpu', 0) > 0.1:  # Already active
+                    active_nodes.append(node)
+        
+        # Sort by current utilization (prefer nodes with medium load)
+        active_nodes.sort(key=lambda n: self.get_node_utilization(n).get('cpu', 0))
+        return active_nodes
+    
+    def can_consolidate_on_node(self, node, deployment_name: str) -> bool:
+        """Check if we can add more load to this node for energy efficiency"""
+        utilization = self.get_node_utilization(node)
+        
+        # Allow higher consolidation for energy savings
+        cpu_can_handle = utilization.get('cpu', 0) < self.target_utilization
+        memory_can_handle = utilization.get('memory', 0) < self.target_utilization
+        
+        return cpu_can_handle and memory_can_handle
+    
+    def select_new_low_power_node(self, available_nodes, deployment_name: str) -> Optional[Any]:
+        """Select new low-power node based on workload type"""
+        workload_preferences = {
+            'inference': ['coral', 'nano', 'rpi4', 'rpi3'],  # TPU/GPU first
+            'training': ['nano', 'rpi4', 'rockpi', 'rpi3'],  # GPU/CPU capable
+            'cpu': ['rpi4', 'rockpi', 'rpi3', 'nano']        # CPU-focused
+        }
+        
+        # Determine workload type
+        if 'inference' in deployment_name.lower():
+            preferred_types = workload_preferences['inference']
+        elif 'training' in deployment_name.lower():
+            preferred_types = workload_preferences['training']
+        else:
+            preferred_types = workload_preferences['cpu']
+        
+        # Try preferred types in order
+        for node_type in preferred_types:
+            for node in available_nodes:
+                if (node_type in node.name.lower() and 
+                    self.has_sufficient_resources(node, deployment_name)):
+                    logger.info(f"🔋 LPLT New node: {node.name} ({node_type}) for {deployment_name}")
+                    return node
+        
         return None
+
+    def has_sufficient_resources(self, node, deployment_name: str) -> bool:
+        """Balanced resource checking"""
+        try:
+            utilization = self.get_node_utilization(node)
+            
+            # Balanced thresholds - not too strict, not too lenient
+            cpu_available = utilization.get('cpu', 0) < 0.8    # 80% threshold
+            memory_available = utilization.get('memory', 0) < 0.8
+            
+            return cpu_available and memory_available
+        except:
+            return True
+    
     
     def estimate_node_power_consumption(self, node: Any, deployment_name: str) -> float:
         """Estimate power consumption for running function on node using real utilization"""

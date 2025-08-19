@@ -1,7 +1,7 @@
 FAAS ENERGY CONSUMPTION ANALYSIS REPORT
 ========================================
 
-Report generated: 2025-08-18 12:30:30
+Report generated: 2025-08-19 03:59:23
 
 System Overview:
   Total nodes: 120
@@ -10,89 +10,89 @@ System Overview:
   Time range: 1.0 to 605.0
 
 Energy Consumption Summary:
-  Total energy consumed: 69,843,019.68 Joules (19400.84 Wh)
-  Average energy per time period: 115443.01 J
-  Total energy in kWh: 19.4008 kWh
+  Total energy consumed: 70,770,989.24 Joules (19658.61 Wh)
+  Average energy per time period: 116976.84 J
+  Total energy in kWh: 19.6586 kWh
 
 Power Consumption Summary:
-  Average system power: 3.05 W
+  Average system power: 3.08 W
   Peak system power: 12.59 W
   Minimum system power: 1.40 W
   Power range: 11.19 W
 
 Node Type Energy Distribution:
-  rockpi: 21,845,400.72 J (31.3%)
-  nx: 20,961,183.24 J (30.0%)
-  nano: 10,905,532.95 J (15.6%)
-  rpi: 10,337,947.29 J (14.8%)
-  nuc: 3,974,179.12 J (5.7%)
-  coral: 1,818,776.36 J (2.6%)
+  rockpi: 22,353,380.72 J (31.6%)
+  nx: 21,092,153.06 J (29.8%)
+  nano: 10,937,801.47 J (15.5%)
+  rpi: 10,565,064.18 J (14.9%)
+  nuc: 3,998,254.40 J (5.6%)
+  coral: 1,824,335.41 J (2.6%)
 
 Node Type Power Statistics:
   coral (4 nodes):
     Average power: 2.45 W
     Power range: 2.40 - 2.89 W
-    Power variability (std): 0.147 W
+    Power variability (std): 0.153 W
   nano (29 nodes):
     Average power: 1.99 W
     Power range: 1.90 - 2.91 W
-    Power variability (std): 0.281 W
+    Power variability (std): 0.286 W
   nuc (3 nodes):
-    Average power: 6.69 W
+    Average power: 6.72 W
     Power range: 6.00 - 9.76 W
-    Power variability (std): 1.459 W
+    Power variability (std): 1.481 W
   nx (14 nodes):
-    Average power: 7.79 W
+    Average power: 7.82 W
     Power range: 7.30 - 12.59 W
-    Power variability (std): 1.528 W
+    Power variability (std): 1.568 W
   rockpi (34 nodes):
-    Average power: 3.39 W
+    Average power: 3.46 W
     Power range: 3.20 - 4.08 W
-    Power variability (std): 0.363 W
+    Power variability (std): 0.399 W
   rpi (36 nodes):
-    Average power: 1.50 W
+    Average power: 1.53 W
     Power range: 1.40 - 1.90 W
-    Power variability (std): 0.198 W
+    Power variability (std): 0.215 W
 
 Node Type Energy Statistics:
   coral:
-    Total energy: 1,818,776.36 J (505.22 Wh)
-    Average energy per measurement: 751.560 J
-    Energy per node: 454,694.09 J
+    Total energy: 1,824,335.41 J (506.76 Wh)
+    Average energy per measurement: 753.858 J
+    Energy per node: 456,083.85 J
   nano:
-    Total energy: 10,905,532.95 J (3029.32 Wh)
-    Average energy per measurement: 621.575 J
-    Energy per node: 376,052.86 J
+    Total energy: 10,937,801.47 J (3038.28 Wh)
+    Average energy per measurement: 623.414 J
+    Energy per node: 377,165.57 J
   nuc:
-    Total energy: 3,974,179.12 J (1103.94 Wh)
-    Average energy per measurement: 2189.630 J
-    Energy per node: 1,324,726.37 J
+    Total energy: 3,998,254.40 J (1110.63 Wh)
+    Average energy per measurement: 2202.895 J
+    Energy per node: 1,332,751.47 J
   nx:
-    Total energy: 20,961,183.24 J (5822.55 Wh)
-    Average energy per measurement: 2474.756 J
-    Energy per node: 1,497,227.37 J
+    Total energy: 21,092,153.06 J (5858.93 Wh)
+    Average energy per measurement: 2490.219 J
+    Energy per node: 1,506,582.36 J
   rockpi:
-    Total energy: 21,845,400.72 J (6068.17 Wh)
-    Average energy per measurement: 1062.003 J
-    Energy per node: 642,511.79 J
+    Total energy: 22,353,380.72 J (6209.27 Wh)
+    Average energy per measurement: 1086.698 J
+    Energy per node: 657,452.37 J
   rpi:
-    Total energy: 10,337,947.29 J (2871.65 Wh)
-    Average energy per measurement: 474.653 J
-    Energy per node: 287,165.20 J
+    Total energy: 10,565,064.18 J (2934.74 Wh)
+    Average energy per measurement: 485.081 J
+    Energy per node: 293,474.01 J
 
 Efficiency Analysis:
   Most energy efficient node type: coral
   Highest energy consuming node type: rockpi
-  Energy efficiency ratio: 12.01x
+  Energy efficiency ratio: 12.25x
 
 Power Model Assessment:
   Power model type: DYNAMIC (Variable power consumption)
-  System power variance: 4.383 W²
-  CPU-Power correlation: 0.250
+  System power variance: 4.434 W²
+  CPU-Power correlation: 0.244
 
 Environmental Impact (Estimates):
-  CO2 emissions (avg grid): 4.5204 kg CO2
-  Cost estimate (@$0.12/kWh): $2.3281
+  CO2 emissions (avg grid): 4.5805 kg CO2
+  Cost estimate (@$0.12/kWh): $2.3590
 
 Recommendations:
   - Current power model shows good dynamic behavior
@@ -100,22 +100,22 @@ Recommendations:
   - Monitor for power anomalies and optimization opportunities
 
 Top Energy Consuming Nodes:
-   1. nx_8 (nx): 1,624,442.05 J
-   2. nx_0 (nx): 1,616,395.96 J
-   3. nx_1 (nx): 1,611,005.45 J
-   4. nx_9 (nx): 1,602,880.01 J
-   5. nx_2 (nx): 1,583,735.50 J
-   6. nx_6 (nx): 1,555,936.55 J
-   7. nx_5 (nx): 1,519,007.06 J
-   8. nx_12 (nx): 1,513,246.25 J
-   9. nx_11 (nx): 1,439,450.75 J
-  10. nx_7 (nx): 1,424,294.90 J
+   1. nx_8 (nx): 1,640,391.40 J
+   2. nx_1 (nx): 1,629,779.66 J
+   3. nx_0 (nx): 1,611,005.45 J
+   4. nx_2 (nx): 1,602,880.01 J
+   5. nx_9 (nx): 1,597,436.60 J
+   6. nx_6 (nx): 1,575,451.36 J
+   7. nx_12 (nx): 1,533,316.51 J
+   8. nx_5 (nx): 1,513,246.25 J
+   9. nx_11 (nx): 1,460,446.76 J
+  10. nx_7 (nx): 1,448,480.78 J
 
 Analysis Summary:
   Report covers 605 measurement periods across 120 nodes
-  Total system energy consumption: 69,843,020 J (19400.84 Wh)
+  Total system energy consumption: 70,770,989 J (19658.61 Wh)
   System shows dynamic (variable power consumption) power consumption patterns
-  Energy distribution varies 12.0x between node types
+  Energy distribution varies 12.3x between node types
 
 End of Report
 =============

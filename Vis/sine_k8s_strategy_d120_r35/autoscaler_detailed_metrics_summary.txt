@@ -1,7 +1,7 @@
 AUTOSCALER DETAILED METRICS SUMMARY
 ===================================
 
-Report generated: 2025-08-18 11:46:54
+Report generated: 2025-08-18 13:15:57
 
 Total measurement records: 92
 Deployments analyzed: 3
@@ -10,13 +10,13 @@ Simulation duration: 595.00s
 
 OVERALL STATISTICS
 ==================
-Average response time: 5375.98 ms
-Max response time: 67225.31 ms
-Average execution time: 1483.65 ms
-Average wait time: 3892.32 ms
-Average wait percentage: 21.01%
-Total high wait count events: 1032
-Average sample count: 68.9
+Average response time: 5349.77 ms
+Max response time: 66473.68 ms
+Average execution time: 1476.11 ms
+Average wait time: 3873.66 ms
+Average wait percentage: 21.28%
+Total high wait count events: 1030
+Average sample count: 68.7
 
 PER-DEPLOYMENT BREAKDOWN
 ========================
@@ -24,37 +24,37 @@ PER-DEPLOYMENT BREAKDOWN
 Deployment: python-pi
   Measurement count: 36
   Time range: 5.0 - 600.0s
-  Avg response time: 10258.70 ms
-  Min/Max response time: 942.04/67225.31 ms
-  Avg execution time: 1087.18 ms
-  Avg wait time: 9171.52 ms
-  Avg wait percentage: 38.04%
-  High wait events: 800
-  Avg sample count: 97.1
+  Avg response time: 10203.80 ms
+  Min/Max response time: 903.27/66473.68 ms
+  Avg execution time: 1085.85 ms
+  Avg wait time: 9117.95 ms
+  Avg wait percentage: 38.03%
+  High wait events: 796
+  Avg sample count: 96.8
   Performance trend: improving
 
 Deployment: resnet50-inference
   Measurement count: 34
   Time range: 5.0 - 600.0s
-  Avg response time: 811.58 ms
-  Min/Max response time: 612.53/1775.36 ms
-  Avg execution time: 707.38 ms
-  Avg wait time: 104.20 ms
-  Avg wait percentage: 7.82%
-  High wait events: 212
-  Avg sample count: 78.1
+  Avg response time: 805.45 ms
+  Min/Max response time: 612.66/1775.36 ms
+  Avg execution time: 695.30 ms
+  Avg wait time: 110.15 ms
+  Avg wait percentage: 8.54%
+  High wait events: 214
+  Avg sample count: 77.7
   Performance trend: stable
 
 Deployment: speech-inference
   Measurement count: 22
   Time range: 40.0 - 495.0s
-  Avg response time: 4440.12 ms
-  Min/Max response time: 3032.79/10920.38 ms
-  Avg execution time: 3332.13 ms
-  Avg wait time: 1107.99 ms
+  Avg response time: 4429.85 ms
+  Min/Max response time: 3171.17/10920.38 ms
+  Avg execution time: 3321.42 ms
+  Avg wait time: 1108.43 ms
   Avg wait percentage: 13.54%
   High wait events: 20
-  Avg sample count: 8.5
+  Avg sample count: 8.6
   Performance trend: improving
 
 PERFORMANCE ANALYSIS
@@ -65,8 +65,8 @@ Records with high wait percentage (>50%): 22
   speech-inference: 4 records, avg 60.7% wait
   python-pi: 14 records, avg 93.6% wait
 
-Records with high response times (>13020.5ms): 10
-  python-pi: 10 records, avg 29617.7ms
+Records with high response times (>13021.5ms): 10
+  python-pi: 10 records, avg 29420.6ms
 
 SCALING RECOMMENDATIONS
 ======================

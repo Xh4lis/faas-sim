@@ -7,8 +7,14 @@
 - Fix Power profiles and Scaling // ✅
 - Sampling Priod // ✅
 
-
-
+power profiles 
+kvp script
+ for deployment in self.deployments:
+            func_name = deployment.name
+            rps = deployment_rps.get(func_name, 1)
+            self.arrival_profiles[func_name] = static_arrival_profile(
+                sine_rps_profile(self.env, max_rps=rps*3, period=300)  # 5-min cycles
+            )
 
 - Network Latency // to do
 

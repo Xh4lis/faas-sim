@@ -1,0 +1,159 @@
+=== NODE SELECTION POWER IMPACT ===
+
+HPST selections and power cost:
+  nuc: 361 selections × 6.0W = 2166.0W
+  nx: 223 selections × 7.3W = 1627.9W
+HPST average power per selection: 6.50W
+
+LPLT selections and power cost:
+  nano: 169 selections × 1.9W = 321.1W
+  coral: 96 selections × 2.4W = 230.4W
+  nx: 31 selections × 7.3W = 226.3W
+LPLT average power per selection: 2.63W
+
+Node selection efficiency: 59.6% power savings with LPLT
+=== RUNNING HYPOTHESIS TEST ===
+Hypothesis: LPLT reduces power consumption vs HPST baseline, but increases response times
+
+=== POWER CONSUMPTION COMPARISON ===
+HPST average total system power: 366.4W
+LPLT average total system power: 371.7W
+Total system power savings: -1.4%
+
+[For comparison] Old per-node average:
+  HPST: 3.1W per node
+  LPLT: 3.1W per node
+
+=== PERFORMANCE COMPARISON  ===
+HPST MEDIAN response time: 1082.584s
+LPLT MEDIAN response time: 1297.976s
+MEDIAN performance penalty: 19.9%
+HPST 95th percentile: 25874.633s
+LPLT 95th percentile: 453427.498s
+95th percentile penalty: 1652.4%
+HPST warm-up avg: 7351.521s
+LPLT warm-up avg: 64306.826s
+Warm-up performance penalty: 774.7%
+
+=== WAIT TIME ANALYSIS ===
+HPST median wait time: 0.000s
+LPLT median wait time: 7.687s
+Wait time improvement: 0.0%
+
+=== REVISED HYPOTHESIS RESULT ===
+❌ HYPOTHESIS NOT CONFIRMED
+🔍 DEEP ANALYSIS: Understanding Why LPLT Compares to HPST
+
+=== NODE DISTRIBUTION ANALYSIS ===
+HPST uses 120 unique nodes
+LPLT uses 120 unique nodes
+Node spreading difference: 0
+
+HPST node load distribution:
+  Average replicas per node: 16.6
+  Max replicas on one node: 24
+  Min replicas on one node: 12
+
+LPLT node load distribution:
+  Average replicas per node: 10.1
+  Max replicas on one node: 18
+  Min replicas on one node: 4
+
+Consolidation factor: 0.60
+❌ LPLT is spreading more than HPST
+=== COLD START ANALYSIS ===
+HPST scheduling success rate: 0.5091463414634146
+LPLT scheduling success rate: 0.684931506849315
+
+Cold start execution times:
+HPST early median t_exec: 3.931s
+LPLT early median t_exec: 2.879s
+✅ LPLT has 26.8% faster cold starts
+
+Total scheduling events:
+HPST: 2954 scheduling events
+LPLT: 1316 scheduling events
+=== WORKLOAD-SPECIFIC PERFORMANCE ===
+
+resnet50-inference (12598 vs 12599 samples):
+  Median: HPST=0.892s, LPLT=0.736s (-17.5%)
+  P95: HPST=5.733s, LPLT=6.235s (+8.8%)
+
+fio (4857 vs 3947 samples):
+  Median: HPST=144.386s, LPLT=158.679s (+9.9%)
+  P95: HPST=458.325s, LPLT=468.792s (+2.3%)
+
+speech-inference (2458 vs 1940 samples):
+  Median: HPST=3.830s, LPLT=3.919s (+2.3%)
+  P95: HPST=39.906s, LPLT=437.372s (+996.0%)
+
+python-pi (15336 vs 15337 samples):
+  Median: HPST=0.922s, LPLT=0.922s (-0.0%)
+  P95: HPST=64.938s, LPLT=48.429s (-25.4%)
+
+resnet50-training (131 vs 145 samples):
+  Median: HPST=302.595s, LPLT=395.355s (+30.7%)
+  P95: HPST=519.194s, LPLT=529.715s (+2.0%)
+=== SCALING DECISION ANALYSIS ===
+HPST scaling actions:
+  Scale up: 584
+  Scale down: 0
+  No action: 138
+  Total actions: 584
+
+LPLT scaling actions:
+  Scale up: 296
+  Scale down: 11
+  No action: 417
+  Total actions: 307
+
+High response time events (>1s):
+HPST: 27 events
+LPLT: 32 events
+
+Node type selection frequency:
+HPST preferences:
+  nuc: 361
+  nx: 223
+LPLT preferences:
+  nano: 169
+  coral: 96
+  nx: 31
+=== RESOURCE CONTENTION ANALYSIS ===
+HPST average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.012000     0.010000
+nano       0.017327     0.012995
+nuc        0.023008     0.019174
+nx         0.024351     0.017532
+rockpi     0.025954     0.021629
+rpi3       0.025289     0.021074
+
+LPLT average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.013041     0.010868
+nano       0.017441     0.013081
+nuc        0.023008     0.019174
+nx         0.024292     0.017490
+rockpi     0.042359     0.035299
+rpi3       0.032860     0.027383
+
+High CPU utilization events (>90%):
+HPST: 0 events
+LPLT: 0 events
+
+Average power per active node:
+HPST: 3.05W
+LPLT: 3.10W
+
+==================================================
+HYPOTHESIS VALIDATION SUMMARY
+==================================================
+✅ H2: LPLT has faster cold start performance
+✅ H3: LPLT scales more conservatively (less churn)
+
+=== SUMMARY ===
+Trade-off ratio: -1.4% energy savings for 19.9% performance cost
+Plot saved as tradeoff_plot.png
