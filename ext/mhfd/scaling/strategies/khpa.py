@@ -204,7 +204,7 @@ class KubernetesStyleFirstFitBinPacker(BaseAutoscaler):
             'resnet50-training': 'gpu-accelerated', 
             'speech-inference': 'edge-optimized',
             'python-pi': 'low-power',
-            'fio': 'low-power'
+            'fio': 'high-compute'
         }
         
         required_class = function_requirements.get(deployment_name, 'high-compute')

@@ -20,11 +20,11 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
         super().__init__(env, faas_system, power_oracle, "HighPerformanceShortTimeBinPacker")
 
         # Performance-focused thresholds (aggressive)
-        self.scale_up_threshold = 25     # Scale up at 25 RPS (higher threshold)
-        self.scale_down_threshold = 8    # Scale down below 8 RPS
-        self.response_time_threshold = 300  # Target 300ms response time (aggressive)
-        self.max_response_time = 500     # Never exceed 500ms
-        
+        self.scale_up_threshold = 5     # Scale up at 5 RPS (higher threshold)
+        self.scale_down_threshold = 2    # Scale down below 2 RPS
+        self.response_time_threshold = 500  # Target 500ms response time (aggressive)
+        self.max_response_time = 800     # Never exceed 800ms
+
         # Define performance rankings (higher number = better performance)
         self.performance_ranking = {
             'xeongpu': 10,  # Best performance (GPU + high CPU)
@@ -65,18 +65,14 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
                     f"Response: {avg_response_time:.1f}ms, Exec Time: {avg_execution_time:.1f}ms, "
                     f"Throughput: {throughput:.1f} req/s")
         
-        # Aggressive scale up conditions
-        if (avg_response_time > self.response_time_threshold or
-            avg_response_time > self.max_response_time or
-            current_load > self.scale_up_threshold or
-            avg_execution_time > 400) and \
+        if (current_load > self.scale_up_threshold or
+            avg_response_time > self.response_time_threshold) and \
            current_replicas < self.max_replicas:
             return "scale_up"
         
         # Conservative scale down conditions (keep performance nodes)
         elif current_load < self.scale_down_threshold and \
              avg_response_time < (self.response_time_threshold * 0.6) and \
-             avg_execution_time < 200 and \
              current_replicas > self.min_replicas:
             return "scale_down"
         

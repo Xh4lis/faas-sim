@@ -97,17 +97,17 @@ def create_smart_city_deployments(
             "speech-inference": 3,        
             "resnet50-preprocessing": 1, 
             "resnet50-training": 2,  
-            "python-pi": 3,  
-            "fio": 3,  
+            "python-pi": 5,  
+            "fio": 2,  
             # Total: 16 instances 
         },
-        "realistic_city": {
-            "resnet50-inference": 8,        # Traffic cameras, security systems
-            "speech-inference": 6,          # Voice kiosks, smart assistants  
-            "resnet50-preprocessing": 4,    # Image processing pipelines
-            "resnet50-training": 2,         # Federated learning coordination
-            "python-pi": 12,                # IoT monitoring, environmental sensors
-            "fio": 8,                       # Storage performance monitoring
+        "none": {
+            "resnet50-inference": 1,        # Traffic cameras, security systems
+            "speech-inference": 1,          # Voice kiosks, smart assistants  
+            "resnet50-preprocessing": 1,    # Image processing pipelines
+            "resnet50-training": 1,         # Federated learning coordination
+            "python-pi": 1,                # IoT monitoring, environmental sensors
+            "fio": 1,                      # Storage performance monitoring
             # Total: 40 instances - realistic smart city deployment
         },
         "intensive_ai": {

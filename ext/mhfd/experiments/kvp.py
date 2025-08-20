@@ -4,7 +4,7 @@ import numpy as np
 
 # Experiment configuration
 STRATEGY_1_NAME = "LPLT"
-STRATEGY_1_DIR = "./data/sine_power_strategy_d120_r35"
+STRATEGY_1_DIR = "./data/sine_pwr_strategy_d120_r35"
 
 STRATEGY_2_NAME = "Kubernetes"
 STRATEGY_2_DIR = "./data/sine_k8s_strategy_d120_r35"
@@ -743,3 +743,5 @@ if __name__ == "__main__":
         results['strategy1_response_time'],
         results['strategy2_response_time']
     )
+
+

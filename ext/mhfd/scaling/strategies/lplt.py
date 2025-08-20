@@ -20,23 +20,53 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
         super().__init__(env, faas_system, power_oracle, "LowPowerLongTimeBinPacker")
 
         # Power-aware thresholds (more conservative)
-        self.scale_up_threshold = 30     # Scale up at 30 RPS (earlier)
-        self.scale_down_threshold = 2    # Scale down below 2 RPS
-        self.response_time_threshold = 1500  # Accept 1500ms response time
-        
+        self.scale_up_threshold = 8     # Scale up at 8 RPS (earlier)
+        self.scale_down_threshold = 3   # Scale down below 3 RPS
+        self.response_time_threshold = 1200  # Accept 1200ms response time
+
         # Define power efficiency rankings (watts idle power)
         self.power_efficiency_ranking = {
-            'coral': 1,     # Most efficient (2.5W idle)
-            'nano': 2,      # Second (1.9W idle) 
-            'rpi3': 3,      # Third (2.1W idle)
-            'rpi4': 4,      # Fourth (2.7W idle)
-            'rockpi': 5,    # Fifth (3.0W idle)
-            'tx2': 6,       # Sixth (5.5W idle)
-            'nx': 7,        # Seventh (5.0W idle)
-            'nuc': 8,       # Higher power (15W idle)
-            'xeoncpu': 9,   # Much higher (50W idle)
-            'xeongpu': 10   # Highest power (75W idle)
-        }
+            'rpi3': 1,      # 1.4W - Lowest power, ensures LPLT hypothesis
+                            # Source: RasPi.TV calibrated measurements
+                            # Research Value: TRUE low power, low performance
+            
+            'nano': 2,      # 2.0W - Low power BUT GPU acceleration  
+                            # Source: NVIDIA official 5W mode specifications
+                            # Research Problem: Breaks LPLT hypothesis (too fast for AI)
+            
+            'rockpi': 3,    # 2.0W - CPU-focused, limited acceleration
+                            # Source: Community power measurements
+                            # Research Value: Reasonable LPLT device
+            
+            'coral': 4,     # 2.5W - Low power BUT TPU acceleration
+                            # Source: Google official specifications
+                            # Research Problem: Breaks LPLT hypothesis (too fast for AI)
+            
+            'rpi4': 5,      # 2.85W - Low power, moderate CPU performance
+                            # Source: RasPi.TV calibrated measurements  
+                            # Research Value: Good LPLT device for most workloads
+            
+            'tx2': 6,       # 5.0W - Moderate power, has GPU
+                            # Source: NVIDIA efficiency mode specifications
+                            # Research Transition: Between LPLT and HPST
+            
+            'nx': 7,        # 7.3W - Higher power, powerful GPU
+                            # Source: Independent benchmark measurements
+                            # Research Value: Good HPST device
+            
+            'nuc': 8,       # 8.0W - Consistently good general performance
+                            # Source: Multiple review sites average
+                            # Research Value: Excellent HPST device
+            
+            'xeoncpu': 9,   # 25.0W - Server-grade CPU performance
+                            # Source: Server system estimates
+                            # Research Value: High-end HPST device
+            
+            'xeongpu': 10   # 40.0W - Highest power, best absolute performance
+                            # Source: Server + discrete GPU estimates
+                            # Research Value: Maximum HPST performance
+                }
+    
     
     def make_scaling_decision(self, deployment_name: str, current_replicas: int, 
                             current_load: float, avg_response_time: float) -> str:
@@ -50,14 +80,15 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
         
         # Scale up conditions (more aggressive for power efficiency)
         if (current_load > self.scale_up_threshold or 
-            avg_response_time > self.response_time_threshold or
-            current_power_efficiency > 8.0) and \
+                    # current_power_efficiency > 5.0) and \
+            avg_response_time > self.response_time_threshold )  and \
            current_replicas < self.max_replicas:
+            
             return "scale_up"
         
         # Scale down conditions (more conservative - keep low-power nodes)
         elif current_load < self.scale_down_threshold and \
-             avg_response_time < (self.response_time_threshold * 0.3) and \
+             avg_response_time < (self.response_time_threshold * 0.5) and \
              current_replicas > self.min_replicas:
             return "scale_down"
         
@@ -153,7 +184,7 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
             # Return watts per RPS (lower is better)
             return total_power / max(current_load, 0.1)
         except:
-            return 5.0  # Default moderate efficiency
+            return False  
     
     def extract_node_type(self, node_name: str) -> str:
         """Extract node type from node name"""
