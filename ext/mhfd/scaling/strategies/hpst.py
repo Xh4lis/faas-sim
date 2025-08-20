@@ -20,12 +20,11 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
         super().__init__(env, faas_system, power_oracle, "HighPerformanceShortTimeBinPacker")
 
         # Performance-focused thresholds (aggressive)
-        self.scale_up_threshold = 3  
-        self.scale_down_threshold = 1   
-        self.response_time_threshold = 800 
-        self.max_response_time = 800
-        # self.scale_down_cooldown = 120     
-
+        self.scale_up_threshold = 25     # Scale up at 25 RPS (higher threshold)
+        self.scale_down_threshold = 8    # Scale down below 8 RPS
+        self.response_time_threshold = 300  # Target 300ms response time (aggressive)
+        self.max_response_time = 500     # Never exceed 500ms
+        
         # Define performance rankings (higher number = better performance)
         self.performance_ranking = {
             'xeongpu': 10,  # Best performance (GPU + high CPU)
@@ -59,7 +58,7 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
         """Performance-optimized scaling decision - prioritize speed"""
         
         # Calculate current performance metrics
-        avg_execution_time = self.calculate_average_execution_time(deployment_name) # Not used in scaling
+        avg_execution_time = self.calculate_average_execution_time(deployment_name)
         throughput = self.calculate_throughput(deployment_name)
         
         logger.debug(f"⚡ PerformanceOptimized: {deployment_name} - Load: {current_load:.1f} RPS, "
@@ -67,14 +66,17 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
                     f"Throughput: {throughput:.1f} req/s")
         
         # Aggressive scale up conditions
-        if (current_load > self.scale_up_threshold or
-            avg_response_time > self.response_time_threshold) and \
+        if (avg_response_time > self.response_time_threshold or
+            avg_response_time > self.max_response_time or
+            current_load > self.scale_up_threshold or
+            avg_execution_time > 400) and \
            current_replicas < self.max_replicas:
             return "scale_up"
         
         # Conservative scale down conditions (keep performance nodes)
         elif current_load < self.scale_down_threshold and \
              avg_response_time < (self.response_time_threshold * 0.6) and \
+             avg_execution_time < 200 and \
              current_replicas > self.min_replicas:
             return "scale_down"
         
@@ -233,8 +235,7 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
             return cpu_available and memory_available
         except:
             return True
-        
-
+    
     def get_node_utilization(self, node) -> dict:
         """Get  current node resource utilization from ResourceState"""
         try:

@@ -1,0 +1,5839 @@
+FUNCTION INVOCATION SUMMARY
+==========================
+
+Total invocations: 23763
+Overall average execution time: 15.75 ms
+Overall average wait time: 7.31 ms
+Simulation start time: 4.52 s
+Simulation end time: 608.58 s
+Total duration: 603.48 s
+
+NODE SUMMARY
+============
+
+Node: nano_0
+  Invocations: 351
+  Average execution time: 4.00 ms
+  Min/Max execution time: 0.67/21.07 ms
+  Average wait time: 0.01 ms
+
+Node: nano_15
+  Invocations: 327
+  Average execution time: 5.64 ms
+  Min/Max execution time: 0.67/21.30 ms
+  Average wait time: 0.01 ms
+
+Node: nx_0
+  Invocations: 458
+  Average execution time: 2.42 ms
+  Min/Max execution time: 0.37/14.48 ms
+  Average wait time: 0.00 ms
+
+Node: nano_17
+  Invocations: 322
+  Average execution time: 2.19 ms
+  Min/Max execution time: 0.67/20.76 ms
+  Average wait time: 0.01 ms
+
+Node: rockpi_16
+  Invocations: 448
+  Average execution time: 1.61 ms
+  Min/Max execution time: 0.90/7.89 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_23
+  Invocations: 372
+  Average execution time: 1.25 ms
+  Min/Max execution time: 0.90/3.94 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_27
+  Invocations: 215
+  Average execution time: 3.81 ms
+  Min/Max execution time: 1.91/16.68 ms
+  Average wait time: 0.19 ms
+
+Node: rpi3_28
+  Invocations: 214
+  Average execution time: 3.68 ms
+  Min/Max execution time: 1.91/16.73 ms
+  Average wait time: 0.05 ms
+
+Node: rpi3_29
+  Invocations: 208
+  Average execution time: 3.56 ms
+  Min/Max execution time: 1.91/16.85 ms
+  Average wait time: 0.12 ms
+
+Node: rockpi_30
+  Invocations: 174
+  Average execution time: 4.14 ms
+  Min/Max execution time: 1.18/8.05 ms
+  Average wait time: 0.07 ms
+
+Node: rockpi_25
+  Invocations: 259
+  Average execution time: 6.92 ms
+  Min/Max execution time: 0.90/31.45 ms
+  Average wait time: 2.18 ms
+
+Node: coral_2
+  Invocations: 250
+  Average execution time: 1.77 ms
+  Min/Max execution time: 1.41/3.34 ms
+  Average wait time: 0.00 ms
+
+Node: coral_3
+  Invocations: 251
+  Average execution time: 1.75 ms
+  Min/Max execution time: 1.42/3.25 ms
+  Average wait time: 0.00 ms
+
+Node: coral_1
+  Invocations: 247
+  Average execution time: 2.99 ms
+  Min/Max execution time: 1.52/10.61 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_24
+  Invocations: 370
+  Average execution time: 1.67 ms
+  Min/Max execution time: 0.90/22.85 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_5
+  Invocations: 268
+  Average execution time: 5.60 ms
+  Min/Max execution time: 0.90/23.02 ms
+  Average wait time: 0.21 ms
+
+Node: rockpi_11
+  Invocations: 239
+  Average execution time: 4.01 ms
+  Min/Max execution time: 0.90/14.79 ms
+  Average wait time: 0.43 ms
+
+Node: coral_0
+  Invocations: 124
+  Average execution time: 3.65 ms
+  Min/Max execution time: 1.45/10.60 ms
+  Average wait time: 0.05 ms
+
+Node: nx_13
+  Invocations: 377
+  Average execution time: 1.07 ms
+  Min/Max execution time: 0.37/2.77 ms
+  Average wait time: 0.00 ms
+
+Node: nx_14
+  Invocations: 281
+  Average execution time: 19.21 ms
+  Min/Max execution time: 1.28/576.05 ms
+  Average wait time: 9.06 ms
+
+Node: rockpi_27
+  Invocations: 278
+  Average execution time: 3.57 ms
+  Min/Max execution time: 0.90/10.39 ms
+  Average wait time: 0.05 ms
+
+Node: rockpi_14
+  Invocations: 356
+  Average execution time: 2.22 ms
+  Min/Max execution time: 0.90/23.37 ms
+  Average wait time: 0.00 ms
+
+Node: nx_4
+  Invocations: 237
+  Average execution time: 22.80 ms
+  Min/Max execution time: 0.47/575.01 ms
+  Average wait time: 10.74 ms
+
+Node: rockpi_4
+  Invocations: 236
+  Average execution time: 2.73 ms
+  Min/Max execution time: 0.90/7.94 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_21
+  Invocations: 157
+  Average execution time: 152.35 ms
+  Min/Max execution time: 4.51/397.88 ms
+  Average wait time: 129.22 ms
+
+Node: rpi3_22
+  Invocations: 205
+  Average execution time: 119.86 ms
+  Min/Max execution time: 4.50/403.31 ms
+  Average wait time: 95.52 ms
+
+Node: rpi3_3
+  Invocations: 159
+  Average execution time: 38.33 ms
+  Min/Max execution time: 4.63/90.26 ms
+  Average wait time: 15.22 ms
+
+Node: rockpi_8
+  Invocations: 332
+  Average execution time: 4.69 ms
+  Min/Max execution time: 0.90/22.85 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_15
+  Invocations: 192
+  Average execution time: 3.04 ms
+  Min/Max execution time: 0.90/23.39 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_5
+  Invocations: 135
+  Average execution time: 127.29 ms
+  Min/Max execution time: 16.17/268.18 ms
+  Average wait time: 101.18 ms
+
+Node: rpi3_23
+  Invocations: 153
+  Average execution time: 75.31 ms
+  Min/Max execution time: 4.43/236.02 ms
+  Average wait time: 55.83 ms
+
+Node: rockpi_2
+  Invocations: 373
+  Average execution time: 1.04 ms
+  Min/Max execution time: 0.90/3.92 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_32
+  Invocations: 279
+  Average execution time: 7.69 ms
+  Min/Max execution time: 0.90/23.34 ms
+  Average wait time: 0.04 ms
+
+Node: nano_12
+  Invocations: 190
+  Average execution time: 1.06 ms
+  Min/Max execution time: 0.67/3.97 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_1
+  Invocations: 296
+  Average execution time: 3.32 ms
+  Min/Max execution time: 0.90/8.02 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_4
+  Invocations: 153
+  Average execution time: 122.92 ms
+  Min/Max execution time: 4.51/298.15 ms
+  Average wait time: 99.99 ms
+
+Node: nano_2
+  Invocations: 196
+  Average execution time: 0.95 ms
+  Min/Max execution time: 0.67/3.90 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_33
+  Invocations: 150
+  Average execution time: 13.85 ms
+  Min/Max execution time: 3.66/23.09 ms
+  Average wait time: 0.00 ms
+
+Node: nx_10
+  Invocations: 255
+  Average execution time: 1.15 ms
+  Min/Max execution time: 0.37/2.79 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_22
+  Invocations: 280
+  Average execution time: 2.61 ms
+  Min/Max execution time: 0.90/8.42 ms
+  Average wait time: 0.01 ms
+
+Node: nx_12
+  Invocations: 181
+  Average execution time: 32.57 ms
+  Min/Max execution time: 1.28/576.15 ms
+  Average wait time: 14.10 ms
+
+Node: rockpi_19
+  Invocations: 219
+  Average execution time: 1.56 ms
+  Min/Max execution time: 0.90/3.90 ms
+  Average wait time: 0.00 ms
+
+Node: nx_6
+  Invocations: 236
+  Average execution time: 1.62 ms
+  Min/Max execution time: 0.37/13.89 ms
+  Average wait time: 0.00 ms
+
+Node: nx_5
+  Invocations: 267
+  Average execution time: 4.30 ms
+  Min/Max execution time: 0.37/14.13 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_0
+  Invocations: 150
+  Average execution time: 39.95 ms
+  Min/Max execution time: 24.07/86.14 ms
+  Average wait time: 11.97 ms
+
+Node: rockpi_10
+  Invocations: 347
+  Average execution time: 1.04 ms
+  Min/Max execution time: 0.90/3.88 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_2
+  Invocations: 175
+  Average execution time: 75.54 ms
+  Min/Max execution time: 1.91/197.09 ms
+  Average wait time: 56.22 ms
+
+Node: rpi3_1
+  Invocations: 177
+  Average execution time: 77.42 ms
+  Min/Max execution time: 1.91/198.77 ms
+  Average wait time: 58.72 ms
+
+Node: rockpi_21
+  Invocations: 192
+  Average execution time: 2.94 ms
+  Min/Max execution time: 0.90/8.06 ms
+  Average wait time: 0.00 ms
+
+Node: nx_2
+  Invocations: 336
+  Average execution time: 17.79 ms
+  Min/Max execution time: 1.28/554.35 ms
+  Average wait time: 7.29 ms
+
+Node: rockpi_3
+  Invocations: 226
+  Average execution time: 4.86 ms
+  Min/Max execution time: 0.90/22.47 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_20
+  Invocations: 328
+  Average execution time: 1.04 ms
+  Min/Max execution time: 0.90/1.83 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_17
+  Invocations: 246
+  Average execution time: 4.46 ms
+  Min/Max execution time: 0.90/22.43 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_15
+  Invocations: 167
+  Average execution time: 26.31 ms
+  Min/Max execution time: 1.91/80.47 ms
+  Average wait time: 7.70 ms
+
+Node: rpi3_16
+  Invocations: 172
+  Average execution time: 63.75 ms
+  Min/Max execution time: 1.91/157.83 ms
+  Average wait time: 44.97 ms
+
+Node: nx_1
+  Invocations: 274
+  Average execution time: 2.67 ms
+  Min/Max execution time: 0.37/6.52 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_7
+  Invocations: 191
+  Average execution time: 1.70 ms
+  Min/Max execution time: 0.90/3.93 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_0
+  Invocations: 259
+  Average execution time: 6.63 ms
+  Min/Max execution time: 0.90/22.98 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_26
+  Invocations: 236
+  Average execution time: 2.31 ms
+  Min/Max execution time: 0.90/7.87 ms
+  Average wait time: 0.00 ms
+
+Node: nx_7
+  Invocations: 261
+  Average execution time: 1.41 ms
+  Min/Max execution time: 0.37/14.32 ms
+  Average wait time: 0.00 ms
+
+Node: nano_3
+  Invocations: 168
+  Average execution time: 2.20 ms
+  Min/Max execution time: 0.67/20.50 ms
+  Average wait time: 0.00 ms
+
+Node: nano_7
+  Invocations: 221
+  Average execution time: 6.01 ms
+  Min/Max execution time: 0.67/21.36 ms
+  Average wait time: 0.00 ms
+
+Node: nano_5
+  Invocations: 180
+  Average execution time: 0.97 ms
+  Min/Max execution time: 0.67/3.98 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_17
+  Invocations: 172
+  Average execution time: 59.50 ms
+  Min/Max execution time: 1.91/152.49 ms
+  Average wait time: 40.38 ms
+
+Node: rpi3_9
+  Invocations: 171
+  Average execution time: 20.44 ms
+  Min/Max execution time: 4.43/59.78 ms
+  Average wait time: 4.13 ms
+
+Node: rockpi_18
+  Invocations: 407
+  Average execution time: 3.65 ms
+  Min/Max execution time: 0.90/23.24 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_9
+  Invocations: 310
+  Average execution time: 5.02 ms
+  Min/Max execution time: 0.90/23.09 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_10
+  Invocations: 115
+  Average execution time: 10.91 ms
+  Min/Max execution time: 4.43/36.53 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_33
+  Invocations: 168
+  Average execution time: 24.10 ms
+  Min/Max execution time: 4.43/57.73 ms
+  Average wait time: 3.16 ms
+
+Node: rockpi_34
+  Invocations: 228
+  Average execution time: 2.68 ms
+  Min/Max execution time: 0.90/7.91 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_11
+  Invocations: 182
+  Average execution time: 47.84 ms
+  Min/Max execution time: 4.46/131.28 ms
+  Average wait time: 31.11 ms
+
+Node: rockpi_36
+  Invocations: 192
+  Average execution time: 1.88 ms
+  Min/Max execution time: 0.90/3.94 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_35
+  Invocations: 284
+  Average execution time: 3.15 ms
+  Min/Max execution time: 0.90/8.11 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_35
+  Invocations: 200
+  Average execution time: 40.26 ms
+  Min/Max execution time: 1.91/129.67 ms
+  Average wait time: 25.33 ms
+
+Node: rockpi_12
+  Invocations: 216
+  Average execution time: 7.48 ms
+  Min/Max execution time: 0.90/23.19 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_13
+  Invocations: 179
+  Average execution time: 1.97 ms
+  Min/Max execution time: 0.90/3.93 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_20
+  Invocations: 170
+  Average execution time: 40.14 ms
+  Min/Max execution time: 4.49/113.16 ms
+  Average wait time: 23.16 ms
+
+Node: rockpi_6
+  Invocations: 126
+  Average execution time: 6.17 ms
+  Min/Max execution time: 1.24/22.50 ms
+  Average wait time: 0.00 ms
+
+Node: nano_14
+  Invocations: 157
+  Average execution time: 2.12 ms
+  Min/Max execution time: 0.67/20.04 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_18
+  Invocations: 164
+  Average execution time: 20.12 ms
+  Min/Max execution time: 4.43/54.97 ms
+  Average wait time: 3.40 ms
+
+Node: rpi3_34
+  Invocations: 138
+  Average execution time: 8.73 ms
+  Min/Max execution time: 1.91/35.48 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_26
+  Invocations: 145
+  Average execution time: 44.61 ms
+  Min/Max execution time: 4.46/115.90 ms
+  Average wait time: 24.66 ms
+
+Node: rpi3_30
+  Invocations: 158
+  Average execution time: 24.47 ms
+  Min/Max execution time: 4.46/55.05 ms
+  Average wait time: 2.72 ms
+
+Node: rockpi_28
+  Invocations: 198
+  Average execution time: 1.62 ms
+  Min/Max execution time: 0.90/3.94 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_31
+  Invocations: 127
+  Average execution time: 8.99 ms
+  Min/Max execution time: 1.91/39.40 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_19
+  Invocations: 106
+  Average execution time: 11.29 ms
+  Min/Max execution time: 4.50/33.95 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_24
+  Invocations: 139
+  Average execution time: 20.49 ms
+  Min/Max execution time: 4.48/44.00 ms
+  Average wait time: 1.55 ms
+
+Node: rpi3_6
+  Invocations: 161
+  Average execution time: 30.05 ms
+  Min/Max execution time: 4.47/81.08 ms
+  Average wait time: 12.80 ms
+
+Node: rockpi_31
+  Invocations: 147
+  Average execution time: 3.97 ms
+  Min/Max execution time: 1.19/7.87 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_25
+  Invocations: 88
+  Average execution time: 13.84 ms
+  Min/Max execution time: 4.49/36.17 ms
+  Average wait time: 0.00 ms
+
+Node: rockpi_29
+  Invocations: 176
+  Average execution time: 3.04 ms
+  Min/Max execution time: 0.90/23.30 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_8
+  Invocations: 81
+  Average execution time: 14.13 ms
+  Min/Max execution time: 4.52/37.74 ms
+  Average wait time: 0.00 ms
+
+Node: nx_11
+  Invocations: 241
+  Average execution time: 1.78 ms
+  Min/Max execution time: 0.37/14.40 ms
+  Average wait time: 0.00 ms
+
+Node: nano_13
+  Invocations: 193
+  Average execution time: 0.98 ms
+  Min/Max execution time: 0.67/1.32 ms
+  Average wait time: 0.00 ms
+
+Node: nx_3
+  Invocations: 241
+  Average execution time: 1.79 ms
+  Min/Max execution time: 0.37/14.45 ms
+  Average wait time: 0.00 ms
+
+Node: nx_9
+  Invocations: 231
+  Average execution time: 4.47 ms
+  Min/Max execution time: 0.37/14.43 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_7
+  Invocations: 132
+  Average execution time: 20.19 ms
+  Min/Max execution time: 4.44/40.42 ms
+  Average wait time: 0.87 ms
+
+Node: nano_6
+  Invocations: 113
+  Average execution time: 1.39 ms
+  Min/Max execution time: 0.67/3.99 ms
+  Average wait time: 0.00 ms
+
+Node: nano_19
+  Invocations: 116
+  Average execution time: 1.35 ms
+  Min/Max execution time: 0.67/3.96 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_12
+  Invocations: 157
+  Average execution time: 5.06 ms
+  Min/Max execution time: 1.91/30.78 ms
+  Average wait time: 0.00 ms
+
+Node: nano_11
+  Invocations: 177
+  Average execution time: 1.00 ms
+  Min/Max execution time: 0.67/1.50 ms
+  Average wait time: 0.00 ms
+
+Node: nx_8
+  Invocations: 219
+  Average execution time: 2.84 ms
+  Min/Max execution time: 0.37/6.37 ms
+  Average wait time: 0.00 ms
+
+Node: coral_4
+  Invocations: 162
+  Average execution time: 2.07 ms
+  Min/Max execution time: 1.48/3.53 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_14
+  Invocations: 117
+  Average execution time: 7.57 ms
+  Min/Max execution time: 4.45/33.46 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_13
+  Invocations: 102
+  Average execution time: 9.94 ms
+  Min/Max execution time: 4.51/31.66 ms
+  Average wait time: 0.00 ms
+
+Node: nano_8
+  Invocations: 98
+  Average execution time: 14.79 ms
+  Min/Max execution time: 0.89/569.38 ms
+  Average wait time: 0.00 ms
+
+Node: nano_10
+  Invocations: 57
+  Average execution time: 28.92 ms
+  Min/Max execution time: 0.89/585.28 ms
+  Average wait time: 0.00 ms
+
+Node: rpi3_32
+  Invocations: 173
+  Average execution time: 4.02 ms
+  Min/Max execution time: 1.91/5.69 ms
+  Average wait time: 0.00 ms
+
+Node: nano_9
+  Invocations: 99
+  Average execution time: 13.42 ms
+  Min/Max execution time: 0.89/21.26 ms
+  Average wait time: 0.00 ms
+
+Node: nano_18
+  Invocations: 53
+  Average execution time: 23.63 ms
+  Min/Max execution time: 0.89/580.36 ms
+  Average wait time: 0.00 ms
+
+Node: nano_4
+  Invocations: 72
+  Average execution time: 8.86 ms
+  Min/Max execution time: 0.89/540.10 ms
+  Average wait time: 0.00 ms
+
+Node: nano_16
+  Invocations: 55
+  Average execution time: 2.10 ms
+  Min/Max execution time: 0.89/3.95 ms
+  Average wait time: 0.00 ms
+
+Node: nano_1
+  Invocations: 87
+  Average execution time: 12.93 ms
+  Min/Max execution time: 0.88/535.78 ms
+  Average wait time: 0.00 ms
+
+Node: nuc_2
+  Invocations: 28
+  Average execution time: 278.77 ms
+  Min/Max execution time: 197.88/388.76 ms
+  Average wait time: 79.99 ms
+
+Node: nuc_0
+  Invocations: 32
+  Average execution time: 357.91 ms
+  Min/Max execution time: 233.57/504.27 ms
+  Average wait time: 124.22 ms
+
+Node: nuc_1
+  Invocations: 32
+  Average execution time: 363.61 ms
+  Min/Max execution time: 240.95/502.68 ms
+  Average wait time: 125.06 ms
+
+Node: nuc_4
+  Invocations: 32
+  Average execution time: 366.42 ms
+  Min/Max execution time: 245.02/506.43 ms
+  Average wait time: 127.07 ms
+
+Node: nuc_3
+  Invocations: 32
+  Average execution time: 366.15 ms
+  Min/Max execution time: 247.77/501.18 ms
+  Average wait time: 125.32 ms
+
+Node: nuc_5
+  Invocations: 31
+  Average execution time: 367.59 ms
+  Min/Max execution time: 254.87/500.81 ms
+  Average wait time: 123.07 ms
+
+FUNCTION SUMMARY
+================
+
+Function: resnet50-inference-industrial
+  Invocations: 1819
+  Average execution time: 2.01 ms
+  Min/Max execution time: 0.37/5.86 ms
+  Average wait time: 0.00 ms
+
+Function: resnet50-inference-downtown
+  Invocations: 1796
+  Average execution time: 1.97 ms
+  Min/Max execution time: 0.37/5.86 ms
+  Average wait time: 0.00 ms
+
+Function: resnet50-inference
+  Invocations: 1707
+  Average execution time: 1.80 ms
+  Min/Max execution time: 0.37/5.85 ms
+  Average wait time: 0.00 ms
+
+Function: resnet50-inference-suburb
+  Invocations: 1825
+  Average execution time: 2.03 ms
+  Min/Max execution time: 0.67/5.86 ms
+  Average wait time: 0.00 ms
+
+Function: python-pi-downtown
+  Invocations: 2963
+  Average execution time: 1.18 ms
+  Min/Max execution time: 0.90/3.34 ms
+  Average wait time: 0.00 ms
+
+Function: python-pi-suburb
+  Invocations: 3034
+  Average execution time: 1.17 ms
+  Min/Max execution time: 0.90/4.53 ms
+  Average wait time: 0.01 ms
+
+Function: python-pi
+  Invocations: 2952
+  Average execution time: 1.16 ms
+  Min/Max execution time: 0.90/4.37 ms
+  Average wait time: 0.01 ms
+
+Function: speech-inference
+  Invocations: 629
+  Average execution time: 4.34 ms
+  Min/Max execution time: 2.55/17.22 ms
+  Average wait time: 0.00 ms
+
+Function: speech-inference-downtown
+  Invocations: 639
+  Average execution time: 4.15 ms
+  Min/Max execution time: 2.56/16.87 ms
+  Average wait time: 0.02 ms
+
+Function: speech-inference-suburb
+  Invocations: 589
+  Average execution time: 4.25 ms
+  Min/Max execution time: 2.59/17.01 ms
+  Average wait time: 0.01 ms
+
+Function: resnet50-preprocessing
+  Invocations: 1731
+  Average execution time: 15.12 ms
+  Min/Max execution time: 5.87/236.02 ms
+  Average wait time: 5.37 ms
+
+Function: fio
+  Invocations: 2683
+  Average execution time: 73.24 ms
+  Min/Max execution time: 13.39/403.31 ms
+  Average wait time: 48.90 ms
+
+Function: fio-downtown
+  Invocations: 574
+  Average execution time: 25.88 ms
+  Min/Max execution time: 13.40/72.75 ms
+  Average wait time: 1.20 ms
+
+Function: fio-suburb
+  Invocations: 578
+  Average execution time: 25.10 ms
+  Min/Max execution time: 13.40/59.69 ms
+  Average wait time: 0.34 ms
+
+Function: resnet50-training-downtown
+  Invocations: 122
+  Average execution time: 359.44 ms
+  Min/Max execution time: 197.88/585.28 ms
+  Average wait time: 125.21 ms
+
+Function: resnet50-training
+  Invocations: 122
+  Average execution time: 377.93 ms
+  Min/Max execution time: 238.85/580.36 ms
+  Average wait time: 138.72 ms
+
+DETAILED BREAKDOWN BY NODE AND FUNCTION
+=====================================
+
+Node: coral_0
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 88
+Average execution time: 2.12 ms
+Min/Max execution time: 1.45/3.60 ms
+Average wait time: 0.00 ms
+First invocation: 187.56 s
+Last invocation: 602.71 s
+
+Node: coral_0
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 36
+Average execution time: 7.40 ms
+Min/Max execution time: 7.15/10.60 ms
+Average wait time: 0.18 ms
+First invocation: 15.10 s
+Last invocation: 568.73 s
+
+Node: coral_1
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 120
+Average execution time: 1.62 ms
+Min/Max execution time: 1.62/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 11.10 s
+Last invocation: 603.18 s
+
+Node: coral_1
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 54
+Average execution time: 1.62 ms
+Min/Max execution time: 1.62/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 193.35 s
+Last invocation: 602.16 s
+
+Node: coral_1
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 37
+Average execution time: 2.12 ms
+Min/Max execution time: 1.52/3.33 ms
+Average wait time: 0.00 ms
+First invocation: 190.60 s
+Last invocation: 601.11 s
+
+Node: coral_1
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 36
+Average execution time: 10.52 ms
+Min/Max execution time: 10.43/10.61 ms
+Average wait time: 0.00 ms
+First invocation: 132.84 s
+Last invocation: 580.76 s
+
+Node: coral_2
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 64
+Average execution time: 1.62 ms
+Min/Max execution time: 1.62/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 120.59 s
+Last invocation: 605.96 s
+
+Node: coral_2
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 123
+Average execution time: 1.62 ms
+Min/Max execution time: 1.62/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 10.56 s
+Last invocation: 603.95 s
+
+Node: coral_2
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 26
+Average execution time: 2.18 ms
+Min/Max execution time: 1.43/3.28 ms
+Average wait time: 0.00 ms
+First invocation: 254.90 s
+Last invocation: 606.95 s
+
+Node: coral_2
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 37
+Average execution time: 2.25 ms
+Min/Max execution time: 1.41/3.34 ms
+Average wait time: 0.00 ms
+First invocation: 190.07 s
+Last invocation: 597.88 s
+
+Node: coral_3
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 63
+Average execution time: 1.62 ms
+Min/Max execution time: 1.62/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 122.79 s
+Last invocation: 607.34 s
+
+Node: coral_3
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 122
+Average execution time: 1.62 ms
+Min/Max execution time: 1.62/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 10.94 s
+Last invocation: 602.78 s
+
+Node: coral_3
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 2.06 ms
+Min/Max execution time: 1.57/3.25 ms
+Average wait time: 0.00 ms
+First invocation: 255.35 s
+Last invocation: 597.62 s
+
+Node: coral_3
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 38
+Average execution time: 2.12 ms
+Min/Max execution time: 1.42/3.00 ms
+Average wait time: 0.00 ms
+First invocation: 194.82 s
+Last invocation: 602.91 s
+
+Node: coral_4
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 56
+Average execution time: 2.08 ms
+Min/Max execution time: 1.52/3.04 ms
+Average wait time: 0.00 ms
+First invocation: 126.83 s
+Last invocation: 594.74 s
+
+Node: coral_4
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 1.96 ms
+Min/Max execution time: 1.53/2.86 ms
+Average wait time: 0.00 ms
+First invocation: 253.36 s
+Last invocation: 595.21 s
+
+Node: coral_4
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 36
+Average execution time: 2.05 ms
+Min/Max execution time: 1.48/3.49 ms
+Average wait time: 0.00 ms
+First invocation: 206.93 s
+Last invocation: 603.17 s
+
+Node: coral_4
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 42
+Average execution time: 2.14 ms
+Min/Max execution time: 1.51/3.53 ms
+Average wait time: 0.00 ms
+First invocation: 165.41 s
+Last invocation: 597.06 s
+
+Node: nano_0
+Function: fio
+Image: faas-workloads/fio
+Invocations: 57
+Average execution time: 19.67 ms
+Min/Max execution time: 18.22/21.07 ms
+Average wait time: 0.00 ms
+First invocation: 150.86 s
+Last invocation: 582.80 s
+
+Node: nano_0
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 53
+Average execution time: 1.31 ms
+Min/Max execution time: 1.30/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 191.05 s
+Last invocation: 603.61 s
+
+Node: nano_0
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 230
+Average execution time: 0.74 ms
+Min/Max execution time: 0.67/1.23 ms
+Average wait time: 0.02 ms
+First invocation: 4.52 s
+Last invocation: 596.84 s
+
+Node: nano_0
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 3.89 ms
+Min/Max execution time: 3.84/3.93 ms
+Average wait time: 0.00 ms
+First invocation: 187.31 s
+Last invocation: 592.96 s
+
+Node: nano_1
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.00 ms
+Average wait time: 0.00 ms
+First invocation: 234.00 s
+Last invocation: 603.22 s
+
+Node: nano_1
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 0.92 ms
+Min/Max execution time: 0.89/1.01 ms
+Average wait time: 0.00 ms
+First invocation: 262.22 s
+Last invocation: 596.65 s
+
+Node: nano_1
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 0.93 ms
+Min/Max execution time: 0.88/1.02 ms
+Average wait time: 0.00 ms
+First invocation: 248.90 s
+Last invocation: 602.41 s
+
+Node: nano_1
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-gpu
+Invocations: 2
+Average execution time: 523.14 ms
+Min/Max execution time: 510.51/535.78 ms
+Average wait time: 0.00 ms
+First invocation: 4.52 s
+Last invocation: 4.85 s
+
+Node: nano_10
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 19.73 ms
+Min/Max execution time: 18.76/20.61 ms
+Average wait time: 0.00 ms
+First invocation: 189.27 s
+Last invocation: 587.81 s
+
+Node: nano_10
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 19.74 ms
+Min/Max execution time: 18.14/21.19 ms
+Average wait time: 0.00 ms
+First invocation: 138.71 s
+Last invocation: 563.90 s
+
+Node: nano_10
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 32
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.06 ms
+Average wait time: 0.00 ms
+First invocation: 219.34 s
+Last invocation: 599.93 s
+
+Node: nano_10
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-gpu
+Invocations: 2
+Average execution time: 582.58 ms
+Min/Max execution time: 579.89/585.28 ms
+Average wait time: 0.00 ms
+First invocation: 22.27 s
+Last invocation: 27.72 s
+
+Node: nano_11
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 61
+Average execution time: 1.31 ms
+Min/Max execution time: 1.30/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 141.71 s
+Last invocation: 601.21 s
+
+Node: nano_11
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 0.94 ms
+Min/Max execution time: 0.89/1.05 ms
+Average wait time: 0.00 ms
+First invocation: 233.91 s
+Last invocation: 602.36 s
+
+Node: nano_11
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.03 ms
+Average wait time: 0.00 ms
+First invocation: 254.61 s
+Last invocation: 597.08 s
+
+Node: nano_11
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 60
+Average execution time: 0.74 ms
+Min/Max execution time: 0.67/1.50 ms
+Average wait time: 0.00 ms
+First invocation: 112.76 s
+Last invocation: 605.52 s
+
+Node: nano_12
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/0.99 ms
+Average wait time: 0.00 ms
+First invocation: 226.60 s
+Last invocation: 600.70 s
+
+Node: nano_12
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 141
+Average execution time: 0.72 ms
+Min/Max execution time: 0.67/1.00 ms
+Average wait time: 0.00 ms
+First invocation: 36.75 s
+Last invocation: 604.53 s
+
+Node: nano_12
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.89 ms
+Min/Max execution time: 3.84/3.97 ms
+Average wait time: 0.00 ms
+First invocation: 237.46 s
+Last invocation: 565.80 s
+
+Node: nano_12
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 8
+Average execution time: 3.90 ms
+Min/Max execution time: 3.84/3.96 ms
+Average wait time: 0.00 ms
+First invocation: 271.27 s
+Last invocation: 566.92 s
+
+Node: nano_13
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 62
+Average execution time: 1.31 ms
+Min/Max execution time: 1.30/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 136.24 s
+Last invocation: 600.63 s
+
+Node: nano_13
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 26
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.03 ms
+Average wait time: 0.00 ms
+First invocation: 253.95 s
+Last invocation: 605.04 s
+
+Node: nano_13
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 34
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.00 ms
+Average wait time: 0.00 ms
+First invocation: 216.03 s
+Last invocation: 604.67 s
+
+Node: nano_13
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 71
+Average execution time: 0.73 ms
+Min/Max execution time: 0.67/1.04 ms
+Average wait time: 0.00 ms
+First invocation: 95.48 s
+Last invocation: 605.45 s
+
+Node: nano_14
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 19.54 ms
+Min/Max execution time: 18.62/20.04 ms
+Average wait time: 0.00 ms
+First invocation: 172.36 s
+Last invocation: 569.86 s
+
+Node: nano_14
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.05 ms
+Average wait time: 0.00 ms
+First invocation: 242.24 s
+Last invocation: 604.39 s
+
+Node: nano_14
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 32
+Average execution time: 0.94 ms
+Min/Max execution time: 0.89/1.12 ms
+Average wait time: 0.00 ms
+First invocation: 217.78 s
+Last invocation: 599.45 s
+
+Node: nano_14
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 84
+Average execution time: 0.71 ms
+Min/Max execution time: 0.67/0.99 ms
+Average wait time: 0.00 ms
+First invocation: 78.10 s
+Last invocation: 605.09 s
+
+Node: nano_15
+Function: fio
+Image: faas-workloads/fio
+Invocations: 62
+Average execution time: 19.64 ms
+Min/Max execution time: 17.84/21.30 ms
+Average wait time: 0.00 ms
+First invocation: 121.17 s
+Last invocation: 581.22 s
+
+Node: nano_15
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 10
+Average execution time: 19.30 ms
+Min/Max execution time: 18.44/20.25 ms
+Average wait time: 0.00 ms
+First invocation: 192.70 s
+Last invocation: 548.41 s
+
+Node: nano_15
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 221
+Average execution time: 0.73 ms
+Min/Max execution time: 0.67/1.50 ms
+Average wait time: 0.01 ms
+First invocation: 4.56 s
+Last invocation: 597.95 s
+
+Node: nano_15
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 34
+Average execution time: 7.95 ms
+Min/Max execution time: 7.85/8.32 ms
+Average wait time: 0.00 ms
+First invocation: 154.15 s
+Last invocation: 582.33 s
+
+Node: nano_16
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 33
+Average execution time: 0.92 ms
+Min/Max execution time: 0.89/0.99 ms
+Average wait time: 0.00 ms
+First invocation: 216.38 s
+Last invocation: 602.38 s
+
+Node: nano_16
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 12
+Average execution time: 3.87 ms
+Min/Max execution time: 3.81/3.95 ms
+Average wait time: 0.00 ms
+First invocation: 201.92 s
+Last invocation: 601.97 s
+
+Node: nano_16
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.88 ms
+Min/Max execution time: 3.83/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 227.21 s
+Last invocation: 603.32 s
+
+Node: nano_17
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 19.54 ms
+Min/Max execution time: 18.13/20.76 ms
+Average wait time: 0.00 ms
+First invocation: 117.60 s
+Last invocation: 577.81 s
+
+Node: nano_17
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 10
+Average execution time: 19.88 ms
+Min/Max execution time: 18.70/20.55 ms
+Average wait time: 0.00 ms
+First invocation: 216.94 s
+Last invocation: 571.96 s
+
+Node: nano_17
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 59
+Average execution time: 1.31 ms
+Min/Max execution time: 1.30/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 147.45 s
+Last invocation: 607.12 s
+
+Node: nano_17
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 240
+Average execution time: 0.74 ms
+Min/Max execution time: 0.67/1.38 ms
+Average wait time: 0.01 ms
+First invocation: 4.73 s
+Last invocation: 604.24 s
+
+Node: nano_18
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.04 ms
+Average wait time: 0.00 ms
+First invocation: 242.46 s
+Last invocation: 604.95 s
+
+Node: nano_18
+Function: resnet50-training
+Image: faas-workloads/resnet-training-gpu
+Invocations: 2
+Average execution time: 571.47 ms
+Min/Max execution time: 562.58/580.36 ms
+Average wait time: 0.00 ms
+First invocation: 27.27 s
+Last invocation: 32.33 s
+
+Node: nano_18
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 3.88 ms
+Min/Max execution time: 3.83/3.97 ms
+Average wait time: 0.00 ms
+First invocation: 176.56 s
+Last invocation: 598.76 s
+
+Node: nano_18
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 8
+Average execution time: 3.89 ms
+Min/Max execution time: 3.83/3.96 ms
+Average wait time: 0.00 ms
+First invocation: 270.91 s
+Last invocation: 564.37 s
+
+Node: nano_19
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 62
+Average execution time: 0.72 ms
+Min/Max execution time: 0.67/1.05 ms
+Average wait time: 0.00 ms
+First invocation: 111.96 s
+Last invocation: 594.68 s
+
+Node: nano_19
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 33
+Average execution time: 0.92 ms
+Min/Max execution time: 0.89/0.98 ms
+Average wait time: 0.00 ms
+First invocation: 223.13 s
+Last invocation: 605.50 s
+
+Node: nano_19
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 3.88 ms
+Min/Max execution time: 3.81/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 204.11 s
+Last invocation: 584.30 s
+
+Node: nano_19
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.90 ms
+Min/Max execution time: 3.83/3.96 ms
+Average wait time: 0.00 ms
+First invocation: 227.81 s
+Last invocation: 604.87 s
+
+Node: nano_2
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 126
+Average execution time: 0.73 ms
+Min/Max execution time: 0.67/1.01 ms
+Average wait time: 0.00 ms
+First invocation: 38.12 s
+Last invocation: 593.47 s
+
+Node: nano_2
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.13 ms
+Average wait time: 0.00 ms
+First invocation: 233.88 s
+Last invocation: 603.22 s
+
+Node: nano_2
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 0.92 ms
+Min/Max execution time: 0.89/1.03 ms
+Average wait time: 0.00 ms
+First invocation: 246.92 s
+Last invocation: 593.87 s
+
+Node: nano_2
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.87 ms
+Min/Max execution time: 3.85/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 250.24 s
+Last invocation: 589.93 s
+
+Node: nano_3
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 19.18 ms
+Min/Max execution time: 18.02/20.50 ms
+Average wait time: 0.00 ms
+First invocation: 171.78 s
+Last invocation: 569.17 s
+
+Node: nano_3
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 34
+Average execution time: 0.92 ms
+Min/Max execution time: 0.89/0.97 ms
+Average wait time: 0.00 ms
+First invocation: 207.90 s
+Last invocation: 601.32 s
+
+Node: nano_3
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 111
+Average execution time: 0.73 ms
+Min/Max execution time: 0.67/1.25 ms
+Average wait time: 0.00 ms
+First invocation: 56.74 s
+Last invocation: 597.71 s
+
+Node: nano_3
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 12
+Average execution time: 3.87 ms
+Min/Max execution time: 3.82/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 197.50 s
+Last invocation: 600.53 s
+
+Node: nano_4
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 26
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.00 ms
+Average wait time: 0.00 ms
+First invocation: 253.61 s
+Last invocation: 604.78 s
+
+Node: nano_4
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 34
+Average execution time: 0.91 ms
+Min/Max execution time: 0.89/0.97 ms
+Average wait time: 0.00 ms
+First invocation: 203.58 s
+Last invocation: 598.36 s
+
+Node: nano_4
+Function: resnet50-training
+Image: faas-workloads/resnet-training-gpu
+Invocations: 1
+Average execution time: 540.10 ms
+Min/Max execution time: 540.10/540.10 ms
+Average wait time: 0.00 ms
+First invocation: 12.39 s
+Last invocation: 12.39 s
+
+Node: nano_4
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 3.87 ms
+Min/Max execution time: 3.83/3.95 ms
+Average wait time: 0.00 ms
+First invocation: 189.34 s
+Last invocation: 593.17 s
+
+Node: nano_5
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 66
+Average execution time: 0.92 ms
+Min/Max execution time: 0.89/1.06 ms
+Average wait time: 0.00 ms
+First invocation: 200.75 s
+Last invocation: 603.56 s
+
+Node: nano_5
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 104
+Average execution time: 0.72 ms
+Min/Max execution time: 0.67/1.16 ms
+Average wait time: 0.00 ms
+First invocation: 58.53 s
+Last invocation: 605.05 s
+
+Node: nano_5
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.91 ms
+Min/Max execution time: 3.86/3.98 ms
+Average wait time: 0.00 ms
+First invocation: 223.63 s
+Last invocation: 601.47 s
+
+Node: nano_6
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 27
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.03 ms
+Average wait time: 0.00 ms
+First invocation: 243.62 s
+Last invocation: 604.34 s
+
+Node: nano_6
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 64
+Average execution time: 0.73 ms
+Min/Max execution time: 0.67/0.88 ms
+Average wait time: 0.00 ms
+First invocation: 111.66 s
+Last invocation: 601.41 s
+
+Node: nano_6
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 12
+Average execution time: 3.90 ms
+Min/Max execution time: 3.82/3.99 ms
+Average wait time: 0.00 ms
+First invocation: 186.29 s
+Last invocation: 581.92 s
+
+Node: nano_6
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.89 ms
+Min/Max execution time: 3.84/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 242.88 s
+Last invocation: 570.45 s
+
+Node: nano_7
+Function: fio
+Image: faas-workloads/fio
+Invocations: 61
+Average execution time: 19.71 ms
+Min/Max execution time: 17.85/21.36 ms
+Average wait time: 0.00 ms
+First invocation: 126.24 s
+Last invocation: 581.36 s
+
+Node: nano_7
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.06 ms
+Average wait time: 0.00 ms
+First invocation: 253.09 s
+Last invocation: 606.26 s
+
+Node: nano_7
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 103
+Average execution time: 0.71 ms
+Min/Max execution time: 0.67/0.91 ms
+Average wait time: 0.00 ms
+First invocation: 56.84 s
+Last invocation: 598.81 s
+
+Node: nano_7
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.04 ms
+Average wait time: 0.00 ms
+First invocation: 265.05 s
+Last invocation: 603.74 s
+
+Node: nano_8
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.03 ms
+Average wait time: 0.00 ms
+First invocation: 212.35 s
+Last invocation: 599.48 s
+
+Node: nano_8
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.00 ms
+Average wait time: 0.00 ms
+First invocation: 250.00 s
+Last invocation: 602.58 s
+
+Node: nano_8
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 37
+Average execution time: 7.93 ms
+Min/Max execution time: 7.86/8.07 ms
+Average wait time: 0.00 ms
+First invocation: 133.19 s
+Last invocation: 599.49 s
+
+Node: nano_8
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-gpu
+Invocations: 2
+Average execution time: 550.49 ms
+Min/Max execution time: 531.60/569.38 ms
+Average wait time: 0.00 ms
+First invocation: 12.64 s
+Last invocation: 15.73 s
+
+Node: nano_9
+Function: fio
+Image: faas-workloads/fio
+Invocations: 54
+Average execution time: 19.72 ms
+Min/Max execution time: 18.24/21.26 ms
+Average wait time: 0.00 ms
+First invocation: 171.00 s
+Last invocation: 584.01 s
+
+Node: nano_9
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 19.41 ms
+Min/Max execution time: 18.54/20.03 ms
+Average wait time: 0.00 ms
+First invocation: 156.12 s
+Last invocation: 580.50 s
+
+Node: nano_9
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 33
+Average execution time: 0.93 ms
+Min/Max execution time: 0.89/1.05 ms
+Average wait time: 0.00 ms
+First invocation: 216.67 s
+Last invocation: 602.52 s
+
+Node: nuc_0
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-cpu
+Invocations: 32
+Average execution time: 357.91 ms
+Min/Max execution time: 233.57/504.27 ms
+Average wait time: 124.22 ms
+First invocation: 27.73 s
+Last invocation: 98.34 s
+
+Node: nuc_1
+Function: resnet50-training
+Image: faas-workloads/resnet-training-cpu
+Invocations: 32
+Average execution time: 363.61 ms
+Min/Max execution time: 240.95/502.68 ms
+Average wait time: 125.06 ms
+First invocation: 32.36 s
+Last invocation: 107.33 s
+
+Node: nuc_2
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-cpu
+Invocations: 28
+Average execution time: 278.77 ms
+Min/Max execution time: 197.88/388.76 ms
+Average wait time: 79.99 ms
+First invocation: 45.53 s
+Last invocation: 243.78 s
+
+Node: nuc_3
+Function: resnet50-training
+Image: faas-workloads/resnet-training-cpu
+Invocations: 32
+Average execution time: 366.15 ms
+Min/Max execution time: 247.77/501.18 ms
+Average wait time: 125.32 ms
+First invocation: 36.84 s
+Last invocation: 111.88 s
+
+Node: nuc_4
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-cpu
+Invocations: 32
+Average execution time: 366.42 ms
+Min/Max execution time: 245.02/506.43 ms
+Average wait time: 127.07 ms
+First invocation: 37.10 s
+Last invocation: 110.48 s
+
+Node: nuc_5
+Function: resnet50-training
+Image: faas-workloads/resnet-training-cpu
+Invocations: 31
+Average execution time: 367.59 ms
+Min/Max execution time: 254.87/500.81 ms
+Average wait time: 123.07 ms
+First invocation: 45.26 s
+Last invocation: 120.32 s
+
+Node: nx_0
+Function: fio
+Image: faas-workloads/fio
+Invocations: 53
+Average execution time: 13.65 ms
+Min/Max execution time: 13.40/14.48 ms
+Average wait time: 0.00 ms
+First invocation: 185.71 s
+Last invocation: 593.24 s
+
+Node: nx_0
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 70
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 91.29 s
+Last invocation: 606.04 s
+
+Node: nx_0
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 66
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 119.01 s
+Last invocation: 607.59 s
+
+Node: nx_0
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 223
+Average execution time: 0.39 ms
+Min/Max execution time: 0.37/0.67 ms
+Average wait time: 0.00 ms
+First invocation: 4.99 s
+Last invocation: 607.89 s
+
+Node: nx_0
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 36
+Average execution time: 2.67 ms
+Min/Max execution time: 2.57/2.76 ms
+Average wait time: 0.00 ms
+First invocation: 16.15 s
+Last invocation: 574.99 s
+
+Node: nx_0
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 2.70 ms
+Min/Max execution time: 2.68/2.75 ms
+Average wait time: 0.00 ms
+First invocation: 222.60 s
+Last invocation: 597.57 s
+
+Node: nx_1
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 74
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 77.73 s
+Last invocation: 604.67 s
+
+Node: nx_1
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 90
+Average execution time: 0.39 ms
+Min/Max execution time: 0.37/0.43 ms
+Average wait time: 0.00 ms
+First invocation: 77.46 s
+Last invocation: 598.39 s
+
+Node: nx_1
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 89
+Average execution time: 6.10 ms
+Min/Max execution time: 5.87/6.52 ms
+Average wait time: 0.00 ms
+First invocation: 50.17 s
+Last invocation: 597.93 s
+
+Node: nx_1
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 2.70 ms
+Min/Max execution time: 2.62/2.78 ms
+Average wait time: 0.00 ms
+First invocation: 203.49 s
+Last invocation: 583.64 s
+
+Node: nx_1
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 2.69 ms
+Min/Max execution time: 2.65/2.77 ms
+Average wait time: 0.00 ms
+First invocation: 240.92 s
+Last invocation: 567.84 s
+
+Node: nx_10
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 68
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 99.29 s
+Last invocation: 606.31 s
+
+Node: nx_10
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 129
+Average execution time: 0.39 ms
+Min/Max execution time: 0.37/0.46 ms
+Average wait time: 0.00 ms
+First invocation: 39.01 s
+Last invocation: 598.67 s
+
+Node: nx_10
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 48
+Average execution time: 2.67 ms
+Min/Max execution time: 2.55/2.79 ms
+Average wait time: 0.00 ms
+First invocation: 44.73 s
+Last invocation: 595.50 s
+
+Node: nx_10
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 2.66 ms
+Min/Max execution time: 2.59/2.69 ms
+Average wait time: 0.00 ms
+First invocation: 243.42 s
+Last invocation: 572.71 s
+
+Node: nx_11
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 13.67 ms
+Min/Max execution time: 13.40/14.40 ms
+Average wait time: 0.00 ms
+First invocation: 172.48 s
+Last invocation: 570.58 s
+
+Node: nx_11
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 60
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 136.38 s
+Last invocation: 600.56 s
+
+Node: nx_11
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 69
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 107.26 s
+Last invocation: 607.28 s
+
+Node: nx_11
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 70
+Average execution time: 0.38 ms
+Min/Max execution time: 0.37/0.44 ms
+Average wait time: 0.00 ms
+First invocation: 94.75 s
+Last invocation: 599.42 s
+
+Node: nx_11
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 31
+Average execution time: 2.69 ms
+Min/Max execution time: 2.56/2.77 ms
+Average wait time: 0.00 ms
+First invocation: 100.11 s
+Last invocation: 588.95 s
+
+Node: nx_12
+Function: fio
+Image: faas-workloads/fio
+Invocations: 53
+Average execution time: 13.64 ms
+Min/Max execution time: 13.40/14.22 ms
+Average wait time: 0.00 ms
+First invocation: 185.76 s
+Last invocation: 593.37 s
+
+Node: nx_12
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 13.58 ms
+Min/Max execution time: 13.44/13.90 ms
+Average wait time: 0.00 ms
+First invocation: 157.08 s
+Last invocation: 581.33 s
+
+Node: nx_12
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 64
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 125.93 s
+Last invocation: 600.11 s
+
+Node: nx_12
+Function: resnet50-training
+Image: faas-workloads/resnet-training-gpu
+Invocations: 12
+Average execution time: 401.63 ms
+Min/Max execution time: 239.74/576.15 ms
+Average wait time: 212.65 ms
+First invocation: 4.65 s
+Last invocation: 8.86 s
+
+Node: nx_12
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 26
+Average execution time: 2.68 ms
+Min/Max execution time: 2.59/2.77 ms
+Average wait time: 0.00 ms
+First invocation: 38.12 s
+Last invocation: 595.12 s
+
+Node: nx_12
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 14
+Average execution time: 2.70 ms
+Min/Max execution time: 2.62/2.80 ms
+Average wait time: 0.00 ms
+First invocation: 159.07 s
+Last invocation: 595.06 s
+
+Node: nx_13
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 58
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 154.29 s
+Last invocation: 607.12 s
+
+Node: nx_13
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 160
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 21.68 s
+Last invocation: 604.18 s
+
+Node: nx_13
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 134
+Average execution time: 0.39 ms
+Min/Max execution time: 0.37/0.46 ms
+Average wait time: 0.00 ms
+First invocation: 37.66 s
+Last invocation: 597.17 s
+
+Node: nx_13
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 14
+Average execution time: 2.70 ms
+Min/Max execution time: 2.64/2.77 ms
+Average wait time: 0.00 ms
+First invocation: 159.81 s
+Last invocation: 595.56 s
+
+Node: nx_13
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 2.69 ms
+Min/Max execution time: 2.59/2.77 ms
+Average wait time: 0.00 ms
+First invocation: 188.50 s
+Last invocation: 593.10 s
+
+Node: nx_14
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 57
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 154.47 s
+Last invocation: 601.20 s
+
+Node: nx_14
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 163
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 21.77 s
+Last invocation: 603.08 s
+
+Node: nx_14
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 37
+Average execution time: 6.07 ms
+Min/Max execution time: 5.89/6.41 ms
+Average wait time: 0.00 ms
+First invocation: 132.96 s
+Last invocation: 599.35 s
+
+Node: nx_14
+Function: resnet50-training
+Image: faas-workloads/resnet-training-gpu
+Invocations: 12
+Average execution time: 404.75 ms
+Min/Max execution time: 238.85/576.05 ms
+Average wait time: 212.09 ms
+First invocation: 6.73 s
+Last invocation: 12.81 s
+
+Node: nx_14
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 12
+Average execution time: 2.69 ms
+Min/Max execution time: 2.62/2.75 ms
+Average wait time: 0.00 ms
+First invocation: 162.20 s
+Last invocation: 589.96 s
+
+Node: nx_2
+Function: fio
+Image: faas-workloads/fio
+Invocations: 55
+Average execution time: 13.67 ms
+Min/Max execution time: 13.39/14.48 ms
+Average wait time: 0.00 ms
+First invocation: 170.97 s
+Last invocation: 592.80 s
+
+Node: nx_2
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 67
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 105.84 s
+Last invocation: 605.74 s
+
+Node: nx_2
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 166
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 47.21 s
+Last invocation: 605.42 s
+
+Node: nx_2
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 36
+Average execution time: 6.07 ms
+Min/Max execution time: 5.89/6.49 ms
+Average wait time: 0.00 ms
+First invocation: 144.08 s
+Last invocation: 599.51 s
+
+Node: nx_2
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-gpu
+Invocations: 12
+Average execution time: 392.18 ms
+Min/Max execution time: 232.70/554.35 ms
+Average wait time: 204.16 ms
+First invocation: 16.26 s
+Last invocation: 30.87 s
+
+Node: nx_3
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 13.67 ms
+Min/Max execution time: 13.40/14.45 ms
+Average wait time: 0.00 ms
+First invocation: 188.94 s
+Last invocation: 586.58 s
+
+Node: nx_3
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 60
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 140.60 s
+Last invocation: 606.78 s
+
+Node: nx_3
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 66
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.32 ms
+Average wait time: 0.00 ms
+First invocation: 107.08 s
+Last invocation: 606.79 s
+
+Node: nx_3
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 70
+Average execution time: 0.38 ms
+Min/Max execution time: 0.37/0.47 ms
+Average wait time: 0.00 ms
+First invocation: 95.94 s
+Last invocation: 593.90 s
+
+Node: nx_3
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 34
+Average execution time: 2.69 ms
+Min/Max execution time: 2.55/2.78 ms
+Average wait time: 0.00 ms
+First invocation: 100.33 s
+Last invocation: 605.18 s
+
+Node: nx_4
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 13.66 ms
+Min/Max execution time: 13.44/14.19 ms
+Average wait time: 0.00 ms
+First invocation: 149.83 s
+Last invocation: 578.90 s
+
+Node: nx_4
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 13.68 ms
+Min/Max execution time: 13.40/14.17 ms
+Average wait time: 0.00 ms
+First invocation: 167.64 s
+Last invocation: 569.09 s
+
+Node: nx_4
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 176
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 25.79 s
+Last invocation: 607.09 s
+
+Node: nx_4
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 26
+Average execution time: 0.51 ms
+Min/Max execution time: 0.47/0.59 ms
+Average wait time: 0.00 ms
+First invocation: 255.10 s
+Last invocation: 607.71 s
+
+Node: nx_4
+Function: resnet50-training-downtown
+Image: faas-workloads/resnet-training-gpu
+Invocations: 12
+Average execution time: 404.06 ms
+Min/Max execution time: 239.27/575.01 ms
+Average wait time: 212.05 ms
+First invocation: 6.25 s
+Last invocation: 13.63 s
+
+Node: nx_5
+Function: fio
+Image: faas-workloads/fio
+Invocations: 56
+Average execution time: 13.64 ms
+Min/Max execution time: 13.40/14.13 ms
+Average wait time: 0.00 ms
+First invocation: 163.55 s
+Last invocation: 592.22 s
+
+Node: nx_5
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 13.56 ms
+Min/Max execution time: 13.40/14.06 ms
+Average wait time: 0.00 ms
+First invocation: 137.73 s
+Last invocation: 563.26 s
+
+Node: nx_5
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 89
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 42.06 s
+Last invocation: 604.03 s
+
+Node: nx_5
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 82
+Average execution time: 0.39 ms
+Min/Max execution time: 0.37/0.42 ms
+Average wait time: 0.00 ms
+First invocation: 78.71 s
+Last invocation: 593.83 s
+
+Node: nx_5
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 15
+Average execution time: 2.69 ms
+Min/Max execution time: 2.61/2.77 ms
+Average wait time: 0.00 ms
+First invocation: 148.88 s
+Last invocation: 601.59 s
+
+Node: nx_5
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 2.67 ms
+Min/Max execution time: 2.58/2.73 ms
+Average wait time: 0.00 ms
+First invocation: 175.94 s
+Last invocation: 595.83 s
+
+Node: nx_6
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 13.64 ms
+Min/Max execution time: 13.40/13.89 ms
+Average wait time: 0.00 ms
+First invocation: 188.58 s
+Last invocation: 584.99 s
+
+Node: nx_6
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 89
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 41.52 s
+Last invocation: 604.65 s
+
+Node: nx_6
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 27
+Average execution time: 0.52 ms
+Min/Max execution time: 0.47/0.58 ms
+Average wait time: 0.00 ms
+First invocation: 242.64 s
+Last invocation: 603.40 s
+
+Node: nx_6
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 83
+Average execution time: 0.39 ms
+Min/Max execution time: 0.37/0.44 ms
+Average wait time: 0.00 ms
+First invocation: 78.07 s
+Last invocation: 598.82 s
+
+Node: nx_6
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 15
+Average execution time: 2.70 ms
+Min/Max execution time: 2.57/2.76 ms
+Average wait time: 0.00 ms
+First invocation: 133.39 s
+Last invocation: 588.77 s
+
+Node: nx_6
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 2.68 ms
+Min/Max execution time: 2.61/2.73 ms
+Average wait time: 0.00 ms
+First invocation: 183.77 s
+Last invocation: 590.07 s
+
+Node: nx_7
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 13.70 ms
+Min/Max execution time: 13.42/14.32 ms
+Average wait time: 0.00 ms
+First invocation: 137.20 s
+Last invocation: 562.24 s
+
+Node: nx_7
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 78
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 66.05 s
+Last invocation: 604.57 s
+
+Node: nx_7
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 27
+Average execution time: 0.51 ms
+Min/Max execution time: 0.46/0.57 ms
+Average wait time: 0.00 ms
+First invocation: 244.40 s
+Last invocation: 604.64 s
+
+Node: nx_7
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 103
+Average execution time: 0.38 ms
+Min/Max execution time: 0.37/0.44 ms
+Average wait time: 0.00 ms
+First invocation: 56.99 s
+Last invocation: 593.80 s
+
+Node: nx_7
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 0.51 ms
+Min/Max execution time: 0.46/0.57 ms
+Average wait time: 0.00 ms
+First invocation: 255.53 s
+Last invocation: 597.77 s
+
+Node: nx_7
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 2.68 ms
+Min/Max execution time: 2.62/2.79 ms
+Average wait time: 0.00 ms
+First invocation: 169.64 s
+Last invocation: 577.24 s
+
+Node: nx_8
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 54
+Average execution time: 1.30 ms
+Min/Max execution time: 1.28/1.33 ms
+Average wait time: 0.00 ms
+First invocation: 182.13 s
+Last invocation: 603.22 s
+
+Node: nx_8
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 62
+Average execution time: 0.38 ms
+Min/Max execution time: 0.37/0.42 ms
+Average wait time: 0.00 ms
+First invocation: 114.51 s
+Last invocation: 599.52 s
+
+Node: nx_8
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 74
+Average execution time: 6.08 ms
+Min/Max execution time: 5.87/6.37 ms
+Average wait time: 0.00 ms
+First invocation: 119.04 s
+Last invocation: 600.75 s
+
+Node: nx_8
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 16
+Average execution time: 2.70 ms
+Min/Max execution time: 2.61/2.79 ms
+Average wait time: 0.00 ms
+First invocation: 121.22 s
+Last invocation: 583.55 s
+
+Node: nx_8
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 2.69 ms
+Min/Max execution time: 2.61/2.79 ms
+Average wait time: 0.00 ms
+First invocation: 149.48 s
+Last invocation: 589.13 s
+
+Node: nx_9
+Function: fio
+Image: faas-workloads/fio
+Invocations: 60
+Average execution time: 13.67 ms
+Min/Max execution time: 13.39/14.43 ms
+Average wait time: 0.00 ms
+First invocation: 137.75 s
+Last invocation: 590.73 s
+
+Node: nx_9
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 56
+Average execution time: 1.29 ms
+Min/Max execution time: 1.28/1.31 ms
+Average wait time: 0.00 ms
+First invocation: 174.69 s
+Last invocation: 601.81 s
+
+Node: nx_9
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-gpu
+Invocations: 73
+Average execution time: 0.38 ms
+Min/Max execution time: 0.37/0.49 ms
+Average wait time: 0.00 ms
+First invocation: 96.09 s
+Last invocation: 600.39 s
+
+Node: nx_9
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 2.69 ms
+Min/Max execution time: 2.59/2.76 ms
+Average wait time: 0.00 ms
+First invocation: 169.77 s
+Last invocation: 577.96 s
+
+Node: nx_9
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 29
+Average execution time: 2.67 ms
+Min/Max execution time: 2.60/2.76 ms
+Average wait time: 0.00 ms
+First invocation: 104.28 s
+Last invocation: 587.48 s
+
+Node: rockpi_0
+Function: fio
+Image: faas-workloads/fio
+Invocations: 51
+Average execution time: 21.98 ms
+Min/Max execution time: 21.47/22.98 ms
+Average wait time: 0.00 ms
+First invocation: 192.39 s
+Last invocation: 584.99 s
+
+Node: rockpi_0
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 62
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 128.53 s
+Last invocation: 606.01 s
+
+Node: rockpi_0
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 59
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 153.38 s
+Last invocation: 601.35 s
+
+Node: rockpi_0
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 40
+Average execution time: 7.65 ms
+Min/Max execution time: 7.39/7.96 ms
+Average wait time: 0.00 ms
+First invocation: 101.87 s
+Last invocation: 597.20 s
+
+Node: rockpi_0
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 23
+Average execution time: 3.84 ms
+Min/Max execution time: 3.77/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 59.40 s
+Last invocation: 595.79 s
+
+Node: rockpi_0
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 24
+Average execution time: 3.81 ms
+Min/Max execution time: 3.74/3.89 ms
+Average wait time: 0.00 ms
+First invocation: 53.06 s
+Last invocation: 579.05 s
+
+Node: rockpi_1
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 93
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 36.55 s
+Last invocation: 603.94 s
+
+Node: rockpi_1
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 61
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 136.14 s
+Last invocation: 607.63 s
+
+Node: rockpi_1
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 33
+Average execution time: 1.39 ms
+Min/Max execution time: 1.22/1.60 ms
+Average wait time: 0.00 ms
+First invocation: 209.77 s
+Last invocation: 598.78 s
+
+Node: rockpi_1
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 99
+Average execution time: 7.64 ms
+Min/Max execution time: 7.39/8.02 ms
+Average wait time: 0.00 ms
+First invocation: 37.29 s
+Last invocation: 594.00 s
+
+Node: rockpi_1
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.84 ms
+Min/Max execution time: 3.74/3.91 ms
+Average wait time: 0.00 ms
+First invocation: 245.79 s
+Last invocation: 587.68 s
+
+Node: rockpi_10
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 86
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 46.55 s
+Last invocation: 604.32 s
+
+Node: rockpi_10
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 162
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 45.43 s
+Last invocation: 605.38 s
+
+Node: rockpi_10
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 57
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 166.88 s
+Last invocation: 601.67 s
+
+Node: rockpi_10
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 32
+Average execution time: 1.41 ms
+Min/Max execution time: 1.20/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 218.40 s
+Last invocation: 599.60 s
+
+Node: rockpi_10
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.80 ms
+Min/Max execution time: 3.72/3.88 ms
+Average wait time: 0.00 ms
+First invocation: 221.88 s
+Last invocation: 597.08 s
+
+Node: rockpi_11
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 52
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 192.37 s
+Last invocation: 602.11 s
+
+Node: rockpi_11
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 60
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 146.72 s
+Last invocation: 601.22 s
+
+Node: rockpi_11
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 71
+Average execution time: 9.06 ms
+Min/Max execution time: 7.37/14.79 ms
+Average wait time: 1.44 ms
+First invocation: 12.16 s
+Last invocation: 588.69 s
+
+Node: rockpi_11
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 3.82 ms
+Min/Max execution time: 3.71/3.93 ms
+Average wait time: 0.00 ms
+First invocation: 165.61 s
+Last invocation: 576.56 s
+
+Node: rockpi_11
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 3.80 ms
+Min/Max execution time: 3.72/3.88 ms
+Average wait time: 0.00 ms
+First invocation: 177.19 s
+Last invocation: 599.06 s
+
+Node: rockpi_11
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 30
+Average execution time: 3.80 ms
+Min/Max execution time: 3.71/3.95 ms
+Average wait time: 0.00 ms
+First invocation: 25.70 s
+Last invocation: 570.87 s
+
+Node: rockpi_12
+Function: fio
+Image: faas-workloads/fio
+Invocations: 60
+Average execution time: 21.91 ms
+Min/Max execution time: 21.53/23.19 ms
+Average wait time: 0.00 ms
+First invocation: 131.75 s
+Last invocation: 581.41 s
+
+Node: rockpi_12
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 76
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 72.16 s
+Last invocation: 605.09 s
+
+Node: rockpi_12
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 1.40 ms
+Min/Max execution time: 1.20/1.66 ms
+Average wait time: 0.00 ms
+First invocation: 213.91 s
+Last invocation: 599.98 s
+
+Node: rockpi_12
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 21
+Average execution time: 3.80 ms
+Min/Max execution time: 3.68/3.89 ms
+Average wait time: 0.00 ms
+First invocation: 79.71 s
+Last invocation: 599.43 s
+
+Node: rockpi_12
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 19
+Average execution time: 3.81 ms
+Min/Max execution time: 3.69/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 84.33 s
+Last invocation: 580.93 s
+
+Node: rockpi_12
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.82 ms
+Min/Max execution time: 3.78/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 224.44 s
+Last invocation: 601.52 s
+
+Node: rockpi_13
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 61
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 134.82 s
+Last invocation: 606.54 s
+
+Node: rockpi_13
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 34
+Average execution time: 1.37 ms
+Min/Max execution time: 1.15/1.78 ms
+Average wait time: 0.00 ms
+First invocation: 208.39 s
+Last invocation: 601.99 s
+
+Node: rockpi_13
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 1.40 ms
+Min/Max execution time: 1.23/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 247.44 s
+Last invocation: 594.40 s
+
+Node: rockpi_13
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 21
+Average execution time: 3.82 ms
+Min/Max execution time: 3.75/3.88 ms
+Average wait time: 0.00 ms
+First invocation: 71.83 s
+Last invocation: 580.28 s
+
+Node: rockpi_13
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 34
+Average execution time: 3.81 ms
+Min/Max execution time: 3.67/3.93 ms
+Average wait time: 0.00 ms
+First invocation: 71.79 s
+Last invocation: 584.16 s
+
+Node: rockpi_14
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 21.82 ms
+Min/Max execution time: 21.54/22.85 ms
+Average wait time: 0.00 ms
+First invocation: 157.50 s
+Last invocation: 584.21 s
+
+Node: rockpi_14
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 10
+Average execution time: 22.27 ms
+Min/Max execution time: 21.53/23.37 ms
+Average wait time: 0.00 ms
+First invocation: 219.17 s
+Last invocation: 573.97 s
+
+Node: rockpi_14
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 101
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 26.42 s
+Last invocation: 603.47 s
+
+Node: rockpi_14
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 169
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 25.31 s
+Last invocation: 606.61 s
+
+Node: rockpi_14
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 64
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 125.98 s
+Last invocation: 600.14 s
+
+Node: rockpi_15
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 22.06 ms
+Min/Max execution time: 21.55/23.39 ms
+Average wait time: 0.00 ms
+First invocation: 159.04 s
+Last invocation: 584.69 s
+
+Node: rockpi_15
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 101
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 31.48 s
+Last invocation: 603.73 s
+
+Node: rockpi_15
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 1.38 ms
+Min/Max execution time: 1.20/1.67 ms
+Average wait time: 0.00 ms
+First invocation: 206.57 s
+Last invocation: 597.94 s
+
+Node: rockpi_15
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 33
+Average execution time: 3.81 ms
+Min/Max execution time: 3.71/3.96 ms
+Average wait time: 0.00 ms
+First invocation: 79.55 s
+Last invocation: 598.18 s
+
+Node: rockpi_15
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 15
+Average execution time: 3.79 ms
+Min/Max execution time: 3.68/3.86 ms
+Average wait time: 0.00 ms
+First invocation: 132.57 s
+Last invocation: 588.21 s
+
+Node: rockpi_16
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 202
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/1.18 ms
+Average wait time: 0.00 ms
+First invocation: 4.84 s
+Last invocation: 605.81 s
+
+Node: rockpi_16
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 194
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/1.33 ms
+Average wait time: 0.01 ms
+First invocation: 4.62 s
+Last invocation: 603.73 s
+
+Node: rockpi_16
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 41
+Average execution time: 7.63 ms
+Min/Max execution time: 7.44/7.89 ms
+Average wait time: 0.00 ms
+First invocation: 92.93 s
+Last invocation: 594.54 s
+
+Node: rockpi_16
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 3.80 ms
+Min/Max execution time: 3.75/3.85 ms
+Average wait time: 0.00 ms
+First invocation: 204.51 s
+Last invocation: 584.78 s
+
+Node: rockpi_17
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 22.06 ms
+Min/Max execution time: 21.73/22.43 ms
+Average wait time: 0.00 ms
+First invocation: 176.51 s
+Last invocation: 570.61 s
+
+Node: rockpi_17
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 84
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 52.18 s
+Last invocation: 604.43 s
+
+Node: rockpi_17
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 27
+Average execution time: 1.40 ms
+Min/Max execution time: 1.15/1.65 ms
+Average wait time: 0.00 ms
+First invocation: 243.19 s
+Last invocation: 604.01 s
+
+Node: rockpi_17
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 33
+Average execution time: 1.40 ms
+Min/Max execution time: 1.24/1.69 ms
+Average wait time: 0.00 ms
+First invocation: 223.12 s
+Last invocation: 604.89 s
+
+Node: rockpi_17
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 91
+Average execution time: 7.63 ms
+Min/Max execution time: 7.44/8.00 ms
+Average wait time: 0.00 ms
+First invocation: 52.74 s
+Last invocation: 594.14 s
+
+Node: rockpi_18
+Function: fio
+Image: faas-workloads/fio
+Invocations: 53
+Average execution time: 21.95 ms
+Min/Max execution time: 21.49/23.24 ms
+Average wait time: 0.00 ms
+First invocation: 179.24 s
+Last invocation: 584.08 s
+
+Node: rockpi_18
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 150
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 63.24 s
+Last invocation: 604.90 s
+
+Node: rockpi_18
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 204
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 62.02 s
+Last invocation: 607.03 s
+
+Node: rockpi_19
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 92
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 41.75 s
+Last invocation: 604.16 s
+
+Node: rockpi_19
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 63
+Average execution time: 1.37 ms
+Min/Max execution time: 1.15/1.61 ms
+Average wait time: 0.00 ms
+First invocation: 215.64 s
+Last invocation: 604.21 s
+
+Node: rockpi_19
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 1.42 ms
+Min/Max execution time: 1.15/1.74 ms
+Average wait time: 0.00 ms
+First invocation: 239.10 s
+Last invocation: 600.93 s
+
+Node: rockpi_19
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 20
+Average execution time: 3.81 ms
+Min/Max execution time: 3.74/3.87 ms
+Average wait time: 0.00 ms
+First invocation: 91.30 s
+Last invocation: 599.56 s
+
+Node: rockpi_19
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 14
+Average execution time: 3.81 ms
+Min/Max execution time: 3.76/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 135.55 s
+Last invocation: 586.73 s
+
+Node: rockpi_2
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 76
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 70.65 s
+Last invocation: 604.64 s
+
+Node: rockpi_2
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 93
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 35.64 s
+Last invocation: 604.60 s
+
+Node: rockpi_2
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 159
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 36.27 s
+Last invocation: 604.15 s
+
+Node: rockpi_2
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 35
+Average execution time: 1.39 ms
+Min/Max execution time: 1.17/1.61 ms
+Average wait time: 0.00 ms
+First invocation: 209.93 s
+Last invocation: 603.99 s
+
+Node: rockpi_2
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.83 ms
+Min/Max execution time: 3.76/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 239.06 s
+Last invocation: 566.91 s
+
+Node: rockpi_20
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 73
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 80.52 s
+Last invocation: 604.71 s
+
+Node: rockpi_20
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 84
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 51.16 s
+Last invocation: 604.71 s
+
+Node: rockpi_20
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 87
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 50.91 s
+Last invocation: 604.56 s
+
+Node: rockpi_20
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 54
+Average execution time: 1.41 ms
+Min/Max execution time: 1.21/1.83 ms
+Average wait time: 0.00 ms
+First invocation: 232.63 s
+Last invocation: 606.17 s
+
+Node: rockpi_20
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 1.36 ms
+Min/Max execution time: 1.17/1.76 ms
+Average wait time: 0.00 ms
+First invocation: 242.41 s
+Last invocation: 604.92 s
+
+Node: rockpi_21
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 71
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.94 ms
+Average wait time: 0.00 ms
+First invocation: 96.69 s
+Last invocation: 606.61 s
+
+Node: rockpi_21
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 1.34 ms
+Min/Max execution time: 1.14/1.57 ms
+Average wait time: 0.00 ms
+First invocation: 236.85 s
+Last invocation: 607.37 s
+
+Node: rockpi_21
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 30
+Average execution time: 7.61 ms
+Min/Max execution time: 7.45/8.06 ms
+Average wait time: 0.00 ms
+First invocation: 203.04 s
+Last invocation: 587.65 s
+
+Node: rockpi_21
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 25
+Average execution time: 3.81 ms
+Min/Max execution time: 3.72/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 49.27 s
+Last invocation: 578.86 s
+
+Node: rockpi_21
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 35
+Average execution time: 3.82 ms
+Min/Max execution time: 3.72/3.93 ms
+Average wait time: 0.00 ms
+First invocation: 44.52 s
+Last invocation: 598.19 s
+
+Node: rockpi_22
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 137
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 67.31 s
+Last invocation: 605.04 s
+
+Node: rockpi_22
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 65
+Average execution time: 1.36 ms
+Min/Max execution time: 1.17/1.68 ms
+Average wait time: 0.00 ms
+First invocation: 198.63 s
+Last invocation: 600.71 s
+
+Node: rockpi_22
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 57
+Average execution time: 7.68 ms
+Min/Max execution time: 7.47/8.42 ms
+Average wait time: 0.03 ms
+First invocation: 32.83 s
+Last invocation: 589.18 s
+
+Node: rockpi_22
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 21
+Average execution time: 3.83 ms
+Min/Max execution time: 3.71/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 64.43 s
+Last invocation: 574.19 s
+
+Node: rockpi_23
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 70
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 92.16 s
+Last invocation: 605.22 s
+
+Node: rockpi_23
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 64
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 118.03 s
+Last invocation: 607.32 s
+
+Node: rockpi_23
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 195
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 4.67 s
+Last invocation: 602.54 s
+
+Node: rockpi_23
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 32
+Average execution time: 3.82 ms
+Min/Max execution time: 3.72/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 18.43 s
+Last invocation: 594.07 s
+
+Node: rockpi_23
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 3.82 ms
+Min/Max execution time: 3.74/3.93 ms
+Average wait time: 0.00 ms
+First invocation: 203.83 s
+Last invocation: 565.12 s
+
+Node: rockpi_24
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 21.94 ms
+Min/Max execution time: 21.59/22.85 ms
+Average wait time: 0.00 ms
+First invocation: 136.36 s
+Last invocation: 560.87 s
+
+Node: rockpi_24
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 69
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.94 ms
+Average wait time: 0.00 ms
+First invocation: 97.55 s
+Last invocation: 605.33 s
+
+Node: rockpi_24
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 115
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 16.62 s
+Last invocation: 604.11 s
+
+Node: rockpi_24
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 115
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 15.57 s
+Last invocation: 602.82 s
+
+Node: rockpi_24
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 1.34 ms
+Min/Max execution time: 1.17/1.81 ms
+Average wait time: 0.00 ms
+First invocation: 242.82 s
+Last invocation: 605.22 s
+
+Node: rockpi_24
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 1.41 ms
+Min/Max execution time: 1.24/1.72 ms
+Average wait time: 0.00 ms
+First invocation: 251.51 s
+Last invocation: 603.38 s
+
+Node: rockpi_25
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 53
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.94 ms
+Average wait time: 0.00 ms
+First invocation: 184.77 s
+Last invocation: 601.76 s
+
+Node: rockpi_25
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 1.37 ms
+Min/Max execution time: 1.13/1.59 ms
+Average wait time: 0.00 ms
+First invocation: 246.44 s
+Last invocation: 593.54 s
+
+Node: rockpi_25
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 121
+Average execution time: 12.30 ms
+Min/Max execution time: 7.44/31.45 ms
+Average wait time: 4.65 ms
+First invocation: 4.52 s
+Last invocation: 598.89 s
+
+Node: rockpi_25
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 56
+Average execution time: 3.83 ms
+Min/Max execution time: 3.71/4.18 ms
+Average wait time: 0.01 ms
+First invocation: 5.54 s
+Last invocation: 589.70 s
+
+Node: rockpi_26
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 82
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 56.53 s
+Last invocation: 604.50 s
+
+Node: rockpi_26
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 83
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 56.26 s
+Last invocation: 604.89 s
+
+Node: rockpi_26
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 32
+Average execution time: 7.66 ms
+Min/Max execution time: 7.50/7.87 ms
+Average wait time: 0.00 ms
+First invocation: 177.89 s
+Last invocation: 586.25 s
+
+Node: rockpi_26
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 14
+Average execution time: 3.83 ms
+Min/Max execution time: 3.75/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 151.34 s
+Last invocation: 574.17 s
+
+Node: rockpi_26
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 25
+Average execution time: 3.82 ms
+Min/Max execution time: 3.73/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 176.05 s
+Last invocation: 604.93 s
+
+Node: rockpi_27
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 156
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 22.73 s
+Last invocation: 603.33 s
+
+Node: rockpi_27
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 97
+Average execution time: 7.77 ms
+Min/Max execution time: 7.41/10.39 ms
+Average wait time: 0.13 ms
+First invocation: 22.66 s
+Last invocation: 588.90 s
+
+Node: rockpi_27
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 13
+Average execution time: 3.84 ms
+Min/Max execution time: 3.76/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 166.59 s
+Last invocation: 576.96 s
+
+Node: rockpi_27
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 12
+Average execution time: 3.84 ms
+Min/Max execution time: 3.78/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 197.45 s
+Last invocation: 600.37 s
+
+Node: rockpi_28
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 73
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 81.23 s
+Last invocation: 605.43 s
+
+Node: rockpi_28
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 61
+Average execution time: 1.37 ms
+Min/Max execution time: 1.13/1.75 ms
+Average wait time: 0.00 ms
+First invocation: 224.33 s
+Last invocation: 607.37 s
+
+Node: rockpi_28
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 1.37 ms
+Min/Max execution time: 1.15/1.67 ms
+Average wait time: 0.00 ms
+First invocation: 239.78 s
+Last invocation: 601.16 s
+
+Node: rockpi_28
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 18
+Average execution time: 3.84 ms
+Min/Max execution time: 3.77/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 107.33 s
+Last invocation: 600.37 s
+
+Node: rockpi_28
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 16
+Average execution time: 3.80 ms
+Min/Max execution time: 3.72/3.88 ms
+Average wait time: 0.00 ms
+First invocation: 120.90 s
+Last invocation: 583.15 s
+
+Node: rockpi_29
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 22.09 ms
+Min/Max execution time: 21.60/23.30 ms
+Average wait time: 0.00 ms
+First invocation: 156.64 s
+Last invocation: 581.06 s
+
+Node: rockpi_29
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 73
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 88.59 s
+Last invocation: 605.51 s
+
+Node: rockpi_29
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 1.36 ms
+Min/Max execution time: 1.17/1.72 ms
+Average wait time: 0.00 ms
+First invocation: 260.49 s
+Last invocation: 595.72 s
+
+Node: rockpi_29
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 1.39 ms
+Min/Max execution time: 1.20/1.66 ms
+Average wait time: 0.00 ms
+First invocation: 226.46 s
+Last invocation: 600.47 s
+
+Node: rockpi_29
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 16
+Average execution time: 3.83 ms
+Min/Max execution time: 3.72/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 130.14 s
+Last invocation: 601.40 s
+
+Node: rockpi_29
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 16
+Average execution time: 3.81 ms
+Min/Max execution time: 3.74/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 121.42 s
+Last invocation: 585.47 s
+
+Node: rockpi_3
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 22.01 ms
+Min/Max execution time: 21.51/22.47 ms
+Average wait time: 0.00 ms
+First invocation: 152.90 s
+Last invocation: 580.32 s
+
+Node: rockpi_3
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 78
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 71.43 s
+Last invocation: 605.36 s
+
+Node: rockpi_3
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 33
+Average execution time: 1.39 ms
+Min/Max execution time: 1.17/1.77 ms
+Average wait time: 0.00 ms
+First invocation: 215.72 s
+Last invocation: 602.26 s
+
+Node: rockpi_3
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 85
+Average execution time: 7.64 ms
+Min/Max execution time: 7.38/7.98 ms
+Average wait time: 0.00 ms
+First invocation: 42.10 s
+Last invocation: 590.34 s
+
+Node: rockpi_3
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 18
+Average execution time: 3.80 ms
+Min/Max execution time: 3.73/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 84.30 s
+Last invocation: 574.83 s
+
+Node: rockpi_30
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 1.35 ms
+Min/Max execution time: 1.18/1.70 ms
+Average wait time: 0.00 ms
+First invocation: 239.78 s
+Last invocation: 602.27 s
+
+Node: rockpi_30
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 31
+Average execution time: 7.64 ms
+Min/Max execution time: 7.44/8.05 ms
+Average wait time: 0.00 ms
+First invocation: 188.28 s
+Last invocation: 586.32 s
+
+Node: rockpi_30
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 41
+Average execution time: 3.83 ms
+Min/Max execution time: 3.74/4.06 ms
+Average wait time: 0.01 ms
+First invocation: 4.77 s
+Last invocation: 591.70 s
+
+Node: rockpi_30
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 61
+Average execution time: 4.01 ms
+Min/Max execution time: 3.70/6.34 ms
+Average wait time: 0.20 ms
+First invocation: 5.18 s
+Last invocation: 593.58 s
+
+Node: rockpi_30
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 11
+Average execution time: 3.83 ms
+Min/Max execution time: 3.73/3.91 ms
+Average wait time: 0.00 ms
+First invocation: 185.66 s
+Last invocation: 592.23 s
+
+Node: rockpi_31
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 1.41 ms
+Min/Max execution time: 1.19/1.67 ms
+Average wait time: 0.00 ms
+First invocation: 221.93 s
+Last invocation: 600.27 s
+
+Node: rockpi_31
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 1.39 ms
+Min/Max execution time: 1.21/1.61 ms
+Average wait time: 0.00 ms
+First invocation: 237.02 s
+Last invocation: 593.14 s
+
+Node: rockpi_31
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 43
+Average execution time: 7.63 ms
+Min/Max execution time: 7.40/7.87 ms
+Average wait time: 0.00 ms
+First invocation: 79.15 s
+Last invocation: 594.04 s
+
+Node: rockpi_31
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 3.83 ms
+Min/Max execution time: 3.73/3.88 ms
+Average wait time: 0.00 ms
+First invocation: 245.86 s
+Last invocation: 588.08 s
+
+Node: rockpi_31
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 18
+Average execution time: 3.85 ms
+Min/Max execution time: 3.75/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 91.56 s
+Last invocation: 583.02 s
+
+Node: rockpi_31
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 17
+Average execution time: 3.83 ms
+Min/Max execution time: 3.70/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 94.59 s
+Last invocation: 575.81 s
+
+Node: rockpi_32
+Function: fio
+Image: faas-workloads/fio
+Invocations: 57
+Average execution time: 21.98 ms
+Min/Max execution time: 21.48/23.34 ms
+Average wait time: 0.00 ms
+First invocation: 150.95 s
+Last invocation: 582.83 s
+
+Node: rockpi_32
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 10
+Average execution time: 22.13 ms
+Min/Max execution time: 21.55/23.27 ms
+Average wait time: 0.00 ms
+First invocation: 192.81 s
+Last invocation: 550.66 s
+
+Node: rockpi_32
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 68
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 101.76 s
+Last invocation: 605.73 s
+
+Node: rockpi_32
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 62
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.94 ms
+Average wait time: 0.00 ms
+First invocation: 129.14 s
+Last invocation: 607.63 s
+
+Node: rockpi_32
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 60
+Average execution time: 7.82 ms
+Min/Max execution time: 7.43/11.05 ms
+Average wait time: 0.19 ms
+First invocation: 29.58 s
+Last invocation: 588.98 s
+
+Node: rockpi_32
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 22
+Average execution time: 3.81 ms
+Min/Max execution time: 3.67/3.93 ms
+Average wait time: 0.00 ms
+First invocation: 57.72 s
+Last invocation: 573.53 s
+
+Node: rockpi_33
+Function: fio
+Image: faas-workloads/fio
+Invocations: 62
+Average execution time: 21.96 ms
+Min/Max execution time: 21.48/23.09 ms
+Average wait time: 0.00 ms
+First invocation: 121.26 s
+Last invocation: 581.23 s
+
+Node: rockpi_33
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 10
+Average execution time: 21.96 ms
+Min/Max execution time: 21.58/22.87 ms
+Average wait time: 0.00 ms
+First invocation: 192.72 s
+Last invocation: 549.07 s
+
+Node: rockpi_33
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 21.93 ms
+Min/Max execution time: 21.49/22.62 ms
+Average wait time: 0.00 ms
+First invocation: 167.30 s
+Last invocation: 566.38 s
+
+Node: rockpi_33
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 28
+Average execution time: 3.81 ms
+Min/Max execution time: 3.69/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 35.32 s
+Last invocation: 576.62 s
+
+Node: rockpi_33
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 39
+Average execution time: 3.81 ms
+Min/Max execution time: 3.66/3.96 ms
+Average wait time: 0.00 ms
+First invocation: 36.49 s
+Last invocation: 589.79 s
+
+Node: rockpi_34
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 75
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.93 ms
+Average wait time: 0.00 ms
+First invocation: 81.24 s
+Last invocation: 605.44 s
+
+Node: rockpi_34
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 1.40 ms
+Min/Max execution time: 1.20/1.64 ms
+Average wait time: 0.00 ms
+First invocation: 246.25 s
+Last invocation: 593.39 s
+
+Node: rockpi_34
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 62
+Average execution time: 1.39 ms
+Min/Max execution time: 1.22/1.76 ms
+Average wait time: 0.00 ms
+First invocation: 209.78 s
+Last invocation: 602.88 s
+
+Node: rockpi_34
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 47
+Average execution time: 7.64 ms
+Min/Max execution time: 7.39/7.91 ms
+Average wait time: 0.00 ms
+First invocation: 59.63 s
+Last invocation: 592.70 s
+
+Node: rockpi_34
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 15
+Average execution time: 3.79 ms
+Min/Max execution time: 3.71/3.89 ms
+Average wait time: 0.00 ms
+First invocation: 118.05 s
+Last invocation: 580.25 s
+
+Node: rockpi_35
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 126
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 111.49 s
+Last invocation: 606.90 s
+
+Node: rockpi_35
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 55
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 183.03 s
+Last invocation: 601.95 s
+
+Node: rockpi_35
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 88
+Average execution time: 7.65 ms
+Min/Max execution time: 7.46/8.11 ms
+Average wait time: 0.00 ms
+First invocation: 63.54 s
+Last invocation: 594.44 s
+
+Node: rockpi_35
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 15
+Average execution time: 3.83 ms
+Min/Max execution time: 3.72/3.92 ms
+Average wait time: 0.00 ms
+First invocation: 118.45 s
+Last invocation: 581.28 s
+
+Node: rockpi_36
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 78
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 67.04 s
+Last invocation: 604.97 s
+
+Node: rockpi_36
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 60
+Average execution time: 1.38 ms
+Min/Max execution time: 1.15/1.72 ms
+Average wait time: 0.00 ms
+First invocation: 201.22 s
+Last invocation: 603.37 s
+
+Node: rockpi_36
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 22
+Average execution time: 3.82 ms
+Min/Max execution time: 3.67/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 66.90 s
+Last invocation: 598.00 s
+
+Node: rockpi_36
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 32
+Average execution time: 3.82 ms
+Min/Max execution time: 3.74/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 66.65 s
+Last invocation: 579.40 s
+
+Node: rockpi_4
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 58
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 149.63 s
+Last invocation: 601.02 s
+
+Node: rockpi_4
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 72
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 92.62 s
+Last invocation: 606.50 s
+
+Node: rockpi_4
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 31
+Average execution time: 7.68 ms
+Min/Max execution time: 7.49/7.94 ms
+Average wait time: 0.00 ms
+First invocation: 188.57 s
+Last invocation: 587.00 s
+
+Node: rockpi_4
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 42
+Average execution time: 3.82 ms
+Min/Max execution time: 3.66/3.91 ms
+Average wait time: 0.00 ms
+First invocation: 26.97 s
+Last invocation: 595.01 s
+
+Node: rockpi_4
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 33
+Average execution time: 3.82 ms
+Min/Max execution time: 3.67/3.94 ms
+Average wait time: 0.00 ms
+First invocation: 24.20 s
+Last invocation: 575.19 s
+
+Node: rockpi_5
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 21.89 ms
+Min/Max execution time: 21.48/22.58 ms
+Average wait time: 0.00 ms
+First invocation: 149.40 s
+Last invocation: 578.12 s
+
+Node: rockpi_5
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 10
+Average execution time: 22.09 ms
+Min/Max execution time: 21.48/23.02 ms
+Average wait time: 0.00 ms
+First invocation: 218.72 s
+Last invocation: 573.17 s
+
+Node: rockpi_5
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 111
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.96 ms
+Average wait time: 0.00 ms
+First invocation: 16.20 s
+Last invocation: 603.22 s
+
+Node: rockpi_5
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 27
+Average execution time: 1.37 ms
+Min/Max execution time: 1.24/1.65 ms
+Average wait time: 0.00 ms
+First invocation: 243.65 s
+Last invocation: 604.38 s
+
+Node: rockpi_5
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 108
+Average execution time: 8.15 ms
+Min/Max execution time: 7.44/13.84 ms
+Average wait time: 0.51 ms
+First invocation: 17.43 s
+Last invocation: 594.66 s
+
+Node: rockpi_6
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 22.00 ms
+Min/Max execution time: 21.73/22.50 ms
+Average wait time: 0.00 ms
+First invocation: 167.27 s
+Last invocation: 564.36 s
+
+Node: rockpi_6
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 32
+Average execution time: 1.41 ms
+Min/Max execution time: 1.24/1.75 ms
+Average wait time: 0.00 ms
+First invocation: 231.24 s
+Last invocation: 605.72 s
+
+Node: rockpi_6
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 45
+Average execution time: 7.67 ms
+Min/Max execution time: 7.43/8.14 ms
+Average wait time: 0.00 ms
+First invocation: 69.20 s
+Last invocation: 593.93 s
+
+Node: rockpi_6
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 24
+Average execution time: 3.82 ms
+Min/Max execution time: 3.73/3.96 ms
+Average wait time: 0.00 ms
+First invocation: 152.05 s
+Last invocation: 589.35 s
+
+Node: rockpi_6
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 14
+Average execution time: 3.82 ms
+Min/Max execution time: 3.76/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 134.93 s
+Last invocation: 582.52 s
+
+Node: rockpi_7
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 55
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 175.26 s
+Last invocation: 608.00 s
+
+Node: rockpi_7
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 84
+Average execution time: 0.92 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 55.71 s
+Last invocation: 604.65 s
+
+Node: rockpi_7
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 17
+Average execution time: 3.83 ms
+Min/Max execution time: 3.78/3.90 ms
+Average wait time: 0.00 ms
+First invocation: 118.58 s
+Last invocation: 600.70 s
+
+Node: rockpi_7
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 14
+Average execution time: 3.79 ms
+Min/Max execution time: 3.69/3.86 ms
+Average wait time: 0.00 ms
+First invocation: 156.95 s
+Last invocation: 590.38 s
+
+Node: rockpi_7
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 21
+Average execution time: 3.80 ms
+Min/Max execution time: 3.69/3.93 ms
+Average wait time: 0.00 ms
+First invocation: 185.62 s
+Last invocation: 597.43 s
+
+Node: rockpi_8
+Function: fio
+Image: faas-workloads/fio
+Invocations: 56
+Average execution time: 21.94 ms
+Min/Max execution time: 21.51/22.85 ms
+Average wait time: 0.00 ms
+First invocation: 157.98 s
+Last invocation: 583.23 s
+
+Node: rockpi_8
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 97
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 31.06 s
+Last invocation: 603.94 s
+
+Node: rockpi_8
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 96
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 31.64 s
+Last invocation: 604.50 s
+
+Node: rockpi_8
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 67
+Average execution time: 1.39 ms
+Min/Max execution time: 1.15/1.61 ms
+Average wait time: 0.00 ms
+First invocation: 199.86 s
+Last invocation: 603.11 s
+
+Node: rockpi_8
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 16
+Average execution time: 3.81 ms
+Min/Max execution time: 3.69/3.91 ms
+Average wait time: 0.00 ms
+First invocation: 132.72 s
+Last invocation: 601.42 s
+
+Node: rockpi_9
+Function: fio
+Image: faas-workloads/fio
+Invocations: 58
+Average execution time: 22.01 ms
+Min/Max execution time: 21.52/23.09 ms
+Average wait time: 0.00 ms
+First invocation: 144.71 s
+Last invocation: 581.69 s
+
+Node: rockpi_9
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 71
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 87.04 s
+Last invocation: 605.82 s
+
+Node: rockpi_9
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 81
+Average execution time: 0.91 ms
+Min/Max execution time: 0.90/0.95 ms
+Average wait time: 0.00 ms
+First invocation: 62.37 s
+Last invocation: 604.91 s
+
+Node: rockpi_9
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 1.38 ms
+Min/Max execution time: 1.15/1.75 ms
+Average wait time: 0.00 ms
+First invocation: 233.39 s
+Last invocation: 603.03 s
+
+Node: rockpi_9
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 40
+Average execution time: 1.41 ms
+Min/Max execution time: 1.16/1.80 ms
+Average wait time: 0.00 ms
+First invocation: 185.28 s
+Last invocation: 602.84 s
+
+Node: rockpi_9
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 1.38 ms
+Min/Max execution time: 1.15/1.74 ms
+Average wait time: 0.00 ms
+First invocation: 251.32 s
+Last invocation: 603.15 s
+
+Node: rpi3_0
+Function: fio
+Image: faas-workloads/fio
+Invocations: 75
+Average execution time: 50.93 ms
+Min/Max execution time: 24.27/86.14 ms
+Average wait time: 23.83 ms
+First invocation: 72.27 s
+Last invocation: 578.99 s
+
+Node: rpi3_0
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 21
+Average execution time: 28.68 ms
+Min/Max execution time: 24.24/40.34 ms
+Average wait time: 0.38 ms
+First invocation: 17.88 s
+Last invocation: 555.94 s
+
+Node: rpi3_0
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 22
+Average execution time: 27.05 ms
+Min/Max execution time: 24.07/40.87 ms
+Average wait time: 0.00 ms
+First invocation: 19.99 s
+Last invocation: 576.33 s
+
+Node: rpi3_0
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 32
+Average execution time: 30.51 ms
+Min/Max execution time: 29.50/32.74 ms
+Average wait time: 0.00 ms
+First invocation: 166.19 s
+Last invocation: 571.64 s
+
+Node: rpi3_1
+Function: fio
+Image: faas-workloads/fio
+Invocations: 87
+Average execution time: 145.82 ms
+Min/Max execution time: 25.54/198.77 ms
+Average wait time: 119.47 ms
+First invocation: 21.88 s
+Last invocation: 455.11 s
+
+Node: rpi3_1
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 34
+Average execution time: 26.63 ms
+Min/Max execution time: 24.01/36.16 ms
+Average wait time: 0.00 ms
+First invocation: 25.57 s
+Last invocation: 569.13 s
+
+Node: rpi3_1
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 56
+Average execution time: 1.98 ms
+Min/Max execution time: 1.91/2.20 ms
+Average wait time: 0.00 ms
+First invocation: 160.04 s
+Last invocation: 600.37 s
+
+Node: rpi3_10
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 14
+Average execution time: 26.75 ms
+Min/Max execution time: 24.09/36.53 ms
+Average wait time: 0.00 ms
+First invocation: 94.12 s
+Last invocation: 570.69 s
+
+Node: rpi3_10
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 18
+Average execution time: 25.89 ms
+Min/Max execution time: 23.96/30.83 ms
+Average wait time: 0.00 ms
+First invocation: 39.29 s
+Last invocation: 542.82 s
+
+Node: rpi3_10
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 5.00 ms
+Min/Max execution time: 4.47/5.80 ms
+Average wait time: 0.00 ms
+First invocation: 253.46 s
+Last invocation: 595.24 s
+
+Node: rpi3_10
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 55
+Average execution time: 4.99 ms
+Min/Max execution time: 4.43/5.83 ms
+Average wait time: 0.00 ms
+First invocation: 124.56 s
+Last invocation: 593.25 s
+
+Node: rpi3_11
+Function: fio
+Image: faas-workloads/fio
+Invocations: 81
+Average execution time: 97.25 ms
+Min/Max execution time: 24.10/131.28 ms
+Average wait time: 69.91 ms
+First invocation: 41.94 s
+Last invocation: 527.41 s
+
+Node: rpi3_11
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 14
+Average execution time: 28.29 ms
+Min/Max execution time: 24.28/34.80 ms
+Average wait time: 0.00 ms
+First invocation: 97.48 s
+Last invocation: 553.27 s
+
+Node: rpi3_11
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 58
+Average execution time: 4.97 ms
+Min/Max execution time: 4.46/5.77 ms
+Average wait time: 0.00 ms
+First invocation: 122.93 s
+Last invocation: 601.95 s
+
+Node: rpi3_11
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 5.02 ms
+Min/Max execution time: 4.53/5.70 ms
+Average wait time: 0.00 ms
+First invocation: 250.65 s
+Last invocation: 602.84 s
+
+Node: rpi3_12
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 10
+Average execution time: 26.11 ms
+Min/Max execution time: 24.26/30.78 ms
+Average wait time: 0.00 ms
+First invocation: 191.42 s
+Last invocation: 547.56 s
+
+Node: rpi3_12
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 67
+Average execution time: 1.97 ms
+Min/Max execution time: 1.91/2.15 ms
+Average wait time: 0.00 ms
+First invocation: 110.87 s
+Last invocation: 599.55 s
+
+Node: rpi3_12
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 37
+Average execution time: 5.06 ms
+Min/Max execution time: 4.51/5.77 ms
+Average wait time: 0.00 ms
+First invocation: 180.01 s
+Last invocation: 596.82 s
+
+Node: rpi3_12
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 43
+Average execution time: 4.98 ms
+Min/Max execution time: 4.49/5.61 ms
+Average wait time: 0.00 ms
+First invocation: 170.65 s
+Last invocation: 602.60 s
+
+Node: rpi3_13
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 26.10 ms
+Min/Max execution time: 24.05/31.66 ms
+Average wait time: 0.00 ms
+First invocation: 116.60 s
+Last invocation: 577.50 s
+
+Node: rpi3_13
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 11
+Average execution time: 26.18 ms
+Min/Max execution time: 24.00/29.48 ms
+Average wait time: 0.00 ms
+First invocation: 178.14 s
+Last invocation: 571.20 s
+
+Node: rpi3_13
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 39
+Average execution time: 4.94 ms
+Min/Max execution time: 4.51/5.66 ms
+Average wait time: 0.00 ms
+First invocation: 174.32 s
+Last invocation: 596.50 s
+
+Node: rpi3_13
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 39
+Average execution time: 4.96 ms
+Min/Max execution time: 4.51/5.79 ms
+Average wait time: 0.00 ms
+First invocation: 178.88 s
+Last invocation: 601.03 s
+
+Node: rpi3_14
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 28.00 ms
+Min/Max execution time: 24.04/33.46 ms
+Average wait time: 0.00 ms
+First invocation: 113.78 s
+Last invocation: 557.77 s
+
+Node: rpi3_14
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 25
+Average execution time: 4.96 ms
+Min/Max execution time: 4.47/5.77 ms
+Average wait time: 0.00 ms
+First invocation: 254.34 s
+Last invocation: 592.44 s
+
+Node: rpi3_14
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 40
+Average execution time: 5.00 ms
+Min/Max execution time: 4.45/5.84 ms
+Average wait time: 0.00 ms
+First invocation: 173.63 s
+Last invocation: 600.81 s
+
+Node: rpi3_14
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 39
+Average execution time: 5.07 ms
+Min/Max execution time: 4.46/5.73 ms
+Average wait time: 0.00 ms
+First invocation: 180.46 s
+Last invocation: 597.38 s
+
+Node: rpi3_15
+Function: fio
+Image: faas-workloads/fio
+Invocations: 74
+Average execution time: 44.40 ms
+Min/Max execution time: 24.13/80.47 ms
+Average wait time: 17.37 ms
+First invocation: 75.23 s
+Last invocation: 579.03 s
+
+Node: rpi3_15
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 19
+Average execution time: 26.83 ms
+Min/Max execution time: 23.99/39.40 ms
+Average wait time: 0.00 ms
+First invocation: 26.28 s
+Last invocation: 559.19 s
+
+Node: rpi3_15
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 19
+Average execution time: 25.78 ms
+Min/Max execution time: 24.02/34.54 ms
+Average wait time: 0.00 ms
+First invocation: 30.07 s
+Last invocation: 542.09 s
+
+Node: rpi3_15
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 55
+Average execution time: 1.98 ms
+Min/Max execution time: 1.91/2.18 ms
+Average wait time: 0.00 ms
+First invocation: 168.46 s
+Last invocation: 600.64 s
+
+Node: rpi3_16
+Function: fio
+Image: faas-workloads/fio
+Invocations: 84
+Average execution time: 118.84 ms
+Min/Max execution time: 23.98/157.83 ms
+Average wait time: 92.09 ms
+First invocation: 30.88 s
+Last invocation: 489.45 s
+
+Node: rpi3_16
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 32
+Average execution time: 27.24 ms
+Min/Max execution time: 23.96/38.81 ms
+Average wait time: 0.00 ms
+First invocation: 37.67 s
+Last invocation: 569.77 s
+
+Node: rpi3_16
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 56
+Average execution time: 1.97 ms
+Min/Max execution time: 1.91/2.20 ms
+Average wait time: 0.00 ms
+First invocation: 164.03 s
+Last invocation: 603.06 s
+
+Node: rpi3_17
+Function: fio
+Image: faas-workloads/fio
+Invocations: 82
+Average execution time: 112.24 ms
+Min/Max execution time: 24.86/152.49 ms
+Average wait time: 84.70 ms
+First invocation: 35.42 s
+Last invocation: 504.39 s
+
+Node: rpi3_17
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 33
+Average execution time: 27.81 ms
+Min/Max execution time: 24.08/38.57 ms
+Average wait time: 0.00 ms
+First invocation: 38.36 s
+Last invocation: 550.99 s
+
+Node: rpi3_17
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 57
+Average execution time: 1.98 ms
+Min/Max execution time: 1.91/2.18 ms
+Average wait time: 0.00 ms
+First invocation: 166.81 s
+Last invocation: 601.62 s
+
+Node: rpi3_18
+Function: fio
+Image: faas-workloads/fio
+Invocations: 69
+Average execution time: 35.79 ms
+Min/Max execution time: 24.13/54.97 ms
+Average wait time: 8.09 ms
+First invocation: 90.38 s
+Last invocation: 580.13 s
+
+Node: rpi3_18
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 16
+Average execution time: 27.36 ms
+Min/Max execution time: 24.03/35.79 ms
+Average wait time: 0.00 ms
+First invocation: 56.08 s
+Last invocation: 563.35 s
+
+Node: rpi3_18
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 4.93 ms
+Min/Max execution time: 4.48/5.46 ms
+Average wait time: 0.00 ms
+First invocation: 253.93 s
+Last invocation: 596.65 s
+
+Node: rpi3_18
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 51
+Average execution time: 4.96 ms
+Min/Max execution time: 4.43/5.62 ms
+Average wait time: 0.00 ms
+First invocation: 137.83 s
+Last invocation: 602.11 s
+
+Node: rpi3_19
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 14
+Average execution time: 27.57 ms
+Min/Max execution time: 24.32/33.95 ms
+Average wait time: 0.00 ms
+First invocation: 94.68 s
+Last invocation: 573.27 s
+
+Node: rpi3_19
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 17
+Average execution time: 25.54 ms
+Min/Max execution time: 24.20/28.79 ms
+Average wait time: 0.00 ms
+First invocation: 58.50 s
+Last invocation: 543.97 s
+
+Node: rpi3_19
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 46
+Average execution time: 5.01 ms
+Min/Max execution time: 4.50/5.85 ms
+Average wait time: 0.00 ms
+First invocation: 147.56 s
+Last invocation: 595.96 s
+
+Node: rpi3_19
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 5.03 ms
+Min/Max execution time: 4.50/5.61 ms
+Average wait time: 0.00 ms
+First invocation: 250.83 s
+Last invocation: 602.88 s
+
+Node: rpi3_2
+Function: fio
+Image: faas-workloads/fio
+Invocations: 83
+Average execution time: 146.20 ms
+Min/Max execution time: 25.04/197.09 ms
+Average wait time: 118.54 ms
+First invocation: 25.40 s
+Last invocation: 446.69 s
+
+Node: rpi3_2
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 36
+Average execution time: 27.09 ms
+Min/Max execution time: 24.01/39.61 ms
+Average wait time: 0.00 ms
+First invocation: 22.15 s
+Last invocation: 580.75 s
+
+Node: rpi3_2
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 56
+Average execution time: 1.96 ms
+Min/Max execution time: 1.91/2.19 ms
+Average wait time: 0.00 ms
+First invocation: 163.75 s
+Last invocation: 601.42 s
+
+Node: rpi3_20
+Function: fio
+Image: faas-workloads/fio
+Invocations: 79
+Average execution time: 76.93 ms
+Min/Max execution time: 24.36/113.16 ms
+Average wait time: 49.84 ms
+First invocation: 51.71 s
+Last invocation: 544.17 s
+
+Node: rpi3_20
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 14
+Average execution time: 25.71 ms
+Min/Max execution time: 24.03/28.53 ms
+Average wait time: 0.00 ms
+First invocation: 98.81 s
+Last invocation: 556.43 s
+
+Node: rpi3_20
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 48
+Average execution time: 5.01 ms
+Min/Max execution time: 4.51/5.83 ms
+Average wait time: 0.00 ms
+First invocation: 149.62 s
+Last invocation: 600.00 s
+
+Node: rpi3_20
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 5.03 ms
+Min/Max execution time: 4.49/5.76 ms
+Average wait time: 0.00 ms
+First invocation: 248.17 s
+Last invocation: 595.48 s
+
+Node: rpi3_21
+Function: fio
+Image: faas-workloads/fio
+Invocations: 88
+Average execution time: 253.90 ms
+Min/Max execution time: 24.28/397.88 ms
+Average wait time: 226.91 ms
+First invocation: 4.77 s
+Last invocation: 230.23 s
+
+Node: rpi3_21
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 28
+Average execution time: 39.07 ms
+Min/Max execution time: 24.00/72.75 ms
+Average wait time: 11.41 ms
+First invocation: 5.17 s
+Last invocation: 550.90 s
+
+Node: rpi3_21
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 26.08 ms
+Min/Max execution time: 24.21/28.46 ms
+Average wait time: 0.00 ms
+First invocation: 112.99 s
+Last invocation: 557.69 s
+
+Node: rpi3_21
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 5.08 ms
+Min/Max execution time: 4.51/5.86 ms
+Average wait time: 0.00 ms
+First invocation: 254.84 s
+Last invocation: 597.14 s
+
+Node: rpi3_22
+Function: fio
+Image: faas-workloads/fio
+Invocations: 149
+Average execution time: 158.32 ms
+Min/Max execution time: 24.02/403.31 ms
+Average wait time: 130.67 ms
+First invocation: 5.26 s
+Last invocation: 581.09 s
+
+Node: rpi3_22
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 27
+Average execution time: 31.08 ms
+Min/Max execution time: 24.18/59.69 ms
+Average wait time: 4.09 ms
+First invocation: 4.95 s
+Last invocation: 574.27 s
+
+Node: rpi3_22
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 4.88 ms
+Min/Max execution time: 4.50/5.73 ms
+Average wait time: 0.00 ms
+First invocation: 251.47 s
+Last invocation: 603.30 s
+
+Node: rpi3_23
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 12
+Average execution time: 28.98 ms
+Min/Max execution time: 24.02/37.10 ms
+Average wait time: 0.00 ms
+First invocation: 134.62 s
+Last invocation: 560.46 s
+
+Node: rpi3_23
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 37
+Average execution time: 4.94 ms
+Min/Max execution time: 4.45/5.57 ms
+Average wait time: 0.00 ms
+First invocation: 189.62 s
+Last invocation: 601.03 s
+
+Node: rpi3_23
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 4.95 ms
+Min/Max execution time: 4.43/5.51 ms
+Average wait time: 0.00 ms
+First invocation: 261.54 s
+Last invocation: 596.50 s
+
+Node: rpi3_23
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 76
+Average execution time: 142.80 ms
+Min/Max execution time: 29.62/236.02 ms
+Average wait time: 112.40 ms
+First invocation: 6.45 s
+Last invocation: 549.34 s
+
+Node: rpi3_24
+Function: fio
+Image: faas-workloads/fio
+Invocations: 66
+Average execution time: 30.56 ms
+Min/Max execution time: 24.12/44.00 ms
+Average wait time: 3.26 ms
+First invocation: 97.27 s
+Last invocation: 570.32 s
+
+Node: rpi3_24
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 16
+Average execution time: 27.04 ms
+Min/Max execution time: 24.40/34.94 ms
+Average wait time: 0.00 ms
+First invocation: 56.34 s
+Last invocation: 564.26 s
+
+Node: rpi3_24
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 47
+Average execution time: 4.96 ms
+Min/Max execution time: 4.48/5.86 ms
+Average wait time: 0.00 ms
+First invocation: 148.41 s
+Last invocation: 594.51 s
+
+Node: rpi3_24
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 16.61 ms
+Min/Max execution time: 16.26/17.10 ms
+Average wait time: 0.00 ms
+First invocation: 246.08 s
+Last invocation: 588.48 s
+
+Node: rpi3_25
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 27.23 ms
+Min/Max execution time: 24.18/36.17 ms
+Average wait time: 0.00 ms
+First invocation: 114.29 s
+Last invocation: 575.69 s
+
+Node: rpi3_25
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 17
+Average execution time: 27.08 ms
+Min/Max execution time: 24.10/36.12 ms
+Average wait time: 0.00 ms
+First invocation: 58.87 s
+Last invocation: 544.26 s
+
+Node: rpi3_25
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 48
+Average execution time: 5.00 ms
+Min/Max execution time: 4.49/5.63 ms
+Average wait time: 0.00 ms
+First invocation: 149.63 s
+Last invocation: 602.14 s
+
+Node: rpi3_25
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 16.34 ms
+Min/Max execution time: 16.06/16.87 ms
+Average wait time: 0.00 ms
+First invocation: 241.04 s
+Last invocation: 568.04 s
+
+Node: rpi3_26
+Function: fio
+Image: faas-workloads/fio
+Invocations: 79
+Average execution time: 72.35 ms
+Min/Max execution time: 24.85/115.90 ms
+Average wait time: 45.26 ms
+First invocation: 56.35 s
+Last invocation: 561.90 s
+
+Node: rpi3_26
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 14
+Average execution time: 27.71 ms
+Min/Max execution time: 24.15/40.36 ms
+Average wait time: 0.00 ms
+First invocation: 98.91 s
+Last invocation: 556.53 s
+
+Node: rpi3_26
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 43
+Average execution time: 4.98 ms
+Min/Max execution time: 4.46/5.75 ms
+Average wait time: 0.00 ms
+First invocation: 157.49 s
+Last invocation: 596.36 s
+
+Node: rpi3_26
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 9
+Average execution time: 16.66 ms
+Min/Max execution time: 16.32/17.01 ms
+Average wait time: 0.00 ms
+First invocation: 227.27 s
+Last invocation: 560.02 s
+
+Node: rpi3_27
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 136
+Average execution time: 2.26 ms
+Min/Max execution time: 1.91/4.37 ms
+Average wait time: 0.29 ms
+First invocation: 5.65 s
+Last invocation: 603.12 s
+
+Node: rpi3_27
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 5.04 ms
+Min/Max execution time: 4.49/5.82 ms
+Average wait time: 0.00 ms
+First invocation: 233.86 s
+Last invocation: 603.09 s
+
+Node: rpi3_27
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 38
+Average execution time: 5.06 ms
+Min/Max execution time: 4.47/5.77 ms
+Average wait time: 0.00 ms
+First invocation: 186.09 s
+Last invocation: 597.81 s
+
+Node: rpi3_27
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 16.42 ms
+Min/Max execution time: 16.04/16.68 ms
+Average wait time: 0.00 ms
+First invocation: 249.49 s
+Last invocation: 589.80 s
+
+Node: rpi3_28
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 135
+Average execution time: 2.06 ms
+Min/Max execution time: 1.91/3.34 ms
+Average wait time: 0.09 ms
+First invocation: 5.76 s
+Last invocation: 603.94 s
+
+Node: rpi3_28
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 39
+Average execution time: 4.96 ms
+Min/Max execution time: 4.50/5.86 ms
+Average wait time: 0.00 ms
+First invocation: 189.96 s
+Last invocation: 602.89 s
+
+Node: rpi3_28
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 30
+Average execution time: 5.06 ms
+Min/Max execution time: 4.56/5.84 ms
+Average wait time: 0.00 ms
+First invocation: 238.37 s
+Last invocation: 600.48 s
+
+Node: rpi3_28
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 16.38 ms
+Min/Max execution time: 16.05/16.73 ms
+Average wait time: 0.00 ms
+First invocation: 243.37 s
+Last invocation: 570.83 s
+
+Node: rpi3_29
+Function: python-pi-suburb
+Image: faas-workloads/python-pi
+Invocations: 136
+Average execution time: 2.15 ms
+Min/Max execution time: 1.91/4.53 ms
+Average wait time: 0.18 ms
+First invocation: 6.32 s
+Last invocation: 602.69 s
+
+Node: rpi3_29
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 33
+Average execution time: 4.92 ms
+Min/Max execution time: 4.50/5.72 ms
+Average wait time: 0.00 ms
+First invocation: 196.09 s
+Last invocation: 597.25 s
+
+Node: rpi3_29
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 31
+Average execution time: 4.98 ms
+Min/Max execution time: 4.45/5.63 ms
+Average wait time: 0.00 ms
+First invocation: 231.30 s
+Last invocation: 590.75 s
+
+Node: rpi3_29
+Function: speech-inference-suburb
+Image: faas-workloads/speech-inference-tflite
+Invocations: 8
+Average execution time: 16.50 ms
+Min/Max execution time: 16.12/16.85 ms
+Average wait time: 0.00 ms
+First invocation: 271.15 s
+Last invocation: 565.54 s
+
+Node: rpi3_3
+Function: fio
+Image: faas-workloads/fio
+Invocations: 77
+Average execution time: 53.71 ms
+Min/Max execution time: 24.57/90.26 ms
+Average wait time: 26.78 ms
+First invocation: 66.90 s
+Last invocation: 578.88 s
+
+Node: rpi3_3
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 27
+Average execution time: 38.40 ms
+Min/Max execution time: 24.16/69.02 ms
+Average wait time: 10.53 ms
+First invocation: 6.61 s
+Last invocation: 551.95 s
+
+Node: rpi3_3
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 26
+Average execution time: 29.79 ms
+Min/Max execution time: 24.16/44.27 ms
+Average wait time: 2.82 ms
+First invocation: 7.56 s
+Last invocation: 575.31 s
+
+Node: rpi3_3
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 5.09 ms
+Min/Max execution time: 4.63/5.80 ms
+Average wait time: 0.00 ms
+First invocation: 249.34 s
+Last invocation: 602.45 s
+
+Node: rpi3_30
+Function: fio
+Image: faas-workloads/fio
+Invocations: 66
+Average execution time: 34.60 ms
+Min/Max execution time: 23.99/55.05 ms
+Average wait time: 6.51 ms
+First invocation: 103.37 s
+Last invocation: 580.46 s
+
+Node: rpi3_30
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 16
+Average execution time: 26.04 ms
+Min/Max execution time: 24.15/32.56 ms
+Average wait time: 0.00 ms
+First invocation: 57.12 s
+Last invocation: 564.55 s
+
+Node: rpi3_30
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 45
+Average execution time: 4.93 ms
+Min/Max execution time: 4.46/5.84 ms
+Average wait time: 0.00 ms
+First invocation: 158.15 s
+Last invocation: 600.49 s
+
+Node: rpi3_30
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 31
+Average execution time: 30.46 ms
+Min/Max execution time: 29.48/37.00 ms
+Average wait time: 0.00 ms
+First invocation: 177.63 s
+Last invocation: 572.36 s
+
+Node: rpi3_31
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 28.94 ms
+Min/Max execution time: 23.96/39.40 ms
+Average wait time: 0.00 ms
+First invocation: 115.04 s
+Last invocation: 577.31 s
+
+Node: rpi3_31
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 17
+Average execution time: 26.12 ms
+Min/Max execution time: 24.00/32.69 ms
+Average wait time: 0.00 ms
+First invocation: 59.12 s
+Last invocation: 544.37 s
+
+Node: rpi3_31
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 54
+Average execution time: 1.96 ms
+Min/Max execution time: 1.91/2.16 ms
+Average wait time: 0.00 ms
+First invocation: 175.09 s
+Last invocation: 601.55 s
+
+Node: rpi3_31
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 43
+Average execution time: 5.01 ms
+Min/Max execution time: 4.49/5.73 ms
+Average wait time: 0.00 ms
+First invocation: 160.09 s
+Last invocation: 594.63 s
+
+Node: rpi3_32
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 55
+Average execution time: 1.96 ms
+Min/Max execution time: 1.91/2.16 ms
+Average wait time: 0.00 ms
+First invocation: 172.73 s
+Last invocation: 603.20 s
+
+Node: rpi3_32
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 4.97 ms
+Min/Max execution time: 4.44/5.65 ms
+Average wait time: 0.00 ms
+First invocation: 222.21 s
+Last invocation: 601.07 s
+
+Node: rpi3_32
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 89
+Average execution time: 4.98 ms
+Min/Max execution time: 4.44/5.69 ms
+Average wait time: 0.00 ms
+First invocation: 155.86 s
+Last invocation: 602.70 s
+
+Node: rpi3_33
+Function: fio
+Image: faas-workloads/fio
+Invocations: 69
+Average execution time: 34.42 ms
+Min/Max execution time: 24.08/57.73 ms
+Average wait time: 7.70 ms
+First invocation: 87.53 s
+Last invocation: 570.22 s
+
+Node: rpi3_33
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 17
+Average execution time: 26.07 ms
+Min/Max execution time: 24.07/37.80 ms
+Average wait time: 0.00 ms
+First invocation: 42.04 s
+Last invocation: 562.89 s
+
+Node: rpi3_33
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 50
+Average execution time: 4.95 ms
+Min/Max execution time: 4.43/5.78 ms
+Average wait time: 0.00 ms
+First invocation: 137.70 s
+Last invocation: 595.88 s
+
+Node: rpi3_33
+Function: resnet50-preprocessing
+Image: faas-workloads/resnet-preprocessing
+Invocations: 32
+Average execution time: 30.72 ms
+Min/Max execution time: 29.48/36.27 ms
+Average wait time: 0.00 ms
+First invocation: 167.09 s
+Last invocation: 571.88 s
+
+Node: rpi3_34
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 14
+Average execution time: 26.60 ms
+Min/Max execution time: 23.96/34.52 ms
+Average wait time: 0.00 ms
+First invocation: 94.26 s
+Last invocation: 573.02 s
+
+Node: rpi3_34
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 17
+Average execution time: 27.30 ms
+Min/Max execution time: 24.07/35.48 ms
+Average wait time: 0.00 ms
+First invocation: 57.22 s
+Last invocation: 543.38 s
+
+Node: rpi3_34
+Function: python-pi
+Image: faas-workloads/python-pi
+Invocations: 55
+Average execution time: 1.95 ms
+Min/Max execution time: 1.91/2.12 ms
+Average wait time: 0.00 ms
+First invocation: 168.59 s
+Last invocation: 600.75 s
+
+Node: rpi3_34
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 52
+Average execution time: 5.03 ms
+Min/Max execution time: 4.48/5.78 ms
+Average wait time: 0.00 ms
+First invocation: 137.74 s
+Last invocation: 599.86 s
+
+Node: rpi3_35
+Function: fio
+Image: faas-workloads/fio
+Invocations: 81
+Average execution time: 90.04 ms
+Min/Max execution time: 25.32/129.67 ms
+Average wait time: 62.55 ms
+First invocation: 46.60 s
+Last invocation: 543.68 s
+
+Node: rpi3_35
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 14
+Average execution time: 28.41 ms
+Min/Max execution time: 24.14/37.01 ms
+Average wait time: 0.00 ms
+First invocation: 97.61 s
+Last invocation: 556.08 s
+
+Node: rpi3_35
+Function: python-pi-downtown
+Image: faas-workloads/python-pi
+Invocations: 55
+Average execution time: 1.98 ms
+Min/Max execution time: 1.91/2.19 ms
+Average wait time: 0.00 ms
+First invocation: 172.67 s
+Last invocation: 603.16 s
+
+Node: rpi3_35
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 50
+Average execution time: 5.05 ms
+Min/Max execution time: 4.47/5.85 ms
+Average wait time: 0.00 ms
+First invocation: 138.67 s
+Last invocation: 593.53 s
+
+Node: rpi3_4
+Function: fio
+Image: faas-workloads/fio
+Invocations: 85
+Average execution time: 206.57 ms
+Min/Max execution time: 26.56/298.15 ms
+Average wait time: 179.07 ms
+First invocation: 11.05 s
+Last invocation: 332.34 s
+
+Node: rpi3_4
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 39
+Average execution time: 28.35 ms
+Min/Max execution time: 23.98/50.65 ms
+Average wait time: 2.02 ms
+First invocation: 11.61 s
+Last invocation: 565.99 s
+
+Node: rpi3_4
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 29
+Average execution time: 4.91 ms
+Min/Max execution time: 4.51/5.78 ms
+Average wait time: 0.00 ms
+First invocation: 247.34 s
+Last invocation: 593.94 s
+
+Node: rpi3_5
+Function: fio
+Image: faas-workloads/fio
+Invocations: 85
+Average execution time: 187.63 ms
+Min/Max execution time: 24.08/268.18 ms
+Average wait time: 160.54 ms
+First invocation: 15.25 s
+Last invocation: 370.82 s
+
+Node: rpi3_5
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 40
+Average execution time: 26.76 ms
+Min/Max execution time: 23.98/37.61 ms
+Average wait time: 0.35 ms
+First invocation: 11.11 s
+Last invocation: 575.91 s
+
+Node: rpi3_5
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 16.53 ms
+Min/Max execution time: 16.17/17.22 ms
+Average wait time: 0.00 ms
+First invocation: 245.44 s
+Last invocation: 586.72 s
+
+Node: rpi3_6
+Function: fio
+Image: faas-workloads/fio
+Invocations: 79
+Average execution time: 52.44 ms
+Min/Max execution time: 24.14/81.08 ms
+Average wait time: 26.09 ms
+First invocation: 62.28 s
+Last invocation: 578.07 s
+
+Node: rpi3_6
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 26.87 ms
+Min/Max execution time: 23.98/36.31 ms
+Average wait time: 0.00 ms
+First invocation: 112.82 s
+Last invocation: 557.02 s
+
+Node: rpi3_6
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 41
+Average execution time: 5.02 ms
+Min/Max execution time: 4.47/5.76 ms
+Average wait time: 0.00 ms
+First invocation: 167.10 s
+Last invocation: 596.50 s
+
+Node: rpi3_6
+Function: resnet50-inference-industrial
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 28
+Average execution time: 5.00 ms
+Min/Max execution time: 4.52/5.77 ms
+Average wait time: 0.00 ms
+First invocation: 260.44 s
+Last invocation: 595.69 s
+
+Node: rpi3_7
+Function: fio
+Image: faas-workloads/fio
+Invocations: 65
+Average execution time: 28.73 ms
+Min/Max execution time: 24.04/40.42 ms
+Average wait time: 1.76 ms
+First invocation: 106.56 s
+Last invocation: 580.68 s
+
+Node: rpi3_7
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 15
+Average execution time: 28.03 ms
+Min/Max execution time: 24.06/36.22 ms
+Average wait time: 0.00 ms
+First invocation: 69.96 s
+Last invocation: 565.15 s
+
+Node: rpi3_7
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 42
+Average execution time: 5.05 ms
+Min/Max execution time: 4.44/5.80 ms
+Average wait time: 0.00 ms
+First invocation: 164.87 s
+Last invocation: 600.74 s
+
+Node: rpi3_7
+Function: speech-inference
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 16.55 ms
+Min/Max execution time: 16.25/16.73 ms
+Average wait time: 0.00 ms
+First invocation: 246.98 s
+Last invocation: 589.27 s
+
+Node: rpi3_8
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 13
+Average execution time: 26.28 ms
+Min/Max execution time: 24.34/31.28 ms
+Average wait time: 0.00 ms
+First invocation: 116.44 s
+Last invocation: 577.39 s
+
+Node: rpi3_8
+Function: fio-suburb
+Image: faas-workloads/fio
+Invocations: 16
+Average execution time: 26.72 ms
+Min/Max execution time: 23.95/37.74 ms
+Average wait time: 0.00 ms
+First invocation: 67.28 s
+Last invocation: 545.17 s
+
+Node: rpi3_8
+Function: resnet50-inference-suburb
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 42
+Average execution time: 5.01 ms
+Min/Max execution time: 4.52/5.84 ms
+Average wait time: 0.00 ms
+First invocation: 165.27 s
+Last invocation: 596.59 s
+
+Node: rpi3_8
+Function: speech-inference-downtown
+Image: faas-workloads/speech-inference-tflite
+Invocations: 10
+Average execution time: 16.48 ms
+Min/Max execution time: 16.39/16.79 ms
+Average wait time: 0.00 ms
+First invocation: 241.47 s
+Last invocation: 569.63 s
+
+Node: rpi3_9
+Function: fio
+Image: faas-workloads/fio
+Invocations: 72
+Average execution time: 36.08 ms
+Min/Max execution time: 24.03/59.78 ms
+Average wait time: 9.81 ms
+First invocation: 82.18 s
+Last invocation: 579.22 s
+
+Node: rpi3_9
+Function: fio-downtown
+Image: faas-workloads/fio
+Invocations: 18
+Average execution time: 27.31 ms
+Min/Max execution time: 24.05/32.08 ms
+Average wait time: 0.00 ms
+First invocation: 38.25 s
+Last invocation: 560.70 s
+
+Node: rpi3_9
+Function: resnet50-inference
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 25
+Average execution time: 4.88 ms
+Min/Max execution time: 4.52/5.69 ms
+Average wait time: 0.00 ms
+First invocation: 253.67 s
+Last invocation: 591.96 s
+
+Node: rpi3_9
+Function: resnet50-inference-downtown
+Image: faas-workloads/resnet-inference-cpu
+Invocations: 56
+Average execution time: 5.07 ms
+Min/Max execution time: 4.43/5.85 ms
+Average wait time: 0.00 ms
+First invocation: 127.20 s
+Last invocation: 599.73 s
+

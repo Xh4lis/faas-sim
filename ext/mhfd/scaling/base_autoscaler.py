@@ -254,9 +254,9 @@ class BaseAutoscaler(ABC):
                 logger.debug(f"📊 No FET data available for {deployment_name}")
                 return 0.0
             
-            # Filter for the last 5 seconds window
+            # Filter for the last 10 seconds window
             current_time = self.env.now
-            window_start = current_time - 5.0  # 5 second window
+            window_start = current_time - 10.0  # 10 second window
             
             # Filter by time window and deployment name
             recent_fets = fets_df[
@@ -266,7 +266,7 @@ class BaseAutoscaler(ABC):
             ]
             
             if recent_fets.empty:
-                logger.debug(f"📊 No recent FET data for {deployment_name} in 5s window")
+                logger.debug(f"📊 No recent FET data for {deployment_name} in 10s window")
                 return 0.0
             
             # Calculate all time components (in milliseconds)

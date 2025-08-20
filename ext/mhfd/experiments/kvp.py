@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Experiment configuration
-STRATEGY_1_NAME = "HPST"
-STRATEGY_1_DIR = "./data/sine_perf_strategy_d120_r35"
+STRATEGY_1_NAME = "LPLT"
+STRATEGY_1_DIR = "./data/sine_power_strategy_d120_r35"
 
-STRATEGY_2_NAME = "LPLT"
-STRATEGY_2_DIR = "./data/sine_power_strategy_d120_r35"
+STRATEGY_2_NAME = "Kubernetes"
+STRATEGY_2_DIR = "./data/sine_k8s_strategy_d120_r35"
 
 
 def compare_experiments():

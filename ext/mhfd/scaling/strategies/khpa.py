@@ -28,8 +28,8 @@ class KubernetesStyleFirstFitBinPacker(BaseAutoscaler):
         super().__init__(env, faas_system, power_oracle, "KubernetesStyleFirstFit")
 
         # HPA-style thresholds (Kubernetes defaults)
-        self.scale_up_threshold = 4.7     # 4.7 RPS
-        self.scale_down_threshold = 1.7     # 1.7 RPS
+        self.scale_up_threshold = 20      # 20 RPS 
+        self.scale_down_threshold = 5     # 5 RPS
         self.response_time_threshold = 500  # 500ms (typical web service SLA)
         
         # Kubernetes scheduler parameters
@@ -192,19 +192,19 @@ class KubernetesStyleFirstFitBinPacker(BaseAutoscaler):
         
         # Define device classes (like Kubernetes device plugins)
         device_classes = {
-        'high-compute': ['nuc', 'xeoncpu', 'xeongpu'],     # High CPU/GPU
-        'gpu-accelerated': ['xeongpu', 'nx', 'tx2', 'nano'], # GPU nodes
-        'ml-accelerated': ['coral'],                        # TPU nodes  
-        'low-power': ['rpi4', 'rpi3', 'rockpi']            # Low power nodes
+            'high-compute': ['nuc', 'xeoncpu', 'xeongpu'],
+            'gpu-accelerated': ['xeongpu', 'nx', 'tx2', 'nano'],
+            'edge-optimized': ['coral', 'nano', 'rockpi'],
+            'low-power': ['nano', 'coral', 'rockpi', 'rpi4']
         }
         
         # Function requirements (could be set via labels/annotations)
         function_requirements = {
-        'resnet50-inference': 'ml-accelerated',       # TPU is best for inference
-        'resnet50-training': 'gpu-accelerated',       # GPU for training
-        'speech-inference': 'ml-accelerated',         # TPU for inference
-        'python-pi': 'high-compute',                 # General purpose, high compute
-        'fio': 'high-compute'                        
+            'resnet50-inference': 'gpu-accelerated',
+            'resnet50-training': 'gpu-accelerated', 
+            'speech-inference': 'edge-optimized',
+            'python-pi': 'low-power',
+            'fio': 'low-power'
         }
         
         required_class = function_requirements.get(deployment_name, 'high-compute')
