@@ -1,12 +1,8 @@
-# **Senior Researcher Analysis: Edge Computing Autoscaling Strategy Evaluation**
-
-As a senior researcher, I'll walk you through a systematic analysis of your experimental results using a structured analytical framework. This experiment provides excellent insights into autoscaling strategy effectiveness in heterogeneous edge environments.
-
 ## **1. Analytical Framework & Context Validation**
 
 ### **Experimental Design Assessment:**
 
-✅ **Robust experimental setup:**
+**experimental setup:**
 
 - **Scale**: 120 devices, 6 NUCs → Realistic heterogeneous edge environment
 - **Load**: 35 RPS across 16 initial replicas → Moderate workload pressure

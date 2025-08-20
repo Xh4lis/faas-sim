@@ -1,0 +1,723 @@
+timestamp,strategy,deployment,action,old_replica_count,new_replica_count,selected_node,selected_node_type,current_load_rps,avg_response_time_ms,reason,scaling_direction
+5,LowPowerLongTimeBinPacker,resnet50-inference,no_action,1,1,,,6.6,490.91239906229856,Within thresholds,0
+5,LowPowerLongTimeBinPacker,speech-inference,no_action,1,1,,,1.0,0.0,Within thresholds,0
+5,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,1.6,0.0,Within thresholds,0
+5,LowPowerLongTimeBinPacker,resnet50-training,no_action,1,1,,,3.6,0.0,Within thresholds,0
+5,LowPowerLongTimeBinPacker,python-pi,scale_up,1,2,nuc_0,nuc,0.0,1273.9463168973057,,1
+5,LowPowerLongTimeBinPacker,fio,scale_up,1,2,nuc_0,nuc,0.0,0.0,,1
+10,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,1,2,nuc_0,nuc,0.0,490.91239906229856,,1
+10,LowPowerLongTimeBinPacker,speech-inference,no_action,1,1,,,3.0,0.0,Within thresholds,0
+10,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,3.2,0.0,Within thresholds,0
+10,LowPowerLongTimeBinPacker,resnet50-training,no_action,1,1,,,7.8,0.0,Within thresholds,0
+10,LowPowerLongTimeBinPacker,python-pi,scale_up,2,3,nuc_0,nuc,0.0,1273.9463168973057,,1
+10,LowPowerLongTimeBinPacker,fio,scale_up,2,3,nuc_0,nuc,0.0,0.0,,1
+15,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,2,3,nuc_0,nuc,0.0,0.0,,1
+15,LowPowerLongTimeBinPacker,speech-inference,no_action,1,1,,,2.0,0.0,Within thresholds,0
+15,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,2.6,0.0,Within thresholds,0
+15,LowPowerLongTimeBinPacker,resnet50-training,scale_up,1,2,nuc_0,nuc,0.0,0.0,,1
+15,LowPowerLongTimeBinPacker,python-pi,scale_up,3,4,nuc_0,nuc,0.0,0.0,,1
+15,LowPowerLongTimeBinPacker,fio,scale_up,3,4,nuc_0,nuc,0.0,0.0,,1
+20,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,3,4,nuc_0,nuc,0.0,0.0,,1
+20,LowPowerLongTimeBinPacker,speech-inference,no_action,1,1,,,3.8,0.0,Within thresholds,0
+20,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,2.8,0.0,Within thresholds,0
+20,LowPowerLongTimeBinPacker,resnet50-training,no_action,2,2,,,5.6,0.0,Within thresholds,0
+20,LowPowerLongTimeBinPacker,python-pi,scale_up,4,5,nuc_0,nuc,0.0,0.0,,1
+20,LowPowerLongTimeBinPacker,fio,scale_up,4,5,nuc_0,nuc,0.0,0.0,,1
+25,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,4,5,nuc_0,nuc,0.0,0.0,,1
+25,LowPowerLongTimeBinPacker,speech-inference,no_action,1,1,,,4.2,0.0,Within thresholds,0
+25,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,2.2,0.0,Within thresholds,0
+25,LowPowerLongTimeBinPacker,resnet50-training,scale_up,2,3,nuc_0,nuc,0.0,0.0,,1
+25,LowPowerLongTimeBinPacker,python-pi,scale_up,5,6,nuc_0,nuc,0.0,0.0,,1
+25,LowPowerLongTimeBinPacker,fio,scale_up,5,6,nuc_0,nuc,0.0,0.0,,1
+30,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,5,6,nuc_0,nuc,0.0,0.0,,1
+30,LowPowerLongTimeBinPacker,speech-inference,no_action,1,1,,,3.8,0.0,Within thresholds,0
+30,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,2.8,0.0,Within thresholds,0
+30,LowPowerLongTimeBinPacker,resnet50-training,scale_up,3,4,nuc_0,nuc,0.0,0.0,,1
+30,LowPowerLongTimeBinPacker,python-pi,scale_up,6,7,nuc_0,nuc,0.0,0.0,,1
+30,LowPowerLongTimeBinPacker,fio,scale_up,6,7,nuc_0,nuc,0.0,0.0,,1
+35,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,6,7,nuc_0,nuc,0.0,0.0,,1
+35,LowPowerLongTimeBinPacker,speech-inference,no_action,1,1,,,3.8,0.0,Within thresholds,0
+35,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,2.4,0.0,Within thresholds,0
+35,LowPowerLongTimeBinPacker,resnet50-training,scale_up,4,5,nuc_0,nuc,0.0,0.0,,1
+35,LowPowerLongTimeBinPacker,python-pi,scale_up,7,8,nuc_0,nuc,0.0,0.0,,1
+35,LowPowerLongTimeBinPacker,fio,scale_up,7,8,nuc_0,nuc,0.0,0.0,,1
+40,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,7,8,nuc_0,nuc,0.0,661.3647936396351,,1
+40,LowPowerLongTimeBinPacker,speech-inference,scale_up,1,2,nuc_0,nuc,0.0,20473.325175303504,,1
+40,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,2.4,0.0,Within thresholds,0
+40,LowPowerLongTimeBinPacker,resnet50-training,no_action,5,5,,,7.8,0.0,Within thresholds,0
+40,LowPowerLongTimeBinPacker,python-pi,scale_up,8,9,nuc_0,nuc,0.0,4844.0467245679765,,1
+40,LowPowerLongTimeBinPacker,fio,scale_up,8,9,nuc_0,nuc,0.0,0.0,,1
+45,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,8,9,nuc_0,nuc,0.0,647.4662987851082,,1
+45,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.4,0.0,Within thresholds,0
+45,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,3.4,0.0,Within thresholds,0
+45,LowPowerLongTimeBinPacker,resnet50-training,no_action,5,5,,,7.8,0.0,Within thresholds,0
+45,LowPowerLongTimeBinPacker,python-pi,scale_up,9,10,nuc_0,nuc,0.0,4495.292977735982,,1
+45,LowPowerLongTimeBinPacker,fio,scale_up,9,10,nuc_0,nuc,0.0,0.0,,1
+50,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,9,10,nuc_0,nuc,0.0,0.0,,1
+50,LowPowerLongTimeBinPacker,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+50,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,3.4,0.0,Within thresholds,0
+50,LowPowerLongTimeBinPacker,resnet50-training,no_action,5,5,,,6.6,0.0,Within thresholds,0
+50,LowPowerLongTimeBinPacker,python-pi,scale_up,10,11,nuc_0,nuc,0.0,0.0,,1
+50,LowPowerLongTimeBinPacker,fio,scale_up,10,11,nuc_0,nuc,0.0,0.0,,1
+55,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,10,11,nuc_0,nuc,0.0,0.0,,1
+55,LowPowerLongTimeBinPacker,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+55,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,4.8,0.0,Within thresholds,0
+55,LowPowerLongTimeBinPacker,resnet50-training,scale_up,5,6,nuc_0,nuc,0.0,0.0,,1
+55,LowPowerLongTimeBinPacker,python-pi,scale_up,11,12,nuc_0,nuc,0.0,0.0,,1
+55,LowPowerLongTimeBinPacker,fio,scale_up,11,12,nuc_0,nuc,0.0,0.0,,1
+60,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,11,12,nuc_0,nuc,0.0,0.0,,1
+60,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.8,0.0,Within thresholds,0
+60,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,3.4,0.0,Within thresholds,0
+60,LowPowerLongTimeBinPacker,resnet50-training,no_action,6,6,,,7.6,0.0,Within thresholds,0
+60,LowPowerLongTimeBinPacker,python-pi,scale_up,12,13,nuc_0,nuc,0.0,0.0,,1
+60,LowPowerLongTimeBinPacker,fio,scale_up,12,13,nuc_0,nuc,0.0,0.0,,1
+65,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,12,13,nuc_0,nuc,0.0,0.0,,1
+65,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.4,0.0,Within thresholds,0
+65,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,4.0,0.0,Within thresholds,0
+65,LowPowerLongTimeBinPacker,resnet50-training,no_action,6,6,,,8.0,0.0,Within thresholds,0
+65,LowPowerLongTimeBinPacker,python-pi,scale_up,13,14,nuc_0,nuc,0.0,0.0,,1
+65,LowPowerLongTimeBinPacker,fio,scale_up,13,14,nuc_0,nuc,0.0,0.0,,1
+70,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,13,14,nuc_0,nuc,0.0,0.0,,1
+70,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.0,0.0,Within thresholds,0
+70,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,1,1,,,3.4,0.0,Within thresholds,0
+70,LowPowerLongTimeBinPacker,resnet50-training,no_action,6,6,,,8.0,0.0,Within thresholds,0
+70,LowPowerLongTimeBinPacker,python-pi,scale_up,14,15,nuc_0,nuc,0.0,0.0,,1
+70,LowPowerLongTimeBinPacker,fio,scale_up,14,15,nuc_0,nuc,0.0,0.0,,1
+75,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,14,15,nuc_0,nuc,0.0,615.6173359162684,,1
+75,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,nuc_0,nuc,0.0,46652.03852131727,,1
+75,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,1,2,nuc_0,nuc,0.0,58425.70940299514,,1
+75,LowPowerLongTimeBinPacker,resnet50-training,no_action,6,6,,,7.4,0.0,Within thresholds,0
+75,LowPowerLongTimeBinPacker,python-pi,scale_up,15,16,nuc_0,nuc,0.0,1111.9494938329942,,1
+75,LowPowerLongTimeBinPacker,fio,scale_up,15,16,nuc_0,nuc,0.0,0.0,,1
+80,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,15,16,nuc_0,nuc,0.0,597.2704603052273,,1
+80,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,nuc_0,nuc,0.0,48362.54958102402,,1
+80,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.4,0.0,Within thresholds,0
+80,LowPowerLongTimeBinPacker,resnet50-training,no_action,6,6,,,5.6,0.0,Within thresholds,0
+80,LowPowerLongTimeBinPacker,python-pi,scale_up,16,17,nuc_0,nuc,0.0,1100.8311411164896,,1
+80,LowPowerLongTimeBinPacker,fio,scale_up,16,17,nuc_0,nuc,0.0,0.0,,1
+85,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,16,17,nuc_0,nuc,0.0,0.0,,1
+85,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,4.2,0.0,Within thresholds,0
+85,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+85,LowPowerLongTimeBinPacker,resnet50-training,no_action,6,6,,,7.0,0.0,Within thresholds,0
+85,LowPowerLongTimeBinPacker,python-pi,scale_up,17,18,nuc_0,nuc,0.0,0.0,,1
+85,LowPowerLongTimeBinPacker,fio,scale_up,17,18,nuc_0,nuc,0.0,0.0,,1
+90,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,17,18,nuc_0,nuc,0.0,0.0,,1
+90,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+90,LowPowerLongTimeBinPacker,resnet50-training,scale_up,6,7,nuc_0,nuc,0.0,0.0,,1
+90,LowPowerLongTimeBinPacker,python-pi,scale_up,18,19,nuc_0,nuc,0.0,0.0,,1
+90,LowPowerLongTimeBinPacker,fio,scale_up,18,19,nuc_0,nuc,0.0,0.0,,1
+95,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,18,19,nuc_0,nuc,0.0,0.0,,1
+95,LowPowerLongTimeBinPacker,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+95,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.8,0.0,Within thresholds,0
+95,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,6.2,0.0,Within thresholds,0
+95,LowPowerLongTimeBinPacker,python-pi,scale_up,19,20,nuc_0,nuc,0.0,0.0,,1
+95,LowPowerLongTimeBinPacker,fio,scale_up,19,20,nuc_0,nuc,0.0,0.0,,1
+100,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,19,20,nuc_0,nuc,0.0,0.0,,1
+100,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.2,0.0,Within thresholds,0
+100,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+100,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,8.0,0.0,Within thresholds,0
+100,LowPowerLongTimeBinPacker,python-pi,scale_up,20,21,nuc_0,nuc,0.0,0.0,,1
+100,LowPowerLongTimeBinPacker,fio,scale_up,20,21,nuc_0,nuc,0.0,0.0,,1
+105,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,20,21,nuc_0,nuc,0.0,0.0,,1
+105,LowPowerLongTimeBinPacker,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+105,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,7.2,0.0,Within thresholds,0
+105,LowPowerLongTimeBinPacker,python-pi,scale_up,21,22,nuc_0,nuc,0.0,0.0,,1
+105,LowPowerLongTimeBinPacker,fio,scale_up,21,22,nuc_0,nuc,0.0,0.0,,1
+110,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,21,22,nuc_0,nuc,0.0,588.4016763821899,,1
+110,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,nuc_0,nuc,0.0,56087.89813672896,,1
+110,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,nuc_0,nuc,0.0,43682.6410365258,,1
+110,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,7.0,0.0,Within thresholds,0
+110,LowPowerLongTimeBinPacker,python-pi,scale_up,22,23,nuc_0,nuc,0.0,1106.2777687745386,,1
+110,LowPowerLongTimeBinPacker,fio,scale_up,22,23,nuc_0,nuc,0.0,0.0,,1
+115,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,22,23,nuc_0,nuc,0.0,581.9188439383023,,1
+115,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,nuc_0,nuc,0.0,73890.12719864478,,1
+115,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,3.2,0.0,Within thresholds,0
+115,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,7.0,0.0,Within thresholds,0
+115,LowPowerLongTimeBinPacker,python-pi,scale_up,23,24,nuc_0,nuc,0.0,1095.6387232896257,,1
+115,LowPowerLongTimeBinPacker,fio,scale_up,23,24,nuc_0,nuc,0.0,0.0,,1
+120,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,23,24,nuc_0,nuc,0.0,0.0,,1
+120,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.2,0.0,Within thresholds,0
+120,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,3.6,0.0,Within thresholds,0
+120,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,6.6,0.0,Within thresholds,0
+120,LowPowerLongTimeBinPacker,python-pi,scale_up,24,25,nuc_0,nuc,0.0,0.0,,1
+120,LowPowerLongTimeBinPacker,fio,scale_up,24,25,nuc_0,nuc,0.0,0.0,,1
+125,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,24,25,nuc_0,nuc,0.0,0.0,,1
+125,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+125,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,3.4,0.0,Within thresholds,0
+125,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,7.2,0.0,Within thresholds,0
+125,LowPowerLongTimeBinPacker,python-pi,scale_up,25,26,nuc_0,nuc,0.0,0.0,,1
+125,LowPowerLongTimeBinPacker,fio,scale_up,25,26,nuc_0,nuc,0.0,0.0,,1
+130,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,25,26,nuc_0,nuc,0.0,0.0,,1
+130,LowPowerLongTimeBinPacker,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+130,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,7.0,0.0,Within thresholds,0
+130,LowPowerLongTimeBinPacker,python-pi,scale_up,26,27,nuc_0,nuc,0.0,0.0,,1
+130,LowPowerLongTimeBinPacker,fio,scale_up,26,27,nuc_0,nuc,0.0,0.0,,1
+135,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,26,27,nuc_0,nuc,0.0,0.0,,1
+135,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.2,0.0,Within thresholds,0
+135,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+135,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,6.8,0.0,Within thresholds,0
+135,LowPowerLongTimeBinPacker,python-pi,scale_up,27,28,nuc_0,nuc,0.0,0.0,,1
+135,LowPowerLongTimeBinPacker,fio,scale_up,27,28,nuc_0,nuc,0.0,0.0,,1
+140,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,27,28,nuc_0,nuc,0.0,0.0,,1
+140,LowPowerLongTimeBinPacker,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+140,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.8,0.0,Within thresholds,0
+140,LowPowerLongTimeBinPacker,resnet50-training,no_action,7,7,,,6.2,0.0,Within thresholds,0
+140,LowPowerLongTimeBinPacker,python-pi,scale_up,28,29,nuc_0,nuc,0.0,0.0,,1
+140,LowPowerLongTimeBinPacker,fio,scale_up,28,29,nuc_0,nuc,0.0,0.0,,1
+145,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,28,29,nuc_0,nuc,0.0,591.89032858796,,1
+145,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,nuc_0,nuc,0.0,86217.96085465343,,1
+145,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,nuc_0,nuc,0.0,35600.72153071995,,1
+145,LowPowerLongTimeBinPacker,resnet50-training,scale_up,7,8,nuc_0,nuc,0.0,0.0,,1
+145,LowPowerLongTimeBinPacker,python-pi,scale_up,29,30,nuc_0,nuc,0.0,1093.328099298788,,1
+145,LowPowerLongTimeBinPacker,fio,scale_up,29,30,nuc_0,nuc,0.0,0.0,,1
+150,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,29,30,nuc_1,nuc,0.0,596.9246229943997,,1
+150,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,nuc_1,nuc,0.0,87099.21120261814,,1
+150,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+150,LowPowerLongTimeBinPacker,resnet50-training,no_action,8,8,,,6.4,0.0,Within thresholds,0
+150,LowPowerLongTimeBinPacker,python-pi,scale_up,30,31,nuc_1,nuc,0.0,1088.5771513288778,,1
+150,LowPowerLongTimeBinPacker,fio,scale_up,30,31,nuc_1,nuc,0.0,0.0,,1
+155,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,30,31,nuc_1,nuc,0.0,0.0,,1
+155,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+155,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.0,0.0,Within thresholds,0
+155,LowPowerLongTimeBinPacker,resnet50-training,scale_up,8,9,nuc_1,nuc,0.0,0.0,,1
+155,LowPowerLongTimeBinPacker,python-pi,scale_up,31,32,nuc_1,nuc,0.0,0.0,,1
+155,LowPowerLongTimeBinPacker,fio,scale_up,31,32,nuc_1,nuc,0.0,0.0,,1
+160,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,31,32,nuc_2,nuc,0.0,0.0,,1
+160,LowPowerLongTimeBinPacker,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+160,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.0,0.0,Within thresholds,0
+160,LowPowerLongTimeBinPacker,resnet50-training,no_action,9,9,,,6.6,0.0,Within thresholds,0
+160,LowPowerLongTimeBinPacker,python-pi,scale_up,32,33,nuc_2,nuc,0.0,0.0,,1
+160,LowPowerLongTimeBinPacker,fio,scale_up,32,33,nuc_2,nuc,0.0,0.0,,1
+165,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,32,33,nuc_2,nuc,0.0,0.0,,1
+165,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,4.2,0.0,Within thresholds,0
+165,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+165,LowPowerLongTimeBinPacker,resnet50-training,scale_up,9,10,nuc_2,nuc,0.0,0.0,,1
+165,LowPowerLongTimeBinPacker,python-pi,scale_up,33,34,nuc_2,nuc,0.0,0.0,,1
+165,LowPowerLongTimeBinPacker,fio,scale_up,33,34,nuc_2,nuc,0.0,0.0,,1
+170,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,33,34,nuc_3,nuc,0.0,0.0,,1
+170,LowPowerLongTimeBinPacker,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+170,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+170,LowPowerLongTimeBinPacker,resnet50-training,scale_up,10,11,nuc_3,nuc,0.0,0.0,,1
+170,LowPowerLongTimeBinPacker,python-pi,scale_up,34,35,nuc_3,nuc,0.0,0.0,,1
+170,LowPowerLongTimeBinPacker,fio,scale_up,34,35,nuc_3,nuc,0.0,0.0,,1
+175,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,34,35,nuc_4,nuc,0.0,0.0,,1
+175,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.2,0.0,Within thresholds,0
+175,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.0,0.0,Within thresholds,0
+175,LowPowerLongTimeBinPacker,resnet50-training,scale_up,11,12,nuc_4,nuc,0.0,0.0,,1
+175,LowPowerLongTimeBinPacker,python-pi,scale_up,35,36,nuc_4,nuc,0.0,0.0,,1
+175,LowPowerLongTimeBinPacker,fio,scale_up,35,36,nuc_4,nuc,0.0,0.0,,1
+180,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,35,36,rockpi_14,rockpi,0.0,941.058744044927,,1
+180,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,rockpi_14,rockpi,0.0,94679.34096032963,,1
+180,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_14,rockpi,0.0,143018.88073968986,,1
+180,LowPowerLongTimeBinPacker,resnet50-training,scale_up,12,13,rockpi_14,rockpi,0.0,0.0,,1
+180,LowPowerLongTimeBinPacker,python-pi,scale_up,36,37,rockpi_14,rockpi,0.0,1054.7794737849692,,1
+180,LowPowerLongTimeBinPacker,fio,scale_up,36,37,rockpi_14,rockpi,0.0,0.0,,1
+185,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,36,37,rockpi_14,rockpi,0.0,637.623908224124,,1
+185,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,rockpi_14,rockpi,0.0,94302.94718463969,,1
+185,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,4.0,0.0,Within thresholds,0
+185,LowPowerLongTimeBinPacker,resnet50-training,no_action,13,13,,,7.0,0.0,Within thresholds,0
+185,LowPowerLongTimeBinPacker,python-pi,scale_up,37,38,rockpi_14,rockpi,0.0,1053.355778842707,,1
+185,LowPowerLongTimeBinPacker,fio,scale_up,37,38,rockpi_14,rockpi,0.0,0.0,,1
+190,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,37,38,rockpi_14,rockpi,0.0,0.0,,1
+190,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.2,0.0,Within thresholds,0
+190,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+190,LowPowerLongTimeBinPacker,resnet50-training,scale_up,13,14,rockpi_14,rockpi,0.0,0.0,,1
+190,LowPowerLongTimeBinPacker,python-pi,scale_up,38,39,rockpi_14,rockpi,0.0,0.0,,1
+190,LowPowerLongTimeBinPacker,fio,scale_up,38,39,rockpi_14,rockpi,0.0,0.0,,1
+195,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,38,39,rockpi_14,rockpi,0.0,0.0,,1
+195,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.4,0.0,Within thresholds,0
+195,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+195,LowPowerLongTimeBinPacker,resnet50-training,no_action,14,14,,,7.4,0.0,Within thresholds,0
+195,LowPowerLongTimeBinPacker,python-pi,scale_up,39,40,rockpi_14,rockpi,0.0,0.0,,1
+195,LowPowerLongTimeBinPacker,fio,scale_up,39,40,rockpi_14,rockpi,0.0,0.0,,1
+200,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,39,40,rockpi_14,rockpi,0.0,0.0,,1
+200,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+200,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+200,LowPowerLongTimeBinPacker,resnet50-training,no_action,14,14,,,7.6,0.0,Within thresholds,0
+200,LowPowerLongTimeBinPacker,python-pi,scale_up,40,41,rockpi_14,rockpi,0.0,0.0,,1
+200,LowPowerLongTimeBinPacker,fio,scale_up,40,41,rockpi_14,rockpi,0.0,0.0,,1
+205,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,40,41,rockpi_14,rockpi,0.0,0.0,,1
+205,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,4.2,0.0,Within thresholds,0
+205,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+205,LowPowerLongTimeBinPacker,resnet50-training,no_action,14,14,,,6.8,0.0,Within thresholds,0
+205,LowPowerLongTimeBinPacker,python-pi,scale_up,41,42,rockpi_14,rockpi,0.0,0.0,,1
+205,LowPowerLongTimeBinPacker,fio,scale_up,41,42,rockpi_14,rockpi,0.0,0.0,,1
+210,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,41,42,rockpi_14,rockpi,0.0,0.0,,1
+210,LowPowerLongTimeBinPacker,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+210,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.6,0.0,Within thresholds,0
+210,LowPowerLongTimeBinPacker,resnet50-training,no_action,14,14,,,8.0,0.0,Within thresholds,0
+210,LowPowerLongTimeBinPacker,python-pi,scale_up,42,43,rockpi_14,rockpi,0.0,0.0,,1
+210,LowPowerLongTimeBinPacker,fio,scale_up,42,43,rockpi_14,rockpi,0.0,0.0,,1
+215,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,42,43,rockpi_14,rockpi,0.0,1334.4961666286351,,1
+215,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,rockpi_14,rockpi,0.0,57036.73436662167,,1
+215,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_14,rockpi,0.0,72440.29491099181,,1
+215,LowPowerLongTimeBinPacker,resnet50-training,scale_up,14,15,rockpi_14,rockpi,0.0,0.0,,1
+215,LowPowerLongTimeBinPacker,python-pi,scale_up,43,44,rockpi_14,rockpi,0.0,1028.6518371272218,,1
+215,LowPowerLongTimeBinPacker,fio,scale_up,43,44,rockpi_14,rockpi,0.0,0.0,,1
+220,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,43,44,rockpi_14,rockpi,0.0,846.3313786064149,,1
+220,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,rockpi_14,rockpi,0.0,99921.43324087292,,1
+220,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+220,LowPowerLongTimeBinPacker,resnet50-training,no_action,15,15,,,6.2,0.0,Within thresholds,0
+220,LowPowerLongTimeBinPacker,python-pi,scale_up,44,45,rockpi_14,rockpi,0.0,1012.8447091035699,,1
+220,LowPowerLongTimeBinPacker,fio,scale_up,44,45,rockpi_14,rockpi,0.0,0.0,,1
+225,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,44,45,rockpi_14,rockpi,0.0,0.0,,1
+225,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+225,LowPowerLongTimeBinPacker,resnet50-training,scale_up,15,16,rockpi_14,rockpi,0.0,0.0,,1
+225,LowPowerLongTimeBinPacker,python-pi,scale_up,45,46,rockpi_14,rockpi,0.0,0.0,,1
+225,LowPowerLongTimeBinPacker,fio,scale_up,45,46,rockpi_14,rockpi,0.0,0.0,,1
+230,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,45,46,rockpi_14,rockpi,0.0,0.0,,1
+230,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.4,0.0,Within thresholds,0
+230,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+230,LowPowerLongTimeBinPacker,resnet50-training,scale_up,16,17,rockpi_14,rockpi,0.0,0.0,,1
+230,LowPowerLongTimeBinPacker,python-pi,scale_up,46,47,rockpi_14,rockpi,0.0,0.0,,1
+230,LowPowerLongTimeBinPacker,fio,scale_up,46,47,rockpi_14,rockpi,0.0,0.0,,1
+235,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,46,47,rockpi_14,rockpi,0.0,0.0,,1
+235,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.2,0.0,Within thresholds,0
+235,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+235,LowPowerLongTimeBinPacker,resnet50-training,scale_up,17,18,rockpi_14,rockpi,0.0,0.0,,1
+235,LowPowerLongTimeBinPacker,python-pi,scale_up,47,48,rockpi_14,rockpi,0.0,0.0,,1
+235,LowPowerLongTimeBinPacker,fio,scale_up,47,48,rockpi_14,rockpi,0.0,0.0,,1
+240,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,47,48,rockpi_14,rockpi,0.0,0.0,,1
+240,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.6,0.0,Within thresholds,0
+240,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.6,0.0,Within thresholds,0
+240,LowPowerLongTimeBinPacker,resnet50-training,no_action,18,18,,,6.8,0.0,Within thresholds,0
+240,LowPowerLongTimeBinPacker,python-pi,scale_up,48,49,rockpi_14,rockpi,0.0,0.0,,1
+240,LowPowerLongTimeBinPacker,fio,scale_up,48,49,rockpi_14,rockpi,0.0,0.0,,1
+245,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,48,49,rockpi_14,rockpi,0.0,0.0,,1
+245,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,4.2,0.0,Within thresholds,0
+245,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.6,0.0,Within thresholds,0
+245,LowPowerLongTimeBinPacker,resnet50-training,no_action,18,18,,,8.0,0.0,Within thresholds,0
+245,LowPowerLongTimeBinPacker,python-pi,scale_up,49,50,rockpi_14,rockpi,0.0,0.0,,1
+245,LowPowerLongTimeBinPacker,fio,scale_up,49,50,rockpi_14,rockpi,0.0,0.0,,1
+250,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,49,50,rockpi_14,rockpi,0.0,1463.2266232904562,,1
+250,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,rockpi_14,rockpi,0.0,49355.76048882617,,1
+250,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_14,rockpi,0.0,113814.45426620699,,1
+250,LowPowerLongTimeBinPacker,resnet50-training,scale_up,18,19,rockpi_14,rockpi,0.0,0.0,,1
+250,LowPowerLongTimeBinPacker,python-pi,scale_up,50,51,rockpi_14,rockpi,0.0,1026.950237801717,,1
+250,LowPowerLongTimeBinPacker,fio,scale_up,50,51,rockpi_14,rockpi,0.0,0.0,,1
+255,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,50,51,rockpi_14,rockpi,0.0,674.7974269303579,,1
+255,LowPowerLongTimeBinPacker,speech-inference,scale_up,4,5,rockpi_14,rockpi,0.0,5948.019993623063,,1
+255,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+255,LowPowerLongTimeBinPacker,resnet50-training,scale_up,19,20,rockpi_14,rockpi,0.0,0.0,,1
+255,LowPowerLongTimeBinPacker,python-pi,scale_up,51,52,rockpi_14,rockpi,0.0,1013.0349936592078,,1
+255,LowPowerLongTimeBinPacker,fio,scale_up,51,52,rockpi_14,rockpi,0.0,0.0,,1
+260,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,51,52,rockpi_14,rockpi,0.0,0.0,,1
+260,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,4.2,0.0,Within thresholds,0
+260,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+260,LowPowerLongTimeBinPacker,resnet50-training,scale_up,20,21,rockpi_14,rockpi,0.0,0.0,,1
+260,LowPowerLongTimeBinPacker,python-pi,scale_up,52,53,rockpi_14,rockpi,0.0,0.0,,1
+260,LowPowerLongTimeBinPacker,fio,scale_up,52,53,rockpi_14,rockpi,0.0,0.0,,1
+265,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,52,53,rockpi_14,rockpi,0.0,0.0,,1
+265,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,3.2,0.0,Within thresholds,0
+265,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+265,LowPowerLongTimeBinPacker,resnet50-training,scale_up,21,22,rockpi_14,rockpi,0.0,0.0,,1
+265,LowPowerLongTimeBinPacker,python-pi,scale_up,53,54,rockpi_14,rockpi,0.0,0.0,,1
+265,LowPowerLongTimeBinPacker,fio,scale_up,53,54,rockpi_14,rockpi,0.0,0.0,,1
+270,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,53,54,rockpi_14,rockpi,0.0,0.0,,1
+270,LowPowerLongTimeBinPacker,speech-inference,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+270,LowPowerLongTimeBinPacker,resnet50-training,no_action,22,22,,,7.2,0.0,Within thresholds,0
+270,LowPowerLongTimeBinPacker,python-pi,scale_up,54,55,rockpi_14,rockpi,0.0,0.0,,1
+270,LowPowerLongTimeBinPacker,fio,scale_up,54,55,rockpi_14,rockpi,0.0,0.0,,1
+275,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,54,55,rockpi_14,rockpi,0.0,0.0,,1
+275,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+275,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.4,0.0,Within thresholds,0
+275,LowPowerLongTimeBinPacker,resnet50-training,scale_up,22,23,rockpi_14,rockpi,0.0,0.0,,1
+275,LowPowerLongTimeBinPacker,python-pi,scale_up,55,56,rockpi_14,rockpi,0.0,0.0,,1
+275,LowPowerLongTimeBinPacker,fio,scale_up,55,56,rockpi_14,rockpi,0.0,0.0,,1
+280,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,55,56,rockpi_14,rockpi,0.0,0.0,,1
+280,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,4.0,0.0,Within thresholds,0
+280,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.6,0.0,Within thresholds,0
+280,LowPowerLongTimeBinPacker,resnet50-training,no_action,23,23,,,7.0,0.0,Within thresholds,0
+280,LowPowerLongTimeBinPacker,python-pi,scale_up,56,57,rockpi_14,rockpi,0.0,0.0,,1
+280,LowPowerLongTimeBinPacker,fio,scale_up,56,57,rockpi_14,rockpi,0.0,0.0,,1
+285,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,56,57,rockpi_14,rockpi,0.0,1590.7741342824615,,1
+285,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,rockpi_14,rockpi,0.0,45922.453991469476,,1
+285,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_14,rockpi,0.0,113718.87770585746,,1
+285,LowPowerLongTimeBinPacker,resnet50-training,scale_up,23,24,rockpi_14,rockpi,0.0,0.0,,1
+285,LowPowerLongTimeBinPacker,python-pi,scale_up,57,58,rockpi_14,rockpi,0.0,1024.489085344858,,1
+285,LowPowerLongTimeBinPacker,fio,scale_up,57,58,rockpi_14,rockpi,0.0,0.0,,1
+290,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,57,58,rockpi_14,rockpi,0.0,872.3672840928622,,1
+290,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.2,0.0,Within thresholds,0
+290,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+290,LowPowerLongTimeBinPacker,resnet50-training,no_action,24,24,,,6.0,0.0,Within thresholds,0
+290,LowPowerLongTimeBinPacker,python-pi,scale_up,58,59,rockpi_14,rockpi,0.0,1010.4266250223976,,1
+290,LowPowerLongTimeBinPacker,fio,scale_up,58,59,rockpi_14,rockpi,0.0,0.0,,1
+295,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,58,59,rockpi_14,rockpi,0.0,0.0,,1
+295,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+295,LowPowerLongTimeBinPacker,resnet50-training,no_action,24,24,,,7.6,0.0,Within thresholds,0
+295,LowPowerLongTimeBinPacker,python-pi,scale_up,59,60,rockpi_14,rockpi,0.0,0.0,,1
+295,LowPowerLongTimeBinPacker,fio,scale_up,59,60,rockpi_14,rockpi,0.0,0.0,,1
+300,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,59,60,rockpi_14,rockpi,0.0,0.0,,1
+300,LowPowerLongTimeBinPacker,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+300,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.4,0.0,Within thresholds,0
+300,LowPowerLongTimeBinPacker,resnet50-training,no_action,24,24,,,6.2,0.0,Within thresholds,0
+300,LowPowerLongTimeBinPacker,python-pi,scale_up,60,61,rockpi_14,rockpi,0.0,0.0,,1
+300,LowPowerLongTimeBinPacker,fio,scale_up,60,61,rockpi_14,rockpi,0.0,0.0,,1
+305,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,60,61,rockpi_14,rockpi,0.0,0.0,,1
+305,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.2,0.0,Within thresholds,0
+305,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+305,LowPowerLongTimeBinPacker,resnet50-training,no_action,24,24,,,7.2,0.0,Within thresholds,0
+305,LowPowerLongTimeBinPacker,python-pi,scale_up,61,62,rockpi_14,rockpi,0.0,0.0,,1
+305,LowPowerLongTimeBinPacker,fio,scale_up,61,62,rockpi_14,rockpi,0.0,0.0,,1
+310,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,61,62,rockpi_14,rockpi,0.0,0.0,,1
+310,LowPowerLongTimeBinPacker,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+310,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.8,0.0,Within thresholds,0
+310,LowPowerLongTimeBinPacker,resnet50-training,no_action,24,24,,,6.4,0.0,Within thresholds,0
+310,LowPowerLongTimeBinPacker,python-pi,scale_up,62,63,rockpi_14,rockpi,0.0,0.0,,1
+310,LowPowerLongTimeBinPacker,fio,scale_up,62,63,rockpi_14,rockpi,0.0,0.0,,1
+315,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,62,63,rockpi_14,rockpi,0.0,0.0,,1
+315,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,4.0,0.0,Within thresholds,0
+315,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+315,LowPowerLongTimeBinPacker,resnet50-training,no_action,24,24,,,6.4,0.0,Within thresholds,0
+315,LowPowerLongTimeBinPacker,python-pi,scale_up,63,64,rockpi_14,rockpi,0.0,0.0,,1
+315,LowPowerLongTimeBinPacker,fio,scale_up,63,64,rockpi_14,rockpi,0.0,0.0,,1
+320,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,63,64,rockpi_14,rockpi,0.0,1588.4316169091328,,1
+320,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,rockpi_14,rockpi,0.0,111232.72821300625,,1
+320,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.4,0.0,Within thresholds,0
+320,LowPowerLongTimeBinPacker,resnet50-training,scale_up,24,25,rockpi_14,rockpi,0.0,0.0,,1
+320,LowPowerLongTimeBinPacker,python-pi,scale_up,64,65,rockpi_14,rockpi,0.0,1027.2061197028843,,1
+320,LowPowerLongTimeBinPacker,fio,scale_up,64,65,rockpi_14,rockpi,0.0,0.0,,1
+325,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,64,65,rockpi_14,rockpi,0.0,709.4926665513261,,1
+325,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,rockpi_14,rockpi,0.0,111047.34497618956,,1
+325,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+325,LowPowerLongTimeBinPacker,resnet50-training,scale_up,25,26,rockpi_14,rockpi,0.0,0.0,,1
+325,LowPowerLongTimeBinPacker,python-pi,scale_up,65,66,rockpi_14,rockpi,0.0,1026.5843215615268,,1
+325,LowPowerLongTimeBinPacker,fio,scale_up,65,66,rockpi_14,rockpi,0.0,0.0,,1
+330,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,65,66,rockpi_14,rockpi,0.0,0.0,,1
+330,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+330,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+330,LowPowerLongTimeBinPacker,resnet50-training,scale_up,26,27,rockpi_14,rockpi,0.0,0.0,,1
+330,LowPowerLongTimeBinPacker,python-pi,scale_up,66,67,rockpi_14,rockpi,0.0,0.0,,1
+330,LowPowerLongTimeBinPacker,fio,scale_up,66,67,rockpi_14,rockpi,0.0,0.0,,1
+335,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,66,67,rockpi_14,rockpi,0.0,0.0,,1
+335,LowPowerLongTimeBinPacker,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+335,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+335,LowPowerLongTimeBinPacker,resnet50-training,no_action,27,27,,,7.2,0.0,Within thresholds,0
+335,LowPowerLongTimeBinPacker,python-pi,scale_up,67,68,rockpi_14,rockpi,0.0,0.0,,1
+335,LowPowerLongTimeBinPacker,fio,scale_up,67,68,rockpi_14,rockpi,0.0,0.0,,1
+340,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,67,68,rockpi_14,rockpi,0.0,0.0,,1
+340,LowPowerLongTimeBinPacker,speech-inference,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+340,LowPowerLongTimeBinPacker,resnet50-training,scale_up,27,28,rockpi_14,rockpi,0.0,0.0,,1
+340,LowPowerLongTimeBinPacker,python-pi,scale_up,68,69,rockpi_14,rockpi,0.0,0.0,,1
+340,LowPowerLongTimeBinPacker,fio,scale_up,68,69,rockpi_14,rockpi,0.0,0.0,,1
+345,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,68,69,rockpi_14,rockpi,0.0,0.0,,1
+345,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.8,0.0,Within thresholds,0
+345,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+345,LowPowerLongTimeBinPacker,resnet50-training,no_action,28,28,,,6.8,0.0,Within thresholds,0
+345,LowPowerLongTimeBinPacker,python-pi,scale_up,69,70,rockpi_14,rockpi,0.0,0.0,,1
+345,LowPowerLongTimeBinPacker,fio,scale_up,69,70,rockpi_14,rockpi,0.0,0.0,,1
+350,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,69,70,rockpi_14,rockpi,0.0,0.0,,1
+350,LowPowerLongTimeBinPacker,speech-inference,no_action,2,2,,,3.6,0.0,Within thresholds,0
+350,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+350,LowPowerLongTimeBinPacker,resnet50-training,scale_up,28,29,rockpi_14,rockpi,0.0,0.0,,1
+350,LowPowerLongTimeBinPacker,python-pi,scale_up,70,71,rockpi_14,rockpi,0.0,0.0,,1
+350,LowPowerLongTimeBinPacker,fio,scale_up,70,71,rockpi_14,rockpi,0.0,0.0,,1
+355,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,70,71,rockpi_14,rockpi,0.0,1702.4821089504835,,1
+355,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,rockpi_14,rockpi,0.0,112249.71861271215,,1
+355,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_14,rockpi,0.0,219216.813236765,,1
+355,LowPowerLongTimeBinPacker,resnet50-training,no_action,29,29,,,7.4,0.0,Within thresholds,0
+355,LowPowerLongTimeBinPacker,python-pi,scale_up,71,72,rockpi_14,rockpi,0.0,1019.5055810177245,,1
+355,LowPowerLongTimeBinPacker,fio,scale_up,71,72,rockpi_14,rockpi,0.0,0.0,,1
+360,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,71,72,coral_0,coral,0.0,1078.550487998923,,1
+360,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,coral_0,coral,0.0,112811.63761507324,,1
+360,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+360,LowPowerLongTimeBinPacker,resnet50-training,scale_up,29,30,nano_15,nano,0.0,0.0,,1
+360,LowPowerLongTimeBinPacker,python-pi,scale_up,72,73,rpi3_21,rpi3,0.0,1039.2162035357223,,1
+360,LowPowerLongTimeBinPacker,fio,scale_up,72,73,rockpi_30,rockpi,0.0,0.0,,1
+365,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,72,73,coral_0,coral,0.0,0.0,,1
+365,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+365,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.4,0.0,Within thresholds,0
+365,LowPowerLongTimeBinPacker,resnet50-training,no_action,30,30,,,6.8,0.0,Within thresholds,0
+365,LowPowerLongTimeBinPacker,python-pi,scale_up,73,74,rpi3_21,rpi3,0.0,0.0,,1
+365,LowPowerLongTimeBinPacker,fio,scale_up,73,74,rockpi_30,rockpi,0.0,0.0,,1
+370,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,73,74,coral_0,coral,0.0,0.0,,1
+370,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.4,0.0,Within thresholds,0
+370,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+370,LowPowerLongTimeBinPacker,resnet50-training,no_action,30,30,,,7.0,0.0,Within thresholds,0
+370,LowPowerLongTimeBinPacker,python-pi,scale_up,74,75,rpi3_21,rpi3,0.0,0.0,,1
+370,LowPowerLongTimeBinPacker,fio,scale_up,74,75,rockpi_30,rockpi,0.0,0.0,,1
+375,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,74,75,coral_0,coral,0.0,0.0,,1
+375,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.2,0.0,Within thresholds,0
+375,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+375,LowPowerLongTimeBinPacker,resnet50-training,no_action,30,30,,,7.4,0.0,Within thresholds,0
+375,LowPowerLongTimeBinPacker,python-pi,scale_up,75,76,rpi3_21,rpi3,0.0,0.0,,1
+375,LowPowerLongTimeBinPacker,fio,scale_up,75,76,rockpi_30,rockpi,0.0,0.0,,1
+380,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,75,76,coral_0,coral,0.0,0.0,,1
+380,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.8,0.0,Within thresholds,0
+380,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+380,LowPowerLongTimeBinPacker,resnet50-training,scale_up,30,31,nano_15,nano,0.0,0.0,,1
+380,LowPowerLongTimeBinPacker,python-pi,scale_up,76,77,rpi3_21,rpi3,0.0,0.0,,1
+380,LowPowerLongTimeBinPacker,fio,scale_up,76,77,rockpi_30,rockpi,0.0,0.0,,1
+385,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,76,77,coral_0,coral,0.0,0.0,,1
+385,LowPowerLongTimeBinPacker,speech-inference,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+385,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+385,LowPowerLongTimeBinPacker,python-pi,scale_up,77,78,rpi3_21,rpi3,0.0,0.0,,1
+385,LowPowerLongTimeBinPacker,fio,scale_up,77,78,rockpi_30,rockpi,0.0,0.0,,1
+390,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,77,78,coral_0,coral,0.0,1577.1903591023229,,1
+390,LowPowerLongTimeBinPacker,speech-inference,scale_up,2,3,coral_0,coral,0.0,72054.6099190688,,1
+390,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_30,rockpi,0.0,164316.5273940349,,1
+390,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+390,LowPowerLongTimeBinPacker,python-pi,scale_up,78,79,rpi3_21,rpi3,0.0,1031.9038033912223,,1
+390,LowPowerLongTimeBinPacker,fio,scale_up,78,79,rockpi_30,rockpi,0.0,0.0,,1
+395,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,78,79,coral_0,coral,0.0,1361.457455834581,,1
+395,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,coral_0,coral,0.0,105841.64898464661,,1
+395,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+395,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.0,0.0,Within thresholds,0
+395,LowPowerLongTimeBinPacker,python-pi,scale_up,79,80,rpi3_21,rpi3,0.0,1056.1640517977357,,1
+395,LowPowerLongTimeBinPacker,fio,scale_up,79,80,rockpi_30,rockpi,0.0,0.0,,1
+400,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,79,80,coral_0,coral,0.0,0.0,,1
+400,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,4.2,0.0,Within thresholds,0
+400,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+400,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.2,0.0,Within thresholds,0
+400,LowPowerLongTimeBinPacker,python-pi,scale_up,80,81,rpi3_21,rpi3,0.0,0.0,,1
+400,LowPowerLongTimeBinPacker,fio,scale_up,80,81,rockpi_30,rockpi,0.0,0.0,,1
+405,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,80,81,coral_0,coral,0.0,0.0,,1
+405,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+405,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.0,0.0,Within thresholds,0
+405,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.6,0.0,Within thresholds,0
+405,LowPowerLongTimeBinPacker,python-pi,scale_up,81,82,rpi3_21,rpi3,0.0,0.0,,1
+405,LowPowerLongTimeBinPacker,fio,scale_up,81,82,rockpi_30,rockpi,0.0,0.0,,1
+410,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,81,82,coral_0,coral,0.0,0.0,,1
+410,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.4,0.0,Within thresholds,0
+410,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.6,0.0,Within thresholds,0
+410,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+410,LowPowerLongTimeBinPacker,python-pi,scale_up,82,83,rpi3_21,rpi3,0.0,0.0,,1
+410,LowPowerLongTimeBinPacker,fio,scale_up,82,83,rockpi_30,rockpi,0.0,0.0,,1
+415,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,82,83,coral_0,coral,0.0,0.0,,1
+415,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.2,0.0,Within thresholds,0
+415,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+415,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+415,LowPowerLongTimeBinPacker,python-pi,scale_up,83,84,rpi3_21,rpi3,0.0,0.0,,1
+415,LowPowerLongTimeBinPacker,fio,scale_up,83,84,rockpi_30,rockpi,0.0,0.0,,1
+420,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,83,84,coral_0,coral,0.0,0.0,,1
+420,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.6,0.0,Within thresholds,0
+420,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+420,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.4,0.0,Within thresholds,0
+420,LowPowerLongTimeBinPacker,python-pi,scale_up,84,85,rpi3_21,rpi3,0.0,0.0,,1
+420,LowPowerLongTimeBinPacker,fio,scale_up,84,85,rockpi_30,rockpi,0.0,0.0,,1
+425,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,84,85,coral_0,coral,0.0,1796.4376920495906,,1
+425,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,coral_0,coral,0.0,51983.845163134225,,1
+425,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_30,rockpi,0.0,219273.29186904719,,1
+425,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.0,0.0,Within thresholds,0
+425,LowPowerLongTimeBinPacker,python-pi,scale_up,85,86,rpi3_21,rpi3,0.0,1032.717435235972,,1
+425,LowPowerLongTimeBinPacker,fio,scale_up,85,86,rockpi_30,rockpi,0.0,0.0,,1
+430,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,85,86,coral_0,coral,0.0,704.1955327883096,,1
+430,LowPowerLongTimeBinPacker,speech-inference,scale_up,4,5,coral_0,coral,0.0,2720.7034679896933,,1
+430,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,3.6,0.0,Within thresholds,0
+430,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+430,LowPowerLongTimeBinPacker,python-pi,scale_up,86,87,rpi3_21,rpi3,0.0,1032.2825946770877,,1
+430,LowPowerLongTimeBinPacker,fio,scale_up,86,87,rockpi_30,rockpi,0.0,0.0,,1
+435,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,86,87,coral_0,coral,0.0,0.0,,1
+435,LowPowerLongTimeBinPacker,speech-inference,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+435,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+435,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,8.0,0.0,Within thresholds,0
+435,LowPowerLongTimeBinPacker,python-pi,scale_up,87,88,rpi3_21,rpi3,0.0,0.0,,1
+435,LowPowerLongTimeBinPacker,fio,scale_up,87,88,rockpi_30,rockpi,0.0,0.0,,1
+440,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,87,88,coral_0,coral,0.0,0.0,,1
+440,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.0,0.0,Within thresholds,0
+440,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+440,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+440,LowPowerLongTimeBinPacker,python-pi,scale_up,88,89,rpi3_21,rpi3,0.0,0.0,,1
+440,LowPowerLongTimeBinPacker,fio,scale_up,88,89,rockpi_30,rockpi,0.0,0.0,,1
+445,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,88,89,coral_0,coral,0.0,0.0,,1
+445,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+445,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.4,0.0,Within thresholds,0
+445,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.6,0.0,Within thresholds,0
+445,LowPowerLongTimeBinPacker,python-pi,scale_up,89,90,rpi3_21,rpi3,0.0,0.0,,1
+445,LowPowerLongTimeBinPacker,fio,scale_up,89,90,rockpi_30,rockpi,0.0,0.0,,1
+450,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,89,90,coral_0,coral,0.0,0.0,,1
+450,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.4,0.0,Within thresholds,0
+450,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+450,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+450,LowPowerLongTimeBinPacker,python-pi,scale_up,90,91,rpi3_21,rpi3,0.0,0.0,,1
+450,LowPowerLongTimeBinPacker,fio,scale_up,90,91,rockpi_30,rockpi,0.0,0.0,,1
+455,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,90,91,coral_0,coral,0.0,0.0,,1
+455,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.4,0.0,Within thresholds,0
+455,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+455,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,8.0,0.0,Within thresholds,0
+455,LowPowerLongTimeBinPacker,python-pi,scale_up,91,92,rpi3_21,rpi3,0.0,0.0,,1
+455,LowPowerLongTimeBinPacker,fio,scale_up,91,92,rockpi_30,rockpi,0.0,0.0,,1
+460,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,91,92,coral_0,coral,0.0,1620.3954642375247,,1
+460,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,coral_0,coral,0.0,49734.864253204345,,1
+460,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+460,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+460,LowPowerLongTimeBinPacker,python-pi,scale_up,92,93,rpi3_21,rpi3,0.0,1018.8817810901958,,1
+460,LowPowerLongTimeBinPacker,fio,scale_up,92,93,rockpi_30,rockpi,0.0,0.0,,1
+465,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,92,93,coral_0,coral,0.0,880.8048012564592,,1
+465,LowPowerLongTimeBinPacker,speech-inference,scale_up,4,5,coral_0,coral,0.0,2685.361780691305,,1
+465,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+465,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.2,0.0,Within thresholds,0
+465,LowPowerLongTimeBinPacker,python-pi,scale_up,93,94,rpi3_21,rpi3,0.0,1007.8497378567978,,1
+465,LowPowerLongTimeBinPacker,fio,scale_up,93,94,rockpi_30,rockpi,0.0,0.0,,1
+470,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,93,94,coral_0,coral,0.0,0.0,,1
+470,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,5.2,0.0,Within thresholds,0
+470,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+470,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+470,LowPowerLongTimeBinPacker,python-pi,scale_up,94,95,rpi3_21,rpi3,0.0,0.0,,1
+470,LowPowerLongTimeBinPacker,fio,scale_up,94,95,rockpi_30,rockpi,0.0,0.0,,1
+475,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,94,95,coral_0,coral,0.0,0.0,,1
+475,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,3.6,0.0,Within thresholds,0
+475,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.6,0.0,Within thresholds,0
+475,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.0,0.0,Within thresholds,0
+475,LowPowerLongTimeBinPacker,python-pi,scale_up,95,96,rpi3_21,rpi3,0.0,0.0,,1
+475,LowPowerLongTimeBinPacker,fio,scale_up,95,96,rockpi_30,rockpi,0.0,0.0,,1
+480,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,95,96,coral_0,coral,0.0,0.0,,1
+480,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,3.0,0.0,Within thresholds,0
+480,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,4.2,0.0,Within thresholds,0
+480,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.8,0.0,Within thresholds,0
+480,LowPowerLongTimeBinPacker,python-pi,scale_up,96,97,rpi3_21,rpi3,0.0,0.0,,1
+480,LowPowerLongTimeBinPacker,fio,scale_up,96,97,rockpi_30,rockpi,0.0,0.0,,1
+485,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,96,97,coral_0,coral,0.0,0.0,,1
+485,LowPowerLongTimeBinPacker,speech-inference,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+485,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+485,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+485,LowPowerLongTimeBinPacker,python-pi,scale_up,97,98,rpi3_21,rpi3,0.0,0.0,,1
+485,LowPowerLongTimeBinPacker,fio,scale_up,97,98,rockpi_30,rockpi,0.0,0.0,,1
+490,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,97,98,coral_0,coral,0.0,0.0,,1
+490,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+490,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+490,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.0,0.0,Within thresholds,0
+490,LowPowerLongTimeBinPacker,python-pi,scale_up,98,99,rpi3_21,rpi3,0.0,0.0,,1
+490,LowPowerLongTimeBinPacker,fio,scale_up,98,99,rockpi_30,rockpi,0.0,0.0,,1
+495,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,98,99,coral_0,coral,0.0,1861.0278628884353,,1
+495,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,coral_0,coral,0.0,50286.08638635959,,1
+495,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_30,rockpi,0.0,315326.07571897446,,1
+495,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.4,0.0,Within thresholds,0
+495,LowPowerLongTimeBinPacker,python-pi,scale_up,99,100,rpi3_21,rpi3,0.0,1018.1610942218454,,1
+495,LowPowerLongTimeBinPacker,fio,scale_up,99,100,rockpi_30,rockpi,0.0,0.0,,1
+500,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,99,100,coral_0,coral,0.0,653.6665028628498,,1
+500,LowPowerLongTimeBinPacker,speech-inference,scale_up,4,5,coral_0,coral,0.0,40747.4360652854,,1
+500,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+500,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+500,LowPowerLongTimeBinPacker,python-pi,scale_up,100,101,rpi3_21,rpi3,0.0,1005.0730806392783,,1
+500,LowPowerLongTimeBinPacker,fio,scale_up,100,101,rockpi_30,rockpi,0.0,0.0,,1
+505,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,100,101,coral_0,coral,0.0,0.0,,1
+505,LowPowerLongTimeBinPacker,speech-inference,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+505,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+505,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.6,0.0,Within thresholds,0
+505,LowPowerLongTimeBinPacker,python-pi,scale_up,101,102,rpi3_21,rpi3,0.0,0.0,,1
+505,LowPowerLongTimeBinPacker,fio,scale_up,101,102,rockpi_30,rockpi,0.0,0.0,,1
+510,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,101,102,coral_0,coral,0.0,0.0,,1
+510,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.6,0.0,Within thresholds,0
+510,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+510,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.2,0.0,Within thresholds,0
+510,LowPowerLongTimeBinPacker,python-pi,scale_up,102,103,rpi3_21,rpi3,0.0,0.0,,1
+510,LowPowerLongTimeBinPacker,fio,scale_up,102,103,rockpi_30,rockpi,0.0,0.0,,1
+515,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,102,103,coral_0,coral,0.0,0.0,,1
+515,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.2,0.0,Within thresholds,0
+515,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+515,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.0,0.0,Within thresholds,0
+515,LowPowerLongTimeBinPacker,python-pi,scale_up,103,104,rpi3_21,rpi3,0.0,0.0,,1
+515,LowPowerLongTimeBinPacker,fio,scale_up,103,104,rockpi_30,rockpi,0.0,0.0,,1
+520,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,103,104,coral_0,coral,0.0,0.0,,1
+520,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+520,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+520,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+520,LowPowerLongTimeBinPacker,python-pi,scale_up,104,105,rpi3_21,rpi3,0.0,0.0,,1
+520,LowPowerLongTimeBinPacker,fio,scale_up,104,105,rockpi_30,rockpi,0.0,0.0,,1
+525,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,104,105,coral_0,coral,0.0,0.0,,1
+525,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.0,0.0,Within thresholds,0
+525,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+525,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.0,0.0,Within thresholds,0
+525,LowPowerLongTimeBinPacker,python-pi,scale_up,105,106,rpi3_21,rpi3,0.0,0.0,,1
+525,LowPowerLongTimeBinPacker,fio,scale_up,105,106,rockpi_30,rockpi,0.0,0.0,,1
+530,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,105,106,coral_0,coral,0.0,1714.1991793419172,,1
+530,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,coral_0,coral,0.0,48822.26661647386,,1
+530,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_30,rockpi,0.0,308643.7198284388,,1
+530,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,6.2,0.0,Within thresholds,0
+530,LowPowerLongTimeBinPacker,python-pi,scale_up,106,107,rpi3_21,rpi3,0.0,1034.137292813134,,1
+530,LowPowerLongTimeBinPacker,fio,scale_up,106,107,rockpi_30,rockpi,0.0,0.0,,1
+535,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,106,107,coral_0,coral,0.0,848.5967852642607,,1
+535,LowPowerLongTimeBinPacker,speech-inference,scale_up,4,5,coral_0,coral,0.0,41400.77487019593,,1
+535,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+535,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.2,0.0,Within thresholds,0
+535,LowPowerLongTimeBinPacker,python-pi,scale_up,107,108,rpi3_21,rpi3,0.0,1024.7341949558138,,1
+535,LowPowerLongTimeBinPacker,fio,scale_up,107,108,rockpi_30,rockpi,0.0,0.0,,1
+540,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,107,108,coral_0,coral,0.0,0.0,,1
+540,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,3.0,0.0,Within thresholds,0
+540,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+540,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.4,0.0,Within thresholds,0
+540,LowPowerLongTimeBinPacker,python-pi,scale_up,108,109,rpi3_21,rpi3,0.0,0.0,,1
+540,LowPowerLongTimeBinPacker,fio,scale_up,108,109,rockpi_30,rockpi,0.0,0.0,,1
+545,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,108,109,coral_0,coral,0.0,0.0,,1
+545,LowPowerLongTimeBinPacker,speech-inference,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+545,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,2,1,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+545,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+545,LowPowerLongTimeBinPacker,python-pi,scale_up,109,110,rpi3_21,rpi3,0.0,0.0,,1
+545,LowPowerLongTimeBinPacker,fio,scale_up,109,110,rockpi_30,rockpi,0.0,0.0,,1
+550,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,109,110,coral_0,coral,0.0,0.0,,1
+550,LowPowerLongTimeBinPacker,speech-inference,scale_down,4,3,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+550,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.6,0.0,Within thresholds,0
+550,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.8,0.0,Within thresholds,0
+550,LowPowerLongTimeBinPacker,python-pi,scale_up,110,111,rpi3_21,rpi3,0.0,0.0,,1
+550,LowPowerLongTimeBinPacker,fio,scale_up,110,111,rockpi_30,rockpi,0.0,0.0,,1
+555,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,110,111,coral_0,coral,0.0,0.0,,1
+555,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,4.4,0.0,Within thresholds,0
+555,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+555,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.0,0.0,Within thresholds,0
+555,LowPowerLongTimeBinPacker,python-pi,scale_up,111,112,rpi3_21,rpi3,0.0,0.0,,1
+555,LowPowerLongTimeBinPacker,fio,scale_up,111,112,rockpi_30,rockpi,0.0,0.0,,1
+560,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,111,112,coral_0,coral,0.0,0.0,,1
+560,LowPowerLongTimeBinPacker,speech-inference,no_action,3,3,,,3.4,0.0,Within thresholds,0
+560,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.0,0.0,Within thresholds,0
+560,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+560,LowPowerLongTimeBinPacker,python-pi,scale_up,112,113,rpi3_21,rpi3,0.0,0.0,,1
+560,LowPowerLongTimeBinPacker,fio,scale_up,112,113,rockpi_30,rockpi,0.0,0.0,,1
+565,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,112,113,coral_0,coral,0.0,1780.3526211268488,,1
+565,LowPowerLongTimeBinPacker,speech-inference,scale_up,3,4,coral_0,coral,0.0,56270.33519913973,,1
+565,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_30,rockpi,0.0,303146.28854500566,,1
+565,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+565,LowPowerLongTimeBinPacker,python-pi,scale_up,113,114,rpi3_21,rpi3,0.0,1044.7819496754103,,1
+565,LowPowerLongTimeBinPacker,fio,scale_up,113,114,rockpi_30,rockpi,0.0,0.0,,1
+570,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,113,114,coral_0,coral,0.0,905.4593036694686,,1
+570,LowPowerLongTimeBinPacker,speech-inference,scale_up,4,5,coral_0,coral,0.0,66846.58335494914,,1
+570,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,3.0,0.0,Within thresholds,0
+570,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+570,LowPowerLongTimeBinPacker,python-pi,scale_up,114,115,rpi3_21,rpi3,0.0,1003.6453360448759,,1
+570,LowPowerLongTimeBinPacker,fio,scale_up,114,115,rockpi_30,rockpi,0.0,0.0,,1
+575,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,114,115,coral_0,coral,0.0,0.0,,1
+575,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,3.0,0.0,Within thresholds,0
+575,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,4.0,0.0,Within thresholds,0
+575,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+575,LowPowerLongTimeBinPacker,python-pi,scale_up,115,116,rpi3_21,rpi3,0.0,0.0,,1
+575,LowPowerLongTimeBinPacker,fio,scale_up,115,116,rockpi_30,rockpi,0.0,0.0,,1
+580,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,115,116,coral_0,coral,0.0,0.0,,1
+580,LowPowerLongTimeBinPacker,speech-inference,no_action,5,5,,,3.6,0.0,Within thresholds,0
+580,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,3,3,,,3.4,0.0,Within thresholds,0
+580,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.8,0.0,Within thresholds,0
+580,LowPowerLongTimeBinPacker,python-pi,scale_up,116,117,rpi3_21,rpi3,0.0,0.0,,1
+580,LowPowerLongTimeBinPacker,fio,scale_up,116,117,rockpi_30,rockpi,0.0,0.0,,1
+585,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,116,117,coral_0,coral,0.0,0.0,,1
+585,LowPowerLongTimeBinPacker,speech-inference,scale_down,5,4,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+585,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_down,3,2,,,0.0,0.0,"Low load: 0.0 RPS, Response: 0.0ms",-1
+585,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+585,LowPowerLongTimeBinPacker,python-pi,scale_up,117,118,rpi3_21,rpi3,0.0,0.0,,1
+585,LowPowerLongTimeBinPacker,fio,scale_up,117,118,rockpi_30,rockpi,0.0,0.0,,1
+590,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,117,118,coral_0,coral,0.0,0.0,,1
+590,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,3.2,0.0,Within thresholds,0
+590,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.4,0.0,Within thresholds,0
+590,LowPowerLongTimeBinPacker,resnet50-training,no_action,31,31,,,7.2,0.0,Within thresholds,0
+590,LowPowerLongTimeBinPacker,python-pi,scale_up,118,119,rpi3_21,rpi3,0.0,0.0,,1
+590,LowPowerLongTimeBinPacker,fio,scale_up,118,119,rockpi_30,rockpi,0.0,0.0,,1
+595,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,118,119,coral_0,coral,0.0,0.0,,1
+595,LowPowerLongTimeBinPacker,speech-inference,no_action,4,4,,,4.0,0.0,Within thresholds,0
+595,LowPowerLongTimeBinPacker,resnet50-preprocessing,no_action,2,2,,,3.2,0.0,Within thresholds,0
+595,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+595,LowPowerLongTimeBinPacker,python-pi,scale_up,119,120,rpi3_21,rpi3,0.0,0.0,,1
+595,LowPowerLongTimeBinPacker,fio,scale_up,119,120,rockpi_30,rockpi,0.0,0.0,,1
+600,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,119,120,coral_0,coral,0.0,1711.291057346434,,1
+600,LowPowerLongTimeBinPacker,speech-inference,scale_up,4,5,coral_0,coral,0.0,40273.43605465665,,1
+600,LowPowerLongTimeBinPacker,resnet50-preprocessing,scale_up,2,3,rockpi_30,rockpi,0.0,197671.82609587282,,1
+600,LowPowerLongTimeBinPacker,resnet50-training,scale_up,31,32,nano_15,nano,0.0,0.0,,1
+600,LowPowerLongTimeBinPacker,python-pi,scale_up,120,121,rpi3_21,rpi3,0.0,1067.507040393892,,1
+600,LowPowerLongTimeBinPacker,fio,scale_up,120,121,rockpi_30,rockpi,0.0,0.0,,1
+605,LowPowerLongTimeBinPacker,resnet50-inference,scale_up,120,121,coral_0,coral,0.0,1281.3894983139771,,1
+605,LowPowerLongTimeBinPacker,speech-inference,scale_up,5,6,coral_0,coral,0.0,36184.03601988562,,1

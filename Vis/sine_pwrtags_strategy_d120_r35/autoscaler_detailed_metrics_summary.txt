@@ -1,0 +1,100 @@
+AUTOSCALER DETAILED METRICS SUMMARY
+===================================
+
+Report generated: 2025-08-20 16:36:08
+
+Total measurement records: 233
+Deployments analyzed: 4
+Time range: 5.00 - 605.00s
+Simulation duration: 600.00s
+
+OVERALL STATISTICS
+==================
+Average response time: 37505.51 ms
+Max response time: 315326.08 ms
+Average execution time: 2408.99 ms
+Average wait time: 35096.51 ms
+Average wait percentage: 37.02%
+Total high wait count events: 650
+Average sample count: 57.9
+
+PER-DEPLOYMENT BREAKDOWN
+========================
+
+Deployment: python-pi
+  Measurement count: 70
+  Time range: 5.0 - 600.0s
+  Avg response time: 1262.82 ms
+  Min/Max response time: 1003.65/4844.05 ms
+  Avg execution time: 1032.04 ms
+  Avg wait time: 230.78 ms
+  Avg wait percentage: 6.10%
+  High wait events: 198
+  Avg sample count: 107.5
+  Performance trend: improving
+
+Deployment: resnet50-inference
+  Measurement count: 71
+  Time range: 5.0 - 605.0s
+  Avg response time: 1063.47 ms
+  Min/Max response time: 490.91/1861.03 ms
+  Avg execution time: 1058.75 ms
+  Avg wait time: 4.72 ms
+  Avg wait percentage: 0.96%
+  High wait events: 24
+  Avg sample count: 75.9
+  Performance trend: degrading
+
+Deployment: resnet50-preprocessing
+  Measurement count: 28
+  Time range: 75.0 - 600.0s
+  Avg response time: 164878.29 ms
+  Min/Max response time: 35600.72/315326.08 ms
+  Avg execution time: 6605.56 ms
+  Avg wait time: 158272.74 ms
+  Avg wait percentage: 93.57%
+  High wait events: 118
+  Avg sample count: 4.2
+  Performance trend: degrading
+
+Deployment: speech-inference
+  Measurement count: 64
+  Time range: 40.0 - 605.0s
+  Avg response time: 61848.23 ms
+  Min/Max response time: 2685.36/112811.64 ms
+  Avg execution time: 3576.96 ms
+  Avg wait time: 58271.26 ms
+  Avg wait percentage: 86.10%
+  High wait events: 310
+  Avg sample count: 7.0
+  Performance trend: improving
+
+PERFORMANCE ANALYSIS
+===================
+
+Records with high wait percentage (>50%): 90
+  speech-inference: 58 records, avg 93.7% wait
+  python-pi: 4 records, avg 78.8% wait
+  resnet50-preprocessing: 28 records, avg 93.6% wait
+
+Records with high response times (>112046.3ms): 24
+  resnet50-preprocessing: 20 records, avg 209814.7ms
+  speech-inference: 4 records, avg 112530.7ms
+
+SCALING RECOMMENDATIONS
+======================
+
+python-pi:
+  ✅ ACCEPTABLE: Wait times within reasonable range
+
+resnet50-inference:
+  🟢 GOOD: Low wait times - consider scaling down if consistent
+
+resnet50-preprocessing:
+  🔴 CRITICAL: Very high wait times - immediate scaling needed
+  ⚠️  High response times detected - investigate bottlenecks
+
+speech-inference:
+  🔴 CRITICAL: Very high wait times - immediate scaling needed
+  ⚠️  High response times detected - investigate bottlenecks
+
