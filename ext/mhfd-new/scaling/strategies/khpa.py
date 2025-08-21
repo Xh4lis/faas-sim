@@ -86,7 +86,10 @@ class KubernetesStyleFirstFitBinPacker(BaseAutoscaler):
         1. Filtering Phase: Remove unsuitable nodes
         2. Scoring Phase: Score remaining nodes  
         3. Selection Phase: Pick highest scoring node
-        """
+        How lightly loaded they are (spread workload).
+        How balanced their CPU/memory usage is.
+        How well their hardware matches the workload 
+        """ 
         
         try:
             # Phase 1: Filtering (Kubernetes Predicates)

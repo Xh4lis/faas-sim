@@ -1,0 +1,7 @@
+Metric,Best,Second,Third
+Energy Efficiency (W/replica),LPLT (2.99),K8S (3.22),HPST (3.64)
+Infrastructure Power,HPST (435.1W),K8S (519.4W),LPLT (544.8W)
+Response Time,HPST (1052s),K8S (1121s),LPLT (1181s)
+Cold Start Performance,HPST (4262s),K8S (10311s),LPLT (11809s)
+Resource Utilization,K8S (52.3 rep/node),LPLT (19.2),HPST (20.5)
+Scaling Stability,LPLT (657 actions),HPST (869),K8S (1465)

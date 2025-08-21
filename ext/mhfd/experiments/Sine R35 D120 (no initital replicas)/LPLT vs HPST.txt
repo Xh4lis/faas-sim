@@ -1,0 +1,387 @@
+=== RUNNING HYPOTHESIS TEST ===
+Hypothesis: HPST reduces power consumption vs LPLT baseline, but increases response times
+
+=== POWER CONSUMPTION COMPARISON ===
+
+🔋 LPLT Workload Analysis:
+  coral_0: 5 replicas × 2.66W = 13.3W
+  coral_1: 5 replicas × 2.51W = 12.5W
+  coral_2: 5 replicas × 2.67W = 13.4W
+  coral_3: 5 replicas × 2.51W = 12.6W
+  nano_0: 10 replicas × 1.98W = 19.8W
+  nano_1: 10 replicas × 1.98W = 19.8W
+  nano_10: 10 replicas × 1.97W = 19.7W
+  nano_11: 10 replicas × 1.98W = 19.8W
+  nano_12: 5 replicas × 1.94W = 9.7W
+  nano_13: 5 replicas × 2.04W = 10.2W
+  nano_14: 5 replicas × 2.03W = 10.1W
+  nano_15: 10 replicas × 1.93W = 19.3W
+  nano_16: 10 replicas × 2.01W = 20.1W
+  nano_17: 4 replicas × 1.91W = 7.7W
+  nano_18: 5 replicas × 1.93W = 9.6W
+  nano_19: 10 replicas × 1.94W = 19.4W
+  nano_2: 10 replicas × 1.99W = 19.9W
+  nano_20: 10 replicas × 1.96W = 19.6W
+  nano_21: 10 replicas × 1.96W = 19.6W
+  nano_22: 10 replicas × 1.97W = 19.7W
+  nano_23: 5 replicas × 2.03W = 10.1W
+  nano_24: 5 replicas × 2.04W = 10.2W
+  nano_25: 5 replicas × 2.06W = 10.3W
+  nano_26: 5 replicas × 1.92W = 9.6W
+  nano_27: 5 replicas × 2.02W = 10.1W
+  nano_28: 10 replicas × 1.97W = 19.7W
+  nano_3: 4 replicas × 1.90W = 7.6W
+  nano_4: 5 replicas × 2.07W = 10.4W
+  nano_5: 10 replicas × 1.99W = 19.9W
+  nano_6: 10 replicas × 2.01W = 20.1W
+  nano_7: 10 replicas × 2.00W = 20.0W
+  nano_8: 10 replicas × 2.01W = 20.1W
+  nano_9: 10 replicas × 1.95W = 19.5W
+  nx_0: 5 replicas × 5.87W = 29.4W
+  nx_1: 5 replicas × 5.86W = 29.3W
+  nx_10: 14 replicas × 5.01W = 70.1W
+  nx_11: 10 replicas × 5.35W = 53.5W
+  nx_12: 15 replicas × 5.56W = 83.4W
+  nx_13: 40 replicas × 5.20W = 207.9W
+  nx_2: 5 replicas × 5.78W = 28.9W
+  nx_3: 9 replicas × 5.11W = 46.0W
+  nx_4: 10 replicas × 5.22W = 52.2W
+  nx_5: 15 replicas × 5.58W = 83.7W
+  nx_6: 5 replicas × 5.69W = 28.5W
+  nx_7: 15 replicas × 5.30W = 79.5W
+  nx_8: 5 replicas × 5.96W = 29.8W
+  nx_9: 5 replicas × 5.83W = 29.1W
+  rockpi_0: 35 replicas × 3.11W = 108.9W
+  rockpi_1: 15 replicas × 3.28W = 49.2W
+  rockpi_10: 20 replicas × 3.09W = 61.8W
+  rockpi_11: 20 replicas × 3.25W = 65.1W
+  rockpi_12: 9 replicas × 3.04W = 27.4W
+  rockpi_13: 10 replicas × 3.03W = 30.3W
+  rockpi_14: 25 replicas × 3.08W = 77.0W
+  rockpi_16: 9 replicas × 3.08W = 27.7W
+  rockpi_19: 10 replicas × 3.07W = 30.7W
+  rockpi_2: 30 replicas × 3.29W = 98.7W
+  rockpi_21: 10 replicas × 3.06W = 30.6W
+  rockpi_22: 10 replicas × 3.32W = 33.2W
+  rockpi_23: 10 replicas × 3.24W = 32.4W
+  rockpi_25: 10 replicas × 3.25W = 32.5W
+  rockpi_28: 30 replicas × 3.11W = 93.3W
+  rockpi_3: 20 replicas × 3.29W = 65.7W
+  rockpi_30: 8 replicas × 3.00W = 24.0W
+  rockpi_32: 10 replicas × 3.30W = 33.0W
+  rockpi_4: 10 replicas × 3.23W = 32.3W
+  rockpi_5: 15 replicas × 3.05W = 45.7W
+  rockpi_8: 8 replicas × 3.00W = 24.0W
+  rpi3_0: 20 replicas × 2.15W = 42.9W
+  rpi3_1: 20 replicas × 2.15W = 43.1W
+  rpi3_10: 10 replicas × 2.22W = 22.2W
+  rpi3_11: 10 replicas × 2.23W = 22.3W
+  rpi3_15: 10 replicas × 2.23W = 22.3W
+  rpi3_16: 10 replicas × 2.24W = 22.4W
+  rpi3_17: 10 replicas × 2.24W = 22.4W
+  rpi3_18: 10 replicas × 2.26W = 22.6W
+  rpi3_19: 5 replicas × 2.27W = 11.3W
+  rpi3_2: 20 replicas × 2.16W = 43.2W
+  rpi3_21: 10 replicas × 2.12W = 21.2W
+  rpi3_22: 10 replicas × 2.12W = 21.2W
+  rpi3_23: 10 replicas × 2.13W = 21.3W
+  rpi3_27: 10 replicas × 2.13W = 21.3W
+  rpi3_28: 10 replicas × 2.14W = 21.4W
+  rpi3_29: 15 replicas × 2.14W = 32.1W
+  rpi3_3: 8 replicas × 2.10W = 16.8W
+  rpi3_33: 10 replicas × 2.25W = 22.5W
+  rpi3_34: 10 replicas × 2.25W = 22.5W
+  rpi3_35: 10 replicas × 2.26W = 22.6W
+  rpi3_4: 10 replicas × 2.11W = 21.1W
+  rpi3_5: 10 replicas × 2.11W = 21.1W
+  rpi3_9: 15 replicas × 2.16W = 32.4W
+  Total: 2950.2W across 993 replicas = 2.97W/replica
+
+🔋 HPST Workload Analysis:
+  coral_0: 5 replicas × 2.56W = 12.8W
+  coral_1: 4 replicas × 2.51W = 10.0W
+  coral_2: 10 replicas × 2.57W = 25.7W
+  coral_3: 5 replicas × 2.51W = 12.6W
+  nano_0: 5 replicas × 1.97W = 9.9W
+  nano_1: 10 replicas × 1.98W = 19.8W
+  nano_10: 10 replicas × 1.97W = 19.7W
+  nano_11: 5 replicas × 1.97W = 9.8W
+  nano_12: 10 replicas × 1.95W = 19.5W
+  nano_13: 10 replicas × 2.04W = 20.4W
+  nano_14: 10 replicas × 2.02W = 20.2W
+  nano_15: 4 replicas × 1.91W = 7.7W
+  nano_16: 10 replicas × 2.01W = 20.1W
+  nano_17: 10 replicas × 1.92W = 19.2W
+  nano_18: 10 replicas × 1.93W = 19.3W
+  nano_19: 5 replicas × 1.93W = 9.6W
+  nano_2: 5 replicas × 1.98W = 9.9W
+  nano_20: 5 replicas × 1.95W = 9.8W
+  nano_21: 5 replicas × 1.94W = 9.7W
+  nano_22: 5 replicas × 1.96W = 9.8W
+  nano_23: 10 replicas × 2.03W = 20.3W
+  nano_24: 10 replicas × 2.03W = 20.3W
+  nano_25: 10 replicas × 2.05W = 20.5W
+  nano_26: 10 replicas × 1.93W = 19.3W
+  nano_27: 10 replicas × 2.01W = 20.1W
+  nano_28: 10 replicas × 1.98W = 19.8W
+  nano_3: 4 replicas × 1.90W = 7.6W
+  nano_4: 19 replicas × 2.06W = 39.1W
+  nano_5: 10 replicas × 1.99W = 19.9W
+  nano_6: 5 replicas × 2.00W = 10.0W
+  nano_7: 10 replicas × 2.01W = 20.1W
+  nano_8: 10 replicas × 2.00W = 20.0W
+  nano_9: 5 replicas × 1.94W = 9.7W
+  nuc_0: 5 replicas × 16.17W = 80.8W
+  nx_0: 5 replicas × 5.82W = 29.1W
+  nx_1: 5 replicas × 5.87W = 29.4W
+  nx_10: 8 replicas × 5.02W = 40.1W
+  nx_11: 20 replicas × 5.37W = 107.4W
+  nx_12: 20 replicas × 5.58W = 111.6W
+  nx_13: 15 replicas × 5.13W = 76.9W
+  nx_2: 10 replicas × 5.79W = 57.9W
+  nx_3: 8 replicas × 5.05W = 40.4W
+  nx_4: 25 replicas × 5.23W = 130.8W
+  nx_5: 10 replicas × 5.52W = 55.2W
+  nx_6: 10 replicas × 5.71W = 57.1W
+  nx_7: 25 replicas × 5.33W = 133.2W
+  nx_8: 24 replicas × 5.91W = 141.9W
+  nx_9: 10 replicas × 5.78W = 57.8W
+  rockpi_0: 20 replicas × 3.06W = 61.2W
+  rockpi_1: 40 replicas × 3.11W = 124.5W
+  rockpi_10: 15 replicas × 3.06W = 45.8W
+  rockpi_11: 10 replicas × 3.09W = 30.9W
+  rockpi_12: 15 replicas × 3.03W = 45.5W
+  rockpi_13: 9 replicas × 3.03W = 27.2W
+  rockpi_14: 15 replicas × 3.05W = 45.8W
+  rockpi_16: 15 replicas × 3.05W = 45.7W
+  rockpi_19: 15 replicas × 3.04W = 45.6W
+  rockpi_2: 15 replicas × 3.11W = 46.7W
+  rockpi_21: 20 replicas × 3.04W = 60.8W
+  rockpi_22: 15 replicas × 3.32W = 49.9W
+  rockpi_23: 15 replicas × 3.08W = 46.2W
+  rockpi_24: 10 replicas × 3.32W = 33.2W
+  rockpi_25: 10 replicas × 3.10W = 31.0W
+  rockpi_28: 25 replicas × 3.07W = 76.7W
+  rockpi_3: 10 replicas × 3.12W = 31.2W
+  rockpi_30: 8 replicas × 3.00W = 24.0W
+  rockpi_32: 10 replicas × 3.30W = 33.0W
+  rockpi_4: 15 replicas × 3.07W = 46.1W
+  rockpi_5: 15 replicas × 3.04W = 45.5W
+  rockpi_6: 35 replicas × 3.15W = 110.3W
+  rockpi_8: 8 replicas × 3.00W = 24.0W
+  rpi3_0: 10 replicas × 2.14W = 21.4W
+  rpi3_1: 20 replicas × 2.14W = 42.8W
+  rpi3_10: 10 replicas × 2.15W = 21.5W
+  rpi3_11: 20 replicas × 2.15W = 43.1W
+  rpi3_15: 20 replicas × 2.16W = 43.2W
+  rpi3_16: 20 replicas × 2.16W = 43.2W
+  rpi3_17: 20 replicas × 2.16W = 43.3W
+  rpi3_18: 10 replicas × 2.24W = 22.4W
+  rpi3_19: 10 replicas × 2.25W = 22.5W
+  rpi3_2: 5 replicas × 2.14W = 10.7W
+  rpi3_20: 10 replicas × 2.25W = 22.5W
+  rpi3_21: 10 replicas × 2.12W = 21.2W
+  rpi3_22: 10 replicas × 2.12W = 21.2W
+  rpi3_23: 10 replicas × 2.13W = 21.3W
+  rpi3_24: 10 replicas × 2.26W = 22.6W
+  rpi3_25: 10 replicas × 2.26W = 22.6W
+  rpi3_26: 10 replicas × 2.27W = 22.7W
+  rpi3_27: 10 replicas × 2.13W = 21.3W
+  rpi3_28: 5 replicas × 2.13W = 10.7W
+  rpi3_29: 20 replicas × 2.14W = 42.7W
+  rpi3_3: 8 replicas × 2.10W = 16.8W
+  rpi3_33: 10 replicas × 2.23W = 22.3W
+  rpi3_34: 10 replicas × 2.23W = 22.3W
+  rpi3_35: 10 replicas × 2.24W = 22.4W
+  rpi3_4: 10 replicas × 2.11W = 21.1W
+  rpi3_5: 10 replicas × 2.11W = 21.1W
+  rpi3_9: 10 replicas × 2.14W = 21.4W
+  Total: 3512.4W across 1149 replicas = 3.06W/replica
+📊 TOTAL INFRASTRUCTURE POWER:
+LPLT average total system power: 403.9W
+HPST average total system power: 394.8W
+Infrastructure power savings: 2.2%
+
+⚡ WORKLOAD ENERGY EFFICIENCY:
+LPLT: 2.97W per replica
+HPST: 3.06W per replica
+Workload efficiency improvement: -2.9%
+❌ LPLT is more energy-efficient per replica
+
+=== PERFORMANCE COMPARISON ===
+LPLT MEDIAN response time: 20987.226s
+HPST MEDIAN response time: 5622.577s
+MEDIAN performance penalty: -73.2%
+LPLT 95th percentile: 392655.356s
+HPST 95th percentile: 146417.619s
+95th percentile penalty: -62.7%
+LPLT warm-up avg: 85534.685s
+HPST warm-up avg: 29654.355s
+Warm-up performance penalty: -65.3%
+
+=== WAIT TIME ANALYSIS ===
+LPLT median wait time: 15209.455s
+HPST median wait time: 349.316s
+Wait time improvement: 97.7%
+
+=== REVISED HYPOTHESIS RESULT ===
+🎉 UNEXPECTED RESULT: HPST saves 2.2% infrastructure power
+   and -2.9% workload efficiency
+   AND improves median response times by 73.2%!
+   This suggests HPST strategy is superior in both dimensions
+🔍 DEEP ANALYSIS: Understanding Why HPST Compares to LPLT
+
+=== NODE DISTRIBUTION ANALYSIS ===
+LPLT uses 91 unique nodes
+HPST uses 98 unique nodes
+Node spreading difference: -7
+
+LPLT node load distribution:
+  Average replicas per node: 10.9
+  Max replicas on one node: 40
+  Min replicas on one node: 4
+
+HPST node load distribution:
+  Average replicas per node: 11.7
+  Max replicas on one node: 40
+  Min replicas on one node: 4
+
+Consolidation factor: 1.07
+➡️ Similar distribution patterns
+=== COLD START ANALYSIS ===
+LPLT scheduling success rate: 1.0
+HPST scheduling success rate: 0.966804979253112
+
+Cold start execution times:
+LPLT early median t_exec: 3.649s
+HPST early median t_exec: 1.599s
+✅ HPST has 56.2% faster cold starts
+
+Total scheduling events:
+LPLT: 604 scheduling events
+HPST: 724 scheduling events
+=== WORKLOAD-SPECIFIC PERFORMANCE ===
+
+resnet50-inference (2512 vs 2512 samples):
+  Median: LPLT=0.693s, HPST=0.678s (-2.1%)
+  P95: LPLT=6.321s, HPST=1.764s (-72.1%)
+
+fio (2491 vs 2670 samples):
+  Median: LPLT=194.789s, HPST=192.451s (-1.2%)
+  P95: LPLT=488.386s, HPST=482.601s (-1.2%)
+
+speech-inference (706 vs 706 samples):
+  Median: LPLT=54.625s, HPST=9.705s (-82.2%)
+  P95: LPLT=200.733s, HPST=103.591s (-48.4%)
+
+python-pi (6447 vs 6447 samples):
+  Median: LPLT=0.925s, HPST=0.924s (-0.2%)
+  P95: LPLT=25.119s, HPST=25.331s (+0.8%)
+
+resnet50-training (121 vs 115 samples):
+  Median: LPLT=286.564s, HPST=282.374s (-1.5%)
+  P95: LPLT=526.077s, HPST=552.414s (+5.0%)
+=== SCALING DECISION ANALYSIS ===
+LPLT scaling actions:
+  Scale up: 196
+  Scale down: 446
+  No action: 82
+  Total actions: 642
+
+HPST scaling actions:
+  Scale up: 228
+  Scale down: 432
+  No action: 65
+  Total actions: 660
+
+High response time events (>1s):
+LPLT: 48 events
+HPST: 46 events
+
+Node type selection frequency:
+LPLT preferences:
+  rpi3: 196
+HPST preferences:
+  nuc: 181
+  nx: 47
+=== RESOURCE CONTENTION ANALYSIS ===
+LPLT average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.029504     0.024587
+nano       0.018398     0.013799
+nuc        0.120000     0.100000
+nx         0.025000     0.018000
+rockpi     0.064154     0.053461
+rpi3       0.062782     0.052319
+
+HPST average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.012446     0.010372
+nano       0.017361     0.013021
+nuc        0.087339     0.072782
+nx         0.024292     0.017490
+rockpi     0.051722     0.043102
+rpi3       0.050402     0.042002
+
+High CPU utilization events (>90%):
+LPLT: 0 events
+HPST: 0 events
+
+Average power per active node:
+LPLT: 3.37W
+HPST: 3.29W
+
+==================================================
+HYPOTHESIS VALIDATION SUMMARY
+==================================================
+✅ H2: HPST has faster cold start performance
+
+============================================================
+🔍 DETAILED WORKLOAD ANALYSIS VALIDATION
+==================================================
+
+📊 LPLT Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 324 replicas × 3.33W = 1077.7W
+  rpi3: 263 replicas × 2.27W = 596.1W
+  nano: 228 replicas × 1.98W = 452.1W
+  nx: 158 replicas × 5.52W = 872.5W
+  coral: 20 replicas × 2.59W = 51.8W
+
+LPLT Summary:
+  Total replicas: 993
+  Total workload power: 2950.2W
+  Average efficiency: 2.971W per replica
+  Unique nodes used: 12
+
+📊 HPST Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 365 replicas × 3.26W = 1191.0W
+  rpi3: 318 replicas × 2.23W = 710.3W
+  nano: 242 replicas × 1.98W = 478.7W
+  nx: 195 replicas × 5.51W = 1073.9W
+  coral: 24 replicas × 2.54W = 60.9W
+  nuc: 5 replicas × 19.62W = 98.1W
+
+HPST Summary:
+  Total replicas: 1149
+  Total workload power: 3512.4W
+  Average efficiency: 3.057W per replica
+  Unique nodes used: 12
+
+🎯 COMPARATIVE ANALYSIS:
+Workload efficiency improvement: -2.9%
+Total workload power reduction: -19.1%
+Replica count difference: 993 vs 1149
+
+✅ VALIDATION CHECKS:
+✗ LPLT has better energy efficiency per replica
+✗ LPLT uses less total workload power
+
+=== SUMMARY ===
+Infrastructure power savings: 2.2%
+Workload efficiency improvement: -2.9%
+Performance trade-off: -73.2% response time penalty
+Plot saved as tradeoff_plot.png

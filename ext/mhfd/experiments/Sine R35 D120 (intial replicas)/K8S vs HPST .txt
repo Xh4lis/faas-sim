@@ -1,0 +1,376 @@
+=== RUNNING HYPOTHESIS TEST ===
+Hypothesis: HPST reduces power consumption vs Kubernetes baseline, but increases response times
+
+=== POWER CONSUMPTION COMPARISON ===
+
+🔋 Kubernetes Workload Analysis:
+  coral_0: 5 replicas × 2.67W = 13.4W
+  coral_1: 4 replicas × 2.50W = 10.0W
+  coral_3: 4 replicas × 2.50W = 10.0W
+  nano_0: 15 replicas × 2.28W = 34.2W
+  nano_1: 5 replicas × 2.32W = 11.6W
+  nano_10: 25 replicas × 2.02W = 50.6W
+  nano_11: 15 replicas × 2.28W = 34.2W
+  nano_12: 45 replicas × 1.97W = 88.7W
+  nano_15: 4 replicas × 1.90W = 7.6W
+  nano_17: 4 replicas × 1.91W = 7.6W
+  nano_18: 4 replicas × 1.96W = 7.9W
+  nano_19: 4 replicas × 1.96W = 7.9W
+  nano_2: 5 replicas × 2.32W = 11.6W
+  nano_20: 45 replicas × 2.02W = 90.7W
+  nano_21: 45 replicas × 2.02W = 90.7W
+  nano_22: 25 replicas × 2.02W = 50.6W
+  nano_26: 4 replicas × 1.90W = 7.6W
+  nano_28: 15 replicas × 2.28W = 34.2W
+  nano_3: 4 replicas × 1.91W = 7.6W
+  nano_5: 5 replicas × 2.32W = 11.6W
+  nano_6: 5 replicas × 2.33W = 11.7W
+  nano_9: 45 replicas × 1.97W = 88.7W
+  nx_10: 8 replicas × 5.01W = 40.1W
+  nx_11: 45 replicas × 5.71W = 257.0W
+  nx_12: 5 replicas × 7.51W = 37.5W
+  nx_13: 84 replicas × 5.37W = 450.9W
+  nx_3: 8 replicas × 5.03W = 40.3W
+  nx_4: 49 replicas × 5.41W = 265.1W
+  nx_5: 5 replicas × 7.51W = 37.5W
+  nx_7: 80 replicas × 5.67W = 453.4W
+  rockpi_0: 70 replicas × 3.08W = 215.6W
+  rockpi_1: 10 replicas × 3.29W = 32.9W
+  rockpi_10: 90 replicas × 3.08W = 276.8W
+  rockpi_11: 10 replicas × 3.28W = 32.8W
+  rockpi_12: 8 replicas × 3.04W = 24.3W
+  rockpi_13: 8 replicas × 3.04W = 24.3W
+  rockpi_14: 90 replicas × 3.08W = 276.8W
+  rockpi_16: 99 replicas × 3.04W = 301.5W
+  rockpi_19: 128 replicas × 3.04W = 389.8W
+  rockpi_2: 5 replicas × 3.29W = 16.4W
+  rockpi_21: 88 replicas × 3.04W = 267.5W
+  rockpi_23: 15 replicas × 3.28W = 49.3W
+  rockpi_25: 10 replicas × 3.29W = 32.9W
+  rockpi_28: 45 replicas × 3.08W = 138.6W
+  rockpi_30: 8 replicas × 3.00W = 24.0W
+  rockpi_4: 30 replicas × 3.25W = 97.6W
+  rockpi_5: 8 replicas × 3.04W = 24.3W
+  rockpi_8: 8 replicas × 3.00W = 24.0W
+  rpi3_0: 15 replicas × 2.23W = 33.5W
+  rpi3_1: 15 replicas × 2.23W = 33.5W
+  rpi3_2: 10 replicas × 2.23W = 22.3W
+  rpi3_21: 50 replicas × 2.14W = 107.0W
+  rpi3_22: 50 replicas × 2.14W = 107.0W
+  rpi3_23: 50 replicas × 2.14W = 107.0W
+  rpi3_27: 25 replicas × 2.14W = 53.5W
+  rpi3_28: 35 replicas × 2.14W = 75.0W
+  rpi3_29: 30 replicas × 2.14W = 64.3W
+  rpi3_3: 4 replicas × 2.10W = 8.4W
+  rpi3_4: 4 replicas × 2.10W = 8.4W
+  rpi3_5: 8 replicas × 2.10W = 16.8W
+  Total: 5156.3W across 1642 replicas = 3.14W/replica
+
+🔋 HPST Workload Analysis:
+  coral_0: 48 replicas × 2.53W = 121.6W
+  coral_1: 24 replicas × 2.50W = 60.0W
+  coral_2: 28 replicas × 2.56W = 71.7W
+  coral_3: 19 replicas × 2.50W = 47.5W
+  nano_0: 4 replicas × 1.99W = 7.9W
+  nano_1: 4 replicas × 1.99W = 7.9W
+  nano_10: 9 replicas × 1.94W = 17.5W
+  nano_11: 4 replicas × 1.99W = 7.9W
+  nano_12: 9 replicas × 1.94W = 17.4W
+  nano_13: 9 replicas × 2.04W = 18.4W
+  nano_14: 9 replicas × 2.03W = 18.3W
+  nano_15: 4 replicas × 1.90W = 7.6W
+  nano_16: 9 replicas × 1.96W = 17.6W
+  nano_17: 4 replicas × 1.91W = 7.6W
+  nano_18: 4 replicas × 1.92W = 7.7W
+  nano_19: 14 replicas × 1.93W = 27.0W
+  nano_2: 14 replicas × 1.95W = 27.3W
+  nano_20: 4 replicas × 1.96W = 7.8W
+  nano_21: 4 replicas × 1.96W = 7.8W
+  nano_22: 9 replicas × 1.94W = 17.5W
+  nano_23: 4 replicas × 2.03W = 8.1W
+  nano_24: 9 replicas × 1.97W = 17.7W
+  nano_25: 9 replicas × 1.97W = 17.8W
+  nano_26: 4 replicas × 1.90W = 7.6W
+  nano_27: 4 replicas × 2.03W = 8.1W
+  nano_28: 4 replicas × 1.99W = 7.9W
+  nano_3: 9 replicas × 1.91W = 17.2W
+  nano_4: 9 replicas × 2.05W = 18.5W
+  nano_5: 14 replicas × 1.95W = 27.3W
+  nano_6: 4 replicas × 2.01W = 8.0W
+  nano_7: 4 replicas × 2.01W = 8.0W
+  nano_8: 9 replicas × 1.96W = 17.6W
+  nano_9: 9 replicas × 1.94W = 17.4W
+  nuc_0: 30 replicas × 15.58W = 467.5W
+  nuc_1: 35 replicas × 15.58W = 545.4W
+  nuc_2: 30 replicas × 15.63W = 469.1W
+  nx_0: 29 replicas × 5.84W = 169.3W
+  nx_1: 24 replicas × 5.84W = 140.1W
+  nx_10: 23 replicas × 5.01W = 115.2W
+  nx_11: 28 replicas × 5.34W = 149.6W
+  nx_12: 24 replicas × 5.56W = 133.3W
+  nx_13: 23 replicas × 5.13W = 118.0W
+  nx_2: 39 replicas × 5.39W = 210.0W
+  nx_3: 28 replicas × 5.03W = 141.0W
+  nx_4: 43 replicas × 5.17W = 222.4W
+  nx_5: 18 replicas × 5.56W = 100.0W
+  nx_6: 34 replicas × 5.60W = 190.4W
+  nx_7: 23 replicas × 5.34W = 122.9W
+  nx_8: 29 replicas × 5.43W = 157.4W
+  nx_9: 44 replicas × 5.84W = 256.9W
+  rockpi_0: 38 replicas × 3.04W = 115.5W
+  rockpi_1: 28 replicas × 3.05W = 85.5W
+  rockpi_10: 23 replicas × 3.04W = 69.9W
+  rockpi_11: 43 replicas × 3.06W = 131.4W
+  rockpi_12: 23 replicas × 3.03W = 69.7W
+  rockpi_13: 23 replicas × 3.03W = 69.7W
+  rockpi_14: 38 replicas × 3.04W = 115.6W
+  rockpi_15: 55 replicas × 3.07W = 168.9W
+  rockpi_16: 33 replicas × 3.05W = 100.6W
+  rockpi_17: 70 replicas × 3.08W = 215.2W
+  rockpi_18: 35 replicas × 3.11W = 108.8W
+  rockpi_19: 18 replicas × 3.03W = 54.6W
+  rockpi_2: 23 replicas × 3.06W = 70.4W
+  rockpi_20: 45 replicas × 3.08W = 138.4W
+  rockpi_21: 18 replicas × 3.03W = 54.6W
+  rockpi_22: 35 replicas × 3.06W = 107.3W
+  rockpi_23: 38 replicas × 3.05W = 115.9W
+  rockpi_24: 45 replicas × 3.07W = 138.2W
+  rockpi_25: 33 replicas × 3.05W = 100.8W
+  rockpi_26: 40 replicas × 3.08W = 123.2W
+  rockpi_27: 40 replicas × 3.11W = 124.2W
+  rockpi_28: 33 replicas × 3.05W = 100.5W
+  rockpi_29: 35 replicas × 3.11W = 108.8W
+  rockpi_3: 52 replicas × 3.06W = 159.1W
+  rockpi_30: 28 replicas × 3.00W = 84.0W
+  rockpi_31: 40 replicas × 3.08W = 123.2W
+  rockpi_32: 23 replicas × 3.06W = 70.4W
+  rockpi_33: 75 replicas × 3.07W = 230.3W
+  rockpi_4: 38 replicas × 3.04W = 115.7W
+  rockpi_5: 37 replicas × 3.03W = 112.1W
+  rockpi_6: 35 replicas × 3.12W = 109.0W
+  rockpi_7: 40 replicas × 3.08W = 123.2W
+  rockpi_8: 28 replicas × 3.00W = 84.1W
+  rockpi_9: 35 replicas × 3.11W = 108.8W
+  rpi3_0: 24 replicas × 2.13W = 51.0W
+  rpi3_1: 24 replicas × 2.13W = 51.0W
+  rpi3_10: 24 replicas × 2.13W = 51.2W
+  rpi3_11: 24 replicas × 2.13W = 51.2W
+  rpi3_12: 25 replicas × 2.16W = 54.0W
+  rpi3_13: 30 replicas × 2.16W = 64.8W
+  rpi3_14: 30 replicas × 2.16W = 64.8W
+  rpi3_15: 29 replicas × 2.14W = 62.0W
+  rpi3_16: 24 replicas × 2.14W = 51.3W
+  rpi3_17: 35 replicas × 2.14W = 75.0W
+  rpi3_18: 30 replicas × 2.15W = 64.6W
+  rpi3_19: 25 replicas × 2.15W = 53.9W
+  rpi3_2: 24 replicas × 2.13W = 51.0W
+  rpi3_20: 30 replicas × 2.16W = 64.7W
+  rpi3_21: 19 replicas × 2.11W = 40.0W
+  rpi3_22: 53 replicas × 2.11W = 111.9W
+  rpi3_23: 24 replicas × 2.12W = 50.8W
+  rpi3_24: 30 replicas × 2.16W = 64.8W
+  rpi3_25: 35 replicas × 2.16W = 75.6W
+  rpi3_26: 30 replicas × 2.16W = 64.8W
+  rpi3_27: 24 replicas × 2.12W = 50.9W
+  rpi3_28: 24 replicas × 2.12W = 51.0W
+  rpi3_29: 29 replicas × 2.12W = 61.6W
+  rpi3_3: 19 replicas × 2.10W = 39.9W
+  rpi3_30: 25 replicas × 2.16W = 54.1W
+  rpi3_31: 20 replicas × 2.14W = 42.8W
+  rpi3_32: 20 replicas × 2.14W = 42.8W
+  rpi3_33: 35 replicas × 2.14W = 75.1W
+  rpi3_34: 35 replicas × 2.15W = 75.1W
+  rpi3_35: 30 replicas × 2.15W = 64.5W
+  rpi3_4: 19 replicas × 2.10W = 39.9W
+  rpi3_5: 8 replicas × 2.10W = 16.8W
+  rpi3_6: 20 replicas × 2.16W = 43.2W
+  rpi3_7: 25 replicas × 2.16W = 54.0W
+  rpi3_8: 25 replicas × 2.16W = 54.0W
+  rpi3_9: 38 replicas × 2.13W = 80.8W
+  Total: 10286.4W across 3037 replicas = 3.39W/replica
+📊 TOTAL INFRASTRUCTURE POWER:
+Kubernetes average total system power: 448.7W
+HPST average total system power: 371.0W
+Infrastructure power savings: 17.3%
+
+⚡ WORKLOAD ENERGY EFFICIENCY:
+Kubernetes: 3.14W per replica
+HPST: 3.39W per replica
+Workload efficiency improvement: -7.9%
+❌ Kubernetes is more energy-efficient per replica
+
+=== PERFORMANCE COMPARISON ===
+Kubernetes MEDIAN response time: 1266.697s
+HPST MEDIAN response time: 1195.840s
+MEDIAN performance penalty: -5.6%
+Kubernetes 95th percentile: 38394.312s
+HPST 95th percentile: 20074.555s
+95th percentile penalty: -47.7%
+Kubernetes warm-up avg: 9788.810s
+HPST warm-up avg: 5881.283s
+Warm-up performance penalty: -39.9%
+
+=== WAIT TIME ANALYSIS ===
+Kubernetes median wait time: 0.000s
+HPST median wait time: 0.000s
+Wait time improvement: 0.0%
+
+=== REVISED HYPOTHESIS RESULT ===
+🎉 UNEXPECTED RESULT: HPST saves 17.3% infrastructure power
+   and -7.9% workload efficiency
+   AND improves median response times by 5.6%!
+   This suggests HPST strategy is superior in both dimensions
+🔍 DEEP ANALYSIS: Understanding Why HPST Compares to Kubernetes
+
+=== NODE DISTRIBUTION ANALYSIS ===
+Kubernetes uses 60 unique nodes
+HPST uses 120 unique nodes
+Node spreading difference: -60
+
+Kubernetes node load distribution:
+  Average replicas per node: 27.4
+  Max replicas on one node: 128
+  Min replicas on one node: 4
+
+HPST node load distribution:
+  Average replicas per node: 25.3
+  Max replicas on one node: 75
+  Min replicas on one node: 4
+
+Consolidation factor: 0.92
+➡️ Similar distribution patterns
+=== COLD START ANALYSIS ===
+Kubernetes scheduling success rate: 1.0
+HPST scheduling success rate: 0.644535240040858
+
+Cold start execution times:
+Kubernetes early median t_exec: 0.910s
+HPST early median t_exec: 0.910s
+✅ HPST has 0.1% faster cold starts
+
+Total scheduling events:
+Kubernetes: 1005 scheduling events
+HPST: 2937 scheduling events
+=== WORKLOAD-SPECIFIC PERFORMANCE ===
+
+resnet50-inference (6942 vs 6937 samples):
+  Median: Kubernetes=0.669s, HPST=0.699s (+4.6%)
+  P95: Kubernetes=0.834s, HPST=5.222s (+526.5%)
+
+fio (174 vs 1119 samples):
+  Median: Kubernetes=291.657s, HPST=208.168s (-28.6%)
+  P95: Kubernetes=544.485s, HPST=507.625s (-6.8%)
+
+speech-inference (1648 vs 1647 samples):
+  Median: Kubernetes=3.822s, HPST=3.841s (+0.5%)
+  P95: Kubernetes=22.004s, HPST=30.589s (+39.0%)
+
+python-pi (8663 vs 8666 samples):
+  Median: Kubernetes=0.938s, HPST=0.926s (-1.3%)
+  P95: Kubernetes=34.044s, HPST=13.221s (-61.2%)
+=== SCALING DECISION ANALYSIS ===
+Kubernetes scaling actions:
+  Scale up: 318
+  Scale down: 842
+  No action: 903
+  Total actions: 1160
+
+HPST scaling actions:
+  Scale up: 618
+  Scale down: 937
+  No action: 519
+  Total actions: 1555
+
+High response time events (>1s):
+Kubernetes: 230 events
+HPST: 256 events
+
+Node type selection frequency:
+Kubernetes preferences:
+  nuc: 235
+  rockpi: 54
+  nx: 29
+HPST preferences:
+  nuc: 346
+  nx: 272
+=== RESOURCE CONTENTION ANALYSIS ===
+Kubernetes average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.044262     0.036885
+nano       0.096586     0.072439
+nuc        0.120000     0.100000
+nx         0.131821     0.094911
+rockpi     0.069529     0.057941
+rpi3       0.086721     0.072268
+
+HPST average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.007869     0.006557
+nano       0.014901     0.011176
+nuc        0.011344     0.009454
+nx         0.020755     0.014944
+rockpi     0.011797     0.009831
+rpi3       0.014366     0.011972
+
+High CPU utilization events (>90%):
+Kubernetes: 0 events
+HPST: 0 events
+
+Average power per active node:
+Kubernetes: 3.74W
+HPST: 3.09W
+
+==================================================
+HYPOTHESIS VALIDATION SUMMARY
+==================================================
+✅ H2: HPST has faster cold start performance
+
+============================================================
+🔍 DETAILED WORKLOAD ANALYSIS VALIDATION
+==================================================
+
+📊 Kubernetes Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 730 replicas × 3.35W = 2448.0W
+  nano: 319 replicas × 2.33W = 744.7W
+  rpi3: 296 replicas × 2.33W = 689.6W
+  nx: 284 replicas × 7.75W = 2201.7W
+  coral: 13 replicas × 2.63W = 34.2W
+
+Kubernetes Summary:
+  Total replicas: 1642
+  Total workload power: 5156.3W
+  Average efficiency: 3.140W per replica
+  Unique nodes used: 18
+
+📊 HPST Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 1243 replicas × 3.06W = 3803.5W
+  rpi3: 965 replicas × 2.14W = 2063.2W
+  nx: 409 replicas × 5.43W = 2222.2W
+  nano: 206 replicas × 1.97W = 405.2W
+  coral: 119 replicas × 2.52W = 300.3W
+  nuc: 95 replicas × 15.60W = 1482.0W
+
+HPST Summary:
+  Total replicas: 3037
+  Total workload power: 10286.4W
+  Average efficiency: 3.387W per replica
+  Unique nodes used: 29
+
+🎯 COMPARATIVE ANALYSIS:
+Workload efficiency improvement: -7.9%
+Total workload power reduction: -99.5%
+Replica count difference: 1642 vs 3037
+
+✅ VALIDATION CHECKS:
+✗ Kubernetes has better energy efficiency per replica
+✗ Kubernetes uses less total workload power
+
+=== SUMMARY ===
+Infrastructure power savings: 17.3%
+Workload efficiency improvement: -7.9%
+Performance trade-off: -5.6% response time penalty
+Plot saved as tradeoff_plot.png
