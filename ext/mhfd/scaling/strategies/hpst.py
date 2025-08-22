@@ -79,44 +79,88 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
         return "no_action"
     
     def select_node_for_scaling(self, deployment_name: str) -> Optional[Any]:
-        """Performance-optimized: Select highest-performance available node"""
+        """Performance-optimized: Select highest-performance available node - AVOID LOW-POWER DEVICES"""
         
         available_nodes = self.get_available_nodes()
         
         # Sort nodes by performance (highest performance first)
         performance_ranked_nodes = self.rank_nodes_by_performance(available_nodes, deployment_name)
         
-        for node, performance_score in performance_ranked_nodes:
-            if self.has_sufficient_resources(node, deployment_name):
-                estimated_exec_time = self.estimate_execution_time(node, deployment_name)
-                estimated_power = self.estimate_node_power_consumption(node, deployment_name)
-                
-                logger.info(f"⚡ PerformanceOptimized: Selected {node.name} "
-                           f"(performance rank: {performance_score}, "
-                           f"estimated exec time: {estimated_exec_time:.1f}ms, "
-                           f"power cost: {estimated_power:.1f}W)")
-                return node
+        # Track attempts for debugging
+        high_power_attempts = []
         
-        logger.warning("❌ PerformanceOptimized: No high-performance nodes available")
+        # First pass: Only try high-power devices (>5W)
+        for node, performance_score in performance_ranked_nodes:
+            node_type = self.extract_node_type(node.name)
+            
+            if node_type in ['xeongpu', 'xeoncpu', 'nuc', 'nx', 'tx2']:  # High-power devices only
+                if self.has_sufficient_resources(node, deployment_name):
+                    estimated_exec_time = self.estimate_execution_time(node, deployment_name)
+                    estimated_power = self.estimate_node_power_consumption(node, deployment_name)
+                    
+                    logger.info(f"⚡ HPST: Selected HIGH-POWER {node.name} "
+                               f"(type: {node_type}, performance rank: {performance_score}, "
+                               f"estimated exec time: {estimated_exec_time:.1f}ms, "
+                               f"power cost: {estimated_power:.1f}W)")
+                    return node
+                else:
+                    utilization = self.get_node_utilization(node)
+                    high_power_attempts.append(f"{node.name}({node_type}): CPU={utilization.get('cpu', 0):.2f}")
+        
+        # Log why high-power devices were rejected
+        logger.warning(f"⚠️ HPST: All high-power devices busy for {deployment_name}. "
+                      f"Attempts: {high_power_attempts[:3]}")
+        
+        # Emergency fallback: Still prefer mid-power over low-power
+        emergency_order = ['nano', 'rockpi', 'coral', 'rpi4', 'rpi3']  # Least bad to worst
+        for preferred_type in emergency_order:
+            for node, performance_score in performance_ranked_nodes:
+                node_type = self.extract_node_type(node.name)
+                if node_type == preferred_type:
+                    # Relaxed resource check for emergency
+                    util = self.get_node_utilization(node)
+                    if util.get('cpu', 0) < 0.9 and util.get('memory', 0) < 0.9:
+                        logger.error(f"🚨 HPST EMERGENCY: Using low-power {node.name} ({node_type}) "
+                                   f"- no high-power devices available!")
+                        return node
+        
+        logger.error("❌ HPST: No nodes available at all - system overloaded!")
         return None
     
     def rank_nodes_by_performance(self, nodes: List[Any], deployment_name: str) -> List[Tuple[Any, int]]:
-        """Rank nodes by performance (higher is better)"""
+        """Rank nodes by performance (higher is better) - HPST strongly avoids low-power devices"""
         ranked_nodes = []
         
         for node in nodes:
             node_type = self.extract_node_type(node.name)
             base_performance = self.performance_ranking.get(node_type, 1)
             
+            # STRONG BIAS AGAINST LOW-POWER DEVICES (this is the key fix)
+            # HPST should heavily penalize rockpi and rpi3 to force high-power device usage
+            if node_type in ['rpi3', 'rpi4']:
+                base_performance -= 15  # Heavy penalty for RPi devices
+            elif node_type in ['rockpi', 'coral']:
+                base_performance -= 10  # Strong penalty for other low-power devices
+            elif node_type in ['nano']:
+                base_performance -= 5   # Moderate penalty for nano
+            
+            # STRONG BOOST FOR HIGH-POWER DEVICES
+            if node_type in ['xeongpu', 'xeoncpu']:
+                base_performance += 10  # Major boost for server-grade hardware
+            elif node_type in ['nuc', 'nx']:
+                base_performance += 5   # Good boost for mid-range high-power devices
+            elif node_type in ['tx2']:
+                base_performance += 2   # Small boost for moderate-power devices
+            
             # Boost ranking for GPU-capable nodes if deployment needs GPU
             if 'gpu' in deployment_name.lower() or 'inference' in deployment_name.lower():
                 if node_type in ['xeongpu', 'nx', 'tx2', 'nano']:
-                    base_performance += 2  # Bonus for GPU capability
+                    base_performance += 3  # Bonus for GPU capability
             
             # Boost ranking for training workloads on high-CPU nodes
             if 'training' in deployment_name.lower():
                 if node_type in ['xeoncpu', 'xeongpu', 'nuc']:
-                    base_performance += 3  # Bonus for high CPU
+                    base_performance += 5  # Bonus for high CPU
             
             ranked_nodes.append((node, base_performance))
         
@@ -215,20 +259,50 @@ class HighPerformanceShortTimeBinPacker(BaseAutoscaler):
                        for keyword in ['registry', 'link', 'switch', 'shared']))
     
     def has_sufficient_resources(self, node, deployment_name: str) -> bool:
-        """Check if node has sufficient resources (strict for performance)"""
+        """Enhanced resource check with graduated preferences instead of absolute rejection"""
         try:
             current_utilization = self.get_node_utilization(node)
-            
-            # Strict resource thresholds for performance
-            cpu_available = current_utilization.get('cpu', 0) < 0.7   # 70% CPU threshold
-            memory_available = current_utilization.get('memory', 0) < 0.7  # 70% memory threshold
-            
-            # Reserve high-performance nodes for performance-critical tasks
             node_type = self.extract_node_type(node.name)
-            if node_type in ['xeongpu', 'xeoncpu'] and current_utilization.get('cpu', 0) > 0.5:
-                return False  # Reserve high-end nodes
+            
+            # Base thresholds
+            base_cpu_threshold = 0.7
+            base_memory_threshold = 0.7
+            
+            # GRADUATED PENALTIES instead of absolute rejection
+            if node_type in ['xeongpu', 'xeoncpu']:
+                # Prefer server-grade: Lower thresholds (easier to qualify)
+                cpu_threshold = 0.8
+                memory_threshold = 0.8
+            elif node_type in ['nuc', 'nx']:
+                # Good high-power devices: Standard thresholds  
+                cpu_threshold = base_cpu_threshold
+                memory_threshold = base_memory_threshold
+            elif node_type in ['tx2']:
+                # Moderate devices: Slightly higher thresholds
+                cpu_threshold = 0.6
+                memory_threshold = 0.6
+            elif node_type in ['rockpi', 'nano']:
+                # Acceptable low-power: Higher thresholds (harder to qualify)
+                cpu_threshold = 0.4
+                memory_threshold = 0.4
+            elif node_type in ['coral']:
+                # Specialized devices: Very specific use
+                cpu_threshold = 0.3
+                memory_threshold = 0.3
+            else:  # rpi3, rpi4
+                # Last resort: Very strict thresholds
+                cpu_threshold = 0.2
+                memory_threshold = 0.2
+            
+            cpu_available = current_utilization.get('cpu', 0) < cpu_threshold
+            memory_available = current_utilization.get('memory', 0) < memory_threshold
+            
+            logger.debug(f"🔍 HPST: {node.name} ({node_type}) - "
+                        f"CPU: {current_utilization.get('cpu', 0):.2f} < {cpu_threshold} = {cpu_available}, "
+                        f"Memory: {current_utilization.get('memory', 0):.2f} < {memory_threshold} = {memory_available}")
             
             return cpu_available and memory_available
+            
         except:
             return True
     

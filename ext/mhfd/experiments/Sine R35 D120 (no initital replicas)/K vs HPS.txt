@@ -1,0 +1,222 @@
+=== RUNNING HYPOTHESIS TEST ===
+Hypothesis: Kubernetes reduces power consumption vs HPST baseline, but increases response times
+
+=== POWER CONSUMPTION COMPARISON ===
+ TOTAL INFRASTRUCTURE POWER:
+HPST average total system power: 384.3W
+Kubernetes average total system power: 448.0W
+Infrastructure power savings: -16.6%
+
+=== PERFORMANCE COMPARISON ===
+HPST MEDIAN response time: 5668.118s
+Kubernetes MEDIAN response time: 18152.616s
+MEDIAN performance penalty: 220.3%
+HPST 95th percentile: 146899.316s
+Kubernetes 95th percentile: 376882.800s
+95th percentile penalty: 156.6%
+HPST warm-up avg: 30078.119s
+Kubernetes warm-up avg: 74932.937s
+Warm-up performance penalty: 149.1%
+
+=== WAIT TIME ANALYSIS ===
+HPST median wait time: 349.316s
+Kubernetes median wait time: 15648.979s
+Wait time improvement: -4379.9%
+
+=== REVISED HYPOTHESIS RESULT ===
+❌ HYPOTHESIS NOT CONFIRMED
+   Power savings: -16.6%
+
+============================================================
+🔋 REAL INFRASTRUCTURE POWER ANALYSIS (FIXED)
+==================================================
+HPST power data: 72600 measurements
+LPLT power data: 72600 measurements
+HPST unique nodes: 120
+LPLT unique nodes: 120
+HPST time range: 1.0 - 605.0
+LPLT time range: 1.0 - 605.0
+
+📊  SYSTEM POWER:
+HPST average total system power: 384.3W
+Kubernetes average total system power: 448.0W
+Infrastructure power savings: -16.6%
+
+📊 POWER DISTRIBUTION:
+
+HPST power by node type:
+  coral: 4 nodes, avg 2.5W, total 9.8W
+  nano: 29 nodes, avg 2.0W, total 57.7W
+  nuc: 3 nodes, avg 8.7W, total 26.2W
+  nx: 14 nodes, avg 7.9W, total 111.1W
+  rockpi: 34 nodes, avg 3.6W, total 121.7W
+  rpi3: 36 nodes, avg 1.6W, total 57.9W
+
+Kubernetes power by node type:
+  coral: 4 nodes, avg 2.7W, total 10.6W
+  nano: 29 nodes, avg 2.5W, total 71.6W
+  nuc: 3 nodes, avg 9.8W, total 29.3W
+  nx: 14 nodes, avg 10.5W, total 146.5W
+  rockpi: 34 nodes, avg 3.8W, total 127.9W
+  rpi3: 36 nodes, avg 1.7W, total 62.1W
+
+⚡ TOTAL ENERGY CONSUMPTION:
+Simulation duration: 0.17 hours
+HPST: 64.5 Wh
+Kubernetes: 75.2 Wh
+Energy savings: -16.6%
+
+🔍 SANITY CHECKS:
+🔍 DEEP ANALYSIS: Understanding Why Kubernetes Compares to HPST
+
+=== NODE DISTRIBUTION ANALYSIS ===
+HPST uses 98 unique nodes
+Kubernetes uses 53 unique nodes
+Node spreading difference: 45
+
+HPST node load distribution:
+  Average replicas per node: 11.7
+  Max replicas on one node: 40
+  Min replicas on one node: 4
+
+Kubernetes node load distribution:
+  Average replicas per node: 13.1
+  Max replicas on one node: 35
+  Min replicas on one node: 4
+
+Consolidation factor: 1.12
+➡️ Similar distribution patterns
+=== COLD START ANALYSIS ===
+HPST scheduling success rate: 0.966804979253112
+Kubernetes scheduling success rate: 1.0
+
+Cold start execution times:
+HPST early median t_exec: 1.599s
+Kubernetes early median t_exec: 2.015s
+
+Total scheduling events:
+HPST: 724 scheduling events
+Kubernetes: 423 scheduling events
+=== WORKLOAD-SPECIFIC PERFORMANCE ===
+
+resnet50-inference (2512 vs 2512 samples):
+  Median: HPST=0.678s, Kubernetes=0.682s (+0.5%)
+  P95: HPST=1.764s, Kubernetes=2.296s (+30.2%)
+
+fio (2684 vs 2089 samples):
+  Median: HPST=192.475s, Kubernetes=198.682s (+3.2%)
+  P95: HPST=481.767s, Kubernetes=493.864s (+2.5%)
+
+speech-inference (706 vs 706 samples):
+  Median: HPST=9.940s, Kubernetes=47.320s (+376.0%)
+  P95: HPST=104.052s, Kubernetes=205.213s (+97.2%)
+
+python-pi (6447 vs 6447 samples):
+  Median: HPST=0.924s, Kubernetes=0.926s (+0.2%)
+  P95: HPST=25.307s, Kubernetes=26.077s (+3.0%)
+=== SCALING DECISION ANALYSIS ===
+HPST scaling actions:
+  Scale up: 228
+  Scale down: 432
+  No action: 65
+  Total actions: 660
+
+Kubernetes scaling actions:
+  Scale up: 135
+  Scale down: 404
+  No action: 187
+  Total actions: 539
+
+High response time events (>1s):
+HPST: 44 events
+Kubernetes: 51 events
+
+Node type selection frequency:
+HPST preferences:
+  nuc: 181
+  nx: 47
+Kubernetes preferences:
+  rockpi: 66
+  nuc: 49
+  nx: 20
+=== RESOURCE CONTENTION ANALYSIS ===
+HPST average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.012446     0.010372
+nano       0.017372     0.013029
+nuc        0.087339     0.072782
+nx         0.024262     0.017469
+rockpi     0.051722     0.043102
+rpi3       0.050402     0.042002
+
+Kubernetes average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.061736     0.051446
+nano       0.112203     0.084152
+nuc        0.120000     0.100000
+nx         0.149528     0.107660
+rockpi     0.076655     0.063879
+rpi3       0.079036     0.065863
+
+High CPU utilization events (>90%):
+HPST: 0 events
+Kubernetes: 0 events
+
+Average power per active node:
+HPST: 3.20W
+Kubernetes: 3.73W
+
+==================================================
+HYPOTHESIS VALIDATION SUMMARY
+==================================================
+✅ H3: Kubernetes scales more conservatively (less churn)
+
+============================================================
+🔍 DETAILED WORKLOAD ANALYSIS VALIDATION
+==================================================
+
+📊 HPST Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 365 replicas × 3.58W = 1306.4W
+  rpi3: 318 replicas × 1.61W = 511.3W
+  nano: 242 replicas × 1.99W = 481.1W
+  nx: 195 replicas × 7.93W = 1547.3W
+  coral: 24 replicas × 2.45W = 58.8W
+  nuc: 5 replicas × 8.74W = 43.7W
+
+HPST Summary:
+  Total replicas: 1149
+  Total workload power: 3816.4W
+  Average efficiency: 3.322W per replica
+  Unique nodes used: 12
+
+📊 Kubernetes Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 286 replicas × 3.76W = 1076.0W
+  rpi3: 203 replicas × 1.73W = 350.4W
+  nx: 116 replicas × 10.46W = 1213.8W
+  nano: 79 replicas × 2.47W = 195.0W
+  coral: 10 replicas × 2.65W = 26.5W
+
+Kubernetes Summary:
+  Total replicas: 694
+  Total workload power: 2350.8W
+  Average efficiency: 3.387W per replica
+  Unique nodes used: 10
+
+🎯 COMPARATIVE ANALYSIS:
+Workload efficiency improvement: -2.0%
+Total workload power reduction: 38.4%
+Replica count difference: 1149 vs 694
+
+✅ VALIDATION CHECKS:
+✗ HPST has better energy efficiency per replica
+✓ Kubernetes uses less total workload power
+
+=== SUMMARY ===
+Infrastructure power savings: -16.6%
+Real infrastructure power savings: -16.6%
+Performance trade-off: 220.3% response time penalty
+Plot saved as tradeoff_plot.png

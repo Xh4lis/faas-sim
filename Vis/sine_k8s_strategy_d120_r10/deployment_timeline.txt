@@ -1,0 +1,1182 @@
+FUNCTION DEPLOYMENT TIMELINE
+============================
+
+Report generated: 2025-08-22 11:16:02
+
+Total deployment events: 235
+Number of node-function combinations: 48
+
+Event Type Summary:
+  Deployment events: 6
+  Replica events: 191
+  Network events: 38
+
+CHRONOLOGICAL TIMELINE
+======================
+
+t=   0.0s | deployment | global               | resnet50-inference        | deploy resnet50-inference
+t=   0.0s | deployment | global               | speech-inference          | deploy speech-inference
+t=   0.0s | deployment | global               | resnet50-preprocessing    | deploy resnet50-preprocessing
+t=   0.0s | deployment | global               | resnet50-training         | deploy resnet50-training
+t=   0.0s | deployment | global               | python-pi                 | deploy python-pi
+t=   0.0s | deployment | global               | fio                       | deploy fio
+t=   0.0s | replica    | nx_10                | resnet50-inference        | deploy replica of resnet50-inference
+t=   1.0s | replica    | rockpi_30            | speech-inference          | deploy replica of speech-inference
+t=   2.0s | replica    | rockpi_30            | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t=   2.0s | network    | registry → rpi3_3    | unknown                   | docker_pull (19.1 MB)
+t=   2.1s | network    | registry → rockpi_8  | unknown                   | docker_pull (59.1 MB)
+t=   2.2s | network    | registry → rockpi_30 | unknown                   | docker_pull (38.1 MB)
+t=   2.3s | network    | registry → nx_10     | unknown                   | docker_pull (95.4 MB)
+t=   2.4s | network    | registry → nano_3    | unknown                   | docker_pull (95.4 MB)
+t=   2.5s | network    | rockpi_23 → rockpi_30 | unknown                   | data_download (45.8 MB)
+t=   2.6s | network    | rockpi_23 → nx_10    | unknown                   | data_download (98.2 MB)
+t=   2.7s | network    | registry → rockpi_30 | unknown                   | docker_pull (182.2 MB)
+t=   2.8s | network    | rockpi_23 → nano_3   | unknown                   | data_download (55.3 MB)
+t=   2.9s | network    | rockpi_23 → nano_3   | unknown                   | data_download (55.3 MB)
+t=   3.0s | replica    | nano_3               | resnet50-training         | deploy replica of resnet50-training
+t=   3.0s | network    | rockpi_23 → nano_3   | unknown                   | data_download (55.3 MB)
+t=   3.1s | network    | rockpi_23 → nano_3   | unknown                   | data_download (55.3 MB)
+t=   3.2s | network    | registry → nx_10     | unknown                   | docker_pull (59.1 MB)
+t=   3.3s | network    | registry → coral_1   | unknown                   | docker_pull (38.1 MB)
+t=   3.4s | network    | registry → coral_3   | unknown                   | docker_pull (59.1 MB)
+t=   3.5s | network    | rockpi_23 → coral_1  | unknown                   | data_download (45.8 MB)
+t=   3.6s | network    | registry → rpi3_4    | unknown                   | docker_pull (31.5 MB)
+t=   3.7s | network    | registry → rpi3_5    | unknown                   | docker_pull (52.5 MB)
+t=   3.8s | network    | rockpi_23 → rpi3_4   | unknown                   | data_download (45.8 MB)
+t=   3.9s | network    | rockpi_23 → rpi3_4   | unknown                   | data_download (45.8 MB)
+t=   4.0s | replica    | rockpi_8             | python-pi                 | deploy replica of python-pi
+t=   4.0s | network    | registry → rockpi_13 | unknown                   | docker_pull (59.1 MB)
+t=   4.1s | network    | registry → rockpi_13 | unknown                   | docker_pull (182.2 MB)
+t=   4.2s | network    | registry → nx_3      | unknown                   | docker_pull (38.1 MB)
+t=   4.3s | network    | registry → nx_3      | unknown                   | docker_pull (59.1 MB)
+t=   4.4s | network    | rockpi_23 → nx_3     | unknown                   | data_download (45.8 MB)
+t=   4.5s | network    | rockpi_23 → rpi3_4   | unknown                   | data_download (45.8 MB)
+t=   4.6s | network    | registry → nx_3      | unknown                   | docker_pull (182.2 MB)
+t=   4.7s | network    | registry → rockpi_12 | unknown                   | docker_pull (38.1 MB)
+t=   4.8s | network    | rockpi_23 → rockpi_12 | unknown                   | data_download (45.8 MB)
+t=   4.9s | network    | registry → coral_3   | unknown                   | docker_pull (38.1 MB)
+t=   5.0s | replica    | rpi3_3               | fio                       | deploy replica of fio
+t=   5.0s | network    | rockpi_23 → coral_3  | unknown                   | data_download (45.8 MB)
+t=   5.1s | network    | registry → rpi3_4    | unknown                   | docker_pull (130.7 MB)
+t=   5.2s | network    | registry → nx_10     | unknown                   | docker_pull (182.2 MB)
+t=   5.3s | network    | registry → rpi3_4    | unknown                   | docker_pull (52.5 MB)
+t=   5.4s | network    | nano_3 → rockpi_23   | unknown                   | data_upload (98.2 MB)
+t=   5.5s | network    | rockpi_23 → nano_3   | unknown                   | data_download (55.3 MB)
+t=   5.6s | network    | nano_3 → rockpi_23   | unknown                   | data_upload (98.2 MB)
+t=   5.7s | network    | rockpi_23 → nano_3   | unknown                   | data_download (55.3 MB)
+t=   6.0s | replica    | rpi3_3               | fio                       | startup replica of fio
+t=   7.0s | replica    | rpi3_3               | fio                       | setup replica of fio
+t=   8.0s | replica    | rpi3_3               | fio                       | finish replica of fio
+t=   9.0s | replica    | rockpi_8             | python-pi                 | startup replica of python-pi
+t=  10.0s | replica    | rockpi_8             | python-pi                 | setup replica of python-pi
+t=  11.0s | replica    | rockpi_8             | python-pi                 | finish replica of python-pi
+t=  12.0s | replica    | rockpi_30            | speech-inference          | startup replica of speech-inference
+t=  13.0s | replica    | rockpi_30            | speech-inference          | setup replica of speech-inference
+t=  14.0s | replica    | nx_10                | resnet50-inference        | startup replica of resnet50-inference
+t=  15.0s | replica    | nx_10                | resnet50-inference        | setup replica of resnet50-inference
+t=  16.0s | replica    | nano_3               | resnet50-training         | startup replica of resnet50-training
+t=  17.0s | replica    | nano_3               | resnet50-training         | setup replica of resnet50-training
+t=  18.0s | replica    | nano_3               | resnet50-training         | finish replica of resnet50-training
+t=  19.0s | replica    | rockpi_30            | speech-inference          | finish replica of speech-inference
+t=  20.0s | replica    | nx_10                | resnet50-inference        | finish replica of resnet50-inference
+t=  21.0s | replica    | rockpi_30            | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t=  22.0s | replica    | rockpi_30            | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t=  23.0s | replica    | rockpi_30            | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t=  24.0s | replica    | rockpi_8             | python-pi                 | deploy replica of python-pi
+t=  25.0s | replica    | rockpi_8             | python-pi                 | startup replica of python-pi
+t=  26.0s | replica    | rockpi_8             | python-pi                 | setup replica of python-pi
+t=  27.0s | replica    | rockpi_8             | python-pi                 | finish replica of python-pi
+t=  28.0s | replica    | nx_10                | python-pi                 | deploy replica of python-pi
+t=  29.0s | replica    | nx_10                | python-pi                 | startup replica of python-pi
+t=  30.0s | replica    | nx_10                | python-pi                 | setup replica of python-pi
+t=  31.0s | replica    | nx_10                | python-pi                 | finish replica of python-pi
+t=  32.0s | replica    | coral_1              | speech-inference          | deploy replica of speech-inference
+t=  33.0s | replica    | coral_3              | python-pi                 | deploy replica of python-pi
+t=  34.0s | replica    | coral_1              | speech-inference          | startup replica of speech-inference
+t=  35.0s | replica    | coral_1              | speech-inference          | setup replica of speech-inference
+t=  36.0s | replica    | coral_3              | python-pi                 | startup replica of python-pi
+t=  37.0s | replica    | coral_3              | python-pi                 | setup replica of python-pi
+t=  38.0s | replica    | coral_3              | python-pi                 | finish replica of python-pi
+t=  39.0s | replica    | coral_1              | speech-inference          | finish replica of speech-inference
+t=  40.0s | replica    | rpi3_4               | speech-inference          | deploy replica of speech-inference
+t=  41.0s | replica    | rpi3_5               | python-pi                 | deploy replica of python-pi
+t=  42.0s | replica    | rpi3_4               | speech-inference          | startup replica of speech-inference
+t=  43.0s | replica    | rpi3_4               | speech-inference          | setup replica of speech-inference
+t=  44.0s | replica    | rpi3_5               | python-pi                 | startup replica of python-pi
+t=  45.0s | replica    | rpi3_5               | python-pi                 | setup replica of python-pi
+t=  46.0s | replica    | rpi3_5               | python-pi                 | finish replica of python-pi
+t=  47.0s | replica    | rpi3_4               | speech-inference          | finish replica of speech-inference
+t=  48.0s | replica    | rpi3_4               | speech-inference          | teardown replica of speech-inference
+t=  49.0s | replica    | rpi3_4               | speech-inference          | deploy replica of speech-inference
+t=  50.0s | replica    | rpi3_4               | speech-inference          | startup replica of speech-inference
+t=  51.0s | replica    | rpi3_4               | speech-inference          | setup replica of speech-inference
+t=  52.0s | replica    | rockpi_13            | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t=  53.0s | replica    | rockpi_13            | python-pi                 | deploy replica of python-pi
+t=  54.0s | replica    | rpi3_4               | speech-inference          | finish replica of speech-inference
+t=  55.0s | replica    | rockpi_13            | python-pi                 | startup replica of python-pi
+t=  56.0s | replica    | rockpi_13            | python-pi                 | setup replica of python-pi
+t=  57.0s | replica    | rockpi_13            | python-pi                 | finish replica of python-pi
+t=  58.0s | replica    | rockpi_13            | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t=  59.0s | replica    | rockpi_13            | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t=  60.0s | replica    | rockpi_13            | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t=  61.0s | replica    | nx_3                 | speech-inference          | deploy replica of speech-inference
+t=  62.0s | replica    | nx_3                 | python-pi                 | deploy replica of python-pi
+t=  63.0s | replica    | nx_3                 | speech-inference          | startup replica of speech-inference
+t=  64.0s | replica    | nx_3                 | speech-inference          | setup replica of speech-inference
+t=  65.0s | replica    | nx_3                 | python-pi                 | startup replica of python-pi
+t=  66.0s | replica    | nx_3                 | python-pi                 | setup replica of python-pi
+t=  67.0s | replica    | nx_3                 | python-pi                 | finish replica of python-pi
+t=  68.0s | replica    | nx_3                 | speech-inference          | finish replica of speech-inference
+t=  69.0s | replica    | nx_3                 | speech-inference          | teardown replica of speech-inference
+t=  70.0s | replica    | rpi3_4               | speech-inference          | teardown replica of speech-inference
+t=  71.0s | replica    | nx_3                 | python-pi                 | teardown replica of python-pi
+t=  72.0s | replica    | rpi3_4               | speech-inference          | deploy replica of speech-inference
+t=  73.0s | replica    | rpi3_4               | speech-inference          | startup replica of speech-inference
+t=  74.0s | replica    | rpi3_4               | speech-inference          | setup replica of speech-inference
+t=  75.0s | replica    | nx_3                 | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t=  76.0s | replica    | nx_3                 | python-pi                 | deploy replica of python-pi
+t=  77.0s | replica    | nx_3                 | python-pi                 | startup replica of python-pi
+t=  78.0s | replica    | nx_3                 | python-pi                 | setup replica of python-pi
+t=  79.0s | replica    | nx_3                 | python-pi                 | finish replica of python-pi
+t=  80.0s | replica    | rpi3_4               | speech-inference          | finish replica of speech-inference
+t=  81.0s | replica    | nx_3                 | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t=  82.0s | replica    | nx_3                 | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t=  83.0s | replica    | nx_3                 | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t=  84.0s | replica    | nx_3                 | resnet50-preprocessing    | teardown replica of resnet50-preprocessing
+t=  85.0s | replica    | rockpi_12            | speech-inference          | deploy replica of speech-inference
+t=  86.0s | replica    | nx_3                 | python-pi                 | deploy replica of python-pi
+t=  87.0s | replica    | nx_3                 | python-pi                 | startup replica of python-pi
+t=  88.0s | replica    | nx_3                 | python-pi                 | setup replica of python-pi
+t=  89.0s | replica    | nx_3                 | python-pi                 | finish replica of python-pi
+t=  90.0s | replica    | rockpi_12            | speech-inference          | startup replica of speech-inference
+t=  91.0s | replica    | rockpi_12            | speech-inference          | setup replica of speech-inference
+t=  92.0s | replica    | rockpi_12            | speech-inference          | finish replica of speech-inference
+t=  93.0s | replica    | rockpi_12            | speech-inference          | teardown replica of speech-inference
+t=  94.0s | replica    | nx_3                 | python-pi                 | teardown replica of python-pi
+t=  95.0s | replica    | rpi3_4               | speech-inference          | teardown replica of speech-inference
+t=  96.0s | replica    | nx_3                 | python-pi                 | teardown replica of python-pi
+t=  97.0s | replica    | rockpi_13            | python-pi                 | teardown replica of python-pi
+t=  98.0s | replica    | rpi3_5               | python-pi                 | teardown replica of python-pi
+t=  99.0s | replica    | coral_3              | python-pi                 | teardown replica of python-pi
+t= 100.0s | replica    | coral_3              | speech-inference          | deploy replica of speech-inference
+t= 101.0s | replica    | rpi3_4               | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t= 102.0s | replica    | rpi3_5               | python-pi                 | deploy replica of python-pi
+t= 103.0s | replica    | rpi3_5               | python-pi                 | startup replica of python-pi
+t= 104.0s | replica    | rpi3_5               | python-pi                 | setup replica of python-pi
+t= 105.0s | replica    | rpi3_5               | python-pi                 | finish replica of python-pi
+t= 106.0s | replica    | coral_3              | speech-inference          | startup replica of speech-inference
+t= 107.0s | replica    | coral_3              | speech-inference          | setup replica of speech-inference
+t= 108.0s | replica    | coral_3              | speech-inference          | finish replica of speech-inference
+t= 109.0s | replica    | rpi3_4               | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t= 110.0s | replica    | rpi3_4               | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t= 111.0s | replica    | rpi3_4               | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t= 112.0s | replica    | coral_3              | speech-inference          | teardown replica of speech-inference
+t= 113.0s | replica    | rpi3_4               | resnet50-preprocessing    | teardown replica of resnet50-preprocessing
+t= 114.0s | replica    | coral_3              | python-pi                 | deploy replica of python-pi
+t= 115.0s | replica    | coral_3              | python-pi                 | startup replica of python-pi
+t= 116.0s | replica    | coral_3              | python-pi                 | setup replica of python-pi
+t= 117.0s | replica    | coral_3              | python-pi                 | finish replica of python-pi
+t= 118.0s | replica    | coral_3              | python-pi                 | teardown replica of python-pi
+t= 119.0s | replica    | rpi3_5               | python-pi                 | teardown replica of python-pi
+t= 120.0s | replica    | nx_10                | python-pi                 | teardown replica of python-pi
+t= 121.0s | replica    | nx_10                | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t= 122.0s | replica    | coral_3              | python-pi                 | deploy replica of python-pi
+t= 123.0s | replica    | coral_3              | python-pi                 | startup replica of python-pi
+t= 124.0s | replica    | coral_3              | python-pi                 | setup replica of python-pi
+t= 125.0s | replica    | coral_3              | python-pi                 | finish replica of python-pi
+t= 126.0s | replica    | nx_10                | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t= 127.0s | replica    | nx_10                | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t= 128.0s | replica    | nx_10                | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t= 129.0s | replica    | nx_10                | resnet50-preprocessing    | teardown replica of resnet50-preprocessing
+t= 130.0s | replica    | nx_10                | python-pi                 | deploy replica of python-pi
+t= 131.0s | replica    | nx_10                | python-pi                 | startup replica of python-pi
+t= 132.0s | replica    | nx_10                | python-pi                 | setup replica of python-pi
+t= 133.0s | replica    | nx_10                | python-pi                 | finish replica of python-pi
+t= 134.0s | replica    | nx_10                | python-pi                 | teardown replica of python-pi
+t= 135.0s | replica    | coral_3              | python-pi                 | teardown replica of python-pi
+t= 136.0s | replica    | nx_10                | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t= 137.0s | replica    | nx_10                | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t= 138.0s | replica    | nx_10                | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t= 139.0s | replica    | nx_10                | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t= 140.0s | replica    | coral_3              | python-pi                 | deploy replica of python-pi
+t= 141.0s | replica    | coral_3              | python-pi                 | startup replica of python-pi
+t= 142.0s | replica    | coral_3              | python-pi                 | setup replica of python-pi
+t= 143.0s | replica    | coral_3              | python-pi                 | finish replica of python-pi
+t= 144.0s | replica    | nx_10                | resnet50-preprocessing    | teardown replica of resnet50-preprocessing
+t= 145.0s | replica    | nx_10                | python-pi                 | deploy replica of python-pi
+t= 146.0s | replica    | nx_10                | python-pi                 | startup replica of python-pi
+t= 147.0s | replica    | nx_10                | python-pi                 | setup replica of python-pi
+t= 148.0s | replica    | nx_10                | python-pi                 | finish replica of python-pi
+t= 149.0s | replica    | rpi3_4               | resnet50-preprocessing    | deploy replica of resnet50-preprocessing
+t= 150.0s | replica    | rpi3_4               | resnet50-preprocessing    | startup replica of resnet50-preprocessing
+t= 151.0s | replica    | rpi3_4               | resnet50-preprocessing    | setup replica of resnet50-preprocessing
+t= 152.0s | replica    | rpi3_4               | resnet50-preprocessing    | finish replica of resnet50-preprocessing
+t= 153.0s | replica    | rpi3_5               | python-pi                 | deploy replica of python-pi
+t= 154.0s | replica    | rpi3_5               | python-pi                 | startup replica of python-pi
+t= 155.0s | replica    | rpi3_5               | python-pi                 | setup replica of python-pi
+t= 156.0s | replica    | rpi3_5               | python-pi                 | finish replica of python-pi
+t= 157.0s | replica    | rpi3_4               | resnet50-preprocessing    | teardown replica of resnet50-preprocessing
+t= 158.0s | replica    | rpi3_4               | python-pi                 | deploy replica of python-pi
+t= 159.0s | replica    | rpi3_4               | python-pi                 | startup replica of python-pi
+t= 160.0s | replica    | rpi3_4               | python-pi                 | setup replica of python-pi
+t= 161.0s | replica    | rpi3_4               | python-pi                 | finish replica of python-pi
+t= 162.0s | replica    | rockpi_13            | python-pi                 | deploy replica of python-pi
+t= 163.0s | replica    | rockpi_13            | python-pi                 | startup replica of python-pi
+t= 164.0s | replica    | rockpi_13            | python-pi                 | setup replica of python-pi
+t= 165.0s | replica    | rockpi_13            | python-pi                 | finish replica of python-pi
+t= 166.0s | replica    | nx_3                 | python-pi                 | deploy replica of python-pi
+t= 167.0s | replica    | nx_3                 | python-pi                 | startup replica of python-pi
+t= 168.0s | replica    | nx_3                 | python-pi                 | setup replica of python-pi
+t= 169.0s | replica    | nx_3                 | python-pi                 | finish replica of python-pi
+t= 170.0s | replica    | nx_3                 | python-pi                 | teardown replica of python-pi
+t= 171.0s | replica    | rockpi_13            | python-pi                 | teardown replica of python-pi
+t= 172.0s | replica    | rpi3_4               | python-pi                 | teardown replica of python-pi
+t= 173.0s | replica    | rpi3_4               | python-pi                 | deploy replica of python-pi
+t= 174.0s | replica    | rpi3_4               | python-pi                 | startup replica of python-pi
+t= 175.0s | replica    | rpi3_4               | python-pi                 | setup replica of python-pi
+t= 176.0s | replica    | rpi3_4               | python-pi                 | finish replica of python-pi
+t= 177.0s | replica    | rockpi_13            | python-pi                 | deploy replica of python-pi
+t= 178.0s | replica    | rockpi_13            | python-pi                 | startup replica of python-pi
+t= 179.0s | replica    | rockpi_13            | python-pi                 | setup replica of python-pi
+t= 180.0s | replica    | rockpi_13            | python-pi                 | finish replica of python-pi
+t= 181.0s | replica    | rockpi_13            | python-pi                 | teardown replica of python-pi
+t= 182.0s | replica    | rpi3_4               | python-pi                 | teardown replica of python-pi
+t= 183.0s | replica    | rpi3_5               | python-pi                 | teardown replica of python-pi
+t= 184.0s | replica    | nx_10                | python-pi                 | teardown replica of python-pi
+t= 185.0s | replica    | coral_3              | python-pi                 | teardown replica of python-pi
+t= 186.0s | replica    | nx_10                | python-pi                 | deploy replica of python-pi
+t= 187.0s | replica    | nx_10                | python-pi                 | startup replica of python-pi
+t= 188.0s | replica    | nx_10                | python-pi                 | setup replica of python-pi
+t= 189.0s | replica    | nx_10                | python-pi                 | finish replica of python-pi
+t= 190.0s | replica    | nx_10                | python-pi                 | teardown replica of python-pi
+
+GROUPED BY NODE-FUNCTION
+========================
+
+coral_1 - speech-inference:
+---------------------------
+  t=  32.0s - deploy replica of speech-inference [replica]
+  t=  34.0s - startup replica of speech-inference [replica]
+  t=  35.0s - setup replica of speech-inference [replica]
+  t=  39.0s - finish replica of speech-inference [replica]
+  Total events: 4
+
+coral_3 - python-pi:
+--------------------
+  t=  33.0s - deploy replica of python-pi [replica]
+  t=  36.0s - startup replica of python-pi [replica]
+  t=  37.0s - setup replica of python-pi [replica]
+  t=  38.0s - finish replica of python-pi [replica]
+  t=  99.0s - teardown replica of python-pi [replica]
+  t= 114.0s - deploy replica of python-pi [replica]
+  t= 115.0s - startup replica of python-pi [replica]
+  t= 116.0s - setup replica of python-pi [replica]
+  t= 117.0s - finish replica of python-pi [replica]
+  t= 118.0s - teardown replica of python-pi [replica]
+  t= 122.0s - deploy replica of python-pi [replica]
+  t= 123.0s - startup replica of python-pi [replica]
+  t= 124.0s - setup replica of python-pi [replica]
+  t= 125.0s - finish replica of python-pi [replica]
+  t= 135.0s - teardown replica of python-pi [replica]
+  t= 140.0s - deploy replica of python-pi [replica]
+  t= 141.0s - startup replica of python-pi [replica]
+  t= 142.0s - setup replica of python-pi [replica]
+  t= 143.0s - finish replica of python-pi [replica]
+  t= 185.0s - teardown replica of python-pi [replica]
+  Total events: 20
+
+coral_3 - speech-inference:
+---------------------------
+  t= 100.0s - deploy replica of speech-inference [replica]
+  t= 106.0s - startup replica of speech-inference [replica]
+  t= 107.0s - setup replica of speech-inference [replica]
+  t= 108.0s - finish replica of speech-inference [replica]
+  t= 112.0s - teardown replica of speech-inference [replica]
+  Total events: 5
+
+global - fio:
+-------------
+  t=   0.0s - deploy fio [deployment]
+  Total events: 1
+
+global - python-pi:
+-------------------
+  t=   0.0s - deploy python-pi [deployment]
+  Total events: 1
+
+global - resnet50-inference:
+----------------------------
+  t=   0.0s - deploy resnet50-inference [deployment]
+  Total events: 1
+
+global - resnet50-preprocessing:
+--------------------------------
+  t=   0.0s - deploy resnet50-preprocessing [deployment]
+  Total events: 1
+
+global - resnet50-training:
+---------------------------
+  t=   0.0s - deploy resnet50-training [deployment]
+  Total events: 1
+
+global - speech-inference:
+--------------------------
+  t=   0.0s - deploy speech-inference [deployment]
+  Total events: 1
+
+nano_3 - resnet50-training:
+---------------------------
+  t=   3.0s - deploy replica of resnet50-training [replica]
+  t=  16.0s - startup replica of resnet50-training [replica]
+  t=  17.0s - setup replica of resnet50-training [replica]
+  t=  18.0s - finish replica of resnet50-training [replica]
+  Total events: 4
+
+nano_3 → rockpi_23 - unknown:
+-----------------------------
+  t=   5.4s - data_upload (98.2 MB) [network]
+  t=   5.6s - data_upload (98.2 MB) [network]
+  Total events: 2
+
+nx_10 - python-pi:
+------------------
+  t=  28.0s - deploy replica of python-pi [replica]
+  t=  29.0s - startup replica of python-pi [replica]
+  t=  30.0s - setup replica of python-pi [replica]
+  t=  31.0s - finish replica of python-pi [replica]
+  t= 120.0s - teardown replica of python-pi [replica]
+  t= 130.0s - deploy replica of python-pi [replica]
+  t= 131.0s - startup replica of python-pi [replica]
+  t= 132.0s - setup replica of python-pi [replica]
+  t= 133.0s - finish replica of python-pi [replica]
+  t= 134.0s - teardown replica of python-pi [replica]
+  t= 145.0s - deploy replica of python-pi [replica]
+  t= 146.0s - startup replica of python-pi [replica]
+  t= 147.0s - setup replica of python-pi [replica]
+  t= 148.0s - finish replica of python-pi [replica]
+  t= 184.0s - teardown replica of python-pi [replica]
+  t= 186.0s - deploy replica of python-pi [replica]
+  t= 187.0s - startup replica of python-pi [replica]
+  t= 188.0s - setup replica of python-pi [replica]
+  t= 189.0s - finish replica of python-pi [replica]
+  t= 190.0s - teardown replica of python-pi [replica]
+  Total events: 20
+
+nx_10 - resnet50-inference:
+---------------------------
+  t=   0.0s - deploy replica of resnet50-inference [replica]
+  t=  14.0s - startup replica of resnet50-inference [replica]
+  t=  15.0s - setup replica of resnet50-inference [replica]
+  t=  20.0s - finish replica of resnet50-inference [replica]
+  Total events: 4
+
+nx_10 - resnet50-preprocessing:
+-------------------------------
+  t= 121.0s - deploy replica of resnet50-preprocessing [replica]
+  t= 126.0s - startup replica of resnet50-preprocessing [replica]
+  t= 127.0s - setup replica of resnet50-preprocessing [replica]
+  t= 128.0s - finish replica of resnet50-preprocessing [replica]
+  t= 129.0s - teardown replica of resnet50-preprocessing [replica]
+  t= 136.0s - deploy replica of resnet50-preprocessing [replica]
+  t= 137.0s - startup replica of resnet50-preprocessing [replica]
+  t= 138.0s - setup replica of resnet50-preprocessing [replica]
+  t= 139.0s - finish replica of resnet50-preprocessing [replica]
+  t= 144.0s - teardown replica of resnet50-preprocessing [replica]
+  Total events: 10
+
+nx_3 - python-pi:
+-----------------
+  t=  62.0s - deploy replica of python-pi [replica]
+  t=  65.0s - startup replica of python-pi [replica]
+  t=  66.0s - setup replica of python-pi [replica]
+  t=  67.0s - finish replica of python-pi [replica]
+  t=  71.0s - teardown replica of python-pi [replica]
+  t=  76.0s - deploy replica of python-pi [replica]
+  t=  77.0s - startup replica of python-pi [replica]
+  t=  78.0s - setup replica of python-pi [replica]
+  t=  79.0s - finish replica of python-pi [replica]
+  t=  86.0s - deploy replica of python-pi [replica]
+  t=  87.0s - startup replica of python-pi [replica]
+  t=  88.0s - setup replica of python-pi [replica]
+  t=  89.0s - finish replica of python-pi [replica]
+  t=  94.0s - teardown replica of python-pi [replica]
+  t=  96.0s - teardown replica of python-pi [replica]
+  t= 166.0s - deploy replica of python-pi [replica]
+  t= 167.0s - startup replica of python-pi [replica]
+  t= 168.0s - setup replica of python-pi [replica]
+  t= 169.0s - finish replica of python-pi [replica]
+  t= 170.0s - teardown replica of python-pi [replica]
+  Total events: 20
+
+nx_3 - resnet50-preprocessing:
+------------------------------
+  t=  75.0s - deploy replica of resnet50-preprocessing [replica]
+  t=  81.0s - startup replica of resnet50-preprocessing [replica]
+  t=  82.0s - setup replica of resnet50-preprocessing [replica]
+  t=  83.0s - finish replica of resnet50-preprocessing [replica]
+  t=  84.0s - teardown replica of resnet50-preprocessing [replica]
+  Total events: 5
+
+nx_3 - speech-inference:
+------------------------
+  t=  61.0s - deploy replica of speech-inference [replica]
+  t=  63.0s - startup replica of speech-inference [replica]
+  t=  64.0s - setup replica of speech-inference [replica]
+  t=  68.0s - finish replica of speech-inference [replica]
+  t=  69.0s - teardown replica of speech-inference [replica]
+  Total events: 5
+
+registry → coral_1 - unknown:
+-----------------------------
+  t=   3.3s - docker_pull (38.1 MB) [network]
+  Total events: 1
+
+registry → coral_3 - unknown:
+-----------------------------
+  t=   3.4s - docker_pull (59.1 MB) [network]
+  t=   4.9s - docker_pull (38.1 MB) [network]
+  Total events: 2
+
+registry → nano_3 - unknown:
+----------------------------
+  t=   2.4s - docker_pull (95.4 MB) [network]
+  Total events: 1
+
+registry → nx_10 - unknown:
+---------------------------
+  t=   2.3s - docker_pull (95.4 MB) [network]
+  t=   3.2s - docker_pull (59.1 MB) [network]
+  t=   5.2s - docker_pull (182.2 MB) [network]
+  Total events: 3
+
+registry → nx_3 - unknown:
+--------------------------
+  t=   4.2s - docker_pull (38.1 MB) [network]
+  t=   4.3s - docker_pull (59.1 MB) [network]
+  t=   4.6s - docker_pull (182.2 MB) [network]
+  Total events: 3
+
+registry → rockpi_12 - unknown:
+-------------------------------
+  t=   4.7s - docker_pull (38.1 MB) [network]
+  Total events: 1
+
+registry → rockpi_13 - unknown:
+-------------------------------
+  t=   4.0s - docker_pull (59.1 MB) [network]
+  t=   4.1s - docker_pull (182.2 MB) [network]
+  Total events: 2
+
+registry → rockpi_30 - unknown:
+-------------------------------
+  t=   2.2s - docker_pull (38.1 MB) [network]
+  t=   2.7s - docker_pull (182.2 MB) [network]
+  Total events: 2
+
+registry → rockpi_8 - unknown:
+------------------------------
+  t=   2.1s - docker_pull (59.1 MB) [network]
+  Total events: 1
+
+registry → rpi3_3 - unknown:
+----------------------------
+  t=   2.0s - docker_pull (19.1 MB) [network]
+  Total events: 1
+
+registry → rpi3_4 - unknown:
+----------------------------
+  t=   3.6s - docker_pull (31.5 MB) [network]
+  t=   5.1s - docker_pull (130.7 MB) [network]
+  t=   5.3s - docker_pull (52.5 MB) [network]
+  Total events: 3
+
+registry → rpi3_5 - unknown:
+----------------------------
+  t=   3.7s - docker_pull (52.5 MB) [network]
+  Total events: 1
+
+rockpi_12 - speech-inference:
+-----------------------------
+  t=  85.0s - deploy replica of speech-inference [replica]
+  t=  90.0s - startup replica of speech-inference [replica]
+  t=  91.0s - setup replica of speech-inference [replica]
+  t=  92.0s - finish replica of speech-inference [replica]
+  t=  93.0s - teardown replica of speech-inference [replica]
+  Total events: 5
+
+rockpi_13 - python-pi:
+----------------------
+  t=  53.0s - deploy replica of python-pi [replica]
+  t=  55.0s - startup replica of python-pi [replica]
+  t=  56.0s - setup replica of python-pi [replica]
+  t=  57.0s - finish replica of python-pi [replica]
+  t=  97.0s - teardown replica of python-pi [replica]
+  t= 162.0s - deploy replica of python-pi [replica]
+  t= 163.0s - startup replica of python-pi [replica]
+  t= 164.0s - setup replica of python-pi [replica]
+  t= 165.0s - finish replica of python-pi [replica]
+  t= 171.0s - teardown replica of python-pi [replica]
+  t= 177.0s - deploy replica of python-pi [replica]
+  t= 178.0s - startup replica of python-pi [replica]
+  t= 179.0s - setup replica of python-pi [replica]
+  t= 180.0s - finish replica of python-pi [replica]
+  t= 181.0s - teardown replica of python-pi [replica]
+  Total events: 15
+
+rockpi_13 - resnet50-preprocessing:
+-----------------------------------
+  t=  52.0s - deploy replica of resnet50-preprocessing [replica]
+  t=  58.0s - startup replica of resnet50-preprocessing [replica]
+  t=  59.0s - setup replica of resnet50-preprocessing [replica]
+  t=  60.0s - finish replica of resnet50-preprocessing [replica]
+  Total events: 4
+
+rockpi_23 → coral_1 - unknown:
+------------------------------
+  t=   3.5s - data_download (45.8 MB) [network]
+  Total events: 1
+
+rockpi_23 → coral_3 - unknown:
+------------------------------
+  t=   5.0s - data_download (45.8 MB) [network]
+  Total events: 1
+
+rockpi_23 → nano_3 - unknown:
+-----------------------------
+  t=   2.8s - data_download (55.3 MB) [network]
+  t=   2.9s - data_download (55.3 MB) [network]
+  t=   3.0s - data_download (55.3 MB) [network]
+  t=   3.1s - data_download (55.3 MB) [network]
+  t=   5.5s - data_download (55.3 MB) [network]
+  t=   5.7s - data_download (55.3 MB) [network]
+  Total events: 6
+
+rockpi_23 → nx_10 - unknown:
+----------------------------
+  t=   2.6s - data_download (98.2 MB) [network]
+  Total events: 1
+
+rockpi_23 → nx_3 - unknown:
+---------------------------
+  t=   4.4s - data_download (45.8 MB) [network]
+  Total events: 1
+
+rockpi_23 → rockpi_12 - unknown:
+--------------------------------
+  t=   4.8s - data_download (45.8 MB) [network]
+  Total events: 1
+
+rockpi_23 → rockpi_30 - unknown:
+--------------------------------
+  t=   2.5s - data_download (45.8 MB) [network]
+  Total events: 1
+
+rockpi_23 → rpi3_4 - unknown:
+-----------------------------
+  t=   3.8s - data_download (45.8 MB) [network]
+  t=   3.9s - data_download (45.8 MB) [network]
+  t=   4.5s - data_download (45.8 MB) [network]
+  Total events: 3
+
+rockpi_30 - resnet50-preprocessing:
+-----------------------------------
+  t=   2.0s - deploy replica of resnet50-preprocessing [replica]
+  t=  21.0s - startup replica of resnet50-preprocessing [replica]
+  t=  22.0s - setup replica of resnet50-preprocessing [replica]
+  t=  23.0s - finish replica of resnet50-preprocessing [replica]
+  Total events: 4
+
+rockpi_30 - speech-inference:
+-----------------------------
+  t=   1.0s - deploy replica of speech-inference [replica]
+  t=  12.0s - startup replica of speech-inference [replica]
+  t=  13.0s - setup replica of speech-inference [replica]
+  t=  19.0s - finish replica of speech-inference [replica]
+  Total events: 4
+
+rockpi_8 - python-pi:
+---------------------
+  t=   4.0s - deploy replica of python-pi [replica]
+  t=   9.0s - startup replica of python-pi [replica]
+  t=  10.0s - setup replica of python-pi [replica]
+  t=  11.0s - finish replica of python-pi [replica]
+  t=  24.0s - deploy replica of python-pi [replica]
+  t=  25.0s - startup replica of python-pi [replica]
+  t=  26.0s - setup replica of python-pi [replica]
+  t=  27.0s - finish replica of python-pi [replica]
+  Total events: 8
+
+rpi3_3 - fio:
+-------------
+  t=   5.0s - deploy replica of fio [replica]
+  t=   6.0s - startup replica of fio [replica]
+  t=   7.0s - setup replica of fio [replica]
+  t=   8.0s - finish replica of fio [replica]
+  Total events: 4
+
+rpi3_4 - python-pi:
+-------------------
+  t= 158.0s - deploy replica of python-pi [replica]
+  t= 159.0s - startup replica of python-pi [replica]
+  t= 160.0s - setup replica of python-pi [replica]
+  t= 161.0s - finish replica of python-pi [replica]
+  t= 172.0s - teardown replica of python-pi [replica]
+  t= 173.0s - deploy replica of python-pi [replica]
+  t= 174.0s - startup replica of python-pi [replica]
+  t= 175.0s - setup replica of python-pi [replica]
+  t= 176.0s - finish replica of python-pi [replica]
+  t= 182.0s - teardown replica of python-pi [replica]
+  Total events: 10
+
+rpi3_4 - resnet50-preprocessing:
+--------------------------------
+  t= 101.0s - deploy replica of resnet50-preprocessing [replica]
+  t= 109.0s - startup replica of resnet50-preprocessing [replica]
+  t= 110.0s - setup replica of resnet50-preprocessing [replica]
+  t= 111.0s - finish replica of resnet50-preprocessing [replica]
+  t= 113.0s - teardown replica of resnet50-preprocessing [replica]
+  t= 149.0s - deploy replica of resnet50-preprocessing [replica]
+  t= 150.0s - startup replica of resnet50-preprocessing [replica]
+  t= 151.0s - setup replica of resnet50-preprocessing [replica]
+  t= 152.0s - finish replica of resnet50-preprocessing [replica]
+  t= 157.0s - teardown replica of resnet50-preprocessing [replica]
+  Total events: 10
+
+rpi3_4 - speech-inference:
+--------------------------
+  t=  40.0s - deploy replica of speech-inference [replica]
+  t=  42.0s - startup replica of speech-inference [replica]
+  t=  43.0s - setup replica of speech-inference [replica]
+  t=  47.0s - finish replica of speech-inference [replica]
+  t=  48.0s - teardown replica of speech-inference [replica]
+  t=  49.0s - deploy replica of speech-inference [replica]
+  t=  50.0s - startup replica of speech-inference [replica]
+  t=  51.0s - setup replica of speech-inference [replica]
+  t=  54.0s - finish replica of speech-inference [replica]
+  t=  70.0s - teardown replica of speech-inference [replica]
+  t=  72.0s - deploy replica of speech-inference [replica]
+  t=  73.0s - startup replica of speech-inference [replica]
+  t=  74.0s - setup replica of speech-inference [replica]
+  t=  80.0s - finish replica of speech-inference [replica]
+  t=  95.0s - teardown replica of speech-inference [replica]
+  Total events: 15
+
+rpi3_5 - python-pi:
+-------------------
+  t=  41.0s - deploy replica of python-pi [replica]
+  t=  44.0s - startup replica of python-pi [replica]
+  t=  45.0s - setup replica of python-pi [replica]
+  t=  46.0s - finish replica of python-pi [replica]
+  t=  98.0s - teardown replica of python-pi [replica]
+  t= 102.0s - deploy replica of python-pi [replica]
+  t= 103.0s - startup replica of python-pi [replica]
+  t= 104.0s - setup replica of python-pi [replica]
+  t= 105.0s - finish replica of python-pi [replica]
+  t= 119.0s - teardown replica of python-pi [replica]
+  t= 153.0s - deploy replica of python-pi [replica]
+  t= 154.0s - startup replica of python-pi [replica]
+  t= 155.0s - setup replica of python-pi [replica]
+  t= 156.0s - finish replica of python-pi [replica]
+  t= 183.0s - teardown replica of python-pi [replica]
+  Total events: 15
+
+NODE SUMMARY
+============
+
+Node: coral_1
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: speech-inference
+
+Node: coral_3
+  Deployment events: 0
+  Replica events: 25
+  Network events: 0
+  Functions involved: 2
+  Function list: python-pi, speech-inference
+
+Node: global
+  Deployment events: 6
+  Replica events: 0
+  Network events: 0
+  Functions involved: 6
+  Function list: fio, python-pi, resnet50-inference, resnet50-preprocessing, resnet50-training, speech-inference
+
+Node: nano_3
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: resnet50-training
+
+Node: nano_3 → rockpi_23
+  Deployment events: 0
+  Replica events: 0
+  Network events: 2
+  Functions involved: 1
+  Function list: unknown
+
+Node: nx_10
+  Deployment events: 0
+  Replica events: 34
+  Network events: 0
+  Functions involved: 3
+  Function list: python-pi, resnet50-inference, resnet50-preprocessing
+
+Node: nx_3
+  Deployment events: 0
+  Replica events: 30
+  Network events: 0
+  Functions involved: 3
+  Function list: python-pi, resnet50-preprocessing, speech-inference
+
+Node: registry → coral_1
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → coral_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 2
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nano_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nx_10
+  Deployment events: 0
+  Replica events: 0
+  Network events: 3
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → nx_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 3
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rockpi_12
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rockpi_13
+  Deployment events: 0
+  Replica events: 0
+  Network events: 2
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rockpi_30
+  Deployment events: 0
+  Replica events: 0
+  Network events: 2
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rockpi_8
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rpi3_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rpi3_4
+  Deployment events: 0
+  Replica events: 0
+  Network events: 3
+  Functions involved: 1
+  Function list: unknown
+
+Node: registry → rpi3_5
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_12
+  Deployment events: 0
+  Replica events: 5
+  Network events: 0
+  Functions involved: 1
+  Function list: speech-inference
+
+Node: rockpi_13
+  Deployment events: 0
+  Replica events: 19
+  Network events: 0
+  Functions involved: 2
+  Function list: python-pi, resnet50-preprocessing
+
+Node: rockpi_23 → coral_1
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_23 → coral_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_23 → nano_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 6
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_23 → nx_10
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_23 → nx_3
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_23 → rockpi_12
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_23 → rockpi_30
+  Deployment events: 0
+  Replica events: 0
+  Network events: 1
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_23 → rpi3_4
+  Deployment events: 0
+  Replica events: 0
+  Network events: 3
+  Functions involved: 1
+  Function list: unknown
+
+Node: rockpi_30
+  Deployment events: 0
+  Replica events: 8
+  Network events: 0
+  Functions involved: 2
+  Function list: resnet50-preprocessing, speech-inference
+
+Node: rockpi_8
+  Deployment events: 0
+  Replica events: 8
+  Network events: 0
+  Functions involved: 1
+  Function list: python-pi
+
+Node: rpi3_3
+  Deployment events: 0
+  Replica events: 4
+  Network events: 0
+  Functions involved: 1
+  Function list: fio
+
+Node: rpi3_4
+  Deployment events: 0
+  Replica events: 35
+  Network events: 0
+  Functions involved: 3
+  Function list: python-pi, resnet50-preprocessing, speech-inference
+
+Node: rpi3_5
+  Deployment events: 0
+  Replica events: 15
+  Network events: 0
+  Functions involved: 1
+  Function list: python-pi
+
+FUNCTION SUMMARY
+================
+
+Function: fio
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, rpi3_3
+
+Function: python-pi
+  Deployment events: 1
+  Replica events: 108
+  Network events: 0
+  Nodes involved: 8
+  Node list: coral_3, global, nx_10, nx_3, rockpi_13, rockpi_8, rpi3_4, rpi3_5
+
+Function: resnet50-inference
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nx_10
+
+Function: resnet50-preprocessing
+  Deployment events: 1
+  Replica events: 33
+  Network events: 0
+  Nodes involved: 6
+  Node list: global, nx_10, nx_3, rockpi_13, rockpi_30, rpi3_4
+
+Function: resnet50-training
+  Deployment events: 1
+  Replica events: 4
+  Network events: 0
+  Nodes involved: 2
+  Node list: global, nano_3
+
+Function: speech-inference
+  Deployment events: 1
+  Replica events: 38
+  Network events: 0
+  Nodes involved: 7
+  Node list: coral_1, coral_3, global, nx_3, rockpi_12, rockpi_30, rpi3_4
+
+Function: unknown
+  Deployment events: 0
+  Replica events: 0
+  Network events: 38
+  Nodes involved: 21
+  Node list: nano_3 → rockpi_23, registry → coral_1, registry → coral_3, registry → nano_3, registry → nx_10, registry → nx_3, registry → rockpi_12, registry → rockpi_13, registry → rockpi_30, registry → rockpi_8, registry → rpi3_3, registry → rpi3_4, registry → rpi3_5, rockpi_23 → coral_1, rockpi_23 → coral_3, rockpi_23 → nano_3, rockpi_23 → nx_10, rockpi_23 → nx_3, rockpi_23 → rockpi_12, rockpi_23 → rockpi_30, rockpi_23 → rpi3_4
+
+SCALING ANALYSIS
+================
+
+Functions with scaling events: 6
+  fio: 4 replica events
+    t=   5.0s - deploy replica of fio on rpi3_3
+    t=   6.0s - startup replica of fio on rpi3_3
+    t=   7.0s - setup replica of fio on rpi3_3
+    t=   8.0s - finish replica of fio on rpi3_3
+
+  python-pi: 108 replica events
+    t=   4.0s - deploy replica of python-pi on rockpi_8
+    t=   9.0s - startup replica of python-pi on rockpi_8
+    t=  10.0s - setup replica of python-pi on rockpi_8
+    t=  11.0s - finish replica of python-pi on rockpi_8
+    t=  24.0s - deploy replica of python-pi on rockpi_8
+    t=  25.0s - startup replica of python-pi on rockpi_8
+    t=  26.0s - setup replica of python-pi on rockpi_8
+    t=  27.0s - finish replica of python-pi on rockpi_8
+    t=  28.0s - deploy replica of python-pi on nx_10
+    t=  29.0s - startup replica of python-pi on nx_10
+    t=  30.0s - setup replica of python-pi on nx_10
+    t=  31.0s - finish replica of python-pi on nx_10
+    t=  33.0s - deploy replica of python-pi on coral_3
+    t=  36.0s - startup replica of python-pi on coral_3
+    t=  37.0s - setup replica of python-pi on coral_3
+    t=  38.0s - finish replica of python-pi on coral_3
+    t=  41.0s - deploy replica of python-pi on rpi3_5
+    t=  44.0s - startup replica of python-pi on rpi3_5
+    t=  45.0s - setup replica of python-pi on rpi3_5
+    t=  46.0s - finish replica of python-pi on rpi3_5
+    t=  53.0s - deploy replica of python-pi on rockpi_13
+    t=  55.0s - startup replica of python-pi on rockpi_13
+    t=  56.0s - setup replica of python-pi on rockpi_13
+    t=  57.0s - finish replica of python-pi on rockpi_13
+    t=  62.0s - deploy replica of python-pi on nx_3
+    t=  65.0s - startup replica of python-pi on nx_3
+    t=  66.0s - setup replica of python-pi on nx_3
+    t=  67.0s - finish replica of python-pi on nx_3
+    t=  71.0s - teardown replica of python-pi on nx_3
+    t=  76.0s - deploy replica of python-pi on nx_3
+    t=  77.0s - startup replica of python-pi on nx_3
+    t=  78.0s - setup replica of python-pi on nx_3
+    t=  79.0s - finish replica of python-pi on nx_3
+    t=  86.0s - deploy replica of python-pi on nx_3
+    t=  87.0s - startup replica of python-pi on nx_3
+    t=  88.0s - setup replica of python-pi on nx_3
+    t=  89.0s - finish replica of python-pi on nx_3
+    t=  94.0s - teardown replica of python-pi on nx_3
+    t=  96.0s - teardown replica of python-pi on nx_3
+    t=  97.0s - teardown replica of python-pi on rockpi_13
+    t=  98.0s - teardown replica of python-pi on rpi3_5
+    t=  99.0s - teardown replica of python-pi on coral_3
+    t= 102.0s - deploy replica of python-pi on rpi3_5
+    t= 103.0s - startup replica of python-pi on rpi3_5
+    t= 104.0s - setup replica of python-pi on rpi3_5
+    t= 105.0s - finish replica of python-pi on rpi3_5
+    t= 114.0s - deploy replica of python-pi on coral_3
+    t= 115.0s - startup replica of python-pi on coral_3
+    t= 116.0s - setup replica of python-pi on coral_3
+    t= 117.0s - finish replica of python-pi on coral_3
+    t= 118.0s - teardown replica of python-pi on coral_3
+    t= 119.0s - teardown replica of python-pi on rpi3_5
+    t= 120.0s - teardown replica of python-pi on nx_10
+    t= 122.0s - deploy replica of python-pi on coral_3
+    t= 123.0s - startup replica of python-pi on coral_3
+    t= 124.0s - setup replica of python-pi on coral_3
+    t= 125.0s - finish replica of python-pi on coral_3
+    t= 130.0s - deploy replica of python-pi on nx_10
+    t= 131.0s - startup replica of python-pi on nx_10
+    t= 132.0s - setup replica of python-pi on nx_10
+    t= 133.0s - finish replica of python-pi on nx_10
+    t= 134.0s - teardown replica of python-pi on nx_10
+    t= 135.0s - teardown replica of python-pi on coral_3
+    t= 140.0s - deploy replica of python-pi on coral_3
+    t= 141.0s - startup replica of python-pi on coral_3
+    t= 142.0s - setup replica of python-pi on coral_3
+    t= 143.0s - finish replica of python-pi on coral_3
+    t= 145.0s - deploy replica of python-pi on nx_10
+    t= 146.0s - startup replica of python-pi on nx_10
+    t= 147.0s - setup replica of python-pi on nx_10
+    t= 148.0s - finish replica of python-pi on nx_10
+    t= 153.0s - deploy replica of python-pi on rpi3_5
+    t= 154.0s - startup replica of python-pi on rpi3_5
+    t= 155.0s - setup replica of python-pi on rpi3_5
+    t= 156.0s - finish replica of python-pi on rpi3_5
+    t= 158.0s - deploy replica of python-pi on rpi3_4
+    t= 159.0s - startup replica of python-pi on rpi3_4
+    t= 160.0s - setup replica of python-pi on rpi3_4
+    t= 161.0s - finish replica of python-pi on rpi3_4
+    t= 162.0s - deploy replica of python-pi on rockpi_13
+    t= 163.0s - startup replica of python-pi on rockpi_13
+    t= 164.0s - setup replica of python-pi on rockpi_13
+    t= 165.0s - finish replica of python-pi on rockpi_13
+    t= 166.0s - deploy replica of python-pi on nx_3
+    t= 167.0s - startup replica of python-pi on nx_3
+    t= 168.0s - setup replica of python-pi on nx_3
+    t= 169.0s - finish replica of python-pi on nx_3
+    t= 170.0s - teardown replica of python-pi on nx_3
+    t= 171.0s - teardown replica of python-pi on rockpi_13
+    t= 172.0s - teardown replica of python-pi on rpi3_4
+    t= 173.0s - deploy replica of python-pi on rpi3_4
+    t= 174.0s - startup replica of python-pi on rpi3_4
+    t= 175.0s - setup replica of python-pi on rpi3_4
+    t= 176.0s - finish replica of python-pi on rpi3_4
+    t= 177.0s - deploy replica of python-pi on rockpi_13
+    t= 178.0s - startup replica of python-pi on rockpi_13
+    t= 179.0s - setup replica of python-pi on rockpi_13
+    t= 180.0s - finish replica of python-pi on rockpi_13
+    t= 181.0s - teardown replica of python-pi on rockpi_13
+    t= 182.0s - teardown replica of python-pi on rpi3_4
+    t= 183.0s - teardown replica of python-pi on rpi3_5
+    t= 184.0s - teardown replica of python-pi on nx_10
+    t= 185.0s - teardown replica of python-pi on coral_3
+    t= 186.0s - deploy replica of python-pi on nx_10
+    t= 187.0s - startup replica of python-pi on nx_10
+    t= 188.0s - setup replica of python-pi on nx_10
+    t= 189.0s - finish replica of python-pi on nx_10
+    t= 190.0s - teardown replica of python-pi on nx_10
+
+  resnet50-inference: 4 replica events
+    t=   0.0s - deploy replica of resnet50-inference on nx_10
+    t=  14.0s - startup replica of resnet50-inference on nx_10
+    t=  15.0s - setup replica of resnet50-inference on nx_10
+    t=  20.0s - finish replica of resnet50-inference on nx_10
+
+  resnet50-preprocessing: 33 replica events
+    t=   2.0s - deploy replica of resnet50-preprocessing on rockpi_30
+    t=  21.0s - startup replica of resnet50-preprocessing on rockpi_30
+    t=  22.0s - setup replica of resnet50-preprocessing on rockpi_30
+    t=  23.0s - finish replica of resnet50-preprocessing on rockpi_30
+    t=  52.0s - deploy replica of resnet50-preprocessing on rockpi_13
+    t=  58.0s - startup replica of resnet50-preprocessing on rockpi_13
+    t=  59.0s - setup replica of resnet50-preprocessing on rockpi_13
+    t=  60.0s - finish replica of resnet50-preprocessing on rockpi_13
+    t=  75.0s - deploy replica of resnet50-preprocessing on nx_3
+    t=  81.0s - startup replica of resnet50-preprocessing on nx_3
+    t=  82.0s - setup replica of resnet50-preprocessing on nx_3
+    t=  83.0s - finish replica of resnet50-preprocessing on nx_3
+    t=  84.0s - teardown replica of resnet50-preprocessing on nx_3
+    t= 101.0s - deploy replica of resnet50-preprocessing on rpi3_4
+    t= 109.0s - startup replica of resnet50-preprocessing on rpi3_4
+    t= 110.0s - setup replica of resnet50-preprocessing on rpi3_4
+    t= 111.0s - finish replica of resnet50-preprocessing on rpi3_4
+    t= 113.0s - teardown replica of resnet50-preprocessing on rpi3_4
+    t= 121.0s - deploy replica of resnet50-preprocessing on nx_10
+    t= 126.0s - startup replica of resnet50-preprocessing on nx_10
+    t= 127.0s - setup replica of resnet50-preprocessing on nx_10
+    t= 128.0s - finish replica of resnet50-preprocessing on nx_10
+    t= 129.0s - teardown replica of resnet50-preprocessing on nx_10
+    t= 136.0s - deploy replica of resnet50-preprocessing on nx_10
+    t= 137.0s - startup replica of resnet50-preprocessing on nx_10
+    t= 138.0s - setup replica of resnet50-preprocessing on nx_10
+    t= 139.0s - finish replica of resnet50-preprocessing on nx_10
+    t= 144.0s - teardown replica of resnet50-preprocessing on nx_10
+    t= 149.0s - deploy replica of resnet50-preprocessing on rpi3_4
+    t= 150.0s - startup replica of resnet50-preprocessing on rpi3_4
+    t= 151.0s - setup replica of resnet50-preprocessing on rpi3_4
+    t= 152.0s - finish replica of resnet50-preprocessing on rpi3_4
+    t= 157.0s - teardown replica of resnet50-preprocessing on rpi3_4
+
+  resnet50-training: 4 replica events
+    t=   3.0s - deploy replica of resnet50-training on nano_3
+    t=  16.0s - startup replica of resnet50-training on nano_3
+    t=  17.0s - setup replica of resnet50-training on nano_3
+    t=  18.0s - finish replica of resnet50-training on nano_3
+
+  speech-inference: 38 replica events
+    t=   1.0s - deploy replica of speech-inference on rockpi_30
+    t=  12.0s - startup replica of speech-inference on rockpi_30
+    t=  13.0s - setup replica of speech-inference on rockpi_30
+    t=  19.0s - finish replica of speech-inference on rockpi_30
+    t=  32.0s - deploy replica of speech-inference on coral_1
+    t=  34.0s - startup replica of speech-inference on coral_1
+    t=  35.0s - setup replica of speech-inference on coral_1
+    t=  39.0s - finish replica of speech-inference on coral_1
+    t=  40.0s - deploy replica of speech-inference on rpi3_4
+    t=  42.0s - startup replica of speech-inference on rpi3_4
+    t=  43.0s - setup replica of speech-inference on rpi3_4
+    t=  47.0s - finish replica of speech-inference on rpi3_4
+    t=  48.0s - teardown replica of speech-inference on rpi3_4
+    t=  49.0s - deploy replica of speech-inference on rpi3_4
+    t=  50.0s - startup replica of speech-inference on rpi3_4
+    t=  51.0s - setup replica of speech-inference on rpi3_4
+    t=  54.0s - finish replica of speech-inference on rpi3_4
+    t=  61.0s - deploy replica of speech-inference on nx_3
+    t=  63.0s - startup replica of speech-inference on nx_3
+    t=  64.0s - setup replica of speech-inference on nx_3
+    t=  68.0s - finish replica of speech-inference on nx_3
+    t=  69.0s - teardown replica of speech-inference on nx_3
+    t=  70.0s - teardown replica of speech-inference on rpi3_4
+    t=  72.0s - deploy replica of speech-inference on rpi3_4
+    t=  73.0s - startup replica of speech-inference on rpi3_4
+    t=  74.0s - setup replica of speech-inference on rpi3_4
+    t=  80.0s - finish replica of speech-inference on rpi3_4
+    t=  85.0s - deploy replica of speech-inference on rockpi_12
+    t=  90.0s - startup replica of speech-inference on rockpi_12
+    t=  91.0s - setup replica of speech-inference on rockpi_12
+    t=  92.0s - finish replica of speech-inference on rockpi_12
+    t=  93.0s - teardown replica of speech-inference on rockpi_12
+    t=  95.0s - teardown replica of speech-inference on rpi3_4
+    t= 100.0s - deploy replica of speech-inference on coral_3
+    t= 106.0s - startup replica of speech-inference on coral_3
+    t= 107.0s - setup replica of speech-inference on coral_3
+    t= 108.0s - finish replica of speech-inference on coral_3
+    t= 112.0s - teardown replica of speech-inference on coral_3
+

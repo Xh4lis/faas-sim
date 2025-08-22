@@ -19,10 +19,15 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
     def __init__(self, env, faas_system, power_oracle):
         super().__init__(env, faas_system, power_oracle, "LowPowerLongTimeBinPacker")
 
-        # Power-aware thresholds (more conservative)
-        self.scale_up_threshold = 8     # Scale up at 8 RPS (earlier)
+        # Power-aware thresholds (balanced for efficiency)
+        self.scale_up_threshold = 8     # Scale up at 8 RPS (more responsive)
         self.scale_down_threshold = 3   # Scale down below 3 RPS
-        self.response_time_threshold = 1200  # Accept 1200ms response time
+        self.response_time_threshold = 800  # Accept 800ms response time (much better than 1200ms)
+
+        # Consolidation parameters
+        self.min_utilization_for_new_node = 0.60  # Only use new nodes if existing >60% utilized
+        self.max_utilization_per_node = 0.85      # Don't overload beyond 85%
+        self.consolidation_bonus = 2.0            # Prefer existing nodes with replicas
 
         # Define power efficiency rankings (watts idle power)
         self.power_efficiency_ranking = {
@@ -78,56 +83,88 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
         logger.debug(f"🔋 PowerOptimized: {deployment_name} - Load: {current_load:.1f} RPS, "
                     f"Response: {avg_response_time:.1f}ms, Power Efficiency: {current_power_efficiency:.2f} W/RPS")
         
-        # Scale up conditions (more aggressive for power efficiency)
+        # Scale up conditions (responsive but power-aware)
         if (current_load > self.scale_up_threshold or 
-                    # current_power_efficiency > 5.0) and \
-            avg_response_time > self.response_time_threshold )  and \
+            avg_response_time > self.response_time_threshold) and \
            current_replicas < self.max_replicas:
-            
             return "scale_up"
         
-        # Scale down conditions (more conservative - keep low-power nodes)
+        # Scale down conditions (conservative to maintain power efficiency)
         elif current_load < self.scale_down_threshold and \
-             avg_response_time < (self.response_time_threshold * 0.5) and \
+             avg_response_time < (self.response_time_threshold * 0.6) and \
              current_replicas > self.min_replicas:
             return "scale_down"
         
         return "no_action"
     
+    
     def select_node_for_scaling(self, deployment_name: str) -> Optional[Any]:
-        """Select the most energy-efficient available node, fallback to less efficient if needed."""
+        """Enhanced node selection with consolidation preference"""
         available_nodes = self.get_available_nodes()
-        # Sort nodes by power efficiency (lowest power first)
-        power_ranked_nodes = self.rank_nodes_by_power_efficiency(available_nodes)
-
-        # Try efficient nodes first
-        for node, power_score in power_ranked_nodes:
-            if self.has_sufficient_resources(node, deployment_name):
-                estimated_power = self.estimate_node_power_consumption(node, deployment_name)
-                logger.info(f"🔋 PowerOptimized: Selected {node.name} "
-                            f"(estimated power: {estimated_power:.1f}W, efficiency rank: {power_score})")
+        
+        # STEP 1: Try to consolidate on existing nodes first
+        existing_replica_nodes = self.get_nodes_with_replicas(deployment_name)
+        for node in existing_replica_nodes:
+            if self.can_add_replica_safely(node, deployment_name):
+                logger.info(f"🔋 CONSOLIDATION: Adding replica to existing node {node.name}")
                 return node
-
-        # Fallback: try less efficient nodes if all efficient are overloaded
-        for node, power_score in sorted(power_ranked_nodes, key=lambda x: x[1], reverse=True):
-            if self.has_sufficient_resources(node, deployment_name):
-                logger.warning(f"⚠️ Fallback: Using less efficient node {node.name} (rank {power_score})")
+        
+        # STEP 2: Try nodes already running ANY replicas (bin packing)
+        busy_nodes = self.get_nodes_with_any_replicas()
+        power_ranked_busy = self.rank_nodes_by_power_efficiency(busy_nodes)
+        
+        for node, power_rank in power_ranked_busy:
+            if self.can_add_replica_safely(node, deployment_name):
+                logger.info(f"🔋 BIN-PACKING: Adding to busy low-power node {node.name}")
                 return node
-
-        logger.error("❌ No available nodes found for scaling!")
+        
+        # STEP 3: Only then consider new nodes (with power efficiency)
+        empty_nodes = [n for n in available_nodes if not self.has_any_replicas(n)]
+        power_ranked_empty = self.rank_nodes_by_power_efficiency(empty_nodes)
+        
+        for node, power_rank in power_ranked_empty:
+            if self.has_sufficient_resources(node, deployment_name):
+                logger.info(f"🔋 NEW-NODE: Using new low-power node {node.name}")
+                return node
+        
         return None
+    
+    def can_add_replica_safely(self, node, deployment_name: str) -> bool:
+        """Check if we can add replica without overloading"""
+        utilization = self.get_node_utilization(node)
+        
+        # More conservative thresholds for consolidation
+        cpu_safe = utilization.get('cpu', 0) < self.max_utilization_per_node
+        memory_safe = utilization.get('memory', 0) < self.max_utilization_per_node
+        
+        return cpu_safe and memory_safe
+    
+    def get_nodes_with_replicas(self, deployment_name: str) -> List[Any]:
+        """Get nodes that already have replicas of this deployment"""
+        nodes_with_replicas = []
+        replicas = self.faas.get_replicas(deployment_name)
+        
+        for replica in replicas:
+            if replica.node not in nodes_with_replicas:
+                nodes_with_replicas.append(replica.node)
+        
+        return nodes_with_replicas
 
     def has_sufficient_resources(self, node, deployment_name: str) -> bool:
-        """Check if node has sufficient CPU/memory resources using real data."""
+        """Check if node has sufficient CPU/memory resources - more lenient for spreading"""
         try:
             current_utilization = self.get_node_utilization(node)
-            # More lenient for low power, but still avoid overload
-            cpu_available = current_utilization.get('cpu', 0) < 0.9
-            memory_available = current_utilization.get('memory', 0) < 0.85
+            
+            # More lenient thresholds to enable better spreading
+            cpu_available = current_utilization.get('cpu', 0) < 0.85  # 85% instead of 90%
+            memory_available = current_utilization.get('memory', 0) < 0.80  # 80% instead of 85%
+            
+            logger.debug(f"🔍 Resource check for {node.name}: CPU={current_utilization.get('cpu', 0):.2f} (<0.85?), Memory={current_utilization.get('memory', 0):.2f} (<0.80?)")
+            
             return cpu_available and memory_available
         except Exception as e:
-            logger.error(f"❌ Resource check failed for {node.name}: {e}")
-            return False
+            logger.warning(f"⚠️ Resource check failed for {node.name}: {e}, assuming available")
+            return True  # Be optimistic to allow spreading
     
     def estimate_node_power_consumption(self, node: Any, deployment_name: str) -> float:
         """Estimate power consumption for running function on node using real utilization"""
@@ -152,6 +189,55 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
             ranked_nodes.append((node, power_rank))
         
         # Sort by power rank (ascending - most efficient first)
+        ranked_nodes.sort(key=lambda x: x[1])
+        
+        return ranked_nodes
+    
+    def rank_nodes_by_workload_efficiency(self, nodes: List[Any], deployment_name: str) -> List[Tuple[Any, float]]:
+        """Rank nodes by combined power efficiency and workload suitability"""
+        ranked_nodes = []
+        
+        for node in nodes:
+            node_type = self.extract_node_type(node.name)
+            base_power_rank = self.power_efficiency_ranking.get(node_type, 99)
+            
+            # Workload-specific adjustments (lower score = better)
+            workload_penalty = 0
+            
+            if 'inference' in deployment_name.lower():
+                # Inference workloads benefit from acceleration
+                if node_type in ['coral']:  # TPU acceleration
+                    workload_penalty = -3  # Bonus for TPU
+                elif node_type in ['nano', 'nx']:  # GPU acceleration  
+                    workload_penalty = -2  # Bonus for GPU
+                elif node_type in ['rpi3', 'rpi4']:  # CPU-only, slow
+                    workload_penalty = +4  # Penalty for slow CPU
+                    
+            elif 'training' in deployment_name.lower():
+                # Training needs high compute power
+                if node_type in ['nx', 'nuc']:  # Good compute
+                    workload_penalty = -2  # Bonus 
+                elif node_type in ['rpi3', 'coral']:  # Bad for training
+                    workload_penalty = +6  # Heavy penalty
+                    
+            elif 'fio' in deployment_name.lower():
+                # I/O intensive workloads
+                if node_type in ['nuc', 'rockpi']:  # Good I/O
+                    workload_penalty = -1  # Small bonus
+                elif node_type in ['rpi3']:  # Poor I/O
+                    workload_penalty = +3  # Penalty
+            
+            # Add current utilization penalty (spread load)
+            try:
+                utilization = self.get_node_utilization(node)
+                util_penalty = (utilization.get('cpu', 0) + utilization.get('memory', 0)) * 2
+            except:
+                util_penalty = 0
+            
+            combined_score = base_power_rank + workload_penalty + util_penalty
+            ranked_nodes.append((node, combined_score))
+        
+        # Sort by combined score (ascending - best first)
         ranked_nodes.sort(key=lambda x: x[1])
         
         return ranked_nodes
@@ -204,18 +290,6 @@ class LowPowerLongTimeBinPacker(BaseAutoscaler):
                 not any(keyword in node.name.lower() 
                        for keyword in ['registry', 'link', 'switch', 'shared']))
     
-    def has_sufficient_resources(self, node, deployment_name: str) -> bool:
-        """Check if node has sufficient resources (more lenient for power efficiency)"""
-        try:
-            current_utilization = self.get_node_utilization(node)
-            
-            # More lenient resource thresholds for power efficiency
-            cpu_available = current_utilization.get('cpu', 0) < 0.9  # 90% CPU threshold
-            memory_available = current_utilization.get('memory', 0) < 0.85  # 85% memory threshold
-            
-            return cpu_available and memory_available
-        except:
-            return True
 
 
     def get_node_utilization(self, node) -> dict:

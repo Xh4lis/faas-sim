@@ -1,0 +1,225 @@
+=== RUNNING HYPOTHESIS TEST ===
+Hypothesis: Kubernetes reduces power consumption vs LPLT baseline, but increases response times
+
+=== POWER CONSUMPTION COMPARISON ===
+ TOTAL INFRASTRUCTURE POWER:
+LPLT average total system power: 392.4W
+Kubernetes average total system power: 448.0W
+Infrastructure power savings: -14.2%
+
+=== PERFORMANCE COMPARISON ===
+LPLT MEDIAN response time: 10174.578s
+Kubernetes MEDIAN response time: 18152.616s
+MEDIAN performance penalty: 78.4%
+LPLT 95th percentile: 376567.043s
+Kubernetes 95th percentile: 376882.800s
+95th percentile penalty: 0.1%
+LPLT warm-up avg: 81394.891s
+Kubernetes warm-up avg: 74932.937s
+Warm-up performance penalty: -7.9%
+
+=== WAIT TIME ANALYSIS ===
+LPLT median wait time: 9129.960s
+Kubernetes median wait time: 15648.979s
+Wait time improvement: -71.4%
+
+=== REVISED HYPOTHESIS RESULT ===
+❌ HYPOTHESIS NOT CONFIRMED
+   Power savings: -14.2%
+
+============================================================
+🔋 REAL INFRASTRUCTURE POWER ANALYSIS (FIXED)
+==================================================
+HPST power data: 72600 measurements
+LPLT power data: 72600 measurements
+HPST unique nodes: 120
+LPLT unique nodes: 120
+HPST time range: 1.0 - 605.0
+LPLT time range: 1.0 - 605.0
+
+📊  SYSTEM POWER:
+LPLT average total system power: 392.4W
+Kubernetes average total system power: 448.0W
+Infrastructure power savings: -14.2%
+
+📊 POWER DISTRIBUTION:
+
+LPLT power by node type:
+  coral: 4 nodes, avg 2.5W, total 10.1W
+  nano: 29 nodes, avg 2.0W, total 57.8W
+  nuc: 3 nodes, avg 9.8W, total 29.3W
+  nx: 14 nodes, avg 8.0W, total 111.4W
+  rockpi: 34 nodes, avg 3.7W, total 124.2W
+  rpi3: 36 nodes, avg 1.7W, total 59.7W
+
+Kubernetes power by node type:
+  coral: 4 nodes, avg 2.7W, total 10.6W
+  nano: 29 nodes, avg 2.5W, total 71.6W
+  nuc: 3 nodes, avg 9.8W, total 29.3W
+  nx: 14 nodes, avg 10.5W, total 146.5W
+  rockpi: 34 nodes, avg 3.8W, total 127.9W
+  rpi3: 36 nodes, avg 1.7W, total 62.1W
+
+⚡ TOTAL ENERGY CONSUMPTION:
+Simulation duration: 0.17 hours
+LPLT: 65.8 Wh
+Kubernetes: 75.2 Wh
+Energy savings: -14.2%
+
+🔍 SANITY CHECKS:
+🔍 DEEP ANALYSIS: Understanding Why Kubernetes Compares to LPLT
+
+=== NODE DISTRIBUTION ANALYSIS ===
+LPLT uses 92 unique nodes
+Kubernetes uses 53 unique nodes
+Node spreading difference: 39
+
+LPLT node load distribution:
+  Average replicas per node: 11.1
+  Max replicas on one node: 45
+  Min replicas on one node: 4
+
+Kubernetes node load distribution:
+  Average replicas per node: 13.1
+  Max replicas on one node: 35
+  Min replicas on one node: 4
+
+Consolidation factor: 1.18
+➡️ Similar distribution patterns
+=== COLD START ANALYSIS ===
+LPLT scheduling success rate: 1.0
+Kubernetes scheduling success rate: 1.0
+
+Cold start execution times:
+LPLT early median t_exec: 3.629s
+Kubernetes early median t_exec: 2.015s
+✅ Kubernetes has 44.5% faster cold starts
+
+Total scheduling events:
+LPLT: 622 scheduling events
+Kubernetes: 423 scheduling events
+=== WORKLOAD-SPECIFIC PERFORMANCE ===
+
+resnet50-inference (2512 vs 2512 samples):
+  Median: LPLT=0.693s, Kubernetes=0.682s (-1.6%)
+  P95: LPLT=6.246s, Kubernetes=2.296s (-63.2%)
+
+fio (2489 vs 2089 samples):
+  Median: LPLT=193.556s, Kubernetes=198.682s (+2.6%)
+  P95: LPLT=487.738s, Kubernetes=493.864s (+1.3%)
+
+speech-inference (706 vs 706 samples):
+  Median: LPLT=54.620s, Kubernetes=47.320s (-13.4%)
+  P95: LPLT=200.102s, Kubernetes=205.213s (+2.6%)
+
+python-pi (6447 vs 6447 samples):
+  Median: LPLT=0.924s, Kubernetes=0.926s (+0.2%)
+  P95: LPLT=25.109s, Kubernetes=26.077s (+3.9%)
+=== SCALING DECISION ANALYSIS ===
+LPLT scaling actions:
+  Scale up: 202
+  Scale down: 446
+  No action: 76
+  Total actions: 648
+
+Kubernetes scaling actions:
+  Scale up: 135
+  Scale down: 404
+  No action: 187
+  Total actions: 539
+
+High response time events (>1s):
+LPLT: 50 events
+Kubernetes: 51 events
+
+Node type selection frequency:
+LPLT preferences:
+  rockpi: 88
+  rpi3: 52
+  nano: 40
+  nx: 22
+Kubernetes preferences:
+  rockpi: 66
+  nuc: 49
+  nx: 20
+=== RESOURCE CONTENTION ANALYSIS ===
+LPLT average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.028364     0.023636
+nano       0.018398     0.013799
+nuc        0.120000     0.100000
+nx         0.025030     0.018021
+rockpi     0.061698     0.051415
+rpi3       0.062782     0.052319
+
+Kubernetes average utilization by node type:
+           cpu_util  memory_util
+node_type                       
+coral      0.061736     0.051446
+nano       0.112203     0.084152
+nuc        0.120000     0.100000
+nx         0.149528     0.107660
+rockpi     0.076655     0.063879
+rpi3       0.079036     0.065863
+
+High CPU utilization events (>90%):
+LPLT: 0 events
+Kubernetes: 0 events
+
+Average power per active node:
+LPLT: 3.27W
+Kubernetes: 3.73W
+
+==================================================
+HYPOTHESIS VALIDATION SUMMARY
+==================================================
+✅ H2: Kubernetes has faster cold start performance
+✅ H3: Kubernetes scales more conservatively (less churn)
+
+============================================================
+🔍 DETAILED WORKLOAD ANALYSIS VALIDATION
+==================================================
+
+📊 LPLT Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 329 replicas × 3.65W = 1201.7W
+  rpi3: 263 replicas × 1.66W = 436.3W
+  nano: 228 replicas × 1.99W = 454.5W
+  nx: 173 replicas × 7.95W = 1376.2W
+  coral: 30 replicas × 2.52W = 75.5W
+
+LPLT Summary:
+  Total replicas: 1023
+  Total workload power: 3409.6W
+  Average efficiency: 3.333W per replica
+  Unique nodes used: 10
+
+📊 Kubernetes Detailed Breakdown:
+Workload distribution by node type:
+  rockpi: 286 replicas × 3.76W = 1076.0W
+  rpi3: 203 replicas × 1.73W = 350.4W
+  nx: 116 replicas × 10.46W = 1213.8W
+  nano: 79 replicas × 2.47W = 195.0W
+  coral: 10 replicas × 2.65W = 26.5W
+
+Kubernetes Summary:
+  Total replicas: 694
+  Total workload power: 2350.8W
+  Average efficiency: 3.387W per replica
+  Unique nodes used: 10
+
+🎯 COMPARATIVE ANALYSIS:
+Workload efficiency improvement: -1.6%
+Total workload power reduction: 31.1%
+Replica count difference: 1023 vs 694
+
+✅ VALIDATION CHECKS:
+✗ LPLT has better energy efficiency per replica
+✓ Kubernetes uses less total workload power
+
+=== SUMMARY ===
+Infrastructure power savings: -14.2%
+Real infrastructure power savings: -14.2%
+Performance trade-off: 78.4% response time penalty
+Plot saved as tradeoff_plot.png

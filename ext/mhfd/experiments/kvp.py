@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Experiment configuration
-STRATEGY_1_NAME = "WorkloadLPLT"
-STRATEGY_1_DIR = "./data/sine_pwrtags_strategy_d120_r35"
+STRATEGY_1_NAME = "LPLT"
+STRATEGY_1_DIR = "./data/sine_power_strategy_d120_r10"
 
-STRATEGY_2_NAME = "LPLT"
-STRATEGY_2_DIR = "./data/no_init_replicas/sine_power_strategy_d120_r35" 
+STRATEGY_2_NAME = "Kubernetes"
+STRATEGY_2_DIR = "./data/sine_k8s_strategy_d120_r10"
 
 
 def compare_experiments():
@@ -29,67 +29,12 @@ def compare_experiments():
     strategy1_total = strategy1_power.groupby('timestamp')['power_watts'].sum().mean()
     strategy2_total = strategy2_power.groupby('timestamp')['power_watts'].sum().mean()
     
-
-    strategy1_replicas = pd.read_csv(f"{STRATEGY_1_DIR}/replica_deployment_df.csv")
-    strategy2_replicas = pd.read_csv(f"{STRATEGY_2_DIR}/replica_deployment_df.csv")
-    
-    # 2. WORKLOAD EFFICIENCY (Energy per Unit of Work)  
-    def calculate_workload_efficiency(power_df, replicas_df):
-        workload_distribution = replicas_df.groupby('node_name').size()
-        
-        total_workload_power = 0
-        total_workload_units = 0
-        
-        for node_name, replica_count in workload_distribution.items():
-            # Try both 'node' and 'node_name' columns
-            node_power_data = power_df[
-                (power_df['node'] == node_name) if 'node' in power_df.columns 
-                else (power_df['node_name'] == node_name)
-            ]
-            
-            if len(node_power_data) > 0:
-                avg_node_power = node_power_data['power_watts'].mean()
-                workload_power = avg_node_power * replica_count
-                total_workload_power += workload_power
-                total_workload_units += replica_count
-                
-                print(f"  {node_name}: {replica_count} replicas × {avg_node_power:.2f}W = {workload_power:.1f}W")
-        
-        if total_workload_units == 0:
-            print("  ⚠️ Warning: No workload units found!")
-            return 0
-            
-        efficiency = total_workload_power / total_workload_units
-        print(f"  Total: {total_workload_power:.1f}W across {total_workload_units} replicas = {efficiency:.2f}W/replica")
-        
-        return efficiency
-    
-    print(f"\n🔋 {STRATEGY_1_NAME} Workload Analysis:")
-    s1_efficiency = calculate_workload_efficiency(strategy1_power, strategy1_replicas)
-    
-    print(f"\n🔋 {STRATEGY_2_NAME} Workload Analysis:")
-    s2_efficiency = calculate_workload_efficiency(strategy2_power, strategy2_replicas)
-    
-    print(f"📊 TOTAL INFRASTRUCTURE POWER:")
+    print(f" TOTAL INFRASTRUCTURE POWER:")
     print(f"{STRATEGY_1_NAME} average total system power: {strategy1_total:.1f}W")
     print(f"{STRATEGY_2_NAME} average total system power: {strategy2_total:.1f}W")
     power_savings = ((strategy1_total - strategy2_total) / strategy1_total) * 100
     print(f"Infrastructure power savings: {power_savings:.1f}%")
 
-    print(f"\n⚡ WORKLOAD ENERGY EFFICIENCY:")
-    print(f"{STRATEGY_1_NAME}: {s1_efficiency:.2f}W per replica")
-    print(f"{STRATEGY_2_NAME}: {s2_efficiency:.2f}W per replica") 
-    
-    # FIXED: Correct efficiency improvement calculation
-    # Lower W/replica = better efficiency, so positive improvement when s2 < s1
-    efficiency_improvement = ((s1_efficiency - s2_efficiency) / s1_efficiency) * 100
-    print(f"Workload efficiency improvement: {efficiency_improvement:.1f}%")
-    
-    if efficiency_improvement > 0:
-        print(f"✅ {STRATEGY_2_NAME} is more energy-efficient per replica")
-    else:
-        print(f"❌ {STRATEGY_1_NAME} is more energy-efficient per replica")
-    
     print("\n=== PERFORMANCE COMPARISON ===")
     
     # Use MEDIAN instead of MEAN for response times
@@ -140,27 +85,22 @@ def compare_experiments():
     # Use median metrics for hypothesis testing
     if power_savings > 0 and median_penalty > 0:
         print(f"✅ HYPOTHESIS CONFIRMED (MEDIAN): {STRATEGY_2_NAME} saves {power_savings:.1f}% infrastructure power")
-        print(f"   and {efficiency_improvement:.1f}% workload efficiency")
         print(f"   at the cost of {median_penalty:.1f}% slower median response times")
     elif power_savings > 0 and median_penalty < 0:
         print(f"🎉 UNEXPECTED RESULT: {STRATEGY_2_NAME} saves {power_savings:.1f}% infrastructure power")
-        print(f"   and {efficiency_improvement:.1f}% workload efficiency")
         print(f"   AND improves median response times by {abs(median_penalty):.1f}%!")
         print(f"   This suggests {STRATEGY_2_NAME} strategy is superior in both dimensions")
     else:
         print("❌ HYPOTHESIS NOT CONFIRMED")
-        print(f"   Power savings: {power_savings:.1f}%, Efficiency improvement: {efficiency_improvement:.1f}%")
+        print(f"   Power savings: {power_savings:.1f}%")
 
     # Return values for plotting (use median for more stable plot)
     return {
         'strategy1_total': strategy1_total,
         'strategy2_total': strategy2_total,
-        'strategy1_efficiency': s1_efficiency,
-        'strategy2_efficiency': s2_efficiency,
         'strategy1_response_time': strategy1_response_median,  # Use median
         'strategy2_response_time': strategy2_response_median,  # Use median
         'power_savings_percent': power_savings,
-        'efficiency_improvement_percent': efficiency_improvement,
         'performance_penalty_percent': median_penalty
     }
 
@@ -611,7 +551,7 @@ def validate_workload_analysis():
 #     hpst_replicas = pd.read_csv("./data/sine_perf_strategy_d120_r35/replica_deployment_df.csv")
 #     lplt_replicas = pd.read_csv("./data/sine_power_strategy_d120_r35/replica_deployment_df.csv")
     
-#     print("=== CORRECTED POWER ANALYSIS ===")
+#     print("=== POWER ANALYSIS ===")
     
 #     # Calculate workload-weighted power consumption
 #     def calculate_strategy_power(power_df, replicas_df, strategy_name):
@@ -656,7 +596,7 @@ def validate_workload_analysis():
 #     power_per_replica_savings = ((hpst_avg - lplt_avg) / hpst_avg) * 100
 #     total_power_savings = ((hpst_total - lplt_total) / hpst_total) * 100
     
-#     print(f"\n=== CORRECTED ENERGY EFFICIENCY ===")
+#     print(f"\n=== ENERGY EFFICIENCY ===")
 #     print(f"Power per replica savings: {power_per_replica_savings:.1f}%")
 #     print(f"Total system power savings: {total_power_savings:.1f}%")
 #     print(f"Replica count difference: {hpst_replicas} vs {lplt_replicas}")
@@ -669,7 +609,7 @@ def validate_workload_analysis():
 #     }
 
 # # Run this analysis
-# corrected_results = calculate_correct_power_consumption()
+#_results = calculate_correct_power_consumption()
 
 
 # def analyze_node_selection_impact():
@@ -718,12 +658,111 @@ def validate_workload_analysis():
 # selection_savings = analyze_node_selection_impact()
 
 
+def analyze_real_power_consumption():
+    """Use actual measured power consumption - FIXED VERSION"""
+    
+    # Load real power measurements
+    strategy1_power = pd.read_csv(f"{STRATEGY_1_DIR}/power_df.csv")
+    strategy2_power = pd.read_csv(f"{STRATEGY_2_DIR}/power_df.csv")
+    
+    print("🔋 REAL INFRASTRUCTURE POWER ANALYSIS (FIXED)")
+    print("="*50)
+    
+    # DEBUG: Check data structure
+    print(f"HPST power data: {len(strategy1_power)} measurements")
+    print(f"LPLT power data: {len(strategy2_power)} measurements")
+    print(f"HPST unique nodes: {strategy1_power['node'].nunique()}")
+    print(f"LPLT unique nodes: {strategy2_power['node'].nunique()}")
+    print(f"HPST time range: {strategy1_power['timestamp'].min():.1f} - {strategy1_power['timestamp'].max():.1f}")
+    print(f"LPLT time range: {strategy2_power['timestamp'].min():.1f} - {strategy2_power['timestamp'].max():.1f}")
+    
+    # 1. CORRECT TOTAL SYSTEM POWER (aggregate by timestamp first)
+    strategy1_total_power = strategy1_power.groupby('timestamp')['power_watts'].sum()
+    strategy2_total_power = strategy2_power.groupby('timestamp')['power_watts'].sum()
+    
+    strategy1_avg_total = strategy1_total_power.mean()
+    strategy2_avg_total = strategy2_total_power.mean()
+    
+    print(f"\n📊  SYSTEM POWER:")
+    print(f"{STRATEGY_1_NAME} average total system power: {strategy1_avg_total:.1f}W")
+    print(f"{STRATEGY_2_NAME} average total system power: {strategy2_avg_total:.1f}W")
+    
+    # 2. INFRASTRUCTURE EFFICIENCY
+    power_savings = ((strategy1_avg_total - strategy2_avg_total) / strategy1_avg_total) * 100
+    print(f"Infrastructure power savings: {power_savings:.1f}%")
+    
+    # 3.  POWER DISTRIBUTION ANALYSIS
+    print(f"\n📊 POWER DISTRIBUTION:")
+    
+    # Average power per node type (not summing all measurements)
+    strategy1_by_type = strategy1_power.groupby(['node_type', 'node'])['power_watts'].mean().groupby('node_type').agg(['mean', 'count'])
+    strategy2_by_type = strategy2_power.groupby(['node_type', 'node'])['power_watts'].mean().groupby('node_type').agg(['mean', 'count'])
+    
+    print(f"\n{STRATEGY_1_NAME} power by node type:")
+    for node_type in strategy1_by_type.index:
+        avg_power = strategy1_by_type.loc[node_type, 'mean']
+        node_count = strategy1_by_type.loc[node_type, 'count']
+        total_power = avg_power * node_count
+        print(f"  {node_type}: {node_count} nodes, avg {avg_power:.1f}W, total {total_power:.1f}W")
+    
+    print(f"\n{STRATEGY_2_NAME} power by node type:")
+    for node_type in strategy2_by_type.index:
+        avg_power = strategy2_by_type.loc[node_type, 'mean']
+        node_count = strategy2_by_type.loc[node_type, 'count']
+        total_power = avg_power * node_count
+        print(f"  {node_type}: {node_count} nodes, avg {avg_power:.1f}W, total {total_power:.1f}W")
+    
+    # 4. ENERGY CONSUMPTION
+    # Calculate simulation duration in hours
+    strategy1_duration_hours = (strategy1_power['timestamp'].max() - strategy1_power['timestamp'].min()) / 3600
+    strategy2_duration_hours = (strategy2_power['timestamp'].max() - strategy2_power['timestamp'].min()) / 3600
+    
+    strategy1_energy = strategy1_avg_total * strategy1_duration_hours
+    strategy2_energy = strategy2_avg_total * strategy2_duration_hours
+    
+    print(f"\n⚡ TOTAL ENERGY CONSUMPTION:")
+    print(f"Simulation duration: {strategy1_duration_hours:.2f} hours")
+    print(f"{STRATEGY_1_NAME}: {strategy1_energy:.1f} Wh")
+    print(f"{STRATEGY_2_NAME}: {strategy2_energy:.1f} Wh")
+    
+    energy_savings = ((strategy1_energy - strategy2_energy) / strategy1_energy) * 100
+    print(f"Energy savings: {energy_savings:.1f}%")
+    
+    # 5. SANITY CHECKS
+    print(f"\n🔍 SANITY CHECKS:")
+    expected_power_range = (200, 800)  # Reasonable for edge infrastructure
+    if not (expected_power_range[0] <= strategy1_avg_total <= expected_power_range[1]):
+        print(f"⚠️ WARNING: {STRATEGY_1_NAME} power ({strategy1_avg_total:.1f}W) outside expected range {expected_power_range}")
+    if not (expected_power_range[0] <= strategy2_avg_total <= expected_power_range[1]):
+        print(f"⚠️ WARNING: {STRATEGY_2_NAME} power ({strategy2_avg_total:.1f}W) outside expected range {expected_power_range}")
+    
+    expected_energy_range = (40, 1600)  # For 2-hour simulation
+    if not (expected_energy_range[0] <= strategy1_energy <= expected_energy_range[1]):
+        print(f"⚠️ WARNING: {STRATEGY_1_NAME} energy ({strategy1_energy:.1f}Wh) outside expected range {expected_energy_range}")
+    if not (expected_energy_range[0] <= strategy2_energy <= expected_energy_range[1]):
+        print(f"⚠️ WARNING: {STRATEGY_2_NAME} energy ({strategy2_energy:.1f}Wh) outside expected range {expected_energy_range}")
+    
+    return {
+        'strategy1_avg_power': strategy1_avg_total,
+        'strategy2_avg_power': strategy2_avg_total,
+        'power_savings_percent': power_savings,
+        'strategy1_total_energy': strategy1_energy,
+        'strategy2_total_energy': strategy2_energy,
+        'energy_savings_percent': energy_savings,
+        'simulation_hours': strategy1_duration_hours
+    }
+
+
 # Add to main execution
 if __name__ == "__main__":
     print("=== RUNNING HYPOTHESIS TEST ===")
     print(f"Hypothesis: {STRATEGY_2_NAME} reduces power consumption vs {STRATEGY_1_NAME} baseline, but increases response times\n")
     
     results = compare_experiments()
+    
+    # NEW: Run real power consumption analysis
+    print("\n" + "="*60)
+    real_power_results = analyze_real_power_consumption()
     
     # NEW: Run deep analysis
     deep_results = run_deep_analysis()
@@ -734,7 +773,7 @@ if __name__ == "__main__":
     
     print(f"\n=== SUMMARY ===")
     print(f"Infrastructure power savings: {results['power_savings_percent']:.1f}%")
-    print(f"Workload efficiency improvement: {results['efficiency_improvement_percent']:.1f}%")
+    print(f"Real infrastructure power savings: {real_power_results['power_savings_percent']:.1f}%")
     print(f"Performance trade-off: {results['performance_penalty_percent']:.1f}% response time penalty")
     
     create_simple_trade_off_plot(

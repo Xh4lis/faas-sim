@@ -1,0 +1,57 @@
+FAAS SIMULATION SUMMARY
+======================
+
+Report generated: 2025-08-22 11:16:11
+
+Topology Overview:
+  Number of nodes: 11
+  Number of functions: 6
+  Number of images: 6
+
+Node Distribution:
+  nx_10: 1603 invocations (44.5%)
+  rockpi_8: 925 invocations (25.7%)
+  rockpi_30: 271 invocations (7.5%)
+  rpi3_3: 87 invocations (2.4%)
+  coral_3: 287 invocations (8.0%)
+  rpi3_5: 177 invocations (4.9%)
+  coral_1: 54 invocations (1.5%)
+  rpi3_4: 78 invocations (2.2%)
+  rockpi_13: 80 invocations (2.2%)
+  nx_3: 39 invocations (1.1%)
+  nano_3: 2 invocations (0.1%)
+
+Function Distribution:
+  resnet50-inference: 1254 invocations (34.8%)
+  python-pi: 1898 invocations (52.7%)
+  speech-inference: 181 invocations (5.0%)
+  resnet50-preprocessing: 181 invocations (5.0%)
+  fio: 87 invocations (2.4%)
+  resnet50-training: 2 invocations (0.1%)
+Network Activity:
+  Total transfers: 38
+  Total bytes transferred: 2684.59 MB
+  Transfer duration: 27.45 s
+
+Network Flows:
+  nano_3 → rockpi_23: 196.46 MB in 1.71 s
+  registry → coral_1: 38.15 MB in 0.33 s
+  registry → coral_3: 97.27 MB in 0.84 s
+  registry → nano_3: 95.37 MB in 0.83 s
+  registry → nx_10: 336.65 MB in 2.92 s
+  registry → nx_3: 279.43 MB in 3.25 s
+  registry → rockpi_12: 38.15 MB in 0.33 s
+  registry → rockpi_13: 241.28 MB in 3.12 s
+  registry → rockpi_30: 220.30 MB in 2.96 s
+  registry → rockpi_8: 59.13 MB in 0.51 s
+  registry → rpi3_3: 19.07 MB in 0.17 s
+  registry → rpi3_4: 214.58 MB in 1.86 s
+  registry → rpi3_5: 52.45 MB in 0.46 s
+  rockpi_23 → coral_1: 45.78 MB in 0.40 s
+  rockpi_23 → coral_3: 45.78 MB in 0.40 s
+  rockpi_23 → nano_3: 331.88 MB in 3.20 s
+  rockpi_23 → nx_10: 98.23 MB in 1.17 s
+  rockpi_23 → nx_3: 45.78 MB in 0.58 s
+  rockpi_23 → rockpi_12: 45.78 MB in 0.40 s
+  rockpi_23 → rockpi_30: 45.78 MB in 0.80 s
+  rockpi_23 → rpi3_4: 137.33 MB in 1.21 s

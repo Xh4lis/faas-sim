@@ -1,7 +1,7 @@
 FAAS ENERGY CONSUMPTION ANALYSIS REPORT
 ========================================
 
-Report generated: 2025-08-20 22:22:43
+Report generated: 2025-08-22 09:53:46
 
 System Overview:
   Total nodes: 120
@@ -10,89 +10,89 @@ System Overview:
   Time range: 1.0 to 605.0
 
 Energy Consumption Summary:
-  Total energy consumed: 84,261,148.03 Joules (23405.87 Wh)
-  Average energy per time period: 139274.62 J
-  Total energy in kWh: 23.4059 kWh
+  Total energy consumed: 82,881,788.47 Joules (23022.72 Wh)
+  Average energy per time period: 136994.69 J
+  Total energy in kWh: 23.0227 kWh
 
 Power Consumption Summary:
-  Average system power: 3.81 W
-  Peak system power: 21.35 W
-  Minimum system power: 1.90 W
-  Power range: 19.45 W
+  Average system power: 3.73 W
+  Peak system power: 12.59 W
+  Minimum system power: 1.40 W
+  Power range: 11.19 W
 
 Node Type Energy Distribution:
-  rockpi: 21,302,547.00 J (25.3%)
-  nx: 21,080,469.40 J (25.0%)
-  rpi: 15,290,776.23 J (18.1%)
-  nano: 12,919,047.50 J (15.3%)
-  nuc: 11,702,575.50 J (13.9%)
-  coral: 1,965,732.40 J (2.3%)
+  nx: 27,074,910.30 J (32.7%)
+  rockpi: 23,725,064.00 J (28.6%)
+  nano: 13,280,266.19 J (16.0%)
+  rpi: 11,509,089.07 J (13.9%)
+  nuc: 5,349,748.80 J (6.5%)
+  coral: 1,942,710.10 J (2.3%)
 
 Node Type Power Statistics:
   coral (4 nodes):
-    Average power: 2.69 W
-    Power range: 2.50 - 2.86 W
-    Power variability (std): 0.180 W
+    Average power: 2.65 W
+    Power range: 2.40 - 2.89 W
+    Power variability (std): 0.245 W
   nano (29 nodes):
-    Average power: 2.40 W
-    Power range: 1.90 - 2.80 W
-    Power variability (std): 0.447 W
+    Average power: 2.47 W
+    Power range: 1.90 - 2.91 W
+    Power variability (std): 0.503 W
   nuc (3 nodes):
-    Average power: 21.35 W
-    Power range: 21.35 - 21.35 W
+    Average power: 9.76 W
+    Power range: 9.76 - 9.76 W
     Power variability (std): 0.000 W
   nx (14 nodes):
-    Average power: 8.12 W
-    Power range: 5.00 - 10.22 W
-    Power variability (std): 2.559 W
+    Average power: 10.46 W
+    Power range: 7.30 - 12.59 W
+    Power variability (std): 2.594 W
   rockpi (34 nodes):
-    Average power: 3.39 W
-    Power range: 3.00 - 3.61 W
-    Power variability (std): 0.293 W
+    Average power: 3.76 W
+    Power range: 3.20 - 4.08 W
+    Power variability (std): 0.423 W
   rpi (36 nodes):
-    Average power: 2.31 W
-    Power range: 2.10 - 2.42 W
-    Power variability (std): 0.151 W
+    Average power: 1.73 W
+    Power range: 1.40 - 1.90 W
+    Power variability (std): 0.235 W
 
 Node Type Energy Statistics:
   coral:
-    Total energy: 1,965,732.40 J (546.04 Wh)
-    Average energy per measurement: 812.286 J
-    Energy per node: 491,433.10 J
+    Total energy: 1,942,710.10 J (539.64 Wh)
+    Average energy per measurement: 802.773 J
+    Energy per node: 485,677.53 J
   nano:
-    Total energy: 12,919,047.50 J (3588.62 Wh)
-    Average energy per measurement: 736.338 J
-    Energy per node: 445,484.40 J
+    Total energy: 13,280,266.19 J (3688.96 Wh)
+    Average energy per measurement: 756.926 J
+    Energy per node: 457,940.21 J
   nuc:
-    Total energy: 11,702,575.50 J (3250.72 Wh)
-    Average energy per measurement: 6447.700 J
-    Energy per node: 3,900,858.50 J
+    Total energy: 5,349,748.80 J (1486.04 Wh)
+    Average energy per measurement: 2947.520 J
+    Energy per node: 1,783,249.60 J
   nx:
-    Total energy: 21,080,469.40 J (5855.69 Wh)
-    Average energy per measurement: 2488.839 J
-    Energy per node: 1,505,747.81 J
+    Total energy: 27,074,910.30 J (7520.81 Wh)
+    Average energy per measurement: 3196.566 J
+    Energy per node: 1,933,922.16 J
   rockpi:
-    Total energy: 21,302,547.00 J (5917.37 Wh)
-    Average energy per measurement: 1035.612 J
-    Energy per node: 626,545.50 J
+    Total energy: 23,725,064.00 J (6590.30 Wh)
+    Average energy per measurement: 1153.382 J
+    Energy per node: 697,796.00 J
   rpi:
-    Total energy: 15,290,776.23 J (4247.44 Wh)
-    Average energy per measurement: 702.056 J
-    Energy per node: 424,743.78 J
+    Total energy: 11,509,089.07 J (3196.97 Wh)
+    Average energy per measurement: 528.425 J
+    Energy per node: 319,696.92 J
 
 Efficiency Analysis:
   Most energy efficient node type: coral
-  Highest energy consuming node type: rockpi
-  Energy efficiency ratio: 10.84x
+  Highest energy consuming node type: nx
+  Energy efficiency ratio: 13.94x
 
 Power Model Assessment:
   Power model type: DYNAMIC (Variable power consumption)
-  System power variance: 11.950 W²
-  CPU-Power correlation: 0.344
+  System power variance: 8.743 W²
+  CPU-Power correlation: 0.461
 
 Environmental Impact (Estimates):
-  CO2 emissions (avg grid): 5.4536 kg CO2
-  Cost estimate (@$0.12/kWh): $2.8087
+  CO2 emissions (avg grid): 5.3643 kg CO2
+  Cost estimate (@$0.12/kWh): $2.7627
 
 Recommendations:
   - Current power model shows good dynamic behavior
@@ -100,22 +100,22 @@ Recommendations:
   - Monitor for power anomalies and optimization opportunities
 
 Top Energy Consuming Nodes:
-   1. nuc_0 (nuc): 3,900,858.50 J
-   2. nuc_1 (nuc): 3,900,858.50 J
-   3. nuc_2 (nuc): 3,900,858.50 J
-   4. nx_0 (nx): 1,867,296.20 J
-   5. nx_1 (nx): 1,867,296.20 J
-   6. nx_12 (nx): 1,867,296.20 J
-   7. nx_2 (nx): 1,867,296.20 J
-   8. nx_5 (nx): 1,867,296.20 J
-   9. nx_6 (nx): 1,867,296.20 J
-  10. nx_8 (nx): 1,867,296.20 J
+   1. nx_0 (nx): 2,300,318.90 J
+   2. nx_1 (nx): 2,300,318.90 J
+   3. nx_12 (nx): 2,300,318.90 J
+   4. nx_2 (nx): 2,300,318.90 J
+   5. nx_5 (nx): 2,300,318.90 J
+   6. nx_6 (nx): 2,300,318.90 J
+   7. nx_8 (nx): 2,300,318.90 J
+   8. nx_9 (nx): 2,300,318.90 J
+   9. nuc_0 (nuc): 1,783,249.60 J
+  10. nuc_1 (nuc): 1,783,249.60 J
 
 Analysis Summary:
   Report covers 605 measurement periods across 120 nodes
-  Total system energy consumption: 84,261,148 J (23405.87 Wh)
+  Total system energy consumption: 82,881,788 J (23022.72 Wh)
   System shows dynamic (variable power consumption) power consumption patterns
-  Energy distribution varies 10.8x between node types
+  Energy distribution varies 13.9x between node types
 
 End of Report
 =============
