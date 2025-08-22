@@ -4,13 +4,13 @@ import numpy as np
 
 # Experiment configuration
 STRATEGY_1_NAME = "Kubernetes"
-STRATEGY_1_DIR = "./data/sine_k8s_strategy_d500_r145"
+STRATEGY_1_DIR = "./data/sine_k8s_strategy_d120_r9"
 
 STRATEGY_2_NAME = "LPLT"
-STRATEGY_2_DIR = "./data/sine_power_strategy_d500_r145"
+STRATEGY_2_DIR = "./data/sine_lplt_strategy_d120_r9"
 
 STRATEGY_3_NAME = "HPST"
-STRATEGY_3_DIR = "./data/sine_perf_strategy_d500_r145"
+STRATEGY_3_DIR = "./data/sine_hpst_strategy_d120_r9"
 
 
 def compare_experiments():
@@ -59,7 +59,7 @@ def compare_experiments():
     print(f"{STRATEGY_2_NAME}: {strategy2_response_median:.3f}s")
     print(f"{STRATEGY_3_NAME}: {strategy3_response_median:.3f}s")
     
-    # Performance penalties (vs HPST baseline)
+    # Performance penalties (vs Kubernetes baseline)
     median_penalty_s2 = ((strategy2_response_median - strategy1_response_median) / strategy1_response_median) * 100
     median_penalty_s3 = ((strategy3_response_median - strategy1_response_median) / strategy1_response_median) * 100
     
@@ -80,6 +80,23 @@ def compare_experiments():
     print(f"{STRATEGY_2_NAME}: {strategy2_p95:.3f}s ({p95_penalty_s2:+.1f}%)")
     print(f"{STRATEGY_3_NAME}: {strategy3_p95:.3f}s ({p95_penalty_s3:+.1f}%)")
 
+    # Exclude cold start period (first 10% of measurements) - WARM-UP ANALYSIS
+    strategy1_warm = strategy1_metrics.iloc[int(len(strategy1_metrics) * 0.1):]
+    strategy2_warm = strategy2_metrics.iloc[int(len(strategy2_metrics) * 0.1):]
+    strategy3_warm = strategy3_metrics.iloc[int(len(strategy3_metrics) * 0.1):]
+    
+    strategy1_warm_mean = strategy1_warm['avg_response_time'].mean()
+    strategy2_warm_mean = strategy2_warm['avg_response_time'].mean()
+    strategy3_warm_mean = strategy3_warm['avg_response_time'].mean()
+    
+    warm_penalty_s2 = ((strategy2_warm_mean - strategy1_warm_mean) / strategy1_warm_mean) * 100
+    warm_penalty_s3 = ((strategy3_warm_mean - strategy1_warm_mean) / strategy1_warm_mean) * 100
+
+    print(f"\nWarm-up performance (excluding first 10%):")
+    print(f"{STRATEGY_1_NAME} warm-up avg: {strategy1_warm_mean:.3f}s")
+    print(f"{STRATEGY_2_NAME} warm-up avg: {strategy2_warm_mean:.3f}s ({warm_penalty_s2:+.1f}%)")
+    print(f"{STRATEGY_3_NAME} warm-up avg: {strategy3_warm_mean:.3f}s ({warm_penalty_s3:+.1f}%)")
+
     print("\n=== WAIT TIME ANALYSIS ===")
     strategy1_wait_median = strategy1_metrics['avg_wait_time'].median()
     strategy2_wait_median = strategy2_metrics['avg_wait_time'].median()
@@ -89,6 +106,16 @@ def compare_experiments():
     print(f"{STRATEGY_1_NAME}: {strategy1_wait_median:.3f}s")
     print(f"{STRATEGY_2_NAME}: {strategy2_wait_median:.3f}s")
     print(f"{STRATEGY_3_NAME}: {strategy3_wait_median:.3f}s")
+    
+    # Wait time improvements vs Kubernetes baseline
+    if strategy1_wait_median > 0:
+        wait_improvement_s2 = ((strategy1_wait_median - strategy2_wait_median) / strategy1_wait_median) * 100
+        wait_improvement_s3 = ((strategy1_wait_median - strategy3_wait_median) / strategy1_wait_median) * 100
+        print(f"\nWait time vs {STRATEGY_1_NAME} baseline:")
+        print(f"{STRATEGY_2_NAME} improvement: {wait_improvement_s2:.1f}%")
+        print(f"{STRATEGY_3_NAME} improvement: {wait_improvement_s3:.1f}%")
+    else:
+        print(f"\nWait times are negligible for all strategies")
 
     print("\n=== STRATEGY RANKING ===")
     # Rank strategies by power consumption (lower is better)
@@ -311,51 +338,92 @@ def analyze_node_distribution():
 
 
 def analyze_cold_start_behavior():
-    """Check if Strategy 1 has more cold start overhead"""
+    """Check cold start behavior across all three strategies using autoscaler metrics"""
     
-    # Load invocation data with timing details
-    strategy1_invocations = pd.read_csv(f"{STRATEGY_1_DIR}/invocations_df.csv")
-    strategy2_invocations = pd.read_csv(f"{STRATEGY_2_DIR}/invocations_df.csv")
-    
-    # Load scheduling data to see deployment patterns
-    strategy1_schedule = pd.read_csv(f"{STRATEGY_1_DIR}/schedule_df.csv")
-    strategy2_schedule = pd.read_csv(f"{STRATEGY_2_DIR}/schedule_df.csv")
+    # Load autoscaler metrics for all strategies (same as used for response times)
+    strategy1_metrics = pd.read_csv(f"{STRATEGY_1_DIR}/autoscaler_detailed_metrics_df.csv")
+    strategy2_metrics = pd.read_csv(f"{STRATEGY_2_DIR}/autoscaler_detailed_metrics_df.csv")
+    strategy3_metrics = pd.read_csv(f"{STRATEGY_3_DIR}/autoscaler_detailed_metrics_df.csv")
     
     print("=== COLD START ANALYSIS ===")
+    print("Analyzing first 10% of simulation as cold start period")
     
-    # Count successful vs failed schedules
-    strategy1_success_rate = strategy1_schedule['successful'].mean() if 'successful' in strategy1_schedule.columns else "N/A"
-    strategy2_success_rate = strategy2_schedule['successful'].mean() if 'successful' in strategy2_schedule.columns else "N/A"
+    # Extract cold start period (first 10% of measurements)
+    strategy1_cold = strategy1_metrics.head(int(len(strategy1_metrics) * 0.1))
+    strategy2_cold = strategy2_metrics.head(int(len(strategy2_metrics) * 0.1))
+    strategy3_cold = strategy3_metrics.head(int(len(strategy3_metrics) * 0.1))
     
-    print(f"{STRATEGY_1_NAME} scheduling success rate: {strategy1_success_rate}")
-    print(f"{STRATEGY_2_NAME} scheduling success rate: {strategy2_success_rate}")
+    print(f"\nCold start period samples:")
+    print(f"{STRATEGY_1_NAME}: {len(strategy1_cold)} measurements")
+    print(f"{STRATEGY_2_NAME}: {len(strategy2_cold)} measurements")
+    print(f"{STRATEGY_3_NAME}: {len(strategy3_cold)} measurements")
     
-    # Analyze execution times (t_exec) for cold starts
-    # First 10% of invocations are likely cold starts
-    strategy1_early = strategy1_invocations.head(int(len(strategy1_invocations) * 0.1))
-    strategy2_early = strategy2_invocations.head(int(len(strategy2_invocations) * 0.1))
+    # Cold start response times (median for robustness)
+    strategy1_cold_response = strategy1_cold['avg_response_time'].median()
+    strategy2_cold_response = strategy2_cold['avg_response_time'].median()
+    strategy3_cold_response = strategy3_cold['avg_response_time'].median()
     
-    strategy1_cold_exec = strategy1_early['t_exec'].median()
-    strategy2_cold_exec = strategy2_early['t_exec'].median()
+    print(f"\nCold start response times (median):")
+    print(f"{STRATEGY_1_NAME}: {strategy1_cold_response:.3f}s")
+    print(f"{STRATEGY_2_NAME}: {strategy2_cold_response:.3f}s")
+    print(f"{STRATEGY_3_NAME}: {strategy3_cold_response:.3f}s")
     
-    print(f"\nCold start execution times:")
-    print(f"{STRATEGY_1_NAME} early median t_exec: {strategy1_cold_exec:.3f}s")
-    print(f"{STRATEGY_2_NAME} early median t_exec: {strategy2_cold_exec:.3f}s")
+    # Compare cold start performance vs Kubernetes baseline
+    cold_penalty_s2 = ((strategy2_cold_response - strategy1_cold_response) / strategy1_cold_response) * 100
+    cold_penalty_s3 = ((strategy3_cold_response - strategy1_cold_response) / strategy1_cold_response) * 100
     
-    if strategy2_cold_exec < strategy1_cold_exec:
-        improvement = ((strategy1_cold_exec - strategy2_cold_exec) / strategy1_cold_exec) * 100
-        print(f"✅ {STRATEGY_2_NAME} has {improvement:.1f}% faster cold starts")
+    print(f"\nCold start performance vs {STRATEGY_1_NAME}:")
+    print(f"{STRATEGY_2_NAME} penalty: {cold_penalty_s2:+.1f}% ({strategy2_cold_response:.3f}s / {strategy1_cold_response:.3f}s)")
+    print(f"{STRATEGY_3_NAME} penalty: {cold_penalty_s3:+.1f}% ({strategy3_cold_response:.3f}s / {strategy1_cold_response:.3f}s)")
     
-    # Count total scheduling events (more events = more overhead)
-    print(f"\nTotal scheduling events:")
-    print(f"{STRATEGY_1_NAME}: {len(strategy1_schedule)} scheduling events") 
-    print(f"{STRATEGY_2_NAME}: {len(strategy2_schedule)} scheduling events")
+    # Cold start execution times (from avg_execution_time)
+    strategy1_cold_exec = strategy1_cold['avg_execution_time'].median()
+    strategy2_cold_exec = strategy2_cold['avg_execution_time'].median()
+    strategy3_cold_exec = strategy3_cold['avg_execution_time'].median()
+    
+    print(f"\nCold start execution times (median):")
+    print(f"{STRATEGY_1_NAME}: {strategy1_cold_exec:.3f}s")
+    print(f"{STRATEGY_2_NAME}: {strategy2_cold_exec:.3f}s")
+    print(f"{STRATEGY_3_NAME}: {strategy3_cold_exec:.3f}s")
+    
+    # Cold start wait times
+    strategy1_cold_wait = strategy1_cold['avg_wait_time'].median()
+    strategy2_cold_wait = strategy2_cold['avg_wait_time'].median()
+    strategy3_cold_wait = strategy3_cold['avg_wait_time'].median()
+    
+    print(f"\nCold start wait times (median):")
+    print(f"{STRATEGY_1_NAME}: {strategy1_cold_wait:.3f}s")
+    print(f"{STRATEGY_2_NAME}: {strategy2_cold_wait:.3f}s")
+    print(f"{STRATEGY_3_NAME}: {strategy3_cold_wait:.3f}s")
+    
+    # Cold start interpretation
+    print(f"\nCold start behavior patterns:")
+    if cold_penalty_s2 < -5:
+        print(f"✅ {STRATEGY_2_NAME} has significantly better cold start performance")
+    elif cold_penalty_s2 > 5:
+        print(f"❌ {STRATEGY_2_NAME} has significantly worse cold start performance")
+    else:
+        print(f"➡️ {STRATEGY_2_NAME} has similar cold start performance to {STRATEGY_1_NAME}")
+        
+    if cold_penalty_s3 < -5:
+        print(f"✅ {STRATEGY_3_NAME} has significantly better cold start performance")
+    elif cold_penalty_s3 > 5:
+        print(f"❌ {STRATEGY_3_NAME} has significantly worse cold start performance")
+    else:
+        print(f"➡️ {STRATEGY_3_NAME} has similar cold start performance to {STRATEGY_1_NAME}")
     
     return {
+        'strategy1_cold_response': strategy1_cold_response,
+        'strategy2_cold_response': strategy2_cold_response,
+        'strategy3_cold_response': strategy3_cold_response,
         'strategy1_cold_exec': strategy1_cold_exec,
         'strategy2_cold_exec': strategy2_cold_exec,
-        'strategy1_schedule_events': len(strategy1_schedule),
-        'strategy2_schedule_events': len(strategy2_schedule)
+        'strategy3_cold_exec': strategy3_cold_exec,
+        'strategy1_cold_wait': strategy1_cold_wait,
+        'strategy2_cold_wait': strategy2_cold_wait,
+        'strategy3_cold_wait': strategy3_cold_wait,
+        'cold_penalty_s2': cold_penalty_s2,
+        'cold_penalty_s3': cold_penalty_s3
     }
 
 def analyze_workload_differences():
@@ -512,6 +580,10 @@ def run_deep_analysis():
     # 2. Scaling behavior  
     scaling_results = analyze_scaling_behavior()
     
+    # 3. Cold start analysis
+    print("\n" + "="*50)
+    cold_start_results = analyze_cold_start_behavior()
+    
     print("\n" + "="*50)
     print("THREE-WAY STRATEGY ANALYSIS SUMMARY")
     print("="*50)
@@ -575,7 +647,7 @@ def analyze_real_power_consumption():
     strategy2_avg_total = strategy2_total_power.mean()
     strategy3_avg_total = strategy3_total_power.mean()
     
-    print(f"\n📊 CORRECTED SYSTEM POWER:")
+    print(f"\n📊 SYSTEM POWER:")
     print(f"{STRATEGY_1_NAME}: {strategy1_avg_total:.1f}W")
     print(f"{STRATEGY_2_NAME}: {strategy2_avg_total:.1f}W")
     print(f"{STRATEGY_3_NAME}: {strategy3_avg_total:.1f}W")

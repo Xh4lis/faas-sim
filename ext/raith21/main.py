@@ -60,13 +60,13 @@ class SimulationConfig:
 
     def __init__(self):
         # Simulation parameters
-        self.num_devices = 500
+        self.num_devices = 120
         self.n_nuc = 3
         self.device_settings = make_edgeai_settings(self.num_devices, self.n_nuc)
-        self.duration = 600
-        self.total_rps = 145
-        self.scenario = "light"  # Options: "light", "reduced", "edgeai", "custom"
-        self.scaling_strategy = "kubernetes" # Options: "performance", "power", "basic", "kubernetes"
+        self.duration = 1500
+        self.total_rps = 35
+        self.scenario = "none"  # Options: "light", "reduced", "edgeai", "custom"
+        self.scaling_strategy = "performance" # Options: "performance", "power", "basic", "kubernetes"
         # Custom function counts for scenario
         self.custom_counts = {
             "resnet50-inference": 1,
@@ -81,7 +81,7 @@ class SimulationConfig:
         self.percentage_of_nodes_to_score = 100
         
         # Output configuration
-        self.settings_id = "sine_k8s_strategy"
+        self.settings_id = "sine_hpst_strategy"
         self.data_dir_base = "./data"
         self.vis_dir_base = "./Vis"
         
@@ -368,7 +368,7 @@ def main():
     # Save results and generate reports
     data_dir, vis_dir = get_output_directories(config, benchmark)
     save_dataframes(dfs, data_dir)
-    generate_reports(data_dir, vis_dir)
+    # generate_reports(data_dir, vis_dir)
     
     print(f"\nSimulation complete! Results saved to {data_dir}/ and {vis_dir}/")
 

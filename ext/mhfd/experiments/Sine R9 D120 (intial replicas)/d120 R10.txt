@@ -1,0 +1,172 @@
+=== RUNNING THREE-WAY STRATEGY COMPARISON ===
+Comparing: Kubernetes vs LPLT vs HPST
+
+=== POWER CONSUMPTION COMPARISON ===
+ TOTAL INFRASTRUCTURE POWER:
+Kubernetes average total system power: 472.9W
+LPLT average total system power: 479.3W
+HPST average total system power: 469.8W
+
+Power efficiency vs Kubernetes baseline:
+LPLT power savings: -1.3% (479.3W / 472.9W)
+HPST power savings: 0.7% (469.8W / 472.9W)
+
+=== PERFORMANCE COMPARISON ===
+MEDIAN response times:
+Kubernetes: 1284.326s
+LPLT: 1358.004s
+HPST: 1299.326s
+
+Performance penalty vs Kubernetes baseline:
+LPLT penalty: 5.7% (1358.004s / 1284.326s)
+HPST penalty: 1.2% (1299.326s / 1284.326s)
+
+95th percentile response times:
+Kubernetes: 13161.402s
+LPLT: 13403.316s (+1.8%)
+HPST: 13142.562s (-0.1%)
+
+=== WAIT TIME ANALYSIS ===
+MEDIAN wait times:
+Kubernetes: 0.000s
+LPLT: 0.000s
+HPST: 0.000s
+
+=== STRATEGY RANKING ===
+Power consumption ranking (best to worst):
+  1. HPST: 469.8W
+  2. Kubernetes: 472.9W
+  3. LPLT: 479.3W
+
+Response time ranking (best to worst):
+  1. Kubernetes: 1284.326s
+  2. HPST: 1299.326s
+  3. LPLT: 1358.004s
+
+============================================================
+🔋 REAL INFRASTRUCTURE POWER ANALYSIS (THREE-WAY)
+==================================================
+Power data measurements:
+Kubernetes: 73200 measurements, 120 unique nodes
+LPLT: 73200 measurements, 120 unique nodes
+HPST: 73200 measurements, 120 unique nodes
+
+📊 SYSTEM POWER:
+Kubernetes: 472.9W
+LPLT: 479.3W
+HPST: 469.8W
+
+Power efficiency vs Kubernetes:
+LPLT power savings: -1.3% (479.3W / 472.9W)
+HPST power savings: 0.7% (469.8W / 472.9W)
+
+📊 POWER DISTRIBUTION BY NODE TYPE:
+
+Kubernetes power distribution:
+  coral: 4 nodes × 2.6W = 10.6W
+  nano: 29 nodes × 2.6W = 75.0W
+  nuc: 3 nodes × 9.8W = 29.3W
+  nx: 14 nodes × 11.6W = 163.0W
+  rockpi: 34 nodes × 3.8W = 129.7W
+  rpi3: 36 nodes × 1.8W = 65.4W
+  Total: 120 nodes = 472.9W
+
+LPLT power distribution:
+  coral: 4 nodes × 2.6W = 10.6W
+  nano: 29 nodes × 2.8W = 80.2W
+  nuc: 3 nodes × 9.8W = 29.3W
+  nx: 14 nodes × 11.7W = 163.3W
+  rockpi: 34 nodes × 3.8W = 130.5W
+  rpi3: 36 nodes × 1.8W = 65.4W
+  Total: 120 nodes = 479.3W
+
+HPST power distribution:
+  coral: 4 nodes × 2.6W = 10.6W
+  nano: 29 nodes × 2.6W = 74.5W
+  nuc: 3 nodes × 9.8W = 29.3W
+  nx: 14 nodes × 11.5W = 161.4W
+  rockpi: 34 nodes × 3.8W = 129.0W
+  rpi3: 36 nodes × 1.8W = 65.1W
+  Total: 120 nodes = 469.8W
+
+⚡ TOTAL ENERGY CONSUMPTION:
+Simulation duration: ~0.17 hours
+Kubernetes: 80.0 Wh
+LPLT: 81.1 Wh
+HPST: 79.5 Wh
+
+Energy efficiency vs Kubernetes:
+LPLT energy savings: -1.3%
+HPST energy savings: 0.7%
+
+🏆 POWER CONSUMPTION RANKING (best to worst):
+  1. HPST: 469.8W
+  2. Kubernetes: 472.9W
+  3. LPLT: 479.3W
+
+============================================================
+🔍 DEEP ANALYSIS: Three-Strategy Comparison
+
+=== NODE DISTRIBUTION ANALYSIS ===
+Unique nodes used:
+Kubernetes: 34 nodes
+LPLT: 28 nodes
+HPST: 42 nodes
+
+Node load distribution:
+Kubernetes - Avg: 43.6, Max: 183, Min: 4
+LPLT - Avg: 39.9, Max: 174, Min: 4
+HPST - Avg: 35.1, Max: 168, Min: 4
+
+Consolidation analysis (replicas per node vs Kubernetes):
+LPLT consolidation factor: 0.92 (39.9 / 43.6)
+HPST consolidation factor: 0.81 (35.1 / 43.6)
+
+Consolidation patterns:
+➡️ LPLT has similar consolidation to Kubernetes
+➡️ HPST has similar consolidation to Kubernetes
+=== SCALING BEHAVIOR ANALYSIS ===
+Total scaling actions:
+Kubernetes: 1370 actions
+LPLT: 1129 actions
+HPST: 1221 actions
+
+Total replica deployments:
+Kubernetes: 1481 deployments
+LPLT: 1118 deployments
+HPST: 1476 deployments
+
+Scaling frequency vs Kubernetes:
+LPLT scaling ratio: 0.82 (1129 / 1370)
+HPST scaling ratio: 0.89 (1221 / 1370)
+
+Scaling direction breakdown:
+Kubernetes: 289 up, 1081 down
+LPLT: 215 up, 914 down
+HPST: 288 up, 933 down
+
+Scaling behavior patterns:
+➡️ LPLT has similar scaling frequency to Kubernetes
+➡️ HPST has similar scaling frequency to Kubernetes
+
+==================================================
+THREE-WAY STRATEGY ANALYSIS SUMMARY
+==================================================
+📊 STRATEGY RANKINGS:
+
+Node efficiency (fewer nodes = better):
+  1. LPLT: 28 nodes (consolidation: 0.92x)
+  2. Kubernetes: 34 nodes (consolidation: baseline)
+  3. HPST: 42 nodes (consolidation: 0.81x)
+
+Scaling stability (fewer actions = better):
+  1. LPLT: 1129 actions (frequency: 0.82x)
+  2. HPST: 1221 actions (frequency: 0.89x)
+  3. Kubernetes: 1370 actions (frequency: baseline)
+
+=== FINAL SUMMARY ===
+Three-strategy comparison complete:
+• Power analysis: Kubernetes baseline vs LPLT vs HPST
+• Performance analysis: Response time and scaling behavior
+• Infrastructure analysis: Node distribution and resource usage
+Plot saved as tradeoff_plot_3way.png
