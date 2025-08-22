@@ -3,24 +3,28 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Experiment configuration
-STRATEGY_1_NAME = "LPLT"
-STRATEGY_1_DIR = "./data/sine_power_strategy_d120_r10"
+STRATEGY_1_NAME = "Kubernetes"
+STRATEGY_1_DIR = "./data/sine_k8s_strategy_d500_r145"
 
-STRATEGY_2_NAME = "Kubernetes"
-STRATEGY_2_DIR = "./data/sine_k8s_strategy_d120_r10"
+STRATEGY_2_NAME = "LPLT"
+STRATEGY_2_DIR = "./data/sine_power_strategy_d500_r145"
+
+STRATEGY_3_NAME = "HPST"
+STRATEGY_3_DIR = "./data/sine_perf_strategy_d500_r145"
 
 
 def compare_experiments():
-    """Simple comparison of two experiment results using robust metrics"""
+    """Three-way comparison of experiment results using robust metrics"""
 
-    # Load the CSV files from both experiments - CONFIGURABLE PATHS
+    # Load the CSV files from all three experiments
     strategy1_power = pd.read_csv(f"{STRATEGY_1_DIR}/power_df.csv")
     strategy2_power = pd.read_csv(f"{STRATEGY_2_DIR}/power_df.csv")
+    strategy3_power = pd.read_csv(f"{STRATEGY_3_DIR}/power_df.csv")
 
     # Use autoscaler metrics for response times
     strategy1_metrics = pd.read_csv(f"{STRATEGY_1_DIR}/autoscaler_detailed_metrics_df.csv")
     strategy2_metrics = pd.read_csv(f"{STRATEGY_2_DIR}/autoscaler_detailed_metrics_df.csv")
-
+    strategy3_metrics = pd.read_csv(f"{STRATEGY_3_DIR}/autoscaler_detailed_metrics_df.csv")
 
     # Simple comparisons
     print("=== POWER CONSUMPTION COMPARISON ===")
@@ -28,187 +32,281 @@ def compare_experiments():
     # 1. TOTAL SYSTEM POWER (Infrastructure Perspective)
     strategy1_total = strategy1_power.groupby('timestamp')['power_watts'].sum().mean()
     strategy2_total = strategy2_power.groupby('timestamp')['power_watts'].sum().mean()
+    strategy3_total = strategy3_power.groupby('timestamp')['power_watts'].sum().mean()
     
     print(f" TOTAL INFRASTRUCTURE POWER:")
     print(f"{STRATEGY_1_NAME} average total system power: {strategy1_total:.1f}W")
     print(f"{STRATEGY_2_NAME} average total system power: {strategy2_total:.1f}W")
-    power_savings = ((strategy1_total - strategy2_total) / strategy1_total) * 100
-    print(f"Infrastructure power savings: {power_savings:.1f}%")
+    print(f"{STRATEGY_3_NAME} average total system power: {strategy3_total:.1f}W")
+    
+    # Power savings calculations (vs HPST baseline)
+    power_savings_s2 = ((strategy1_total - strategy2_total) / strategy1_total) * 100
+    power_savings_s3 = ((strategy1_total - strategy3_total) / strategy1_total) * 100
+    
+    print(f"\nPower efficiency vs {STRATEGY_1_NAME} baseline:")
+    print(f"{STRATEGY_2_NAME} power savings: {power_savings_s2:.1f}% ({strategy2_total:.1f}W / {strategy1_total:.1f}W)")
+    print(f"{STRATEGY_3_NAME} power savings: {power_savings_s3:.1f}% ({strategy3_total:.1f}W / {strategy1_total:.1f}W)")
 
     print("\n=== PERFORMANCE COMPARISON ===")
     
     # Use MEDIAN instead of MEAN for response times
     strategy1_response_median = strategy1_metrics['avg_response_time'].median()
     strategy2_response_median = strategy2_metrics['avg_response_time'].median()
-    median_penalty = ((strategy2_response_median - strategy1_response_median) / strategy1_response_median) * 100
+    strategy3_response_median = strategy3_metrics['avg_response_time'].median()
+    
+    print(f"MEDIAN response times:")
+    print(f"{STRATEGY_1_NAME}: {strategy1_response_median:.3f}s")
+    print(f"{STRATEGY_2_NAME}: {strategy2_response_median:.3f}s")
+    print(f"{STRATEGY_3_NAME}: {strategy3_response_median:.3f}s")
+    
+    # Performance penalties (vs HPST baseline)
+    median_penalty_s2 = ((strategy2_response_median - strategy1_response_median) / strategy1_response_median) * 100
+    median_penalty_s3 = ((strategy3_response_median - strategy1_response_median) / strategy1_response_median) * 100
+    
+    print(f"\nPerformance penalty vs {STRATEGY_1_NAME} baseline:")
+    print(f"{STRATEGY_2_NAME} penalty: {median_penalty_s2:.1f}% ({strategy2_response_median:.3f}s / {strategy1_response_median:.3f}s)")
+    print(f"{STRATEGY_3_NAME} penalty: {median_penalty_s3:.1f}% ({strategy3_response_median:.3f}s / {strategy1_response_median:.3f}s)")
 
-    print(f"{STRATEGY_1_NAME} MEDIAN response time: {strategy1_response_median:.3f}s")
-    print(f"{STRATEGY_2_NAME} MEDIAN response time: {strategy2_response_median:.3f}s")
-    print(f"MEDIAN performance penalty: {median_penalty:.1f}%")
-
-    # 95th percentile comparison (excludes extreme outliers)
+    # 95th percentile comparison
     strategy1_p95 = strategy1_metrics['avg_response_time'].quantile(0.95)
     strategy2_p95 = strategy2_metrics['avg_response_time'].quantile(0.95)
-    p95_penalty = ((strategy2_p95 - strategy1_p95) / strategy1_p95) * 100
-
-    print(f"{STRATEGY_1_NAME} 95th percentile: {strategy1_p95:.3f}s")
-    print(f"{STRATEGY_2_NAME} 95th percentile: {strategy2_p95:.3f}s")
-    print(f"95th percentile penalty: {p95_penalty:.1f}%")
-
-    # Exclude cold start period (first 10% of measurements)
-    strategy1_warm = strategy1_metrics.iloc[int(len(strategy1_metrics) * 0.1):]
-    strategy2_warm = strategy2_metrics.iloc[int(len(strategy2_metrics) * 0.1):]
+    strategy3_p95 = strategy3_metrics['avg_response_time'].quantile(0.95)
     
-    strategy1_warm_mean = strategy1_warm['avg_response_time'].mean()
-    strategy2_warm_mean = strategy2_warm['avg_response_time'].mean()
-    warm_penalty = ((strategy2_warm_mean - strategy1_warm_mean) / strategy1_warm_mean) * 100
+    p95_penalty_s2 = ((strategy2_p95 - strategy1_p95) / strategy1_p95) * 100
+    p95_penalty_s3 = ((strategy3_p95 - strategy1_p95) / strategy1_p95) * 100
 
-    print(f"{STRATEGY_1_NAME} warm-up avg: {strategy1_warm_mean:.3f}s")
-    print(f"{STRATEGY_2_NAME} warm-up avg: {strategy2_warm_mean:.3f}s")
-    print(f"Warm-up performance penalty: {warm_penalty:.1f}%")
+    print(f"\n95th percentile response times:")
+    print(f"{STRATEGY_1_NAME}: {strategy1_p95:.3f}s")
+    print(f"{STRATEGY_2_NAME}: {strategy2_p95:.3f}s ({p95_penalty_s2:+.1f}%)")
+    print(f"{STRATEGY_3_NAME}: {strategy3_p95:.3f}s ({p95_penalty_s3:+.1f}%)")
 
     print("\n=== WAIT TIME ANALYSIS ===")
     strategy1_wait_median = strategy1_metrics['avg_wait_time'].median()
     strategy2_wait_median = strategy2_metrics['avg_wait_time'].median()
+    strategy3_wait_median = strategy3_metrics['avg_wait_time'].median()
     
-    # Handle division by zero
-    if strategy1_wait_median > 0:
-        wait_improvement = ((strategy1_wait_median - strategy2_wait_median) / strategy1_wait_median) * 100
-    else:
-        wait_improvement = 0
+    print(f"MEDIAN wait times:")
+    print(f"{STRATEGY_1_NAME}: {strategy1_wait_median:.3f}s")
+    print(f"{STRATEGY_2_NAME}: {strategy2_wait_median:.3f}s")
+    print(f"{STRATEGY_3_NAME}: {strategy3_wait_median:.3f}s")
+
+    print("\n=== STRATEGY RANKING ===")
+    # Rank strategies by power consumption (lower is better)
+    power_rankings = sorted([
+        (STRATEGY_1_NAME, strategy1_total),
+        (STRATEGY_2_NAME, strategy2_total),
+        (STRATEGY_3_NAME, strategy3_total)
+    ], key=lambda x: x[1])
     
-    print(f"{STRATEGY_1_NAME} median wait time: {strategy1_wait_median:.3f}s")
-    print(f"{STRATEGY_2_NAME} median wait time: {strategy2_wait_median:.3f}s")
-    print(f"Wait time improvement: {wait_improvement:.1f}%")
+    print("Power consumption ranking (best to worst):")
+    for i, (name, power) in enumerate(power_rankings, 1):
+        print(f"  {i}. {name}: {power:.1f}W")
+    
+    # Rank strategies by response time (lower is better)
+    response_rankings = sorted([
+        (STRATEGY_1_NAME, strategy1_response_median),
+        (STRATEGY_2_NAME, strategy2_response_median),
+        (STRATEGY_3_NAME, strategy3_response_median)
+    ], key=lambda x: x[1])
+    
+    print("\nResponse time ranking (best to worst):")
+    for i, (name, response_time) in enumerate(response_rankings, 1):
+        print(f"  {i}. {name}: {response_time:.3f}s")
 
-    print("\n=== REVISED HYPOTHESIS RESULT ===")
-    # Use median metrics for hypothesis testing
-    if power_savings > 0 and median_penalty > 0:
-        print(f"✅ HYPOTHESIS CONFIRMED (MEDIAN): {STRATEGY_2_NAME} saves {power_savings:.1f}% infrastructure power")
-        print(f"   at the cost of {median_penalty:.1f}% slower median response times")
-    elif power_savings > 0 and median_penalty < 0:
-        print(f"🎉 UNEXPECTED RESULT: {STRATEGY_2_NAME} saves {power_savings:.1f}% infrastructure power")
-        print(f"   AND improves median response times by {abs(median_penalty):.1f}%!")
-        print(f"   This suggests {STRATEGY_2_NAME} strategy is superior in both dimensions")
-    else:
-        print("❌ HYPOTHESIS NOT CONFIRMED")
-        print(f"   Power savings: {power_savings:.1f}%")
-
-    # Return values for plotting (use median for more stable plot)
+    # Return values for plotting
     return {
         'strategy1_total': strategy1_total,
         'strategy2_total': strategy2_total,
-        'strategy1_response_time': strategy1_response_median,  # Use median
-        'strategy2_response_time': strategy2_response_median,  # Use median
-        'power_savings_percent': power_savings,
-        'performance_penalty_percent': median_penalty
+        'strategy3_total': strategy3_total,
+        'strategy1_response_time': strategy1_response_median,
+        'strategy2_response_time': strategy2_response_median,
+        'strategy3_response_time': strategy3_response_median,
+        'power_savings_s2': power_savings_s2,
+        'power_savings_s3': power_savings_s3,
+        'performance_penalty_s2': median_penalty_s2,
+        'performance_penalty_s3': median_penalty_s3
     }
 
 
-def create_simple_trade_off_plot(strategy1_total, strategy2_total, strategy1_response_time, strategy2_response_time):
-    """One chart that shows your research contribution"""
+def create_simple_trade_off_plot(strategy1_total, strategy2_total, strategy3_total, 
+                                 strategy1_response_time, strategy2_response_time, strategy3_response_time):
+    """Three-way chart that shows your research contribution"""
 
-    strategies = [STRATEGY_1_NAME, STRATEGY_2_NAME]
-    power_consumption = [strategy1_total, strategy2_total]
-    response_times = [strategy1_response_time, strategy2_response_time]
+    strategies = [STRATEGY_1_NAME, STRATEGY_2_NAME, STRATEGY_3_NAME]
+    power_consumption = [strategy1_total, strategy2_total, strategy3_total]
+    response_times = [strategy1_response_time, strategy2_response_time, strategy3_response_time]
 
-    plt.figure(figsize=(10, 6))
-    plt.scatter(response_times, power_consumption, s=200, alpha=0.7, 
-                c=['blue', 'green'], label=strategies)
+    plt.figure(figsize=(12, 8))
+    colors = ['blue', 'green', 'red']
+    plt.scatter(response_times, power_consumption, s=300, alpha=0.7, 
+                c=colors, label=strategies)
 
     for i, strategy in enumerate(strategies):
         plt.annotate(strategy, (response_times[i], power_consumption[i]),
-                    xytext=(10, 10), textcoords='offset points')
+                    xytext=(15, 15), textcoords='offset points', fontsize=12, fontweight='bold')
 
-    plt.xlabel('Median Response Time (seconds)')
-    plt.ylabel('Average Power Consumption (W)')
-    plt.title(f'Power-Performance Trade-off: {STRATEGY_2_NAME} vs {STRATEGY_1_NAME} (Robust Metrics)')
+    plt.xlabel('Median Response Time (seconds)', fontsize=12)
+    plt.ylabel('Average Power Consumption (W)', fontsize=12)
+    plt.title(f'Power-Performance Trade-off: Three-Strategy Comparison', fontsize=14, fontweight='bold')
     plt.grid(True, alpha=0.3)
+    plt.legend(fontsize=10)
 
-    # Show the trade-off direction
-    if len(response_times) >= 2:
-        plt.arrow(response_times[0], power_consumption[0],
-                  response_times[1] - response_times[0],
-                  power_consumption[1] - power_consumption[0],
-                  head_width=1, head_length=0.05, fc='red', alpha=0.5, length_includes_head=True)
+    # Add arrows to show relationships
+    # HPST to LPLT
+    plt.arrow(response_times[0], power_consumption[0],
+              response_times[1] - response_times[0],
+              power_consumption[1] - power_consumption[0],
+              head_width=0.5, head_length=1, fc='orange', alpha=0.6, length_includes_head=True,
+              label=f'{STRATEGY_1_NAME}→{STRATEGY_2_NAME}')
+    
+    # HPST to Kubernetes
+    plt.arrow(response_times[0], power_consumption[0],
+              response_times[2] - response_times[0],
+              power_consumption[2] - power_consumption[0],
+              head_width=0.5, head_length=1, fc='purple', alpha=0.6, length_includes_head=True,
+              label=f'{STRATEGY_1_NAME}→{STRATEGY_3_NAME}')
 
     plt.tight_layout()
-    plt.savefig("tradeoff_plot.png", dpi=300, bbox_inches='tight')
-    # Remove plt.show() since we're running headless
-    print("Plot saved as tradeoff_plot.png")
+    plt.savefig("tradeoff_plot_3way.png", dpi=300, bbox_inches='tight')
+    print("Plot saved as tradeoff_plot_3way.png")
 
 
 def analyze_scaling_behavior():
-    """Understand the unexpected performance differences"""
+    """Three-way scaling behavior analysis"""
     
-    # Load scaling action logs
-    strategy1_scaling = pd.read_csv(f"{STRATEGY_1_DIR}/scaling_actions.csv")
-    strategy2_scaling = pd.read_csv(f"{STRATEGY_2_DIR}/scaling_actions.csv")
+    # Load scaling decision logs for all strategies (using correct dataframe)
+    strategy1_scaling = pd.read_csv(f"{STRATEGY_1_DIR}/scaling_decisions_df.csv")
+    strategy2_scaling = pd.read_csv(f"{STRATEGY_2_DIR}/scaling_decisions_df.csv")
+    strategy3_scaling = pd.read_csv(f"{STRATEGY_3_DIR}/scaling_decisions_df.csv")
     
     print("=== SCALING BEHAVIOR ANALYSIS ===")
-    print(f"{STRATEGY_1_NAME} total scaling actions: {len(strategy1_scaling)}")
-    print(f"{STRATEGY_2_NAME} total scaling actions: {len(strategy2_scaling)}")
     
-    # Node distribution analysis
-    strategy1_deployments = pd.read_csv(f"{STRATEGY_1_DIR}/deployments_df.csv")
-    strategy2_deployments = pd.read_csv(f"{STRATEGY_2_DIR}/deployments_df.csv")
+    # Count actual scaling actions (exclude 'no_action')
+    strategy1_actions = strategy1_scaling[strategy1_scaling['action'] != 'no_action']
+    strategy2_actions = strategy2_scaling[strategy2_scaling['action'] != 'no_action']
+    strategy3_actions = strategy3_scaling[strategy3_scaling['action'] != 'no_action']
     
-    print(f"{STRATEGY_1_NAME} average replicas: {strategy1_deployments['replicas'].mean():.1f}")
-    print(f"{STRATEGY_2_NAME} average replicas: {strategy2_deployments['replicas'].mean():.1f}")
+    print(f"Total scaling actions:")
+    print(f"{STRATEGY_1_NAME}: {len(strategy1_actions)} actions")
+    print(f"{STRATEGY_2_NAME}: {len(strategy2_actions)} actions")
+    print(f"{STRATEGY_3_NAME}: {len(strategy3_actions)} actions")
     
-    # Check if Strategy 2 is actually more conservative
+    # Node distribution analysis (use correct deployment dataframe)
+    strategy1_deployments = pd.read_csv(f"{STRATEGY_1_DIR}/replica_deployment_df.csv")
+    strategy2_deployments = pd.read_csv(f"{STRATEGY_2_DIR}/replica_deployment_df.csv")
+    strategy3_deployments = pd.read_csv(f"{STRATEGY_3_DIR}/replica_deployment_df.csv")
+    
+    print(f"\nTotal replica deployments:")
+    print(f"{STRATEGY_1_NAME}: {len(strategy1_deployments)} deployments")
+    print(f"{STRATEGY_2_NAME}: {len(strategy2_deployments)} deployments")
+    print(f"{STRATEGY_3_NAME}: {len(strategy3_deployments)} deployments")
+    
+    # Scaling frequency analysis (vs HPST baseline)
+    scaling_ratio_s2 = len(strategy2_actions) / len(strategy1_actions) if len(strategy1_actions) > 0 else 0
+    scaling_ratio_s3 = len(strategy3_actions) / len(strategy1_actions) if len(strategy1_actions) > 0 else 0
+    
+    print(f"\nScaling frequency vs {STRATEGY_1_NAME}:")
+    print(f"{STRATEGY_2_NAME} scaling ratio: {scaling_ratio_s2:.2f} ({len(strategy2_actions)} / {len(strategy1_actions)})")
+    print(f"{STRATEGY_3_NAME} scaling ratio: {scaling_ratio_s3:.2f} ({len(strategy3_actions)} / {len(strategy1_actions)})")
+    
+    # Scale up vs scale down analysis
+    strategy1_scale_up = len(strategy1_actions[strategy1_actions['action'] == 'scale_up'])
+    strategy1_scale_down = len(strategy1_actions[strategy1_actions['action'] == 'scale_down'])
+    strategy2_scale_up = len(strategy2_actions[strategy2_actions['action'] == 'scale_up'])
+    strategy2_scale_down = len(strategy2_actions[strategy2_actions['action'] == 'scale_down'])
+    strategy3_scale_up = len(strategy3_actions[strategy3_actions['action'] == 'scale_up'])
+    strategy3_scale_down = len(strategy3_actions[strategy3_actions['action'] == 'scale_down'])
+    
+    print(f"\nScaling direction breakdown:")
+    print(f"{STRATEGY_1_NAME}: {strategy1_scale_up} up, {strategy1_scale_down} down")
+    print(f"{STRATEGY_2_NAME}: {strategy2_scale_up} up, {strategy2_scale_down} down")
+    print(f"{STRATEGY_3_NAME}: {strategy3_scale_up} up, {strategy3_scale_down} down")
+    
+    # Interpretation
+    print(f"\nScaling behavior patterns:")
+    if scaling_ratio_s2 < 0.8:
+        print(f"✅ {STRATEGY_2_NAME} scales more conservatively (20%+ fewer actions)")
+    elif scaling_ratio_s2 > 1.2:
+        print(f"❌ {STRATEGY_2_NAME} scales more aggressively (20%+ more actions)")
+    else:
+        print(f"➡️ {STRATEGY_2_NAME} has similar scaling frequency to {STRATEGY_1_NAME}")
+        
+    if scaling_ratio_s3 < 0.8:
+        print(f"✅ {STRATEGY_3_NAME} scales more conservatively (20%+ fewer actions)")
+    elif scaling_ratio_s3 > 1.2:
+        print(f"❌ {STRATEGY_3_NAME} scales more aggressively (20%+ more actions)")
+    else:
+        print(f"➡️ {STRATEGY_3_NAME} has similar scaling frequency to {STRATEGY_1_NAME}")
+    
     return {
-        'strategy1_scaling_frequency': len(strategy1_scaling),
-        'strategy2_scaling_frequency': len(strategy2_scaling),
-        'scaling_difference': len(strategy1_scaling) - len(strategy2_scaling)
+        'strategy1_scaling_frequency': len(strategy1_actions),
+        'strategy2_scaling_frequency': len(strategy2_actions),
+        'strategy3_scaling_frequency': len(strategy3_actions),
+        'scaling_ratio_s2': scaling_ratio_s2,
+        'scaling_ratio_s3': scaling_ratio_s3
     }
 
 
 def analyze_node_distribution():
-    """Check if Strategy 1 is spreading too much vs Strategy 2 consolidation"""
+    """Three-way node distribution analysis"""
     
-    # Load replica deployment data
+    # Load replica deployment data for all strategies
     strategy1_replicas = pd.read_csv(f"{STRATEGY_1_DIR}/replica_deployment_df.csv")
     strategy2_replicas = pd.read_csv(f"{STRATEGY_2_DIR}/replica_deployment_df.csv")
+    strategy3_replicas = pd.read_csv(f"{STRATEGY_3_DIR}/replica_deployment_df.csv")
     
     print("=== NODE DISTRIBUTION ANALYSIS ===")
     
     # Count unique nodes used
     strategy1_unique_nodes = strategy1_replicas['node_name'].nunique()
     strategy2_unique_nodes = strategy2_replicas['node_name'].nunique()
+    strategy3_unique_nodes = strategy3_replicas['node_name'].nunique()
     
-    print(f"{STRATEGY_1_NAME} uses {strategy1_unique_nodes} unique nodes")
-    print(f"{STRATEGY_2_NAME} uses {strategy2_unique_nodes} unique nodes")
-    print(f"Node spreading difference: {strategy1_unique_nodes - strategy2_unique_nodes}")
+    print(f"Unique nodes used:")
+    print(f"{STRATEGY_1_NAME}: {strategy1_unique_nodes} nodes")
+    print(f"{STRATEGY_2_NAME}: {strategy2_unique_nodes} nodes")
+    print(f"{STRATEGY_3_NAME}: {strategy3_unique_nodes} nodes")
     
     # Replicas per node distribution
     strategy1_node_load = strategy1_replicas.groupby('node_name').size()
     strategy2_node_load = strategy2_replicas.groupby('node_name').size()
+    strategy3_node_load = strategy3_replicas.groupby('node_name').size()
     
-    print(f"\n{STRATEGY_1_NAME} node load distribution:")
-    print(f"  Average replicas per node: {strategy1_node_load.mean():.1f}")
-    print(f"  Max replicas on one node: {strategy1_node_load.max()}")
-    print(f"  Min replicas on one node: {strategy1_node_load.min()}")
+    print(f"\nNode load distribution:")
+    print(f"{STRATEGY_1_NAME} - Avg: {strategy1_node_load.mean():.1f}, Max: {strategy1_node_load.max()}, Min: {strategy1_node_load.min()}")
+    print(f"{STRATEGY_2_NAME} - Avg: {strategy2_node_load.mean():.1f}, Max: {strategy2_node_load.max()}, Min: {strategy2_node_load.min()}")
+    print(f"{STRATEGY_3_NAME} - Avg: {strategy3_node_load.mean():.1f}, Max: {strategy3_node_load.max()}, Min: {strategy3_node_load.min()}")
     
-    print(f"\n{STRATEGY_2_NAME} node load distribution:")
-    print(f"  Average replicas per node: {strategy2_node_load.mean():.1f}")
-    print(f"  Max replicas on one node: {strategy2_node_load.max()}")
-    print(f"  Min replicas on one node: {strategy2_node_load.min()}")
+    # Consolidation analysis (vs HPST baseline)
+    consolidation_factor_s2 = strategy2_node_load.mean() / strategy1_node_load.mean()
+    consolidation_factor_s3 = strategy3_node_load.mean() / strategy1_node_load.mean()
     
-    # Check if Strategy 2 is consolidating (higher load per node)
-    consolidation_factor = strategy2_node_load.mean() / strategy1_node_load.mean()
-    print(f"\nConsolidation factor: {consolidation_factor:.2f}")
-    if consolidation_factor > 1.2:
-        print(f"✅ {STRATEGY_2_NAME} is consolidating workload (higher density per node)")
-    elif consolidation_factor < 0.8:
-        print(f"❌ {STRATEGY_2_NAME} is spreading more than {STRATEGY_1_NAME}")
+    print(f"\nConsolidation analysis (replicas per node vs {STRATEGY_1_NAME}):")
+    print(f"{STRATEGY_2_NAME} consolidation factor: {consolidation_factor_s2:.2f} ({strategy2_node_load.mean():.1f} / {strategy1_node_load.mean():.1f})")
+    print(f"{STRATEGY_3_NAME} consolidation factor: {consolidation_factor_s3:.2f} ({strategy3_node_load.mean():.1f} / {strategy1_node_load.mean():.1f})")
+    
+    # Interpretation
+    print(f"\nConsolidation patterns:")
+    if consolidation_factor_s2 > 1.2:
+        print(f"✅ {STRATEGY_2_NAME} consolidates workload significantly (20%+ higher density)")
+    elif consolidation_factor_s2 < 0.8:
+        print(f"❌ {STRATEGY_2_NAME} spreads workload more than {STRATEGY_1_NAME} (20%+ lower density)")
     else:
-        print("➡️ Similar distribution patterns")
+        print(f"➡️ {STRATEGY_2_NAME} has similar consolidation to {STRATEGY_1_NAME}")
+        
+    if consolidation_factor_s3 > 1.2:
+        print(f"✅ {STRATEGY_3_NAME} consolidates workload significantly (20%+ higher density)")
+    elif consolidation_factor_s3 < 0.8:
+        print(f"❌ {STRATEGY_3_NAME} spreads workload more than {STRATEGY_1_NAME} (20%+ lower density)")
+    else:
+        print(f"➡️ {STRATEGY_3_NAME} has similar consolidation to {STRATEGY_1_NAME}")
     
     return {
         'strategy1_nodes': strategy1_unique_nodes,
         'strategy2_nodes': strategy2_unique_nodes,
-        'consolidation_factor': consolidation_factor
+        'strategy3_nodes': strategy3_unique_nodes,
+        'consolidation_factor_s2': consolidation_factor_s2,
+        'consolidation_factor_s3': consolidation_factor_s3
     }
 
 
@@ -404,383 +502,191 @@ def analyze_resource_contention():
     }
 
 def run_deep_analysis():
-    """Run all deep analysis functions to understand the anomalies"""
+    """Run all deep analysis functions for three-way comparison"""
     
-    print(f"🔍 DEEP ANALYSIS: Understanding Why {STRATEGY_2_NAME} Compares to {STRATEGY_1_NAME}\n")
+    print(f"🔍 DEEP ANALYSIS: Three-Strategy Comparison\n")
     
     # 1. Node distribution
     node_results = analyze_node_distribution()
     
-    # 2. Cold start behavior  
-    cold_start_results = analyze_cold_start_behavior()
-    
-    # 3. Workload-specific differences
-    workload_results = analyze_workload_differences()
-    
-    # 4. Scaling decision patterns
-    scaling_results = analyze_scaling_decisions()
-    
-    # 5. Resource contention
-    contention_results = analyze_resource_contention()
+    # 2. Scaling behavior  
+    scaling_results = analyze_scaling_behavior()
     
     print("\n" + "="*50)
-    print("HYPOTHESIS VALIDATION SUMMARY")
+    print("THREE-WAY STRATEGY ANALYSIS SUMMARY")
     print("="*50)
     
-    # Validate each hypothesis
-    if node_results['consolidation_factor'] > 1.2:
-        print(f"✅ H1: {STRATEGY_2_NAME} consolidates workload better than {STRATEGY_1_NAME}")
+    # Best strategy analysis
+    print("📊 STRATEGY RANKINGS:")
     
-    if cold_start_results['strategy2_cold_exec'] < cold_start_results['strategy1_cold_exec']:
-        print(f"✅ H2: {STRATEGY_2_NAME} has faster cold start performance")
+    # Node efficiency ranking
+    node_efficiency_scores = [
+        (STRATEGY_1_NAME, node_results['strategy1_nodes'], "baseline"),
+        (STRATEGY_2_NAME, node_results['strategy2_nodes'], f"{node_results['consolidation_factor_s2']:.2f}x"),
+        (STRATEGY_3_NAME, node_results['strategy3_nodes'], f"{node_results['consolidation_factor_s3']:.2f}x")
+    ]
+    node_efficiency_scores.sort(key=lambda x: x[1])  # Sort by node count (fewer is better)
     
-    if scaling_results['strategy2_total_actions'] < scaling_results['strategy1_total_actions']:
-        print(f"✅ H3: {STRATEGY_2_NAME} scales more conservatively (less churn)")
+    print("\nNode efficiency (fewer nodes = better):")
+    for i, (name, nodes, factor) in enumerate(node_efficiency_scores, 1):
+        print(f"  {i}. {name}: {nodes} nodes (consolidation: {factor})")
     
-    if contention_results['strategy2_high_util_events'] < contention_results['strategy1_high_util_events']:
-        print(f"✅ H4: {STRATEGY_2_NAME} avoids resource contention better")
+    # Scaling stability ranking
+    scaling_stability_scores = [
+        (STRATEGY_1_NAME, scaling_results['strategy1_scaling_frequency'], "baseline"),
+        (STRATEGY_2_NAME, scaling_results['strategy2_scaling_frequency'], f"{scaling_results['scaling_ratio_s2']:.2f}x"),
+        (STRATEGY_3_NAME, scaling_results['strategy3_scaling_frequency'], f"{scaling_results['scaling_ratio_s3']:.2f}x")
+    ]
+    scaling_stability_scores.sort(key=lambda x: x[1])  # Sort by scaling frequency (fewer is better)
+    
+    print("\nScaling stability (fewer actions = better):")
+    for i, (name, actions, ratio) in enumerate(scaling_stability_scores, 1):
+        print(f"  {i}. {name}: {actions} actions (frequency: {ratio})")
     
     return {
         'node_analysis': node_results,
-        'cold_start_analysis': cold_start_results,
-        'workload_analysis': workload_results,
-        'scaling_analysis': scaling_results,
-        'contention_analysis': contention_results
+        'scaling_analysis': scaling_results
     }
-
-
-def validate_workload_analysis():
-    """Validate the workload-weighted power analysis with detailed breakdown"""
-    
-    strategy1_power = pd.read_csv(f"{STRATEGY_1_DIR}/power_df.csv")
-    strategy2_power = pd.read_csv(f"{STRATEGY_2_DIR}/power_df.csv")
-    strategy1_replicas = pd.read_csv(f"{STRATEGY_1_DIR}/replica_deployment_df.csv")
-    strategy2_replicas = pd.read_csv(f"{STRATEGY_2_DIR}/replica_deployment_df.csv")
-    
-    print("🔍 DETAILED WORKLOAD ANALYSIS VALIDATION")
-    print("=" * 50)
-    
-    def extract_node_type(node_name):
-        """Extract node type from node name"""
-        node_name = node_name.lower()
-        for node_type in ['xeongpu', 'xeoncpu', 'nuc', 'nx', 'tx2', 'rockpi', 'nano', 'coral', 'rpi4', 'rpi3']:
-            if node_type in node_name:
-                return node_type
-        return 'unknown'
-    
-    def detailed_workload_analysis(power_df, replicas_df, strategy_name):
-        print(f"\n📊 {strategy_name} Detailed Breakdown:")
-        
-        # Get workload distribution by node
-        workload_by_node = replicas_df.groupby('node_name').size()
-        
-        # Get workload distribution by node type
-        replicas_with_type = replicas_df.copy()
-        replicas_with_type['node_type'] = replicas_with_type['node_name'].apply(extract_node_type)
-        workload_by_type = replicas_with_type.groupby('node_type').size()
-        
-        print(f"Workload distribution by node type:")
-        for node_type, count in workload_by_type.sort_values(ascending=False).items():
-            avg_power = power_df[power_df['node_type'] == node_type]['power_watts'].mean()
-            total_power = avg_power * count
-            print(f"  {node_type}: {count} replicas × {avg_power:.2f}W = {total_power:.1f}W")
-        
-        # Calculate node-level analysis
-        total_workload_power = 0
-        total_replicas = 0
-        
-        node_column = 'node' if 'node' in power_df.columns else 'node_name'
-        
-        for node_name, replica_count in workload_by_node.items():
-            node_power_data = power_df[power_df[node_column] == node_name]
-            
-            if len(node_power_data) > 0:
-                avg_power = node_power_data['power_watts'].mean()
-                node_total_power = avg_power * replica_count
-                total_workload_power += node_total_power
-                total_replicas += replica_count
-        
-        efficiency = total_workload_power / total_replicas if total_replicas > 0 else 0
-        
-        print(f"\n{strategy_name} Summary:")
-        print(f"  Total replicas: {total_replicas}")
-        print(f"  Total workload power: {total_workload_power:.1f}W")
-        print(f"  Average efficiency: {efficiency:.3f}W per replica")
-        print(f"  Unique nodes used: {workload_by_node.nunique()}")
-        
-        return efficiency, total_workload_power, total_replicas, workload_by_type
-    
-    # Analyze both strategies
-    s1_eff, s1_power, s1_replicas, s1_types = detailed_workload_analysis(
-        strategy1_power, strategy1_replicas, STRATEGY_1_NAME)
-    s2_eff, s2_power, s2_replicas, s2_types = detailed_workload_analysis(
-        strategy2_power, strategy2_replicas, STRATEGY_2_NAME)
-    
-    # Calculate improvements
-    efficiency_improvement = ((s1_eff - s2_eff) / s1_eff) * 100
-    power_reduction = ((s1_power - s2_power) / s1_power) * 100
-    
-    print(f"\n🎯 COMPARATIVE ANALYSIS:")
-    print(f"Workload efficiency improvement: {efficiency_improvement:.1f}%")
-    print(f"Total workload power reduction: {power_reduction:.1f}%")
-    print(f"Replica count difference: {s1_replicas} vs {s2_replicas}")
-    
-    # Validate results
-    print(f"\n✅ VALIDATION CHECKS:")
-    if s2_eff < s1_eff:
-        print(f"✓ {STRATEGY_2_NAME} has better energy efficiency per replica")
-    else:
-        print(f"✗ {STRATEGY_1_NAME} has better energy efficiency per replica")
-    
-    if s2_power < s1_power:
-        print(f"✓ {STRATEGY_2_NAME} uses less total workload power")
-    else:
-        print(f"✗ {STRATEGY_1_NAME} uses less total workload power")
-    
-    return {
-        'strategy1_efficiency': s1_eff,
-        'strategy2_efficiency': s2_eff,
-        'efficiency_improvement': efficiency_improvement,
-        'power_reduction': power_reduction
-    }
-#     """Calculate power based on actual node usage patterns"""
-    
-#     hpst_power = pd.read_csv("./data/sine_perf_strategy_d120_r35/power_df.csv")
-#     lplt_power = pd.read_csv("./data/sine_power_strategy_d120_r35/power_df.csv")
-    
-#     hpst_replicas = pd.read_csv("./data/sine_perf_strategy_d120_r35/replica_deployment_df.csv")
-#     lplt_replicas = pd.read_csv("./data/sine_power_strategy_d120_r35/replica_deployment_df.csv")
-    
-#     print("=== POWER ANALYSIS ===")
-    
-#     # Calculate workload-weighted power consumption
-#     def calculate_strategy_power(power_df, replicas_df, strategy_name):
-#         # Get nodes with actual workload
-#         active_nodes = replicas_df['node_name'].value_counts()
-        
-#         # Calculate power consumption weighted by workload
-#         total_weighted_power = 0
-#         total_workload = 0
-        
-#         for node_name, replica_count in active_nodes.items():
-#             # Extract node type
-#             node_type = 'unknown'
-#             for nt in ['xeongpu', 'xeoncpu', 'nuc', 'nx', 'tx2', 'rockpi', 'nano', 'coral', 'rpi4', 'rpi3']:
-#                 if nt in node_name.lower():
-#                     node_type = nt
-#                     break
-            
-#             # Get power consumption for this node type
-#             node_power_data = power_df[power_df['node_type'] == node_type]
-#             if len(node_power_data) > 0:
-#                 avg_node_power = node_power_data['power_watts'].mean()
-#                 weighted_power = avg_node_power * replica_count
-#                 total_weighted_power += weighted_power
-#                 total_workload += replica_count
-                
-#                 print(f"  {node_name} ({node_type}): {replica_count} replicas × {avg_node_power:.2f}W = {weighted_power:.1f}W")
-        
-#         avg_weighted_power = total_weighted_power / total_workload if total_workload > 0 else 0
-        
-#         print(f"\n{strategy_name} workload-weighted power: {avg_weighted_power:.2f}W per replica")
-#         print(f"{strategy_name} total workload power: {total_weighted_power:.1f}W")
-#         print(f"{strategy_name} total replicas: {total_workload}")
-        
-#         return avg_weighted_power, total_weighted_power, total_workload
-    
-#     # Calculate for both strategies
-#     hpst_avg, hpst_total, hpst_replicas = calculate_strategy_power(hpst_power, hpst_replicas, "HPST")
-#     lplt_avg, lplt_total, lplt_replicas = calculate_strategy_power(lplt_power, lplt_replicas, "LPLT")
-    
-#     # Calculate actual energy efficiency
-#     power_per_replica_savings = ((hpst_avg - lplt_avg) / hpst_avg) * 100
-#     total_power_savings = ((hpst_total - lplt_total) / hpst_total) * 100
-    
-#     print(f"\n=== ENERGY EFFICIENCY ===")
-#     print(f"Power per replica savings: {power_per_replica_savings:.1f}%")
-#     print(f"Total system power savings: {total_power_savings:.1f}%")
-#     print(f"Replica count difference: {hpst_replicas} vs {lplt_replicas}")
-    
-#     return {
-#         'hpst_power_per_replica': hpst_avg,
-#         'lplt_power_per_replica': lplt_avg,
-#         'power_per_replica_savings': power_per_replica_savings,
-#         'total_power_savings': total_power_savings
-#     }
-
-# # Run this analysis
-#_results = calculate_correct_power_consumption()
-
-
-# def analyze_node_selection_impact():
-#     """Analyze the power impact of different node type selections"""
-    
-#     strategy1_decisions = pd.read_csv(f"{STRATEGY_1_DIR}/scaling_decisions_df.csv")
-#     strategy2_decisions = pd.read_csv(f"{STRATEGY_2_DIR}/scaling_decisions_df.csv")
-
-#     print("=== NODE SELECTION POWER IMPACT ===")
-    
-#     # Power costs by node type
-#     node_power_costs = {
-#         'rpi3': 1.4, 'rpi4': 2.9, 'rockpi': 3.2, 'coral': 2.4, 'nano': 1.9,
-#         'tx2': 5.0, 'nx': 7.3, 'nuc': 6.0, 'xeoncpu': 45.0, 'xeongpu': 65.0
-#     }
-    
-#     def calculate_selection_cost(decisions_df, strategy_name):
-#         total_power_cost = 0
-#         total_selections = 0
-        
-#         node_selections = decisions_df['selected_node_type'].value_counts()
-        
-#         print(f"\n{strategy_name} selections and power cost:")
-#         for node_type, count in node_selections.items():
-#             power_cost = node_power_costs.get(node_type, 5.0)
-#             total_cost = power_cost * count
-#             total_power_cost += total_cost
-#             total_selections += count
-            
-#             print(f"  {node_type}: {count} selections × {power_cost}W = {total_cost:.1f}W")
-        
-#         avg_power_per_selection = total_power_cost / total_selections if total_selections > 0 else 0
-#         print(f"{strategy_name} average power per selection: {avg_power_per_selection:.2f}W")
-        
-#         return avg_power_per_selection, total_power_cost, total_selections
-
-#     s1_avg, s1_total, s1_count = calculate_selection_cost(strategy1_decisions, STRATEGY_1_NAME)
-#     s2_avg, s2_total, s2_count = calculate_selection_cost(strategy2_decisions, STRATEGY_2_NAME)
-
-#     selection_efficiency = ((s1_avg - s2_avg) / s1_avg) * 100
-#     print(f"\nNode selection efficiency: {selection_efficiency:.1f}% power savings with {STRATEGY_1_NAME} vs {STRATEGY_2_NAME}")
-    
-#     return selection_efficiency
-
-# # Run this too
-# selection_savings = analyze_node_selection_impact()
 
 
 def analyze_real_power_consumption():
-    """Use actual measured power consumption - FIXED VERSION"""
+    """Three-way power consumption analysis using actual measured data"""
     
-    # Load real power measurements
+    # Load real power measurements for all strategies
     strategy1_power = pd.read_csv(f"{STRATEGY_1_DIR}/power_df.csv")
     strategy2_power = pd.read_csv(f"{STRATEGY_2_DIR}/power_df.csv")
+    strategy3_power = pd.read_csv(f"{STRATEGY_3_DIR}/power_df.csv")
     
-    print("🔋 REAL INFRASTRUCTURE POWER ANALYSIS (FIXED)")
+    print("🔋 REAL INFRASTRUCTURE POWER ANALYSIS (THREE-WAY)")
     print("="*50)
     
-    # DEBUG: Check data structure
-    print(f"HPST power data: {len(strategy1_power)} measurements")
-    print(f"LPLT power data: {len(strategy2_power)} measurements")
-    print(f"HPST unique nodes: {strategy1_power['node'].nunique()}")
-    print(f"LPLT unique nodes: {strategy2_power['node'].nunique()}")
-    print(f"HPST time range: {strategy1_power['timestamp'].min():.1f} - {strategy1_power['timestamp'].max():.1f}")
-    print(f"LPLT time range: {strategy2_power['timestamp'].min():.1f} - {strategy2_power['timestamp'].max():.1f}")
+    # DEBUG: Check data structure for all strategies
+    print(f"Power data measurements:")
+    print(f"{STRATEGY_1_NAME}: {len(strategy1_power)} measurements, {strategy1_power['node'].nunique()} unique nodes")
+    print(f"{STRATEGY_2_NAME}: {len(strategy2_power)} measurements, {strategy2_power['node'].nunique()} unique nodes")
+    print(f"{STRATEGY_3_NAME}: {len(strategy3_power)} measurements, {strategy3_power['node'].nunique()} unique nodes")
     
     # 1. CORRECT TOTAL SYSTEM POWER (aggregate by timestamp first)
     strategy1_total_power = strategy1_power.groupby('timestamp')['power_watts'].sum()
     strategy2_total_power = strategy2_power.groupby('timestamp')['power_watts'].sum()
+    strategy3_total_power = strategy3_power.groupby('timestamp')['power_watts'].sum()
     
     strategy1_avg_total = strategy1_total_power.mean()
     strategy2_avg_total = strategy2_total_power.mean()
+    strategy3_avg_total = strategy3_total_power.mean()
     
-    print(f"\n📊  SYSTEM POWER:")
-    print(f"{STRATEGY_1_NAME} average total system power: {strategy1_avg_total:.1f}W")
-    print(f"{STRATEGY_2_NAME} average total system power: {strategy2_avg_total:.1f}W")
+    print(f"\n📊 CORRECTED SYSTEM POWER:")
+    print(f"{STRATEGY_1_NAME}: {strategy1_avg_total:.1f}W")
+    print(f"{STRATEGY_2_NAME}: {strategy2_avg_total:.1f}W")
+    print(f"{STRATEGY_3_NAME}: {strategy3_avg_total:.1f}W")
     
-    # 2. INFRASTRUCTURE EFFICIENCY
-    power_savings = ((strategy1_avg_total - strategy2_avg_total) / strategy1_avg_total) * 100
-    print(f"Infrastructure power savings: {power_savings:.1f}%")
+    # 2. INFRASTRUCTURE EFFICIENCY (vs HPST baseline)
+    power_savings_s2 = ((strategy1_avg_total - strategy2_avg_total) / strategy1_avg_total) * 100
+    power_savings_s3 = ((strategy1_avg_total - strategy3_avg_total) / strategy1_avg_total) * 100
     
-    # 3.  POWER DISTRIBUTION ANALYSIS
-    print(f"\n📊 POWER DISTRIBUTION:")
+    print(f"\nPower efficiency vs {STRATEGY_1_NAME}:")
+    print(f"{STRATEGY_2_NAME} power savings: {power_savings_s2:.1f}% ({strategy2_avg_total:.1f}W / {strategy1_avg_total:.1f}W)")
+    print(f"{STRATEGY_3_NAME} power savings: {power_savings_s3:.1f}% ({strategy3_avg_total:.1f}W / {strategy1_avg_total:.1f}W)")
     
-    # Average power per node type (not summing all measurements)
-    strategy1_by_type = strategy1_power.groupby(['node_type', 'node'])['power_watts'].mean().groupby('node_type').agg(['mean', 'count'])
-    strategy2_by_type = strategy2_power.groupby(['node_type', 'node'])['power_watts'].mean().groupby('node_type').agg(['mean', 'count'])
+    # 3. POWER DISTRIBUTION ANALYSIS
+    print(f"\n📊 POWER DISTRIBUTION BY NODE TYPE:")
     
-    print(f"\n{STRATEGY_1_NAME} power by node type:")
-    for node_type in strategy1_by_type.index:
-        avg_power = strategy1_by_type.loc[node_type, 'mean']
-        node_count = strategy1_by_type.loc[node_type, 'count']
-        total_power = avg_power * node_count
-        print(f"  {node_type}: {node_count} nodes, avg {avg_power:.1f}W, total {total_power:.1f}W")
+    # Helper function to analyze power by node type
+    def analyze_power_by_type(power_df, strategy_name):
+        by_type = power_df.groupby(['node_type', 'node'])['power_watts'].mean().groupby('node_type').agg(['mean', 'count'])
+        print(f"\n{strategy_name} power distribution:")
+        total_nodes = 0
+        total_power = 0
+        for node_type in by_type.index:
+            avg_power = by_type.loc[node_type, 'mean']
+            node_count = by_type.loc[node_type, 'count']
+            type_total_power = avg_power * node_count
+            total_nodes += node_count
+            total_power += type_total_power
+            print(f"  {node_type}: {node_count} nodes × {avg_power:.1f}W = {type_total_power:.1f}W")
+        print(f"  Total: {total_nodes} nodes = {total_power:.1f}W")
+        return by_type
     
-    print(f"\n{STRATEGY_2_NAME} power by node type:")
-    for node_type in strategy2_by_type.index:
-        avg_power = strategy2_by_type.loc[node_type, 'mean']
-        node_count = strategy2_by_type.loc[node_type, 'count']
-        total_power = avg_power * node_count
-        print(f"  {node_type}: {node_count} nodes, avg {avg_power:.1f}W, total {total_power:.1f}W")
+    strategy1_by_type = analyze_power_by_type(strategy1_power, STRATEGY_1_NAME)
+    strategy2_by_type = analyze_power_by_type(strategy2_power, STRATEGY_2_NAME)
+    strategy3_by_type = analyze_power_by_type(strategy3_power, STRATEGY_3_NAME)
     
     # 4. ENERGY CONSUMPTION
-    # Calculate simulation duration in hours
     strategy1_duration_hours = (strategy1_power['timestamp'].max() - strategy1_power['timestamp'].min()) / 3600
     strategy2_duration_hours = (strategy2_power['timestamp'].max() - strategy2_power['timestamp'].min()) / 3600
+    strategy3_duration_hours = (strategy3_power['timestamp'].max() - strategy3_power['timestamp'].min()) / 3600
     
     strategy1_energy = strategy1_avg_total * strategy1_duration_hours
     strategy2_energy = strategy2_avg_total * strategy2_duration_hours
+    strategy3_energy = strategy3_avg_total * strategy3_duration_hours
     
     print(f"\n⚡ TOTAL ENERGY CONSUMPTION:")
-    print(f"Simulation duration: {strategy1_duration_hours:.2f} hours")
+    print(f"Simulation duration: ~{strategy1_duration_hours:.2f} hours")
     print(f"{STRATEGY_1_NAME}: {strategy1_energy:.1f} Wh")
     print(f"{STRATEGY_2_NAME}: {strategy2_energy:.1f} Wh")
+    print(f"{STRATEGY_3_NAME}: {strategy3_energy:.1f} Wh")
     
-    energy_savings = ((strategy1_energy - strategy2_energy) / strategy1_energy) * 100
-    print(f"Energy savings: {energy_savings:.1f}%")
+    energy_savings_s2 = ((strategy1_energy - strategy2_energy) / strategy1_energy) * 100
+    energy_savings_s3 = ((strategy1_energy - strategy3_energy) / strategy1_energy) * 100
     
-    # 5. SANITY CHECKS
-    print(f"\n🔍 SANITY CHECKS:")
-    expected_power_range = (200, 800)  # Reasonable for edge infrastructure
-    if not (expected_power_range[0] <= strategy1_avg_total <= expected_power_range[1]):
-        print(f"⚠️ WARNING: {STRATEGY_1_NAME} power ({strategy1_avg_total:.1f}W) outside expected range {expected_power_range}")
-    if not (expected_power_range[0] <= strategy2_avg_total <= expected_power_range[1]):
-        print(f"⚠️ WARNING: {STRATEGY_2_NAME} power ({strategy2_avg_total:.1f}W) outside expected range {expected_power_range}")
+    print(f"\nEnergy efficiency vs {STRATEGY_1_NAME}:")
+    print(f"{STRATEGY_2_NAME} energy savings: {energy_savings_s2:.1f}%")
+    print(f"{STRATEGY_3_NAME} energy savings: {energy_savings_s3:.1f}%")
     
-    expected_energy_range = (40, 1600)  # For 2-hour simulation
-    if not (expected_energy_range[0] <= strategy1_energy <= expected_energy_range[1]):
-        print(f"⚠️ WARNING: {STRATEGY_1_NAME} energy ({strategy1_energy:.1f}Wh) outside expected range {expected_energy_range}")
-    if not (expected_energy_range[0] <= strategy2_energy <= expected_energy_range[1]):
-        print(f"⚠️ WARNING: {STRATEGY_2_NAME} energy ({strategy2_energy:.1f}Wh) outside expected range {expected_energy_range}")
+    # 5. POWER RANKING
+    power_rankings = sorted([
+        (STRATEGY_1_NAME, strategy1_avg_total),
+        (STRATEGY_2_NAME, strategy2_avg_total),
+        (STRATEGY_3_NAME, strategy3_avg_total)
+    ], key=lambda x: x[1])
+    
+    print(f"\n🏆 POWER CONSUMPTION RANKING (best to worst):")
+    for i, (name, power) in enumerate(power_rankings, 1):
+        print(f"  {i}. {name}: {power:.1f}W")
     
     return {
         'strategy1_avg_power': strategy1_avg_total,
         'strategy2_avg_power': strategy2_avg_total,
-        'power_savings_percent': power_savings,
+        'strategy3_avg_power': strategy3_avg_total,
+        'power_savings_s2': power_savings_s2,
+        'power_savings_s3': power_savings_s3,
         'strategy1_total_energy': strategy1_energy,
         'strategy2_total_energy': strategy2_energy,
-        'energy_savings_percent': energy_savings,
-        'simulation_hours': strategy1_duration_hours
+        'strategy3_total_energy': strategy3_energy,
+        'energy_savings_s2': energy_savings_s2,
+        'energy_savings_s3': energy_savings_s3
     }
 
 
 # Add to main execution
 if __name__ == "__main__":
-    print("=== RUNNING HYPOTHESIS TEST ===")
-    print(f"Hypothesis: {STRATEGY_2_NAME} reduces power consumption vs {STRATEGY_1_NAME} baseline, but increases response times\n")
+    print("=== RUNNING THREE-WAY STRATEGY COMPARISON ===")
+    print(f"Comparing: {STRATEGY_1_NAME} vs {STRATEGY_2_NAME} vs {STRATEGY_3_NAME}\n")
     
     results = compare_experiments()
     
-    # NEW: Run real power consumption analysis
+    # Run real power consumption analysis
     print("\n" + "="*60)
     real_power_results = analyze_real_power_consumption()
     
-    # NEW: Run deep analysis
+    # Run deep analysis
+    print("\n" + "="*60)
     deep_results = run_deep_analysis()
     
-    # NEW: Validate workload analysis
-    print("\n" + "="*60)
-    validation_results = validate_workload_analysis()
+    print(f"\n=== FINAL SUMMARY ===")
+    print(f"Three-strategy comparison complete:")
+    print(f"• Power analysis: {STRATEGY_1_NAME} baseline vs {STRATEGY_2_NAME} vs {STRATEGY_3_NAME}")
+    print(f"• Performance analysis: Response time and scaling behavior")
+    print(f"• Infrastructure analysis: Node distribution and resource usage")
     
-    print(f"\n=== SUMMARY ===")
-    print(f"Infrastructure power savings: {results['power_savings_percent']:.1f}%")
-    print(f"Real infrastructure power savings: {real_power_results['power_savings_percent']:.1f}%")
-    print(f"Performance trade-off: {results['performance_penalty_percent']:.1f}% response time penalty")
-    
+    # Create the three-way plot
     create_simple_trade_off_plot(
         results['strategy1_total'],
         results['strategy2_total'],
+        results['strategy3_total'],
         results['strategy1_response_time'],
-        results['strategy2_response_time']
+        results['strategy2_response_time'],
+        results['strategy3_response_time']
     )
 
 
