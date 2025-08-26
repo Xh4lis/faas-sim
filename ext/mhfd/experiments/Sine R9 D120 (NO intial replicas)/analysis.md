@@ -1,18 +1,6 @@
 # **Comparison Under Single Initial Replica Conditions**
 
-## **2. Experimental Context Analysis**
 
-### **Experimental Design Assessment:**
-
-✅ **Excellent methodological choices:**
-
-- **Single initial replica**: True cold-start test (no pre-positioning bias)
-
-- **Extended duration (1200s)**: 6 complete sine wave cycles
-
-- **Light load (9 RPS)**: Tests efficiency under minimal resource pressure
-
-- **Sine wave pattern**: Tests predictive vs reactive scaling capabilities
 
 ---
 
