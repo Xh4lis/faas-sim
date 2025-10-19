@@ -9,13 +9,21 @@ all :
 
 ROOT_DIR = faassim
 
-venv: $(VENV_DIR)/bin/activate
+venv:
+	rm -rf .venv
+	rm -rf ether
+	uv self update || curl -LsSf https://astral.sh/uv/install.sh | sh
+	uv venv --seed --python 3.10
+	uv pip install pip -r requirements.txt
+	uv pip install pip -r requirements-dev.txt
 
-$(VENV_DIR)/bin/activate: requirements.txt requirements-dev.txt
-	test -d .venv || $(VENV_BIN) .venv
-	$(VENV_ACTIVATE); pip install -Ur requirements.txt
-	$(VENV_ACTIVATE); pip install -Ur requirements-dev.txt
-	touch $(VENV_DIR)/bin/activate
+# Installing ether with the source code
+	git clone https://github.com/edgerun/ether
+	sed -i 's/from collections import defaultdict, Iterable/from collections import defaultdict\nfrom collections.abc import Iterable/' ./ether/ether/cell.py
+	uv pip install -e ether --no-deps
+
+# Install current version of faas-sim
+	uv pip install -e . --no-deps
 
 clean:
 	rm -rf build/
